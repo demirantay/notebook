@@ -25,3 +25,11 @@ console.log('   *   ');
 console.log('=====================');
 
 //exersice 4
+var chickens = 12;
+var bacon = 3;
+var tractors = 'There is none!';
+
+console.log('In a nutshell: ');
+console.log(chickens);
+console.log(bacon);
+console.log(tractors);
