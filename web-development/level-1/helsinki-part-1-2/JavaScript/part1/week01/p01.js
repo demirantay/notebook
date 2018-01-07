@@ -56,3 +56,6 @@ console.log('The sum of the numbers are :' + (num1 + num2));
 
 //line
 console.log('=====================');
+
+//exersice 7
+console.log('The multiplication of the numbers are : ', num1 * num2 );
