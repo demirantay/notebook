@@ -1,138 +1,113 @@
-# Get Job ready - JavaScript Edition - Version 2.0
+
+# Get Job Ready - Python Edition
+- [Tier 0 - prep](#tier-0---prep)
+- [Tier 1 - Non-Python frontend necessities for Web Development](#tier-1---non-python-frontend-necessities-for-web-development)
+- [Tier 2 - Python Basics](#tier-2---python-basics)
+- [Tier 3 - More Python and Basic CS](#tier-3---more-python-and-basic-cs)
+- [Tier 4 - Wrap everything up and prep for interviews](#tier-4---wrap-everything-up-and-prep-for-interviews)
+- [What now?](#what-now)
+- [FAQ for this guide](#faq-for-this-guide)
+  * [Why is it so much longer than the other Job Ready Guide?](#why-is-it-so-much-longer-than-the-other-job-ready-guide)
+  * [Why so much Math and Algorithms?](#why-so-much-math-and-algorithms)
+  * [Where should I deploy my code?](#where-should-i-deploy-my-code)
+  * [What Python should I use?](#what-python-should-i-use)
+
+---
 
 ## Tier 0 - Prep
+**Goal:** Be comfortable with git by midway through Tier 1, and comfortable with Precalculus by midway through Tier 2.
 
-- [X]  Course: [Try Git](https://try.github.io/levels/1/challenges/1) and/or How to not f-up your local files with Git [part1](https://medium.com/@francesco.agnoletto/how-to-not-f-up-your-local-files-with-git-part-1-e0756c88fd3c), [part2](https://medium.com/@francesco.agnoletto/how-to-not-f-up-your-local-files-with-git-part-2-fc4e243be02a) and [part 3](https://medium.com/chingu/how-to-not-f-up-your-local-files-with-git-part-3-bf03b27b6e64)
-- [ ]  Project: [JavaScript Interview Prep](https://www.hackerrank.com/chingu-challenge-9-javascript-prep) - sign up for this now and work through it alongside the rest of the guide.
-- [X]  Project: take a quick read through the FAQs at the end of this document, particularly the helpful links, you'll want to reference them as you work through the guide.
-
+_Anything in Tier 0 can be studied before beginning Tier 1, or alongside the rest of the guide as you progress through the other Tiers._
+- [ ]  Course: [Try Git](https://try.github.io/levels/1/challenges/1) and/or How to not f-up your local files with Git [part1](https://medium.com/@francesco.agnoletto/how-to-not-f-up-your-local-files-with-git-part-1-e0756c88fd3c), [part2](https://medium.com/@francesco.agnoletto/how-to-not-f-up-your-local-files-with-git-part-2-fc4e243be02a) and [part 3](https://medium.com/chingu/how-to-not-f-up-your-local-files-with-git-part-3-bf03b27b6e64)
 ---
 
-## Tier 1 - Intro to Programming
-**Goal:** Become Proficient with HTML, CSS and JavaScript.
-- [ ]  Practice: Univeristy of helsinki MOOCs JavaScript implementation.
-- [ ]  Book: [eloquent javascript](http://eloquentjavascript.net/)
-- [X]  Book: [You Don't Know JS: Up & Going](https://github.com/getify/You-Dont-Know-JS/blob/master/up%20&%20going/README.md#you-dont-know-js-up--going)    
-- [X]  Course - [CS50](https://www.edx.org/course/introduction-computer-science-harvardx-cs50x)  on edX
-- [X]  Book: [You Don't Know JS: Scope & Closures](https://github.com/getify/You-Dont-Know-JS/blob/master/scope%20&%20closures/README.md#you-dont-know-js-scope--closures)
-- [X]  Course: [Learn to Code HTML & CSS](http://learn.shayhowe.com/html-css/)    
-- [X]  Project: Pick a template from [here](https://freebiesbug.com/psd-freebies/website-template/), [here](http://www.free-css.com/free-css-templates) or [here](http://www.os-templates.com/free-website-templates) and implement the frontend of a website with it as your inspiration (do not use its assets)
-- [X]  Book: [You Don't Know JS: this & Object Prototypes](https://github.com/getify/You-Dont-Know-JS/blob/master/this%20&%20object%20prototypes/README.md#you-dont-know-js-this--object-prototypes)
-- [ ]  Project: [CSS Zen Garden](http://www.csszengarden.com/) - implement your own CSS design for the competition
-- [ ]  Course: [Programming for the Web with JavaScript](https://www.edx.org/course/programming-web-javascript-pennx-sd4x)
+## Tier 1 - Non-Python frontend necessities for Web Development
+**Goal:** Become Proficient with HTML, CSS and JavaScript, including the frontend framework/library of your choice plus D3.
+- [ ] Book: [You Don't Know JS: Up & Going](https://github.com/getify/You-Dont-Know-JS/blob/master/up%20&%20going/README.md#you-dont-know-js-up--going)    
+- [ ] Book: [You Don't Know JS: Scope & Closures](https://github.com/getify/You-Dont-Know-JS/blob/master/scope%20&%20closures/README.md#you-dont-know-js-scope--closures)
+- [ ]  Course: [Learn to Code HTML & CSS](http://learn.shayhowe.com/html-css/)    
 - [ ]  Project: Pick a template from [here](https://freebiesbug.com/psd-freebies/website-template/), [here](http://www.free-css.com/free-css-templates) or [here](http://www.os-templates.com/free-website-templates) and implement the frontend of a website with it as your inspiration (do not use its assets)
-- [ ]  Book: [You Don't Know JS: Types & Grammar](https://github.com/getify/You-Dont-Know-JS/blob/master/types%20&%20grammar/README.md#you-dont-know-js-types--grammar)   
+- [ ] Book: [You Don't Know JS: this & Object Prototypes](https://github.com/getify/You-Dont-Know-JS/blob/master/this%20&%20object%20prototypes/README.md#you-dont-know-js-this--object-prototypes)
+- [ ] Course - [Programming for the Web with JavaScript](https://www.edx.org/course/programming-web-javascript-pennx-sd4x)
 - [ ]  Project: Pick a template from [here](https://freebiesbug.com/psd-freebies/website-template/), [here](http://www.free-css.com/free-css-templates) or [here](http://www.os-templates.com/free-website-templates) and implement the frontend of a website with it as your inspiration (do not use its assets)
-- [ ]  Book: [You Don't Know JS: Async & Performance](https://github.com/getify/You-Dont-Know-JS/blob/master/async%20&%20performance/README.md#you-dont-know-js-async--performance)
-- [ ]  Project: Select an API from [Todd Motto's API List](https://github.com/toddmotto/public-apis) and build a frontend-only application powered by data fetched from the API you chose.
-- [ ]  Course: [Learn to Code Advanced HTML & CSS](http://learn.shayhowe.com/advanced-html-css/)  
-- [ ]  Project: Select an API from [Todd Motto's API List](https://github.com/toddmotto/public-apis) and build a frontend-only application powered by data fetched from the API you chose.
-- [ ]  Course: [Getting Sassy with CSS](http://www.sassshop.com/#/)
-- [ ]  Project: [100 Days of CSS](https://100dayscss.com/), scroll to the bottom of that page, beginning with #001, recreate the images, in CodePen. Start the first one now and set a goal of finishing as many as you can by the end of Tier 3. (Intent: Build a presence on CodePen as a proficient HTML/(S)CSS developer to add another online body of work alongside your growing GitHub profile.)
-- [ ]  Book: [You Don't Know JS: ES6 & Beyond](https://github.com/getify/You-Dont-Know-JS/blob/master/es6%20&%20beyond/README.md#you-dont-know-js-es6--beyond)  
-- [ ]  Project: Select an API from [Todd Motto's API List](https://github.com/toddmotto/public-apis) and build a frontend-only application powered by data fetched from the API you chose.  
----
-
-## Tier 2 - Add Complexity
-**Goal:** Become familiar with D3.js and Node.js to strengthen your proficiency with JavaScript by exploring how it's used in a Full Stack application.
-- [ ]  Course: [M101JS: MongoDB for Node.js Developers](https://university.mongodb.com/courses/M101JS/about) on MongoDB University (Sign up at the start of the Tier and then take the course when it becomes available)
+- [ ] Book: [You Don't Know JS: Types & Grammar](https://github.com/getify/You-Dont-Know-JS/blob/master/types%20&%20grammar/README.md#you-dont-know-js-types--grammar)   
+- [ ] Book: [You Don't Know JS: Async & Performance](https://github.com/getify/You-Dont-Know-JS/blob/master/async%20&%20performance/README.md#you-dont-know-js-async--performance)
+- [ ] Project: Select an API from [Todd Motto's API List](https://github.com/toddmotto/public-apis) and build a frontend-only application powered by data fetched from the API you chose.
+- [ ]  Course: [Learn to Code Advanced HTML & CSS](http://learn.shayhowe.com/advanced-html-css/)    
+- [ ] Book: [You Don't Know JS: ES6 & Beyond](https://github.com/getify/You-Dont-Know-JS/blob/master/es6%20&%20beyond/README.md#you-dont-know-js-es6--beyond)  
 - [ ]  Course: [Data Visualization and D3.js](https://www.udacity.com/course/data-visualization-and-d3js--ud507)
-- [ ]  Project: Select an API from [Todd Motto's API List](https://github.com/toddmotto/public-apis) and build a frontend-only application powered by data fetched from the API you chose.
-- [ ]  Project: Clone [this Admin template](http://rubix410.sketchpixy.com/ltr/dashboard) using React, Angular, or Vue
-- [ ]  Book: [JavaScript Allongé, the "Six" Edition](https://leanpub.com/javascriptallongesix)
+- [ ] Project - Clone [this Admin template](http://rubix410.sketchpixy.com/ltr/dashboard) using React, Angular, or Vue
+- [ ] Book: [JavaScript Allongé, the "Six" Edition](https://leanpub.com/javascriptallongesix)
+- [ ]  Book: [College Algebra](https://openstax.org/details/books/college-algebra) or Course: [College Algebra and Problem Solving](https://www.edx.org/course/college-algebra-problem-solving-asux-mat117x) or thorough knowledge of Algebra.
+- [ ] Project: Select an API from [Todd Motto's API List](https://github.com/toddmotto/public-apis) and build a frontend-only application powered by data fetched from the API you chose.
+- [ ] Book: [JavaScript Design Patterns](https://addyosmani.com/resources/essentialjsdesignpatterns/book/)
 - [ ]  Project: Clone [this](https://creativemarket.com/ikonome/686585-Material-Resume-Blue/screenshots/#screenshot2) online resume template
-- [ ]  Project: Do a one week Speedrun of the FreeCodeCamp Backend Projects, finishing as many as you can in 7 days.
-- [ ]  Book: [JavaScript Design Patterns](https://addyosmani.com/resources/essentialjsdesignpatterns/book/)
-- [ ]  Project: Revisit [CSS Zen Garden](http://www.csszengarden.com/) - and implement a new design
-- [ ]  Project: Clone Twitter using Node.js on the backend, and your frontend framework/library of choice. Include all basic features: signup/login/logout, follow user, search, tweet, like/retweet, home page with stream of recent tweets.
-
+- [ ]  Project: Do a one week Speedrun of the FreeCodeCamp Projects, finishing as many as you can in seven days.
 
 ---
-## Tier 3 - Practice
-**Goal:** Practice Frontend Development in greater depth and continue studying JavaScript, ensuring you understand the algorithms and data structures you're likely to encounter in interviews (and on the job).
 
-- [ ]  Project: Read [How to Contribute to Open Source](https://opensource.guide/how-to-contribute/) - and make two contributions to open source projects (of your choice) by the end of this Tier.
-- [ ]  Book: [College Algebra](https://openstax.org/details/books/college-algebra) or Course: [College Algebra and Problem Solving](https://www.edx.org/course/college-algebra-problem-solving-asux-mat117x) or thorough knowledge of Algebra.
-- [ ]  Book: [Open Data Structures](http://www.aupress.ca/books/120226/ebook/99Z_Morin_2013-Open_Data_Structures.pdf)
-- [ ]  Project: Finish all classic puzzles on [CodinGame](https://www.codingame.com/training) from easy through hard by the end of the Tier.
-- [ ]  Project: Clone Medium. Include: create account, create post, publish post, edit post, add topic to post, follow user, follow topic, cheer for post, and home page with feed of recent posts, followed users, and followed topics.
-- [ ]  Project: Pick a template from [here](https://freebiesbug.com/psd-freebies/website-template/), [here](http://www.free-css.com/free-css-templates) or [here](http://www.os-templates.com/free-website-templates) and implement the frontend of a website with it as your inspiration (do not use its assets)
-- [ ]  Project: Select an API from [Todd Motto's API List](https://github.com/toddmotto/public-apis) and build a frontend-only application powered by data fetched from the API you chose. Consider building it as a Chrome Extension, Mobile, or Electron App
-- [ ]  Project: Pick a template from [here](https://freebiesbug.com/psd-freebies/website-template/), [here](http://www.free-css.com/free-css-templates) or [here](http://www.os-templates.com/free-website-templates) and implement the frontend of a website with it as your inspiration (do not use its assets)
-- [ ]  Project: Select an API from [Todd Motto's API List](https://github.com/toddmotto/public-apis) and build a frontend-only application powered by data fetched from the API you chose. Consider building it as a Chrome Extension, Mobile, or Electron App
-- [ ]  Project: Full stack project of your choice (ideas: clone Facebook, Reddit, Netflix, Slack) - Consider building it as a Chrome Extension, Mobile, or Electron App.
+## Tier 2 - Python Basics
+**Goal:** Become familiar with Python, MongoDB, and the Flask or Django framework and begin building proficiency with creating full stack web applications with Python on the backend.
+- [ ]  Challenge: [Python Interview Prep](https://www.hackerrank.com/chingu-challenge-3) on Hackerrank. Sign up now and work problems alongside the guide as you progress.
 - [ ]  Book: [Precalculus](https://openstax.org/details/books/precalculus) or Course: [Precalculus](https://www.edx.org/course/precalculus-asux-mat170x) or [Khan Academy](https://www.khanacademy.org/math/precalculus) or thorough knowledge of Precalculus
-- [ ]  Project: Full stack project of your choice (make it grand) - or do a one month Speedrun of the FreeCodeCamp Projects.
+- [ ]  Course: [MongoDB for Developers](https://university.mongodb.com/courses/M101P/about) - note: this course is only intermittently offered, sign up at the start of the Tier, then proceed to the other courses and return to this one when it's in session
+- [ ]  Course: [Introduction to Computer Science and Programming Using Python](https://www.edx.org/course/introduction-computer-science-mitx-6-00-1x-11)
+- [ ]  Study: [The Flask User Guide](http://flask.pocoo.org/docs/0.12/) or [the Django documentation](https://docs.djangoproject.com/en/1.11/) - pick based on which is more prevalent in your area, which you personally prefer, or any other criteria you choose, but pick one and study it thoroughly. Do the tutorials, read it all, learn testing, auth, databases, all of it.
+- [ ]  Project: Clone Twitter using Python on the backend, and your frontend framework/library of choice. Include all basic features: signup/login/logout, follow user, search, tweet, like/retweet, home page with stream of recent tweets.
+- [ ]  Course: [Calculus One](https://www.coursera.org/learn/calculus1)  
+- [ ]  Project: participate in one [Bot Programming](https://www.codingame.com/multiplayer/bot-programming) competition.
+- [ ]  Book: [Think Python](http://greenteapress.com/thinkpython2/thinkpython2.pdf)
+- [ ]  Study: [The pytest testing tool](https://docs.pytest.org/en/latest/) read the docs thoroughly, experiment with the examples and become proficient with pytest (including unittest and nose).
+- [ ]  Project: participate in one [Bot Programming](https://www.codingame.com/multiplayer/bot-programming) competition.
+- [ ]  Project: Clone Medium. Include: create account, create post, publish post, edit post, add topic to post, follow user, follow topic, cheer for post, and home page with feed of recent posts, followed users, and followed topics.
+- [ ]  Project: Do a one week Speedrun of the FreeCodeCamp Projects, finishing as many as you can in seven days.
+
+---
+## Tier 3 - More Python and Basic CS
+**Goal:** Learn Python to a deeper level, ensuring you understand the algorithms and data structures you're likely to encounter in interviews (and on the job).
+
+- [ ]  Project: Finish all classic puzzles on [CodinGame](https://www.codingame.com/training) from easy through hard by the end of the Tier.
+- [ ]  Course: [Introduction to Computational Thinking and Data Science](https://www.edx.org/course/introduction-computational-thinking-data-mitx-6-00-2x-6)
+- [ ] Project: Your choice - Clone Netflix, Slack, Reddit, or Facebook (or a comparably involved site of your choosing). The clone should be functional and include all basic features.
+- [ ]  Course: [Mathematics for Computer Science](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-042j-mathematics-for-computer-science-spring-2015/index.htm)
+- [ ]  Course: [Introduction to Algorithms](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/index.htm) (requires book purchase) or Book - [Open Data Structures](http://www.aupress.ca/books/120226/ebook/99Z_Morin_2013-Open_Data_Structures.pdf)
+- [ ]  Project: participate in one [Bot Programming](https://www.codingame.com/multiplayer/bot-programming) competition.
+- [ ]  Course: [Intro to Machine Learning](https://www.udacity.com/course/intro-to-machine-learning--ud120)
+- [ ]  Project: [Titanic: Machine Learning from Disaster](https://www.kaggle.com/c/titanic)
+- [ ]  Course: [Database Mini-Courses](https://lagunita.stanford.edu/courses/DB/2014/SelfPaced/about) - take all mini-courses
+- [ ]  Project: Your choice - Clone Netflix, Slack, Reddit, or Facebook (or a comparably involved site of your choosing). The clone should be functional and include all basic features.
+- [ ]  Project: Create a Portfolio highlighting your best work.
+- [ ]  Project: [House Prices: Advanced Regression Techniques](https://www.kaggle.com/c/house-prices-advanced-regression-techniques)
+- [ ]  Project: Do a one month Speedrun of the FreeCodeCamp Projects, finishing as many as you can in 30 days.
 ---
 
 ## Tier 4 - Wrap everything up and prep for interviews
 **Goal:** Interview with confidence.
-- [ ]  Project: Finish any questions you have remaining from   [JavaScript Interview Prep](https://www.hackerrank.com/chingu-challenge-9-javascript-prep)
-- [ ]  Project: Finish any of [100 Days of CSS](https://100dayscss.com/) you have yet to complete.
-- [ ]  Project: Create and polish your Portfolio site.
+- [ ]  Project: Finish any questions you have remaining from  [Python Interview Prep](https://www.hackerrank.com/chingu-challenge-3)
+- [ ]  Project: Refine and polish your Portfolio.
 - [ ]  Project: Create and polish your Resume/CV.
 - [ ]  Project: [Cracking the Coding Interview](https://www.hackerrank.com/domains/tutorials/cracking-the-coding-interview) on HackerRank
-- [ ]  Project: Continue honing your skills as you interview. Prioritize contributing to open source.
+- [ ]  Project: Continue honing your skills as you interview. Participate in more bot competitions on CodinGame, participate in competitions on Kaggle, contribute to open source JavaScript or Python projects, work on side projects that illustrate your frontend skill.
 ---
+
 ## What now?
-- If you want to move on to Data Science - hit the [Data Science Guide](./data-science.md)
+- If you really enjoyed the dip into Machine Learning - hit the [Data Science Guide](./data-science.md)
 - If you preferred the Algorithms and Data Structures - hit the [CS-WD Guide](./cs-wd.md)
 - If you mostly enjoyed the Web Development - hit the [WD-CS Guide](./wd-cs.md)
 ---
+
 ## FAQ for this guide
 
-### Why is it so much longer than the original Job Ready Guide?
-What I've observed over the past 9 months is two phenomena, the first being that many "self-supplemented" with additional beginner projects and resources while working through YDKJS, so I expanded on the beginner section to alleviate the "but what else should I be doing" question. The second is that the most successful learners also supplemented with more involved projects towards the end of the guide, so I added more intricate/advanced projects to meet that need.
+### Why is it so much longer than the other Job Ready Guide?
+The most notable difference between this and the original Job Ready guide is that it is significantly longer but still begins with YDKJS. This is because in order to use Python for web development, you also need some proficiency with the primarily frontend topics as well (HTML, CSS, JavaScript).
+
+Python is typically used for far more than just server-side web development so I've tried to at least touch on the "grander scheme" without bogging down too much.
 
 ### Why so much Math and Algorithms?
-It's not THAT much math, just through Precalculus so you won't feel so behind the curve when you want to push beyond just "Job Ready" and tackle more involved programming projects. The algorithms -- I've added them to ensure you're prepared and confident you can handle anything you might encounter in an interview.
+There is far more focus on algorithms - this reflects what you can expect in industry, you're far more likely to be rigorously tested on algorithms and data structures in a python interview than a general or frontend web development interview.
 
 ### Where should I deploy my code?
 For all projects - store your code on GitHub, GitLab or BitBucket (GitHub preferred if you want it to later be seen by potential employers) and for web projects deploy the code on the web using the service of your choice ([GitHub](https://pages.github.com/) or [GitLab](https://about.gitlab.com/features/pages/) projects or [Surge.sh](http://surge.sh/) are ideal for frontend only projects, while Heroku is a free alternative for backend/fullstack).
 
-### Why the change in Project selections?
-To give you greater freedom, over the course of studying the guide, to create a portfolio that is unique to you - rather than a clone of the same exact projects that are on the portfolio of every other junior web dev out there.
-
-### Do you have a list of helpful links to point me in the right direction if I need a productive break, or need to consult the official docs while I'm working through all this?
-Yes, yes I do:
-  - For when you need a quick/fun productive break that teaches you how to use CSS to layout a site (revisit this section in Tier 1 - Flexbox Zombies alone will prove extremely helpful learning to layout a page for the early projects.)
-    - [CSS Diner](https://flukeout.github.io/)
-    - [FlexBox Defense](http://www.flexboxdefense.com/)
-    - [FlexBox Froggy](http://flexboxfroggy.com/)
-    - [Grid Garden](http://cssgridgarden.com/)
-    - [FlexBox Zombies](http://geddski.teachable.com/p/flexbox-zombies)
-  - For when you need a quick/fun productive break in which you also practice JavaScript
-    - [Untrusted](https://alexnisnevich.github.io/untrusted/)
-    - [Elevator Saga](http://play.elevatorsaga.com/)
-    - [Screeps](https://screeps.com)
-  - For when you need assets/ideas
-    - [pixabay](https://pixabay.com/)
-    - [Unsplash](https://unsplash.com/)
-    - [Pexels](https://www.pexels.com/)
-    - [LibreStock](http://librestock.com/)
-    - [Google Fonts](https://fonts.google.com/)
-    - [FlatIcon's Free Icon Sets](https://www.flaticon.com/packs?license=selection&order_by=1)
-  - Official Docs
-    - [MDN HTML](https://developer.mozilla.org/en-US/docs/Web/HTML) - for exploring all that HTML has to offer
-    - [MDN CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)- for exploring all that CSS has to offer
-    - [MDN JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)- for exploring all that JavaScript has to offer
-    - [Sass](http://sass-lang.com/guide) - supercharged CSS
-    - [Node.js](https://nodejs.org/en/docs/) - should be your primary reference for building backend projects
-    - [Express](https://expressjs.com/) - an excellent framework to accompany Node.js on the backend
-    - [MongoDB](https://docs.mongodb.com/) - for storing data
-    - [Mongoose](http://mongoosejs.com/) - access to MongoDB from Node.js made easy(er)
-    - [Passport.js](http://passportjs.org/) - remember this link when you have to setup a login system
-    - [D3](https://d3js.org/) - for creating awesome graphs and charts
-    - [Angular](https://angular.io/) - option for creating single page apps on the frontend
-    - [React](https://reactjs.org/) - option for creating single page apps on the frontend
-    - [Vue](https://vuejs.org/) - option for creating single page apps on the frontend
-    - [Redux](http://redux.js.org/) - for managing state in a single page app
-    - [Mocha](https://mochajs.org/) - venture into testing
-    - [Karma](https://karma-runner.github.io/1.0/index.html) - venture into testing
-    - [Jest](https://facebook.github.io/jest/) - venture into testing
-    - [Webpack](https://webpack.github.io/) - module bundler for use in your build process (so you can minify your HTML/CSS/JavaScript among other things and deliver an optimized build to production)
-    - [Babel](http://babeljs.io/) - makes the new JavaScript work on old browsers (or node versions for that matter)
-    - [Gulp](https://gulpjs.com/) - for automating your workflow
-    - [ESLint](https://eslint.org/) - for helping to keep your code clean
-    - [Prettier](https://prettier.io/) - more help keeping your code clean
-    - [Travis](https://travis-ci.org/) - continuous deployment (how to trigger a build/deploy whenever you commit your changes via git)
+### What Python should I use?
+When you get to Tier 2 - I highly recommend installing the Python 3 version of [Anaconda](https://www.anaconda.com/download/) for use in the Python-centric portion of the guide. It containerizes your Python environment to ensure nothing you do impacts the rest of your machine, contains all the plugins you're likely to need, and even provides the Spyder IDE which is an ideal starter setup for Python development.
