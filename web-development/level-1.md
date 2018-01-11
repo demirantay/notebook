@@ -27,7 +27,7 @@
 - [ ] Project: Select an API from [Todd Motto's API List](https://github.com/toddmotto/public-apis) and build a frontend-only application powered by data fetched from the API you chose.
 - [ ] Book: [JavaScript Design Patterns](https://addyosmani.com/resources/essentialjsdesignpatterns/book/)
 - [ ]  Project: Clone [this](https://creativemarket.com/ikonome/686585-Material-Resume-Blue/screenshots/#screenshot2) online resume template
-- [ ]  Project: Do a one week Speedrun of the FreeCodeCamp Projects, finishing as many as you can in seven days.
+- [ ]  Project: Do a one week Speedrun of the FreeCodeCamp Projects, finishing as many as you can in seven days. (Front End)
 
 ---
 
@@ -45,7 +45,7 @@
 - [ ]  Study: [The pytest testing tool](https://docs.pytest.org/en/latest/) read the docs thoroughly, experiment with the examples and become proficient with pytest (including unittest and nose).
 - [ ]  Project: participate in one [Bot Programming](https://www.codingame.com/multiplayer/bot-programming) competition.
 - [ ]  Project: Clone Medium. Include: create account, create post, publish post, edit post, add topic to post, follow user, follow topic, cheer for post, and home page with feed of recent posts, followed users, and followed topics.
-- [ ]  Project: Do a one week Speedrun of the FreeCodeCamp Projects, finishing as many as you can in seven days.
+- [ ]  Project: Do a one week Speedrun of the FreeCodeCamp Projects, finishing as many as you can in seven days. (Back end)
 
 ---
 ## Tier 3 - More Python and Basic CS
