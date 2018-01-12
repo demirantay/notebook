@@ -2,6 +2,7 @@
 
 ## Tier 1
 
+- [ ] [Last Touches](https://teachyourselfcs.com/)
 - [ ] [Code university](https://github.com/jwasham/coding-interview-university)
 
 ## Tier 2
