@@ -22,14 +22,16 @@
 - [ ] Project: Select an API from [Todd Motto's API List](https://github.com/toddmotto/public-apis) and build a frontend-only application powered by data fetched from the API you chose.
 - [ ]  Course: [Learn to Code Advanced HTML & CSS](http://learn.shayhowe.com/advanced-html-css/)    
 - ~~[ ] Book: [You Don't Know JS: ES6 & Beyond](https://github.com/getify/You-Dont-Know-JS/blob/master/es6%20&%20beyond/README.md#you-dont-know-js-es6--beyond)~~  
-- [ ]  Course: [Data Visualization and D3.js](https://www.udacity.com/course/data-visualization-and-d3js--ud507)
-- [ ] Project - Clone [this Admin template](http://rubix410.sketchpixy.com/ltr/dashboard) using React, Angular, or Vue
+- [ ] Project: All FCC Front End projects.
+- [ ] Course: [Data Visualization and D3.js](https://www.udacity.com/course/data-visualization-and-d3js--ud507)
+- [ ] Projects: All FCC Data Visualization D3.js projects.
+- [ ] Project: - Clone [this Admin template](http://rubix410.sketchpixy.com/ltr/dashboard) using React, Angular, or Vue
+- [ ] Project: All React projects on FCC 
 - [ ] Book: [JavaScript Allongé, the "Six" Edition](https://leanpub.com/javascriptallongesix)
 - [ ]  Book: [College Algebra](https://openstax.org/details/books/college-algebra) or Course: [College Algebra and Problem Solving](https://www.edx.org/course/college-algebra-problem-solving-asux-mat117x) or thorough knowledge of Algebra.
 - [ ] Project: Select an API from [Todd Motto's API List](https://github.com/toddmotto/public-apis) and build a frontend-only application powered by data fetched from the API you chose.
 - [ ] Book: [JavaScript Design Patterns](https://addyosmani.com/resources/essentialjsdesignpatterns/book/)
 - [ ]  Project: Clone [this](https://creativemarket.com/ikonome/686585-Material-Resume-Blue/screenshots/#screenshot2) online resume template
-- [ ]  Project: Do a one week Speedrun of the FreeCodeCamp Projects, finishing as many as you can in seven days. (Front End)
 
 ---
 
