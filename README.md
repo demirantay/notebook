@@ -4,6 +4,7 @@ This is my digital notebook where I keep all of my notes and exercise solutions 
 
 ## Table Of Content
 
+### Computer Science
 - [Web Development](/web-development)
   - [Level 1](/web-development/level-1)
   - [Level 2](/web-development/level-2)
@@ -15,3 +16,7 @@ This is my digital notebook where I keep all of my notes and exercise solutions 
   - [Core CS](/feynman-notes/core-cs)
   - [Data Science](/feynman-notes/data-science)
   - [Web Development](/feynman-notes/web-dev)
+
+### Economics
+
+- [Economics](/economics)

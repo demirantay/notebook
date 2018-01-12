@@ -37,5 +37,3 @@ console.log('Last Part Result : ' + user_word.substr(user_slice));
 
 var user_word = prompt('Type a word: ');
 var contined_word = prompt('Type another: ');
-
-if
