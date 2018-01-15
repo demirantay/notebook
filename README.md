@@ -17,7 +17,7 @@ This is my digital notebook where I keep all of my notes and exercise solutions 
   - [Data Science](/feynman-notes/data-science)
   - [Web Development](/feynman-notes/web-dev)
   
-  ### Business
-  - [Economics](/economics)
-  - [Finance](/finance)
-  - [Accounting](/accounting)
+ ### Business
+ - [Economics](/economics)
+ - [Finance](/finance)
+ - [Accounting](/accounting)
