@@ -1,7 +1,7 @@
 #lyrra card
 #ex 86 part1 week 5
 
-class Reform:
+class lyrra:
 
     #constructos
     def __init__(self, initial_balance):
@@ -18,5 +18,9 @@ class Reform:
         self.balance += amount
 
     #paying money
-    def pay(self):
-        
+    def pay(self, amount):
+        if self.balance >= amount:
+            self.balance -= amount
+            return True;
+        elif self.balance < amount:
+            return False
