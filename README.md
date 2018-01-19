@@ -2,6 +2,8 @@
 
 This is my digital notebook where I keep all of my notes and exercise solutions from all kinds of online courses and resources.
 
+I will build a blog in the future to store my notes in it.
+
 ## Table Of Content
 
 ### Computer Science
@@ -16,7 +18,7 @@ This is my digital notebook where I keep all of my notes and exercise solutions 
   - [Core CS](/feynman-notes/core-cs)
   - [Data Science](/feynman-notes/data-science)
   - [Web Development](/feynman-notes/web-dev)
-  
+
  ### Business
  - [Economics](/economics)
  - [Finance](/finance)
