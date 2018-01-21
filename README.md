@@ -7,6 +7,8 @@ I will build a blog in the future to store my notes in it.
 ## Table Of Content
 
 ### Computer Science
+- [Core CS](/core-cs)
+  - [Level 1](/core-cs/level-1)
 - [Web Development](/web-development)
   - [Level 1](/web-development/level-1)
   - [Level 2](/web-development/level-2)

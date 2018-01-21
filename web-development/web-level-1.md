@@ -1,9 +1,5 @@
 # Get Job Ready - Python Edition
 
-
-
-
-
 ## Tier 1 - Non-Python frontend necessities for Web Development
 **Goal:** Become Proficient with HTML, CSS and JavaScript, including the frontend framework/library of your choice plus D3.
 - [ ] Book: [You Don't Know JS: Up & Going](https://github.com/getify/You-Dont-Know-JS/blob/master/up%20&%20going/README.md#you-dont-know-js-up--going)    
