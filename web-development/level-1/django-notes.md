@@ -2,7 +2,7 @@
 
 These are very simplified general info about common tasks that are done in Django. For more info visit [Django official docs](https://docs.djangoproject.com/en/2.0/)
 
-## Basics
+## Level 1
 
 ### Creating a project
 
@@ -67,7 +67,7 @@ urlpatterns = [
 
 ---
 
-## Basic -- Intermediate
+## Level 2
 
 ### Database setup
 Before setting up any db schemes run the following command to include all the standart databases django gives you before any customazation : 
@@ -122,7 +122,32 @@ Always remember this 3-step guide:
 
 ### Django Admin
 
+Admin panels are generally the same and needs little configruation with no creativity at all. So Django proivdes us a betaiful admin panel designed around the CRUD princpiles ofc you can always modify it later on.
 
+To create a admin panel wee need to create an admin user. Run the follwoing command:
+
+```
+$ python manage.py createsuperuser
+```
+
+enter your username password and email adress for your admin user.
+
+Go to the admin panel by simply `http://127.0.0.1:8000/admin/` and you should see the login page.
+
+In order to see your app, models in your admin page you need to tell the admin that Model object of your app have an admin interface. To do thism open `<appname>/admin.py` file and write :
+
+```python
+from django.contrib import admin
+from .models import User, Post
+
+admin.site.register(User, Post)
+```
+
+the admin CRUD (create, read, update, delete) forms are generated depending on your model architecture.
+
+---
+
+## Level 3
 
 
 
