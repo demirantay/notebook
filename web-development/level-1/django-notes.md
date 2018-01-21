@@ -1,6 +1,6 @@
 # Django -- Notes
 
-These are very simplified general info about common tasks that are done in Django.
+These are very simplified general info about common tasks that are done in Django. For more info visit [Django official docs](https://docs.djangoproject.com/en/2.0/)
 
 ## Basics
 
@@ -67,5 +67,64 @@ urlpatterns = [
 
 ---
 
-## Intermediate
+## Basic -- Intermediate
+
+### Database setup
+Before setting up any db schemes run the following command to include all the standart databases django gives you before any customazation : 
+
+```
+$ python manage.py migrate
+```
+
+#### Creating Tables
+
+In django to crate tables in your database you need to model them in your apps folder under the `models.py` file.
+Tables are formed with python classes. 
+
+A basic user database scheme is written below : 
+
+```python
+from django.db import models
+
+class User(models.Model):
+        user_name = models.CharField(max_length=200)
+        user_lastname = models.CharField(max_length=200)
+        user_age = models.IntegerField(default=0)
+        
+class Post(models.Model):
+        #the connection between tables is done by a foreign key
+        user = models.ForeignKey(User, on_delete=models.CASCADE)
+        post_content = models.TextField()
+        pub_date = models.DateTimeField('date published')
+       
+```
+
+#### Activating Models
+
+Django framework does the heavylifting for us (creates the database schema) but it needs to be directed to the models.
+
+In you `<project_name>/settings.py` you need to add your app to the `INSTALLED_APPS` in order to direct django to see your models in that app.
+
+After including your app in the configuration file run the command:
+
+```
+$python manage.py makemigrations <app_name>
+```
+
+Migrations are very powerful and lets you change your models over time as you develop your project.
+
+Always remember this 3-step guide:
+- Change your models(in `models.py`)
+- Run `python manage.py makemigrations` to create migrations for those changes
+- Run `python manage.py migrate` to apply those changes in the stash zone to the database
+
+---
+
+### Django Admin
+
+
+
+
+
+
 
