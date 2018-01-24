@@ -7,17 +7,15 @@ I will build a blog in the future to store my notes in it.
 ## Table Of Content
 
 ### Computer Science
+- [Feynman Technique Notes](/feynman-notes)
+  - [Core CS](/feynman-notes/core-cs)
+  - [Web Development](/feynman-notes/web-dev)
 - [Web Development](/web-development)
   - [Level 1](/web-development/level-1)
   - [Level 2](/web-development/level-2)
   - [Level 3](/web-development/level-3)
   - [Level 4](/web-development/level-4)
-- [Cyber Security](/cyber-security)
-  - [Level 1](/cyber-security/level-1)
-- [Feynman Technique Notes](/feynman-notes)
-  - [Core CS](/feynman-notes/core-cs)
-  - [Data Science](/feynman-notes/data-science)
-  - [Web Development](/feynman-notes/web-dev)
+- [Bash Programming](/bash-programming)
 
  ### Business
  - [Economics](/economics)
