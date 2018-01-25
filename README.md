@@ -8,6 +8,7 @@ I will build a blog in the future to store my notes in it.
 
 ### Computer Science
 - [Feynman Technique Notes](/feynman-notes)
+  - [General](/general-notes)
   - [Core CS](/feynman-notes/core-cs)
   - [Web Development](/feynman-notes/web-dev)
 - [Web Development](/web-development)
