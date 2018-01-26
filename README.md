@@ -2,7 +2,7 @@
 
 This is my digital notebook where I keep all of my notes and exercise solutions from all kinds of online courses and resources.
 
-I will build a blog in the future to store my notes in it.
+Web UI for my note book is [here](https://notebook-client.herokuapp.com/)
 
 ## Table Of Content
 
