@@ -34,6 +34,7 @@ _Anything in Tier 0 can be studied before beginning Tier 1, or alongside the res
 
 ## Tier 2 - Python Basics
 **Goal:** Become familiar with Python, MongoDB, and the Flask or Django framework and begin building proficiency with creating full stack web applications with Python on the backend.
+- [ ]  Course: Helsinki MOOCs
 - [ ]  Learn: Read and learn about PostgreSQL or mySQL
 - [ ]  Course: [Introduction to Computer Science and Programming Using Python](https://www.edx.org/course/introduction-computer-science-mitx-6-00-1x-11)
 - [ ]  Study: [The Flask User Guide](http://flask.pocoo.org/docs/0.12/) or [the Django documentation](https://docs.djangoproject.com/en/1.11/) - pick based on which is more prevalent in your area, which you personally prefer, or any other criteria you choose, but pick one and study it thoroughly. Do the tutorials, read it all, learn testing, auth, databases, all of it.
@@ -64,6 +65,7 @@ _Anything in Tier 0 can be studied before beginning Tier 1, or alongside the res
 - [ ]  Project: Your choice - Clone Netflix, Slack, Reddit, or Facebook (or a comparably involved site of your choosing). The clone should be functional and include all basic features.
 - [ ]  Project: Create a Portfolio highlighting your best work.
 - [ ]  Project: [House Prices: Advanced Regression Techniques](https://www.kaggle.com/c/house-prices-advanced-regression-techniques)
+- [ ]  Study: Try to finish as much as you can in Full Stack Python
 - [ ]  Project: Do a one month Speedrun of the FreeCodeCamp Projects, finishing as many as you can in 30 days.
 ---
 
