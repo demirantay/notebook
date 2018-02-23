@@ -151,5 +151,6 @@ the admin CRUD (create, read, update, delete) forms are generated depending on y
 
 ### More on views 
 
+A view is type of a web page page in your django application that serves a specific template for a sepcific task.
 
 
