@@ -60,7 +60,7 @@ _Anything in Tier 0 can be studied before beginning Tier 1, or alongside the res
 - [ ]  Course: [Intro to Machine Learning](https://www.udacity.com/course/intro-to-machine-learning--ud120)
 - [ ]  Project: [Titanic: Machine Learning from Disaster](https://www.kaggle.com/c/titanic)
 - [ ]  Course: [Database Mini-Courses](https://lagunita.stanford.edu/courses/DB/2014/SelfPaced/about) - take all mini-courses
-- [ ]  Learn: Read and learn about PostgreSQL or mySQL
+- [ ]  Learn: Read and learn about PostgreSQL or mySQL from [here](http://studybyyourself.com/seminar/sql/course/?lang=en)
 - [ ]  Project: Your choice - Clone Netflix, Slack, Reddit, or Facebook (or a comparably involved site of your choosing). The clone should be functional and include all basic features.
 - [ ]  Project: Create a Portfolio highlighting your best work.
 - [ ]  Project: [House Prices: Advanced Regression Techniques](https://www.kaggle.com/c/house-prices-advanced-regression-techniques)
