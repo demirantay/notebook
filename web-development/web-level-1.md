@@ -34,7 +34,6 @@ _Anything in Tier 0 can be studied before beginning Tier 1, or alongside the res
 
 ## Tier 2 - Python Basics
 **Goal:** Become familiar with Python, MongoDB, and the Flask or Django framework and begin building proficiency with creating full stack web applications with Python on the backend.
-- [ ]  Learn: Read and learn about PostgreSQL or mySQL
 - [ ]  Course: [Introduction to Computer Science and Programming Using Python](https://www.edx.org/course/introduction-computer-science-mitx-6-00-1x-11)
 - [ ]  Study: [The Flask User Guide](http://flask.pocoo.org/docs/0.12/) or [the Django documentation](https://docs.djangoproject.com/en/1.11/) - pick based on which is more prevalent in your area, which you personally prefer, or any other criteria you choose, but pick one and study it thoroughly. Do the tutorials, read it all, learn testing, auth, databases, all of it.
 - [ ]  Project: Clone Twitter using Python on the backend, and your frontend framework/library of choice. Include all basic features: signup/login/logout, follow user, search, tweet, like/retweet, home page with stream of recent tweets.
@@ -61,6 +60,7 @@ _Anything in Tier 0 can be studied before beginning Tier 1, or alongside the res
 - [ ]  Course: [Intro to Machine Learning](https://www.udacity.com/course/intro-to-machine-learning--ud120)
 - [ ]  Project: [Titanic: Machine Learning from Disaster](https://www.kaggle.com/c/titanic)
 - [ ]  Course: [Database Mini-Courses](https://lagunita.stanford.edu/courses/DB/2014/SelfPaced/about) - take all mini-courses
+- [ ]  Learn: Read and learn about PostgreSQL or mySQL
 - [ ]  Project: Your choice - Clone Netflix, Slack, Reddit, or Facebook (or a comparably involved site of your choosing). The clone should be functional and include all basic features.
 - [ ]  Project: Create a Portfolio highlighting your best work.
 - [ ]  Project: [House Prices: Advanced Regression Techniques](https://www.kaggle.com/c/house-prices-advanced-regression-techniques)
