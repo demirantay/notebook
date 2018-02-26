@@ -9,7 +9,7 @@ These are very simplified general info about common tasks that are done in Djang
 To start a django project **cd** into a directory where you'd like to store your code, then run the following: 
 
 ```
-$ django-admin startproject <projectname-generally-mysite>
+$ django-admin startproject <projectname-generally-mysite> .
 ```
 ### Running the server
 
@@ -151,6 +151,19 @@ the admin CRUD (create, read, update, delete) forms are generated depending on y
 
 ### More on views 
 
-A view is type of a web page page in your django application that serves a specific template for a sepcific task.
+A view is type of a web page page in your django application that serves a specific template for a sepcific task. For example in a blog application, you might have the following views :
+
+- Blog home-page : displays the latest few entries.
+- Entry detail-page : permalink page for a single entry.
+- Archive page : displays all written entries.
+- Comment action: handles posting comments to a given entry.
+
+In django web pages and other contents are delivered by views. Each view is represented by a simple function.
+
+#### Write views that actaully do something
+
+Each view is responsible for doing one of the two things: returning an `HttpRespone` object containing the content that was requested by the user or raising an error such as `404 not found`
+
+Your view can do anything you want such as creating .pdf files on the run, output XML. Literally anything with python however the only thing Django wants is that `HttpRespone` or `404`
 
 
