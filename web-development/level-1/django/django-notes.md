@@ -166,4 +166,21 @@ Each view is responsible for doing one of the two things: returning an `HttpResp
 
 Your view can do anything you want such as creating .pdf files on the run, output XML. Literally anything with python however the only thing Django wants is that `HttpRespone` or `404`
 
+<your_app>/views :
+```python
+from django.shortcuts import render
+from django.http import HttpResponse
+from .models import *
+
+# my index page view that displays entry feed
+# but it is maxed out at 5 entries
+def index(request):
+    posts = Post.object.order_by(-pub_date)[:5]
+    return render(request, 'index.html', {'posts': posts}
+    
+def archive(request):
+    posts = Post.object.order_by(-pub_date)
+    return render(request, 'archive.html', {'posts'': posts}
+```
+
 
