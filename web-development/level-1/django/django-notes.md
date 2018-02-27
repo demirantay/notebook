@@ -1,6 +1,6 @@
 # Django -- Notes
 
-These are very simplified general info about common tasks that are done in Django. For more info visit [Django official docs](https://docs.djangoproject.com/en/2.0/)
+These are very simplified general info about common tasks that are done in Django. At each level(step) For more info visit [Django official docs](https://docs.djangoproject.com/en/2.0/) and once you advance that level move on to the other.
 
 ## Level 1
 
@@ -185,5 +185,11 @@ def archive(request):
 
 #### Templates to beautify your layout
 
+I am not going to show snippets of templates you can open up the official docs sweat heart. Yet, remember that all of your templates should be in a directory called `templates` in your apps folder & you should create a `static` file where you will keep all of your `.css` and `.js` files.
 
+---
+
+## Level 4
+
+### Forms
 
