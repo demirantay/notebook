@@ -183,4 +183,7 @@ def archive(request):
     return render(request, 'archive.html', {'posts'': posts}
 ```
 
+#### Templates to beautify your layout
+
+
 
