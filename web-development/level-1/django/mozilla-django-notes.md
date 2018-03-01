@@ -25,4 +25,21 @@ The core elements of every dynamic web applications are urls, views, models and 
 
 ---
 
-##
+## Creating Skeleton
+
+For each of the feature in your projects built with django you should start with creating the skelton for it and than add the desired parts of the body(models, views, templates). The proceeding of the skeleton is like this:
+
+1) If you dont have the main project folder structre start with : (if you have it skip to the next step )
+```
+$ django-admin startproject `project-name` .
+```
+2) Use `manage.py` to create the desired app. (* Of course do not create apps for every bit of feature that you have, catogrize them such as, eg. main site, blog, wiki, download are, messageing ..etc.
+```
+$ python manage.py startapp `app-name`
+```
+3) Register the new applications to include them in the project (via settings).
+4) Hook up the url/path mapper for each application.
+
+---
+
+## Using Models
