@@ -29,24 +29,81 @@ The core elements of every dynamic web applications are urls, views, models and 
 
 For each of the feature in your projects built with django you should start with creating the skelton for it and than add the desired parts of the body(models, views, templates). The proceeding of the skeleton is like this:
 
-1) If you dont have the main project folder structre start with : (if you have it skip to the next step )
+**1)** If you dont have the main project folder structre start with : (if you have it skip to the next step )
 ```
 $ django-admin startproject `project-name` .
 ```
-2) Use `manage.py` to create the desired app. (* Of course do not create apps for every bit of feature that you have, catogrize them such as, eg. main site, blog, wiki, download are, messageing ..etc.
+**2)** Use `manage.py` to create the desired app. (* Of course do not create apps for every bit of feature that you have, catogrize them such as, eg. main site, blog, wiki, download are, messageing ..etc.
 ```
 $ python manage.py startapp `app-name`
 ```
-3) Register the new applications to include them in the project (via settings in `INSTALLED_APPS` list). (after this point it is usually the time to specify your database weather it be sqlite, postgresql, mysql ..etc . Yet, however you dont have to since django comes shipped with sqlite as default.
+**3)** Register the new applications to include them in the project (via settings in `INSTALLED_APPS` list). (after this point it is usually the time to specify your database weather it be sqlite, postgresql, mysql ..etc . Yet, however you dont have to since django comes shipped with sqlite as default.
 
-main-project/settings.py 
+entry-folder/settings.py 
 ```python
 INSTALLED_APPS = [
   # other application regisitrations
   'app-name',
 ]
 ```
-4) Hook up the url/path mapper for each application.
+**4)** Hook up the url/path mapper for each application. In your porjects main entry urls file. You can create url hooks via `path()`. However since it is kinda difficult to hook everything only from the entry folder we can just create `path()`s in seperate apps and just `include()` all of the paths of that app with a single line of code.
+
+Leaving the first string parameter of the path function blank -> `path('')` makes that app your roots index route.
+
+entry-folder/urls.py
+```python
+from django.contrib import admin
+from django.urls import path, include
+
+urlpatterns = [
+	path('admin/', admin.site.urls),
+  #including all of the paths of the targeted app
+  path('', include('app-name.urls')),
+]
+```
+
+However, leaving paths first argument blank is not the best way to go, there  can be conlficts so to eliminate that there is a much more sophisticated and simple approach. Just import RedirectView and use it.
+
+Yet, this is not necessary if you think you are good with your hooks skip this.
+
+```python
+#same thing
+from django.contrib import admin
+from django.urls import path, include
+#new
+from django.views.generic import RedirectView
+
+urlpatterns = [
+	path('admin/', admin.site.urls),
+  #including all of the paths of the targeted app
+  path('', include('app-name.urls')),
+  #new
+  path('', RedirectView.as_view(url='/app-name/')),
+  
+]
+```
+
+Lastly, to hook your paths with the views as they are the heartbeat of django you will need to hook `path`s in your apps urls to its views.
+
+app-name/urls.py
+```python
+from django.urls import path, include
+from . import views
+
+urlpatterns = [
+  #example
+  path('', views.index, name='app-index-page'),
+]
+```
+
+
+**5)** Run migrations to add/hook your finished app to the database
+```
+$ python manage.py makemigrations
+$ python manage.py migrate
+```
+
+**You will need to run these two commands everytime you make a change in the structure of your models**
 
 ---
 
