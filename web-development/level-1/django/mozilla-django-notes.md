@@ -37,7 +37,15 @@ $ django-admin startproject `project-name` .
 ```
 $ python manage.py startapp `app-name`
 ```
-3) Register the new applications to include them in the project (via settings).
+3) Register the new applications to include them in the project (via settings in `INSTALLED_APPS` list). (after this point it is usually the time to specify your database weather it be sqlite, postgresql, mysql ..etc . Yet, however you dont have to since django comes shipped with sqlite as default.
+
+main-project/settings.py 
+```python
+INSTALLED_APPS = [
+  # other application regisitrations
+  'app-name',
+]
+```
 4) Hook up the url/path mapper for each application.
 
 ---
