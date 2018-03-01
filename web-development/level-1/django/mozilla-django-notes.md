@@ -15,3 +15,14 @@ Django web applications typically group the code that handles each of these step
 
 *Note: Django refers to this organisation as the "Model View Template(MVT)" architecture. It has many similarities to the more familiar "Model View Controller(MVC) architercture.*
 
+The core elements of every dynamic web applications are urls, views, models and templates. Yet, django provides us much more than just the basic core elements, such as :
+
+- Forms: Used to collect data from the user.
+- User authentcation and permissions: To secure your site.
+- Caching: Your pages does not get re-rendered unless if you want to.
+- Administration site: django provides a fine admin panel with felixabilty to change the panel.
+- Serialising data: django makes it easy to serialise your data to serve as XML or JSON
+
+---
+
+##
