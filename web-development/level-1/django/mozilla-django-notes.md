@@ -24,6 +24,7 @@ The core elements of every dynamic web applications are urls, views, models and 
 - Serialising data: django makes it easy to serialise your data to serve as XML or JSON
 
 ---
+---
 
 ## Creating Skeleton
 
@@ -106,6 +107,7 @@ $ python manage.py migrate
 **You will need to run these two commands everytime you make a change in the structure of your models**
 
 ---
+---
 
 ## Using Models
 
@@ -114,5 +116,58 @@ Django web applications accsess and manage data through python objects reffered 
 It is not wise to add all of your fields in one big chunk of table(model). It is always useful to seperate your model tables by their object nature. For example if you were modeling a simple bookshop it would be wise to seperate them via books, authors, cataloged shelves. 
 
 Once you are finished with the structure of your seperated models you need to think about their relationship. They cannot be wandering around themselves it does not make any sense. Django allows you to establish a one to one(`OneToOneField`), one to many(`ForeignKey`)and many to many(`ManyToManyField`) relationship between models .
+
+A model structure can consist **Fields, Metadata and Methods** and we will go over each of them
+
+Example:
+```python
+from django.db import models
+
+#my table
+class MyModelTableName(models.Model):
+
+	#fields
+	example_field = models.CharField(max_length=20)
+	
+	#meta-data
+	class Meta:
+		example_meta = [-'example_field']
+		
+	#methods
+	def __str__(self):
+		return self.example_field
+```
+
+### Fields
+
+A model can have infinite number of fields, of any type each one represents a column of data we want to store in our database tables. Each database row of one of each field value. 
+
+Lets look at this example:
+```python
+example_field_name = models.CharField(max_length=20, help_text='Enter field documentation')
+```
+above field example called `example_field_name` has a `models.CharField` type which means the data will be consisted from alphanumeric characters. The field types can also take arguments that further specify how the data is stored. In the case above we have two arguments:
+
+- `max_length=20` : states that the maximum length of a value in this field is no more than 20 characters
+- `help_text='Enter field documentation'` : provides a text label to display to help users know what value to provide for the html forms.
+
+The templates or queries can access to fields via their name. Example from above is `example_field_name` is the fields name.
+
+There are many argument types and you can look them up from the official documentation however these are the most common ones. But you can change it with verbose name argument
+
+**`Common Field Arguments`**
+- [help_text](https://docs.djangoproject.com/en/2.0/ref/models/fields/#help-text) : Provides a text label for html forms(eg. in admin site)
+- [verbose_name](https://docs.djangoproject.com/en/2.0/ref/models/fields/#verbose-name) : A human readable name for the field used in field labels
+- [default](https://docs.djangoproject.com/en/2.0/ref/models/fields/#default) : The default value for the field. 
+- [null](https://docs.djangoproject.com/en/2.0/ref/models/fields/#null) : If `True` Django will store blank values of `NULL` in the database for fields where this is apropirate(a CharField will be an empty string). The default is `False`.
+- [blank](https://docs.djangoproject.com/en/2.0/ref/models/fields/#blank) : If `True` the field is allowed to be blank in your forms. The default is `False` which means Django's form validation will forece you to enter a value. This is often used with `null=True`, because if you are going to allow blank values you also want the database to be able to represent them appropriately.
+- [choices](https://docs.djangoproject.com/en/2.0/ref/models/fields/#choices) : a group of choices for this field. If this is provided the default corresponding form widget will be a select box with these choices instead of the standart text field.
+- [primary_key](https://docs.djangoproject.com/en/2.0/ref/models/fields/#primary-key) : If `True`, sets the current field as the primary key for the model (a primary key is a special database column designated to uniqely identfiy all the different table records). If no field is specified as the primary key then Django will automatically add a field for this purpose.
+
+there are more options view them all [here](https://docs.djangoproject.com/en/2.0/ref/models/fields/#field-options)
+
+**`Common Field Types`**
+
+
 
 
