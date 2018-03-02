@@ -56,7 +56,7 @@ from django.contrib import admin
 from django.urls import path, include
 
 urlpatterns = [
-	path('admin/', admin.site.urls),
+  path('admin/', admin.site.urls),
   #including all of the paths of the targeted app
   path('', include('app-name.urls')),
 ]
@@ -108,3 +108,11 @@ $ python manage.py migrate
 ---
 
 ## Using Models
+
+Django web applications accsess and manage data through python objects reffered to as models. Models define the structure of stored data, including *field types*  and also their maximum size, default value, selecton list options, help text for documentation, labels for forms and etc.
+
+It is not wise to add all of your fields in one big chunk of table(model). It is always useful to seperate your model tables by their object nature. For example if you were modeling a simple bookshop it would be wise to seperate them via books, authors, cataloged shelves. 
+
+Once you are finished with the structure of your seperated models you need to think about their relationship. They cannot be wandering around themselves it does not make any sense. Django allows you to establish a one to one(`OneToOneField`), one to many(`ForeignKey`)and many to many(`ManyToManyField`) relationship between models .
+
+
