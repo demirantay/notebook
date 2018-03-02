@@ -155,7 +155,7 @@ The templates or queries can access to fields via their name. Example from above
 
 There are many argument types and you can look them up from the official documentation however these are the most common ones. But you can change it with verbose name argument
 
-**`Common Field Arguments`**
+**Common Field Arguments**
 - [help_text](https://docs.djangoproject.com/en/2.0/ref/models/fields/#help-text) : Provides a text label for html forms(eg. in admin site)
 - [verbose_name](https://docs.djangoproject.com/en/2.0/ref/models/fields/#verbose-name) : A human readable name for the field used in field labels
 - [default](https://docs.djangoproject.com/en/2.0/ref/models/fields/#default) : The default value for the field. 
@@ -166,8 +166,31 @@ There are many argument types and you can look them up from the official documen
 
 there are more options view them all [here](https://docs.djangoproject.com/en/2.0/ref/models/fields/#field-options)
 
-**`Common Field Types`**
+**Common Field Types**
+- [CharField](https://docs.djangoproject.com/en/2.0/ref/models/fields/#django.db.models.CharField) : Is used to define short to mid sized strings. You must specify the `max_length`of the data to be stored.
+- [TextField](https://docs.djangoproject.com/en/2.0/ref/models/fields/#django.db.models.TextField) : Text field is used for large abritary-length strings. You may specify a max_length for the field but it is only used in when the field is displayed in forms.
+- [IntegerField](https://docs.djangoproject.com/en/2.0/ref/models/fields/#django.db.models.IntegerField) : Is a field for storing integer(whole numbers) values, and for validating entered values as integers in forms
+- [DateField](https://docs.djangoproject.com/en/2.0/ref/models/fields/#datefield) and [DateTimeField](https://docs.djangoproject.com/en/2.0/ref/models/fields/#datetimefield) : are used for storing date and times information.
+- [EmailField](https://docs.djangoproject.com/en/2.0/ref/models/fields/#emailfield) : is used to store and validate emails.
+- [FileField](https://docs.djangoproject.com/en/2.0/ref/models/fields/#filefield) and [ImageField](https://docs.djangoproject.com/en/2.0/ref/models/fields/#imagefield) : are used to upload files and images respectievly(the `ImageField` simply add additional validation that the uploaded file is an image). These have their own parameters check the docs.
+- [AutoField](https://docs.djangoproject.com/en/2.0/ref/models/fields/#autofield) : Is a special type of `IntegerFiel` that automatically increments. A primary key of this type is added autamtiaclly if you do not specify one.
+- [ForeignKey](https://docs.djangoproject.com/en/2.0/ref/models/fields/#foreignkey) : is used to specify one-to-many relationship to another database model (e.g. a car has one manufacturer, but a manufacturer can make many cars). The "one" side of the relationship is the model that contains the key.
+- [ManyToManyField](https://docs.djangoproject.com/en/2.0/ref/models/fields/#manytomanyfield) : is used to specify a many-to-many relationship (e.g. a book can have several genres, and each genre can contain several books) 
 
+There are many other types of fields, including fields for different types of numbers (big integers, small integers, floats), booleans, URLs, slugs, unique ids, and other "time-related" information (duration, time, etc.). You can view the [full list here](https://docs.djangoproject.com/en/2.0/ref/models/fields/#field-types)
 
+### Metadata
 
+You can declare model-level metadata for your Model by declaring `class Meta`, as shown:
+```python
+class Meta:
+	ordering = ['-example_field_name']
+	...
+```
+
+Definetely return to this later, it is late at night and im not abosrbing any of this info from the tutorial.
+
+### Methods
+
+A model can also have methods.
 
