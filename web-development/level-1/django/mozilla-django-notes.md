@@ -215,6 +215,12 @@ In addition you can add any methods you like to your model to use them in your t
 
 You will use queries to manage your databases but we can learn this later on in views section but for information about queries [click here](https://docs.djangoproject.com/en/2.0/topics/db/queries/) to see the docs
 
+After you are finished editing your models run:
+```
+$ python manage.py makemigrations
+$ python manage.py migrate
+```
+
 ---
 ---
 
