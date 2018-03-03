@@ -194,3 +194,27 @@ Definetely return to this later, it is late at night and im not abosrbing any of
 
 A model can also have methods.
 
+Minimally in every model you should define the standart python class `__str__()` to return a human readable string for the object. It is like the `toString` function in java. Often this will return a title or a name associated with that model.
+
+example:
+```python
+def __str__(self):
+	return self.example_field_named_title
+```
+
+Another common method to include in Django models is `get_absolute_url()` which returns a url for displaying the individual model records on the website(If you define this method than Django will automatically 'View on site' button to the models record editing screen in the Admin site. 
+
+exapmle:
+```python
+def get_absolute_url(self):
+	#returns the url to accsess a particual instance of a model
+	return reverse('model-detail-view', args=[str(self.id)])
+```
+
+In addition you can add any methods you like to your model to use them in your templates or code. (Provided they dont take any arguments)
+
+You will use queries to manage your databases but we can learn this later on in views section but for information about queries [click here](https://docs.djangoproject.com/en/2.0/topics/db/queries/) to see the docs
+
+---
+---
+
