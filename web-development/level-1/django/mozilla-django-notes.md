@@ -224,3 +224,8 @@ $ python manage.py migrate
 ---
 ---
 
+## Admin Site
+
+The django admin application can use your models to automatically build a site area that you can use to create, read, update or delete records. This can save you a lot of time during development, making it very easy to test your models. All configuration that is needed to create an admin site was done when you created the skelton project by django.
+
+As a result of this all you have to do is **register your models** to the admin site. And you can configure the admin panel if you want to be more advanced.
