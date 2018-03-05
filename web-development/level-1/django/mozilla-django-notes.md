@@ -25,6 +25,7 @@ The core elements of every dynamic web applications are urls, views, models and 
 
 ---
 ---
+---
 
 ## Creating Skeleton
 
@@ -106,6 +107,7 @@ $ python manage.py migrate
 
 **You will need to run these two commands everytime you make a change in the structure of your models**
 
+---
 ---
 ---
 
@@ -223,9 +225,34 @@ $ python manage.py migrate
 
 ---
 ---
+---
 
 ## Admin Site
 
 The django admin application can use your models to automatically build a site area that you can use to create, read, update or delete records. This can save you a lot of time during development, making it very easy to test your models. All configuration that is needed to create an admin site was done when you created the skelton project by django.
 
-As a result of this all you have to do is **register your models** to the admin site. And you can configure the admin panel if you want to be more advanced.
+As a result of this all you have to do is **register your models** to the admin site and create a super user to manage them. And you can configure the admin panel if you want to be more advanced.
+
+### Registering Models
+
+Firstly open your `admin.py` in your targeted app_directory. Than after importing your models simply register them with `admin.site.register(model_name)` :
+
+app_directory/admin.py :
+```python
+from django.contrib import admin
+from .models import *
+
+admin.site.register(Model_1)
+admin.site.register(Model_2)
+```
+
+This is the simplest way of registering your models to the admin panel but dont worry the panel itself is highly customazible.
+
+### Creating a Superuser
+
+In order to create a user where it keeps full control over everything and usuaylly controlled by the *staff* you need to create a superuser. The process is very simple after running this command :
+```
+$ python manage.py createsuperuser
+```
+You select an username and a password. After that you are good to go! do not forget to re run your server.
+
