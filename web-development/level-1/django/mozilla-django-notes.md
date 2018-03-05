@@ -76,7 +76,7 @@ from django.urls import path, include
 from django.views.generic import RedirectView
 
 urlpatterns = [
-	path('admin/', admin.site.urls),
+  path('admin/', admin.site.urls),
   #including all of the paths of the targeted app
   path('', include('app-name.urls')),
   #new
@@ -97,7 +97,6 @@ urlpatterns = [
   path('', views.index, name='app-index-page'),
 ]
 ```
-
 
 **5)** Run migrations to add/hook your finished app to the database
 ```
@@ -267,11 +266,52 @@ or check out [MDN django admin docs](https://developer.mozilla.org/en-US/docs/Le
 ---
 ---
 
-## Views
+## URL mapping & Views & Templates
 
+Now that we have defined our skeleton, models and an admin panel we need to show our data to the users. In order to present the information to users we have to select which appropirate data in your models you want to show. After selcting your data you need to define URLs for returning those selections. After creating the basis we need to fancy it with url mapper, views and templates
+
+Views are at the heart of every django website because it is the first UI that our users interfere with. Yet, in order to show our views we need to guide users in our URL maps to get the desired views.
+
+### **URL mapping**
+
+When we created the `skeleton website` we updated the entry_folder's `urls.py` file to include our apps urls. Remember : 
+```python
+from django.contrib import admin
+from django.urls import path, include
+
+urlpatterns = [
+  #including all of the paths of the targeted app
+  path('', include('app-name.urls')),
+]
+```
+and we also created a path inside our `targeted_apps/urls.py` to connect it to our views. Remember:
+```python
+from django.urls import path, include
+from . import views
+
+urlpatterns = [
+  #example
+  path('', views.index, name='index'),
+]
+```
+
+Lets talk about these maps for a second before moving to views. This `path()` function defines a URL pattern such as `'/example/page/1'` which in this case is just `''` for making this page the index, and a view function is defined if there is a url pattern `views.index` is our view pattern. This connects our paths url map to the function named index() in our apps/views.py file.
+
+This `path()` function also specifies a `name`parameter which uniqeley identifies this particular URL mapping. You can use the `name` to do lots of different things but mostly it is used for our templates such as you can add links pointing that URL mapping
+
+example_app/example_template.html : 
+```html
+<a href="{% url 'index' %}">HOME</a>
+```
+
+### **Views**
+
+...
+
+### **Templates**
+
+...
 
 ---
 ---
 ---
-
-## Templates
