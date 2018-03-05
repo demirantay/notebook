@@ -306,12 +306,44 @@ example_app/example_template.html :
 
 ### **Views**
 
-...
+A view is a function processes a HTTP request, fetches data from the database as needed, generates an html page by rendering this data using an HTML template and returns the HTML in an HTTP response to be shown to the user. 
+
+Open `targeted_app/views.py` file and note that the file already imports the `render()` shortcut function which generates html files using templates and data.
+
+targeted_app/views.py currently looks like this:
+```python
+from django.shortcuts import render 
+
+# create your views here
+```
+
+Now lets create our first index view. For the sake of the example lets assume that we have written two models `User` and `Post`. We will talk about the code after.
+
+targeted_app/views.py :
+```python
+from django.shortcuts import render 
+from .models import User, Post
+
+# View function for home page of the site
+def index(request):
+	
+	# Generate(GET) some variables(DATA) for 
+	# context(from the database) to use in templates
+	all_users = User.objects.all()
+	all_posts = Post.objects.all()
+	num_of_users = User.objects.all().count()
+	num_of_posts = Post.objects.all().count()
+	
+	# Render the HTML template index.html with the data in the context variable
+	return render(request, 'index.html', context={'all_users':all_users, 'all_posts':all_posts, \
+	'num_of_users':num_of_users, 'num_of_posts':num_of_posts})
+```
+
+As you can see above the code is pretty self explainatory. If you want to `GET` `data` from the database you need accsess the objects properties through various ways. The relation ship of the databse above is one of the most basic relationships on django. You can spice things up such as `posts = Post.objects.order_by('-created_date')[:6]` which gets the firts six post which are ordered from the latest if you add `created_time` field in your Post model. You can make the context data as complicated as you want. For more adnvanced info check the offical Docs.
+
+At the end of the function we call `render()` to create and return an HTML page as a response (thank god this shortcut function wraps a lot of other functions and simplifies this very common-use case). This takes parameters, the original `request` object(HttpRequest), an HTML template with placeholders for data and a `context`variable (a python dictionary that holds the data that will be inserted to those placeholders).
 
 ### **Templates**
 
 ...
 
----
----
----
