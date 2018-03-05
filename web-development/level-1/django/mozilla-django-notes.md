@@ -256,3 +256,22 @@ $ python manage.py createsuperuser
 ```
 You select an username and a password. After that you are good to go! do not forget to re run your server.
 
+### Advanced configuration
+
+Django does a pretty good job for creating a basic administiration site for CRUD applications. However, the admin panel is **highly** customizible you can add additional fields, how the forms are layed out, allow inline displayment and **many more things...** since it is too long I am not going to list all of them here. 
+
+However if you want to check [visit official docs for admin panel](https://docs.djangoproject.com/en/2.0/ref/contrib/admin/)
+or check out [MDN django admin docs](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Admin_site) which has great hands on experience
+
+---
+---
+---
+
+## Views
+
+
+---
+---
+---
+
+## Templates
