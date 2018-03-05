@@ -345,5 +345,41 @@ At the end of the function we call `render()` to create and return an HTML page 
 
 ### **Templates**
 
+A template is a text file defining the structure or layout of a file (such as HTML page)with placeholders used to represent actual content. Django will automatically look for templates in a folder named **'templates'**  in your targeted_application and will raise a error if the file cannot be found. 
+
+#### Extending Templates
+
+Most of your templates will need standart boiler plate code in your templates. In order to not repeat your self and write hundreds of lines of code we can simply estanbish a `base_template` which contains all the boiler plate static code such as the navigation, meta-data in head, font, bootstrap CDNs and all of that crap. 
+
+To give an example lets create a base_template.html file that will be our extending template
+
+templates/base_template.html
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% block title %}<title>Local Library</title>{% endblock %}
+</head>
+
+<body>
+  {% block content %}<!-- default content text (typically empty) -->{% endblock %}
+</body>
+</html>
+```
+
+After coding our base template if we want to define a template for a particular view, we first specify the base template (with `{% extends 'base_template.html' %}` template tag ). If we want to change any particular content we simply add them between `{% block %}`/`{% endblok%}`.
+
+For example the code snippet below shows how to use the `extends` tag and override the `content` block
+
+templates/index.html:
+```html
+{% extends 'base_template.html' %}
+
+{% block content %}
+<h1>Home</h1>
+<p>I overwrote the content and index file has this content instead of emptiness</p>
+{% endblock %}
+```
+
 ...
 
