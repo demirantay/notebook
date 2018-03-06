@@ -431,8 +431,23 @@ If you defined a `name='index'` in in your `path()` s in your apps urls.py you c
 <a href='{% url 'index' %}'>HOME</a>
 ```
 
+#### Advanced views
+Definetly check the [MDN docs since I am not going to take any notes regarding class based views](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Generic_views)
+
+...
+
 ---
 ---
 ---
+
+## Detail Pages
+
+Most of the time we will need to generate specific views for users input without touching our code. Such as, creating profile pages after registering to the site, single page posts, blog writinhg ..etc .
+
+
+
+
+
+
 
 
