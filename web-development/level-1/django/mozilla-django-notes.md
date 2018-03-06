@@ -388,12 +388,51 @@ templates/template_example.html :
 ```html
 ...
 <head>
-	<!-- add additional css in static file -->
+	<!-- add additional css from the file named static  -->
 	{% load static %}
-	<link rel='stylesheet' href='{% static 'style.css' %}' >
+	<link rel='stylesheet' href='{% static 'style.css' %}' />
+	
+	<!-- for images if you desire -->
+	<img src="{% static 'assets/face.jpg' alt='face image' %}" />
 </head>	
+...
+
+```
+
+For more info about serving static files visit [official docs](https://docs.djangoproject.com/en/2.0/howto/static-files/)
+
+#### Using placeholders
+
+Remember that we added context variables in when we were defining our views ? This line `context={'all_users':all_users, 'all_posts':all_posts, 'num_of_users':num_of_users, 'num_of_posts':num_of_posts}`. Since we defined context variables we can use them in the targeted template which is the `return render(request, 'index.html', context=...)` index.html in this case.
+
+In order to use our variables in our templates we can simply use `{{ var_name }}` tags
+
+templates/index.html :
+```html
+{% extends 'base_template.html %}
+
+{% block content %}
+<body>
+	<h1>All of the notes</h1>
+	<p>{{ all_posts }}</p>
+	
+</body>
+{% endblock %}
 ...
 ```
 
+*Note: You can easily understand if you are dealing with template variables or tags. Variables do not have (`{{ var }}`) the percentage sign before and after the curly brackts and have double curly brackets. While tags (`{% extends 'example.html %}`) have single curly brackets and one percentage sign on both sides.
+
+#### Linking URLs in templates 
+
+If you defined a `name='index'` in in your `path()` s in your apps urls.py you can easily link stuff with their name.
+
+```html
+<a href='{% url 'index' %}'>HOME</a>
+```
+
+---
+---
+---
 
 
