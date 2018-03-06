@@ -366,7 +366,6 @@ templates/base_template.html
 </body>
 </html>
 ```
-
 After coding our base template if we want to define a template for a particular view, we first specify the base template (with `{% extends 'base_template.html' %}` template tag ). If we want to change any particular content we simply add them between `{% block %}`/`{% endblok%}`.
 
 For example the code snippet below shows how to use the `extends` tag and override the `content` block
@@ -381,5 +380,20 @@ templates/index.html:
 {% endblock %}
 ```
 
+#### Adding css and javascript
+
+If you would like to add css or javascript to your templates it is always better to write them on a seperate file. Like we created 'templates' in your root folder, we have to create another folder named `static` in your root folder for all of your css and js files. After defining them you can include them in your templates with `load static` tag.
+
+templates/template_example.html :
+```html
 ...
+<head>
+	<!-- add additional css in static file -->
+	{% load static %}
+	<link rel='stylesheet' href='{% static 'style.css' %}' >
+</head>	
+...
+```
+
+
 
