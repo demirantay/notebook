@@ -442,7 +442,19 @@ Definetly check the [MDN docs since I am not going to take any notes regarding c
 
 ## Detail Pages
 
-Most of the time we will need to generate specific views for users input without touching our code. Such as, creating profile pages after registering to the site, single page posts, blog writinhg ..etc .
+Most of the time we will need to generate specific views for users input without touching our code. Such as, creating profile pages after registering to the site, single page posts, blog writinhg ..etc . And usually the url pattern is somthing like this `application_name/user/<id>/` where `<id>` is the primary key to the model which in this case `user`.
+
+### URL mapping for detail pages
+
+applicatio_name/urls.py
+```python
+urlpatterns = [
+	path('users/', views.userlist, name='userlist'),
+	path('users/<int:pk>', views.user_detail, name='user_detail')
+]
+```
+For the user-detail path the URL pattern uses a special syntax to capture ...
+
 
 
 
