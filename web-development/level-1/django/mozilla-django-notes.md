@@ -76,7 +76,7 @@ from django.urls import path, include
 from django.views.generic import RedirectView
 
 urlpatterns = [
-	path('admin/', admin.site.urls),
+  path('admin/', admin.site.urls),
   #including all of the paths of the targeted app
   path('', include('app-name.urls')),
   #new
@@ -97,7 +97,6 @@ urlpatterns = [
   path('', views.index, name='app-index-page'),
 ]
 ```
-
 
 **5)** Run migrations to add/hook your finished app to the database
 ```
@@ -255,4 +254,200 @@ In order to create a user where it keeps full control over everything and usuayl
 $ python manage.py createsuperuser
 ```
 You select an username and a password. After that you are good to go! do not forget to re run your server.
+
+### Advanced configuration
+
+Django does a pretty good job for creating a basic administiration site for CRUD applications. However, the admin panel is **highly** customizible you can add additional fields, how the forms are layed out, allow inline displayment and **many more things...** since it is too long I am not going to list all of them here. 
+
+However if you want to check [visit official docs for admin panel](https://docs.djangoproject.com/en/2.0/ref/contrib/admin/)
+or check out [MDN django admin docs](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Admin_site) which has great hands on experience
+
+---
+---
+---
+
+## URL mapping & Views & Templates
+
+Now that we have defined our skeleton, models and an admin panel we need to show our data to the users. In order to present the information to users we have to select which appropirate data in your models you want to show. After selcting your data you need to define URLs for returning those selections. After creating the basis we need to fancy it with url mapper, views and templates
+
+Views are at the heart of every django website because it is the first UI that our users interfere with. Yet, in order to show our views we need to guide users in our URL maps to get the desired views.
+
+### **URL mapping**
+
+When we created the `skeleton website` we updated the entry_folder's `urls.py` file to include our apps urls. Remember : 
+```python
+from django.contrib import admin
+from django.urls import path, include
+
+urlpatterns = [
+  #including all of the paths of the targeted app
+  path('', include('app-name.urls')),
+]
+```
+and we also created a path inside our `targeted_apps/urls.py` to connect it to our views. Remember:
+```python
+from django.urls import path, include
+from . import views
+
+urlpatterns = [
+  #example
+  path('', views.index, name='index'),
+]
+```
+
+Lets talk about these maps for a second before moving to views. This `path()` function defines a URL pattern such as `'/example/page/1'` which in this case is just `''` for making this page the index, and a view function is defined if there is a url pattern `views.index` is our view pattern. This connects our paths url map to the function named index() in our apps/views.py file.
+
+This `path()` function also specifies a `name`parameter which uniqeley identifies this particular URL mapping. You can use the `name` to do lots of different things but mostly it is used for our templates such as you can add links pointing that URL mapping
+
+example_app/example_template.html : 
+```html
+<a href="{% url 'index' %}">HOME</a>
+```
+
+### **Views**
+
+A view is a function processes a HTTP request, fetches data from the database as needed, generates an html page by rendering this data using an HTML template and returns the HTML in an HTTP response to be shown to the user. 
+
+Open `targeted_app/views.py` file and note that the file already imports the `render()` shortcut function which generates html files using templates and data.
+
+targeted_app/views.py currently looks like this:
+```python
+from django.shortcuts import render 
+
+# create your views here
+```
+
+Now lets create our first index view. For the sake of the example lets assume that we have written two models `User` and `Post`. We will talk about the code after.
+
+targeted_app/views.py :
+```python
+from django.shortcuts import render 
+from .models import User, Post
+
+# View function for home page of the site
+def index(request):
+	
+	# Generate(GET) some variables(DATA) for 
+	# context(from the database) to use in templates
+	all_users = User.objects.all()
+	all_posts = Post.objects.all()
+	num_of_users = User.objects.all().count()
+	num_of_posts = Post.objects.all().count()
+	
+	# Render the HTML template index.html with the data in the context variable
+	return render(request, 'index.html', context={'all_users':all_users, 'all_posts':all_posts, \
+	'num_of_users':num_of_users, 'num_of_posts':num_of_posts})
+```
+
+As you can see above the code is pretty self explainatory. If you want to `GET` `data` from the database you need accsess the objects properties through various ways. The relation ship of the databse above is one of the most basic relationships on django. You can spice things up such as `posts = Post.objects.order_by('-created_date')[:6]` which gets the firts six post which are ordered from the latest if you add `created_time` field in your Post model. You can make the context data as complicated as you want. For more adnvanced info check the offical Docs.
+
+At the end of the function we call `render()` to create and return an HTML page as a response (thank god this shortcut function wraps a lot of other functions and simplifies this very common-use case). This takes parameters, the original `request` object(HttpRequest), an HTML template with placeholders for data and a `context`variable (a python dictionary that holds the data that will be inserted to those placeholders).
+
+### **Templates**
+
+A template is a text file defining the structure or layout of a file (such as HTML page)with placeholders used to represent actual content. Django will automatically look for templates in a folder named **'templates'**  in your targeted_application and will raise a error if the file cannot be found. 
+
+#### Extending Templates
+
+Most of your templates will need standart boiler plate code in your templates. In order to not repeat your self and write hundreds of lines of code we can simply estanbish a `base_template` which contains all the boiler plate static code such as the navigation, meta-data in head, font, bootstrap CDNs and all of that crap. 
+
+To give an example lets create a base_template.html file that will be our extending template
+
+templates/base_template.html
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% block title %}<title>Local Library</title>{% endblock %}
+</head>
+
+<body>
+  {% block content %}<!-- default content text (typically empty) -->{% endblock %}
+</body>
+</html>
+```
+After coding our base template if we want to define a template for a particular view, we first specify the base template (with `{% extends 'base_template.html' %}` template tag ). If we want to change any particular content we simply add them between `{% block %}`/`{% endblok%}`.
+
+For example the code snippet below shows how to use the `extends` tag and override the `content` block
+
+templates/index.html:
+```html
+{% extends 'base_template.html' %}
+
+{% block content %}
+<h1>Home</h1>
+<p>I overwrote the content and index file has this content instead of emptiness</p>
+{% endblock %}
+```
+
+#### Adding css and javascript
+
+If you would like to add css or javascript to your templates it is always better to write them on a seperate file. Like we created 'templates' in your root folder, we have to create another folder named `static` in your root folder for all of your css and js files. After defining them you can include them in your templates with `load static` tag.
+
+templates/template_example.html :
+```html
+...
+<head>
+	<!-- add additional css from the file named static  -->
+	{% load static %}
+	<link rel='stylesheet' href='{% static 'style.css' %}' />
+	
+	<!-- for images if you desire -->
+	<img src="{% static 'assets/face.jpg' alt='face image' %}" />
+</head>	
+...
+
+```
+
+For more info about serving static files visit [official docs](https://docs.djangoproject.com/en/2.0/howto/static-files/)
+
+#### Using placeholders
+
+Remember that we added context variables in when we were defining our views ? This line `context={'all_users':all_users, 'all_posts':all_posts, 'num_of_users':num_of_users, 'num_of_posts':num_of_posts}`. Since we defined context variables we can use them in the targeted template which is the `return render(request, 'index.html', context=...)` index.html in this case.
+
+In order to use our variables in our templates we can simply use `{{ var_name }}` tags
+
+templates/index.html :
+```html
+{% extends 'base_template.html %}
+
+{% block content %}
+<body>
+	<h1>All of the notes</h1>
+	<p>{{ all_posts }}</p>
+	
+</body>
+{% endblock %}
+...
+```
+
+*Note: You can easily understand if you are dealing with template variables or tags. Variables do not have (`{{ var }}`) the percentage sign before and after the curly brackts and have double curly brackets. While tags (`{% extends 'example.html %}`) have single curly brackets and one percentage sign on both sides.
+
+#### Linking URLs in templates 
+
+If you defined a `name='index'` in in your `path()` s in your apps urls.py you can easily link stuff with their name.
+
+```html
+<a href='{% url 'index' %}'>HOME</a>
+```
+
+#### Advanced views
+Definetly check the [MDN docs since I am not going to take any notes regarding class based views](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Generic_views)
+
+...
+
+---
+---
+---
+
+## Detail Pages
+
+Most of the time we will need to generate specific views for users input without touching our code. Such as, creating profile pages after registering to the site, single page posts, blog writinhg ..etc .
+
+
+
+
+
+
+
 
