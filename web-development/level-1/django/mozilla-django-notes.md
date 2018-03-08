@@ -453,7 +453,43 @@ urlpatterns = [
 	path('users/<int:pk>', views.user_detail, name='user_detail')
 ]
 ```
-For the user-detail path the URL pattern uses a special syntax to capture ...
+For the user-detail path the URL pattern uses a special syntax to capture the specific id of the user we want to see. The syntax is very simple angle brackets `< >` defines the part of the URl to be captured. Enclosing the name of the variable that the view can use to accsess the captured data. For example `<int:pk>`, will caputre the part of the url pattern and pass the value to the view as a variable named `pk` (short for primary key)in this case.
+
+Now lets write our user-detail view:
+
+application_name/views.py:
+```python
+def user_detail(request, pk):
+	user_id = User.objects.get(pk=pk)
+	
+	# if you want to raise a 404 error if user doesnt exist write,
+	# book_id=get_object_or_404(Book, pk=pk)
+	 
+	return render(request, 'user_detail.html', context={'user':user_id,})
+```
+
+### Advanced path mapping
+
+I wont go into detail but using regular expressions in mapping is a very powerful tool make sure to check our official docs and [MDN docs](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Generic_views)
+
+```python
+#example advnaced regex mapping
+urlpatterns = [
+	re_path(r'^book/(?P<pk>\d+)$', views.user_detail, name='user_detail')
+]
+```
+
+There are more to learn on creating detail pages. Definetly check out official docs
+
+---
+---
+---
+
+## Sessions
+
+...
+
+
 
 
 
