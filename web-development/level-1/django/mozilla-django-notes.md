@@ -528,6 +528,35 @@ I will not go into detail about how to use sessions in django at the moment but 
 ---
 ---
 
+## User authentication & permissions
+
+Django provides a authentication and authorisation("permission") system, built on top of the session framework. That allows you to verify user creditentials and define what actiions are each user is allowed to perform. The auth system includes permissions/flags that designate weather a user may perform a task, forms and views for logging in users and tools for restricting content
+
+### Enabling authentication
+
+The authentication is enabled when we created seklton projects. The cofiguration is setup in the `INSTALLED_APPS` and `MIDDLEWARE` section of the settings.py file.
+
+entry_folder/settings.py:
+```python
+INSTALLED_APPS = [
+	...
+	'django.contrib.auth', #core authentication framework and its default models
+	'django.contrib.contenttype', #django content type system (allows permissions to be accosiated with models)
+	...
+]
+
+MIDDLEWARE = [
+	...
+	'django.contrib.sessions.middleware.SessionMiddlware', #manages sessions across requests
+	...
+	'django.contrib.auth.middleware.AuthenticationMiddleware', #Associates users with requests using sessions
+	...
+]
+```
+
+...
+
+
 
 
 
