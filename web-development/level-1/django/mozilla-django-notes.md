@@ -487,11 +487,46 @@ There are more to learn on creating detail pages. Definetly check out official d
 
 ## Sessions
 
-...
+Until now in our website the content is dynamically created from the database and served same to all of its users. However, usually sites does not do this. In a real site it is common to create a individual user with a customized experience based on their perivious visit, likes etc. 
 
+The session framework implemented in django allows you to collect arbitary data based on per-site visitor basis.
 
+### What are sessions ?
 
+All communucation of the web browser and the servier is via HTTP protocol, which is *stateless*. The fact that the protocol is *stateless* means that the messages between the client and the server are completely independent of each other-- there is no notion of 'sequence' or behavior based on perivious messages. As a result if you want to have a site that keeps track of the ongoing relationships with a client, you need to implement it yourself.
 
+Sessions are the mechanism used by django (and most of the internet) for keeping track of the *state* between the server(Site) and the particular browser(user). Sessions allow you to store arbitary data per browser and have this data aviable to the server whenever the browser connects. Individual data items associated with the session are then referenced by a "key", which is both used to store and retrieve data.
+
+Django uses a cookie containing special *session id* to identify each particular browser and its accosiated session with the site. The actual session data is stored in the site database by defualt (this is more secure than storing the data in a cookie where they are more valunarable to mallicious users). You can configure django to store sessions into other places like cache files, secure cookies but the defualt location is good and relatively in a secure position.
+
+### Enabling sessions
+
+Sessions were automatically enabled when we created the skeleton site.
+
+The configuration is set up in `INSTALLED_APPS` and `MIDDLEWARE` sections of the entry_folder/settings.py as shown below.
+
+entry_folder/settings.py :
+```python
+INSTALLED_APPS = [
+	...
+	'django.contrib.sessions',
+	...
+]
+
+MIDDLEWARE = [
+	...
+	'django.contrbi.sessions.middleware.SessionMiddleware',
+	...
+]
+```
+
+### Using sessions
+
+I will not go into detail about how to use sessions in django at the moment but you should definetly check out django docs and [MDN has a killer docs on sessions](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Sessions)
+
+---
+---
+---
 
 
 
