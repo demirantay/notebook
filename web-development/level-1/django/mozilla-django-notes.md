@@ -530,31 +530,54 @@ I will not go into detail about how to use sessions in django at the moment but 
 
 ## User authentication & permissions
 
-Django provides a authentication and authorisation("permission") system, built on top of the session framework. That allows you to verify user creditentials and define what actiions are each user is allowed to perform. The auth system includes permissions/flags that designate weather a user may perform a task, forms and views for logging in users and tools for restricting content
+The django authentication system handles both authentication and authorazition. Berifely, authentication verifies a user is who they claim to be, and authorazition determines what an authenticated user is allowed to do. 
 
-### Enabling authentication
+The auth system consists of:
+- Users
+- Permissions: Binary(yes/no) flags designated weather a user may perform a certian task. 
+- Groups: A generic way of appliying labels and permissions to more than one user.
+- A configurable password hashing system.
+- Forms and view tools for logging in users,or restricting content.
+- A pluggable backend system.
 
-The authentication is enabled when we created seklton projects. The cofiguration is setup in the `INSTALLED_APPS` and `MIDDLEWARE` section of the settings.py file.
+The auth system in django is very generic. Even though django is a very batteries included framework the auth system is very generic and needs 3rd party apps for common solutions. such as:
 
-entry_folder/settings.py:
+- Password strength checking
+- Throttling of login attempts
+- Authentication against third parties(OAuth, for example)
+
+### Installation
+
+You do not need to do anything the auth system is already installed like sessions in `INSTALLED_APPS` and `MIDDLEWARE` under:
+INSTALLED_APPS :
+- `django.contrib.auth` -- contains the core of the authentication framework and its default models.
+- `django.contrib.contenttypes` -- is the django content type system which allows permissions to be accosiated with models you create
+
+MIDDLEWARE :
+- `SessionMiddleware` -- manages sessions across requests
+- `AuthenticationMiddleware` -- accosiates users with requests using sessions.
+
+### Using auth system
+
+Django provides almost everything you need to create authentication pages to handle login, logout and password maangement 'out of the box'. This includes url mapper, views and forms but it does not include the templates -- we have to create our own.
+
+#### URL mapping for auth system
+
+Add the following to the bottom of your entry-folder/urls.py
+
+entry-folder/urls.py:
 ```python
-INSTALLED_APPS = [
+urlpatterns = [
 	...
-	'django.contrib.auth', #core authentication framework and its default models
-	'django.contrib.contenttype', #django content type system (allows permissions to be accosiated with models)
-	...
-]
-
-MIDDLEWARE = [
-	...
-	'django.contrib.sessions.middleware.SessionMiddlware', #manages sessions across requests
-	...
-	'django.contrib.auth.middleware.AuthenticationMiddleware', #Associates users with requests using sessions
-	...
+	path('accounts/', include('django.contrib.auth.urls')),
 ]
 ```
 
-...
+
+
+
+
+
 
 
 
