@@ -569,11 +569,54 @@ entry-folder/urls.py:
 ```python
 urlpatterns = [
 	...
+	#Add Django site authentication urls (for login, logout, password management)
 	path('accounts/', include('django.contrib.auth.urls')),
 ]
 ```
 
+Navigate to http://127.0.0.1:8000/accounts/ URl and django will throw you an error saying that it could not find any urls. This is becuase when you `include('django.contrib.auth.urls')` it doesnt get included in one single url instead it maps out itself to many other maps, I know it is confusing, just look at the example of their mapping system below. :
 
+```
+accounts/ login/ [name='login']
+accounts/ logout/ [name='logout']
+accounts/ password_change/ [name='password_change']
+accounts/ password_change/done/ [name='password_change_done']
+accounts/ password_reset/ [name='password_reset']
+accounts/ password_reset/done/ [name='password_reset_done']
+accounts/ reset/<uidb64>/<token>/ [name='password_reset_confirm']
+accounts/ reset/done/ [name='password_reset_complete']
+```
+
+*Note: You dont have to map anything else -- the 'django.contrib.auth.urls' maps nearly everything a site needs as you can see above. Try http://127.0.0.1:8000/accounts/login this time and it will work since we passed 'login/' to the url it is included above.
+
+#### Templates for user auth
+
+Django authentication system expects templates associated with its views to be found in a folder named **registration/** in your templates folder. So the folder stcutrue will be like this :
+
+```
+|_directory-name/
+	|_entry-folder/
+	|_app-name/
+	|_templates/
+		|_example_template.html
+		|_registration/
+			|_login.html
+```
+
+To make these directories visible to the template loader (i.e. to put this directory in template search path) open the project settings and update the `TEMPLATE` sections `'DIRS'` line as shown.
+
+```python
+TEMPLATES = [ 
+	{
+		...
+		'DIRS': ['./templates',],
+		'APP_DIRS' : True,
+		...
+```
+
+#### Login Template
+
+...
 
 
 
