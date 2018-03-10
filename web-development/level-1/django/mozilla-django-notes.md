@@ -693,6 +693,65 @@ You can get information about the currently logged in user in templates with the
 
 Typically you will first test against the `{{ user.is_authenticated }}` template variable to determine weather the user is eligible to see specific content. 
 
+To demonstrate this lets assumme that we have a public navbar but it will display few more elements if the user is logged in:
+```html
+...
+
+{% if user.is_authenticated %}
+	<li>User: {{user.get_username}}</li>
+	<li><a href="{% url 'logout' %}">Log out</a></li>
+{% else %}
+	<li><a href="{% url 'login' %}">Log in</a></li>
+{% endif %}
+
+...
+```
+
+#### Testing in views
+
+If you are using function based views the easiest way to restrict accsess to your function is to apply the `login_required` decorator(`@`) to your function, as shown below. If the user is logged in then your view code will exucute as normal. If the user is not logged in this will redirect to the login url defined in the project settings(`settings.LOGIN_URL`).
+
+application-name/views.py:
+```python
+from django.contrib.auth.decorators import login_required
+
+@login_required
+def my_view(request):
+	...
+```
+*Note: you can do the same shit manually by testing on `request.user.is_authenticated` but the decorator is much more elegant and convenient.*
+
+For [additional detail check out docs](https://docs.djangoproject.com/en/2.0/topics/auth/default/#limiting-access-to-logged-in-users)
+
+#### Conneting auth User model to our models
+
+To connect the auth systems User model to any of our models defined in the model.py file we need to use ForeignKeys.
+
+application-name/model.py:
+```python
+from django.contrib.auth.models import User
+
+class example_fiel(models.Model):
+	example-field = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, blank=True)
+```
+
+after this ofcourse dont forget to migrate!
+
+### Permissions
+
+Check this out else where MDN docs are bad at explaining permissions ...
+
+### Sign up mechanism
+
+
+---
+---
+---
+
+## Using Forms
+
+
+
 
 
 
