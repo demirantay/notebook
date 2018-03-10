@@ -616,12 +616,82 @@ TEMPLATES = [
 
 #### Login Template
 
-...
+create the following file in ./templates/registration/login.html:
+
+```html
+{% extends 'base_template.html' %}
+
+{% block content %}
+
+<form method='post' action="{% url 'login' %}">
+{% csrf_token %}
+	<div>
+	  <td>{{ form.username.label_tag }}</td>
+	  <td>{{ form.username }}</td>
+	</div>
+	<div>
+	  <td>{{ form.password.label_tag }}</td>
+	  <td>{{ form.password }}</td>
+	</div>
+	
+	<div>
+  		<input type="submit" value="login" />
+  		<input type="hidden" name="next" value="{{ next }}" />
+	</div>
+</form>
+
+{% endblock %}
+
+```
+
+The code is fairly simple form handling code for your username and password. The `{% csrf_token %}` is added to prevent XSS attacks.
+
+If your login succseeds you will be redirected to another page (by default this will be https://127.0.0.1:8000/accounts/profile). The problem here is that by default django expects that after login you will want to be taken to a profile page which may not be the case always. and as you havent defined profile page you will get an error. 
+
+We can fix this very easily. Open your entry_folders settings.py and add the text below at the bottom of your file.
+```python
+# redirects to home page after login (defuajlt redirects to .../accounts/profile/ )
+LOGIN_REDIRECT_URL = '/'
+```
+
+#### Logout template
 
 
+If you navigate to logout url (https://127.0.0.1:8000/accounts/logout) then you will see some odd behavior -- your user will be logged out sure but you will be taken to the Admin logout page. Thats not what you want because the login link on that admin screen takes you to the admin panel login page(and that is only avilable to the users who are `staff_only`).
 
+To change this we have to include a {% url 'logout' %} somewhere in our profile page after we get redirected when we login. And of course we need to redirect the users when they logout.
 
+First add the logout url, 
 
+templates/profile.html
+```html
+{% extends 'base_template.html' %}
+{% block content %}
+	
+	<!-- navbar and all that profile crap ... -->
+	...
+	<a href="{% url 'logout.html' %}">Logout</a>
+
+{% endblock %}
+```
+
+After clicking logout button  we have to redirect the user to the log out page which is generally same as the login page since logging in is the gate to the web site.
+
+enry-folder/settings.py :
+```python
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/'
+```
+
+### Testing against authenticated users
+
+This section looks at what we can do to selectively control content the user sees based on weather they are logged in or not. 
+
+#### Testing in templates
+
+You can get information about the currently logged in user in templates with the `{{ user }}` template variable. 
+
+Typically you will first test against the `{{ user.is_authenticated }}` template variable to determine weather the user is eligible to see specific content. 
 
 
 
