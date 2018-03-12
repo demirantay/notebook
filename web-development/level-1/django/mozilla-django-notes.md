@@ -750,7 +750,13 @@ Check this out else where MDN docs are bad at explaining permissions ...
 
 ## Using Forms
 
+An html form is a group of fields/widgets on a web page which can be used to get information (data) from the user. Forms are one of the heart beat at every wev application and as you would expect they are one of the most complex concepts in the web. You first need to write the HTML form, validate and properly santise the the entered data, repost the form messages to inform users in case of invalid fields, handle data and when it is succsessful, indicate and show that there is a succsess.
 
+As you would expect it even tires me out to list all of these. Yet, this is where django comes in and provides us a framework to do most of the heavylifting all we have to do is play along its protocols and customize it to our needs.
+
+### HTML forms
+
+First lets give a brief overview of html forms 
 
 
 
