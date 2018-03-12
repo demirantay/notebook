@@ -741,7 +741,11 @@ after this ofcourse dont forget to migrate!
 
 Check this out else where MDN docs are bad at explaining permissions ...
 
-### Sign up mechanism
+---
+---
+---
+
+## Sign up mechanism
 
 
 ---
