@@ -746,7 +746,9 @@ Check this out else where MDN docs are bad at explaining permissions ...
 ---
 
 ## Sign up mechanism
+The django auth provides us a url mapping and views for login, logout, password reset mechanisms all we needed was to add templates. But to create a signup page we will need to make our own view and url. 
 
+Since we are 
 
 ---
 ---
@@ -762,6 +764,17 @@ As you would expect it even tires me out to list all of these. Yet, this is wher
 
 First lets give a brief overview of html forms 
 
+
+
+---
+---
+---
+---
+---
+
+## Mega signup login example
+
+I will code a mega signup login logout with custom users to demonstrate what we have learnt.
 
 
 
