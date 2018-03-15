@@ -806,8 +806,25 @@ As you can imagine all of this creates a unwanted repeated code. Django, as alwa
 
 The techniques is quite the same, the view gets a request, performs any action required including reading data from th models then generates and returns a html page. What makes this process in form handling complex is that server needs to be able to proccsess data provided by the user and redisplay the page if there are any errors.
 
+<img src="/web-development/level-1/django/assets/form-handling.png" height="500px" alt="django-request-structure">
 
+Based on the diagram above the main things django form handling does are:
+	
+1. Display the default form the first time it is requested by the user
+	* The form may contain blank fields (eg. if you are creating a new record) or it may be prepopulated with intial values (eg. if you are changing a record or have useful initial values)
+	* The form is referred to as unbound at this point because it isnt associated with any user-entered data(though it may have intial values)
+2. Recieve data from a submit request and bind it to the form
+	- Binding data to the form means that the user the user-entered data and any errors are available when we need to redisplay the form
+3. Clean and validate the data
+	- Cleaning the data performs santisation of the input (eg. removing invalid characters that might be used for mallicious attacks. )
+	- Calidation checks that the values are appropirate for the field (eg. are in the right date range, arent too short or too long)
+4. If any data is invalid redisplay the form, this time with user populated values and error messages for the invalid fields.
+5. If data is valid perform required actions (save the data, send and email, return the result of a search, pload a file etc.)
+6. Once all actions are complete redirect the user to another page.
 
+Django provides us a lot of tools to approach form handling as easy as possible. The fundemental is the `Form` class, which simplifies both generation of form HTML and data cleanig/validation.
+
+### Using form handling
 
 
 ---
@@ -819,7 +836,8 @@ The techniques is quite the same, the view gets a request, performs any action r
 ## Mega signup login example
 
 I will code a mega signup login logout with custom users to demonstrate what we have learnt.
-
+	
+		  
 
 
 
