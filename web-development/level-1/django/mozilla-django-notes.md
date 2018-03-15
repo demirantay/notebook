@@ -745,38 +745,6 @@ Check this out else where MDN docs are bad at explaining permissions ...
 ---
 ---
 
-## Sign up mechanism
-The django auth provides us a url mapping and views for login, logout, password reset mechanisms all we needed was to add templates. But to create a signup page we will need to make our own view and url. 
-
-You need to crate a path to the url,
-
-application-name/urls.py:
-```python
-urlpatterns = [
-	...
-	path('signup/', views.signup, name='signup')
-]
-```
-
-After that we need to create the actual view
-
-application-name/views.py:
-```python
-...
-
-from django.contrib.auth.forms import UserCreationForm
-
-
-def signup(request):
-
-```
-
-...
-
----
----
----
-
 ## Using Forms
 
 An html form is a group of fields/widgets on a web page which can be used to get information (data) from the user. Forms are one of the heart beat at every wev application and as you would expect they are one of the most complex concepts in the web. You first need to write the HTML form, validate and properly santise the the entered data, repost the form messages to inform users in case of invalid fields, handle data and when it is succsessful, indicate and show that there is a succsess.
@@ -825,6 +793,63 @@ Based on the diagram above the main things django form handling does are:
 Django provides us a lot of tools to approach form handling as easy as possible. The fundemental is the `Form` class, which simplifies both generation of form HTML and data cleanig/validation.
 
 ### Using form handling
+
+The `Form` class is the heart of djangos form handling system. It specifies the fields in the form, their layout, display widgets, labels, intiial values, valid values, and error messages associated with invalid fields. The class also provides methods for rendering itself in templates using predefined formats(tables, lists)
+
+#### Declaring a Form
+
+The declaration syntax of a `form` is very similar to a `model` and shares the same field types and some similar parameters. This makes sense because in each case we need to ensure that each field handles the right type of data, is contrained to valid data and has description or documentation.
+
+To create a form we import `forms` library. A very basic pattern is shown below:
+```python
+from django import forms
+
+class Settings_Form(forms.Form):
+	name = forms.CharField(help_text="Enter your name to appear on your profile")
+	lastname = forms.CharField(help_text="Enter your lastname to appear on you profile")
+```
+
+#### Form fields
+
+The code above will only render a form with two blank cells with no labels or placeholders. In order to eliminate that and make a lovely form that is appealing to the eye we need to add fields with parameters. The following are the field types of forms in django : 
+
+[BooleanField](https://docs.djangoproject.com/en/2.0/ref/forms/fields/#booleanfield), [CharField](https://docs.djangoproject.com/en/2.0/ref/forms/fields/#charfield), [ChoiceField](https://docs.djangoproject.com/en/2.0/ref/forms/fields/#choicefield), [TypedChoiceField](https://docs.djangoproject.com/en/2.0/ref/forms/fields/#typedchoicefield), [DateField](https://docs.djangoproject.com/en/2.0/ref/forms/fields/#datefield), [DateTimeField](https://docs.djangoproject.com/en/2.0/ref/forms/fields/#datetimefield), [DecimalField](https://docs.djangoproject.com/en/2.0/ref/forms/fields/#decimalfield), [DurationField](https://docs.djangoproject.com/en/2.0/ref/forms/fields/#durationfield), [EmailField](https://docs.djangoproject.com/en/2.0/ref/forms/fields/#emailfield), [FileField](https://docs.djangoproject.com/en/2.0/ref/forms/fields/#filefield), [FilePathField](https://docs.djangoproject.com/en/2.0/ref/forms/fields/#filepathfield), [FloatField](https://docs.djangoproject.com/en/2.0/ref/forms/fields/#floatfield), [ImageField](https://docs.djangoproject.com/en/2.0/ref/forms/fields/#imagefield), [IntegerField](https://docs.djangoproject.com/en/2.0/ref/forms/fields/#integerfield), [GenericIPAddress](https://docs.djangoproject.com/en/2.0/ref/forms/fields/#genericipaddressfield), [MultipleChoiceField](https://docs.djangoproject.com/en/2.0/ref/forms/fields/#multiplechoicefield), [TypedMultipleChoiceField](https://docs.djangoproject.com/en/2.0/ref/forms/fields/#typedmultiplechoicefield), [NullBooleanField](https://docs.djangoproject.com/en/2.0/ref/forms/fields/#nullbooleanfield), [RegexField](https://docs.djangoproject.com/en/2.0/ref/forms/fields/#regexfield), [SlugField](https://docs.djangoproject.com/en/2.0/ref/forms/fields/#slugfield), [TimeField](https://docs.djangoproject.com/en/2.0/ref/forms/fields/#timefield),[URLField](https://docs.djangoproject.com/en/2.0/ref/forms/fields/#urlfield), [UUIDField](https://docs.djangoproject.com/en/2.0/ref/forms/fields/#uuidfield), [ComboField](https://docs.djangoproject.com/en/2.0/ref/forms/fields/#combofield), [MultiValueField](https://docs.djangoproject.com/en/2.0/ref/forms/fields/#multivaluefield), [SplitDateTimeField](https://docs.djangoproject.com/en/2.0/ref/forms/fields/#splitdatetimefield), [ModelMultipleChoiceField](https://docs.djangoproject.com/en/2.0/ref/forms/fields/#modelmultiplechoicefield), [ModelChoiceField](https://docs.djangoproject.com/en/2.0/ref/forms/fields/#modelchoicefield)
+
+The paramters that are common to most of the fields are listed below:
+
+- [required](https://docs.djangoproject.com/en/2.0/ref/forms/fields/#required):
+
+---
+---
+---
+
+## Sign up mechanism
+The django auth provides us a url mapping and views for login, logout, password reset mechanisms all we needed was to add templates. But to create a signup page we will need to make our own view and url. 
+
+You need to crate a path to the url,
+
+application-name/urls.py:
+```python
+urlpatterns = [
+	...
+	path('signup/', views.signup, name='signup')
+]
+```
+
+After that we need to create the actual view
+
+application-name/views.py:
+```python
+...
+
+from django.contrib.auth.forms import UserCreationForm
+
+
+def signup(request):
+
+```
+
+...
 
 
 ---
