@@ -748,7 +748,30 @@ Check this out else where MDN docs are bad at explaining permissions ...
 ## Sign up mechanism
 The django auth provides us a url mapping and views for login, logout, password reset mechanisms all we needed was to add templates. But to create a signup page we will need to make our own view and url. 
 
-Since we are 
+You need to crate a path to the url,
+
+application-name/urls.py:
+```python
+urlpatterns = [
+	...
+	path('signup/', views.signup, name='signup')
+]
+```
+
+After that we need to create the actual view
+
+application-name/views.py:
+```python
+...
+
+from django.contrib.auth.forms import UserCreationForm
+
+
+def signup(request):
+
+```
+
+...
 
 ---
 ---
@@ -762,7 +785,28 @@ As you would expect it even tires me out to list all of these. Yet, this is wher
 
 ### HTML forms
 
-First lets give a brief overview of html forms 
+First lets give a brief overview of html forms. Form elements in html pages contains at least one input element which type is 'submit'.
+
+an example:
+```html
+<form action='/team_name_url/' method='POST'>
+	<label for='team_name'>Enter name:</label>
+	<input id='team_name' type='text' name='name_field' value="default name for team">
+	<input type='submit' value="OK">
+</form>
+```
+
+the `submit` typed input will  be displayed as a button an when it is pressed it uploads the data elements to the server. The `method` defines the HTTP method that is going to be used on the data, either `get` , `post` or etc. 
+
+Forms use a lot of time while validating their cells. After the user presses the submit button if the form contains any invalid data server should display the form again this time with the valid fields filled with the users perivious fillment and manage to describe the problem for the invalid field and notify the user.
+
+As you can imagine all of this creates a unwanted repeated code. Django, as always makes it easy and removes the unnecessary repeated code.
+
+### Django form handling procsess
+
+The techniques is quite the same, the view gets a request, performs any action required including reading data from th models then generates and returns a html page. What makes this process in form handling complex is that server needs to be able to proccsess data provided by the user and redisplay the page if there are any errors.
+
+
 
 
 
