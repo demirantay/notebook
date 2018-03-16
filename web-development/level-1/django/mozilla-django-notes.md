@@ -817,7 +817,28 @@ The code above will only render a form with two blank cells with no labels or pl
 
 The paramters that are common to most of the fields are listed below:
 
-- [required](https://docs.djangoproject.com/en/2.0/ref/forms/fields/#required):
+- [required](https://docs.djangoproject.com/en/2.0/ref/forms/fields/#required): If `True`, the field may not be left blank or given a `None` value. required is by default 'True' so if you want to be able to leave the form elements blank use False.
+- [label](https://docs.djangoproject.com/en/2.0/ref/forms/fields/#label): The label to use when rendering the page in HTML. If the name is not set django just ccapitilazes the first letter of the field name and removs the underscores and puts spaces.
+- [label_suffix](https://docs.djangoproject.com/en/2.0/ref/forms/fields/#label-suffix): By defualt a colon is displayed after the label this parameter allows you to change what comes after the label
+- [initial](https://docs.djangoproject.com/en/2.0/ref/forms/fields/#initial): The initial value of the form when it is displayed.
+- [widget](https://docs.djangoproject.com/en/2.0/ref/forms/fields/#widget): The dispay widget to use
+- [help_text](https://docs.djangoproject.com/en/2.0/ref/forms/fields/#help-text): Addititional text to show how to use the given field.
+- [error_messages](https://docs.djangoproject.com/en/2.0/ref/forms/fields/#error-messages): A list of error messages to the field you ca override the messages if you want to.
+- [validators](https://docs.djangoproject.com/en/2.0/ref/forms/fields/#validators): A list of functions that will be called on the field when it is validated.
+- [localize](https://docs.djangoproject.com/en/2.0/ref/forms/fields/#localize): Enables the localization of form data input
+- [disabled](https://docs.djangoproject.com/en/2.0/ref/forms/fields/#disabled): The field is displayed but its value cannot be edited if this value is `True`. Default is `False`.
+
+
+
+
+
+
+
+
+
+
+
+
 
 ---
 ---
@@ -851,16 +872,6 @@ def signup(request):
 
 ...
 
-
----
----
----
----
----
-
-## Mega signup login example
-
-I will code a mega signup login logout with custom users to demonstrate what we have learnt.
 	
 		  
 
