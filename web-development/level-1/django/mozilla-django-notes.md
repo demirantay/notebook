@@ -807,7 +807,7 @@ application-name/forms.py
 ```python
 from django import forms
 
-class Settings_Form(forms.Form):
+class SettingsForm(forms.Form):
 	name = forms.CharField(help_text="Enter your name to appear on your profile")
 	lastname = forms.CharField(help_text="Enter your lastname to appear on you profile")
 	is_staff = forms.BooleanField(default=False)
@@ -848,20 +848,38 @@ urlpatters += [
 ]
 ```
 
-As discussed above the view has to render the default form when it is first called and then either re-render it with error messages if the data is invalid, or process the data and redirect the user to a new page. 
+As discussed above the view has to render the default form when it is first called and then either re-render it with error messages if the data is invalid, or process the data and redirect the user to a new page.
 
+For forms that use a `POST` request to submit information to the server, the most common pattern is for the view to test against the `POST` request type(`if request.method == 'POST':`) to identify form validation requests and `GET`(using an `else` condition) to idefnitfy the initial form creation request. 
 
+The code fragment below shows very standart for POST request approcah using the form we defined above:
 
+application-name/views.oy
+```python
+from django.shortcuts import get_object_or_404
+from django.http import HttpResponseRedirect
 
+from .forms import SettingsForm
 
+def settings_form_page(request, pk):
+	user = get_object_or_404(User, pk = pk)
+	
+	#If this is a Post request then process the form data
+	if requet.method == 'POST':
+	
+		# Create a form instance and populate it with data from
+		
+		...
+	
+	
+```
 
-
-
-
-
+...
 
 ---
 ---
 ---
 
 ## Sign up mechanism
+
+...
