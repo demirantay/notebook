@@ -557,6 +557,42 @@ MIDDLEWARE :
 - `SessionMiddleware` -- manages sessions across requests
 - `AuthenticationMiddleware` -- accosiates users with requests using sessions.
 
+### Creating custom user
+
+Nearly 99% of the time your django projects auth systems user model will note be enough since it only has username and a password.  Django allows you to override the User model they provide.
+
+But remember if yoou are going to CHANGE THE CUSTOM MODEL YOU HAVE TO DEFINE IT BEFORE MAKING ANY DB MMIGRATIONS SO DO THIS AT THE VERY FIRST
+
+first go to the entry-folders settings to add a new line at the bottom to tell django that the user is a new one.
+
+entry-folder/settings.py:
+```python
+AUTH_USER_MODEL = 'app-name.UserModelName'
+```
+
+To customize it you can add fields and metadata. The default fields are a username and a password
+
+app-name/models.py:
+```python
+from django.contrib.auth.models import AbstractUser
+
+class UserModelName(AbstactUser):
+	pass
+```
+
+Also do not firget to register your model to admin auth.
+
+application-name/admin.py:
+```python
+from django.contrib import admin
+from django.contrib.auth.admin import UserAdmin
+from .models import UserModelName
+
+admin.site.register(UserModelName, UserAdmin)
+
+```
+
+
 ### Using auth system
 
 Django provides almost everything you need to create authentication pages to handle login, logout and password maangement 'out of the box'. This includes url mapper, views and forms but it does not include the templates -- we have to create our own.
@@ -740,6 +776,7 @@ after this ofcourse dont forget to migrate!
 ### Permissions
 
 Check this out else where MDN docs are bad at explaining permissions ...
+
 
 ---
 ---
