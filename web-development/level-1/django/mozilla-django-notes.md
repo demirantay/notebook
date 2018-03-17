@@ -800,13 +800,17 @@ The `Form` class is the heart of djangos form handling system. It specifies the 
 
 The declaration syntax of a `form` is very similar to a `model` and shares the same field types and some similar parameters. This makes sense because in each case we need to ensure that each field handles the right type of data, is contrained to valid data and has description or documentation.
 
+And you need to save your code in `forms.py` file in the targeted application.
+
 To create a form we import `forms` library. A very basic pattern is shown below:
+application-name/forms.py
 ```python
 from django import forms
 
 class Settings_Form(forms.Form):
 	name = forms.CharField(help_text="Enter your name to appear on your profile")
 	lastname = forms.CharField(help_text="Enter your lastname to appear on you profile")
+	is_staff = forms.BooleanField(default=False)
 ```
 
 #### Form fields
@@ -828,7 +832,23 @@ The paramters that are common to most of the fields are listed below:
 - [localize](https://docs.djangoproject.com/en/2.0/ref/forms/fields/#localize): Enables the localization of form data input
 - [disabled](https://docs.djangoproject.com/en/2.0/ref/forms/fields/#disabled): The field is displayed but its value cannot be edited if this value is `True`. Default is `False`.
 
+#### Validation
 
+The easiest way to validate a single field is using `clean_fieldname()` there are numeorus ways of doing it for more info go into the [docs](https://docs.djangoproject.com/en/2.0/ref/forms/validation/).
+
+#### Views
+
+After creating a simple url mapping to our view we will start coding our views.
+
+application-name/urls.py
+```python
+
+urlpatters += [
+	path('app_name/signup/', views.signup, name='singup_page')
+]
+```
+
+As discussed above the view has to render the default form when it is first called and then either re-render it with error messages if the data is invalid, or process the data and redirect the user to a new page. 
 
 
 
@@ -845,37 +865,3 @@ The paramters that are common to most of the fields are listed below:
 ---
 
 ## Sign up mechanism
-The django auth provides us a url mapping and views for login, logout, password reset mechanisms all we needed was to add templates. But to create a signup page we will need to make our own view and url. 
-
-You need to crate a path to the url,
-
-application-name/urls.py:
-```python
-urlpatterns = [
-	...
-	path('signup/', views.signup, name='signup')
-]
-```
-
-After that we need to create the actual view
-
-application-name/views.py:
-```python
-...
-
-from django.contrib.auth.forms import UserCreationForm
-
-
-def signup(request):
-
-```
-
-...
-
-	
-		  
-
-
-
-
-
