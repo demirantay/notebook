@@ -69,4 +69,11 @@ In order to get our application to work on Heroku we'll need to put our Django w
 
 Once we've done all that we can set up a Heroku account, get the Heroku client, and use it to install our website.(This tutorial may be outdated in the future so be sure to check herokus official documentation)
 
+#### Procfile 
+
+Create the file Procfile (no extension) in the root of your GitHub repository to declare the application's process types and entry points. Copy the following text into it:
+
+```
+
+
 
