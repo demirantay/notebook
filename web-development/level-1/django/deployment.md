@@ -209,7 +209,37 @@ after this changes your saves to the git repo and commit them. Push them too if 
 
 ## Pushing to Heroku
 
+First get a heroku account and go through those bla bla steps install heroku clinet to your command line. After all that is done 
 
+### Create and upload the website
 
+To create the app we run the "create" command in the root directory of our repository. This creates a git remote ("pointer to a remote repository") named heroku in our local git environment.
+
+```
+$ heroku create custom-name-for-your-project
+```
+
+We can then push our app to the Heroku repository as shown below. This will upload the app, package it in a dyno, run collectstatic, and start the site.
+
+```
+$ git push heroku master
+```
+
+If we're lucky, the app is now "running" on the site, but it won't be working properly because we haven't set up the database tables for use by our application. To do this we need to use the heroku run command and start a ["one off dyno"](https://devcenter.heroku.com/articles/deploying-python#one-off-dynos) to perform a migrate operation. Enter the following command in your terminal:
+
+```
+$ heroku run python manage.py migrate
+```
+
+We're also going to need to be able to add books and authors, so lets also create our administration superuser, again using a one-off dyno:
+
+```
+$ heroku run python manage.py createsuperuser
+```
+Once this is complete, we can look at the site. It should work, although it won't have any model records in it yet. To open your browser to the new website, use the command:
+
+```
+heroku open
+```
 
 
