@@ -111,4 +111,79 @@ DATABASES['default'].update(db_from_env)
 *Note:  We'll still be using SQLite during development because the DATABASE_URL environment variable will not be set on our development computer.*
 *The value conn_max_age=500 makes the connection persistent, which is far more efficient than recreating the connection on every request cycle. However, this is optional and can be removed if needed.*
 
+### psycopg2
+
+Django needs psycopg2 to work with Postgres databases and you will need to add this to the requirements.txt for Heroku to set this up on the remote server (as discussed in the requirements section below)
+
+If you are not going to use postgresql in your development enviorement you do not need to pip install psycopg just include it in your requriemenets so that heroku would dowload it.
+
+```
+$ pip install psycopg2
+```
+
+---
+
+## Serving static files in production
+
+During development we used Django and the Django development web server to serve our static files (CSS, JavaScript, etc.). In a production environment we instead typically serve static files from a content delivery network (CDN) or the web server.
+
+To make it easy to host static files seperatly from the django application, django provides the *collectstatic* tool to collect these files for deployment. (there is a settings variable that defines where the files should be collected when collectstatic is run). Django templates refer to the hosting location of the static files relative to a settings variable (STATIC_URL), so that this can be changed if the static files are moved to another host/server.
+
+The relevant setting variables are: 
+- `STATIC_URL` : This is the base location from which static files will be served.  This is used for the static template variable that is accessed in our base template
+- `STATIC_ROOT` : This is the absoulte path to a directory where Djangos collectstatic tool will gather any static files referenced in our templates. Once collected, these can then be uploaded as a group to wherever the files are to be hosted.
+- `STATICFILES_DIRS` : This lists additional directories that Django's collectstatic tool should search for static files.
+
+Open settings.py and copy the code below at the bottom of the file. The `BASE_DIR` should already have been defined in your file.(the STATIC_URL may already have been defined within the file when it was created. While it will cause no harm, you can as well delete the duplicate previous reference)
+
+```python
+# Static files (CSS, JavaScript, Images)
+# https://docs.djangoproject.com/en/2.0/howto/static-files/
+
+# The absolute path to the directory where collectstatic will collect static files for deployment.
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+# The URL to use when referring to static files (where they will be served from)
+STATIC_URL = '/static/'
+```
+
+We will actually do the file serving using a library called [WhiteNoise](https://pypi.org/project/whitenoise/).
+
+### whitenoise
+
+There are many ways to serve static files in production (we saw the relevant Django settings in the previous sections). Heroku recommends using the [WhiteNoise](https://pypi.org/project/whitenoise/) project for serving of static assets directly from Gunicorn in production.
+
+* Note: Note: Heroku automatically calls collectstatic and prepares your static files for use by WhiteNoise after it uploads your application. Check out [WhiteNoise documentation](https://pypi.org/project/whitenoise/) for an explanation of how it works and why the implementation is a relatively efficient method for serving these files.*
+
+Install whitenoise:
+```
+$ pip install whitenoise
+```
+
+To install WhiteNoise into your Django application, open /propject_folder/settings.py, find the` MIDDLEWARE` setting and add the `WhiteNoiseMiddleware` near the top of the list, just below the `SecurityMiddleware`:
+
+```python
+MIDDLEWARE = [
+    'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
+    'django.contrib.sessions.middleware.SessionMiddleware',
+    ...
+]
+```
+
+Optionally, you can reduce the size of the static files when they are served (this is more efficient). Just add the following to the bottom of /project_folder/settings.py :
+
+```python
+# Simplified static file serving.
+# https://warehouse.python.org/project/whitenoise/
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+```
+
+---
+
+## Requirements
+
+
+
+
 
