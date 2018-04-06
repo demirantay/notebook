@@ -183,6 +183,32 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 ## Requirements
 
+Our requriements.txt boilerplate file should look like this before adding any additional packages:
+
+requirements.txt:
+```
+dj-database-url==0.4.2
+Django==2.0.1
+gunicorn==19.7.1
+psycopg2==2.7
+whitenoise==3.3.1
+```
+
+## Runtime
+
+our runtime.txt file if defined tells heroku which programming language to use :
+
+runtime.txt:
+```
+python-3.6.4
+```
+
+after this changes your saves to the git repo and commit them. Push them too if you are doing a public repo.
+
+---
+
+## Pushing to Heroku
+
 
 
 
