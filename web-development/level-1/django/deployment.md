@@ -69,11 +69,46 @@ In order to get our application to work on Heroku we'll need to put our Django w
 
 Once we've done all that we can set up a Heroku account, get the Heroku client, and use it to install our website.(This tutorial may be outdated in the future so be sure to check herokus official documentation)
 
-#### Procfile 
+### Procfile 
 
 Create the file Procfile (no extension) in the root of your GitHub repository to declare the application's process types and entry points. Copy the following text into it:
 
 ```
+ web: gunicorn entry_project_folder.wsgi --log-file -
+```
 
+The `"web:"` tells Heroku that this is a web dyno and can be sent HTTP traffic. The process to start in this dyno is gunicorn, which is a popular web application server that Heruko recommends. We start Gunicorn using the configuration information in the module `entry_project_folder.wsgi` (created with our application skeleton: /entry_project_folder/wsgi.py).
+
+### Gunicorn 
+
+[Gunicorn](http://gunicorn.org/) is the recommended HTTP use with Django on Heroku (as referenced in the Procfile above).
+While we won't need Gunicorn to serve our Django application during development, we'll install it so that it becomes part of our requirements for Heroku to set up on the remote server.
+
+```
+$ pip install gunicorn 
+```
+
+### Database configuration
+
+We can't use the default SQLite database on Heroku because it is file-based, and it would be deleted from the ephemeral file system every time the application restarts (typically once a day, and every time the application or its configuration variables are changed).
+
+We will use postgresql which is a common sql for django applications deployed on heroku with free tier. Heroku recommends we use the `dj-database-url` package to parse the `DATABASE_URL`. In addition to dj-databse-url we need to isntall [psycopg2](http://initd.org/psycopg/) as django needs this to intearct with Postgres database
+
+Install dj-database-url locally so that it becomes part of our requirements for Heroku to set up on the remote server:
+```
+$ pip install dj-database-url
+```
+
+Open /project-folder/settings.py and copy the following configuration into the bottom of the file:
+
+```python
+# Heroku: Update database configuration from $DATABASE_URL.
+import dj_database_url
+db_from_env = dj_database_url.config(conn_max_age=500)
+DATABASES['default'].update(db_from_env)
+```
+
+*Note:  We'll still be using SQLite during development because the DATABASE_URL environment variable will not be set on our development computer.*
+*The value conn_max_age=500 makes the connection persistent, which is far more efficient than recreating the connection on every request cycle. However, this is optional and can be removed if needed.*
 
 
