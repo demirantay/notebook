@@ -52,11 +52,10 @@ Try to build at least small things after each coruse related to the topic & defi
 - [ ]  Book: [College Algebra](https://openstax.org/details/books/college-algebra) or Course: [College Algebra and Problem Solving](https://www.edx.org/course/college-algebra-problem-solving-asux-mat117x) or thorough knowledge of Algebra.
 - [ ]  Book: [Think Python](http://greenteapress.com/thinkpython2/thinkpython2.pdf)
 - [ ]  Study: [The pytest testing tool](https://docs.pytest.org/en/latest/) read the docs thoroughly, experiment with the examples and become proficient with pytest (including unittest and nose).
-- [ ]  Book: [Precalculus](https://openstax.org/details/books/precalculus) or Course: [Precalculus](https://www.edx.org/course/precalculus-asux-mat170x) or [Khan Academy](https://www.khanacademy.org/math/precalculus) or thorough knowledge of Precalculus
 - [ ]  Course: [Introduction to Computational Thinking and Data Science](https://www.edx.org/course/introduction-computational-thinking-data-mitx-6-00-2x-6)
 - [ ]  Course: [Mathematics for Computer Science](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-042j-mathematics-for-computer-science-spring-2015/index.htm)
-- [ ]  Course: [Introduction to Algorithms](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/index.htm) (requires book purchase) or Book - [Open Data Structures](http://www.aupress.ca/books/120226/ebook/99Z_Morin_2013-Open_Data_Structures.pdf)
-- [ ]  Course: [Calculus One](https://www.coursera.org/learn/calculus1)  
+- [ ]  Book: [Precalculus](https://openstax.org/details/books/precalculus) or Course: [Precalculus](https://www.edx.org/course/precalculus-asux-mat170x) or [Khan Academy](https://www.khanacademy.org/math/precalculus) or thorough knowledge of Precalculus
+- [ ]  Course: [Introduction to Algorithms](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/index.htm) (requires book purchase) or Book - [Open Data Structures](http://www.aupress.ca/books/120226/ebook/99Z_Morin_2013-Open_Data_Structures.pdf)=
 - [ ]  Course: [Intro to Machine Learning](https://www.udacity.com/course/intro-to-machine-learning--ud120)
 - [ ]  After ^ Do: [Titanic: Machine Learning from Disaster](https://www.kaggle.com/c/titanic)
 - [ ]  Course: [Database Mini-Courses](https://lagunita.stanford.edu/courses/DB/2014/SelfPaced/about) - take all mini-courses
@@ -64,6 +63,7 @@ Try to build at least small things after each coruse related to the topic & defi
 - [ ]  Study: Try to finish as much as you can in Full Stack Python
 - [ ]  Article: Read [Project Specification Documents](http://www.pixelearth.net/pages/project-specification) and get in the habit of including every bit of information it details that makes sense for a project in the README.md or other supporting documentation for your projects
 - [ ]  Course: [Effective Thinking Through Mathematics](https://www.edx.org/course/effective-thinking-through-mathematics-utaustinx-ut-9-01x)
+- [ ]  Course: [Calculus One](https://www.coursera.org/learn/calculus1)  
 - [ ]  Course: [How to Code: Simple Data](https://www.edx.org/course/how-code-simple-data-ubcx-htc1x)    
 - [ ]  Course: [How to Code: Complex Data](https://www.edx.org/course/how-code-complex-data-ubcx-htc2x)    
 - [ ]  Course: [Software Construction: Data Abstraction](https://www.edx.org/course/software-construction-data-abstraction-ubcx-softconst1x)
