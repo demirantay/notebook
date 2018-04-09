@@ -11,7 +11,6 @@ There aren't many project because at some point you need to maintain one big app
 - [ ]  Project: Clone [this](https://creativemarket.com/ikonome/686585-Material-Resume-Blue/screenshots/#screenshot2) online resume template
 - [X]  Project: Clone Twitter using Python on the backend, and your frontend framework/library of choice. Include all basic features: signup/login/logout, follow user, search, tweet, like/retweet, home page with stream of recent tweets.
 - [ ]  Project: create a bot give it command line conversations, online presence twitter account face account etc...
-- [ ]  Project: Finish all classic puzzles on [CodinGame](https://www.codingame.com/training) from easy through hard by the end of the Tier.
 - [ ] Project: Your choice - Clone Netflix, , Reddit, or Facebook, medium (or a comparably involved site of your choosing). The clone should be functional and include all basic features.
 - [ ]  Project: Your choice - Clone Netflix, , Reddit, or Facebook, medium (or a comparably involved site of your choosing). The clone should be functional and include all basic features.
 - [ ]  Project: Update your Portfolio highlighting your best work.
