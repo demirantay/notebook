@@ -10,10 +10,10 @@ There aren't many project because at some point you need to maintain one big app
 - [ ] Project: Select an API from [Todd Motto's API List](https://github.com/toddmotto/public-apis) and build a frontend-only application powered by data fetched from the API you chose.
 - [ ]  Project: Clone [this](https://creativemarket.com/ikonome/686585-Material-Resume-Blue/screenshots/#screenshot2) online resume template
 - [X]  Project: Clone Twitter using Python on the backend, and your frontend framework/library of choice. Include all basic features: signup/login/logout, follow user, search, tweet, like/retweet, home page with stream of recent tweets.
-- [ ]  Project: create a bot give it command line conversations,
 - [ ] Project: Your choice - Clone Netflix, , Reddit, or Facebook, medium (or a comparably involved site of your choosing). The clone should be functional and include all basic features.
-- [ ] Project: Give the bot an online presence, twitter, slack, irc.
+- [ ] Project: Create bots to create content.
 - [ ]  Project: Your choice - Clone Netflix, , Reddit, or Facebook, medium (or a comparably involved site of your choosing). The clone should be functional and include all basic features.
+- [ ] Project: Learn how to deal with the PaaS, IaaS host services for your upcoming hobio porject.
 - [ ]  Project: Update your Portfolio highlighting your best work.
 - [ ]  Project: [House Prices: Advanced Regression Techniques](https://www.kaggle.com/c/house-prices-advanced-regression-techniques)
 - [ ]  Project: Finish any questions you have remaining from  [Python Interview Prep](https://www.hackerrank.com/chingu-challenge-3)
