@@ -12,7 +12,6 @@ There aren't many project because at some point you need to maintain one big app
 - [X]  Project: Clone Twitter using Python on the backend, and your frontend framework/library of choice. Include all basic features: signup/login/logout, follow user, search, tweet, like/retweet, home page with stream of recent tweets.
 - [ ] Project: Your choice - Clone Netflix, , Reddit, or Facebook, medium (or a comparably involved site of your choosing). The clone should be functional and include all basic features.
 - [ ] Project: Create bots to create content.
-- [ ]  Project: Your choice - Clone Netflix, , Reddit, or Facebook, medium (or a comparably involved site of your choosing). The clone should be functional and include all basic features.
 - [ ] Project: Learn how to deal with the PaaS, IaaS host services for your upcoming hobio porject.
 - [ ]  Project: Update your Portfolio highlighting your best work.
 - [ ]  Project: [House Prices: Advanced Regression Techniques](https://www.kaggle.com/c/house-prices-advanced-regression-techniques)
