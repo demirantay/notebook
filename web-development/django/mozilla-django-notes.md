@@ -6,7 +6,7 @@ I will take notes on the tutorial that is provided by the [Mozilla Docs](https:/
 
 Django web applications typically group the code that handles each of these steps into seperate files: 
 
-<img src="/web-development/level-1/django/assets/basic-django.png" height="400px" alt="django-request-structure">
+<img src="/web-development/django/assets/basic-django.png" height="400px" alt="django-request-structure">
 
 - **URLs** : It is always logical to seperate urls from views for maintainability. That is why django uses url mappers. A URL mapper is used to redirect the HTTP requests to the appropirate views based on that URL.
 - **View** :  Views are at the heart of django applications. A view is a request handler function. Which recieves HTTP requests and return HTTP responses. Views accsess data that is requested via models and formats the layout with templates.
