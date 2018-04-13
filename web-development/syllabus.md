@@ -35,24 +35,11 @@ There aren't many project because at some point you need to maintain one big app
 - [ ] [start open source](https://github.com/github/opensource.guide)
 
 
-
 ## Study
 Try to build at least small things after each coruse related to the topic & definitely take notes.
-
-- [X] Book: [You Don't Know JS: Up & Going](https://github.com/getify/You-Dont-Know-JS/blob/master/up%20&%20going/README.md#you-dont-know-js-up--going)    
-- [X] Book: [You Don't Know JS: Scope & Closures](https://github.com/getify/You-Dont-Know-JS/blob/master/scope%20&%20closures/README.md#you-dont-know-js-scope--closures)
-- [X]  Course: [Learn to Code HTML & CSS](http://learn.shayhowe.com/html-css/)    
-- [X] Book: [You Don't Know JS: this & Object Prototypes](https://github.com/getify/You-Dont-Know-JS/blob/master/this%20&%20object%20prototypes/README.md#you-dont-know-js-this--object-prototypes)
-- [X] Course - [Programming for the Web with JavaScript](https://www.edx.org/course/programming-web-javascript-pennx-sd4x)
-- [ ] Book: [You Don't Know JS: Types & Grammar](https://github.com/getify/You-Dont-Know-JS/blob/master/types%20&%20grammar/README.md#you-dont-know-js-types--grammar)   
-- [ ] Book: [You Don't Know JS: Async & Performance](https://github.com/getify/You-Dont-Know-JS/blob/master/async%20&%20performance/README.md#you-dont-know-js-async--performance)
-- [ ] Book: [You Don't Know JS: ES6 & Beyond](https://github.com/getify/You-Dont-Know-JS/blob/master/es6%20&%20beyond/README.md#you-dont-know-js-es6--beyond)  
-- [ ]  Course: [Data Visualization and D3.js](https://www.udacity.com/course/data-visualization-and-d3js--ud507)
-- [ ] Book: [JavaScript Allongé, the "Six" Edition](https://leanpub.com/javascriptallongesix)
-- [ ] Book: [JavaScript Design Patterns](https://addyosmani.com/resources/essentialjsdesignpatterns/book/)
+    
 - [X]  Study: [The Flask User Guide](http://flask.pocoo.org/docs/0.12/) or [the Django documentation](https://docs.djangoproject.com/en/1.11/) - pick based on which is more prevalent in your area, which you personally prefer, or any other criteria you choose, but pick one and study it thoroughly. Do the tutorials, read it all, learn testing, auth, databases, all of it.
 - [ ]  Book: [College Algebra](https://openstax.org/details/books/college-algebra) or Course: [College Algebra and Problem Solving](https://www.edx.org/course/college-algebra-problem-solving-asux-mat117x) or thorough knowledge of Algebra.
-- [ ]  Course: [Introduction to Computational Thinking and Data Science](https://www.edx.org/course/introduction-computational-thinking-data-mitx-6-00-2x-6)
 - [ ]  Course: [Mathematics for Computer Science](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-042j-mathematics-for-computer-science-spring-2015/index.htm)
 - [ ]  Book: [Precalculus](https://openstax.org/details/books/precalculus) or Course: [Precalculus](https://www.edx.org/course/precalculus-asux-mat170x) or [Khan Academy](https://www.khanacademy.org/math/precalculus) or thorough knowledge of Precalculus
 - [ ]  Course: [Introduction to Algorithms](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/index.htm) (requires book purchase) or Book - [Open Data Structures](http://www.aupress.ca/books/120226/ebook/99Z_Morin_2013-Open_Data_Structures.pdf)=
@@ -101,7 +88,11 @@ Try to build at least small things after each coruse related to the topic & defi
 - [ ] [Last Touches](https://teachyourselfcs.com/)
 - [ ] [Code university](https://github.com/jwasham/coding-interview-university)
 
-
+| Material | Status |
+|----------|--------|
+| [the Django documentation](https://docs.djangoproject.com/en/1.11/)| `Completed` |
+| | |
+| | |
 
 
 
