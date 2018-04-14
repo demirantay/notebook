@@ -88,11 +88,13 @@ Try to build at least small things after each coruse related to the topic & defi
 - [ ] [Last Touches](https://teachyourselfcs.com/)
 - [ ] [Code university](https://github.com/jwasham/coding-interview-university)
 
-| Material | Status |
-|----------|--------|
-| [the Django documentation](https://docs.djangoproject.com/en/1.11/)| `Completed` |
-| | |
-| | |
+| Type | Material | Status |
+|------|----------|--------|
+| Study | [the Django documentation](https://docs.djangoproject.com/en/1.11/)| `Completed` |
+| Course | [College Algebra and Problem Solving](https://www.edx.org/course/college-algebra-problem-solving-asux-mat117x) or thorough knowledge of Algebra.| `In progress` |
+| Course | [Mathematics for Computer Science](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-042j-mathematics-for-computer-science-spring-2015/index.htm) |  |
+| Course | [Precalculus](https://www.edx.org/course/precalculus-asux-mat170x) | | 
+| Course | [Intro to Machine Learning](https://www.udacity.com/course/intro-to-machine-learning--ud120)| |
 
 
 
