@@ -37,56 +37,6 @@ There aren't many project because at some point you need to maintain one big app
 
 ## Study
 Try to build at least small things after each coruse related to the topic & definitely take notes.
-    
-- [X]  Study: [The Flask User Guide](http://flask.pocoo.org/docs/0.12/) or [the Django documentation](https://docs.djangoproject.com/en/1.11/) - pick based on which is more prevalent in your area, which you personally prefer, or any other criteria you choose, but pick one and study it thoroughly. Do the tutorials, read it all, learn testing, auth, databases, all of it.
-- [ ]  Book: [College Algebra](https://openstax.org/details/books/college-algebra) or Course: [College Algebra and Problem Solving](https://www.edx.org/course/college-algebra-problem-solving-asux-mat117x) or thorough knowledge of Algebra.
-- [ ]  Course: [Mathematics for Computer Science](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-042j-mathematics-for-computer-science-spring-2015/index.htm)
-- [ ]  Book: [Precalculus](https://openstax.org/details/books/precalculus) or Course: [Precalculus](https://www.edx.org/course/precalculus-asux-mat170x) or [Khan Academy](https://www.khanacademy.org/math/precalculus) or thorough knowledge of Precalculus
-- [ ]  Course: [Introduction to Algorithms](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/index.htm) (requires book purchase) or Book - [Open Data Structures](http://www.aupress.ca/books/120226/ebook/99Z_Morin_2013-Open_Data_Structures.pdf)=
-- [ ]  Course: [Intro to Machine Learning](https://www.udacity.com/course/intro-to-machine-learning--ud120)
-- [ ]  After ^ Do: [Titanic: Machine Learning from Disaster](https://www.kaggle.com/c/titanic)
-- [ ]  Course: [Database Mini-Courses](https://lagunita.stanford.edu/courses/DB/2014/SelfPaced/about) - take all mini-courses
-- [ ]  Learn: Read and learn about PostgreSQL or mySQL from [here](http://studybyyourself.com/seminar/sql/course/?lang=en)
-- [ ]  Study: Try to finish as much as you can in Full Stack Python
-- [ ]  Article: Read [Project Specification Documents](http://www.pixelearth.net/pages/project-specification) and get in the habit of including every bit of information it details that makes sense for a project in the README.md or other supporting documentation for your projects
-- [ ]  Course: [Effective Thinking Through Mathematics](https://www.edx.org/course/effective-thinking-through-mathematics-utaustinx-ut-9-01x)
-- [ ]  Course: [Calculus One](https://www.coursera.org/learn/calculus1)  
-- [ ]  Course: [How to Code: Simple Data](https://www.edx.org/course/how-code-simple-data-ubcx-htc1x)    
-- [ ]  Course: [How to Code: Complex Data](https://www.edx.org/course/how-code-complex-data-ubcx-htc2x)    
-- [ ]  Course: [Software Construction: Data Abstraction](https://www.edx.org/course/software-construction-data-abstraction-ubcx-softconst1x)
-- [ ]  Course: [Software Construction: Object-Oriented Design](https://www.edx.org/course/software-construction-object-oriented-ubcx-softconst2x)
-- [ ]  Book:  [DOM Enlightenment](http://domenlightenment.com/) 
-- [ ]  Article: Read [Algorithms and Flowcharts](http://www.academia.edu/7857144/ALGORITHMS_AND_FLOWCHARTS) and then familiarize yourself with [Pencil](http://pencil.evolus.vn/) ... start flowcharting complex portions of your code logic as part of your documentation    
-- [ ]  Course: [Algorithms, Part I](https://www.coursera.org/learn/algorithms-part1)    
-- [ ]  Course: [Algorithms, Part II](https://www.coursera.org/learn/algorithms-part2)
-- [ ]  Course: [Software Testing](https://www.udacity.com/course/software-testing--cs258)    
-- [ ]  Course: [Software Debugging](https://www.udacity.com/course/software-debugging--cs259)  
-- [ ]  Course: [UX Design for Mobile Developers](https://www.udacity.com/course/ux-design-for-mobile-developers--ud849)  
-- [ ]  Course: [Android Development for Beginners](https://www.udacity.com/course/android-development-for-beginners--ud837)  - [ ]  ^ Project: Build the Pomodoro project from the FCC frontend curriculum - as an android app
-- [ ]  Book: [Professor Frisby's Mostly Adequate Guide to Functional Programming](https://www.gitbook.com/book/drboolean/mostly-adequate-guide/details)  
-- [ ]  Course: [Calculus Two: Sequences and Series](https://www.coursera.org/learn/advanced-calculus)    
-- [ ]  Course: [Software Architecture & Design](https://www.udacity.com/course/software-architecture-design--ud821)
-- [ ]  Course: [Databases](https://lagunita.stanford.edu/courses/DB/2014/SelfPaced/about)    
-- [ ]  Course: [Agile Software Development](https://www.edx.org/course/agile-software-development-ethx-asd-1x)
-- [ ]  Course: [Introduction to Cloud Infrastructure Technologies](https://www.edx.org/course/introduction-cloud-infrastructure-linuxfoundationx-lfs151-x)   
-- [ ]  Course: [Intro to Theoretical Computer Science](https://www.udacity.com/course/intro-to-theoretical-computer-science--cs313)   
-- [ ]  Course: [Introduction to Probability - The Science of Uncertainty](https://www.edx.org/course/introduction-probability-science-mitx-6-041x-0) 
-- [ ]  Course: [Linear Algebra - Foundations to Frontiers](https://www.edx.org/course/linear-algebra-foundations-frontiers-utaustinx-ut-5-04x#!)   
-- [ ]  Course: [Cryptography I](https://www.coursera.org/course/crypto) 
-- [ ]  Course: [Cryptography II](https://www.coursera.org/course/crypto2)
-- [ ]  Course: [Computer Architecture](https://www.coursera.org/course/comparch)
-- [ ]  Course: [Introduction to Cyber Security](https://www.futurelearn.com/courses/introduction-to-cyber-security) 
-- [ ]  Course: [Computer Graphics](https://www.edx.org/course/computer-graphics-uc-san-diegox-cse167x)    
-- [ ]  Course: [Artificial Intelligence](https://www.edx.org/course/artificial-intelligence-uc-berkeleyx-cs188-1x#!)    
-- [ ]  Course: [Machine Learning](https://www.coursera.org/learn/machine-learning)  
-- [ ]  Course: [Operating Systems and System Programming](http://theopenacademy.com/content/operating-systems-and-system-programming)
-- [ ]  Course: [Compilers](https://lagunita.stanford.edu/courses/Engineering/Compilers/Fall2014/about)    
-- [ ]  Course: [Introduction to Natural Language Processing](https://www.coursera.org/learn/natural-language-processing)
-- [ ]  Imporve: After Learning NLP imporve william the bot.
-- [ ]  Course: [Computer Networks](https://lagunita.stanford.edu/courses/Engineering/Networking-SP/SelfPaced/about)    
-- [ ]  Course: [Parallel Computer Architecture and Programming](http://15418.courses.cs.cmu.edu/spring2016/home)  
-- [ ] [Last Touches](https://teachyourselfcs.com/)
-- [ ] [Code university](https://github.com/jwasham/coding-interview-university)
 
 | Type | Material | Status |
 |------|----------|--------|
