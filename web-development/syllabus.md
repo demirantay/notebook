@@ -56,7 +56,7 @@ Try to build at least small things after each coruse related to the topic & defi
 | Course | [Software Construction: Data Abstraction](https://www.edx.org/course/software-construction-data-abstraction-ubcx-softconst1x) | |
 | Course | [Software Construction: Object-Oriented Design](https://www.edx.org/course/software-construction-object-oriented-ubcx-softconst2x) | |
 | Article | Read [Algorithms and Flowcharts](http://www.academia.edu/7857144/ALGORITHMS_AND_FLOWCHARTS) and then familiarize yourself with [Pencil](http://pencil.evolus.vn/) ... start flowcharting complex portions of your code logic as part of your documentation| |
-| Course | [Algorithms, Part I](https://www.coursera.org/learn/algorithms-part1| |
+| Course | [Algorithms, Part I](https://www.coursera.org/learn/algorithms-part1) | |
 | Course | [Algorithms, Part II](https://www.coursera.org/learn/algorithms-part2)| |
 | Course | [Software Testing](https://www.udacity.com/course/software-testing--cs258)
 | Course | [Software Debugging](https://www.udacity.com/course/software-debugging--cs259)| |
