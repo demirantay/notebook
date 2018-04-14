@@ -42,7 +42,6 @@ Try to build at least small things after each coruse related to the topic & defi
 |------|----------|--------|
 | Study | [the Django documentation](https://docs.djangoproject.com/en/1.11/)| `Completed` |
 | Course | [College Algebra and Problem Solving](https://www.edx.org/course/college-algebra-problem-solving-asux-mat117x) or thorough knowledge of Algebra.| `In progress` |
-| Course | [Mathematics for Computer Science](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-042j-mathematics-for-computer-science-spring-2015/index.htm) |  |
 | Course | [Precalculus](https://www.edx.org/course/precalculus-asux-mat170x) | | 
 | Course | [Intro to Machine Learning](https://www.udacity.com/course/intro-to-machine-learning--ud120)| |
 | Project | [Titanic: Machine Learning from Disaster](https://www.kaggle.com/c/titanic) | |
@@ -74,6 +73,7 @@ Try to build at least small things after each coruse related to the topic & defi
 | Course | [Linear Algebra - Foundations to Frontiers](https://www.edx.org/course/linear-algebra-foundations-frontiers-utaustinx-ut-5-04x#!) | | 
 | Course | [Cryptography I](https://www.coursera.org/course/crypto) | |
 | Course | [Cryptography II](https://www.coursera.org/course/crypto2)| |
+| Course | [Mathematics for Computer Science](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-042j-mathematics-for-computer-science-spring-2015/index.htm) |  |
 | Course | [Computer Architecture](https://www.coursera.org/course/comparch)| |
 | Course | [Introduction to Cyber Security](https://www.futurelearn.com/courses/introduction-to-cyber-security) | |
 | Course | [Computer Graphics](https://www.edx.org/course/computer-graphics-uc-san-diegox-cse167x) | |
@@ -85,6 +85,7 @@ Try to build at least small things after each coruse related to the topic & defi
 | Project | After learning NLP improve william the bot | |
 | Course |[Computer Networks](https://lagunita.stanford.edu/courses/Engineering/Networking-SP/SelfPaced/about) | |
 | Course | [Parallel Computer Architecture and Programming](http://15418.courses.cs.cmu.edu/spring2016/home) | |
+| Course | [IoT](https://www.coursera.org/specializations/internet-of-things) | | 
 | Guide | [Last Touches](https://teachyourselfcs.com/) | |
 | Guide | [Code university](https://github.com/jwasham/coding-interview-university)| |
 
