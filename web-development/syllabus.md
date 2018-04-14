@@ -95,6 +95,11 @@ Try to build at least small things after each coruse related to the topic & defi
 | Course | [Mathematics for Computer Science](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-042j-mathematics-for-computer-science-spring-2015/index.htm) |  |
 | Course | [Precalculus](https://www.edx.org/course/precalculus-asux-mat170x) | | 
 | Course | [Intro to Machine Learning](https://www.udacity.com/course/intro-to-machine-learning--ud120)| |
-
+| Project | [Titanic: Machine Learning from Disaster](https://www.kaggle.com/c/titanic) | |
+| Course | [Database Mini-Courses](https://lagunita.stanford.edu/courses/DB/2014/SelfPaced/about) - take all mini-courses ||
+| Study | Read and learn about PostgreSQL or mySQL from [here](http://studybyyourself.com/seminar/sql/course/?lang=en)| | 
+| Study | Study: Try to finish as much as you can in Full Stack Python | |
+| Article | Article: Read [Project Specification Documents](http://www.pixelearth.net/pages/project-specification) and get in the habit of including every bit of information it details that makes sense for a project in the README.md or other supporting documentation for your projects | |
+|
 
 
