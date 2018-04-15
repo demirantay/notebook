@@ -57,8 +57,12 @@ Try to build at least small things after each coruse related to the topic & defi
 | Course | [Software Construction: Data Abstraction](https://www.edx.org/course/software-construction-data-abstraction-ubcx-softconst1x) | |
 | Course | [Software Construction: Object-Oriented Design](https://www.edx.org/course/software-construction-object-oriented-ubcx-softconst2x) | |
 | Article | Read [Algorithms and Flowcharts](http://www.academia.edu/7857144/ALGORITHMS_AND_FLOWCHARTS) and then familiarize yourself with [Pencil](http://pencil.evolus.vn/) ... start flowcharting complex portions of your code logic as part of your documentation| |
+| Course | [Nand2Tetris](https://www.coursera.org/learn/build-a-computer) | |
+| Course | [Nand2Tetris part 2](https://www.coursera.org/learn/nand2tetris2)| | 
 | Course | [Algorithms, Part I](https://www.coursera.org/learn/algorithms-part1) | |
+| Course | [Introduction to computer networking](https://lagunita.stanford.edu/courses/Engineering/Networking-SP/SelfPaced/about) | |
 | Course | [Algorithms, Part II](https://www.coursera.org/learn/algorithms-part2)| |
+| Course | [ops-class Hack the Kernel](https://www.ops-class.org/) | |
 | Course | [Software Testing](https://www.udacity.com/course/software-testing--cs258)
 | Course | [Software Debugging](https://www.udacity.com/course/software-debugging--cs259)| |
 | Course | [UX Design for Mobile Developers](https://www.udacity.com/course/ux-design-for-mobile-developers--ud849)| |
