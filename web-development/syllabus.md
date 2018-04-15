@@ -42,7 +42,7 @@ Try to build at least small things after each coruse related to the topic & defi
 |------|----------|--------|
 | Study | [the Django documentation](https://docs.djangoproject.com/en/1.11/)| `Completed` |
 | Course | [College Algebra and Problem Solving](https://www.edx.org/course/college-algebra-problem-solving-asux-mat117x) or thorough knowledge of Algebra.| `In progress` |
-| Course | [Intro to CS MIT](https://www.edx.org/course/introduction-computer-science-mitx-6-00-1x-11) | `In progress` |
+| Course | [Helsinki MOOCs for the desired language](http://mooc.fi/courses/2013/programming-part-1/material.html) | `In progress` |
 | Course | [Precalculus](https://www.edx.org/course/precalculus-asux-mat170x) | | 
 | Course | [Intro to Machine Learning](https://www.udacity.com/course/intro-to-machine-learning--ud120)| |
 | Project | [Titanic: Machine Learning from Disaster](https://www.kaggle.com/c/titanic) | |
