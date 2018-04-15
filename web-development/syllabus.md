@@ -44,9 +44,6 @@ Try to build at least small things after each coruse related to the topic & defi
 | Course | [College Algebra and Problem Solving](https://www.edx.org/course/college-algebra-problem-solving-asux-mat117x) or thorough knowledge of Algebra.| `In progress` |
 | Course | [Helsinki MOOCs for the desired language](http://mooc.fi/courses/2013/programming-part-1/material.html) | `In progress` |
 | Course | [Precalculus](https://www.edx.org/course/precalculus-asux-mat170x) | | 
-| Course | [Intro to Machine Learning](https://www.udacity.com/course/intro-to-machine-learning--ud120)| |
-| Project | [Titanic: Machine Learning from Disaster](https://www.kaggle.com/c/titanic) | |
-| Course | [Database Mini-Courses](https://lagunita.stanford.edu/courses/DB/2014/SelfPaced/about) - take all mini-courses ||
 | Study | Read and learn about PostgreSQL or mySQL from [here](http://studybyyourself.com/seminar/sql/course/?lang=en)| | 
 | Study | Study: Try to finish as much as you can in Full Stack Python | |
 | Article | Article: Read [Project Specification Documents](http://www.pixelearth.net/pages/project-specification) and get in the habit of including every bit of information it details that makes sense for a project in the README.md or other supporting documentation for your projects | |
@@ -76,6 +73,7 @@ Try to build at least small things after each coruse related to the topic & defi
 | Course | [Intro to Theoretical Computer Science](https://www.udacity.com/course/intro-to-theoretical-computer-science--cs313)| |
 | Course | [Introduction to Probability - The Science of Uncertainty](https://www.edx.org/course/introduction-probability-science-mitx-6-041x-0) | |
 | Course | [Linear Algebra - Foundations to Frontiers](https://www.edx.org/course/linear-algebra-foundations-frontiers-utaustinx-ut-5-04x#!) | | 
+| Course | [Database Mini-Courses](https://lagunita.stanford.edu/courses/DB/2014/SelfPaced/about) - take all mini-courses ||
 | Course | [Cryptography I](https://www.coursera.org/course/crypto) | |
 | Course | [Cryptography II](https://www.coursera.org/course/crypto2)| |
 | Course | [Mathematics for Computer Science](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-042j-mathematics-for-computer-science-spring-2015/index.htm) |  |
@@ -84,6 +82,8 @@ Try to build at least small things after each coruse related to the topic & defi
 | Course | [Computer Graphics](https://www.edx.org/course/computer-graphics-uc-san-diegox-cse167x) | |
 | Course | [Artificial Intelligence](https://www.edx.org/course/artificial-intelligence-uc-berkeleyx-cs188-1x#!)| |
 | Course | [Machine Learning](https://www.coursera.org/learn/machine-learning) | |
+| Course | [Software engineering (intorduction)](https://www.edx.org/course/software-engineering-introduction-ubcx-softeng1x)||
+| Course | [Capstone Project](https://www.edx.org/course/software-development-capstone-project-ubcx-softengprjx) ||
 | Course | [Operating Systems and System Programming](http://theopenacademy.com/content/operating-systems-and-system-programming)|
 | Course | [Compilers](https://lagunita.stanford.edu/courses/Engineering/Compilers/Fall2014/about)| |
 | Course | [Introduction to Natural Language Processing](https://www.coursera.org/learn/natural-language-processing)| |
