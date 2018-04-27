@@ -45,7 +45,7 @@ Try to build at least small things after each coruse related to the topic & defi
 | Course | [Helsinki MOOCs for the desired language](http://mooc.fi/courses/2013/programming-part-1/material.html) | `In progress` |
 | Course | [Precalculus](https://www.edx.org/course/precalculus-asux-mat170x) | | 
 | Study | Study: Try to finish as much as you can in Full Stack Python | |
-| Article | Article: Read [Project Specification Documents](http://www.pixelearth.net/pages/project-specification) and get in the habit of including every bit of information it details that makes sense for a project in the README.md or other supporting documentation for your projects | |
+| Article | Article: Read [Project Specification Documents](http://www.pixelearth.net/pages/project-specification) and get in the habit of including every bit of information it details that makes sense for a project in the README.md or other supporting documentation for your projects | `Completed` |
 | Course | [Effective Thinking Through Mathematics](https://www.edx.org/course/effective-thinking-through-mathematics-utaustinx-ut-9-01x) | |
 | Course | [Calculus One](https://www.coursera.org/learn/calculus1) ([alt](https://mooculus.osu.edu/)) | |
 | Course | [How to Code: Simple Data](https://www.edx.org/course/how-code-simple-data-ubcx-htc1x) | |
