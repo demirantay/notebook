@@ -22,6 +22,22 @@ settings/
 
 *Note: You will also want to have a `ci.py` module containing that servers integration settings.*
 
-### A development settings example 
+## Secret Keys
 
-As mentioned erlier we need settings file solely for development purpose
+To keep your secret_key's secret you should use envioroment variables. Note enviroment variables do not work with Apache.
+
+## Multipe Requirement Files
+
+If we have multiple settings we should have multiple requirements files such as the following :
+
+```
+requirements/
+    base.txt
+    local.txt
+    staging.txt
+    test.txt
+    production.txt
+```
+
+
+
