@@ -13,7 +13,7 @@ There aren't many project because at some point you need to maintain one big app
 - [ ] Project: Your choice - Clone Netflix, , Reddit, or Facebook, medium (or a comparably involved site of your choosing). The clone should be functional and include all basic features.
 - [ ] Project: Create bots to create content.
 - [ ] Project: Learn how to deal with the PaaS, IaaS host services for your upcoming hobio porject.
-- [ ] Project: Make a site for the 120journos. 
+- [ ] Project: Make a tool for journaliss eg. spotlight. 
 - [ ]  Project: Update your Portfolio highlighting your best work.
 - [ ]  Project: [House Prices: Advanced Regression Techniques](https://www.kaggle.com/c/house-prices-advanced-regression-techniques)
 - [ ]  Project: Finish any questions you have remaining from  [Python Interview Prep](https://www.hackerrank.com/chingu-challenge-3)
@@ -47,10 +47,6 @@ Try to build at least small things after each coruse related to the topic & defi
 | Study | Study: Try to finish as much as you can in Full Stack Python | |
 | Article | Article: Read [Project Specification Documents](http://www.pixelearth.net/pages/project-specification) and get in the habit of including every bit of information it details that makes sense for a project in the README.md or other supporting documentation for your projects | `Completed` |
 | Course | [Calculus One](https://www.coursera.org/learn/calculus1) ([alt](https://mooculus.osu.edu/)) | |
-| Course | [How to Code: Simple Data](https://www.edx.org/course/how-code-simple-data-ubcx-htc1x) | |
-| Course | [How to Code: Complex Data](https://www.edx.org/course/how-code-complex-data-ubcx-htc2x) | |
-| Course | [Software Construction: Data Abstraction](https://www.edx.org/course/software-construction-data-abstraction-ubcx-softconst1x) | |
-| Course | [Software Construction: Object-Oriented Design](https://www.edx.org/course/software-construction-object-oriented-ubcx-softconst2x) | |
 | Article | Read [Algorithms and Flowcharts](http://www.academia.edu/7857144/ALGORITHMS_AND_FLOWCHARTS) and then familiarize yourself with [Pencil](http://pencil.evolus.vn/) ... start flowcharting complex portions of your code logic as part of your documentation| |
 | Course | [Nand2Tetris](https://www.coursera.org/learn/build-a-computer) | |
 | Course | [Nand2Tetris part 2](https://www.coursera.org/learn/nand2tetris2)| | 
