@@ -10,25 +10,28 @@ There aren't many project because at some point you need to maintain one big app
 - [ ] Project: Select an API from [Todd Motto's API List](https://github.com/toddmotto/public-apis) and build a frontend-only application powered by data fetched from the API you chose.
 - [ ]  Project: Clone [this](https://creativemarket.com/ikonome/686585-Material-Resume-Blue/screenshots/#screenshot2) online resume template
 - [X]  Project: Clone Twitter using Python on the backend, and your frontend framework/library of choice. Include all basic features: signup/login/logout, follow user, search, tweet, like/retweet, home page with stream of recent tweets.
-- [ ] Project: Your choice - Clone Netflix, , Reddit, or Facebook, medium (or a comparably involved site of your choosing). The clone should be functional and include all basic features.
-- [ ] Project: Create bots to create content.
-- [ ] Project: Learn how to deal with the PaaS, IaaS host services for your upcoming hobio porject.
 - [ ] Project: Make a tool for journaliss eg. spotlight. 
+- [ ] Project: Start doing and commiting your time to `HOBIO`
+  - [ ] See Medium if there is useful mechanism that can help you with the 'hobios' image and file uplloading to the posts.
+  - [ ] See Reddit if there is useful mechanism that can help you with the 'hobio's user groupings and sub channels
+  - [ ] See Netflix if ther eis usefl mechanism that you can help with your file uploading to hobio
+  - [ ] See Slack if there is ueful mechanism that can help you with the `hobio`s chatting system.
+  - [ ] See duolingo if there are useful mechanism that can help with hobio
+  - [ ] See Facebook for useful features that you might have missed since there a lot in facebook notifications, etc.
+- [ ]  Project: Create bots to create content. In oder to do that you need to learn how to create a API for hobio
+- [ ]  Project: Learn how to deal with the PaaS, IaaS host services for your projects 'hobio' in this instance.
+- [ ]  Project: Keep maintaining hobio it will be never done it is your open source commitment from  now on.
 - [ ]  Project: Update your Portfolio highlighting your best work.
-- [ ]  Project: [House Prices: Advanced Regression Techniques](https://www.kaggle.com/c/house-prices-advanced-regression-techniques)
 - [ ]  Project: Finish any questions you have remaining from  [Python Interview Prep](https://www.hackerrank.com/chingu-challenge-3)
 - [ ]  Project: Refine and polish your Portfolio.
 - [ ]  Project: Create and polish your Resume/CV.
 - [ ]  Project: [Cracking the Coding Interview](https://www.hackerrank.com/domains/tutorials/cracking-the-coding-interview) on HackerRank
 - [ ]  Project: Continue honing your skills as you interview. Participate in more bot competitions on CodinGame, participate in competitions on Kaggle, contribute to open source JavaScript or Python projects, work on side projects that illustrate your frontend skill.
-- [ ]  Project: Clone Slack - the functionality should be complete to the point that one user can create a room, invite other users, and all users of that room can real-time chat. The room should be secure and inaccessible to anyone but those invited.
 - [ ]  Project: Create a package and distrubute it.
-- [ ]  Project:  Simon Game from the frontend section of FCC    
 - [ ]  Project: Read up on [Gulp](http://gulpjs.com/) - try to incorporate it into your workflow if you aren't using it regularly already
-- [ ]  Project: Read up on [Mocha](https://mochajs.org/) - try to use it to test your JavaScript, every chance you get
-- [ ]  Project: Clone the front page of [this](https://urbanarmorgear.com/) website modifying it to highlight a different product or industry. Make special note of the secondary navigation bar at the top. Implementing that is the highlight of this project.    
+- [ ]  Project: Read up on [Mocha](https://mochajs.org/) - try to use it to test your JavaScript, every chance you get  
 - [ ]  Project: Try to sell a frontend template code.
-- [ ]  Project: At this point I am no longer going to say to code major big social networks. Yet, you should code `HOBIO`
+- [ ]  Project:  Simon Game from the frontend section of FCC   
 - [ ]  Project: Design, implement, test, and deploy a game that is playable on the web, using the technologies of your choice. The only criteria are that it be playable online, and that it inculde a substantial AI component.
 - [ ]  Project: Clone [Learn Harmony](http://learnharmony.org/#/?_k=0okjs7)  
 - [ ] [First contrubutions](https://github.com/Roshanjossey/first-contributions)
