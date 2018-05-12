@@ -17,3 +17,13 @@ Models are the foundation of every django project we shouldnt rush to write any 
 - Use `null=True` on only int,float fields and relation fields such as m2m one2m foreign key.
 
 - Except for boolean field you can use blank=True, never use it on boolean field.
+
+- Try to avoid using genericrelations
+
+## _meta API
+
+- For the most part u should use _meta tag in models it is not necessary but it is very useful in some cases such as: 
+  - Get a list of models fields
+  - Get the class of a particular field for a model
+
+## Model managers 
