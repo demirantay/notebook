@@ -7,10 +7,8 @@ There aren't many project because at some point you need to maintain one big app
 - [X]  Project: Pick a template from [here](https://freebiesbug.com/psd-freebies/website-template/), [here](http://www.free-css.com/free-css-templates) or [here](http://www.os-templates.com/free-website-templates) and implement the frontend of a website with it as your inspiration (do not use its assets)
 - [ ] Project: Select an API from [Todd Motto's API List](https://github.com/toddmotto/public-apis) and build a frontend-only application powered by data fetched from the API you chose.
 - [ ] Project - Clone [this Admin template](http://rubix410.sketchpixy.com/ltr/dashboard) using React, Angular, or Vue
-- [ ] Project: Select an API from [Todd Motto's API List](https://github.com/toddmotto/public-apis) and build a frontend-only application powered by data fetched from the API you chose.
-- [ ]  Project: Clone [this](https://creativemarket.com/ikonome/686585-Material-Resume-Blue/screenshots/#screenshot2) online resume template
 - [X]  Project: Clone Twitter using Python on the backend, and your frontend framework/library of choice. Include all basic features: signup/login/logout, follow user, search, tweet, like/retweet, home page with stream of recent tweets.
-- [ ] Project: Make a tool for journaliss eg. spotlight. 
+- [X] Project: Make a tool for journaliss eg. spotlight. 
 - [ ] Project: Start doing and commiting your time to `HOBIO`
   - [ ] See Medium if there is useful mechanism that can help you with the 'hobios' image and file uplloading to the posts.
   - [ ] See Reddit if there is useful mechanism that can help you with the 'hobio's user groupings and sub channels
