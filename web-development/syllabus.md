@@ -8,10 +8,9 @@ There aren't many project because at some point you need to maintain one big app
 - [ ] Project: Select an API from [Todd Motto's API List](https://github.com/toddmotto/public-apis) and build a frontend-only application powered by data fetched from the API you chose.
 - [ ] Project - Clone [this Admin template](http://rubix410.sketchpixy.com/ltr/dashboard) using React, Angular, or Vue
 - [X]  Project: Clone Twitter using Python on the backend, and your frontend framework/library of choice. Include all basic features: signup/login/logout, follow user, search, tweet, like/retweet, home page with stream of recent tweets.
-- [X] Project: Make a tool for journaliss eg. spotlight. 
-- [ ] Project: Start doing and commiting your time to `HOBIO`
-  - [ ] See Medium if there is useful mechanism that can help you with the 'hobios' image and file uplloading to the posts.
-  - [ ] See Reddit if there is useful mechanism that can help you with the 'hobio's user groupings and sub channels
+- [ ] Project: Start doing and commiting your time to `Spotlight`
+  - [ ] See Medium if there is useful mechanism that can help you with the 'spot' image and file uplloading to the posts.
+  - [ ] See Reddit if there is useful mechanism that can help you with the 'spot's user groupings and sub channels
   - [ ] See Netflix if ther eis usefl mechanism that you can help with your file uploading to hobio
   - [ ] See Slack if there is ueful mechanism that can help you with the `hobio`s chatting system.
   - [ ] See duolingo if there are useful mechanism that can help with hobio
