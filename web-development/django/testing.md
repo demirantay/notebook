@@ -98,3 +98,102 @@ from django.test import TestCase
 # Create your tests here
 ```
 
+Often you will add a test class for each model/form/view you would like to test, with individual methods for testing specific functionality
+
+Add the test class below to the bottom of the file. The class demonstrates how to construct a test case class by deriving from `TestCase`.
+
+```python
+class YourTestClassName(TestCase):
+    
+    @classmethod
+    def setUpTestData(cls):
+        print("setUpTestData: Run once to set up non-modified data for all class methods.")
+        pass
+        
+     def setUp(self):
+        print("setUp: Run once for every test method to setup clean data.")
+        pass
+        
+     def test_false_is_false(self):
+        print("Method: test_false_is_false.")
+        self.assertFalse(False)
+        
+     def test_false_is_true(self):
+        print("Method: test_false_is_true.")
+        self.assertTrue(False)
+        
+     def test_one_plus_one_equals_two(self):
+        print("Method: test_one_plus_one_equals_two.")
+        self.assertEqual(1 + 1, 2)
+```
+
+The new class defines two methods that you can use for pre-test configuration (for example to create any models or other objects you will use need for the test methods to use)
+
+- `setUpTestData()`: is called once in the begining of the test run for class level set-up. You would use this for the objects that are not going to be changed or modified in the test methods. (DO NOT USE THIS IF YOU DO NOT HAVE TO)
+
+- `setUp()` : is called before every test function to set up any objects that may be modified by the test (every function will get a fresh new setUp objects
+
+*Note : test classes also have a `tearDown()` method which we havent used. This method isn't particularly useful for database tests, since the TestCase base class takes care of database teardown for you.*
+
+Below those we have number of test methods which use `Assert` functions to test weather conditions are true , false or equal (`AssertTrue`, `AssertFalse`, `AssertEqual`) If the condition does not evaluate as expected it than the test will fail and report the error to your console.
+
+The `AssertTrue`, `AssertFalse`, `AssertEqual` are standart assertions provided by **unittest** There are other specific test [assertions](https://docs.djangoproject.com/en/2.0/topics/testing/tools/#assertions).
+
+*Note: The code above is just for examplary of using nearly everything needed in a `foo` explainatory way below you can see another example which is more down to earth and close to what we do on daily to day basis. Lets assume that we already created a `Animal` model*
+
+```python
+from django.test import TestCase
+from myapp.models import Animal
+
+class AnimalTestCase(TestCase):
+    
+    def setUp(self):
+        Animal.objects.create(name="lion", sound="roar")
+        Animal.objects.create(name="cat", sound="meow")
+        
+    def test_animals_can_speak(self):
+        """ Animals that can speak are correctly identified"""
+        lion = Animal.objects.get(name="lion")
+        cat = Animal.objects.get(name="cat")
+        self.AssertEqual(lion.speak(), 'the lion says "roar" ')
+        self.assertEqual(cat.speak(), 'The cat says "meow"')
+```
+
+## How To Run Tests
+
+The easiest way to run all the tests is this command: 
+```
+$ python3 manage.py test
+```
+
+This will discover all files names start with `test*.py` under the current directory and run all tests. By default the tests will individually report on failures followed by test summary and nothing more.
+
+*Note: If you get a  ValueError: Missing staticfiles manifest entry ... this may be because testing does not run collectstatic by default and your app is using a storage class that requires it. To overcome this problem simply run: *
+
+```
+$ python manage.py collectstatic
+```
+
+### Showing more test information
+
+If you want to get mroe information about your tests other than just the fails you can change the default level of verboisty as the following:
+
+```
+$ python manage.py test --verbosity 2
+```
+The allowed verbosity levels are 0, 1, 2, 3 with the default being == 1
+
+### Running specific tests
+
+You can specific tasks by the following method:
+```
+$ python manage.py test app_name.tests
+ 
+ or
+ 
+ $ python mange.py test app_name.tests.test_models
+```
+ 
+
+
+
