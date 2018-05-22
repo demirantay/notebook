@@ -3,6 +3,7 @@
 ## Practice
 There aren't many project because at some point you need to maintain one big applicaiton instead of writing new clones.
 
+- [ ] DEFINETLY FINISH THE ROADMAP (KAHRAMANS 2018 DEV ROADMAP)
 - [X]  Project: Pick a template from [here](https://freebiesbug.com/psd-freebies/website-template/), [here](http://www.free-css.com/free-css-templates) or [here](http://www.os-templates.com/free-website-templates) and implement the frontend of a website with it as your inspiration (do not use its assets)
 - [X]  Project: Pick a template from [here](https://freebiesbug.com/psd-freebies/website-template/), [here](http://www.free-css.com/free-css-templates) or [here](http://www.os-templates.com/free-website-templates) and implement the frontend of a website with it as your inspiration (do not use its assets)
 - [ ] Project: Select an API from [Todd Motto's API List](https://github.com/toddmotto/public-apis) and build a frontend-only application powered by data fetched from the API you chose.
@@ -33,7 +34,7 @@ There aren't many project because at some point you need to maintain one big app
 - [ ]  Project: Clone [Learn Harmony](http://learnharmony.org/#/?_k=0okjs7)  
 - [ ] [First contrubutions](https://github.com/Roshanjossey/first-contributions)
 - [ ] [start open source](https://github.com/github/opensource.guide)
-
+- [ ] DEFINETLY FINISH THE ROADMAP (KAHRAMANS 2018 DEV ROADMAP)
 
 ## Study
 Try to build at least small things after each coruse related to the topic & definitely take notes.
