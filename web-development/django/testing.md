@@ -194,6 +194,14 @@ $ python manage.py test app_name.tests
  $ python mange.py test app_name.tests.test_models
 ```
  
+ # Testing a View
+ 
+When we tested our application above we fixed the code if there was a error in the test. In fact this was a simple example of Test-Driven-Development. But it doesnt really matter in which order we do the work.
+
+In our first test we focused on the internal parts of our django app such as the models inside it. For this test want to check its behaviour as it would be experienced by a user through a web browser
+
+...
+ 
 
 
 
