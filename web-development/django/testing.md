@@ -200,8 +200,89 @@ When we tested our application above we fixed the code if there was a error in t
 
 In our first test we focused on the internal parts of our django app such as the models inside it. For this test want to check its behaviour as it would be experienced by a user through a web browser
 
+Lets look at the necessary tools at our disposal :
+
+## Django test Client
+
+Django provides a test [Client](https://docs.djangoproject.com/en/2.0/topics/testing/tools/#django.test.Client) to simulate a user interacting with the code at view level. 
+
+Lets assume that you have a very basic view and we will write a view test for it below:
+
+```python
 ...
+from django.test import TestCase
+from django.urls import reverse
+
+
+class TestFooView(TestCase):
+
+  def setUp(self):
+    # create Objects if you want to use them while testing
+    test_user = User.objects.craete(username='test_user', password='123
+    
+  def test_view_exists_at_desired_location(self):
+    response = self.client.get('/app_url/view_url')
+    self.assertEqual(response.status_code, 200)
+    
+  def test_view_is_accessible_by_name(self):
+    response = self.client.get(reverse("view_name"))
+    self.asssertEqual(response.status_code, 200)
+    
+  def test_view_uses_correct_template(self):
+    response = self.client.get(reverse('view_name'))
+    self.assertEqual(response.status_code, 200)
+    self.assertTemplateUsed(response, 'name.html')  
+
+```
  
+ The test itself is self explainatory but you should definetly definetly definetly X 100 check out the .client() package because it consists a lot of great things that goes along with the assert packages. To give an example you can check the context vars and all other stuff :
+ 
+ ```python
+ ...
+ response = self.get(reverse('view_name'))
+ self.assertTrue('var_name' in response.context)
+ self.assertTrue(response.context['example_user_list'] == 100)
+ ```
+ 
+### Views that are restricted to logged in users
+
+In some cases you will want to test views that is just restricted to logged in users. 
+
+```python
+from django.contrib.auth.models import User
+
+class TestViewWithLogginIn(TestCase):
+  
+  def setUp(self):
+    # Create users
+    test_user1 = User.objects.create(username='test_user1, password='123')
+    
+  def test_logged_in_uses_correct_template(self):
+    login = self.client.login(username='test_user1, password='123')
+    response = self.client.get(reverse('view_name')
+    
+    # Check our user is logged in
+    self.assertEqual(str(response.context['user']), 'test_user1')
+    # Check we got a response succsess
+    self.assertEqual(response.status_code, 200)
+    
+```
+
+You can also pass kwarg arguments from urls to views on test cases such as these :
+
+```python 
+...
+
+class TestFooView(TestCase):
+    
+    def setUp(self):
+        test_user = User.objects.create(username='test_user', password='123')
+        
+    def test_foo_kwargs(self):
+        response = self.client.get(reverse('view_name', kwargs={'pk': self.test_user.id}))
+        self.assertEqual(response.status_code, 200)
+
+```
 
 
 
