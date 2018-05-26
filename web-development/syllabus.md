@@ -45,9 +45,11 @@ Try to build at least small things after each coruse related to the topic & defi
 |------|----------|--------|
 | Study | [the Django documentation](https://docs.djangoproject.com/en/1.11/)| `Completed` |
 | Course | [Helsinki MOOCs for the desired language](http://mooc.fi/courses/2013/programming-part-1/material.html) | `In progress` |
-| Study | Study: Try to finish as much as you can in Full Stack Python | |
+| Study | Study: Try to finish as much as you can in Full Stack Python | `Completed` |
 | Article | Article: Read [Project Specification Documents](http://www.pixelearth.net/pages/project-specification) and get in the habit of including every bit of information it details that makes sense for a project in the README.md or other supporting documentation for your projects | `Completed` |
 | Article | Read [Algorithms and Flowcharts](http://www.academia.edu/7857144/ALGORITHMS_AND_FLOWCHARTS) and then familiarize yourself with [Pencil](http://pencil.evolus.vn/) ... start flowcharting complex portions of your code logic as part of your documentation| |
+| Course | [Nand2Tetris](https://www.coursera.org/learn/build-a-computer) | |
+| Course | [Nand2Tetris part 2](https://www.coursera.org/learn/nand2tetris2)| | 
 | Course | [Algorithms, Part I](https://www.coursera.org/learn/algorithms-part1) | |
 | Course | [Introduction to computer networking](https://lagunita.stanford.edu/courses/Engineering/Networking-SP/SelfPaced/about) | |
 | Course | [Algorithms, Part II](https://www.coursera.org/learn/algorithms-part2)| |
@@ -83,8 +85,6 @@ Try to build at least small things after each coruse related to the topic & defi
 | Course | [College Algebra and Problem Solving](https://www.edx.org/course/college-algebra-problem-solving-asux-mat117x) or thorough knowledge of Algebra.| `In progress` |
 | Course | [Precalculus](https://www.edx.org/course/precalculus-asux-mat170x) | | 
 | Course | [Calculus One](https://www.coursera.org/learn/calculus1) ([alt](https://mooculus.osu.edu/)) | |
-| Course | [Nand2Tetris](https://www.coursera.org/learn/build-a-computer) | |
-| Course | [Nand2Tetris part 2](https://www.coursera.org/learn/nand2tetris2)| | 
 | Course | [Calculus Two: Sequences and Series](https://www.coursera.org/learn/advanced-calculus) | |
 | Course | [Intro to Theoretical Computer Science](https://www.udacity.com/course/intro-to-theoretical-computer-science--cs313)| |
 | Course | [Introduction to Probability - The Science of Uncertainty](https://www.edx.org/course/introduction-probability-science-mitx-6-041x-0) | |
