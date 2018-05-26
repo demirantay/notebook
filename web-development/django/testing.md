@@ -284,5 +284,33 @@ class TestFooView(TestCase):
 
 ```
 
+#### Testing view forms
+
+Forms have alot of checking needs to be done so you should definelty check the `client()` docuemntation for it but lets give some examples
+
+First you would like to hcek the inital values maybe :
+```python
+...
+
+class TestViewWithForm(TestCase):
+  ...
+  
+  def test_form(self):
+    response = self.client.get(reverse('view_name')
+    self.assertEqual(response.context['form'].initial['form_input_name'], None)
+
+```
+Or you can check the clients `POST` method to test the form submissions, but definetly check the documents the tutorial that i am following does not go in depth.
+
+.... Check other documents for POST
+
+
+## For further reading
+
+- [Django testing docs](https://docs.djangoproject.com/en/2.0/topics/testing/overview/)
+- [A workshop for testing in django](http://test-driven-django-development.readthedocs.io/en/latest/index.html)
+- [Blog about testing in django](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Testing)
+
+
 
 
