@@ -94,6 +94,7 @@ Try to build at least small things after each coruse related to the topic & defi
 | Course | [Mathematics for Computer Science](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-042j-mathematics-for-computer-science-spring-2015/index.htm) |  |
 | Course | [Computer Graphics](https://www.edx.org/course/computer-graphics-uc-san-diegox-cse167x) | |
 | Course | [Artificial Intelligence](https://www.edx.org/course/artificial-intelligence-uc-berkeleyx-cs188-1x#!)| |
+| Course | [Artificial Intelligence(another MOOC)](http://www.elementsofai.com/) | |
 | Course | [Machine Learning](https://www.coursera.org/learn/machine-learning) | |
 | Course | [Introduction to Natural Language Processing](https://www.coursera.org/learn/natural-language-processing)| |
 | Project | After learning NLP improve william the bot | |
