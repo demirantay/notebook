@@ -1,6 +1,6 @@
 # Syllabus
 
-The syllabus of my self teaching computer science journey divides into three: studying; practicing what I have learnt; learning skills that are needed in current job market.
+The syllabus divides into three sections. 1 - is for Computer Science guide. 2 - Doing a fullfilled project. 3- Teaching the market skills for myself.
 
 ## Computer Science Guide
 
@@ -31,6 +31,8 @@ Don’t be the person who “never quite understood” something like recursion
   - [ ] Course: [Stanford MOOC](https://www.coursera.org/specializations/algorithms)
   - [ ] Exercise : [LeetCode](https://leetcode.com/) - solve around 100 problems.
   - [ ] Book : [How to solve it](https://www.amazon.com/How-Solve-Mathematical-Princeton-Science/dp/069116407X/?pldnSite=1)
+  - [ ] Course : [Algorithms part I](https://www.coursera.org/learn/algorithms-part1)
+  - [ ] Course : [Algorithms part II](https://www.coursera.org/learn/algorithms-part2)
   
 ### Mathematics for Computer Science
   
@@ -48,6 +50,7 @@ Don’t be the person who “never quite understood” something like recursion
    Most of the code you write is run by an operating system, so you should know how those interact.
    
    - [ ] Book : [Operating Systems: Three Easy Pieces](http://pages.cs.wisc.edu/~remzi/OSTEP/)
+   - [ ] Course : [ops-class.org : hack the kernel](https://www.ops-class.org/) You can go with the book simotenously.
    - [ ] Project : Code a small OS kernel
    
  ### Computer Networking
@@ -66,6 +69,7 @@ Don’t be the person who “never quite understood” something like recursion
    - [ ] Course : [Berkley Course](https://archive.org/details/UCBerkeley_Course_Computer_Science_186)
    - [ ] Paper : [Database Architecture](http://db.cs.berkeley.edu/papers/fntdb07-architecture.pdf)
    - [ ] Book : [Red Book](http://www.redbook.io/) -- your next stop after berkley course
+   - [ ] Course : [Stanford Course](https://lagunita.stanford.edu/courses/DB/2014/SelfPaced/about) -- Take all mini courses
    - [ ] Project idea: Write a simple relational database management system from scratch.
    
    ### Languages and Compilers
@@ -81,7 +85,74 @@ Don’t be the person who “never quite understood” something like recursion
    
    - [ ] Book : [Distibuted Systems, 3rd edition](https://www.distributed-systems.net/index.php/books/distributed-systems-3rd-edition-2017/)
    
- ### Other Advanced Topics
+ ### Other Pet/Advanced Topics
+ 
+ - [ ] Course : [Software Debugging](om/course/software-debugging--cs259)
+ - [ ] Course : [Software Testing](https://www.udacity.com/course/software-testing--cs258)
+ - [ ] Course : [Software Architecture & Design](https://www.udacity.com/course/software-architecture-design--ud821)
+ - [ ] Course : [Agile Software DEvelopment](https://www.edx.org/course/agile-software-development)
+ - [ ] Course : [Intro to Cloud Infrastructure Technoliges](https://www.edx.org/course/introduction-cloud-infrastructure-linuxfoundationx-lfs151-x)
+ - [ ] Course : [Intro to Cyber Security](https://www.edx.org/course/introduction-cloud-infrastructure-linuxfoundationx-lfs151-x)
+ - [ ] Course : [Software Engineering(introcution)](https://www.edx.org/course/software-engineering-introduction-ubcx-softeng1x)
+ - [ ] Course : [Parallel Computer Architecture and Programming](http://15418.courses.cs.cmu.edu/spring2016/home)
+ - [ ] Course : [IoT](https://www.coursera.org/specializations/internet-of-things)
+ - [ ] Course : [Computer Graphics](https://www.edx.org/course/computer-graphics-uc-san-diegox-cse167x-3)
+ - [ ] Course : [Artifical Intelligence](http://www.elementsofai.com/)
+ - [ ] Course : [Machine Learning](https://www.coursera.org/learn/machine-learning)
+ - [ ] Course : [Natural Language Processing](https://www.coursera.org/learn/natural-language-processing)
+ 
+ There are a lot more online free courses check OSS University or Other starred guide repos ...
+ 
+ ---
+ ---
+ 
+ ## Fully Developed Project
+ 
+ You should maintain one big application instead of writing new clones everyday.
+ 
+- [ ] Project : Start maintaining and commiting your time to `Spotlight`
+  - [ ] See Medium if there is useful mechanism that can help you with the 'spot' image and file uplloading to the posts.
+  - [ ] See Reddit if there is useful mechanism that can help you with the 'spot's user groupings and sub channels
+  - [ ] See Netflix if ther eis usefl mechanism that you can help with your file uploading to spot
+  - [ ] See Slack if there is ueful mechanism that can help you with the spots chatting system.
+  - [ ] See duolingo if there are useful mechanism that can help with spot
+  - [ ] See Facebook for useful features that you might have missed since there a lot in facebook notifications, etc.
+- [ ] Project: Create bots to create content. In oder to do that you need to learn how to create a API for hobio
+- [ ] Project: Learn how to deal with the PaaS, IaaS host services for your projects 'hobio' in this instance.
+- [ ] Project: Keep maintaining Spotligth it will be never done it is your open source commitment from now on.
+- [ ] Project: Update your Portfolio highlighting your best work. Make it professional you can get insparation from hipolabs.com they illustrate a very good example of freelanceers website
+- [ ] Project: Finish any questions you have remaining from Python Interview Prep
+- [ ] Project: Create and polish your Resume/CV.
+- [ ] Project: [Cracking the Coding Interview](https://www.hackerrank.com/domains/tutorials/cracking-the-coding-interview) on HackerRank
+- [ ] Project: Try to sell a frontend template code. Or atleast get your foot in the door for freelancing. 
+- [ ] Important: **Start Contributing to Open Source projects**
+  - [ ] [First Contributions](https://github.com/Roshanjossey/first-contributions)
+  - [ ] [Open Source Guide](https://github.com/github/opensource.guide)
+  
+  
+ ---
+ ---
+ 
+ ## Market Skills Road Map
+ 
+ It is important to learn in this sequence 1-Intro, 2-Backend, 3-Frontend, 4-DevOps
+ 
+ ### Intro 
+ 
+ <img align="center" width="100%" src="/images/intro.png" />
+ 
+ ### Front End
+ 
+ <img align="center" width="100%" src="/images/frontend-v2.png" />
+ 
+ ### Back End
+ 
+ <img align="center" width="100%" src="/images/backend.png" />
+ 
+ ### Dev Ops
+ 
+ <img align="center" width="100%" src="/images/devops.png" />
+ 
  
  
  
