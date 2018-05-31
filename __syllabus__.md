@@ -85,6 +85,10 @@ Don’t be the person who “never quite understood” something like recursion
    
    - [ ] Book : [Distibuted Systems, 3rd edition](https://www.distributed-systems.net/index.php/books/distributed-systems-3rd-edition-2017/)
    
+### Code University
+
+  - [ ] Guide : [Code Univeristy Guide](https://github.com/jwasham/coding-interview-university) : Finish this guide after finishing the sections above this guide suppose to take your time nearly a year so go through each item very seriously. If you are able to come this far hell go apply for big 4.
+   
  ### Other Pet/Advanced Topics
  
  - [ ] Course : [Software Debugging](om/course/software-debugging--cs259)
