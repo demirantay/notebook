@@ -121,6 +121,8 @@ Don’t be the person who “never quite understood” something like recursion
   - [ ] See Slack if there is ueful mechanism that can help you with the spots chatting system.
   - [ ] See duolingo if there are useful mechanism that can help with spot
   - [ ] See Facebook for useful features that you might have missed since there a lot in facebook notifications, etc.
+  - [ ] Definietly check github/gitlab features like analytics .. etc.
+  - [ ] Definetly check Jira for features like to dos, analytics, deadlines .etc.
 - [ ] Project: Create bots to create content. In oder to do that you need to learn how to create a API for hobio
 - [ ] Project: Learn how to deal with the PaaS, IaaS host services for your projects 'hobio' in this instance.
 - [ ] Project: Keep maintaining Spotligth it will be never done it is your open source commitment from now on.
