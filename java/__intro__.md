@@ -128,4 +128,49 @@
   }
   ```
 
-<br>
+<br/>
+
+- You can get make various kind of functions on functions that comes shipped with java itself. Such as you can do `.length()` to get the lnegth or `.charAt()` th get the character. You can find many more such as index of, substring and other things in the documentation.
+  ```java
+  String foo = "Foo";
+
+  System.out.println(foo.length()) // prints 3
+  System.out.println(foo.charAt(0)) // gets  `F`
+  ```
+
+<br/>
+
+
+- You can define objects very easily by their classes. Every data type is a object. You dont have to define primitive object(data) types like this because they already come shipped with java. Lets examine the `Scanner` object
+  ```java
+  Scanner input = new Scanner(..);
+  // type is objects name & you create a new instance of the
+  // class with `new Scanner()`
+  ```
+  You can create your primitive types like this too but since you have a shortcut there is no need to
+  ```java
+  String text =  new String("foo"); // this is too long
+
+  String text = "foo"; // better
+  ```
+
+<br/>
+
+- Once you have too many objects that are in the same context instead of creating too many variables it is more logical to use lists(Arrays) you can use many self defined functions for ArrayList's too see them all open the official docs
+  ```java
+  public class Main {
+    public static void main(String[] args) {
+
+      ArrayList<String> name_list = new ArrayList<String>();
+
+      name_list.add("demir");
+      name_list.add("anthony");
+
+      System.out.println("The size is, " + name_list.size());
+
+      System.out.println("First name: " + name_list.get(0));
+
+      name_list.remove("demir");
+    }
+  }
+  ```
