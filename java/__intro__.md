@@ -140,6 +140,32 @@
 
 <br/>
 
+- Once you have too many objects that are in the same context instead of creating too many variables it is more logical to use lists(Arrays) you can use many self defined functions for ArrayList's too see them all open the official docs there are many more useful methods such as `.sort(..)`, `.reverse(..)` etc.
+  ```java
+  import java.util.ArrayList;
+
+  public class Main {
+    public static void main(String[] args) {
+
+      ArrayList<String> name_list = new ArrayList<String>();
+
+      name_list.add("demir");
+      name_list.add("Anthony");
+
+      System.out.println("The size is, " + name_list.size());
+
+      System.out.println("First name: " + name_list.get(0));
+
+      name_list.remove("demir");
+
+      for (String name : name_list) {
+        System.out.println(name); // prints only `Anthony`
+      }
+    }
+  }
+  ```
+
+<br/>
 
 - You can define objects very easily by their classes. Every data type is a object. You dont have to define primitive object(data) types like this because they already come shipped with java. Lets examine the `Scanner` object
   ```java
@@ -153,24 +179,7 @@
 
   String text = "foo"; // better
   ```
-
-<br/>
-
-- Once you have too many objects that are in the same context instead of creating too many variables it is more logical to use lists(Arrays) you can use many self defined functions for ArrayList's too see them all open the official docs
+  So you may ask "okay, so how can we define classes" it is very simple. Create a new file.java and name the file name same as the class name. After you create a class you will need to give it some object variables that will be private to the object. You are not done, you will need to define a `constructor` that is always called when the object instance is crated and lastly you can have methods(behaviors) of the object. ex. :
   ```java
-  public class Main {
-    public static void main(String[] args) {
-
-      ArrayList<String> name_list = new ArrayList<String>();
-
-      name_list.add("demir");
-      name_list.add("anthony");
-
-      System.out.println("The size is, " + name_list.size());
-
-      System.out.println("First name: " + name_list.get(0));
-
-      name_list.remove("demir");
-    }
-  }
+  
   ```
