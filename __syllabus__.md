@@ -171,13 +171,16 @@ Don’t be the person who “never quite understood” something like recursion
  - [ ] JS : Learn Ajax(XHR)
  - [ ] JS : Learn ES6 and writing modular javascript
  - [ ] JS : Optionally you can learn Jquery
- - [ ] JS : Make a fine Responsive website with interactivity with javascript
+ - [ ] Project : Make a fine Responsive website with interactivity with javascript
  - [ ] JS : Pick a package manager and learn it, either `npm` or `yarn`
  - [ ] CSS : Learn SASS a css proprecessor that lets you do things css can't do it by it self
  - [X] CSS : Learn BootStrap a framework for responive design
  - [ ] CSS : Learn BEM, a css architecture to stucture your css code 
  - [ ] Learn : Build tools in this order, 1: NPM scripts, 2: ESLint, 3:Webpack
- - [ ] JS : Create a library and publish it on npm and github
+ - [ ] Project : Create a library and publish it on npm and github
+ - [ ] Learn : Pick a framework from this three, 1:React--redux, 2:Vue--vuex, 3:Angular2--Rx.js
+ - [ ] Project : You now know what a modern javascript developer should now. Go build a fully developed front end application.
+ - [ ] Learn : 
  
 ### Visual Road Map
  
