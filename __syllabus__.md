@@ -159,7 +159,25 @@ Don’t be the person who “never quite understood” something like recursion
  
  ### Front End
  
- 
+ - [X] Learn : HTML
+ - [X] HTML : Clone a template content
+ - [X] Learn : CSS
+ - [ ] CSS : Learn how to use 'grid' and 'flexbox'
+ - [ ] CSS : Learn Media Queries and Responsive Design
+ - [X] CSS : Style the template you made above
+ - [X] Learn : JavaScript
+ - [X] JS : Learn the DOM api and how to manipulate it
+ - [ ] JS : finish YDKJS books for understanding hoisting, bubling ... etc.
+ - [ ] JS : Learn Ajax(XHR)
+ - [ ] JS : Learn ES6 and writing modular javascript
+ - [ ] JS : Optionally you can learn Jquery
+ - [ ] JS : Make a fine Responsive website with interactivity with javascript
+ - [ ] JS : Pick a package manager and learn it, either `npm` or `yarn`
+ - [ ] CSS : Learn SASS a css proprecessor that lets you do things css can't do it by it self
+ - [X] CSS : Learn BootStrap a framework for responive design
+ - [ ] CSS : Learn BEM, a css architecture to stucture your css code 
+ - [ ] Learn : Build tools in this order, 1: NPM scripts, 2: ESLint, 3:Webpack
+ - [ ] JS : Create a library and publish it on npm and github
  
 ### Visual Road Map
  
