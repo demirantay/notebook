@@ -180,7 +180,17 @@ Don’t be the person who “never quite understood” something like recursion
  - [ ] Project : Create a library and publish it on npm and github
  - [ ] Learn : Pick a framework from this three, 1:React--redux, 2:Vue--vuex, 3:Angular2--Rx.js
  - [ ] Project : You now know what a modern javascript developer should now. Go build a fully developed front end application.
- - [ ] Learn : 
+ - [ ] Learn : How to imporove the performance of your application built above such as, eg. Interactivity time, Page speed index, Lighthouse Score.
+ - [ ] Learn : Testing your front end applications [here is a good resource](https://medium.com/welldone-software/an-overview-of-javascript-testing-in-2018-f68950900bc3)
+ - [ ] Learn : To make progressive web apps, you need to learn about service workers to make them
+ - [ ] Learn : Static Type Checkers, you dont need to learn them but they give you overrpower of your code, `TypeScript` is a good option
+ - [ ] Learn : Server side rendering in whatever framework you have chosen. If it is 1:react -- Next.js, 2:vue -- Nuxt.js, 3:Angular2 -- Universal
+ - [ ] ETC : There are lots of things to learn go figure such as, Canvas, HTML5 APIs, SVG, Functional Programming .. etc.
+ 
+ ### Back End
+ 
+ - [ ] Learn : Pick a language for backend you may chose Scripting languages: Python, Ruby, PHP, Node or Functional languages: Haskell, Scala .. etc. or Multiparadigm langauges: Go, Rust or Enterprisey languages: Java, C#
+ - [ ] Practice: 
  
 ### Visual Road Map
  
