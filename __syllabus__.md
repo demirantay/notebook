@@ -139,24 +139,33 @@ Don’t be the person who “never quite understood” something like recursion
  ---
  ---
  
+ 
  ## Market Skills Road Map
  
  It is important to learn in this sequence 1-Intro, 2-Backend, 3-Frontend, 4-DevOps
  
  ### Intro 
  
- <img align="center" width="100%" src="/images/intro.png" />
+ - [X] Git - Version Control
+ - [ ] SSH
+ - [ ] HTTP/HTTPS
+ - [ ] API's
+ - [X] Basic Terminal Usage
+ - [ ] Learn to research
+ - [ ] Data Structures and Algorithms
+ - [ ] Character encodings
+ - [ ] Design Patterns
+ - [X] GitHub for public repos, GitLab for private
  
  ### Front End
  
- <img align="center" width="100%" src="/images/frontend-v2.png" />
  
- ### Back End
  
+### Visual Road Map
+ 
+ <img align="center" width="100%" src="/images/intro.png" />
+ <img align="center" width="100%" src="/images/frontend-v2.png" /> 
  <img align="center" width="100%" src="/images/backend.png" />
- 
- ### Dev Ops
- 
  <img align="center" width="100%" src="/images/devops.png" />
  
  
