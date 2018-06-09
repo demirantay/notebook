@@ -179,7 +179,77 @@
 
   String text = "foo"; // better
   ```
-  So you may ask "okay, so how can we define classes" it is very simple. Create a new file.java and name the file name same as the class name. After you create a class you will need to give it some object variables that will be private to the object. You are not done, you will need to define a `constructor` that is always called when the object instance is crated and lastly you can have methods(behaviors) of the object. ex. :
+  So you may ask "okay, so how can we define classes" it is very simple. Create a new file.java and name the file name same as the class name. After you create a class you will need to give it some object variables that will be private to the object. You are not done, you will need to define a `constructor` that is always called when the object instance is crated and lastly you can have methods(behaviors) of the object. Lets create a persons class for example. :
   ```java
-  
+  class Person {
+    // private object vars
+    private String name;
+    private int age;
+
+    // constructor
+    public Person(initial_name, initial_age) {
+      this.name = initial_name;
+      this.age = initial_age;
+    }
+
+    // behaviors
+    public String get_name() {
+      return this.name;
+    }
+
+    public int get_age() {
+      return this.age;
+    }
+
+    public void become_older() {
+      this.age++;
+    }
+
+    public String toString() {
+      return "Name: " + this.name + "Age: " + this.age;
+    }
+  }
   ```
+  In order to use this object in our main file we can simply create it like the ones we we have created earlier:
+  ```java
+  public class Main {
+    public static void main(String[] args) {
+
+      Person james = new Person("James", 20);
+
+      System.out.println(james); // returns toString
+    }
+  }
+  ```
+
+  <br>
+
+- You can define multiple constructors in a object. It is used when we do not knowhow many parameters will the user give to the object instance when it is created for the first time, lets extend our `Person` class above :
+  ```java
+  public class Person {
+    private String name;
+    private int age;
+
+    # constructors
+    public Person() {
+      this.name = "blank";
+      this.age = 0;
+    }
+
+    public Person(String initial_name) {
+      this.name = initial_name;
+      this.age = 0;
+    }
+
+    public Person(String initial_name, int initial_age) {
+      this.name = initial_name;
+      this.age = initial_age;
+    }
+
+    ...
+  }
+  ```
+
+<br/>
+
+- 
