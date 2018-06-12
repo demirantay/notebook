@@ -39,3 +39,18 @@
   Requires: Jinja2 ..etc.
   ...
   ```
+<br>
+
+- After a while you will realise tht you have downloaded too many packages and they started to cause conflict between one another. To fix this python uses virtualenvs which are python copies for each project. You create a virtual env for each project install dependincies finish your job delete the python and your original python will not get effected as if nothing has happened
+  ```bash
+  $ virtualenv venv  # creates a virtualenv named venv
+  ```
+  To use everything we have learned above simply use this 
+  ```bash
+  $ venv/bin/pip install Django
+  $ venv/bin/pip list
+  ...
+  ```
+<br>
+
+- Will add later on ...
