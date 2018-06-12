@@ -195,7 +195,7 @@ Don’t be the person who “never quite understood” something like recursion
  ### Back End
  It may seem daunting compared to front-end however and yes it is true that there is a learning curve. However it is a lot more fun to be able to understand what the fuck is going under all of this complexity.
  
- - [ ] Learn : Pick a language for backend you may chose Scripting languages: Python, Ruby, PHP, Node or Functional languages: Haskell, Scala .. etc. or Multiparadigm langauges: Go, Rust or Enterprisey languages: Java, C#
+ - [X] Learn : Pick a language for backend you may chose Scripting languages: Python, Ruby, PHP, Node or Functional languages: Haskell, Scala .. etc. or Multiparadigm langauges: Go, Rust or Enterprisey languages: Java, C#
  - [X] Practice: Exercise and make some command line application. Sample ideas, you can make a web scraper or get a API in JSON format and create someting, think of a daily task and automate it.
  - [ ] Learn: Learn how to use a package manager for the language you have picked e.g. Python has pip etc.
  - [ ] Learn: Standards and best practices. Each language has it is own e.g. Python has PEP
@@ -216,7 +216,7 @@ Don’t be the person who “never quite understood” something like recursion
  - [ ] Learn: How to use Docker
  - [ ] Learn: Knowledge of Web Servers, There are several different options look at the differnt options understand differneces and limitations. Apache, Nginx .. etc.
  - [ ] Learn: how to use Web Sockets.
- - [ ] Project: Make a very big application for learning and build it from scratch with even building your own server and using web sockets to accsess it.
+ - [ ] Project: Make a very big application for learning and build it from scratch with even building your own server and using web sockets to accsess it. Or you can simply build a web framework built on top of wsgi or something else.
  - [ ] Learn: GraphQL, this is not required and optional feel free to have a loot and what it is all about and why they are calling it the new REST
  - [ ] Learn: Again option, look into Graph Databases, at least you can have a little udnerstanding of what they are.
  - [ ] We have a lot more stuff like Profiling, Static Analysis, DDD SOAP, etc. Go on your journey now!
