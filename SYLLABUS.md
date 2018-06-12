@@ -203,7 +203,7 @@ Don’t be the person who “never quite understood” something like recursion
  - [ ] Learn: Learn about testing. There are several ways to write tests such as unit , integration ..etc. Tests are very important do not skim through articles. Learn how to calculate test covarege.
  - [ ] Project: Write tests for your package built above.
  - [ ] Learn Relational Databases there are many options but pick either PostgreSQL or MySQL
- - [ ] ProjectCreate a simple CRUD web applciation like a blog or something using everything you have learnt this far. It should have a registration, adminpanel, posts ...etc.
+ - [ ] ProjectCreate a simple CRUD web applciation like a blog or something using everything you have learnt this far. It should have a registration, adminpanel, posts ...etc. You can use [Werkzeug](http://werkzeug.pocoo.org/) for building your site.
  - [ ] Learn: a Framework e.g. Django, Flask
  - [ ] Project: Make the application you made above with the framework you chose.
  - [ ] Learn: a noSQL database you do not have to use it but understand how it is different from relational databases and why they are needed. MongoDB is a solid choice.
