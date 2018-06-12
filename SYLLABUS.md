@@ -145,6 +145,7 @@ Don’t be the person who “never quite understood” something like recursion
  It is important to learn in this sequence 1-Intro, 2-Backend, 3-Frontend, 4-DevOps. And do not try to build atleast one thing after learning each subject.
  
  ### Intro 
+ These are the basic and essential skills that every developer shoould have it under their belt in todays market. Try to practice what you learn.
  
  - [X] Git - Version Control
  - [ ] SSH
@@ -158,6 +159,7 @@ Don’t be the person who “never quite understood” something like recursion
  - [X] GitHub for public repos, GitLab for private
  
  ### Front End
+ This may seem basic since in the core there are only three technologies how ever what is really hard is that not everyone has the eye for killer design skills.
  
  - [X] Learn : HTML
  - [X] HTML : Clone a template content
@@ -188,6 +190,7 @@ Don’t be the person who “never quite understood” something like recursion
  - [ ] ETC : There are lots of things to learn go figure such as, Canvas, HTML5 APIs, SVG, Functional Programming .. etc.
  
  ### Back End
+ It may seem daunting compared to front-end however and yes it is true that there is a learning curve. However it is a lot more fun to be able to understand what the fuck is going under all of this complexity.
  
  - [ ] Learn : Pick a language for backend you may chose Scripting languages: Python, Ruby, PHP, Node or Functional languages: Haskell, Scala .. etc. or Multiparadigm langauges: Go, Rust or Enterprisey languages: Java, C#
  - [ ] Practice: Exercise and make some command line application. Sample ideas, you can make a web scraper or get a API in JSON format and create someting, think of a daily task and automate it.
@@ -210,12 +213,35 @@ Don’t be the person who “never quite understood” something like recursion
  - [ ] Learn: How to use Docker
  - [ ] Learn: Knowledge of Web Servers, There are several different options look at the differnt options understand differneces and limitations. Apache, Nginx .. etc.
  - [ ] Learn: how to use Web Sockets.
+ - [ ] Project: Make a very big application for learning and build it from scratch with even building your own server and using web sockets to accsess it.
  - [ ] Learn: GraphQL, this is not required and optional feel free to have a loot and what it is all about and why they are calling it the new REST
  - [ ] Learn: Again option, look into Graph Databases, at least you can have a little udnerstanding of what they are.
  - [ ] We have a lot more stuff like Profiling, Static Analysis, DDD SOAP, etc. Go on your journey now!
 
 ### DevOps
+DevOps is something very complex instead of having a one strict route you cna carve your way up however it is very important to have a mental map of dev ops that consists of these. Try to understand each topic and atleast do a small lite demo of the things you like for practice.
 
+- [ ] Learn: Operating Systems, Either unix -> FreeBSD or Linux --> RHEL || CentOS || Ubuntu || Fedora
+- [ ] Learn: Automation, Either powershell, Puppet, AWS, Terraform .. etc.
+- [ ] Learn: Cloud, Either AWS, Heroku, DigitalOcean ... etc.
+- [ ] Learn: CI/CD , Either Jenkins, Travis, CircleCI .. etc.
+- [ ] Learn: Monitoring and Alerting, Either, AppDynamics, Naglos, Munin, New Relic ...etc.
+- [ ] Learn: Log Management & Analysis, Either ELK ...etc.
+- [ ] Learn: Cluster Managers, Either Kubernetes, Nomad, Docker Swarrm .. etc.
+- [ ] Learn: Love for Terminal, learn compiling apps from source, gcc and etc.
+- [ ] Learn: Bash Scripts
+- [ ] Learn: Vim/Nano/Emacs
+- [ ] Learn: Command Tools, Text Manipulation (awk, sed, grep, sort, uniq, cat, echo ..etc), Process Monitoring(ps, top, htop,atop ..etc), System Performance(nmon, iostat, sar ..etc), Network(nmap, tcdump, ping, mtr, traceroute ..etc)
+- [ ] Learn: Containers, Either Docker ...etc.
+- [ ] Learn: Web Servers, Either Apache, Nginx, Tomcat .. etc.
+- [ ] Learn: OSI Model. TCP/IP/UDP Common ports
+- [ ] Learn: Knowledge about different file systems.
+- [ ] Learn: Setting up a Reverse Proxy(Nginx)
+- [ ] Learn: Setting up a caching Server(Squid, Nginx)
+- [ ] Learn: Setting up a load balancer(HAProxy, Ngixns)
+- [ ] Learn: Setting up a firewall
+- [ ] Learn: TLS, STARTLS, SSL, HTTTPS, SCP, SSH, SFTP
+- [ ] Learn: Postmortem analysis when something bad happens.
 
  
 ### Visual Road Map
