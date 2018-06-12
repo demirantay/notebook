@@ -142,7 +142,7 @@ Don’t be the person who “never quite understood” something like recursion
  
  ## Market Skills Road Map
  
- It is important to learn in this sequence 1-Intro, 2-Backend, 3-Frontend, 4-DevOps
+ It is important to learn in this sequence 1-Intro, 2-Backend, 3-Frontend, 4-DevOps. And do not try to build atleast one thing after learning each subject.
  
  ### Intro 
  
@@ -190,7 +190,33 @@ Don’t be the person who “never quite understood” something like recursion
  ### Back End
  
  - [ ] Learn : Pick a language for backend you may chose Scripting languages: Python, Ruby, PHP, Node or Functional languages: Haskell, Scala .. etc. or Multiparadigm langauges: Go, Rust or Enterprisey languages: Java, C#
- - [ ] Practice: 
+ - [ ] Practice: Exercise and make some command line application. Sample ideas, you can make a web scraper or get a API in JSON format and create someting, think of a daily task and automate it.
+ - [ ] Learn: Learn how to use a package manager for the language you have picked e.g. Python has pip etc.
+ - [ ] Learn: Standards and best practices. Each language has it is own e.g. Python has PEP
+ - [ ] Projeect: Make and Distribute some package / Library.
+ - [ ] Learn: Learn about testing. There are several ways to write tests such as unit , integration ..etc. Tests are very important do not skim through articles. Learn how to calculate test covarege.
+ - [ ] Project: Write tests for your package built above.
+ - [ ] Learn Relational Databases there are many options but pick either PostgreSQL or MySQL
+ - [ ] ProjectCreate a simple CRUD web applciation like a blog or something using everything you have learnt this far. It should have a registration, adminpanel, posts ...etc.
+ - [ ] Learn: a Framework e.g. Django, Flask
+ - [ ] Project: Make the application you made above with the framework you chose.
+ - [ ] Learn: a noSQL database you do not have to use it but understand how it is different from relational databases and why they are needed. MongoDB is a solid choice.
+ - [ ] Learn: Caching, learn how to implenet app level caching using Redis or Memcached
+ - [ ] Project: Implement caching to the application you have built above.
+ - [ ] Project: Understand REST and learn how to make RESTful APIs and make sure you read about REST from the original paper of Roy Fielding
+ - [ ] Learn: Authentication/Authorization methodiolgies. There are many choices such as OAuth, Token Auth, JWT ..etc. you can choose once you understand more about authentication.
+ - [ ] Learn: about Message Brokers, understand the "why?" and pick one. There are multiple options but RabbitMQ and Kafka is solid options.
+ - [ ] Learn: As the application grows simple queries on your database arent going to cut it out and you will have to resort to a search engine. There are many options like Solr, ElasticSearch pick one after you learn about the topic more.
+ - [ ] Learn: How to use Docker
+ - [ ] Learn: Knowledge of Web Servers, There are several different options look at the differnt options understand differneces and limitations. Apache, Nginx .. etc.
+ - [ ] Learn: how to use Web Sockets.
+ - [ ] Learn: GraphQL, this is not required and optional feel free to have a loot and what it is all about and why they are calling it the new REST
+ - [ ] Learn: Again option, look into Graph Databases, at least you can have a little udnerstanding of what they are.
+ - [ ] We have a lot more stuff like Profiling, Static Analysis, DDD SOAP, etc. Go on your journey now!
+
+### DevOps
+
+
  
 ### Visual Road Map
  
