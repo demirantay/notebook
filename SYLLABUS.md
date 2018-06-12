@@ -135,6 +135,9 @@ Don’t be the person who “never quite understood” something like recursion
   - [ ] [First Contributions](https://github.com/Roshanjossey/first-contributions)
   - [ ] [Open Source Guide](https://github.com/github/opensource.guide)
   
+  - [ ] Start earning money from what you code since you completed your fundemental basic education spend your time more wisely like contributing to big remote working friendly companies open source projects. 
+ - [ ] You can try to win [kaggle.com](https://www.kaggle.com/) prices since there are really good prices such as up to 1 million dollars
+  
   
  ---
  ---
