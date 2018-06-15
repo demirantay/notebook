@@ -36,7 +36,7 @@
   import example_package.sub_package_1.module_3
   ```
   
-  You cannot `from sub_package import *` because in order to do that you have to define a `__all__` in `__init__.py`. In order to give variables or function names to __all__ you must do the following in __init__.py file:
+  You cannot `from sub_package import *` because in order to do that you have to define a `__all__` in `__init__.py`. In order to give variables or function names to `__all__` you must do the following in` __init__.py` file:
   ```python
   __all__ = ['func_name', 'foo_func', bar_func']
   ```
@@ -44,4 +44,25 @@
 <br>
 
 ### A Simple Example Project
+
+I will code a very simple example package so that it will give you an idea what to expect from it. First lets initlize our top-level directory :
+  ```
+  example_package/
+      __init__.py
+      sub_package/
+          __init__.py 
+  ```
+also do not forget to add a name `name="example_package` in your `__init__.py` file. After completing that you will need to create handful of files to to package up this project and prepare it for distrubition. Craete the files listed below:
+  ```
+  example_package/
+      __init__.py
+      sub_package/
+         ...
+       setup.py
+       LICENSE
+       README.md
+  ``` 
+Lets break down what each file means.
+
+#### Setup.py
 
