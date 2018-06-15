@@ -114,7 +114,7 @@ Don’t be the person who “never quite understood” something like recursion
  
  You should maintain one big application instead of writing new clones everyday.
  
-- [ ] Project : Start maintaining and commiting your time to `Spotlight`
+- [X] Project : Start maintaining and commiting your time to `Spotlight`
   - [ ] See Medium if there is useful mechanism that can help you with the 'spot' image and file uplloading to the posts.
   - [ ] See Reddit if there is useful mechanism that can help you with the 'spot's user groupings and sub channels
   - [ ] See Netflix if ther eis usefl mechanism that you can help with your file uploading to spot
@@ -198,7 +198,7 @@ Don’t be the person who “never quite understood” something like recursion
  - [X] Learn : Pick a language for backend you may chose Scripting languages: Python, Ruby, PHP, Node or Functional languages: Haskell, Scala .. etc. or Multiparadigm langauges: Go, Rust or Enterprisey languages: Java, C#
  - [X] Practice: Exercise and make some command line application. Sample ideas, you can make a web scraper or get a API in JSON format and create someting, think of a daily task and automate it.
  - [X] Learn: Learn how to use a package manager for the language you have picked e.g. Python has pip etc.
- - [ ] Learn: Standards and best practices. Each language has it is own e.g. Python has PEP
+ - [X] Learn: Standards and best practices. Each language has it is own e.g. Python has PEP
  - [ ] Projeect: Make and Distribute some package / Library.
  - [ ] Learn: Learn about testing. There are several ways to write tests such as unit , integration ..etc. Tests are very important do not skim through articles. Learn how to calculate test covarege.
  - [ ] Project: Write tests for your package built above.
