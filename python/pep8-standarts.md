@@ -65,4 +65,4 @@
   from foo import bar, blah, meh, grep
   ```
   
-- There are many more pep8 conventions it is too long to take notes from the documentation so if you have more questions refer to the [OFFICIAL DOCUMENTATION](ttps://www.python.org/dev/peps/pep-0008/)
+- There are many more pep8 conventions it is too long to take notes from the documentation so if you have more questions refer to the [OFFICIAL DOCUMENTATION](https://www.python.org/dev/peps/pep-0008/)
