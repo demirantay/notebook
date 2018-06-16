@@ -66,3 +66,30 @@ Lets break down what each file means.
 
 #### Setup.py
 
+`setup.py` is the build script for [setuptools](https://packaging.python.org/key_projects/#setuptools). It tells the setuptools about your package(such as name and versions).
+
+setup.py
+```python
+import setuptools
+
+setuptools.setup(
+    name='foo',
+    version='0.0.1',
+    author='little jhonny',
+    author_email="foo@foo.com",
+    description="small smple package",
+    url="github/repo.com",
+    packages=setuptools.find_packages(),
+)
+```
+Setuptools get lots of setup arguments this is like the most simple way of writing setup. You should definetly check out for official documentation regarding setup arguments. It is important that you write a good setup. For more [see here](https://packaging.python.org/guides/distributing-packages-using-setuptools/)
+
+P.S. the name you define should not be taken in pypi.org
+
+Next step is ...
+
+#### Generating Distibution Archives
+
+...
+
+
