@@ -72,14 +72,24 @@ setup.py
 ```python
 import setuptools
 
+with open("README.md", "r") as fh:
+    long_description = fh.read()
+
 setuptools.setup(
-    name='foo',
-    version='0.0.1',
-    author='little jhonny',
-    author_email="foo@foo.com",
-    description="small smple package",
-    url="github/repo.com",
+    name="example_pkg",
+    version="0.0.1",
+    author="Example Author",
+    author_email="author@example.com",
+    description="A small example package",
+    long_description=long_description,
+    long_description_content_type="text/markdown",
+    url="https://github.com/pypa/example-project",
     packages=setuptools.find_packages(),
+    classifiers=(
+        "Programming Language :: Python :: 3",
+        "License :: OSI Approved :: MIT License",
+        "Operating System :: OS Independent",
+    ),
 )
 ```
 Setuptools get lots of setup arguments this is like the most simple way of writing setup. You should definetly check out for official documentation regarding setup arguments. It is important that you write a good setup. For more [see here](https://packaging.python.org/guides/distributing-packages-using-setuptools/)
@@ -97,5 +107,27 @@ Make sure you have the latest version of `setuptools` and `wheel` installed.
 $ python3 -m pip install --user -upgrade setuptools wheel
 ```
 Now run this command from the same directory where setup.py is located:
+```bash
+$ python3 setup.py sdist bdist_wheel
+```
+This command should output a lot of text and once completed should generate two files in the `dist` directory:
+```
+dist/
+  example_package-0.0.1-py3-none-any.whl
+  example_package-0.0.1.tar.gz
+```
+The `tar.gz` file is a [source archive](https://packaging.python.org/glossary/#term-source-archive) whereas the `.wh`l file is a [built distribution](https://packaging.python.org/glossary/#term-built-distribution). Newer pip versions preferentially install built distributions, but will fall back to source archives if needed. You should always upload a source archive and provide built archives for the platforms your project is compatible with. In this case, our example package is compatible with Python on any platform so only one built distribution is needed.
 
+#### Uplodaing the Distrubtion Archives
 
+Finally, it’s time to upload your package to the Python Package Index!
+
+Now that you are registered to PyPi, you can use `twine` to upload the distribution packages. You’ll need to install Twine:
+```bash 
+pip install twine
+```
+Once installed, run Twine to upload all of the archives under `dist`:
+```bash
+$ twine upload dist/*
+```
+You will be prompted for the username and password you registered with  PyPI.
