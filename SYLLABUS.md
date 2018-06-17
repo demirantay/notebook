@@ -199,7 +199,7 @@ Don’t be the person who “never quite understood” something like recursion
  - [X] Practice: Exercise and make some command line application. Sample ideas, you can make a web scraper or get a API in JSON format and create someting, think of a daily task and automate it.
  - [X] Learn: Learn how to use a package manager for the language you have picked e.g. Python has pip etc.
  - [X] Learn: Standards and best practices. Each language has it is own e.g. Python has PEP
- - [ ] Projeect: Make and Distribute some package / Library.
+ - [X] Projeect: Make and Distribute some package / Library.
  - [ ] Learn: Learn about testing. There are several ways to write tests such as unit , integration ..etc. Tests are very important do not skim through articles. Learn how to calculate test covarege.
  - [ ] Project: Write tests for your package built above.
  - [ ] Learn Relational Databases there are many options but pick either PostgreSQL or MySQL
