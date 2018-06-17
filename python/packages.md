@@ -90,6 +90,12 @@ Next step is ...
 
 #### Generating Distibution Archives
 
-...
+The next step is to generate [distrubiton packages](https://packaging.python.org/glossary/#term-distribution-package) for the package. hese are archives that are uploaded to the Package Index and can be installed by pip.
+
+Make sure you have the latest version of `setuptools` and `wheel` installed.
+```bash
+$ python3 -m pip install --user -upgrade setuptools wheel
+```
+Now run this command from the same directory where setup.py is located:
 
 
