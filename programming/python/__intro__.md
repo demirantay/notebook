@@ -19,7 +19,6 @@
   
   print("Name: ", name, " is ", age, " years old")
   ```
-<br>
 
 - Most of the types are mutable in python there are types that are immutable but it is not as strictly types as java or C, so you can do the following:
   ```python
@@ -28,7 +27,6 @@
   
   print(name)  # prints `5`
   ```
-<br>
 
 - You can get the user input with `input()` and you can pass a string argument to it if you want the arguemnt to appear while taking user input, input() gets string so you must use `int(input(..))` for getting integer input.
   ```python
@@ -141,5 +139,5 @@
   ```  
   P.S. Unlike Java you cannot define classes with multiple constructors
   
-- Python doesnt have to be written in a `__main__` function and you can define a main function if you want to have a entry point for your code. I will get back to this later on ... **this is important to understand do not skip*
+- Python doesnt have to be written in a `__main__` function like in java, c, c++ but you can define a main function if you want to have a entry point for your code. I will get back to this later on ... **this is important to understand do not skip*
   
