@@ -7,6 +7,7 @@ The course syllabus is not in final shape at the moment I will edit as I go alon
 Do these in order however after the intro you are free to choose specializing in whatever topic you would like to specilize.
 
 - [ ] Read: Yatirim 101
+- [ ] Course: Khan Academy -- [Personal Finance](https://www.khanacademy.org/college-careers-more/personal-finance)
 - [ ] Course: Khan Academy -- [Finance and Capital Markets](https://www.khanacademy.org/economics-finance-domain/core-finance)
 - [ ] Course: [Finance For Everyone](https://www.coursera.org/specializations/finance-for-everyone)
 - [ ] Course: [Invesment Management](https://www.coursera.org/specializations/investment-management)
