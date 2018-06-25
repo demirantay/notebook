@@ -134,6 +134,6 @@ You will be prompted for the username and password you registered with  PyPI.
 
 #### Updating your package
 
-If you want to update or fix some bug in your package you always have to change your version, generate distro archive files with `..setup.py sdist bdist_wheel`, git push, and finally twine upload it. 
+If you want to update or fix some bug in your package you always have to change your version, clear out dist files, generate new distro archive files with `..setup.py sdist bdist_wheel`, git push, and finally twine upload it. 
 
 There are many more tweaks for upgrading i did not understand it at the moment... go back later on.
