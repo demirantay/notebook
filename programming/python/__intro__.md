@@ -4,14 +4,12 @@
   ```python
   print("Hello, World!")
   ```
-<br>
-
+  
 - If you want to run your python programs you do not have to compile the files since python is a interpreted language
   ```bash
   $ python file.py  # Runs the code
   ```
-<br>
-  
+
 - You do not need to define variables with their type as their prefix like in java, c, c++, and remember while printing vars python does not concetante and convert ints to str's while printing with `+` you must use `,` between. simply put it like this:
   ```python
   name = "foo"
@@ -38,7 +36,6 @@
   
   number = int(input("Type a number: ))  # Gets `int` type input
   ```
-  <br>
   
 - Control Flows are simple no need explanation you have ==, >=, <=, >, <, !=. You can use stuff like `is` do not use them unless you have to they are mostly sticly typed and may cause unexpected results. There is no &&, || instead use simple `and` and `or`:
   ```python
@@ -60,7 +57,6 @@
   else:
     print("They are equal!")
   ``` 
-<br>
  
 - While, For and For Each loops logic is same and you can write each in the following way
   ```python
@@ -77,7 +73,6 @@
   for number in numbers:
     # ...
   ```
- <br>
  
 - You can write your self defined fucntions very simply in python no need for explanation you can simply write:
   ```python
@@ -90,7 +85,6 @@
       return num_1 / num_2
   
   ```
-<br>
 
 - You can use various kind of functions that comes preshipped and loaded with python itself such as getting the length of astring or getting a single char , substringing there are hundreds  more functions you should check the Official Documentation:
   ```python
@@ -100,7 +94,6 @@
   first_char = text[0]  # Returns `f`
   shorter_text = text[0:1]  # Returns `fo`
   ```
-<br>
 
 - Once you have too many objects that are in the same context instead of creating too many variables it is more logical to use lists(Arrays in other langs) you can use many self defined functions for lists's too see them all open the official docs there are many more useful methods such as .sort(..), .reverse(..) etc.
   ```python
@@ -115,7 +108,6 @@
   
   print(names)  # prints ['hey']
   ```
-<br>
 
 - Every type is an object in python and objects instances get created from the same class and it is very easy to define a class in python. Create a normal python file such as foo.py. And start defininy your class init. Your class should have a consturctor which will hold the variables of the object and behaviours(methods) of the object. `self` should be defined in each method as a first argument and it is the same thing as `this` in java. And `__str__` is the toString in java
   ```python
@@ -149,7 +141,5 @@
   ```  
   P.S. Unlike Java you cannot define classes with multiple constructors
   
-<br>
-
-- Will add later on ...
+- Python doesnt have to be written in a `__main__` function and you can define a main function if you want to have a entry point for your code. I will get back to this later on ... **this is important to understand do not skip*
   
