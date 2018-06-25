@@ -34,7 +34,7 @@
   $ python -m unittest <filename>
   ```
   Or if you define a __main__ like the following you can simply run with `python test_filename.py`:
-  ```bash
+  ```python
   import unittest 
   
   class Test(unittest.TestCase):
@@ -43,7 +43,10 @@
   if __name__ == '__main__':
     unittest.main()
   ```
-  
+  If you have a `tests` directory and have initliased a `__init__.py` and make it a package you can very simply run all of the tests with this:
+  ```bash
+  $ python -m unittest
+  ```
   
 - The amount of your tests can quickly get out of hand and that is why most people have tests for each module in seperate files on a directory called `tests` in order to run the whole directory you can simply $touch a `__init__.py` file to define the directory as a package and put `test` word in front of every test file like `test_forms.py`. There are more to this will add on later ...
 
