@@ -1,4 +1,4 @@
-# Syllabus
+# CompSci Syllabus
 
 The syllabus divides into three sections. 1 - is for Computer Science guide. 2 - Doing a fullfilled project. 3- Teaching the market skills for myself. Write a feynman note for each check box learned.
 
