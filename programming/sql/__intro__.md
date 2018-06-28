@@ -13,3 +13,14 @@
   |3| McLaren Formula 1| 4 | 0 | Race |
   
   By learning SQL, the goal is to learn how to answer specific questions about this data, like "What types of vehicles are on the road have less than four wheels?", or "How many models of cars does Ford produce?", to help us make better decisions down the road.
+
+- To retrieve data from a SQL database we need to write `Select` statements which are often referred to as `queries`. If we had a very basic table of data the most basic query would be like the following:
+  ```sql
+  SELECT column, another_column, ...
+  FROM my_table;
+  ```
+  or you can simply use the asterisk symbol like in python to select all columns and rows:
+  ```sql 
+  SELECT *
+  FROM my_table
+  ```
