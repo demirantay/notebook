@@ -13,6 +13,12 @@
   |3| McLaren Formula 1| 4 | 0 | Race |
   
   By learning SQL, the goal is to learn how to answer specific questions about this data, like "What types of vehicles are on the road have less than four wheels?", or "How many models of cars does Ford produce?", to help us make better decisions down the road.
+  
+- To run sql in your web site you need a RDBMS (Relational database management system i.e. MySQL PostgreSQL), a server scripting language like PHP, Python .etc. And html to style your SQL queries. 
+
+- There arent many MAJOR commands in the SQL language but these are the very important ones : `SELECT`, `UPDATE`, `DELETE`, `INSERT`.
+
+### SELECT
 
 - To retrieve data from a SQL database we need to write `Select` statements which are often referred to as `queries`. If we had a very basic table of data the most basic query would be like the following:
   ```sql
@@ -37,8 +43,15 @@
   |Operator|Condition|SQL Example|
   |--------|---------|-----------|
   |=, !=, <, <=, >, >=| Standart numerical operations| col_name =! 4|
+  |BETWEEN ..AND..| Number is within range of two values | col_name BETWEEN 4 AND 8 |
+  | NOT BETWEEN .. AND ..| Number is *NOT* within range of two vlaues | col_name NOT BETWEEN 1 AND 3 |
+  |IN(...)| Number exists in a list| col_name IN (1,3,5) |
+  | NOT IN(...)| Number does NOT exitst in a list| col_name NOT IN (2,5,9)|
   
+  If we do a example for the DMV table we defined at the top of the page it would look something like this:
+  ```sql 
+  SELECT * FROM dmv_table
+  WHERE wheels > 2; 
+  ```
   
-  
-
-
+- a
