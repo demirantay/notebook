@@ -79,5 +79,56 @@
   ORDER BY population DESC
   LIMIT 2;  
   ```
+- Up to now we have been using single tables but in the real world most of the data is broken down into many tables and this process is called normalization. Database normalization is useful because it minimizes duplicate data in any single table, and allows for data in the database to grow independently of each other.
+
+  In order to answer questions about an entity that has data spanning multiple tables in a normalized database, we need to learn how to write a query that can combine all that data and pull out exactly the information we need.
   
-  
+  Tables that share information about a single entity need to have a primary key that identifies that entity uniquely across the database. One common primary key type is an auto-incrementing integer (because they are space efficient), but it can also be a string, hashed value, so long as it is unique.
+
+  Using the JOIN clause in a query, we can combine row data across two separate tables using this unique key. The first of the joins that we will introduce is the INNER JOIN. See the following:
+   ```sql
+   SELECT column1, column2
+   FROM mytable
+   INNER JOIN another_table ON mytable.id=another_table.id
+   ...
+   ```
+   In order to demonstrate it better lets give a example with tha first table being the `Movies` and the second `boxoffice`|
+   
+   |id|title|year|
+   |--|-----|----|
+   |1| Intouchables| 2010|
+   |2| Burnt| 2014|
+   
+   |movie_id|rating|sale|
+   |--|---|---|
+   |1|9.5|500 million|
+   |2|6.9|1 million|
+   
+   If write the following code we can create a new table like the following :
+   ```sql 
+   SELECT *
+   FROM movies
+   INNER JOIN boxoffice ON movies.id = boxoffice.movie_id
+   ORDER BY id ASC;
+   ```
+   Creates this new table
+   
+   |id|title|year|ratings|sale|
+   |--|--|--|--|--|
+   |1|Intouchabels|2010|9.5|500million|
+   |2|Burnt|2014|6.9|1 million|
+   
+   There are many more join keywords open up the W3 docs for more SQL commands
+   
+ - Having NULL typed values for your data is bad practice and requires special attention try to avoid it as much as possible. A common way to get around nulls is using defaults values for each column. But NULL values can be appropriate if the default values will skew later analysis (for example, when taking averages of numerical data). You can use null values like the following in querying:
+   ```sql
+    SELECT column, another_column, …
+    FROM mytable
+    WHERE column IS/IS NOT NULL
+    AND/OR another_condition
+    AND/OR …;
+   ```
+   
+- There are many more functions for select as aggreagates and expressions refer to the w3 docs for more info
+
+### INSERT
