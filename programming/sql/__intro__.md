@@ -24,3 +24,21 @@
   SELECT *
   FROM my_table
   ```
+  
+- Now we know how to select for specific columns of data from a table, but if you had a table with a hundred million rows of data, reading through all the rows would be inefficient and perhaps even impossible. In order to filter certain results from being returned, we need to use a WHERE clause in the query. The clause is applied to each row of data by checking specific column values to determine whether it should be included in the results or not. 
+  ```sql
+  SELECT column, another_column ...
+  FROM my_table 
+  WHERE condition
+    AND/OR another_condition;
+  ```
+  You can nest as many `and` and `or`s in your where clause it is up to you to make the condition as complex as possible. (ie. num_wheels >= 4 AND doors <= 2 for the table we built above). The following table consists the most used conditions in sql language:
+  
+  |Operator|Condition|SQL Example|
+  |--------|---------|-----------|
+  |=, !=, <, <=, >, >=| Standart numerical operations| col_name =! 4|
+  
+  
+  
+
+
