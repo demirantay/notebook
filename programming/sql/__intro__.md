@@ -54,4 +54,30 @@
   WHERE wheels > 2; 
   ```
   
-- a
+- In the real-world unlike it is in these notes the data in the databases are added with no particular order or rules. So in order to select the data and view it efficently SQL provides us these are the following:
+  - `DISTINCT`: You can have copies of the same data added twice or more. In order to discard the duplicates you can do the following:
+    ```sql
+    SELECT DISTINCT column, another_column, …
+    FROM mytable
+    WHERE condition(s);
+    ```
+  The discard keyword removes any duplicates of the data, we will come back to these filtering keywords later on it is  just a getting acquinated at the moment.
+  - `ORDER BY`: In order to order our rows we can use this keyword with an aceding order or decending.
+    ```sql
+    SELECT column, another_columnt, ...
+    FROM mytable
+    WHERE condition(s)
+    ORDER BY column ASC/DESC;
+    ```
+  - `LIMIT` & `OFFSET` : These are the key for optimizing database results to return faster. Reddit, Pinterest .. etc. Front pages use these to get popular posts quickly. I will add this keywords notes later on...
+   
+  Lets give a example while using the filtering we have met above :
+  
+  ```sql
+  SELECT city, population FROM north_american_cities
+  WHERE country="Mexico"
+  ORDER BY population DESC
+  LIMIT 2;  
+  ```
+  
+  
