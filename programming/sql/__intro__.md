@@ -132,3 +132,37 @@
 - There are many more functions for select as aggreagates and expressions refer to the w3 docs for more info
 
 ### INSERT
+
+- We've spent quite a few lessons on how to query for data in a database, so it's time to start learning a bit about SQL schemas and how to add new data.
+
+- When inserting data into a database, we need to use an INSERT statement, which declares which table to write into, the columns of data that we are filling, and one or more rows of data to insert. In general, each row of data you insert should contain values for every corresponding column in the table. You can insert multiple rows at a time by just listing them sequentially.
+
+  ```sql
+  INSERT INTO mytable VALUES (value_or_expr, another_value_or_expr, …),
+                             (value_or_expr_2, another_value_or_expr_2, …),
+                              …;
+  ```
+  
+- In some cases, if you have incomplete data and the table contains columns that support default values, you can insert rows with only the columns of data you have by specifying them explicitly.
+  ```sql
+  INSERT INTO mytable (column, another_column, …)
+  VALUES (value_or_expr, another_value_or_expr, …),
+  ```
+  In these cases, the number of values need to match the number of columns specified. Despite this being a more verbose statement to write, inserting values this way has the benefit of being forward compatible. For example, if you add a new column to the table with a default value, no hardcoded  INSERT statements will have to change as a result to accommodate that change.
+  
+### UPDATE
+
+- In addition to adding new data, a common task is to update existing data, which can be done using an UPDATE statement. Similar to the INSERT statement, you have to specify exactly which table, columns, and rows to update. In addition, the data you are updating has to match the data type of the columns in the table schema.
+  ```sql 
+  UPDATE table_name
+  SET column1 = value1, column2 = value2, ...
+  WHERE condition;
+  ```
+  Lets give a real world example, assume that you have a table with customer names cities they live in and you want to change the first customer in the database :
+  ```sql
+  UPDATE Customers
+  SET ContactName = 'Alfred Schmidt', City= 'Frankfurt'
+  WHERE CustomerID = 1;
+  ```
+ 
+- Most people working with SQL will make mistakes updating data at one point or another. Whether it's updating the wrong set of rows in a production database, or accidentally leaving out the WHERE clause (which causes the update to apply to all rows), you need to be extra careful when constructing UPDATE statements.
