@@ -170,4 +170,81 @@
 ### DELETE
 
 - When you need to delete data from a table in the database, you can use a DELETE statement, which describes the table to act on, and the rows of the table to delete through the WHERE clause.
+  ```sql
+  DELETE FROM mytable
+  WHERE condition;
+  ```
+  If you decide to leave out the WHERE constraint, then all rows are removed, which is a quick and easy way to clear out a table completely (if intentional).
+  A real life example :
+  ```sql
+  DELETE FROM Customers
+  WHERE CustomerName='Alfreds Futterkiste' AND CustomerId=1;
+  ```
+  
+- Like the UPDATE statement from last lesson, it's recommended that you run the constraint in a  SELECT query first to ensure that you are removing the right rows. Without a proper backup or test database, it is downright easy to irrevocably remove data, so always read your DELETE statements twice and execute once.
+
+### CREATE TABLE
+
+- When you have new entities and relationships to store in your database, you can create a new database table using the CREATE TABLE statement.
+  ```sql
+  CREATE TABLE IF NOT EXISTS mytable (
+    columnName dataType columnConstraint DEFAULT defaultValue,
+    columnName dataType columnConstraint DEFAULT defaultValue,
+  );
+  ```
+
+- These are the data types for the columns:
+
+  |Data Type | Description|
+  |--|--|
+  |INTEGER, BOOLEAN| The integer datatypes can store whole integer values like the count of a number or an age. In some implementations, the boolean value is just represented as an integer value of just 0 or 1.|
+  | FLOAT, DOUBLE, REAL | The floating point datatypes can store more precise numerical data like measurements or fractional values. Different types can be used depending on the floating point precision required for that value.|
+  | CHARACTER(num_chars),  VARCHAR(num_chars), TEXT | The text based datatypes can store strings and text in all sorts of locales. The distinction between the various types generally amount to underlaying efficiency of the database when working with these columns. Both the CHARACTER and VARCHAR (variable character) types are specified with the max number of characters that they can store (longer values may be truncated), so can be more efficient to store and query with big tables.| 
+  | DATE, DATETIME | SQL can also store date and time stamps to keep track of time series and event data. They can be tricky to work with especially when manipulating data across timezones. | 
+  | BLOB | Finally, SQL can store binary data in blobs right in the database. These values are often opaque to the database, so you usually have to store them with the right metadata to requery them.|
+  
+  See more data types at the official documentation.
+  
+- These are the column constraints :
+
+  | Constraint | Description |
+  | -- | --|
+  | PRIMARY KEY | This means that the values in this column are unique, and each value can be used to identify a single row in this table.|
+  |AUTOINCREMENT| For integer values, this means that the value is automatically filled in and incremented with each row insertion. Not supported in all databases.|
+  |UNIQUE| This means that the values in this column have to be unique, so you can't insert another row with the same value in this column as another row in the table. Differs from the `PRIMARY KEY` in that it doesn't have to be a key for a row in the table.|
+  |NOT NULL|This means that the inserted value can not be `NULL`.|
+  | FOREIGN KEY | This is a consistency check which ensures that each value in this column corresponds to another value in a column in another table. For example, if there are two tables, one listing all Employees by ID, and another listing their payroll information, the `FOREIGN KEY` can ensure that every row in the payroll table corresponds to a valid employee in the master Employee list.|
+  
+  This is not a complete list refer to the official documentation for more constraints
+
+- Here is an example of a real world example:
+  ```sql
+  CREATE TABLE movies (
+    id INTEGER PRIMARY KEY,
+    title TEXT,
+    director TEXT,
+    year INTEGER, 
+    length_minutes INTEGER
+  );
+  ```
+  
+### ALTER TABLE
+
+- The syntax for adding a new column is similar to the syntax when creating new rows in the  CREATE TABLE statement. You need to specify the data type of the column along with any potential table constraints and default values to be applied to both existing and new rows
+  ```sql
+  ALTER TABLE mytable
+  ADD column DataType OptionalTableConstraint DEFAULT default_value;
+  ```
+  
+- If you need to rename the table itself, you can also do that using the RENAME TO clause of the statement.
+  ```sql
+  ALTER TABLE mytable
+  RENAME TO new_table_name;
+  ```
+  
+- Each RDBMS has their own way of `ALTER`ing existing tables so there is no standart it is best to check out their official docs.
+
+
+
+
 
