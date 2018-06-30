@@ -244,6 +244,18 @@
   
 - Each RDBMS has their own way of `ALTER`ing existing tables so there is no standart it is best to check out their official docs.
 
+### DROP TABLE
+
+- In some rare cases, you may want to remove an entire table including all of its data and metadata, and to do so, you can use the DROP TABLE statement, which differs from the DELETE statement in that it also removes the table schema from the database entirely.
+  ```sql
+  DROP TABLE IF EXISTS mytable;
+  ```
+  Before you drop make sure you have a valid reason since there is no going back
+  
+  In addition, if you have another table that is dependent on columns in table you are removing (for example, with a FOREIGN KEY dependency) then you will have to either update all dependent tables first to remove the dependent rows or to remove those tables entirely.
+
+...
+
 
 
 
