@@ -29,7 +29,7 @@
   testdb=# CREATE TABLE movies (Title TEXT, Year INTEGER);  
   ```
   
-- To view all of your tables you can use `\d`
+- To view all of your tables you can use `\d` and you view a specific table with the `\d table_name`. You can list all tables with additional info with `\d+` and as the same you can use `\d+ table_name`. You can also list all of your databases with `\l`. And quit from psql sheel with `\q` there are many more character encodings refer to the official docs.
   
 - Never ever never forget to backup your production database since if there is no backup and the data is deleted there is no coming back. , a backup is simply a full copy of your database schema and data, with restore being the ability to use that backed up data and load it into your database or another database.
   
