@@ -1,5 +1,7 @@
 ## Java
 
+### Printing
+
 - This is how you write the famous "Hello, World!"
   ```java
   System.out.println("Hello, World!");
@@ -42,6 +44,8 @@
   decimal_number = 3; // Works! :)
   ```
   
+### User Input
+  
 - You can get user *input* with the `Scanner` object. First you need to create the object and then you can simply use it for text and if you would like to read integers you simply need to parse it to `Integer(..)`
   ```java
   import java.util.Scanner;
@@ -60,6 +64,8 @@
     }
   }
   ```
+  
+### Conditional Statements
 
 - You cannot compare string to each other with `==` as you would normally do with integers however you need to use `.equals(..)`
   ```java
@@ -72,6 +78,7 @@
     System.out.println("They are NOT equal!");
   }
   ```
+### Loops
 
 - While, For and For Each loops logic is same and you can write each in the following way
   ```Java
@@ -245,4 +252,14 @@
   numbers[1] = 101;  // setting value 101 to index 1
 
   // the numbers array now looks like {1,101,42}
+  ```
+- The size of an array object can be found out by typing array.length into the code, notice that you don't use parentheses with this one. array.length() does not work!
+  ```java
+  int[] numbers = {1, 8, 10, 3, 5};
+
+  int i = 0;
+  while (i < numbers.length ) {
+      System.out.println(numbers[i]);
+      i++;
+  }
   ```
