@@ -2,6 +2,7 @@
 
 ## July
 
+- 2nd: Learned Vectors in precalculus
 - 1st: Started learning postgresql, and did more pre-calculus
 
 ## June 
