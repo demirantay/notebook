@@ -98,6 +98,8 @@
     // ...
   }
   ```
+  
+### Methods
 
 - You can write your own defined methods in the main.java file like this. If you give void method parameter to your self defined functions the function does not have to return anything. Yet, if you give anything other than void the function needs to return a value
   ```Java
@@ -128,6 +130,8 @@
   System.out.println(foo.length()) // prints 3
   System.out.println(foo.charAt(0)) // gets  `F`
   ```
+  
+### ArrayList
 
 - Once you have too many objects that are in the same context instead of creating too many variables it is more logical to use lists(Arrays) you can use many self defined functions for ArrayList's too see them all open the official docs there are many more useful methods such as `.sort(..)`, `.reverse(..)` etc.
   ```java
@@ -263,3 +267,24 @@
       i++;
   }
   ```
+
+- You can define the size of an array with the following code:
+  ```java
+  int[] array = new int[100];  // creates a `100 cell` sized array
+  ```
+  
+- Even though I said earlier that Arrays do not have as many native built in java libraries like the ArrayLists does it is not true. The lovely smart poeple who use java actually coded :
+  ```java
+  import java.util.Arrays;
+  ```
+  Library and it actually has much more stuff than arraylists. But arraylists are always more convienent to use. Example code from the library:
+  ```java
+  int[] values = {-3, -111, 7, 42};
+  Arrays.sort(values);
+  for(int value: values) {
+      System.out.println(value);
+  }
+  ```
+  
+  
+  
