@@ -4,7 +4,6 @@
   ```java
   System.out.println("Hello, World!");
   ```   
-<br/>
 
 - If you want to execute your java programs you need to compile them first since java is not a interpreted language
   ```bash
@@ -12,8 +11,6 @@
 
   $ java fileName  # Run the code
   ```
-
-<br/>
 
 - Every piece of code in java must be written inside classes. The class name is the file name and you must have at least one `public static void main(..){..} ` function since the    language needs a entry point for the program.
   ```java
@@ -23,7 +20,6 @@
      }
    }
    ```
-<br/>
 
 - You can define variables with their types as their prefix. For example if you would like to define a integer you need to define `int` as the prefix.
   ```java
@@ -35,8 +31,6 @@
   System.out.println("There are " + months + " in a year");
   ```
 
-<br/>
-
 - Except for few such as integer values to decimal variable data types are immutable
   ```java
   String text = "Foo";
@@ -47,9 +41,7 @@
   double decimal_number = 3.1415;
   decimal_number = 3; // Works! :)
   ```
-
-<br/>
-
+  
 - You can get user *input* with the `Scanner` object. First you need to create the object and then you can simply use it for text and if you would like to read integers you simply need to parse it to `Integer(..)`
   ```java
   import java.util.Scanner;
@@ -83,8 +75,6 @@
   }
   ```
 
-<br/>
-
 - While, For and For Each loops logic is same and you can write each in the following way
   ```Java
   // While
@@ -103,8 +93,6 @@
     // ...
   }
   ```
-
-<br/>
 
 - You can write your own defined methods in the main.java file like this. If you give void method parameter to your self defined functions the function does not have to return anything. Yet, if you give anything other than void the function needs to return a value
   ```Java
@@ -128,8 +116,6 @@
   }
   ```
 
-<br/>
-
 - You can get make various kind of functions on functions that comes shipped with java itself. Such as you can do `.length()` to get the lnegth or `.charAt()` th get the character. You can find many more such as index of, substring and other things in the documentation.
   ```java
   String foo = "Foo";
@@ -137,8 +123,6 @@
   System.out.println(foo.length()) // prints 3
   System.out.println(foo.charAt(0)) // gets  `F`
   ```
-
-<br/>
 
 - Once you have too many objects that are in the same context instead of creating too many variables it is more logical to use lists(Arrays) you can use many self defined functions for ArrayList's too see them all open the official docs there are many more useful methods such as `.sort(..)`, `.reverse(..)` etc.
   ```java
@@ -164,8 +148,6 @@
     }
   }
   ```
-
-<br/>
 
 - You can define objects very easily by their classes. Every data type is a object. You dont have to define primitive object(data) types like this because they already come shipped with java. Lets examine the `Scanner` object
   ```java
@@ -221,9 +203,6 @@
     }
   }
   ```
-
-  <br>
-
 - You can define multiple constructors in a object. It is used when we do not knowhow many parameters will the user give to the object instance when it is created for the first time, lets extend our `Person` class above :
   ```java
   public class Person {
@@ -249,7 +228,5 @@
     ...
   }
   ```
-
-<br/>
 
 - 
