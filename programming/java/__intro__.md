@@ -61,8 +61,6 @@
   }
   ```
 
-<br/>
-
 - You cannot compare string to each other with `==` as you would normally do with integers however you need to use `.equals(..)`
   ```java
   String text = "foo";
@@ -148,6 +146,8 @@
     }
   }
   ```
+  
+### Objects and Classes
 
 - You can define objects very easily by their classes. Every data type is a object. You dont have to define primitive object(data) types like this because they already come shipped with java. Lets examine the `Scanner` object
   ```java
@@ -229,4 +229,20 @@
   }
   ```
 
-- 
+### Arrays
+
+- You can create `Arrays` like the following in the snippet however be sure that Arrays and ArrayLists are not the same thing. Most of the time ArrayLists are better off because it comes shipped with built in functions like add, sort ..etc. and  Unlike with ArrayLists, the size of the array (the amount of cells in an array) cannot be changed, growing an array always requires creating a new array and copying the cells of the old array to the new one.
+  ```java
+  int[] integerNumberArray = {100, 1, 42};                                     
+  String[] characterStringArray = {"Matti P.", "Matti V."};
+  double[] floatingNumberArray = {1.20, 3.14, 100.0, 0.01};
+  ```
+  You can change the indexes of arrays like the following code :
+  ```java
+  int[] numbers = {100,1,42};
+
+  numbers[0] = 1;    // setting value 1 to index 0
+  numbers[1] = 101;  // setting value 101 to index 1
+
+  // the numbers array now looks like {1,101,42}
+  ```
