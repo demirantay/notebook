@@ -149,7 +149,7 @@ Don’t be the person who “never quite understood” something like recursion
  - [ ] Compiler
  - [ ] A Robot
  
- - [ ] Final: A operating system for tablets that are designed for programming
+ - [ ] Final: A operating system for tablets that are designed for programming (UI like from westworld series)
 
 
  ---
