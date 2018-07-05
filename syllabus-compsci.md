@@ -110,6 +110,26 @@ Don’t be the person who “never quite understood” something like recursion
 
  ---
  ---
+ 
+ ## Tablet Operating System
+ 
+ Try to build your knowledge up so that you can start building the tablet Operating system that is inspired from the westworld series. Try to go from top to down approach. Do not try to build everything atleast understand what it is and create a mini demo project if you are able to.
+ 
+
+ - [ ] Editor
+ - [ ] RogueLike
+ - [ ] A Robot
+ - [ ] Language
+ - [ ] Interpreter
+ - [ ] Compiler
+ - [ ] Virtual Machine Language / Translator
+ - [ ] Assembly
+ - [ ] Machine Language and how it connects with hardware
+ - [ ] Mini Operating System
+ - [ ] RDBMS databse
+ - [ ] Final: A operating system for tablets that are designed for programming (UI like from westworld series)
+ 
+ 
 
  ## Fully Developed Project
 
@@ -139,18 +159,6 @@ Don’t be the person who “never quite understood” something like recursion
 
   - [ ] Start earning money from what you code since you completed your fundemental basic education spend your time more wisely like contributing to big remote working friendly companies open source projects.
  - [ ] You can try to win [kaggle.com](https://www.kaggle.com/) prices since there are really good prices such as up to 1 million dollars
-
- Every programmer should at least create, at least once:
-
- - [ ] Operating System
- - [ ] Editor
- - [ ] Database
- - [ ] RogueLike
- - [ ] Interpreter
- - [ ] Compiler
- - [ ] A Robot
- 
- - [ ] Final: A operating system for tablets that are designed for programming (UI like from westworld series)
 
 
  ---
