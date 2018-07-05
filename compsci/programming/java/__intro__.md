@@ -43,9 +43,9 @@
   double decimal_number = 3.1415;
   decimal_number = 3; // Works! :)
   ```
-  
+
 ### User Input
-  
+
 - You can get user *input* with the `Scanner` object. First you need to create the object and then you can simply use it for text and if you would like to read integers you simply need to parse it to `Integer(..)`
   ```java
   import java.util.Scanner;
@@ -64,7 +64,7 @@
     }
   }
   ```
-  
+
 ### Conditional Statements
 
 - You cannot compare string to each other with `==` as you would normally do with integers however you need to use `.equals(..)`
@@ -98,7 +98,7 @@
     // ...
   }
   ```
-  
+
 ### Methods
 
 - You can write your own defined methods in the main.java file like this. If you give void method parameter to your self defined functions the function does not have to return anything. Yet, if you give anything other than void the function needs to return a value
@@ -130,7 +130,7 @@
   System.out.println(foo.length()) // prints 3
   System.out.println(foo.charAt(0)) // gets  `F`
   ```
-  
+
 ### ArrayList
 
 - Once you have too many objects that are in the same context instead of creating too many variables it is more logical to use lists(Arrays) you can use many self defined functions for ArrayList's too see them all open the official docs there are many more useful methods such as `.sort(..)`, `.reverse(..)` etc.
@@ -157,7 +157,7 @@
     }
   }
   ```
-  
+
 ### Objects and Classes
 
 - You can define objects very easily by their classes. Every data type is a object. You dont have to define primitive object(data) types like this because they already come shipped with java. Lets examine the `Scanner` object
@@ -272,7 +272,7 @@
   ```java
   int[] array = new int[100];  // creates a `100 cell` sized array
   ```
-  
+
 - Even though I said earlier that Arrays do not have as many native built in java libraries like the ArrayLists does it is not true. The lovely smart poeple who use java actually coded :
   ```java
   import java.util.Arrays;
@@ -285,6 +285,6 @@
       System.out.println(value);
   }
   ```
-  
-  
-  
+
+
+Left it at week 7 on helsinki moocs ... will come back later.
