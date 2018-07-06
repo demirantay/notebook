@@ -27,3 +27,12 @@
     return 0;
   }
   ```
+
+- for future notes:
+%d - int (same as %i)
+%ld - long int (same as %li)
+%f - float
+%lf - double[1]
+%c - char
+%s - string
+%x - hexadecimal
