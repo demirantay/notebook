@@ -92,6 +92,7 @@ Don’t be the person who “never quite understood” something like recursion
 
  ### Other Pet/Advanced Topics
 
+ - [ ] Course : [Game Developement](https://www.edx.org/course/cs50s-introduction-to-game-development)
  - [ ] Course : [Software Debugging](om/course/software-debugging--cs259)
  - [ ] Course : [Software Testing](https://www.udacity.com/course/software-testing--cs258)
  - [ ] Course : [Software Architecture & Design](https://www.udacity.com/course/software-architecture-design--ud821)
