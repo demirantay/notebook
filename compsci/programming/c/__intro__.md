@@ -27,12 +27,78 @@
     return 0;
   }
   ```
-
+  
 - for future notes:
-%d - int (same as %i)
-%ld - long int (same as %li)
-%f - float
-%lf - double[1]
-%c - char
-%s - string
-%x - hexadecimal
+  %d - int (same as %i)
+  %ld - long int (same as %li)
+  %f - float
+  %lf - double[1]
+  %c - char
+  %s - string
+  %x - hexadecimal
+
+### User Input
+
+- foo
+
+### Conditional Statements
+
+- foo
+
+### Loops
+
+- foo
+
+### Methods
+
+- foo
+
+### Array
+
+- foo
+
+### Program Organization
+
+- foo
+
+### Pointers
+
+- foo
+
+### Pointers and Arrays
+
+- foo
+
+### Strings
+
+- foo
+
+### The Preprocessor
+
+- foo
+
+### Writing Large Programs
+
+- foo
+
+### Structures, Unions and Enumarations
+
+-foo
+
+### Advanced uses of Pointers
+
+- foo
+
+### Declaration
+
+- foo
+
+### Program Design
+
+- foo
+
+### Low level programming
+
+- foo
+
+
