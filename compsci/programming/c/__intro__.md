@@ -41,6 +41,14 @@
 
 - foo
 
+### Expressions
+
+- foo
+
+### Selection Statements
+
+- foo
+
 ### Conditional Statements
 
 - foo
@@ -49,13 +57,18 @@
 
 - foo
 
+### Basic Types
+
+- foo
+
+### Arrays
+
+- foo
+
 ### Methods
 
 - foo
 
-### Array
-
-- foo
 
 ### Program Organization
 
