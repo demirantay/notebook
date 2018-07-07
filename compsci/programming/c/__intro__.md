@@ -6,6 +6,7 @@
   ```c
   printf("Hello, World!\n");
   ```
+  
 - There are many ways to compile your c programs to exes :
   ```bash
   $ clang filename.c              # creates `a.out` exe
@@ -18,6 +19,7 @@
   ```bash
   $ ./filename
   ```
+  
 - Every C program should have a `main` function as its entry point to the program you can simpy write it as:
   ```c
   #include <stdio.h>
@@ -27,16 +29,32 @@
     return 0;
   }
   ```
-  
-- for future notes:
-  %d - int (same as %i)
-  %ld - long int (same as %li)
-  %f - float
-  %lf - double[1]
-  %c - char
-  %s - string
-  %x - hexadecimal
 
+- You can define variables with their types as their prefix. For example if you would like to define a integer you need to define `int` as the prefix:
+  ```c
+  int foo = 12;
+  long int foo = 12;   // has more bits
+  float foo = 3.145;
+  double foo = 3.145;  // has more bits
+  
+  char foo = 'y';      // single chars get single quotes
+  char[] foo = "foo";  // multiple chars get multiple quotes
+                       // strings are arrays of characters
+  ```
+  If you want to use your variables in a string while printing you shold use `%*` method for putting variables into strings:
+  ```c
+  int foo = 12;
+  printf("foo is : %d", foo);
+  ```
+  There are many `%*` signs for many data types most commonly used are the following:
+  - %d - int (same as %i)
+  - %ld - long int (same as %li)
+  - %f - float
+  - %lf - double[1]
+  - %c - char
+  - %s - string
+  - %x - hexadecimal
+ 
 ### User Input
 
 - foo
