@@ -77,15 +77,17 @@
 
 ### Conditional Statements
 
-- Writing conditional statements are the same like everyother c based language ( and : `&&`, or: `||`). However when you compare strings you cannot simply do `==` or `!=` like java you need to use `strcmp` (string compare) that comes shipped with the standart library and **remember** there is no true or false keywords in c, `0` is false and anythin other than `0` is true
+- Writing conditional statements are the same like everyother c based language ( and : `&&`, or: `||`). However when you compare strings you cannot simply do `==` or `!=` like java you need to use `strcmp` (string compare) that comes shipped with the standart library and **remember** there is no true or false keywords in c. 
+
+`strcmp(x, y)` returns 0 if x and y are same or returns a -negative number if x is smaller or +greater if x is bigger.
   ```c
   char foo[40];
   char bar[40];
   
-  if (strcmp(foo, bar) != 0) {
+  if (strcmp(foo, bar) == 0) {
     printf("foo and bar is same\n");
   }
-  else if (strcmp(foo, bar) == 0) {
+  else if (strcmp(foo, bar) != 0) {
     printf("foo and bar is NOT same\n");
   }
   else {
