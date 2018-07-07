@@ -57,7 +57,15 @@
  
 ### User Input
 
-- foo
+- You can get input from the user with `scanf(%*)`. You need to specify what data type you want to get and you will assign them to the variable with the `&*` sign (this is about pointers not covered yet just go along with it):
+  ```c
+  int foo;
+  
+  printf("Type a number: ");
+  scanf("%d", &foo);
+  
+  printf("Foo: %d \n", foo);  // prints the value of foo
+  ```
 
 ### Expressions
 
@@ -69,7 +77,21 @@
 
 ### Conditional Statements
 
-- foo
+- Writing conditional statements are the same like everyother c based language ( and : `&&`, or: `||`):
+  ```c
+  int bar = 10;
+  int foo = 20;
+  
+  if (foo < bar) {
+    printf("bar is bigger than foo\n");
+  }
+  else if (foo > bar) {
+    printf("foo is bigger than bar\n");
+  }
+  else {
+    printf("bar and foo are same\n");
+  }
+  ```
 
 ### Loops
 
