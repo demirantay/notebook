@@ -130,7 +130,10 @@ Don’t be the person who “never quite understood” something like recursion
  - [ ] RDBMS databse
  - [ ] Final: A operating system for tablets that are designed for programming (UI like from westworld series)
  
+ There is a person [creating a full hardware and os from scartch](https://github.com/pervognsen/bitwise) it may be useful
  
+ ---
+ ---
 
  ## Fully Developed Project
 
