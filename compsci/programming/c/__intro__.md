@@ -57,7 +57,7 @@
  
 ### User Input
 
-- You can get input from the user with `scanf(%*)`. You need to specify what data type you want to get and you will assign them to the variable with the `&*` sign (this is about pointers not covered yet just go along with it):
+- You can get input from the user with `scanf(%*)`. You need to specify what data type you want to get and you will assign them to the variable with the `&*` sign (this is about pointers not covered yet just go along with it) (you can use `fgets(input)` too but I have never tried it):
   ```c
   int foo;
   
@@ -77,21 +77,22 @@
 
 ### Conditional Statements
 
-- Writing conditional statements are the same like everyother c based language ( and : `&&`, or: `||`):
+- Writing conditional statements are the same like everyother c based language ( and : `&&`, or: `||`). However when you compare strings you cannot simply do `==` or `!=` like java you need to use `strcmp` (string compare) that comes shipped with the standart library and **remember** there is no true or false keywords in c, `0` is false and anythin other than `0` is true
   ```c
-  int bar = 10;
-  int foo = 20;
+  char foo[40];
+  char bar[40];
   
-  if (foo < bar) {
-    printf("bar is bigger than foo\n");
+  if (strcmp(foo, bar) != 0) {
+    printf("foo and bar is same\n");
   }
-  else if (foo > bar) {
-    printf("foo is bigger than bar\n");
+  else if (strcmp(foo, bar) == 0) {
+    printf("foo and bar is NOT same\n");
   }
   else {
-    printf("bar and foo are same\n");
+    printf("something is up\n");
   }
   ```
+  
 
 ### Loops
 
