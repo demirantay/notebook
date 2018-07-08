@@ -15,10 +15,13 @@
   
   $ make filename                 # creates `filename` exe
   ```
+  *Note: Most of the C programmers use the `gcc` compiler if you want to use it simply change clang to gcc`
   In order to run them you can simply use:
   ```bash
   $ ./filename
   ```
+  
+  
   
 - Every C program should have a `main` function as its entry point to the program you can simpy write it as:
   ```c
