@@ -190,14 +190,14 @@ Don’t be the person who “never quite understood” something like recursion
  ### Front End
  This may seem basic since in the core there are only three technologies how ever what is really hard is that not everyone has the eye for killer design skills.
 
- - [X] Learn : HTML
- - [X] HTML : Clone a template content
- - [X] Learn : CSS
+ - [ ] Learn : HTML
+ - [ ] HTML : Clone a template content
+ - [ ] Learn : CSS
  - [ ] CSS : Learn how to use 'grid' and 'flexbox'
  - [ ] CSS : Learn Media Queries and Responsive Design
- - [X] CSS : Style the template you made above
- - [X] Learn : JavaScript
- - [X] JS : Learn the DOM api and how to manipulate it
+ - [ ] CSS : Style the template you made above
+ - [ ] Learn : JavaScript
+ - [ ] JS : Learn the DOM api and how to manipulate it
  - [ ] JS : finish YDKJS books for understanding hoisting, bubling ... etc.
  - [ ] JS : Learn Ajax(XHR)
  - [ ] JS : Learn ES6 and writing modular javascript
@@ -205,7 +205,7 @@ Don’t be the person who “never quite understood” something like recursion
  - [ ] Project : Make a fine Responsive website with interactivity with javascript
  - [ ] JS : Pick a package manager and learn it, either `npm` or `yarn`
  - [ ] CSS : Learn SASS a css proprecessor that lets you do things css can't do it by it self
- - [X] CSS : Learn BootStrap a framework for responive design
+ - [ ] CSS : Learn BootStrap a framework for responive design
  - [ ] CSS : Learn BEM, a css architecture to stucture your css code
  - [ ] Learn : Build tools in this order, 1: NPM scripts, 2: ESLint, 3:Webpack
  - [ ] Project : Create a library and publish it on npm and github
@@ -228,7 +228,7 @@ Don’t be the person who “never quite understood” something like recursion
  - [X] Projeect: Make and Distribute some package / Library.
  - [X] Learn: Learn about testing. There are several ways to write tests such as unit , integration ..etc. Tests are very important do not skim through articles. Learn how to calculate test covarege.
  - [X] Project: Write tests for your package built above.
- - [ ] Learn Relational Databases there are many options but pick either PostgreSQL or MySQL
+ - [X] Learn Relational Databases there are many options but pick either PostgreSQL or MySQL
  - [ ] ProjectCreate a simple CRUD web applciation like a blog or something using everything you have learnt this far. It should have a registration, adminpanel, posts ...etc. You can use [Werkzeug](http://werkzeug.pocoo.org/) for building your site.
  - [X] Learn: a Framework e.g. Django, Flask
  - [ ] Project: Make the application you made above with the framework you chose.
