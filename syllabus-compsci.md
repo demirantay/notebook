@@ -136,6 +136,8 @@ Don’t be the person who “never quite understood” something like recursion
  ---
 
  ## Fully Developed Project
+ 
+ > Archived for now untill I get really good at software engineering
 
  You should maintain one big application instead of writing new clones everyday.
 
