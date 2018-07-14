@@ -272,6 +272,12 @@ DevOps is something very complex instead of having a one strict route you cna ca
 - [ ] Learn: TLS, STARTLS, SSL, HTTTPS, SCP, SSH, SFTP
 - [ ] Learn: Postmortem analysis when something bad happens.
 
+### Low Level Programming
+
+You do not necessarily have to be the best low level programmer of all time but it is one of the most fun but least job prosperity holding field of computer science. This is the fun part do it if you want to:
+
+- [ ] Guide : [Read the guide update here later](https://github.com/gurugio/lowlevelprogramming-university)
+
 
 ### Visual Road Map
 
