@@ -72,7 +72,7 @@ Don’t be the person who “never quite understood” something like recursion
    - [ ] Course : [Stanford Course](https://lagunita.stanford.edu/courses/DB/2014/SelfPaced/about) -- Take all mini courses
    - [ ] Project idea: Write a simple relational database management system from scratch.
 
-   ### Languages and Compilers
+ ### Languages and Compilers
 
    If you understand how languages and compilers actually work, you’ll write better code and learn new languages more easily
 
@@ -129,8 +129,9 @@ Don’t be the person who “never quite understood” something like recursion
  - [ ] RDBMS databse
  - [ ] Final: A operating system for tablets that are designed for programming (UI like from westworld series)
  
- Good [OS dev source](https://wiki.osdev.org/Main_Page) definetly needs checking out
- There is a person [creating a full hardware and os from scartch](https://github.com/pervognsen/bitwise) it may be useful
+ - Best [OS dev source Wiki](https://wiki.osdev.org/Main_Page) definetly needs checking out
+ - There is a person [creating a full hardware and os from scartch](https://github.com/pervognsen/bitwise) it may be useful
+ - Roadmap for [OS sections](https://github.com/ghaiklor/ghaiklor-os-gcc)
  
  ---
  ---
