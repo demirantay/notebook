@@ -101,7 +101,16 @@
 
 ### Loops
 
-- foo
+- The loops written samely lets see the foor loop first:
+  ```c
+  for (int i = 0; i < 10; i++) {
+    // code
+  }
+  ```
+  Lets examine while loops:
+  ```c
+  
+  ```
 
 ### Basic Types
 
