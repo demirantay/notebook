@@ -109,7 +109,11 @@
   ```
   Lets examine while loops:
   ```c
-  
+  int i = 0;
+  int j = 10;
+  wihle (i <= 10) {
+    // code
+  }
   ```
 
 ### Basic Types
