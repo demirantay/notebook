@@ -21,8 +21,6 @@
   $ ./filename
   ```
   
-  
-  
 - Every C program should have a `main` function as its entry point to the program you can simpy write it as:
   ```c
   #include <stdio.h>
@@ -109,9 +107,7 @@
   ```
   Lets examine while loops:
   ```c
-  int i = 0;
-  int j = 10;
-  wihle (i <= 10) {
+  while (1 > 0) {
     // code
   }
   ```
@@ -126,7 +122,24 @@
 
 ### Methods
 
-- foo
+- Defining methods are easy for some of the types and maybe a little bit more complex for other things such as stringslets first view a `void` typed function with no parameters:
+  ```c
+  void print_foo() {
+    printf("fooo\n");
+  }
+  ```
+  If you do not want to write the `main` function at the bottom of the page since it is bad design you can simply `include` your method at the top of the page without a content block like this:
+  ```c
+  void foo();
+  
+  int main(void) {
+    foo();
+  }
+  
+  void foo() {
+    printf("foo\n");
+  }
+  ```
 
 
 ### Program Organization
