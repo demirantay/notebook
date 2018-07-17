@@ -134,6 +134,7 @@ Don’t be the person who “never quite understood” something like recursion
  - Roadmap for [OS sections](https://github.com/ghaiklor/ghaiklor-os-gcc)
  - [Low Level Programming University](https://github.com/gurugio/lowlevelprogramming-university)
  - [Rasberry PI OS](https://github.com/s-matyukevich/raspberry-pi-os)
+ - [OS Tutorial](https://github.com/cfenollosa/os-tutorial)
  
  ---
  ---
