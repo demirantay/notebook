@@ -126,7 +126,7 @@ Don’t be the person who “never quite understood” something like recursion
  - [ ] Assembly
  - [ ] Machine Language and how it connects with hardware
  - [ ] Mini Operating System
- - [ ] RDBMS databse
+ - [ ] A Web Browser
  - [ ] Final: A operating system for tablets that are designed for programming (UI like from westworld series)
  
  - Best [OS dev source Wiki](https://wiki.osdev.org/Main_Page) definetly needs checking out
