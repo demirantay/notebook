@@ -233,9 +233,9 @@ Don’t be the person who “never quite understood” something like recursion
  - [X] Learn: Learn about testing. There are several ways to write tests such as unit , integration ..etc. Tests are very important do not skim through articles. Learn how to calculate test covarege.
  - [X] Project: Write tests for your package built above.
  - [X] Learn Relational Databases there are many options but pick either PostgreSQL or MySQL
- - [ ] ProjectCreate a simple CRUD web applciation like a blog or something using everything you have learnt this far. It should have a registration, adminpanel, posts ...etc. You can use [Werkzeug](http://werkzeug.pocoo.org/) for building your site.
+ - [ ] ProjectCreate a simple CRUD web applciation like a blog or something using everything you have learnt this far. It should have a registration, adminpanel, posts ...etc.
  - [X] Learn: a Framework e.g. Django, Flask
- - [ ] Project: Make the application you made above with the framework you chose.
+ - [X] Project: Make the application you made above with the framework you chose.
  - [ ] Learn: a noSQL database you do not have to use it but understand how it is different from relational databases and why they are needed. MongoDB is a solid choice.
  - [ ] Learn: Caching, learn how to implenet app level caching using Redis or Memcached
  - [ ] Project: Implement caching to the application you have built above.
@@ -246,7 +246,8 @@ Don’t be the person who “never quite understood” something like recursion
  - [ ] Learn: How to use Docker
  - [ ] Learn: Knowledge of Web Servers, There are several different options look at the differnt options understand differneces and limitations. Apache, Nginx .. etc.
  - [ ] Learn: how to use Web Sockets.
- - [ ] Project: Make a very big application for learning and build it from scratch with even building your own server and using web sockets to accsess it. Or you can simply build a web framework built on top of wsgi or something else.
+ - [ ] Project: Make sometinhg using web sockets.
+ - [ ] Project: Createa micro web framework like django or flask you should check out WSGI and other stuff ...
  - [ ] Learn: GraphQL, this is not required and optional feel free to have a loot and what it is all about and why they are calling it the new REST
  - [ ] Learn: Again option, look into Graph Databases, at least you can have a little udnerstanding of what they are.
  - [ ] We have a lot more stuff like Profiling, Static Analysis, DDD SOAP, etc. Go on your journey now!
