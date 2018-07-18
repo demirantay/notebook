@@ -6,13 +6,13 @@
   ```c
   printf("Hello, World!\n");
   ```
-  
+
 - There are many ways to compile your c programs to exes :
   ```bash
   $ clang filename.c              # creates `a.out` exe
-  
-  $ clang -o filename filename.c  # creates `filename` exe 
-  
+
+  $ clang -o filename filename.c  # creates `filename` exe
+
   $ make filename                 # creates `filename` exe
   ```
   *Note: Most of the C programmers use the `gcc` compiler if you want to use it simply change clang to gcc`
@@ -20,11 +20,11 @@
   ```bash
   $ ./filename
   ```
-  
+
 - Every C program should have a `main` function as its entry point to the program you can simpy write it as:
   ```c
   #include <stdio.h>
-  
+
   int main(void) {
     printf("Hello, World!\n");
     return 0;
@@ -37,7 +37,7 @@
   long int foo = 12;   // has more bits
   float foo = 3.145;
   double foo = 3.145;  // has more bits
-  
+
   char foo = 'y';      // single chars get single quotes
   char[] foo = "foo";  // multiple chars get multiple quotes
                        // strings are arrays of characters
@@ -50,21 +50,21 @@
   There are many `%*` signs for many data types most commonly used are the following:
   - %d - int (same as %i)
   - %ld - long int (same as %li)
-  - %f - float
+  - %f - float (you can use %.2f if you want to see 2 the floating points after the decimal)
   - %lf - double[1]
   - %c - char
   - %s - string
   - %x - hexadecimal
- 
+
 ### User Input
 
 - You can get input from the user with `scanf(%*)`. You need to specify what data type you want to get and you will assign them to the variable with the `&*` sign (this is about pointers not covered yet just go along with it) (you can use `fgets(input)` too but I have never tried it):
   ```c
   int foo;
-  
+
   printf("Type a number: ");
   scanf("%d", &foo);
-  
+
   printf("Foo: %d \n", foo);  // prints the value of foo
   ```
 
@@ -78,13 +78,13 @@
 
 ### Conditional Statements
 
-- Writing conditional statements are the same like everyother c based language ( and : `&&`, or: `||`). However when you compare strings you cannot simply do `==` or `!=` like java you need to use `strcmp` (string compare) that comes shipped with the standart library and **remember** there is no true or false keywords in c. 
+- Writing conditional statements are the same like everyother c based language ( and : `&&`, or: `||`). However when you compare strings you cannot simply do `==` or `!=` like java you need to use `strcmp` (string compare) that comes shipped with the standart library and **remember** there is no true or false keywords in c.
 
 `strcmp(x, y)` returns 0 if x and y are same or returns a -negative number if x is smaller or +greater if x is bigger.
   ```c
   char foo[40];
   char bar[40];
-  
+
   if (strcmp(foo, bar) == 0) {
     printf("foo and bar is same\n");
   }
@@ -95,7 +95,7 @@
     printf("something is up\n");
   }
   ```
-  
+
 
 ### Loops
 
@@ -131,11 +131,11 @@
   If you do not want to write the `main` function at the bottom of the page since it is bad design you can simply `include` your method at the top of the page without a content block like this:
   ```c
   void foo();
-  
+
   int main(void) {
     foo();
   }
-  
+
   void foo() {
     printf("foo\n");
   }
@@ -185,5 +185,3 @@
 ### Low level programming
 
 - foo
-
-
