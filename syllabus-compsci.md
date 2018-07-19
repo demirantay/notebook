@@ -119,8 +119,9 @@ Don’t be the person who “never quite understood” something like recursion
  - [ ] Editor
  - [ ] RogueLike
  - [ ] A Robot
- - [ ] Language
+ - [ ] Language -- interpreted
  - [ ] Interpreter
+ - [ ] Language -- compiled
  - [ ] Compiler
  - [ ] Virtual Machine Language / Translator
  - [ ] Assembly
