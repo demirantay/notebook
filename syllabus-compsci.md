@@ -116,14 +116,6 @@ Don’t be the person who “never quite understood” something like recursion
  Try to build your knowledge up so that you can start building the tablet Operating system that is inspired from the westworld series. Try to go from top to down approach. Do not try to build everything atleast understand what it is and create a mini demo project if you are able to.
  
 
- - [ ] Editor
- - [ ] RogueLike
- - [ ] A Robot
- - [ ] Language -- interpreted
- - [ ] Interpreter
- - [ ] Language -- compiled
- - [ ] Compiler
- - [ ] Virtual Machine Language / Translator
  - [ ] Assembly
  - [ ] Machine Language and how it connects with hardware
  - [ ] Mini Operating System
@@ -137,12 +129,19 @@ Don’t be the person who “never quite understood” something like recursion
  - [Rasberry PI OS](https://github.com/s-matyukevich/raspberry-pi-os)
  - [OS Tutorial](https://github.com/cfenollosa/os-tutorial)
  
+ ### Web dev
+ 
+ - [ ] Internet browser
+ - [ ] Server
+ - and so on about the low level parts about web
+ 
+ 
  ---
  ---
 
  ## Fully Developed Project
 
- You should maintain one big application instead of writing new clones everyday.
+ You should maintain one big application instead of writing new clones everyday
 
 - [X] Project : Start maintaining and commiting your time to `Spotlight`
   - [ ] See Medium if there is useful mechanism that can help you with the 'spot' image and file uplloading to the posts.
@@ -280,9 +279,15 @@ DevOps is something very complex instead of having a one strict route you cna ca
 
 ### Low Level Programming
 
-You do not necessarily have to be the best low level programmer of all time but it is one of the most fun but least job prosperity holding field of computer science. This is the fun part do it if you want to:
-
-- [ ] Guide : [Read the guide update here later](https://github.com/gurugio/lowlevelprogramming-university)
+Every developer should code once:
+ - [ ] Editor
+ - [ ] RogueLike
+ - [ ] A Robot
+ - [ ] Language -- interpreted
+ - [ ] Interpreter
+ - [ ] Language -- compiled
+ - [ ] Compiler
+ - [ ] Virtual Machine Language / Translator
 
 
 ### Visual Road Map
