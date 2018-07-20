@@ -132,7 +132,10 @@ Don’t be the person who “never quite understood” something like recursion
  ### Web dev
  
  - [ ] Internet browser
- - [ ] Server
+ - [ ] Deploy browser
+ - [ ] Build a Server
+ - [ ] Backup a server
+ - [ ] Deploy a server
  - and so on about the low level parts about web
  
  
