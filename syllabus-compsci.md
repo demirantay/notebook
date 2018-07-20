@@ -118,6 +118,7 @@ Don’t be the person who “never quite understood” something like recursion
  - [ ] C language -- learn it fully
  - [ ] Assembly   -- try to understand it but do not skim through it 
  - [ ] Compiler   -- you will build a gcc compiler as a intro to osdev in wiki
+ - [ ] Build something similiar to MS-DOS (one of the simplest operating systems)
  - [ ] Mini Toy Operating System for learning tutorials and so on do not be hesistant to fail at least it is on qemu...
  - [ ] Final: A operating system for tablets that are designed for programming (UI like from westworld series)
  
@@ -168,12 +169,12 @@ Don’t be the person who “never quite understood” something like recursion
  These are the basic and essential skills that every developer shoould have it under their belt in todays market. Try to practice what you learn.
 
  - [X] Git - Version Control
- - [ ] SSH
+ - [X] SSH -- skimmed through it since it is more cryptography than webdev
  - [ ] HTTP/HTTPS
  - [X] API's
  - [X] Basic Terminal Usage
- - [ ] Learn to research
- - [ ] Data Structures and Algorithms
+ - [X] Learn to research
+ - [X] Data Structures and Algorithms -- skipped since I will learn it in compsci at top
  - [ ] Character encodings
  - [ ] Design Patterns
  - [X] GitHub for public repos, GitLab for private
