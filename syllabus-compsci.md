@@ -224,17 +224,17 @@ Don’t be the person who “never quite understood” something like recursion
  - [X] ProjectCreate a simple CRUD web applciation like a blog or something using everything you have learnt this far. It should have a registration, adminpanel, posts ...etc.
  - [X] Learn: a Framework e.g. Django, Flask
  - [X] Project: Make the application you made above with the framework you chose.
-  - [ ] See Medium if there is useful mechanism that can help you with the 'spot' image and file uplloading to the posts.
-  - [ ] See Reddit if there is useful mechanism that can help you with the 'spot's user groupings and sub channels
-  - [ ] See Netflix if ther eis usefl mechanism that you can help with your file uploading to spot
-  - [ ] See Slack if there is ueful mechanism that can help you with the spots chatting system.
-  - [ ] See duolingo if there are useful mechanism that can help with spot
-  - [ ] See Facebook for useful features that you might have missed since there a lot in facebook notifications, etc.
-  - [ ] Definietly check github/gitlab features like analytics .. etc.
-  - [ ] Check work management web applicaitons for competition and ideas
-  - [ ] Definetly check Jira for features like to dos, analytics, deadlines .etc.
-- [ ] Project: Create bots to create content. In oder to do that you need to learn how to create a API for hobio
-- [ ] Project: Learn how to deal with the PaaS, IaaS host services for your projects 'hobio' in this instance.
+   - [ ] See Medium if there is useful mechanism that can help you with the 'spot' image and file uplloading to the posts.
+   - [ ] See Reddit if there is useful mechanism that can help you with the 'spot's user groupings and sub channels
+   - [ ] See Netflix if ther eis usefl mechanism that you can help with your file uploading to spot
+   - [ ] See Slack if there is ueful mechanism that can help you with the spots chatting system.
+   - [ ] See duolingo if there are useful mechanism that can help with spot
+   - [ ] See Facebook for useful features that you might have missed since there a lot in facebook notifications, etc.
+   - [ ] Definietly check github/gitlab features like analytics .. etc.
+   - [ ] Check work management web applicaitons for competition and ideas
+   - [ ] Definetly check Jira for features like to dos, analytics, deadlines .etc.
+   - [ ] Project: Create bots to create content. In oder to do that you need to learn how to create a API for hobio
+   - [ ] Project: Learn how to deal with the PaaS, IaaS host services for your projects 'hobio' in this instance.
  - [ ] Learn: a noSQL database you do not have to use it but understand how it is different from relational databases and why they are needed. MongoDB is a solid choice.
  - [ ] Learn: Caching, learn how to implenet app level caching using Redis or Memcached
  - [ ] Project: Implement caching to the application you have built above.
