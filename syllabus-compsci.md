@@ -129,7 +129,13 @@ Don’t be the person who “never quite understood” something like recursion
  - [Rasberry PI OS](https://github.com/s-matyukevich/raspberry-pi-os)
  - [OS Tutorial](https://github.com/cfenollosa/os-tutorial)
  
- ### Web dev
+
+ 
+ 
+ ---
+ ---
+
+ ### Web dev project
  
  - [ ] Internet browser
  - [ ] Deploy browser
@@ -137,28 +143,7 @@ Don’t be the person who “never quite understood” something like recursion
  - [ ] Backup a server
  - [ ] Deploy a server
  - and so on about the low level parts about web
- 
- 
- ---
- ---
-
- ## Fully Developed Project
-
- You should maintain one big application instead of writing new clones everyday
-
-- [X] Project : Start maintaining and commiting your time to `Spotlight`
-  - [ ] See Medium if there is useful mechanism that can help you with the 'spot' image and file uplloading to the posts.
-  - [ ] See Reddit if there is useful mechanism that can help you with the 'spot's user groupings and sub channels
-  - [ ] See Netflix if ther eis usefl mechanism that you can help with your file uploading to spot
-  - [ ] See Slack if there is ueful mechanism that can help you with the spots chatting system.
-  - [ ] See duolingo if there are useful mechanism that can help with spot
-  - [ ] See Facebook for useful features that you might have missed since there a lot in facebook notifications, etc.
-  - [ ] Definietly check github/gitlab features like analytics .. etc.
-  - [ ] Check work management web applicaitons for competition and ideas
-  - [ ] Definetly check Jira for features like to dos, analytics, deadlines .etc.
-- [ ] Project: Create bots to create content. In oder to do that you need to learn how to create a API for hobio
-- [ ] Project: Learn how to deal with the PaaS, IaaS host services for your projects 'hobio' in this instance.
-- [ ] Project: Keep maintaining Spotligth it will be never done it is your open source commitment from now on.
+- [ ] Project: Keep maintaining a web project it will be never done it is your open source commitment from now on.
 - [ ] Project: Update your Portfolio highlighting your best work. Make it professional you can get insparation from hipolabs.com they illustrate a very good example of freelanceers website
 - [ ] Project: Finish any questions you have remaining from Python Interview Prep
 - [ ] Project: Create and polish your Resume/CV.
@@ -236,9 +221,20 @@ Don’t be the person who “never quite understood” something like recursion
  - [X] Learn: Learn about testing. There are several ways to write tests such as unit , integration ..etc. Tests are very important do not skim through articles. Learn how to calculate test covarege.
  - [X] Project: Write tests for your package built above.
  - [X] Learn Relational Databases there are many options but pick either PostgreSQL or MySQL
- - [ ] ProjectCreate a simple CRUD web applciation like a blog or something using everything you have learnt this far. It should have a registration, adminpanel, posts ...etc.
+ - [X] ProjectCreate a simple CRUD web applciation like a blog or something using everything you have learnt this far. It should have a registration, adminpanel, posts ...etc.
  - [X] Learn: a Framework e.g. Django, Flask
  - [X] Project: Make the application you made above with the framework you chose.
+  - [ ] See Medium if there is useful mechanism that can help you with the 'spot' image and file uplloading to the posts.
+  - [ ] See Reddit if there is useful mechanism that can help you with the 'spot's user groupings and sub channels
+  - [ ] See Netflix if ther eis usefl mechanism that you can help with your file uploading to spot
+  - [ ] See Slack if there is ueful mechanism that can help you with the spots chatting system.
+  - [ ] See duolingo if there are useful mechanism that can help with spot
+  - [ ] See Facebook for useful features that you might have missed since there a lot in facebook notifications, etc.
+  - [ ] Definietly check github/gitlab features like analytics .. etc.
+  - [ ] Check work management web applicaitons for competition and ideas
+  - [ ] Definetly check Jira for features like to dos, analytics, deadlines .etc.
+- [ ] Project: Create bots to create content. In oder to do that you need to learn how to create a API for hobio
+- [ ] Project: Learn how to deal with the PaaS, IaaS host services for your projects 'hobio' in this instance.
  - [ ] Learn: a noSQL database you do not have to use it but understand how it is different from relational databases and why they are needed. MongoDB is a solid choice.
  - [ ] Learn: Caching, learn how to implenet app level caching using Redis or Memcached
  - [ ] Project: Implement caching to the application you have built above.
