@@ -169,22 +169,21 @@ Don’t be the person who “never quite understood” something like recursion
  These are the basic and essential skills that every developer shoould have it under their belt in todays market. Try to practice what you learn.
 
  - [X] Git - Version Control
+ - [X] GitHub for public repos, GitLab for private
  - [X] SSH -- skimmed through it since it is more cryptography than webdev
- - [ ] HTTP/HTTPS
  - [X] API's
  - [X] Basic Terminal Usage
  - [X] Learn to research
  - [X] Data Structures and Algorithms -- skipped since I will learn it in compsci at top
- - [ ] Character encodings
+ - [ ] HTTP/HTTPS
  - [ ] Design Patterns
- - [X] GitHub for public repos, GitLab for private
-
+ 
  ### Front End
  This may seem basic since in the core there are only three technologies how ever what is really hard is that not everyone has the eye for killer design skills.
 
- - [ ] Learn : HTML
- - [ ] HTML : Clone a template content
- - [ ] Learn : CSS
+ - [X] Learn : HTML
+ - [X] HTML : Clone a template content
+ - [X] Learn : CSS
  - [ ] CSS : Learn how to use 'grid' and 'flexbox'
  - [ ] CSS : Learn Media Queries and Responsive Design
  - [ ] CSS : Style the template you made above
