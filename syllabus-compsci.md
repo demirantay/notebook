@@ -115,11 +115,10 @@ Don’t be the person who “never quite understood” something like recursion
  
  Try to build your knowledge up so that you can start building the tablet Operating system that is inspired from the westworld series. Try to go from top to down approach. Do not try to build everything atleast understand what it is and create a mini demo project if you are able to.
  
-
- - [ ] Assembly
- - [ ] Machine Language and how it connects with hardware
- - [ ] Mini Operating System
- - [ ] A Web Browser
+ - [ ] C language -- learn it fully
+ - [ ] Assembly   -- try to understand it but do not skim through it 
+ - [ ] Compiler   -- you will build a gcc compiler as a intro to osdev in wiki
+ - [ ] Mini Toy Operating System for learning tutorials and so on do not be hesistant to fail at least it is on qemu...
  - [ ] Final: A operating system for tablets that are designed for programming (UI like from westworld series)
  
  - Best [OS dev source Wiki](https://wiki.osdev.org/Main_Page) definetly needs checking out
@@ -171,7 +170,7 @@ Don’t be the person who “never quite understood” something like recursion
  - [X] Git - Version Control
  - [ ] SSH
  - [ ] HTTP/HTTPS
- - [ ] API's
+ - [X] API's
  - [X] Basic Terminal Usage
  - [ ] Learn to research
  - [ ] Data Structures and Algorithms
