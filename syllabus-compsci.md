@@ -137,11 +137,11 @@ Don’t be the person who “never quite understood” something like recursion
 
  ### Web dev project
  
- - [ ] Internet browser
- - [ ] Deploy browser
  - [ ] Build a Server
  - [ ] Backup a server
  - [ ] Deploy a server
+ - [ ] Internet browser
+ - [ ] Deploy browser
  - and so on about the low level parts about web
 - [ ] Project: Keep maintaining a web project it will be never done it is your open source commitment from now on.
 - [ ] Project: Update your Portfolio highlighting your best work. Make it professional you can get insparation from hipolabs.com they illustrate a very good example of freelanceers website
@@ -185,7 +185,7 @@ Don’t be the person who “never quite understood” something like recursion
  - [X] HTML : Clone a template content
  - [X] Learn : CSS
  - [X] CSS : Learn how to use 'grid' and 'flexbox' -- skipped since I use bootstraps- 12 grid system
- - [ ] CSS : Learn Media Queries and Responsive Design
+ - [X] CSS : Learn Media Queries and Responsive Design
  - [X] CSS : Style the template you made above
  - [ ] Learn : JavaScript
  - [ ] JS : Learn the DOM api and how to manipulate it
