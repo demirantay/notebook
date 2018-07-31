@@ -116,7 +116,7 @@ Don’t be the person who “never quite understood” something like recursion
  
  Try to build your knowledge up so that you can start building the tablet Operating system that is inspired from the westworld series. Try to go from top to down approach. Do not try to build everything atleast understand what it is and create a mini demo project if you are able to.
  
- - [ ] C language -- learn it fully
+ - [ ] C language -- learn it fully   / CS50 week 4 / [modern c book](https://www.scribd.com/doc/39933932/C-Programming-a-Modern-Approach-2nd-Edition-K-N-King) page 78
  - [ ] Assembly   -- try to understand it but do not skim through it 
  - [ ] Compiler   -- you will build a gcc compiler as a intro to osdev in wiki
  - [ ] Build something similiar to MS-DOS (one of the simplest operating systems)
