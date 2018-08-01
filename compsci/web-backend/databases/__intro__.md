@@ -22,8 +22,12 @@
 
 ### NoSQL Databases
 
-- ...
-
+- NoSQL databases are not supposed to be better than relational databaseses they were esentially created to handle unstructured data sets. They are used to store the vast majority of web applications persistent data. However there are many several classifications for storage representations such as: 
+  - Key-Value Pair      (redis ..etc)
+  - Document-oriented   (mongoDB ..etc.)
+  - Column-family table (Cassandra .etc.)
+  - Graph               (Neo4j etc.)
+  
 ### More Resources
 
 - [FullStack-Python: Databases] section has great resources at the end of the page.
