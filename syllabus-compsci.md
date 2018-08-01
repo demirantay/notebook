@@ -122,6 +122,7 @@ Don’t be the person who “never quite understood” something like recursion
  - [ ] Build something similiar to MS-DOS (one of the simplest operating systems)
  - [ ] Mini Toy Operating System for learning tutorials and so on do not be hesistant to fail at least it is on qemu...
  - [ ] Final: A operating system for tablets that are designed for programming (UI like from westworld series)
+ - [ ] Optional: Robotics for augmented reality like companina robots for humans to do what ever they demand, looks like human
  
  - Best [OS dev source Wiki](https://wiki.osdev.org/Main_Page) definetly needs checking out
  - There is a person [creating a full hardware and os from scartch](https://github.com/pervognsen/bitwise) it may be useful
