@@ -111,33 +111,33 @@ Don’t be the person who “never quite understood” something like recursion
 
  ---
  ---
- 
+
  ## Tablet Operating System
- 
+
  Try to build your knowledge up so that you can start building the tablet Operating system that is inspired from the westworld series. Try to go from top to down approach. Do not try to build everything atleast understand what it is and create a mini demo project if you are able to.
- 
+
  - [ ] C language -- learn it fully
- - [ ] Assembly   -- try to understand it but do not skim through it 
+ - [ ] Assembly   -- try to understand it but do not skim through it
  - [ ] Compiler   -- you will build a gcc compiler as a intro to osdev in wiki
  - [ ] Build something similiar to MS-DOS (one of the simplest operating systems)
  - [ ] Mini Toy Operating System for learning tutorials and so on do not be hesistant to fail at least it is on qemu...
  - [ ] Final: A operating system for tablets that are designed for programming (UI like from westworld series)
- 
+
  - Best [OS dev source Wiki](https://wiki.osdev.org/Main_Page) definetly needs checking out
  - There is a person [creating a full hardware and os from scartch](https://github.com/pervognsen/bitwise) it may be useful
  - Roadmap for [OS sections](https://github.com/ghaiklor/ghaiklor-os-gcc)
  - [Low Level Programming University](https://github.com/gurugio/lowlevelprogramming-university)
  - [Rasberry PI OS](https://github.com/s-matyukevich/raspberry-pi-os)
  - [OS Tutorial](https://github.com/cfenollosa/os-tutorial)
- 
 
- 
- 
+
+
+
  ---
  ---
 
  ### Web dev project
- 
+
  - [ ] Build a Server
  - [ ] Backup a server
  - [ ] Deploy a server
@@ -178,7 +178,7 @@ Don’t be the person who “never quite understood” something like recursion
  - [X] Data Structures and Algorithms -- skipped since I will learn it in compsci at top
  - [ ] HTTP/HTTPS
  - [ ] Design Patterns
- 
+
  ### Front End
  This may seem basic since in the core there are only three technologies how ever what is really hard is that not everyone has the eye for killer design skills.
 
@@ -294,3 +294,4 @@ Every developer should code once:
  <img align="center" width="100%" src="/images/frontend-v2.png" />
  <img align="center" width="100%" src="/images/backend.png" />
  <img align="center" width="100%" src="/images/devops.png" />
+ <img align="center" width="100%" src="/images/algorithms.png" />
