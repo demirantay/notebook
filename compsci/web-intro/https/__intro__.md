@@ -45,4 +45,15 @@
  The reason http was created is that the packages that wandered through the internet on the early days were not always safe so engineers needed a safety protocol to filter out the dangerous packages.
  
  
- ## Thechnical Overview
+ ## Http Session & Authentication
+ 
+ A http session is a sequence of network - request-response transactions and there are many ways to secure the session with authentication schemes there are many ways to do it I will take notes on this subject later on.
+ 
+ ## Request Methods
+ 
+ As it is explained above the client `request` needs a method to manipulate the data it wants from the server. There are tons of methods and a list of it in wikipedia but the following are the most commonly used ones:
+ 
+ - `GET`: this method as it is described in it is name it simply gets the data from the server.
+ - `HEAD`: The HEAD method asks for a response identical to that of a GET request, but without the response body. This is useful for retrieving meta-information written in response headers, without having to transport the entire content.
+ - `POST`: a block of data that is the result of submitting a web form to a data-handling process; or an item to add to a database.
+ - `PUT`:
