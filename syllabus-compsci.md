@@ -178,7 +178,7 @@ Don’t be the person who “never quite understood” something like recursion
  - [X] Basic Terminal Usage
  - [X] Learn to research
  - [X] Data Structures and Algorithms -- skipped since I will learn it in compsci at top
- - [ ] HTTP/HTTPS
+ - [X] HTTP/HTTPS
  - [ ] Design Patterns
 
  ### Front End
