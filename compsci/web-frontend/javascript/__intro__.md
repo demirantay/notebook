@@ -51,23 +51,58 @@ I will not write any api related javascript like DOM , geolocation, ..etc. I wil
 
 ### Loops
 
--
+- Most of the loops are written same in javascript:
+  ```js
+  for (var i = 0; i < 10; i++) {
+    // ...
+  }
+  
+  var i = 0;
+  while (i < 10) {
+    // ...
+    i++;
+  }
+  ```
 
 ### Arrays
 
--
+- You can define arrays very easily, there are many built in functions for arrays and strings like sort, substr and etc. you can read them from reference:
+  ```js
+  var array = ["hey", "aa", "basd"];
+  
+  array[0] // "hey"
+  ```
 
 ### Methods
 
-- 
-
-### Objects and Classes (OOP)
-
-- 
+- You can define functions very easily or you can define anonomys functions and assing them to a variable which is also easy:
+  ```js
+  function normal_func (param1, param2) {
+    return param1 + param2;
+  }
+  normal_func(1,2);
+  
+  
+  var anon_func = function (x, y) {
+    return x - y;
+  }
+  anon_func(1,2);
+  ```
 
 ### Scopes
 
-- 
+- In javascript there are two types of scopes 1:local scope, 2:global scope and javascript creates scopes within blocks of code and most of the time the blocks come with functions or loops. The main idea is that the variable defined inside a block is not accsessible from the outside of the block but the variable defined outside of the block is accessible from the inside of the block. Confusing ? Lets see the code snippet:
+  ```js
+  var foo = 3;
+  
+  function baz() {
+    var hop = 123.123123;
+    console.log(foo);  // this is correct you can assess foo
+  }
+  
+  console.log(hop)  // you cannot do this since `hop` is defined in baz() function
+  
+  ```
 
 ### Closures
 
@@ -75,7 +110,22 @@ I will not write any api related javascript like DOM , geolocation, ..etc. I wil
 
 ### Hoisting
 
--
+- Hoisting is the default behaviour of javascript that moves declerations to the top of the file. To see what we are trying to understand first lets see these two code snippets:
+  ```js
+  x = 5;  // no `var` decleration
+  
+  consoloe.log(x) // 5
+  
+  var x;  // declares x
+  ```
+  And the code above actually is code below:
+  ```js
+  var x;
+  x = 5;
+  
+  console.log(x); //5
+  ```
+  So to understand why this is happening first we have to understand what hoisting is.
 
 ### this
 
@@ -130,5 +180,9 @@ I will not write any api related javascript like DOM , geolocation, ..etc. I wil
 - 
 
 ### ES6
+
+- 
+
+### Objects and Classes (OOP)
 
 - 
