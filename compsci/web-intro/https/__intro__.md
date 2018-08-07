@@ -41,8 +41,35 @@
 
   > RETURNDATA is the actual HTML of the page itself.
   
+  Lets see some real world examples of the explanation above:
+  ```
+  # client request
+  GET /index.html HTTP/1.1
+  Host: www.example.com
+  ```
+  And now lets see what a example server response would look like:
+  ```
+  HTTP/1.1 200 OK
+  Date: Mon, 23 May 2005 22:36:23 GMT
+  Content-Type: text/html; charset=UTF-8
+  Content-Length: 138
+  Last-Modified: Wed, 08 Jan 2003 23:11:55 GMT
+  Server: Apache/1.3.3.7 (Unix) (Red-Hat/Linux)
+  Connection: close
+
+  <html>
+  <head>
+    <title>An Example Page</title>
+  </head>
+  <body>
+    Hello World, this is a very simple HTML document.
+  </body>
+  </html>
+  ```
+  
 - But ofcourse even though this explanation is very well written the reailty is that http has a LOT more to offer and learn.
  The reason http was created is that the packages that wandered through the internet on the early days were not always safe so engineers needed a safety protocol to filter out the dangerous packages.
+ 
  
  
  ## Http Session & Authentication
@@ -56,4 +83,26 @@
  - `GET`: this method as it is described in it is name it simply gets the data from the server.
  - `HEAD`: The HEAD method asks for a response identical to that of a GET request, but without the response body. This is useful for retrieving meta-information written in response headers, without having to transport the entire content.
  - `POST`: a block of data that is the result of submitting a web form to a data-handling process; or an item to add to a database.
- - `PUT`:
+ - `PUT`: haha I dont get it ...
+ - `DELETE`: The DELETE method deletes the specified resource.
+ - `TRACE`: The TRACE method echoes the received request so that a client can see what (if any) changes or additions have been made by intermediate servers. most of the time used for tracing errors
+ - `OPTIONS`: The OPTIONS method returns the HTTP methods that the server supports for the specified URL. This can be used to check the functionality of a web server by requesting '*' instead of a specific resource.
+ - `CONNECT`: The CONNECT method converts the request connection to a transparent TCP/IP tunnel, usually to facilitate SSL-encrypted communication (HTTPS) through an unencrypted HTTP proxy.
+ - `PATCH`: The PATCH method applies partial modifications to a resource.
+ 
+ There are a lot more request methods I couldnt write them all.
+ 
+ Methods such as POST, PUT, DELETE and PATCH are intended for actions that may cause side effects either on the server, you may do something that you did not intednt or some malicious hacker can cross side script your site with the forms and steal infromation from your server. There are csrf_token encryptions that are provided by web frameworks but if you really want to be sure to secure your methods you need to learn a lot more about security on web.
+ 
+ ## Status Codes
+
+In HTTP/1.0 and since, the first line of the HTTP response is called the status line and includes a numeric status code (such as "404") and a textual reason phrase (such as "Not Found"). HTTP status code is primarily divided into five groups for better explanation of request and responses between client and server as named:
+
+ - Informational : `1XX`
+ - Succesfull: `2XX`
+ - Redirection: `3XX`
+ - Client Error: `4XX`
+ - Server Error: `5XX`
+ 
+ 
+
