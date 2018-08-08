@@ -16,4 +16,11 @@
   ```
   You can do many things such as `document.getElementByTagName()` or `document.getElementByClassName()` and there are many other things to do with those selections such as change the inner html, `attirbute` , `setAttiribute`, `style.property` there many other properties see the reference for it. [reference](https://www.w3schools.com/jS/js_htmldom.asp)
   
-- Before you go to refernece there is one notable thing and it is event listeners:
+- Before you go to refernece there is one notable thing and it is event listeners: event listeners work when a event happens on the site which is like a element is cliked or the page has loaded or th einputs fields are changed:
+  ```html
+  <h1 id="id1">My Heading 1</h1>
+
+  <button type="button" onclick="document.getElementById('id1').style.color = 'red'">Click Me!</button>
+  ```
+
+You can view more about DOM in the [REFERENCE HERE](https://www.w3schools.com/jS/js_htmldom.asp)
