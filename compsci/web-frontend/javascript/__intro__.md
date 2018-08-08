@@ -104,10 +104,6 @@ I will not write any api related javascript like DOM , geolocation, ..etc. I wil
   
   ```
 
-### Closures
-
--
-
 ### Hoisting
 
 - Hoisting is the default behaviour of javascript that moves declerations to the top of the file. To see what we are trying to understand first lets see these two code snippets:
@@ -125,64 +121,30 @@ I will not write any api related javascript like DOM , geolocation, ..etc. I wil
   
   console.log(x); //5
   ```
-  So to understand why this is happening first we have to understand what hoisting is.
+  So to understand why this is happening first we have to understand what hoisting is. You should understand that assignin a value to a variable is not same as declaring a variable. For example lets view this code `var x = 5;` the only declaration in this code is `var x` so only a undefined value of `x` will be hoisted at the top of the page and the value 5 will be assigned to it on the line the code is written in.
+  
+- A good number of thumb is that if you are not as comfortable with hoisting as much you should try to define your varialbes at the top of your file becuase hoisting is a overlooked feature of the language and may cause really unexpected problems.
 
 ### this
 
--
-
-### Prototypes
-
--
-
-### Behavior Delegation
-
--
-
-### Types
-
--
-
-### Values
-
--
-
-### Natives
-
--
-
-### Coercion
-
--
-
-### Grammar
-
--
-
-### Asynchrony
-
--
-
-### Callbacks
-
--
-
-### Promises
-
--
-
-### Generators
-
-- 
-
-### Benchmarking & Tuning
-
-- 
-
-### ES6
-
-- 
+- `this` keyword is the same in java and `self` is the same thing used in python. It simply lets you accssess the ./objects properties for example lets view the following javascript object and the use of `this` keyword:
+  ```js
+  var person = {
+    firstName: "John",
+    lastName: "Doe",
+    id:1,
+    toString: function() {
+      return this.firstName + this.lastName;
+    }
+  }
+  ```
+  It is simple and same with java.
+  
 
 ### Objects and Classes (OOP)
 
 - 
+
+### Reference
+
+- [W3Schools have exellent reference for js](https://www.w3schools.com/jS/default.asp)
