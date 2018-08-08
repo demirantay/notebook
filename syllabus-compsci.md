@@ -190,9 +190,9 @@ Don’t be the person who “never quite understood” something like recursion
  - [X] CSS : Learn how to use 'grid' and 'flexbox' -- skipped since I use bootstraps- 12 grid system
  - [X] CSS : Learn Media Queries and Responsive Design
  - [X] CSS : Style the template you made above
- - [ ] Learn : JavaScript
- - [ ] JS : Learn the DOM api and how to manipulate it
- - [ ] JS : finish YDKJS books for understanding hoisting, bubling ... etc. there are 10 min papares in your stars
+ - [X] Learn : JavaScript
+ - [X] JS : Learn the DOM api and how to manipulate it
+ - [X] JS : finish YDKJS books for understanding hoisting, bubling ... etc. there are 10 min papares in your stars
  - [ ] JS : Learn Ajax(XHR)
  - [ ] JS : Learn ES6 and writing modular javascript
  - [ ] Project : Make a fine Responsive website with interactivity with javascript
