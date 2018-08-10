@@ -70,4 +70,18 @@
    
  ## Rendering Elements
  
+ - Elements are the smallest building blocks of React Apps. Dont worry React DOM handles the connection between the broswer DOM API. Do not confuse the `elements` with `compnonents` they are different things, components are made up of elements.
+ 
+- To simply render a react elemenet you can do the following lets say you have a div element that has a id of foo
+  ```html
+  <div id='foo'></div> 
+  ```
+  and it is empty becase react will render its content from jsx code but in order to fill the element we need to use reacts `.redner()` function:
+  ```js
+  const element = <h1>Hello World</h1>
+  ReactDOM.render(element, document.getElementById('foo');
+  ```
+  
+  
+ 
   
