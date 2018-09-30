@@ -67,6 +67,8 @@
 
   printf("Foo: %d \n", foo);  // prints the value of foo
   ```
+  
+  will write more from the book like scanning more than one input in a line
 
 ### Expressions
 
@@ -78,39 +80,12 @@
 
 ### Conditional Statements
 
-- Writing conditional statements are the same like everyother c based language ( and : `&&`, or: `||`). However when you compare strings you cannot simply do `==` or `!=` like java you need to use `strcmp` (string compare) that comes shipped with the standart library and **remember** there is no true or false keywords in c.
-
-`strcmp(x, y)` returns 0 if x and y are same or returns a -negative number if x is smaller or +greater if x is bigger.
-  ```c
-  char foo[40];
-  char bar[40];
-
-  if (strcmp(foo, bar) == 0) {
-    printf("foo and bar is same\n");
-  }
-  else if (strcmp(foo, bar) != 0) {
-    printf("foo and bar is NOT same\n");
-  }
-  else {
-    printf("something is up\n");
-  }
-  ```
+- foo
 
 
 ### Loops
 
-- The loops written samely lets see the foor loop first:
-  ```c
-  for (int i = 0; i < 10; i++) {
-    // code
-  }
-  ```
-  Lets examine while loops:
-  ```c
-  while (1 > 0) {
-    // code
-  }
-  ```
+- foo
 
 ### Basic Types
 
@@ -122,24 +97,7 @@
 
 ### Methods
 
-- Defining methods are easy for some of the types and maybe a little bit more complex for other things such as stringslets first view a `void` typed function with no parameters:
-  ```c
-  void print_foo() {
-    printf("fooo\n");
-  }
-  ```
-  If you do not want to write the `main` function at the bottom of the page since it is bad design you can simply `include` your method at the top of the page without a content block like this:
-  ```c
-  void foo();
-
-  int main(void) {
-    foo();
-  }
-
-  void foo() {
-    printf("foo\n");
-  }
-  ```
+- foo
 
 
 ### Program Organization
