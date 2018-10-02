@@ -21,6 +21,7 @@ Don’t be the person who “never quite understood” something like recursion
   - [ ] Course : [Nand2Tetris Part II](https://www.coursera.org/learn/nand2tetris2)
   - [ ] Book : [Computer Organization and Design](http://mprc.pku.edu.cn/courses/organization/autumn2012/COD.pdf). Not every section is essential.
   - [ ] Course : [CS61C course](http://inst.eecs.berkeley.edu/~cs61c/sp15/) past lecture [videos](https://archive.org/details/ucberkeley-webcast-PL-XXv-cvA_iCl2-D-FS5mk0jFF6cYSJs_) are here
+  - [ ] Series: [Onur Mutlu's Video Lectures](https://www.youtube.com/watch?v=zLP_X4wyHbY&list=PL5PHm2jkkXmi5CxxI7b3JCL1TWybTDtKq)
   - [ ] Book: This book is essential for architecture : Computer Architecture : A Quantitative Approach
 
   ### Algorithms & Data Structures
