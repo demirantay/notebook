@@ -67,12 +67,18 @@
 
   printf("Foo: %d \n", foo);  // prints the value of foo
   ```
+
+- Remember you can put more than one input on a single scacnf line look at the following snippet:
+  ```c
+  int foo, bar, baz;
+  printf("Type foo, bar, baz\n");
   
-  will write more from the book like scanning more than one input in a line
+  scanf("%d%d%d", &foo, &bar, &baz); // <-- see this line over here
+  ```
 
 ### Expressions
 
-- foo
+- 
 
 ### Selection Statements
 
