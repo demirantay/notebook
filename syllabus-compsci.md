@@ -12,6 +12,7 @@ Don’t be the person who “never quite understood” something like recursion
 
  - [X] Course : [Helsinki MOOC's](http://mooc.fi/courses/2013/programming-part-1/material.html) for the desired language.
  - [ ] Book : SICP (Structured Interpretion of Computer Programs)
+ - [ ] Book : [modern c book](https://www.scribd.com/doc/39933932/C-Programming-a-Modern-Approach-2nd-Edition-K-N-King) page 78
 
 ### Computer Architecture
 
