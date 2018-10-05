@@ -15,7 +15,7 @@
   - `Efficiency`: performance of the program the "more things you can do with less" is always the best 
   - `Readability`: even though this might be open to discussion I feel that it is *very* important that the code (program) you write should be easily readable not for other people neccessarily, but for you. It is a shame if you cannot read the code you have written the night before.
   
-- There are many more things to talk about but I think this is enough for the introduction since I will note a lot of things from the notorious "Structure and Interpretation of Computer Programs" book. I will try to add as much different notes as I can but most of this note page will consists a summary of SICP for me.
+- There are many more things to talk about but I think this is enough for the start since I will note a lot of things from the notorious "Structure and Interpretation of Computer Programs" book. I will try to add as much different notes as I can but most of this note page will consists a summary of SICP for me.
 
 ## Introduction
 
@@ -25,3 +25,5 @@
   - [Modularity, OBjects and State]()
   - [Metalinguistic Abstraction]()
   - [Computing with Register Machines]()
+  
+- 
