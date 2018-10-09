@@ -19,11 +19,23 @@
 
 ## Introduction
 
+- In the "Structure and Interpretation of Computer Programs" book the author uses Scheme a dialect of Lisp familia. So thats why the code snippets will be in Scheme.
+
 - Table of Contents:
   - [Building Abstractions with Procedures]()
   - [Building Abstractions with Data]()
-  - [Modularity, OBjects and State]()
+  - [Modularity, Objects and State]()
   - [Metalinguistic Abstraction]()
   - [Computing with Register Machines]()
   
-- 
+- Educators, Generals, Dieticians, pyschologists, and parents program. Armies, students, and some socities are programmed. Most of the day to day or even year to year problems are programmed so smoothly that we dont even pay any notice anymore. The programmer must seek both perfection of part and sufficency for its computer program. Every computer program is  model, hatched in the mind, of a real mental process. These processes, arising from human experience and thought, are huge in number, intricate in detail and at any time only partially understood. They are modeled to our permenant  satisfaction rarely by our computer programs. Thus even though our programs are carefully handcrafted discerete collections of beauty they will have to continually evolve them until the new model ultimately fullfills our satisfactory need, which never happens beacuse humans always want more. Unfortunately, as programs get large and complicated, as they almost always do, the correctness of the program come open to doubt. Since large programs grow from small ones it is curicial that we develop an arsenal of standard program structures of whose correctness we have become sure.
+
+- The computers are never large enough or fast enough. Each brakethrough in hardware technology leads to more massive programming enterprieses, new orgranizatonal principles, and an enrichemnt of abstract models. Every programmer should ask himself periodically "Toward what end, toward what end?" -- but donot ask it too often lest you pass up the fun of programming for the constipation of bittersweet philosophy. Among the programs we write, some perform precise mathematical function such as sorting or finding the maximum of a sequence of numbers, determining primality, or finding the square root. We call such programs algorithms. A programmer should acquire good algorithms and an arsenal of standart program stcutrues that he trusts.
+
+- *"A computer is like a violin. You can imagine a novice trying a phonography and then a violin. The latter, he says sounds terrible. That is the argument we have heard from our humanists and most of our computer scientists. Computer programs are good, they say, for particular purposes, but they arent flexible. Neither is a violin, or a typewriter until you learn how to use it."* - Marvin Minsky
+
+---
+
+## Building Abstractions with Procedures
+
+- ...
