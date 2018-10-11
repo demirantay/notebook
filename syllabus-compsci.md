@@ -12,6 +12,7 @@ Don’t be the person who “never quite understood” something like recursion
 
  - [X] Course : [Helsinki MOOC's](http://mooc.fi/courses/2013/programming-part-1/material.html) for the desired language.
  - [ ] Book : SICP (Structured Interpretion of Computer Programs)
+ - [ ] Series: [Brian Harvey’s Berkeley CS 61A](https://www.youtube.com/watch?v=4leZ1Ca4f0g&list=PLhMnuBfGeCDNgVzLPxF9o5UNKG1b-LFY9)
  - [ ] Book : [modern c book](https://www.scribd.com/doc/39933932/C-Programming-a-Modern-Approach-2nd-Edition-K-N-King) page 78
  - [ ] roject: Do a mini but complex project for practicing the theory you have learned
 
