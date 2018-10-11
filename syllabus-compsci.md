@@ -13,6 +13,7 @@ Don’t be the person who “never quite understood” something like recursion
  - [X] Course : [Helsinki MOOC's](http://mooc.fi/courses/2013/programming-part-1/material.html) for the desired language.
  - [ ] Book : SICP (Structured Interpretion of Computer Programs)
  - [ ] Book : [modern c book](https://www.scribd.com/doc/39933932/C-Programming-a-Modern-Approach-2nd-Edition-K-N-King) page 78
+ - [ ] roject: Do a mini but complex project for practicing the theory you have learned
 
 ### Computer Architecture
 
@@ -24,6 +25,7 @@ Don’t be the person who “never quite understood” something like recursion
   - [ ] Course : [CS61C course](http://inst.eecs.berkeley.edu/~cs61c/sp15/) past lecture [videos](https://archive.org/details/ucberkeley-webcast-PL-XXv-cvA_iCl2-D-FS5mk0jFF6cYSJs_) are here
   - [ ] Series: [Onur Mutlu's Video Lectures](https://www.youtube.com/watch?v=zLP_X4wyHbY&list=PL5PHm2jkkXmi5CxxI7b3JCL1TWybTDtKq)
   - [ ] Book: This book is essential for architecture : Computer Architecture : A Quantitative Approach
+  - [ ] Project: Write a CPU or do a project that will help you implement what you have learned.
 
   ### Algorithms & Data Structures
 
@@ -35,6 +37,7 @@ Don’t be the person who “never quite understood” something like recursion
   - [ ] Book : [How to solve it](https://www.amazon.com/How-Solve-Mathematical-Princeton-Science/dp/069116407X/?pldnSite=1)
   - [ ] Course : [Algorithms part I](https://www.coursera.org/learn/algorithms-part1)
   - [ ] Course : [Algorithms part II](https://www.coursera.org/learn/algorithms-part2)
+  - [ ] Project: View the bottom of this page and implement some of the algorithm map
 
 ### Mathematics for Computer Science
 
@@ -88,6 +91,7 @@ Don’t be the person who “never quite understood” something like recursion
    These days, most systems are distributed systems.
 
    - [ ] Book : [Distibuted Systems, 3rd edition](https://www.distributed-systems.net/index.php/books/distributed-systems-3rd-edition-2017/)
+   - [ ] Project: Do something to implement the theory you have learned.
 
 ### Code University
 
