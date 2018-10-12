@@ -55,6 +55,13 @@
   - %c - char
   - %s - string
   - %x - hexadecimal
+  
+- You can define constants as follows:
+  ```c
+  #define PI 3.14
+  ```
+  `#define` is a preprocessing directive, just as `#include`  so there is no semicolon at the end
+  Note: If you are using a "float" type as a constant use like this `#define PI = 3.14f` the `f` at the end is just a better way of writing but you do not have to.
 
 ### User Input
 
