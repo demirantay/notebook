@@ -83,18 +83,9 @@
   scanf("%d%d%d", &foo, &bar, &baz); // <-- see this line over here
   ```
 
-### Expressions
-
-- 
-
 ### Selection Statements
 
 - foo
-
-### Conditional Statements
-
-- foo
-
 
 ### Loops
 
