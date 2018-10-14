@@ -85,7 +85,16 @@
 
 ### Selection Statements
 
-- foo
+- While using C's selection statements you cannot expect to use the "true" and "false" structures that comes shipped with other higher languages. In C there is no true or false there is only 1 and 0. If the values you compare are "true" then it is `1` and if the values that you are comparing are false than the final value is `0`. Lets view the following:
+  ```c
+  if (10 < 5) {
+    // this is `false` == `0` thats why it doesnt get executed
+  }
+  
+  if (10 > 5) {
+    // this is `true` == `1` thats why the code gets executed
+  }
+  ```
 
 ### Loops
 
