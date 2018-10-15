@@ -95,10 +95,28 @@
     // this is `true` == `1` thats why the code gets executed
   }
   ```
+  You can simply get around this by including `#inlcude <stdbool.h>` which gives you a boolean type like this : `bool foo = true` 
+
+- The control selection statemetns are written simply like this in the c :
+  ```c
+  n = 0;
+  
+  if ( n < 0 ) { 
+    printf("n is less than zero \n");
+  }
+  else if (n == 0 ) {
+    printf("n is equal to zero \n");
+  }
+  else {
+    printf("n is greater than zero \n");
+  }
+  ```
+  
+- the other control statment is the `switch` ...
 
 ### Loops
 
-- foo
+- 
 
 ### Basic Types
 
