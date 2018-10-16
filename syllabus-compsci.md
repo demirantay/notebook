@@ -19,8 +19,8 @@ Don’t be the person who “never quite understood” something like recursion
 
   If you don’t have a solid mental model of how a computer actually works, all of your higher-level abstractions will be brittle.
 
-  - [ ] Course : [Nand2Tetris Part I](https://www.coursera.org/learn/build-a-computer)
-  - [ ] Course : [Nand2Tetris Part II](https://www.coursera.org/learn/nand2tetris2)
+  - [ ] Course : [Nand2Tetris Part I](https://www.coursera.org/learn/build-a-computer) -- find pdf and print book
+  - [ ] Course : [Nand2Tetris Part II](https://www.coursera.org/learn/nand2tetris2) -- find pdf and print book
   - [ ] Book : [Computer Organization and Design](http://mprc.pku.edu.cn/courses/organization/autumn2012/COD.pdf). Not every section is essential.
   - [ ] Course : [CS61C course](http://inst.eecs.berkeley.edu/~cs61c/sp15/) past lecture [videos](https://archive.org/details/ucberkeley-webcast-PL-XXv-cvA_iCl2-D-FS5mk0jFF6cYSJs_) are here
   - [ ] Series: [Onur Mutlu's Video Lectures](https://www.youtube.com/watch?v=zLP_X4wyHbY&list=PL5PHm2jkkXmi5CxxI7b3JCL1TWybTDtKq)
