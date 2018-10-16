@@ -112,7 +112,44 @@
   }
   ```
   
-- the other control statment is the `switch` ...
+- I know that switch statements are not that cool but here is how it can be used ( do not forget to use `break`s in switches beacuse omitting one can cause bugs in your code:
+  ```c
+  // lets first write the code in normal if satements and then evolve it into switch
+  if (grade == 4){ 
+    printf("good\n");
+  } 
+  else if (grade == 3) {
+    printf("normal\n");
+  }
+  else if (grade ==2) {
+    printf("failing\n");
+  }
+  else {
+    printf("illegal grade\n");
+  }
+  
+  // lets now convert this code into a switch statement
+  switch (grade) {
+    case 4: printf("good\n");
+            break;
+    case 3: printf("normal\n");
+            break;
+    case 2: printf("failing\n");
+            break;
+    default: printf("illegal grade\n");
+             break;
+  }
+  
+  // you can also write cases like this
+  switch (grade) {
+    case 1: case 2: case 3:
+            printf("foo");
+            break;
+    default:
+            printf("baz");
+            break;
+  }
+  ```
 
 ### Loops
 
