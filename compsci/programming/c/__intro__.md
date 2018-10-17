@@ -153,7 +153,15 @@
 
 ### Loops
 
-- 
+- Writing loops are farily easy in the C like any other language. First lets see how to write a "while" loop. The code snippet below shows 10 "foo" text with a line break:
+  ```c
+  int i = 10;
+  
+  while (i > 0) {
+    printf("foo\n");
+    i--;
+  }
+  ```
 
 ### Basic Types
 
