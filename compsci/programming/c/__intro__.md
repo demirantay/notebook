@@ -163,6 +163,21 @@
   }
   ```
 
+- You can write "do while" loops in the c like this way we will use the snippet bove and convert it to a do while:
+  ```c
+  int i = 10;
+  do {
+    printf("foo\n");
+    i--;
+  } while (i < 10 );
+  ```
+
+- And for the last loop that we can write in c is a "for" loop no explanation is needed best loop out there:
+  ```c
+  for (int i = 10; i > 0; i--){
+    printf("foo\n");
+  }
+  ```
 ### Basic Types
 
 - foo
