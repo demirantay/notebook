@@ -178,6 +178,9 @@
     printf("foo\n");
   }
   ```
+
+- There are 3 ways to exit from a loop in the C and these are the keywords: "break", "goto", "continue", lets view each of them:
+  - `break` : It simply breaks out of the loop and starts reading the next line of code.
 ### Basic Types
 
 - foo
