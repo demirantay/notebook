@@ -19,3 +19,10 @@
 
 ### Faiz Oranlari
 
+- Faiz, borc para alanlarin borc verenlere odedikleri ucretlerdir. Hisse senetlerinden, tahvil ve gayrimenkllere kadar her yatirim farkli bir derece de olsa bir sekilde faiz oranlarindan etkilenir. Faiz herkes icin gizemli bir rakamdir kimileri icin tasarruf hesabi, kimileri icin ise morgage'a gelen cebinizi avuclayan gizli bir eldir. Ama aslinda faiz orani Merkez Bankasi ile baslar
+
+- `Fed`: 1913 yilinda kurulan Merkez Bankasi'nin amaci faiz oranlarini olusturmak, surdurmek ve birlesik Devletler para politikasini idare etmekti. Gunumuzde bunlara ilaveten, bankalari denetler, duzenler ve devlete borc para veren cesitli kuurumlara hizmet saglayan bir konuma gelmistir. 
+
+- Merkez bankasinin fon oranlarini manipule etmesi icin yetkisi vardir. Bu oran, baska bankalarin alacaklari borc para icin belirledigi faiz oranidir. Bu oran ile, araba krediniz, ev krediniz ve kredi kartinizla yaptiginiz butun oranlarin seyrini belirler. Merkez bankasi bu orani enflasyonu kontrol etmek icin kullanir. Enflasyonun kontrolden cikmasini onlemek icin kredi faizlerini yukseltir ki bu da tuketiic harcamalari icin elverisli olan para miktarini sinirlamada etkili olur. Faiz oranlarinin artmasi ve alisverise giden paranin azalmasi anlamina gelir.
+
+- Merkez bankasi faiz oranlarini dusurdugunde para arzi artar. Dusuk faiz oranlari hisse senetlerinin daha cazip gorunlereine yol actigi icin, bu durum genellikle yatirimcilari hisse senedi almalarina yol acar. Dusuk oranlar ekenomik genislemeye de yardim eder.
