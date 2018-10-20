@@ -26,3 +26,11 @@
 - Merkez bankasinin fon oranlarini manipule etmesi icin yetkisi vardir. Bu oran, baska bankalarin alacaklari borc para icin belirledigi faiz oranidir. Bu oran ile, araba krediniz, ev krediniz ve kredi kartinizla yaptiginiz butun oranlarin seyrini belirler. Merkez bankasi bu orani enflasyonu kontrol etmek icin kullanir. Enflasyonun kontrolden cikmasini onlemek icin kredi faizlerini yukseltir ki bu da tuketiic harcamalari icin elverisli olan para miktarini sinirlamada etkili olur. Faiz oranlarinin artmasi ve alisverise giden paranin azalmasi anlamina gelir.
 
 - Merkez bankasi faiz oranlarini dusurdugunde para arzi artar. Dusuk faiz oranlari hisse senetlerinin daha cazip gorunlereine yol actigi icin, bu durum genellikle yatirimcilari hisse senedi almalarina yol acar. Dusuk oranlar ekenomik genislemeye de yardim eder.
+
+### Ekonomik Gostergeler
+
+- Ekonominin yeni bir donemece mi girecegi yoksa ayni yolda mi kalacagina dair bize ipuclari veren ozel ekonomi istatistikleri vardir. Bu ipuclarina oncu gostergeler denir ve ekenominin gelecegi hakkinda tahminde bulnurlar. Ekonomik gostergeler genellikle enflasyon ile baglantilidir. Bunun nedenlerinden biri enflasyonun, ekonominin istikrarina etki eden faiz oranlari seviyesini cok etkilemesidir.
+
+- Ekonomistler ayni zamanda uyum gostergeleri ve gecikmeli gostergelerle de bakmalarina ragmen, yatirimcilar oncu gostergelere yogunlasir. Ekonominin nereye yoneldigini bilmek yatirimcilarin (ozellikle de borsa simsarlarinin) en elverisli zamanlarda daha karli yatirim tercihleri yapmalarina yardimci olabilir. En onemli ekonomik gostergelerden sekizini burada ele alalim:
+
+- 1) `Gayrisafi Yurtici Hasila`: GSYIH yayimlanan en onemli ekonomik gostergedir. Ekonomik faaliyetlerin en genis olcumunu saglayan GSYIH ulkenin karnesi kabul edilir. GSYH'nin dort ana ogesi tuketim, yatirim, devlet alimlari ve net ihracatlardir. Bu gecikmeli endeksin hesaplanmasi aylar alir, sonuclandirilmasi ise daha da uzun surer. GSYIH sayesinde ekonominin buyumekte mi yoksa daralmaktami oldugunu ogreniriz.
