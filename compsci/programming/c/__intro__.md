@@ -127,8 +127,9 @@
   else {
     printf("illegal grade\n");
   }
-  
-  // lets now convert this code into a switch statement
+  ```
+  Lets now convert the code above into a switch statement code:
+  ```c
   switch (grade) {
     case 4: printf("good\n");
             break;
@@ -180,7 +181,11 @@
   ```
 
 - There are 3 ways to exit from a loop in the C and these are the keywords: "break", "goto", "continue", lets view each of them:
-  - `break` : It simply breaks out of the loop and starts reading the next line of code.
+  - `break`   : It simply breaks out of the loop and starts reading the next line of code.
+  - `continue`: While break terminates the loop, continue does not end the loop it simply skips to the next loop iteration and remain inside the loop. Cannot be used with Switch statments. 
+  - `goto`    : You do not need goto for every day C programming check docs for info.
+  
+  
 ### Basic Types
 
 - foo
