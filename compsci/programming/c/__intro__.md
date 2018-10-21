@@ -185,6 +185,7 @@
   - `continue`: While break terminates the loop, continue does not end the loop it simply skips to the next loop iteration and remain inside the loop. Cannot be used with Switch statments. 
   - `goto`    : You do not need goto for every day C programming check docs for info.
   
+- Dont dorget the `None` keyword in python is == to `null` in the C
   
 ### Basic Types
 
