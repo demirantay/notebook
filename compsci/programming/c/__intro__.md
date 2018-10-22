@@ -1,6 +1,6 @@
-## C
+# C
 
-### Printing
+## Printing
 
 - This is how you write "Hello World!" :
   ```c
@@ -63,7 +63,7 @@
   `#define` is a preprocessing directive, just as `#include`  so there is no semicolon at the end
   Note: If you are using a "float" type as a constant use like this `#define PI = 3.14f` the `f` at the end is just a better way of writing but you do not have to.
 
-### User Input
+## User Input
 
 - You can get input from the user with `scanf(%*)`. You need to specify what data type you want to get and you will assign them to the variable with the `&*` sign (this is about pointers not covered yet just go along with it) (you can use `fgets(input)` too but I have never tried it):
   ```c
@@ -83,7 +83,7 @@
   scanf("%d%d%d", &foo, &bar, &baz); // <-- see this line over here
   ```
 
-### Selection Statements
+## Selection Statements
 
 - While using C's selection statements you cannot expect to use the "true" and "false" structures that comes shipped with other higher languages. In C there is no true or false there is only 1 and 0. If the values you compare are "true" then it is `1` and if the values that you are comparing are false than the final value is `0`. Lets view the following:
   ```c
@@ -127,8 +127,9 @@
   else {
     printf("illegal grade\n");
   }
-  
-  // lets now convert this code into a switch statement
+  ```
+  Lets now convert the code above into a switch statement code:
+  ```c
   switch (grade) {
     case 4: printf("good\n");
             break;
@@ -151,63 +152,94 @@
   }
   ```
 
-### Loops
+## Loops
 
-- 
+- Writing loops are farily easy in the C like any other language. First lets see how to write a "while" loop. The code snippet below shows 10 "foo" text with a line break:
+  ```c
+  int i = 10;
+  
+  while (i > 0) {
+    printf("foo\n");
+    i--;
+  }
+  ```
 
-### Basic Types
+- You can write "do while" loops in the c like this way we will use the snippet bove and convert it to a do while:
+  ```c
+  int i = 10;
+  do {
+    printf("foo\n");
+    i--;
+  } while (i < 10 );
+  ```
 
-- foo
+- And for the last loop that we can write in c is a "for" loop no explanation is needed best loop out there (remember you can use for loops for a lot of things other than iterating. Even before C99 developers used for loops more than while loops in order to create infinte loops. However, it is not the case anymore the rule of thumb is to use for loops for iteration and while for infinte loops):
+  ```c
+  for (int i = 10; i > 0; i--){
+    printf("foo\n");
+  }
+  ```
 
-### Arrays
-
-- foo
-
-### Methods
-
-- foo
-
-
-### Program Organization
-
-- foo
-
-### Pointers
-
-- foo
-
-### Pointers and Arrays
-
-- foo
-
-### Strings
-
-- foo
-
-### The Preprocessor
-
-- foo
-
-### Writing Large Programs
+- There are 3 ways to exit from a loop in the C and these are the keywords: "break", "goto", "continue", lets view each of them:
+  - `break`   : It simply breaks out of the loop and starts reading the next line of code.
+  - `continue`: While break terminates the loop, continue does not end the loop it simply skips to the next loop iteration and remain inside the loop. Cannot be used with Switch statments. 
+  - `goto`    : You do not need goto for every day C programming check docs for info.
+  
+- Dont dorget the `None` keyword in python is == to `null` in the C
+  
+## Basic Types
 
 - foo
 
-### Structures, Unions and Enumarations
+## Arrays
+
+- foo
+
+## Methods
+
+- foo
+
+
+## Program Organization
+
+- foo
+
+## Pointers
+
+- foo
+
+## Pointers and Arrays
+
+- foo
+
+## Strings
+
+- foo
+
+## The Preprocessor
+
+- foo
+
+## Writing Large Programs
+
+- foo
+
+## Structures, Unions and Enumarations
 
 -foo
 
-### Advanced uses of Pointers
+## Advanced uses of Pointers
 
 - foo
 
-### Declaration
+## Declaration
 
 - foo
 
-### Program Design
+## Program Design
 
 - foo
 
-### Low level programming
+## Low level programming
 
 - foo
