@@ -61,4 +61,8 @@
 
 ## Sermaye Piyasasi Kurulu (SPK)
 
-- 
+- Eger yatirimla ciddi olarak ilgilenmeye baslarsiniz Sermaye Piyasasi Kurulu (SEC in eng.) adli kurumun adini kesinlikle duyarsiniz. SPK, borsayi izleyen devlet duzenleme sisteminin bir parcasidir. SPK oncelikli olarak yasadisi faaliyetlerin olmamasini saglamak icin menkul kiymetler endustrisini gozler. Bir borsa da islem goren her sirket SPK'ye kayit olmalidir. Kurumun amaci menkul degerler piyasalarinin durust ve adil kalmalarini saglayarak yatirimcilari korumaktir. SPK'nin bu amaci yerine getirmesinin bir yolu da, yatirimcilarin bilgiye dayali kararlar alabilmeleri icin, halka acik sirketlerin dogru bilgileri aciklamalarini saglamaktir.
+
+- Iceriden bilgi ticareti (insider trading) SPK'nin denetledigi, en yaygin olarak bilinen sorunlardan biridir. Iceride bilgi ticareti halka acik olmayan gizli bilgilere dayanarak halka acik olmadigi icin, bu kisiler haksiz avantajlar elde ederler.
+
+- Yinede SOK'nin, sizi dolandiriciliktan koruyarak, guvenilir bilgiler saglayarak ve aracinizi hizada tutarak size hizmet etmesidir. Internet sitesinden halka acik sirketlerin dosyaladigi 1994'e dek geriye uzanan-butun sirket raporlarini gorebilirsiniz. Bu veritabani amerikada EDGAR (Elektronik Veri Toplama, Analiz ve Bilgi Toplama) olarak bilinir. Iyi bir yatirimci yatirim yapacagi sirket hakkinda EDGAR dan kesinlikle bilgi edinmelidir ve aratirmasini dikkatlice yapmalidir. Ilk duraginiz bu olmalidir.
