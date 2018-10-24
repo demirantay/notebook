@@ -189,7 +189,7 @@
   
 ## Basic Types
 
-- foo
+- Watch out for integer flowss if you try to enter more bits than the integer type can have the output will be undefined and can cause serious problems. For example old boeing 77 planes had a integer overflow problem that nearly crashed the whole plane. Always watch out! For example, **if we add 1 to the unsigned 16-bit number 65.535, the result is guranteed to be 0**
 
 ## Arrays
 
