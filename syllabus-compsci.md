@@ -23,7 +23,6 @@ Don’t be the person who “never quite understood” something like recursion
   - [ ] Book : [Hidden Language of Computers: CODE](ftp://ftp.borg.moe/yarr/Gentoomen%20Library/Programming/Misc/Charles%20Petzold%20-%20Code%20-%20The%20Hidden%20Language%20of%20Computer%20Hardware%20and%20Software.pdf)
   - [ ] Book : [Computer Organization and Design](http://www4.comp.polyu.edu.hk/~comp2421/ComputerOrganizationAndDesign5thEdition2014.pdf). Not every section is essential.
   - [ ] Course : [CS61C course](http://inst.eecs.berkeley.edu/~cs61c/sp15/) past lecture [videos](https://archive.org/details/ucberkeley-webcast-PL-XXv-cvA_iCl2-D-FS5mk0jFF6cYSJs_) are here
-  - [ ] Series: [Onur Mutlu's Video Lectures](https://www.youtube.com/watch?v=zLP_X4wyHbY&list=PL5PHm2jkkXmi5CxxI7b3JCL1TWybTDtKq)
   - [ ] Book: This book is essential for architecture : Computer Architecture : A Quantitative Approach
   - [ ] Project: Write a CPU or do a project that will help you implement what you have learned.
 
