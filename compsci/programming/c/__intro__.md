@@ -191,6 +191,26 @@
 
 - Watch out for integer flowss if you try to enter more bits than the integer type can have the output will be undefined and can cause serious problems. For example old boeing 77 planes had a integer overflow problem that nearly crashed the whole plane. Always watch out! For example, **if we add 1 to the unsigned 16-bit number 65.535, the result is guranteed to be 0**
 
+- There are special characters that are built into c that have special uses such as the `\n` new line key word. These keywords are called "Escape Sequences". Most of the common day to day special cases are the following : Alert Bell (\a) , Backspace (\b) , Form feed (\f) , New Line (\n) , Carriage return (\r) , Horizontal tab (\t) , Vertical tab (\v) , Backslash(\\) , Question Mark (\?) , Single quote (\') , Double Quote (\")
+
+- The following example shows the usual arithmetic conversion in action and shows the order of type conversions:
+  ```c
+  char c;
+  sohrt int s;
+  int i;
+  long int l;
+  float f;
+  double d;
+  long double ld;
+  
+  i = i + c;     /* c is converted to int           */
+  i = i + s;     /* s is converted to int           */
+  l = l + i;     /* i is converted to long int      */
+  f = f + l;     /* l is converted to float         */
+  d = d + f;     /* f is converted to double        */
+  ld = d + ld;   /* d is converted to long double   */
+  ```
+
 ## Arrays
 
 - foo
