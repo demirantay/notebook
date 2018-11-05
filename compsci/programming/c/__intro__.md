@@ -210,6 +210,18 @@
   d = d + f;     /* f is converted to double        */
   ld = d + ld;   /* d is converted to long double   */
   ```
+  As you can see the order of types are like this: char < int < long int < float < double < long double
+  
+- You can also cast (force change) one type to another such as the following way : (This gives you a greater contorl over your types however be catious while using it)
+  ```c
+  float foo = 10.99;
+  float bar = 20.89;
+  float sum;
+  
+  sum = foo - (int) bar;  /* bar is converted to int */
+  ```
+  
+- You can define your own types with `typedef` keyword it is actually very easy. .....
 
 ## Arrays
 
