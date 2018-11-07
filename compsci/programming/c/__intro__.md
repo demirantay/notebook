@@ -95,7 +95,16 @@
     // this is `true` == `1` thats why the code gets executed
   }
   ```
-  You can simply get around this by including `#inlcude <stdbool.h>` which gives you a boolean type like this : `bool foo = true` 
+  You can simply get around this by including `#inlcude <stdbool.h>` which gives you a boolean type like this : `bool foo = true` . Or if you do not want to include a library you can very simply create the same functionality with the `typedef` keyword see the following code:
+  ```c
+  #define true 1;
+  #define false 0;
+  typedef int bool;
+  
+  /* And you can craete boolean values like this */
+  
+  bool foo = true;
+  ```
 
 - The control selection statemetns are written simply like this in the c :
   ```c
@@ -256,7 +265,16 @@
   ```c
   int foo[4] = {[2] = 29, [4] = 7};  /* the array is {0, 29, 0, 7} */
   ```
-
+- An array may have any number of dimensions. For example the following declaration creates a two-dimensional array:
+  ```c
+  int foo[5][10]; /* this array `foo` has 5 arrays that contain 10 elements */
+  ```
+  Do note that multidimensional arrays play a lesser role in C tha in many other programming languages, primarily because C provides a more flexible way to store multi dimensional data: array of pointers
+  
+- You can make a "constant" array with the following keyword `const`. An array thats has been declared constant should not be modified:
+  ```c
+  const int foo[4] = {1, 2, 3, 4}; 
+  ```
 
 ## Methods
 
