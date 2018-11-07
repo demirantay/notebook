@@ -221,11 +221,42 @@
   sum = foo - (int) bar;  /* bar is converted to int */
   ```
   
-- You can define your own types with `typedef` keyword it is actually very easy. .....
+- You can define your own types with `typedef` keyword it is actually very easy. See the following:
+  ```c
+  typdef int Foo;   
+  
+  Foo n = 10;     /* n is now a integer */
+  ```
+  It is a good habit to capitliaze the first letter of your types since it is easier to understand. You may ask why the hell would you use it since you can simply use the normal primitive C types. So, type definitions of your own can make a program more understandable assuming that the programmer has been careful while choosing a meaningful type names. See the following for a better example typedef's:
+   ```c
+   typedef float Dollars;
+   
+   Dollars cash_in, cash_out;  // this is not neccessary but a lot more foramative and readale
+   ```
+   Type definitions can also make a program easier to modify. If we later decide that dollars should really be defined as double all we need to do is chage the type definition to `typedef doble Dollars;`
 
 ## Arrays
 
-- foo
+- To declare an array in c you have to specify its type and number of elements. Lets see:
+  ```c
+  int foo[10];  // array `foo` has 10 undefined elements in it
+  ```
+  C compilers do not show a warning message about your arrays it is not like in a high level easy language. You have to be percise about your array lengths.
+  
+- The most common form of array intialization is a list of constant expressions enclosed in braces such as like this:
+  ```c
+  int foo[10] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
+  ```
+  Also do not forhet that if the initilizaer in the brackets is shorter than the array the reamining elements of the array are given the value 0. See the following:
+  ```c
+  int foo[3] = {99}   /* the array is {99, 0, 0} */
+  ```
+  
+- You can also go out of the common initlization and make shit like the following: 
+  ```c
+  int foo[4] = {[2] = 29, [4] = 7};  /* the array is {0, 29, 0, 7} */
+  ```
+
 
 ## Methods
 
