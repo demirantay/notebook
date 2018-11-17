@@ -276,9 +276,23 @@
   const int foo[4] = {1, 2, 3, 4}; 
   ```
 
-## Methods
+## Methods / Functions
 
-- foo
+- This is how you define a function (some languages call functions with return values `procedures` such as lisp but in c you can simply call them functions or methods) :
+  ```c
+  int average (int a, int b) {
+    return (a + b) / 2;
+  }
+  ```
+  As you can see it is kinda the same with java lang you write the `type` that you want the function to return at the begining which is in this case a integer `int` and than you write the name of the function with the following parameters inside the parantheses. If you dont want the function to return a value simply put `void` on the type keyword part and leave out the "return". See the following for writing void funcs:
+ ```c
+ void foo() {
+  // ...
+  // no return
+ }
+ ```
+ 
+- Remember functions **MAY NOT** return arrays, however it is very commonly and easily used to pass an array as a parameter (argument) to a function.
 
 
 ## Program Organization
