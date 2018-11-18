@@ -285,15 +285,42 @@
   }
   ```
   As you can see it is kinda the same with java lang you write the `type` that you want the function to return at the begining which is in this case a integer `int` and than you write the name of the function with the following parameters inside the parantheses. If you dont want the function to return a value simply put `void` on the type keyword part and leave out the "return". See the following for writing void funcs:
- ```c
- void foo() {
-  // ...
-  // no return
- }
- ```
+   ```c
+   void foo() {
+    // ...
+    // no return
+   }
+   ```
  
 - Remember functions **MAY NOT** return arrays, however it is very commonly and easily used to pass an array as a parameter (argument) to a function.
 
+- When you define functions below your main function it causes a lot of errors since the program has no way of knowing what the definition is inside the function. So if you declare a function after the main function you can simply include the header of the function before the main function, so if the function is used in the main it would know where to look:
+  ```c
+  void foo(int a);   // <-- see how it is declared at top but defined after main
+  
+  int main(void) {
+    int n = foo(); 
+  }
+  
+  int foo(int a) {
+    return a;
+  }
+  ```
+
+- Arrays are often used as arguments. When a function parameter is a one-dimensional array, the length of the paramter array is unspecified. There is just one problem how will the function know how long the array is. Unfortunately C doesnt provide any easy way for a function to determine the length of an array passed to it. Instead we will have to supply the length in a additional argument. See the following:
+  ```c
+  int foo (int arr[], int length) {
+    int arr[length];  // < -- here you have a new array
+  }
+  
+  // Or you can do this if you pass the length before the array in the parameter parantheses:
+  
+  int foo (int length, int arr[length]) {
+    ...
+  }
+  ```
+  Do note that if the array is defined erlier you should not put the bracekts while passing it as a argument: `foo(pre_defined_arr, 10)`
+  
 
 ## Program Organization
 
