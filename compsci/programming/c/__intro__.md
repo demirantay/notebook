@@ -321,6 +321,26 @@
   ```
   Do note that if the array is defined erlier you should not put the bracekts while passing it as a argument: `foo(pre_defined_arr, 10)`
   
+- There is a quickway to return values without having to use ifs but this is not very commonly used, see the following:
+  ```c
+  return n >= 0 ? n : 0;
+  ```
+  In the exapmle return statement above first the return checks if n is a positive number if it is it returns it, otherwise it returns 0 its that simple but not this convenient every time you are programming.
+  
+  
+- I will not get into recrusion a lot right now because i will note a lot of it in the algorithm notes however the idea behind it is veeeery simple. A function is recursive if it calls itself in it. See the following:
+  ```c
+  int foo (int number) {
+    if (number > 0) { 
+      foo(number - 1);   // <--- see it calls itself in it with a different parameter each time
+    }
+    else {
+      return 0;
+    }
+  }
+  ```
+  Recrusion is not that handy to use if you are not dealing with complex algorithm stcutrues like quickosrt where the recrusion arises itself from the design of the algortihm. However for the most part using a if block is a better solution than recrusion. Do not make your code unneccesarily complex
+  
 
 ## Program Organization
 
