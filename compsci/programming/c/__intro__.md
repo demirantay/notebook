@@ -344,7 +344,17 @@
 
 ## Program Organization
 
-- foo
+- If you want to define global variables in C you can simply define them out of any function blocks. This includes the main function also:
+  ```c
+  #include <stdio.h>
+  
+  /* Global Variables */
+  int foo = 7;
+  
+  /* Functions */
+  int main(void) {..}
+  ```
+  External variables (global) are very convenient when many functions need to share a variables. However in most cases it is better for functions to comminucate through parameters and local variables rather than global variables. Because one varible mistake can crush or create a devastating bug in the program and we do not want that.
 
 ## Pointers
 
