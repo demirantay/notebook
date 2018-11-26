@@ -355,6 +355,24 @@
   int main(void) {..}
   ```
   External variables (global) are very convenient when many functions need to share a variables. However in most cases it is better for functions to comminucate through parameters and local variables rather than global variables. Because one varible mistake can crush or create a devastating bug in the program and we do not want that.
+  
+- Plus you can use the `static` keyword while defining either variables or functions. It has two use cases 1st by stacoverflow definition "A static variable inside a function keeps its value between invocations". However we will use the 2nd definition: A static global variable or a function is "seen" only in the file it's declared in. (2) Is used widely as an "access control" feature. If you have a .c file implementing some functionality, it usually exposes only a few "public" functions to users. The rest of its functions should be made static, so that the user won't be able to access them. This is encapsulation, a good practice.
+  
+- Now that we ve seen the major elements that make up a C program lets develop a strategy for arranging our programs in a file. I will discuss about a multi modular filed program down below in a more advanced part this is just for a tase: The code below represents tg=he most commonly way of ordering your program:
+  ```
+  /* Comment About the program its intentions, 
+     author, links, documentation ...etc. */
+  #include directives
+  #define directives
+  type definitions
+  Declerations of external variables
+  Prototypes for functions other than main
+  Definitions of main
+  Definitions of other functions
+  ```
+  Side Note: Most of the C programmers use a boxed comments before each function to explain what each one does it comes very handy!
+  
+  
 
 ## Pointers
 
