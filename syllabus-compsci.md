@@ -1,3 +1,7 @@
+Table of Contents
+
+[Computer Science Cirriculum](#CompSci-Syllabus)
+
 # CompSci Syllabus
 
 The syllabus divides into three sections. 1 - is for Computer Science guide. 2 - Doing a fullfilled project. 3- Teaching the market skills for myself. Write a feynman note for each check box learned.
@@ -300,3 +304,27 @@ Every developer should code once:
  <img align="center" width="100%" src="/images/backend.png" />
  <img align="center" width="100%" src="/images/devops.png" />
  <img align="center" width="100%" src="/images/algorithms.png" />
+ 
+ 
+ ### Game Dev
+ 
+ ## 🚀 Introduction
+
+![](https://github.com/utilForever/game-developer-roadmap/blob/master/Images/Intro.png)
+
+## 🎨 Client Roadmap for 2018 (WIP)
+
+![](https://github.com/utilForever/game-developer-roadmap/blob/master/Images/ClientProgrammer-2018.png)
+
+## 🎨 Client Roadmap
+
+![](https://github.com/utilForever/game-developer-roadmap/blob/master/Images/Client.png)
+
+## 👽 Server Roadmap (Thanks to [Heo Lyn](https://github.com/lynheo))
+
+![](https://github.com/utilForever/game-developer-roadmap/blob/master/Images/Server.png)
+
+## 📑 Game Tester (QA) Roadmap
+
+![](https://github.com/utilForever/game-developer-roadmap/blob/master/Images/GameTester(QA).png)
+
