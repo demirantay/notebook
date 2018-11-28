@@ -372,11 +372,10 @@
   ```
   Side Note: Most of the C programmers use a boxed comments before each function to explain what each one does it comes very handy!
   
-  
 
 ## Pointers
 
-- foo
+- Pointers are one of the C's most important topic so we will be discussing them in three different headers over the course of this markdown file.
 
 ## Pointers and Arrays
 
