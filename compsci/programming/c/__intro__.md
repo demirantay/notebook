@@ -377,6 +377,8 @@
 
 - Pointers are one of the C's most important topic so we will be discussing them in three different headers over the course of this markdown file.
 
+- In modern day computers main memory is divided into bytes. and each byte contains 8 bits. Each byte has a unique adress to distinguish it from the other bytes in the memory. Heres where pointers come in instead of remembering all that integer numbers in a adress number you can simply store them in a special **pointer number**. For example, when we store the adress of a variable `i` in the pointer variable `p`, we say `p` points to `i`. In other words pointers are nothing more than a variable taht stores an adress of a variable.
+
 ## Pointers and Arrays
 
 - foo
