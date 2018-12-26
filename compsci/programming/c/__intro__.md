@@ -395,6 +395,23 @@
   char *r;
   ```
   
+- C provides specific operators to use with pointers. To find the adress of a variable we use the `&` (Adress) operator. If "x" is a variable than "&x" is the adress of "x" in memory. And to gain accsess to the object that a pointer points to we use the `*` (indirection) operator. If "p" is a pointer, then `*p` represents the object to which "p" currently ppoints.
+
+- We need to actually point to something so lets view the followin code:
+  ```c
+  int i = 10;
+  
+  int p = &i;   // --> now p holds the adress of i
+  ```
+
+- If you want to get the object that pointer points to you need to use the indirectio n(`*`) asterisk operator, otherwise you will get the memory adress:
+  ```c
+  int i = 10;
+  int *p = &i;
+  
+  printf("%d", *p);    /* prints 10  */
+  printf("%d", p);     /* prints the adress in memory e.g. 149204 */
+  ```
   
 
 ## Pointers and Arrays
