@@ -413,6 +413,17 @@
   printf("%d", p);     /* prints the adress in memory e.g. 149204 */
   ```
   
+- By the way you can have two pointers assigned to the same objects adress such as the following:
+  ```c
+  int i, *p, *j;
+  
+  p = &i;  // points to same obj
+  
+  j = p;   // points to same obj
+  ```
+  
+
+  
 
 ## Pointers and Arrays
 
