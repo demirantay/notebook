@@ -379,6 +379,24 @@
 
 - In modern day computers main memory is divided into bytes. and each byte contains 8 bits. Each byte has a unique adress to distinguish it from the other bytes in the memory. Heres where pointers come in instead of remembering all that integer numbers in a adress number you can simply store them in a special **pointer number**. For example, when we store the adress of a variable `i` in the pointer variable `p`, we say `p` points to `i`. In other words pointers are nothing more than a variable taht stores an adress of a variable.
 
+- You can define a pointer the same way you define a variable just with an addition of an asterisk:
+  ```c
+  int *p;
+  ```
+  Pointer declerations can appear in other definitions alongside normal variables:
+  ```c
+  int i, j, a[10], *p, *u;
+  ```
+  
+- You need to define what type of adress the pointer will point to so as the same way with other objects you need to have types:
+  ```c
+  int *p;
+  double *q;
+  char *r;
+  ```
+  
+  
+
 ## Pointers and Arrays
 
 - foo
