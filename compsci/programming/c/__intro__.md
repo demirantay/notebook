@@ -421,9 +421,6 @@
   
   j = p;   // points to same obj
   ```
-  
-
-  
 
 ## Pointers and Arrays
 
