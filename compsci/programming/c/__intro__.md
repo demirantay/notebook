@@ -422,9 +422,6 @@
   j = p;   // points to same obj
   ```
 
-
-
-
 ## Pointers and Arrays
 
 - In the previous chapter we introduced pointers and how to write them. In this section we will use its practical approach to objects. **Remember Understanding the Connection Between Pointers and Arrays is Critical for Mastering C lang**.
@@ -466,12 +463,33 @@
     i = j - p   //  i is -2
     ```
 
-- You can compare pointers with basic operators:
+- You can compare pointers with relational operators (<, >, <=, >=) and the equality operators (==, !=). This comparement operators only work if the both pointers point to the same array:
   ```c
+  p = &arr[5];
+  q = &arr[3];
+  ```
+  the value of `p <= q` is 0 (false) and `p > q ` is 1 (true)
 
+- You can point pointers to compund literals (unnamed arrays -- C99 feature) but Im not gonna note it at the moment maybe later on...
 
-
-
+- You can combine the * and ++ operators. C programmers actually often combine these two. Lets see :
+  ```c
+  arr[n++] = 1;
+  
+  // if "p" is pointing to an array element, the
+  //corresponding statement would be
+  
+  *p++ = 1;
+  ```
+  
+- The name of an array can be used as a pointer to the first element in the array. For example lets view:
+  ```c
+  int arr[10];
+  
+  *a = 5;      /* stores 5 in arr[0] */
+  
+  *(a+2) = 8   /* sotres 8 in arr[2] */
+  ```
 
 
 
