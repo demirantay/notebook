@@ -55,7 +55,7 @@
   - %c - char
   - %s - string
   - %x - hexadecimal
-  
+
 - You can define constants as follows:
   ```c
   #define PI 3.14
@@ -79,7 +79,7 @@
   ```c
   int foo, bar, baz;
   printf("Type foo, bar, baz\n");
-  
+
   scanf("%d%d%d", &foo, &bar, &baz); // <-- see this line over here
   ```
 
@@ -90,7 +90,7 @@
   if (10 < 5) {
     // this is `false` == `0` thats why it doesnt get executed
   }
-  
+
   if (10 > 5) {
     // this is `true` == `1` thats why the code gets executed
   }
@@ -100,17 +100,17 @@
   #define true 1;
   #define false 0;
   typedef int bool;
-  
+
   /* And you can craete boolean values like this */
-  
+
   bool foo = true;
   ```
 
 - The control selection statemetns are written simply like this in the c :
   ```c
   n = 0;
-  
-  if ( n < 0 ) { 
+
+  if ( n < 0 ) {
     printf("n is less than zero \n");
   }
   else if (n == 0 ) {
@@ -120,13 +120,13 @@
     printf("n is greater than zero \n");
   }
   ```
-  
+
 - I know that switch statements are not that cool but here is how it can be used ( do not forget to use `break`s in switches beacuse omitting one can cause bugs in your code:
   ```c
   // lets first write the code in normal if satements and then evolve it into switch
-  if (grade == 4){ 
+  if (grade == 4){
     printf("good\n");
-  } 
+  }
   else if (grade == 3) {
     printf("normal\n");
   }
@@ -149,7 +149,7 @@
     default: printf("illegal grade\n");
              break;
   }
-  
+
   // you can also write cases like this
   switch (grade) {
     case 1: case 2: case 3:
@@ -166,7 +166,7 @@
 - Writing loops are farily easy in the C like any other language. First lets see how to write a "while" loop. The code snippet below shows 10 "foo" text with a line break:
   ```c
   int i = 10;
-  
+
   while (i > 0) {
     printf("foo\n");
     i--;
@@ -191,11 +191,11 @@
 
 - There are 3 ways to exit from a loop in the C and these are the keywords: "break", "goto", "continue", lets view each of them:
   - `break`   : It simply breaks out of the loop and starts reading the next line of code.
-  - `continue`: While break terminates the loop, continue does not end the loop it simply skips to the next loop iteration and remain inside the loop. Cannot be used with Switch statments. 
+  - `continue`: While break terminates the loop, continue does not end the loop it simply skips to the next loop iteration and remain inside the loop. Cannot be used with Switch statments.
   - `goto`    : You do not need goto for every day C programming check docs for info.
-  
+
 - Dont dorget the `None` keyword in python is == to `null` in the C
-  
+
 ## Basic Types
 
 - Watch out for integer flowss if you try to enter more bits than the integer type can have the output will be undefined and can cause serious problems. For example old boeing 77 planes had a integer overflow problem that nearly crashed the whole plane. Always watch out! For example, **if we add 1 to the unsigned 16-bit number 65.535, the result is guranteed to be 0**
@@ -205,13 +205,13 @@
 - The following example shows the usual arithmetic conversion in action and shows the order of type conversions:
   ```c
   char c;
-  sohrt int s;
+  short int s;
   int i;
   long int l;
   float f;
   double d;
   long double ld;
-  
+
   i = i + c;     /* c is converted to int           */
   i = i + s;     /* s is converted to int           */
   l = l + i;     /* i is converted to long int      */
@@ -220,26 +220,26 @@
   ld = d + ld;   /* d is converted to long double   */
   ```
   As you can see the order of types are like this: char < int < long int < float < double < long double
-  
+
 - You can also cast (force change) one type to another such as the following way : (This gives you a greater contorl over your types however be catious while using it)
   ```c
   float foo = 10.99;
   float bar = 20.89;
   float sum;
-  
+
   sum = foo - (int) bar;  /* bar is converted to int */
   ```
-  
+
 - You can define your own types with `typedef` keyword it is actually very easy. See the following:
   ```c
   typdef int Foo;   
-  
+
   Foo n = 10;     /* n is now a integer */
   ```
   It is a good habit to capitliaze the first letter of your types since it is easier to understand. You may ask why the hell would you use it since you can simply use the normal primitive C types. So, type definitions of your own can make a program more understandable assuming that the programmer has been careful while choosing a meaningful type names. See the following for a better example typedef's:
    ```c
    typedef float Dollars;
-   
+
    Dollars cash_in, cash_out;  // this is not neccessary but a lot more foramative and readale
    ```
    Type definitions can also make a program easier to modify. If we later decide that dollars should really be defined as double all we need to do is chage the type definition to `typedef doble Dollars;`
@@ -251,7 +251,7 @@
   int foo[10];  // array `foo` has 10 undefined elements in it
   ```
   C compilers do not show a warning message about your arrays it is not like in a high level easy language. You have to be percise about your array lengths.
-  
+
 - The most common form of array intialization is a list of constant expressions enclosed in braces such as like this:
   ```c
   int foo[10] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
@@ -260,8 +260,8 @@
   ```c
   int foo[3] = {99}   /* the array is {99, 0, 0} */
   ```
-  
-- You can also go out of the common initlization and make shit like the following: 
+
+- You can also go out of the common initlization and make shit like the following:
   ```c
   int foo[4] = {[2] = 29, [4] = 7};  /* the array is {0, 29, 0, 7} */
   ```
@@ -270,10 +270,10 @@
   int foo[5][10]; /* this array `foo` has 5 arrays that contain 10 elements */
   ```
   Do note that multidimensional arrays play a lesser role in C tha in many other programming languages, primarily because C provides a more flexible way to store multi dimensional data: array of pointers
-  
+
 - You can make a "constant" array with the following keyword `const`. An array thats has been declared constant should not be modified:
   ```c
-  const int foo[4] = {1, 2, 3, 4}; 
+  const int foo[4] = {1, 2, 3, 4};
   ```
 
 ## Methods
@@ -289,9 +289,59 @@
 
 - foo
 
+
+
+
 ## Pointers and Arrays
 
-- foo
+- In the previous chapter we introduced pointers and how to write them. In this section we will use its practical approach to objects. **Remember Understanding the Connection Between Pointers and Arrays is Critical for Mastering C lang**.
+
+- We can easily point pointers to arrays or its elements see:
+    ```c
+    int arr[10], *p;
+
+    // "p" points to "arr" first element
+    p = &arr[0];
+    ```
+    We can now acsess "arr[0]" thorugh "p". For example lets store 5 in "arr[0]" by writing:
+    ```c
+    *p = 5;    // this makes  a[0] == 5
+    ```
+
+- Making the pointer point to an element of an array isnt exiting news however this functionality gives us a chance to perform `Pointer Arithmetic` to an array. In C there are only 3 allowed pointer arithmetics. These are 1) Adding an integer to a pointer, 2) Subtracting an integer from a pointer, 3) Subtracting one pointer from another :
+  - `Adding an integer to a pointer`:
+    ```c
+    int arr[10], *p;
+
+    p = &arr[0];
+    p += 6  // now "p" points to "arr[6]"
+    ```
+  - `Subtracting an integer from a pointer`:
+    ```c
+    int arr[10], *p;
+
+    p = &arr[10];
+    p -= 3  // now "p" points to "arr[7]"
+    ```
+  - `Subtracting one pointer from another`:
+    ```c
+    int arr[10];
+    int *p = &arr[5];
+    int *j = &arr[3];
+
+    i = p - j;  //  i is 4
+    i = j - p   //  i is -2
+    ```
+
+- You can compare pointers with basic operators:
+  ```c
+
+
+
+
+
+
+
 
 ## Strings
 
@@ -303,7 +353,7 @@
 
 ## Writing Large Programs
 
-- foo
+- Even though erlier we showed that a C program can easily fit into a single file it is always best to divide your program into modules.
 
 ## Structures, Unions and Enumarations
 
