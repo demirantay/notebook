@@ -1,23 +1,21 @@
-Table of Contents
-
-[Computer Science Cirriculum](#CompSci-Syllabus)
-
 # CompSci Syllabus
 
-The syllabus divides into three sections. 1 - is for Computer Science guide. 2 - Doing a fullfilled project. 3- Teaching the market skills for myself. Write a feynman note for each check box learned.
+The syllabus divides into sections. The first section is the basic theorotical resources that every software engineer should know. The following sections are my own preferred choosings (each section is divided with hr lines).
 
-## Computer Science Guide
+Table of Contents
 
-Try to make at least something in each section and since sections put on top of one another do not move to the other section without learning the perivious one fully.
+[Fundemental Computer Science Cirriculum](#fundemental-computer-science-cirriculum)
+
+
+## Fundemental Computer Science Cirriculum
 
 ### Programming
 
 Don’t be the person who “never quite understood” something like recursion
 
  - [X] Course : [Helsinki MOOC's](http://mooc.fi/courses/2013/programming-part-1/material.html) for the desired language.
- - [X] Book : SICP (Structured Interpretion of Computer Programs)-*(shelved it for later it is hard)*
+ - [ ] Book : SICP (Structured Interpretion of Computer Programs)-*(shelved it for later it is hard)*
  - [ ] Book : [modern c book](https://www.scribd.com/doc/39933932/C-Programming-a-Modern-Approach-2nd-Edition-K-N-King)
- - [ ] Book: K&R's [C programming langauge](http://www.dipmat.univpm.it/~demeio/public/the_c_programming_language_2.pdf)
  - [ ] Project: Use karan's list to do a one big project out of all small projects on the list
  // #osdev glauxosdever reccomended to impelement a strcpy() exersieces
 
