@@ -4,8 +4,13 @@ The syllabus divides into sections. The first section is the basic theorotical r
 
 Table of Contents
 
-[Fundemental Computer Science Cirriculum](#fundemental-computer-science-cirriculum)
-
+- [Section 1](#fundemental-computer-science-cirriculum)
+- [Fundemental Computer Science Cirriculum](#fundemental-computer-science-cirriculum)
+ - [Programming](#programming)
+ - [Computer Architecture](#computer-architecture)
+ - [Algorithms & Data Structures](#algorithms-&-data-structures)
+ - [Mathematics](#mathematics)
+ - [Operating Systems](#operatings-systems)
 
 ## Fundemental Computer Science Cirriculum
 
@@ -41,7 +46,7 @@ Don’t be the person who “never quite understood” something like recursion
   - [ ] Course : [Algorithms part II](https://www.coursera.org/learn/algorithms-part2)
   - [ ] Project: View the bottom of this page and implement some of the algorithm map
 
-### Mathematics for Computer Science
+### Mathematics
 
   CS is basically a runaway branch of applied math, so learning math will give you a competitive advantage.
 
