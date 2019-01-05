@@ -38,7 +38,8 @@ Don’t be the person who “never quite understood” something like recursion
  - [X] Course : [Helsinki MOOC's](http://mooc.fi/courses/2013/programming-part-1/material.html) for the desired language.
  - [ ] Book : SICP (Structured Interpretion of Computer Programs)-*(shelved it for later it is hard)*
  - [ ] Book : [modern c book](https://www.scribd.com/doc/39933932/C-Programming-a-Modern-Approach-2nd-Edition-K-N-King)
- - [ ] Project: Use karan's list to do a one big project out of all small projects on the list
+ - https://boredzo.org/pointers/   -- read it
+ - [ ] Project: Finish bank management and do something that requires advanced thecniques like pointers memory allocation
  // #osdev glauxosdever reccomended to impelement a strcpy() exersieces
 
 ### Computer Architecture
