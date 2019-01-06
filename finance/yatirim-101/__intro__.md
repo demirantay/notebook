@@ -66,3 +66,17 @@
 - Iceriden bilgi ticareti (insider trading) SPK'nin denetledigi, en yaygin olarak bilinen sorunlardan biridir. Iceride bilgi ticareti halka acik olmayan gizli bilgilere dayanarak halka acik olmadigi icin, bu kisiler haksiz avantajlar elde ederler.
 
 - Yinede SOK'nin, sizi dolandiriciliktan koruyarak, guvenilir bilgiler saglayarak ve aracinizi hizada tutarak size hizmet etmesidir. Internet sitesinden halka acik sirketlerin dosyaladigi 1994'e dek geriye uzanan-butun sirket raporlarini gorebilirsiniz. Bu veritabani amerikada EDGAR (Elektronik Veri Toplama, Analiz ve Bilgi Toplama) olarak bilinir. Iyi bir yatirimci yatirim yapacagi sirket hakkinda EDGAR dan kesinlikle bilgi edinmelidir ve aratirmasini dikkatlice yapmalidir. Ilk duraginiz bu olmalidir.
+
+## Kuresel Ekonomi
+
+- Yatirimlar gozlemleyebildiginiz dumduz bir seritte bulunmazlar. Birlesik Devletler borsalarinda meydana gelenlerin kuresel sonuclari vardir. Birlesik Devletler hazine kagitlarindaki faiz oranlarinda gorulen degisimler okyanusun obur tarafindaki tahvil piyasalarini etkileyebilir. Mesela Birlesik Devletler ekonomisindeki bir gerileme dunyanin geri kalanini nerdeyse aninda vurur. Dunya uzerinde gorulen belli basli yeniden olusumlar hisse senedi ve tahvil fiyatlarini, ticari mallari ve dovizleri hep etkiler.
+
+- Dunya piyasalarinin bu genisligi ayni zamanda daima bir yerlerde kar edilebilmesini de mumkun kilar. Hem artik internet dunyayi ve yatirimciligi cok degistirdi. Dunyanin en uzak koselerinde bir sey oldugunda hemen ogreniyoruz. 
+
+- Dunyadaki bu tur degisiklikler siz istesenizde istemeseniz de yatirimciyi yani sizi etkiler. Ister hisse senetlerine , iister sabit getirili menkul kiymetlere, ister yatirim fonlarina, ister gayrimenkullere, ister obur finansal araclara yatirim yapin, butun yatirim araclarini dunyadaki olaylarin etkilerini hisseder.
+
+## Sirketle Ilgili Temel Bilgiler
+
+- Bir sirketin hisise senedini almadan once kesinlikle arastirmanizi yapmalisiniz. Yatirim yapmadan once yaptiginiz kapsamli arastirma sizi zengin ile fakir arasinda belirleyen onemli anahtarlarinizdandir. Iyi yatirimcilar bir sey almadan once arastirma, analiz ve sorusturma odevlerini cok iyi yaparlar. Hisse senetlerinizi internette inceleyin ve sirketle ilgili haberleri arastirin. Sirket bultenini, yillik veya alti aylik faaliyet raporlarini okuyun ve araciniza siket hakkindaki guncel haberleri sorun. Egitimli ve odevini yapmis bir yatirimcinin sabirli ve rahat yatirimci olma olasiligi cok daha fazladir.
+
+- Deneyimleriniz ve gozlemleriniz de degerli icgoruler kazanmanizin baska bir yoludur. Japonya'ya yaptiginiz son yolculuk sirasinda insanlarin yeni bir coca-cola urununden cok miktarda tukettiklerini mi fark ettiniz? En sevdiginiz restoranda yemek parsini odemek icin berklerken musterilerin cogunun "American Express" kartlarini kullandiklarini mi fark ettiniz? Yatirimcinin bir odevi de, urun ve hizmetleri etrafinizdaki insanlar tarafindan belirgin bir bicimde sergilenen ve kullanilan sirketleri fark etmektir.
