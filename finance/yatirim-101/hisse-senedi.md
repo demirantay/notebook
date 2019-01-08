@@ -10,4 +10,21 @@
 
 - Hisse Senedi Turleri: Adi hisse senetleri halka satilan hisse senetleridir be her bir hisse bir kurumda sahiplik teskileder. Insanlar hisse alim-satimindan soz ettiklerinde adi hisse senetlerinden bahsediyorlardir. Terchili hisse senetleri biraz farklidir, onlar da her ne kadar bir kurumdaki mulkiyeti simgeleseler de, bazi ozelikkleri adi hisse senetlerinden cok tahvillerle aynidir.
 
-- Gunumuzde sirket devralmasi veya birlesmesi cok olagan bir hale geldi. Bu yuzden satin almayi dusundugunuz sirketin boyle bi r islemden gecip gecmedigini veya bunu planlayip planlamadigini bilmeinz sarttir. Bir sirketin toplam piyasa degerini yani sirketin tedavuldeki hisselerinin tumunun piyasa
+- Gunumuzde sirket devralmasi veya birlesmesi cok olagan bir hale geldi. Bu yuzden satin almayi dusundugunuz sirketin boyle bi r islemden gecip gecmedigini veya bunu planlayip planlamadigini bilmeinz sarttir. Bir sirketin toplam piyasa degerini yani sirketin tedavuldeki hisselerinin tumunun piyasa degerini ogrenin. Toplam piyasa degerini hesaplamak icin, bir hisse senedinin guncel piyasa giyatini tedabuldeki hisse sayisiyla carpin. Tedavuldeki hisse sayisi halka satilan hisse sayisini ifade eder.
+
+
+## Borsa 
+
+- 1990 larda bireysel yatirimcilarin Wall Street dunyasinda ciddi oyuncular haline gelmekte olduklari belli oldu. Internet yatirimcilariginin ve Birlesik Devletlerdeki onde gelen iki borsayla (NYSE ve NASDAQ) daha kucuk yatirimcilar icin agresif bir oyunun baslamasiyla birlikte, yatirim alip satma kolaylasti ve ucuzlasti.
+
+- Genelde borsa olarak bilinen faaliyetleri olusturan piyasalar New York Borsasi(NYSE) ve Ulusal Menkul DEgerler Aracilar Otomatik Kotasyon Birligidir (NASDAQ). Boston, chicago, philadelphia, denver, san fransisco, LA, londra frankfurt, tokyo gibi belli basli ulslararasi merkezlerin borsalari vardir.
+
+- Hem yerel hem kuresel rekabet hisse senedi islemlerini butun yatirimcilar icin daha seffaf ve erisebilir hale getirmeye devam ediyor. Farkli borsalarin nasil isleyip rekabet ettiklerini anlayarak daha donanimli hale gelir ve yatirim dunyasinda basarili olabilirsiniz.
+
+- `New York Borsaasi (NYSE)`: Gunumuzde resmi olarak NYSE Euronext olarak bilinen NYSE(uyeleri "buyuk kurul" olarak bilir)Walmart, General Electric ve McDonalds gibi onde gelen endustri oyuncularinin yuvasidir. Buyuk Kurul kucuk lig oyuncularina gore degildir. Bir sirketin NYSEye katilabilmesi icin baska sartlarin yani sira piyasa degeri en az 100 milyon dolar olan en az 1,1 milyon halka acik hissesi tedavulde olmailidir. En son uc mali yilda en az 10 milyon dolarlik vergi oncesi gelir gostermeli ve son iki yilda da en az 2 milyon dolar kazanci olmalidir. Ayrica borsadaki koltuklari da ucuz degildir. Ta 1871 de bir koltuk icin odenen en dusuk miktar 2750 dolar iken 2005 te tek bir koltuk icin odenen en yuksek fiyat 4 milyon dolardi. Bu borsada tek bir gunde 5 milyardan fazla gisse ticareti yaparak yeni bir rekor kirdir. Unutmayin burasi ensesi kalin dayilarin oynadigi borsadir.
+
+- `NASDAQ`: 1971 de acildiginda sadece 250 sirketi bulunduruyordu. Bu borsanin onemi dunyadaki ilk elektronik borsa olarak acildi. 1996 da borsanin ticaret hacminin gunde 500 milyon hisseyi asmasi bir donum noktasi oldu. NASDAQ oncelikle yeni ve buyumekte olan sirketlere cazip geliyor cunku kayit sartlari NYSE ninkiiler kadar zor degil ve mailyetler de onemli olcude daha dusuk. Cogu teknoloji, biyoteknoloji sirketleri hissesi bulmaniz normaldir cunku bu sirketler  agresif olarak saldirarak hizli buyuyup kendini sattirma derdindedir. O yuzden NASDAQ IT sektorunda 2 trilyon dolardan fazla toplam piyasa degerine sahiptir. NASDAQ gunmuzde dunyanin en buyuk borsasidir ve ortalama bir gunde diger herhangi bir borsadan daha fazla hisse ticareti yapar. 
+
+## Kar Payi
+
+- Kar payi hisse senedi fiyatina dayanmayan, fakat sirket buyuk karlar elde ettigi ve hissedarlari odullendirmeyi tercih ettigi icin sirket yonetiminin hissedarlara yaptigi odemedir. Yonetim kurul 
