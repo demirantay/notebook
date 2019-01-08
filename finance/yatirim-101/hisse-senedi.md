@@ -1,1 +1,13 @@
 ## Hisse Senedi Nedir ?
+
+- Al-sat yapmak yerine hisse senetlerini bir kez alip ellerinde tutan yatirimcilar zamana yenik dusmemis sirketlere yatirim yaparlar. Sirket gercek degerinden cok hisse senedi fiyat haraketlerine onem veren borsa simsarlarinin ise yatirim yapma konusunda daha aktif bir yaklasimlari vardir. Hisse senetleriniz icin hangi stratejiden faydalinirsaniz faydalanin kural degismez. Bir islem yapmadan once neyi neden aldiginizi (veya sattiginizi) bilin. 
+
+## Hisse Senedi Almak
+
+- Hisse senedi almak bir isletmeyi satin almaya benzer. Hisse senedi aldiginizda aslinda sirketin bir parcasini alirsiniz. Eger sirketin tumune sahip olmak istemiyorsaniz bir parcasini almadan once iki kez dusunmeilisiniz. Degerlendirdiginiz sirketin butun detaylarini bilmeniz onemlidir. Sirket ne tur urun ve hizmetler sunuyor? En yuksek hasilati isin hangi bolumu getiriyor? Isin hangi bolumunde en dusuk hasilat soz konusu ? Isin hangi bolumunde en dusuk hasilat soz konusu? Sirket cok farkli alanlara mi yonelmis? Rakipleri kimler? Sirketin urunlerine talep var mi? Sirket endustride bir lider mi ? sirket birlesmesi ve devralma hic olmusmu? etc...
+
+- Diyelim ki memleketinizde bir supermarket almak istiyorsunuz. Envanter , sirket calisanlarinin kalitesi ve musteri hizmetleri programlari gibi faktorleri degerlendirmissiniz. Sirket temel gida maddeleri satmanin yaninda video da kiraliyor ve bir benzin pompasi isletiyor. isletmenin bakkaliye yonu toplam hasilatin yalnizca kucuk bir yuzdesine karsilik gelebilir. Sirketin kar potansiyelinin tam ve dogru bir resmini elde etmeniz icin, isin her bir bolumunu ayri ayri degerlendirmeniz sizin yarariniza olur. Bircok sirket gelenksel olarak bellirli bir is koluyla iliskilendirilse de yepyeni alanlara dogru ilerlemis olabilir. Ornegin Disney tarihsel olarak Disneyland ve Disney cartoonlari ile iliskilendirilir. Gercekte disney sirrketi touchstone, miramax, abc, espn, soapNET gibi bir cok televizyon programlarinda hisseye ve gelire sahiptir.
+
+- Hisse Senedi Turleri: Adi hisse senetleri halka satilan hisse senetleridir be her bir hisse bir kurumda sahiplik teskileder. Insanlar hisse alim-satimindan soz ettiklerinde adi hisse senetlerinden bahsediyorlardir. Terchili hisse senetleri biraz farklidir, onlar da her ne kadar bir kurumdaki mulkiyeti simgeleseler de, bazi ozelikkleri adi hisse senetlerinden cok tahvillerle aynidir.
+
+- Gunumuzde sirket devralmasi veya birlesmesi cok olagan bir hale geldi. Bu yuzden satin almayi dusundugunuz sirketin boyle bi r islemden gecip gecmedigini veya bunu planlayip planlamadigini bilmeinz sarttir. Bir sirketin toplam piyasa degerini yani sirketin tedavuldeki hisselerinin tumunun piyasa
