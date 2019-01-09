@@ -27,4 +27,4 @@
 
 ## Kar Payi
 
-- Kar payi hisse senedi fiyatina dayanmayan, fakat sirket buyuk karlar elde ettigi ve hissedarlari odullendirmeyi tercih ettigi icin sirket yonetiminin hissedarlara yaptigi odemedir. Yonetim kurul 
+- Kar payi hisse senedi fiyatina dayanmayan, fakat sirket buyuk karlar elde ettigi ve hissedarlari odullendirmeyi tercih ettigi icin sirket yonetiminin hissedarlara yaptigi odemedir. Yonetim kurulu sirketin karlariana dayanarak kar payinin hissedarlara verilip verilmeyecegine ve ne siklikla verilecegine karar verir. Kar pay;ari genelikle gelir arayan yatirimcilar icin cok onemlidir ve dolayisiyla kar payi odeyen hisse senetleri gelir hisse senetleri olarak bilinir.
