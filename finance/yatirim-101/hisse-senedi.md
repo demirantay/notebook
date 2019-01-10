@@ -27,4 +27,24 @@
 
 ## Kar Payi
 
-- Kar payi hisse senedi fiyatina dayanmayan, fakat sirket buyuk karlar elde ettigi ve hissedarlari odullendirmeyi tercih ettigi icin sirket yonetiminin hissedarlara yaptigi odemedir. Yonetim kurulu sirketin karlariana dayanarak kar payinin hissedarlara verilip verilmeyecegine ve ne siklikla verilecegine karar verir. Kar pay;ari genelikle gelir arayan yatirimcilar icin cok onemlidir ve dolayisiyla kar payi odeyen hisse senetleri gelir hisse senetleri olarak bilinir.
+- Kar payi hisse senedi fiyatina dayanmayan, fakat sirket buyuk karlar elde ettigi ve hissedarlari odullendirmeyi tercih ettigi icin sirket yonetiminin hissedarlara yaptigi odemedir. Yonetim kurulu sirketin karlariana dayanarak kar payinin hissedarlara verilip verilmeyecegine ve ne siklikla verilecegine karar verir. Kar pay;ari genelikle gelir arayan yatirimcilar icin cok onemlidir ve dolayisiyla kar payi odeyen hisse senetleri gelir hisse senetleri olarak bilinir. Bircok sirket kar paylarini uc ayda bir oder.
+
+- Tedavuldeki hisse terimi bir sirketin calisanlari dahil halk icin cikardigi hisse sayisini ifade eder. Piyasada dolasan hisse adedi en az 5 milyon olan sirketleri inceleyerek yatirim kariyerinize baslamaniz iyi bir fikir olabilir. Bu durum hisselerin ticaretinin cok yapildigini gosterir ki bu da eger hisselereinizi satmaya kara verirseniz hazir bir piyasa olacagi anlamina gelir.
+
+- Bir hisse senedindeki toplam getirinizi hesaplamak icin, hisse senedi fiyatindaki son on iki aylik degisimleri ve kar paylarini toplayin (veya fiyat dusmusse cikarin) ve sonra on iki aylik donemin baslangicindaki fiyata bolun. Ornegin 45 dolardan bir hisse satin aldiginizi ve son on iki aylik donemde kar payi olarak 1,5 dolar aldiginizi farz edin. Donemin sonunda hisse senedinin satis fiyati 48 dolardir. Hesaplamaniz soyle olcaktir:
+    - Kar payi: 1,50$
+    - Fiyat Degisimi: hisse basina +3.00$
+    - 1,50 $ + hisse basina 3.00$ = 4,50$
+    - 4,50$ / (divide) 45.00$ = 0.10 $ <br>
+  Buda demek olurku toplam getirinizde yuzde 10 luk bir artis yasanmistir <br>
+  --<br>
+  Fakat bunun yerine fiyatin donem sonu itibariyla hisse basina 44 dolara dustugunu farz edin. Bu durumda hesaplamalariniz soyle olacaktir:
+    - Kar payi: 1,50$
+    - Fiyat degisimi: hisse basina 1.00$ dusus
+    - 1.50$ - 1.00 $ hisse basina = 0.50$
+     - 0.50 / (divide) 45.00$ = 0.011 $ <br>
+  Toplam getiriniz yalnizca 1,1 lik bir artistir.
+  
+- Kar payi almaya hak kazanmak icin yonetim kurulunun bir kar payi beyan ettigi tarih olan kayit tarihinde elinizde hisse  bulunmasi gerekir. Unutmayin guncel kar payini son bes yilda odenmis kar paylariyla kiyaslayin. Kar paylarinin azalmasi buyume planlari yapildigini gostereblirir; bir sirketin ana amaci buyume oldugunda kar paylari kucuk olabilir yada hic olmayabilir.
+   
+
