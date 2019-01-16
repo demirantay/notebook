@@ -47,4 +47,10 @@
   
 - Kar payi almaya hak kazanmak icin yonetim kurulunun bir kar payi beyan ettigi tarih olan kayit tarihinde elinizde hisse  bulunmasi gerekir. Unutmayin guncel kar payini son bes yilda odenmis kar paylariyla kiyaslayin. Kar paylarinin azalmasi buyume planlari yapildigini gostereblirir; bir sirketin ana amaci buyume oldugunda kar paylari kucuk olabilir yada hic olmayabilir.
    
+## Hisse Senedi Turleri
 
+- Hisse senetleri degerli olan sirketlerin, cogu nerdeyse herkesce taninan, halka acik, en prestijli, iyi yapilandirilmis sirketler olduklari farz edilir. Cogunlukla buyuk sirketlerden olusan bu karisimda General Electric (NYSE'de GE sembolu altinda ticaret yapar), McDonalds (NYSE: MCD) ve Walmart (NYSE:WMT) gibi sirketler vardir. Bu sirketlerin oldukca fazla bir bolumu yirmi bes yildan uzun suredir piyasadadir be ilgili endustrilerde halen lider konumdadirlar. Bu orgutlerin cogunun saglam bir gecmis performanslari oldugu icin, hisse senedi secimlerinde tutucu olan bireyler icin ytirim araclaridir.
+
+- `Deger Artisi Saglayan Hisse Senetleri`: Isminden de tahmin edebileceginiz gibi, deger artisi saglayan hisse senetleri guclu buyume potansiyeli olan sirketlere aittir. Bu kategorideki bircok sirketin satis, kazanc ve piyasa paylari ekonominin genelinden daha hizli buyumektedir. Bu tarz hisse senetleri genellikle arastirma ve gelistirmede gelismis olan sirketleri temsil eder; ornegin yeni teknolojilerdeki onculer siklikla deger artisi saglayan hisse sentleri sirketleridir. Bu sirketlerdeki kazanclar kar payi olarak hissedarlara odenmek yetine cogunlukla hemen ise geri yatirirlir.
+
+- 
