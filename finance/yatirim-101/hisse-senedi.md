@@ -65,4 +65,10 @@
 
 - Herhangi bir hisse senedi, ismini ticaretinin yapildigi borsadan alir (bu, alanin sinirli oldugu bir levha veya ekrana sirketin tam ismini yazmaktan daha koalydir). Bir hisse senedinden soz ederken, once ticaretinin yapildigi borsanin bas harflerinin verilmesi ve ardindan iki nokta ust uste ve hisse senedi sembolunun gelmesi alisagelmis bir uygulamadir.
 
-- 
+- Deger hisse senetleri sirketin kazanc, kar payi, satis veya diger ana faktorleriyle kiyaslandiginda ucuz gorunurler. Esasen odediginizden daha fazlasini aliyorsunuzdur: iyi bir deger. Deger artisi saglayan hisse senetlerine yatirim yapan yatirimci sayisi yuksek oldugunda, deger hisse senetleri genellikle goz ardi edilir. Bu da onlari bilgili ve sezgili yatirimcilar icin uygun kelepir hisseler haline getirir. (tam anlamadim bu kismi kitap tam anlatmiyor)
+
+- `Borsa Disi Piyasalar`: Kucuk hisseler Ulusal Kotasyon Burosunun idare ettigi bir forum olan borsa disi piyasalarda (pembe kagitlar) ya da NASDAQ kucuk firmalar piyasasinda islem gorurler.  
+
+- `Kucuk Hisseler`: Kucuk hisseler satis fiyati 5 dolar veya daha az olan hisselerdir ve bircok durumda bu kadar bile ederlerse sanslisiniz demektir. Bir cok kucuk hissenin genellikle onemli bir gelir veya kazanci yoktur. Kucuk hisselerde kaybetme potansiyeliniz yuksektir. Eger bu tur bir sirkete yatirim yapmaya cok istekliyseniz, ilerleme kaybedip kaybetmedigini gormek icin hisseyi biraz takip edin. Sirket hakkinda ogrenebildiginiz her seyi ogrenin ve karsiniza cikabilecek bir tuoyaya gore harakate gecmeye kesinlikle kalkmayin. Bu hisselerin ardindaki sirketlerin sermayeleri cok azdir ve genellikle SPK'a rapor sunmalari sart kosulmaz. Tezgah ustu islem yaparlar ve halka acik bilgi miktarlari sinirlidir. Bu da basli basina kaygilandirici bir seydir. Kac tane bilgili yatirimci cok az bilgi veren veya hic vermeyen bir yatirima para yatirmak ister ki? Yinede insanlar kucuk hisse senetlerine yatirim yaparlar.
+
+
