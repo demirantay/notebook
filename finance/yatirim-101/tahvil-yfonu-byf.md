@@ -24,4 +24,17 @@ Tabikide tek yatirim yapabileceginiz hisse senetleri degildir. Onun disinda en o
  
  - Bir hissedarin aksine tahvil sahibi, sirketin basari veya basarisizligindan etkilenmez. Hisse senetleri sirketin varliklariyla baglantili olarak duser veya yukselir. Tahvillerde ise bir sirketin durumundan bagimsiz olarak  - elbette iflas etmedigi surece - paraniza karsilik faizinizi ve vade tariginde anaparanizi alirsiniz. Dolayaisiyla tahviller sabit gelir yatirimlari olarak adlandirilir cunku ne kadar kazanacaginizi bilirisniz; tabi vadesinden once satmadiginiz takdirde. Vadesinden once satmaniz halinde fiyati fiyati piyasa belirler. Hisse senedi fiyatlari gibi sirket tahvilleri de sirketin kazanclarindan etkilenebilir. Ama genellikle faiz oranlarindaki dalgalanmalardan cok daha yuksek bir derecede etkilenirler.
  
- - Portfoyunuz icin bir tahvil degerlendirirken assagidaki yedi kiritik ozelligi analzi   ....
+ - Portfoyunuz icin bir tahvil degerlendirirken assagidaki yedi kiritik ozelligi analiz etmeyi unutmayin:
+    - 1. Fiyat
+    - 2. Bildirilen faiz orani
+    - 3. Guncel getiri
+    - 4. Vade tarihi
+    - 5. Paraya cevrilme ozellikleri
+    - 6. Kredi derecelendirme
+    - 7. Gelir vergisi etkisi
+    
+ - `Tahvil Riskleri`: Genel bir kural olarak, tahviller, ozellikle de birlesik DEvletler devlet tahvilleri hisse senetlerinden daha az riskli ve dolayisiyla da daha tutucu bir yatirim araci olarak kabul edilebilirler (devletin iflas etme olasiligi cok dusuk oldugu icin devlet tahvillerinin riski de cok dusuktur.) Tahvillerin ayrica cogu 1. dunya ulkesinde banka hesabi veya mevduat hesabindan elde edebileceginizden daha yuksek bir faiz oranini duzenli bir sekilde sunmasi onlari cazip nispeten guvenli yatirim araclari yapar. Ama tahvillerin yapilarindan kaynaklanana sakinca ve riskleri vardir. EN temel risk tahvili cikaranin borcunu odeyememesi, yani paranizi geri alamamanizdir. Ayrica faiz oranlari yukseldiginde satmak zorunda kalirsaniz o anin tahvil piyasasina gore para da kaybedebilirsiniz. Veya piskolojik olarak tahvilerin az getirisi olmasi sizi yorabilir ve yetimsizlik hissedebilirsiniz.
+ 
+ ## Neden Tahvil Alinmali ?
+ 
+ ...
