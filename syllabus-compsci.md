@@ -47,6 +47,7 @@ Don’t be the person who “never quite understood” something like recursion
   - [ ] Book : [Computer Organization and Design](http://www4.comp.polyu.edu.hk/~comp2421/ComputerOrganizationAndDesign5thEdition2014.pdf). Not every section is essential.
   - [ ] Course : [CS61C course](http://inst.eecs.berkeley.edu/~cs61c/sp15/) past lecture [videos](https://archive.org/details/ucberkeley-webcast-PL-XXv-cvA_iCl2-D-FS5mk0jFF6cYSJs_) are here
   - [ ] Book: This book is essential for architecture : Computer Architecture : A Quantitative Approach
+  - [ ] Project: Write your own Basic Compilers it is a very good project for computer architecture (u may skip ahead and do the langs and compilers section below)
   - [ ] Project: Write a CPU or do a project that will help you implement what you have learned.
 
   ### Algorithms and Data Structures
