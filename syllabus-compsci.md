@@ -324,11 +324,11 @@ DevOps is something very complex instead of having a one strict route you cna ca
 
 ### Visual Road Map
 
- <img align="center" width="100%" src="/images/intro.png" />
- <img align="center" width="100%" src="/images/frontend.png" />
- <img align="center" width="100%" src="/images/backend.png" />
- <img align="center" width="100%" src="/images/devops.png" />
- <img align="center" width="100%" src="/images/algorithms.png" />
+ <img align="center" width="100%" src="/misc/images/intro.png" />
+ <img align="center" width="100%" src="/misc/images/frontend.png" />
+ <img align="center" width="100%" src="/misc/images/backend.png" />
+ <img align="center" width="100%" src="/misc/images/devops.png" />
+ <img align="center" width="100%" src="/misc/images/algorithms.png" />
 
 
  ### Game Dev
