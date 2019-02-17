@@ -25,8 +25,8 @@ Table of Contents
   - [Front End](#front-end)
   - [Back End](#back-end)
   - [Dev Ops](#devops)
-  
-  
+
+
 ## Section 1
 
 Fundemental Computer Science Cirriculum
@@ -144,9 +144,9 @@ Don’t be the person who “never quite understood” something like recursion
  ---
  ---
  ---
- 
+
  ## Section 2
- 
+
  Low level programming projects
 
  ### General Low Level Projects
@@ -190,7 +190,7 @@ Every developer should code once:
 - [ ] Important: **Start Contributing to Open Source projects**
   - [ ] [First Contributions](https://github.com/Roshanjossey/first-contributions)
   - [ ] [Open Source Guide](https://github.com/github/opensource.guide)
-  
+
   - [ ] Start earning money from what you code since you completed your fundemental basic education spend your time more wisely like contributing to big remote working friendly companies open source projects.
  - [ ] You can try to win [kaggle.com](https://www.kaggle.com/) prices since there are really good prices such as up to 1 million dollars
  - [ ] Learn game dev for money in the future
@@ -325,14 +325,14 @@ DevOps is something very complex instead of having a one strict route you cna ca
 ### Visual Road Map
 
  <img align="center" width="100%" src="/images/intro.png" />
- <img align="center" width="100%" src="/images/frontend-v2.png" />
+ <img align="center" width="100%" src="/images/frontend.png" />
  <img align="center" width="100%" src="/images/backend.png" />
  <img align="center" width="100%" src="/images/devops.png" />
  <img align="center" width="100%" src="/images/algorithms.png" />
- 
- 
+
+
  ### Game Dev
- 
+
  ## 🚀 Introduction
 
 ![](https://github.com/utilForever/game-developer-roadmap/blob/master/Images/Intro.png)
@@ -352,4 +352,3 @@ DevOps is something very complex instead of having a one strict route you cna ca
 ## 📑 Game Tester (QA) Roadmap
 
 ![](https://github.com/utilForever/game-developer-roadmap/blob/master/Images/GameTester(QA).png)
-
