@@ -1,25 +1,43 @@
-Table of Contents
-
-[Computer Science Cirriculum](#CompSci-Syllabus)
-
 # CompSci Syllabus
 
-The syllabus divides into three sections. 1 - is for Computer Science guide. 2 - Doing a fullfilled project. 3- Teaching the market skills for myself. Write a feynman note for each check box learned.
+The syllabus is divided into sections. The first section is the basic theorotical resources that every software engineer should know. The following sections are my own preferred choosings (each section is divided with hr lines).
 
-## Computer Science Guide
+Table of Contents
 
-Try to make at least something in each section and since sections put on top of one another do not move to the other section without learning the perivious one fully.
+- [Section 1](#section-1)
+- [Fundemental Computer Science Cirriculum](#fundemental-computer-science-cirriculum)
+  - [Programming](#programming)
+  - [Computer Architecture](#computer-architecture)
+  - [Algorithms & Data Structures](#algorithms-and-data-structures)
+  - [Mathematics](#mathematics)
+  - [Operating Systems](#operating-systems)
+  - [Computer Networking](#computer-networking)
+  - [Databases](#databases)
+  - [Languages and Compilers](#languages-and-compilers)
+  - [Distributed Systems](#distributed-systems)
+  - [Code University](#code-university)
+  - [Miscellaneous](#other-pet-/-advanced-topics)
+- [Section 2](#section-2)
+  - [General Low Level Projects](#general-low-level-projects)
+  - [Low Level Web Dev Projects](#low-level-web-dev-projects)
+- [Section 3](#section-3)
+  - [Intro](#intro)
+  - [Front End](#front-end)
+  - [Back End](#back-end)
+  - [Dev Ops](#devops)
+  
+  
+## Section 1
+
+Fundemental Computer Science Cirriculum
 
 ### Programming
 
 Don’t be the person who “never quite understood” something like recursion
 
  - [X] Course : [Helsinki MOOC's](http://mooc.fi/courses/2013/programming-part-1/material.html) for the desired language.
- - [X] Book : SICP (Structured Interpretion of Computer Programs)-*(shelved it for later it is hard)*
- - [ ] Book : [modern c book](https://www.scribd.com/doc/39933932/C-Programming-a-Modern-Approach-2nd-Edition-K-N-King)
- - [ ] Book: K&R's [C programming langauge](http://www.dipmat.univpm.it/~demeio/public/the_c_programming_language_2.pdf)
- - [ ] Project: Use karan's list to do a one big project out of all small projects on the list
- // #osdev glauxosdever reccomended to impelement a strcpy() exersieces
+ - [ ] Book : SICP (Structured Interpretion of Computer Programs)-*(shelved it for later it is hard)*
+ - [X] Book : [modern c book](https://www.scribd.com/doc/39933932/C-Programming-a-Modern-Approach-2nd-Edition-K-N-King)(Did not finish left at pg.292 )
 
 ### Computer Architecture
 
@@ -29,9 +47,10 @@ Don’t be the person who “never quite understood” something like recursion
   - [ ] Book : [Computer Organization and Design](http://www4.comp.polyu.edu.hk/~comp2421/ComputerOrganizationAndDesign5thEdition2014.pdf). Not every section is essential.
   - [ ] Course : [CS61C course](http://inst.eecs.berkeley.edu/~cs61c/sp15/) past lecture [videos](https://archive.org/details/ucberkeley-webcast-PL-XXv-cvA_iCl2-D-FS5mk0jFF6cYSJs_) are here
   - [ ] Book: This book is essential for architecture : Computer Architecture : A Quantitative Approach
+  - [ ] Project: Write your own Basic Compilers it is a very good project for computer architecture (u may skip ahead and do the langs and compilers section below)
   - [ ] Project: Write a CPU or do a project that will help you implement what you have learned.
 
-  ### Algorithms & Data Structures
+  ### Algorithms and Data Structures
 
   If you don’t know how to use ubiquitous data structures like stacks, queues, trees, and graphs, you won’t be able to solve hard problems.
 
@@ -43,7 +62,7 @@ Don’t be the person who “never quite understood” something like recursion
   - [ ] Course : [Algorithms part II](https://www.coursera.org/learn/algorithms-part2)
   - [ ] Project: View the bottom of this page and implement some of the algorithm map
 
-### Mathematics for Computer Science
+### Mathematics
 
   CS is basically a runaway branch of applied math, so learning math will give you a competitive advantage.
 
@@ -123,8 +142,14 @@ Don’t be the person who “never quite understood” something like recursion
 
  ---
  ---
+ ---
+ ---
+ 
+ ## Section 2
+ 
+ Low level programming projects
 
- ## Tablet Operating System
+ ### General Low Level Projects
 
  Try to build your knowledge up so that you can start building the tablet Operating system that is inspired from the westworld series. Try to go from top to down approach. Do not try to build everything atleast understand what it is and create a mini demo project if you are able to.
 
@@ -138,13 +163,17 @@ Don’t be the person who “never quite understood” something like recursion
  - [Rasberry PI OS](https://github.com/s-matyukevich/raspberry-pi-os)
  - [OS Tutorial](https://github.com/cfenollosa/os-tutorial)
 
+Every developer should code once:
+ - [ ] Editor
+ - [ ] RogueLike
+ - [ ] A Robot
+ - [ ] Language -- interpreted
+ - [ ] Interpreter
+ - [ ] Language -- compiled
+ - [ ] Compiler
+ - [ ] Virtual Machine Language / Translator
 
-
-
- ---
- ---
-
- ### Web dev project
+ ### Low Level Web Dev Projects
 
  - [ ] Build a Server
  - [ ] Backup a server
@@ -161,7 +190,7 @@ Don’t be the person who “never quite understood” something like recursion
 - [ ] Important: **Start Contributing to Open Source projects**
   - [ ] [First Contributions](https://github.com/Roshanjossey/first-contributions)
   - [ ] [Open Source Guide](https://github.com/github/opensource.guide)
-
+  
   - [ ] Start earning money from what you code since you completed your fundemental basic education spend your time more wisely like contributing to big remote working friendly companies open source projects.
  - [ ] You can try to win [kaggle.com](https://www.kaggle.com/) prices since there are really good prices such as up to 1 million dollars
  - [ ] Learn game dev for money in the future
@@ -169,9 +198,12 @@ Don’t be the person who “never quite understood” something like recursion
 
  ---
  ---
+ ---
+ ---
 
+## Section 3
 
- ## Market Skills Road Map
+ Market Skills Road Map
 
  It is important to learn in this sequence 1-Intro, 2-Backend, 3-Frontend, 4-DevOps. And do not try to build atleast one thing after learning each subject.
 
@@ -284,18 +316,11 @@ DevOps is something very complex instead of having a one strict route you cna ca
 - [ ] Learn: TLS, STARTLS, SSL, HTTTPS, SCP, SSH, SFTP
 - [ ] Learn: Postmortem analysis when something bad happens.
 
-### Low Level Programming
 
-Every developer should code once:
- - [ ] Editor
- - [ ] RogueLike
- - [ ] A Robot
- - [ ] Language -- interpreted
- - [ ] Interpreter
- - [ ] Language -- compiled
- - [ ] Compiler
- - [ ] Virtual Machine Language / Translator
-
+---
+---
+---
+---
 
 ### Visual Road Map
 
