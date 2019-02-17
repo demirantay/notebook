@@ -276,151 +276,18 @@
   const int foo[4] = {1, 2, 3, 4};
   ```
 
-## Methods / Functions
+## Methods
 
-- This is how you define a function (some languages call functions with return values `procedures` such as lisp but in c you can simply call them functions or methods) :
-  ```c
-  int average (int a, int b) {
-    return (a + b) / 2;
-  }
-  ```
-  As you can see it is kinda the same with java lang you write the `type` that you want the function to return at the begining which is in this case a integer `int` and than you write the name of the function with the following parameters inside the parantheses. If you dont want the function to return a value simply put `void` on the type keyword part and leave out the "return". See the following for writing void funcs:
-   ```c
-   void foo() {
-    // ...
-    // no return
-   }
-   ```
- 
-- Remember functions **MAY NOT** return arrays, however it is very commonly and easily used to pass an array as a parameter (argument) to a function.
+- foo
 
-- When you define functions below your main function it causes a lot of errors since the program has no way of knowing what the definition is inside the function. So if you declare a function after the main function you can simply include the header of the function before the main function, so if the function is used in the main it would know where to look:
-  ```c
-  void foo(int a);   // <-- see how it is declared at top but defined after main
-  
-  int main(void) {
-    int n = foo(); 
-  }
-  
-  int foo(int a) {
-    return a;
-  }
-  ```
-
-- Arrays are often used as arguments. When a function parameter is a one-dimensional array, the length of the paramter array is unspecified. There is just one problem how will the function know how long the array is. Unfortunately C doesnt provide any easy way for a function to determine the length of an array passed to it. Instead we will have to supply the length in a additional argument. See the following:
-  ```c
-  int foo (int arr[], int length) {
-    int arr[length];  // < -- here you have a new array
-  }
-  
-  // Or you can do this if you pass the length before the array in the parameter parantheses:
-  
-  int foo (int length, int arr[length]) {
-    ...
-  }
-  ```
-  Do note that if the array is defined erlier you should not put the bracekts while passing it as a argument: `foo(pre_defined_arr, 10)`
-  
-- There is a quickway to return values without having to use ifs but this is not very commonly used, see the following:
-  ```c
-  return n >= 0 ? n : 0;
-  ```
-  In the exapmle return statement above first the return checks if n is a positive number if it is it returns it, otherwise it returns 0 its that simple but not this convenient every time you are programming.
-  
-  
-- I will not get into recrusion a lot right now because i will note a lot of it in the algorithm notes however the idea behind it is veeeery simple. A function is recursive if it calls itself in it. See the following:
-  ```c
-  int foo (int number) {
-    if (number > 0) { 
-      foo(number - 1);   // <--- see it calls itself in it with a different parameter each time
-    }
-    else {
-      return 0;
-    }
-  }
-  ```
-  Recrusion is not that handy to use if you are not dealing with complex algorithm stcutrues like quickosrt where the recrusion arises itself from the design of the algortihm. However for the most part using a if block is a better solution than recrusion. Do not make your code unneccesarily complex
-  
 
 ## Program Organization
 
-- If you want to define global variables in C you can simply define them out of any function blocks. This includes the main function also:
-  ```c
-  #include <stdio.h>
-  
-  /* Global Variables */
-  int foo = 7;
-  
-  /* Functions */
-  int main(void) {..}
-  ```
-  External variables (global) are very convenient when many functions need to share a variables. However in most cases it is better for functions to comminucate through parameters and local variables rather than global variables. Because one varible mistake can crush or create a devastating bug in the program and we do not want that.
-  
-- Plus you can use the `static` keyword while defining either variables or functions. It has two use cases 1st by stacoverflow definition "A static variable inside a function keeps its value between invocations". However we will use the 2nd definition: A static global variable or a function is "seen" only in the file it's declared in. (2) Is used widely as an "access control" feature. If you have a .c file implementing some functionality, it usually exposes only a few "public" functions to users. The rest of its functions should be made static, so that the user won't be able to access them. This is encapsulation, a good practice.
-  
-- Now that we ve seen the major elements that make up a C program lets develop a strategy for arranging our programs in a file. I will discuss about a multi modular filed program down below in a more advanced part this is just for a tase: The code below represents tg=he most commonly way of ordering your program:
-  ```
-  /* Comment About the program its intentions, 
-     author, links, documentation ...etc. */
-  #include directives
-  #define directives
-  type definitions
-  Declerations of external variables
-  Prototypes for functions other than main
-  Definitions of main
-  Definitions of other functions
-  ```
-  Side Note: Most of the C programmers use a boxed comments before each function to explain what each one does it comes very handy!
-  
+- foo
 
 ## Pointers
 
-- Pointers are one of the C's most important topic so we will be discussing them in three different headers over the course of this markdown file.
-
-- In modern day computers main memory is divided into bytes. and each byte contains 8 bits. Each byte has a unique adress to distinguish it from the other bytes in the memory. Heres where pointers come in instead of remembering all that integer numbers in a adress number you can simply store them in a special **pointer number**. For example, when we store the adress of a variable `i` in the pointer variable `p`, we say `p` points to `i`. In other words pointers are nothing more than a variable taht stores an adress of a variable.
-
-- You can define a pointer the same way you define a variable just with an addition of an asterisk:
-  ```c
-  int *p;
-  ```
-  Pointer declerations can appear in other definitions alongside normal variables:
-  ```c
-  int i, j, a[10], *p, *u;
-  ```
-  
-- You need to define what type of adress the pointer will point to so as the same way with other objects you need to have types:
-  ```c
-  int *p;
-  double *q;
-  char *r;
-  ```
-  
-- C provides specific operators to use with pointers. To find the adress of a variable we use the `&` (Adress) operator. If "x" is a variable than "&x" is the adress of "x" in memory. And to gain accsess to the object that a pointer points to we use the `*` (indirection) operator. If "p" is a pointer, then `*p` represents the object to which "p" currently ppoints.
-
-- We need to actually point to something so lets view the followin code:
-  ```c
-  int i = 10;
-  
-  int p = &i;   // --> now p holds the adress of i
-  ```
-
-- If you want to get the object that pointer points to you need to use the indirectio n(`*`) asterisk operator, otherwise you will get the memory adress:
-  ```c
-  int i = 10;
-  int *p = &i;
-  
-  printf("%d", *p);    /* prints 10  */
-  printf("%d", p);     /* prints the adress in memory e.g. 149204 */
-  ```
-  
-- By the way you can have two pointers assigned to the same objects adress such as the following:
-  ```c
-  int i, *p, *j;
-  
-  p = &i;  // points to same obj
-  
-  j = p;   // points to same obj
-  ```
+- foo
 
 
 
@@ -468,6 +335,8 @@
 
 - You can compare pointers with basic operators:
   ```c
+  
+  ```
 
 
 
