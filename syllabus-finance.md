@@ -31,3 +31,9 @@ Try to add new courses and books for each of the topic of your choosing and chan
 - [ ] Current Economics
 - [ ] Micro Economics
 - [ ] Macro Economics
+
+
+---
+
+
+Kisisel yatirimi ogrendikten sonra ogrendigin cogu iktisat konulari yazilim ile ilgili olsun
