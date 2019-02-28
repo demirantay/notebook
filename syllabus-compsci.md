@@ -9,13 +9,13 @@ Table of Contents
   - [Programming](#programming)
   - [Computer Architecture](#computer-architecture)
   - [Algorithms & Data Structures](#algorithms-and-data-structures)
-  - [Mathematics](#mathematics)
   - [Operating Systems](#operating-systems)
   - [Computer Networking](#computer-networking)
   - [Databases](#databases)
   - [Languages and Compilers](#languages-and-compilers)
   - [Distributed Systems](#distributed-systems)
   - [Code University](#code-university)
+  - [Mathematics](#mathematics)
   - [Miscellaneous](#other-pet-/-advanced-topics)
 - [Section 2](#section-2)
   - [General Low Level Projects](#general-low-level-projects)
@@ -50,7 +50,7 @@ Don’t be the person who “never quite understood” something like recursion
   - [ ] Project: Write your own Basic Compilers it is a very good project for computer architecture (u may skip ahead and do the langs and compilers section below)
   - [ ] Project: Write a CPU or do a project that will help you implement what you have learned.
 
-  ### Algorithms and Data Structures
+### Algorithms and Data Structures
 
   If you don’t know how to use ubiquitous data structures like stacks, queues, trees, and graphs, you won’t be able to solve hard problems.
 
@@ -61,17 +61,6 @@ Don’t be the person who “never quite understood” something like recursion
   - [ ] Course : [Algorithms part I](https://www.coursera.org/learn/algorithms-part1)
   - [ ] Course : [Algorithms part II](https://www.coursera.org/learn/algorithms-part2)
   - [ ] Project: View the bottom of this page and implement some of the algorithm map
-
-### Mathematics
-
-  CS is basically a runaway branch of applied math, so learning math will give you a competitive advantage.
-
-  - [ ] Study : Most important math for CS is discrete math. Finish the prerequisites from khan academy.
-  - [ ] Course : [Important dicrete course](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-042j-mathematics-for-computer-science-fall-2010/video-lectures/)
-  - [ ] Read : [Lecture notes for Discrete Mathematics](http://www.cs.elte.hu/~lovasz/dmbook.ps)
-  - [ ] Course : [Mathemtaics for Computer Scinece](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-042j-mathematics-for-computer-science-spring-2015/index.htm)
-   - [ ] Course: [Essence of Linear Algebra](https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab)
-   - [ ] Course : [Linear Algebra](https://ocw.mit.edu/courses/mathematics/18-06-linear-algebra-spring-2010/video-lectures/)
 
  ### Operating Systems
 
@@ -120,6 +109,17 @@ Don’t be the person who “never quite understood” something like recursion
 
   - [ ] Guide : [Code Univeristy Guide](https://github.com/jwasham/coding-interview-university) : Finish this guide after finishing the sections above this guide suppose to take your time nearly a year so go through each item very seriously. If you are able to come this far hell go apply for big 4.
   - [ ] Project: Once you are done you can solve the algorithms that are listed as a roadmap in a image at the bottom of this file.
+  
+### Mathematics
+
+  CS is basically a runaway branch of applied math, so learning math will give you a competitive advantage.
+
+  - [ ] Study : Most important math for CS is discrete math. Finish the prerequisites from khan academy.
+  - [ ] Course : [Important dicrete course](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-042j-mathematics-for-computer-science-fall-2010/video-lectures/)
+  - [ ] Read : [Lecture notes for Discrete Mathematics](http://www.cs.elte.hu/~lovasz/dmbook.ps)
+  - [ ] Course : [Mathemtaics for Computer Scinece](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-042j-mathematics-for-computer-science-spring-2015/index.htm)
+   - [ ] Course: [Essence of Linear Algebra](https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab)
+   - [ ] Course : [Linear Algebra](https://ocw.mit.edu/courses/mathematics/18-06-linear-algebra-spring-2010/video-lectures/)
 
  ### Other Pet/Advanced Topics
 
