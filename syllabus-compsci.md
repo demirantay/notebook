@@ -47,7 +47,7 @@ Don’t be the person who “never quite understood” something like recursion
   - [ ] Book : [Computer Organization and Design](http://www4.comp.polyu.edu.hk/~comp2421/ComputerOrganizationAndDesign5thEdition2014.pdf). Not every section is essential.
    - [ ] Book : [Hidden Language of Computers: CODE](ftp://ftp.borg.moe/yarr/Gentoomen%20Library/Programming/Misc/Charles%20Petzold%20-%20Code%20-%20The%20Hidden%20Language%20of%20Computer%20Hardware%20and%20Software.pdf)
   - [ ] Course : [CS61C course](http://inst.eecs.berkeley.edu/~cs61c/sp15/) past lecture [videos](https://archive.org/details/ucberkeley-webcast-PL-XXv-cvA_iCl2-D-FS5mk0jFF6cYSJs_) are here. (You can just try to do the projects of this course)
-  - [ ] Book: This book is essential for architecture : Computer Architecture : A Quantitative Approach
+  - [ ] Book: This book is essential for architecture : Computer Architecture : A Quantitative Approach -- This is advanced grad level decide weather you need it after completing the above
   - [ ] Project: Write a CPU in HDL and build a small your own computer (you will add your own operating sys to it later).
 
 ### Algorithms and Data Structures
