@@ -2,7 +2,7 @@
 
 Notes on the 5th edition book - Hannesy & Patterson
 
-## Chapter 1
+---
 
 - There are 8 main great ideas in Computer Archiecture, view them below in a nutshell:
     - `Moore's Law`: computer architecs must anticipate where the techonolgy will be when the design finishes
@@ -15,4 +15,6 @@ Notes on the 5th edition book - Hannesy & Patterson
     - `Dependability`: make systems dependable by building strong components that can take over when failure happens
     
     
-# I am left at page 36 ~ `1.3 Below Your Program`
+- The underlying harware in every computer performs the same basic functions: input data , output data , processing data , storing data.
+
+- The five classic components of a computer are: input, output, memory, datapath and control (with last two sometimes combined and said 'processor') 
