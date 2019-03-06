@@ -109,6 +109,7 @@ Don’t be the person who “never quite understood” something like recursion
 
   - [ ] Guide : [Code Univeristy Guide](https://github.com/jwasham/coding-interview-university) : Finish this guide after finishing the sections above this guide suppose to take your time nearly a year so go through each item very seriously. If you are able to come this far hell go apply for big 4.
   - [ ] Project: Once you are done you can solve the algorithms that are listed as a roadmap in a image at the bottom of this file.
+  - [ ] **Once you are done with the fundementals open up "Human Universals" and try to come up with an idea to build** 
   
 ### Mathematics
 
