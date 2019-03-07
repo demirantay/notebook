@@ -28,4 +28,8 @@ Notes on the 5th edition book - Hannesy & Patterson
     - `Control`: The component of the processor that commands the datapath, memory and I/O devices accordign to the instructions of the program.
     - `Memory`: The storage area in which programs are kept when they are running and that contains the data needed by running programs
     - `DRAM`: "Dynamic Random Acsess Memory" built as an integrated circuit. It provides random acsess to any location.
-    - `Cache Memory`" 
+    - `Cache Memory`: A small, fast memory that acts as a buffer for a slower, larger memory. Safer place to hide data.
+    - `SRAM`: Static Random Accsess Memory built as an integrated circuit, but faster and less dense that DRAM
+    
+- Both harware and software consists of hierarihcal layers using abstraction, with each lower level hiding details from the level above. One key interface beetween the levels of abstraction is the `Instruction Set Architecture` -- the interface between the harware and low-level software. This abstract interface enables many implementations of varying cost and performance to run identical software.
+    
