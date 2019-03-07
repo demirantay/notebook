@@ -2,7 +2,7 @@
 
 Notes on the 5th edition book - Hannesy & Patterson
 
----
+## Computer Abstraction and Thecnology
 
 - There are 8 main great ideas in Computer Archiecture, view them below in a nutshell:
     - `Moore's Law`: computer architecs must anticipate where the techonolgy will be when the design finishes
@@ -18,3 +18,14 @@ Notes on the 5th edition book - Hannesy & Patterson
 - The underlying harware in every computer performs the same basic functions: input data , output data , processing data , storing data.
 
 - The five classic components of a computer are: input, output, memory, datapath and control (with last two sometimes combined and said 'processor') 
+
+- Lets view the components in more depth:
+    - `Input Device`: A mechanism thorugh which the computer is fed information such as a keyboard
+    - `Output Device`: A mechanism that shows the result of a computation to the user such as display, screen anoother computer
+    - `Integrated Circuit`: Also called a "chip". A device combining dozens to millions of transistors
+    - `Central Processing Unit (CPU)`: Also called processor. The active part of the computer, which contains the datapath and controls the computer.
+    - `Datapath`: The component of the processor that performs arithmetic operations
+    - `Control`: The component of the processor that commands the datapath, memory and I/O devices accordign to the instructions of the program.
+    - `Memory`: The storage area in which programs are kept when they are running and that contains the data needed by running programs
+    - `DRAM`: "Dynamic Random Acsess Memory" built as an integrated circuit. It provides random acsess to any location.
+    - `Cache Memory`" 
