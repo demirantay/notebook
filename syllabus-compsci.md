@@ -36,7 +36,7 @@ Fundemental Computer Science Cirriculum
 Don’t be the person who “never quite understood” something like recursion
 
  - [X] Course : [Helsinki MOOC's](http://mooc.fi/courses/2013/programming-part-1/material.html) for the desired language.
- - [ ] Book : SICP (Structured Interpretion of Computer Programs)-*(shelved it for later it is hard)*
+ - [X] Book : SICP (Structured Interpretion of Computer Programs)-*(shelved it for later it is hard)*
  - [X] Book : [modern c book](https://www.scribd.com/doc/39933932/C-Programming-a-Modern-Approach-2nd-Edition-K-N-King)(Did not finish left at pg.292 )
 
 ### Computer Architecture
@@ -46,7 +46,6 @@ Don’t be the person who “never quite understood” something like recursion
 
   - [ ] Book : [Computer Organization and Design](http://www4.comp.polyu.edu.hk/~comp2421/ComputerOrganizationAndDesign5thEdition2014.pdf). Not every section is essential.
    - [ ] Book : [Hidden Language of Computers: CODE](ftp://ftp.borg.moe/yarr/Gentoomen%20Library/Programming/Misc/Charles%20Petzold%20-%20Code%20-%20The%20Hidden%20Language%20of%20Computer%20Hardware%20and%20Software.pdf)
-  - [ ] Course : [CS61C course](http://inst.eecs.berkeley.edu/~cs61c/sp15/) past lecture [videos](https://archive.org/details/ucberkeley-webcast-PL-XXv-cvA_iCl2-D-FS5mk0jFF6cYSJs_) are here. (You can just try to do the projects of this course)
   - [ ] Book: This book is essential for architecture : Computer Architecture : A Quantitative Approach -- This is advanced grad level decide weather you need it after completing the above
   - [ ] Project: Code a simple Control Version System like git 
   - [ ] Project: Design and build a simple computer
