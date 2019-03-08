@@ -35,3 +35,15 @@ Notes on the 5th edition book - Hannesy & Patterson
 
 - These are the main parts of the memory:
     - `Volatile Memory`: Storage such as the DRAM that retains data only if it is recieving power
+    - `Nonvolatile Memory`: A form of memory that retains the data even in the absence of a powersource 
+    - `Main Memory`: Used to hold programs while they are running, typically consists of DRAM in todays computers.
+    - `Secondary Memory`: Nonvolatile memory used to store programs and data between typically consists of flash memories.
+    - `Magentic Disk`: Also called the "Hard Disk". A form of nonvolatile secondary memory 
+    - `Flash Memory`: A nonvolatile semi conductor memory it is slower and cheaper from DRAM
+    
+- Types of networks in computer architecture:
+    - `LAN`: A network designed to carry data within a georagraphically confined area typcially a single building
+    - `WAN`: A network extended over hundreds of kilometers   
+   
+- Performance of Computers: 
+    - `Response Time`: Also called the "Execution Time". The total time required 
