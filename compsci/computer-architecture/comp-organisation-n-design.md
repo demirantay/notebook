@@ -32,4 +32,6 @@ Notes on the 5th edition book - Hannesy & Patterson
     - `SRAM`: Static Random Accsess Memory built as an integrated circuit, but faster and less dense that DRAM
     
 - Both harware and software consists of hierarihcal layers using abstraction, with each lower level hiding details from the level above. One key interface beetween the levels of abstraction is the `Instruction Set Architecture` -- the interface between the harware and low-level software. This abstract interface enables many implementations of varying cost and performance to run identical software.
-    
+
+- These are the main parts of the memory:
+    - `Volatile Memory`: Storage such as the DRAM that retains data only if it is recieving power
