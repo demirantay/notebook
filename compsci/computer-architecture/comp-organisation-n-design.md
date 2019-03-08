@@ -46,4 +46,5 @@ Notes on the 5th edition book - Hannesy & Patterson
     - `WAN`: A network extended over hundreds of kilometers   
    
 - Performance of Computers: 
-    - `Response Time`: Also called the "Execution Time". The total time required 
+    - `Response Time`: Also called the "Execution Time". The total time required  ... 
+    
