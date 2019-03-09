@@ -141,6 +141,18 @@ Don’t be the person who “never quite understood” something like recursion
 
  There are a lot more online free courses check OSS University or Other starred guide repos ...
 
+---
+---
+---
+---
+
+
+## Make a game like The Journey (sizofreni)
+
+
+
+
+
  ---
  ---
  ---
