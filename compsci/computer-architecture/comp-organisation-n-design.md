@@ -46,5 +46,11 @@ Notes on the 5th edition book - Hannesy & Patterson
     - `WAN`: A network extended over hundreds of kilometers   
    
 - Performance of Computers: 
-    - `Response Time`: Also called the "Execution Time". The total time required  ... 
+    - `Response Time`: Also called the "Execution Time". The total time required  for the computer to complete a task
+    - `Throughput`: Also called the bandwith. Another measure of performance, it is the number of tasks completed per unit
+    - `CPU Time`: The actual time the CPU spends computing for a single task
+    - `User CPU Time`: The CPU time spent in a program itself.
+    - `System CPU Time`: The CPU time spent in the operating system performing tasks on behalf of the prpogram.
+    - `Clock Cycle`: CPI of CPUs and stuff ... I did not understand this part on the book at the moment
     
+  
