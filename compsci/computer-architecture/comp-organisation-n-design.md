@@ -52,5 +52,15 @@ Notes on the 5th edition book - Hannesy & Patterson
     - `User CPU Time`: The CPU time spent in a program itself.
     - `System CPU Time`: The CPU time spent in the operating system performing tasks on behalf of the prpogram.
     - `Clock Cycle`: CPI of CPUs and stuff ... I did not understand this part on the book at the moment
+    - `MIPS`: Known as "Million Instructions per Second". A measurement of program execution speed. Faster computers have more MIPS rating.
+    - P.S. Parellalism is required for performance 
     
+- "Execution Time" is the only valid and unimpeachable measure of performance. Many other metrics have been proposed and found wanting. Sometimes these metrics are flawed from the start by not reflecting execution time; other times a metric that is valid in a limited context is extended and used beyond that context or without the additional clarification needed to make it valid.
+
+## Instructions: Language of the Computer
+
+
+
+
+ 
   
