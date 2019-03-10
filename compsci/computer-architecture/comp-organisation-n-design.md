@@ -59,7 +59,8 @@ Notes on the 5th edition book - Hannesy & Patterson
 
 ## Instructions: Language of the Computer
 
-
+- Introduction:
+    - `Instruction Set`: The vocabulary of commands understood by a given architecture
 
 
  
