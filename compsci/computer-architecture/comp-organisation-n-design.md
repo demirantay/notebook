@@ -52,7 +52,7 @@ Notes on the 5th edition book - Hannesy & Patterson
     - `User CPU Time`: The CPU time spent in a program itself.
     - `System CPU Time`: The CPU time spent in the operating system performing tasks on behalf of the prpogram.
     - `Clock Cycle`: CPI of CPUs and stuff ... I did not understand this part on the book at the moment
-    - `MIPS`: Known as "Million Instructions per Second". A measurement of program execution speed. Faster computers have more MIPS rating.
+    - `MIPS`: Known as "Million Instructions per Second". A measurement of program execution speed. Faster computers have more MIPS rating. (MIPS is a assembly language)
     - P.S. Parellalism is required for performance 
     
 - "Execution Time" is the only valid and unimpeachable measure of performance. Many other metrics have been proposed and found wanting. Sometimes these metrics are flawed from the start by not reflecting execution time; other times a metric that is valid in a limited context is extended and used beyond that context or without the additional clarification needed to make it valid.
@@ -60,8 +60,11 @@ Notes on the 5th edition book - Hannesy & Patterson
 ## Instructions: Language of the Computer
 
 - Introduction:
-    - `Instruction Set`: The vocabulary of commands understood by a given architecture
-
+    - `Instruction Set`: The vocabulary of commands understood by a given architecture (most commonolyl used ISA lang is MIPS which is a assembly langauge). You can see MIPS commands [here](http://logos.cs.uic.edu/366/notes/mips%20quick%20tutorial.htm)
+    - `Stored Program Concept`: The idea that the instructions and data of many types can be stored in memory as numbers, leading to the stored-program computer.
+    
+- Operands of the Computer Harware:
+    -
 
  
   
