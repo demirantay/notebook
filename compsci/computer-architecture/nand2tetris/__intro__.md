@@ -43,13 +43,77 @@ To run any of the Nand2Tetris Course emulator tools you need to run this command
 
 - HDL Language [Reference]() will need to find a link
 
+### Harware Simulation
+
+- Since HDL is a hardware construction language, the process of writing and debugging HDL programs is quite similar to software development. The main difference is that instead of writing code in a language like Java, we write it in HDL, and instead of using a compiler to translate and test the code, we use a hardware simulator. The hardware simulator is a computer program that knows how to parse and interpret HDL code, turn it into an executable representation, and test it according to the specifications of a given test script.
+
+### Basic Logic Gates
+
+- The starting point of our computer architecture is the Nand gate, from which all other gates and chips are built. The Nand gate is designed to compute the following Boolean function:
+  ```hdl
+  Chip name: Nand 
+  Inputs:    a, b
+  Outputs:   out
+  Functions: If a=b=1 then out=0 else out=1
+  Comment:   This gate is considered primitive and thus there is
+             no need to implement it
+  ```
+
+- `Not Gate`: The single-input Not gate, also known as “converter,” converts its input from 0 to 1 and vice versa. The gate API is as follows:
+  ```hdl
+  Chip name: Not 
+  Inputs:    in
+  Outputs:   out
+  Functions: If in=0 then out=1 else out=0
+  ```
+
+- `And Gate`: The And function returns 1 when both its inputs are 1, and 0 otherwise.
+  ```hdl
+  Chip name: And 
+  Inputs:    a, b
+  Outputs:   out
+  Functions: If a=b=1 then out=1 else out=0
+  ```
+  
+- `Or Gate`: The Or function returns 1 when at least one of its inputs is 1, and 0 otherwise.
+  ```hdl
+  Chip name: Or 
+  Inputs:    a, b
+  Outputs:   out
+  Functions: If a=b=0 then out=0 else out=1
+  ```
+  
+- `Xor Gate`: The Xor function, also known as “exclusive or,” returns 1 when its two inputs have opposing values, and 0 otherwise.
+  ```hdl
+  Chip name: Xor 
+  Inputs:    a, b
+  Outputs:   out
+  Functions: If a!=b then out=1 else out=0
+  ```
+  
+- `Multiplexor Gate` A multiplexor is a three-input gate that uses one of the inputs, called “selection bit,” to select and output one of the other two inputs, called “data bits.” Thus, a better name for this device might have been selector. The name multiplexor was adopted from communications systems, where similar devices are used to serialize (multiplex) several input signals over a single output wire.
+  ```hdl
+  Chip name: Mux 
+  Inputs:    a, b, sel
+  Outputs:   out
+  Functions: If sel=0 then out=a else out=b
+  ```
+  
+- `Demultiplexor Gate` :
+  ```hdl
+  Chip name: DMux 
+  Inputs:    in, sel
+  Outputs:   out
+  Functions: If sel=0 then (a=in, b=0) else (a=0, b=in)
+  ```
+  
 <br>
 <br>
 <br>
 
 # Boolean Arithmetic
 
-...
+- a
 
 <br>
 <br>
