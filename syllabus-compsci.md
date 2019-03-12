@@ -49,8 +49,7 @@ Don’t be the person who “never quite understood” something like recursion
 ### Algorithms and Data Structures
 
   If you don’t know how to use ubiquitous data structures like stacks, queues, trees, and graphs, you won’t be able to solve hard problems.
-
-  - [ ] Course: [Stanford MOOC](https://www.coursera.org/specializations/algorithms)
+  
   - [ ] Course : [Algorithms part I](https://www.coursera.org/learn/algorithms-part1)
   - [ ] Course : [Algorithms part II](https://www.coursera.org/learn/algorithms-part2) 
   - [ ] Book: [The Algorithm Design Manual](https://www.amazon.com/Algorithm-Design-Manual-Steven-Skiena/dp/1848000693/?pldnSite=1) There are [vidoes](http://www3.cs.stonybrook.edu/~algorith/video-lectures/) avilable too.
