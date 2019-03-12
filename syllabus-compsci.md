@@ -50,9 +50,9 @@ Don’t be the person who “never quite understood” something like recursion
 
   If you don’t know how to use ubiquitous data structures like stacks, queues, trees, and graphs, you won’t be able to solve hard problems.
 
-  - [ ] Course : [Algorithms part I](https://www.coursera.org/learn/algorithms-part1)
-  - [ ] Course : [Algorithms part II](https://www.coursera.org/learn/algorithms-part2)
   - [ ] Course: [Stanford MOOC](https://www.coursera.org/specializations/algorithms)
+  - [ ] Course : [Algorithms part I](https://www.coursera.org/learn/algorithms-part1)
+  - [ ] Course : [Algorithms part II](https://www.coursera.org/learn/algorithms-part2) 
   - [ ] Book: [The Algorithm Design Manual](https://www.amazon.com/Algorithm-Design-Manual-Steven-Skiena/dp/1848000693/?pldnSite=1) There are [vidoes](http://www3.cs.stonybrook.edu/~algorith/video-lectures/) avilable too.
   - [ ] Exercise : [LeetCode](https://leetcode.com/) - solve around 100 problems.
   - [ ] Book : [How to solve it](https://www.amazon.com/How-Solve-Mathematical-Princeton-Science/dp/069116407X/?pldnSite=1)
