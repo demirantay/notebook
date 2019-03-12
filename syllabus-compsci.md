@@ -373,6 +373,10 @@ DevOps is something very complex instead of having a one strict route you cna ca
  <img align="center" width="100%" src="/misc/images/frontend.png" />
  <img align="center" width="100%" src="/misc/images/backend.png" />
  <img align="center" width="100%" src="/misc/images/devops.png" />
+ 
+ 
+### Algorithms
+
  <img align="center" width="100%" src="/misc/images/algorithms.png" />
 
 
