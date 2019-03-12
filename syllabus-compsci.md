@@ -55,7 +55,6 @@ Don’t be the person who “never quite understood” something like recursion
   - [ ] Course : [Algorithms part I](https://www.coursera.org/learn/algorithms-part1)
   - [ ] Course : [Algorithms part II](https://www.coursera.org/learn/algorithms-part2)
   - [ ] Project: View the bottom of this page and implement some of the algorithm map
-  - [ ] Project: Code a simple Control Version System like git 
 
 ### Interpreters
 
