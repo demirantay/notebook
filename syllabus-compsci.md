@@ -2,35 +2,6 @@
 
 The syllabus is divided into sections. The first section is the basic theorotical resources that every software engineer should know. The following sections are my own preferred choosings (each section is divided with hr lines).
 
-Table of Contents
-
-- [Section 1](#section-1)
-- [Fundemental Computer Science Cirriculum](#fundemental-computer-science-cirriculum)
-  - [Programming](#programming)
-  - [Algorithms & Data Structures](#algorithms-and-data-structures)
-  - [Interpreters](#interpreters)
-  - [Interpreter Virtual Machine](#interpreter-virtual-machine)
-  - [Assembly](#assembly)
-  - [Languages and Compilers](#languages-and-compilers)
-  - [Computer Architecture](#computer-architecture)
-  - [Databases](#databases)
-  - [Computer Networking](#computer-networking)
-  - [Distributed Systems](#distributed-systems)
-  - [Operating Systems](#operating-systems)
-  - [Emulators / Real Virtual Machine](#emulation-/-real-virtual-machine)
-  - [Code University](#code-university)
-  - [Debugging](#debugging)
-  - [Mathematics](#mathematics)
-  - [Miscellaneous](#other-pet-/-advanced-topics)
-- [Section 2](#section-2)
-  - [General Low Level Projects](#general-low-level-projects)
-  - [Low Level Web Dev Projects](#low-level-web-dev-projects)
-- [Section 3](#section-3)
-  - [Intro](#intro)
-  - [Front End](#front-end)
-  - [Back End](#back-end)
-  - [Dev Ops](#devops)
-  
 For [finding the books](http://freecomputerbooks.com/)
 
 
@@ -46,6 +17,15 @@ Don’t be the person who “never quite understood” something like recursion
  - [X] Book : SICP (Structured Interpretion of Computer Programs)-*(shelved it for later it is hard)*
  - [X] Book : [modern c book](https://www.scribd.com/doc/39933932/C-Programming-a-Modern-Approach-2nd-Edition-K-N-King)(Did not finish left at pg.292 )
  
+ ### Computer Architecture
+
+  If you don’t have a solid mental model of how a computer actually works, all of your higher-level abstractions will be brittle.
+  
+  - [ ] Book : Nand2Tetris
+  - [ ] Book : [Hidden Language of Computers: CODE](ftp://ftp.borg.moe/yarr/Gentoomen%20Library/Programming/Misc/Charles%20Petzold%20-%20Code%20-%20The%20Hidden%20Language%20of%20Computer%20Hardware%20and%20Software.pdf)
+  - [ ] Book : Computer Organization and Design (left at page 91)
+  - [ ] Project: Design and build a simple computer
+ 
 ### Algorithms and Data Structures
 
   If you don’t know how to use ubiquitous data structures like stacks, queues, trees, and graphs, you won’t be able to solve hard problems.
@@ -55,64 +35,7 @@ Don’t be the person who “never quite understood” something like recursion
   - [ ] Exercise : HackerRank- solve around 100 problems.
   - [ ] Book : [How to solve it](https://www.amazon.com/How-Solve-Mathematical-Princeton-Science/dp/069116407X/?pldnSite=1)
   - [ ] Project: View the bottom of this page and implement some of the algorithm map
-
-### Interpreters
-
-I do not have any resources right now will add it once I am here
-
-### Interpreter Virtual Machine
-
-I do not have any resources right now will add it once I am here
-
-### Assembly
-
-I do not have any resources right now will add it once I am here
-
-
-### Compilers
-
-   If you understand how languages and compilers actually work, you’ll write better code and learn new languages more easily
-
-   - [ ] Course : [Stanford Course](https://lagunita.stanford.edu/courses/Engineering/Compilers/Fall2014/about) read the [dragon book](https://www.amazon.com/Compilers-Principles-Techniques-Tools-2nd/dp/0321486811?pldnSite=1) on the units of stanford do not read all the book.
-   - [ ] Project : Create a basic compiler for a learning langauge or a simple language you have created.
-
-
-### Computer Architecture
-
-  If you don’t have a solid mental model of how a computer actually works, all of your higher-level abstractions will be brittle.
-
-  - [ ] Book : [Hidden Language of Computers: CODE](ftp://ftp.borg.moe/yarr/Gentoomen%20Library/Programming/Misc/Charles%20Petzold%20-%20Code%20-%20The%20Hidden%20Language%20of%20Computer%20Hardware%20and%20Software.pdf)
-  - [ ] Book : Computer Organization and Design (left at page 91)
-  - [ ] Project: Design and build a simple computer
- 
- ### Databases
-
-   Data is at the heart of most significant programs, but few understand how database systems actually work.
-
-   - [ ] Course : [Berkley Course](https://archive.org/details/UCBerkeley_Course_Computer_Science_186)
-   - [ ] Paper : [Database Architecture](http://db.cs.berkeley.edu/papers/fntdb07-architecture.pdf)
-   - [ ] Book : [Red Book](http://www.redbook.io/) -- your next stop after berkley course
-   - [ ] Course : [Stanford Course](https://lagunita.stanford.edu/courses/DB/2014/SelfPaced/about) -- Take all mini courses
-   - [ ] Project idea: Write a simple relational database management system from scratch.
-
   
- ### Computer Networking
-
-   The Internet turned out to be a big deal: understand how it works to unlock its full potential.
-
-   - [ ] Book : [Computer Networking: A Top-Down Approach](https://www.amazon.com/Computer-Networking-Top-Down-Approach-7th/dp/0133594149/?pldnSite=1) -- do the exersices
-   - [ ] Exersices : [Wireshark](http://www-net.cs.umass.edu/wireshark-labs/)
-   - [ ] Course : [Stanford MOOC](https://lagunita.stanford.edu/courses/Engineering/Networking-SP/SelfPaced/about)
-   - [ ] Project : Your own small internet, HTTP server or etc. dont forget to practice what you learn.
-
-  
- ### Distributed Systems
-
-   These days, most systems are distributed systems.
-
-   - [ ] Book : [Distibuted Systems, 3rd edition](https://www.distributed-systems.net/index.php/books/distributed-systems-3rd-edition-2017/)
-   - [ ] Project: Do something to implement the theory you have learned.
-
  ### Operating Systems
 
    Most of the code you write is run by an operating system, so you should know how those interact.
@@ -122,10 +45,39 @@ I do not have any resources right now will add it once I am here
    - [ ] Tutorial: [little OS tutorial](https://littleosbook.github.io/)
    - [ ] Book : Modern Operating Systems Book by Andrew S. Tanenbaum
    - [ ] Project : Code a small OS kernel
-   
-### Emulation / Real Virtual Machine
 
-I do not have any resources right now will add it once I am here
+ ### Computer Networking
+
+   The Internet turned out to be a big deal: understand how it works to unlock its full potential.
+
+   - [ ] Book : [Computer Networking: A Top-Down Approach](https://www.amazon.com/Computer-Networking-Top-Down-Approach-7th/dp/0133594149/?pldnSite=1) -- do the exersices
+   - [ ] Exersices : [Wireshark](http://www-net.cs.umass.edu/wireshark-labs/)
+   - [ ] Course : [Stanford MOOC](https://lagunita.stanford.edu/courses/Engineering/Networking-SP/SelfPaced/about)
+   - [ ] Project : Your own small internet, HTTP server or etc. dont forget to practice what you learn.
+   
+ ### Databases
+
+   Data is at the heart of most significant programs, but few understand how database systems actually work.
+
+   - [ ] Course : [Berkley Course](https://archive.org/details/UCBerkeley_Course_Computer_Science_186)
+   - [ ] Paper : [Database Architecture](http://db.cs.berkeley.edu/papers/fntdb07-architecture.pdf)
+   - [ ] Book : [Red Book](http://www.redbook.io/) -- your next stop after berkley course
+   - [ ] Course : [Stanford Course](https://lagunita.stanford.edu/courses/DB/2014/SelfPaced/about) -- Take all mini courses
+   - [ ] Project idea: Write a simple relational database management system from scratch.
+   
+### Languages and Compilers
+
+   If you understand how languages and compilers actually work, you’ll write better code and learn new languages more easily
+
+   - [ ] Course : [Stanford Course](https://lagunita.stanford.edu/courses/Engineering/Compilers/Fall2014/about) read the [dragon book](https://www.amazon.com/Compilers-Principles-Techniques-Tools-2nd/dp/0321486811?pldnSite=1) on the units of stanford do not read all the book.
+   - [ ] Project : Create a basic compiler for a learning langauge or a simple language you have created.
+
+ ### Distributed Systems
+
+   These days, most systems are distributed systems.
+
+   - [ ] Book : [Distibuted Systems, 3rd edition](https://www.distributed-systems.net/index.php/books/distributed-systems-3rd-edition-2017/)
+   - [ ] Project: Do something to implement the theory you have learned.
  
 
 ### Code University
@@ -134,10 +86,6 @@ I do not have any resources right now will add it once I am here
   - [ ] Project: Once you are done you can solve the algorithms that are listed as a roadmap in a image at the bottom of this file.
   - [ ] **Once you are done with the fundementals open up "Human Universals" and try to come up with an idea to build** 
   
-### Debugging
-
- - [ ] Course : [Software Debugging](om/course/software-debugging--cs259)
-
 ### Mathematics
 
   CS is basically a runaway branch of applied math, so learning math will give you a competitive advantage.
@@ -151,6 +99,7 @@ I do not have any resources right now will add it once I am here
 
  ### Other Pet/Advanced Topics
 
+ - [ ] Course : [Software Debugging](om/course/software-debugging--cs259)
  - [ ] Course : [Game Developement](https://www.edx.org/course/cs50s-introduction-to-game-development)
  - [ ] Course : [Software Testing](https://www.udacity.com/course/software-testing--cs258)
  - [ ] Course : [Software Architecture & Design](https://www.udacity.com/course/software-architecture-design--ud821)
