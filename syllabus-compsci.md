@@ -127,8 +127,8 @@ Don’t be the person who “never quite understood” something like recursion
 ---
 
 
-## Make a game like The Journey (sizofreni)
 
+  - [ ] Make a game like The Journey/Inside (sizofreni)
   - [ ] New Yorker Magazine -- turkce
 
 
