@@ -273,8 +273,17 @@ Every developer should code once:
  - [ ] Learn: GraphQL, this is not required and optional feel free to have a loot and what it is all about and why they are calling it the new REST
  - [ ] Learn: Again option, look into Graph Databases, at least you can have a little udnerstanding of what they are.
  - [ ] We have a lot more stuff like Profiling, Static Analysis, DDD SOAP, etc. Go on your journey now!
+ 
+ - [ ] Course : [Berkley Course](https://archive.org/details/UCBerkeley_Course_Computer_Science_186)
+ - [ ] Paper : [Database Architecture](http://db.cs.berkeley.edu/papers/fntdb07-architecture.pdf)
+ - [ ] Book : [Red Book](http://www.redbook.io/) -- your next stop after berkley course
+ - [ ] Course : [Stanford Course](https://lagunita.stanford.edu/courses/DB/2014/SelfPaced/about) -- Take all mini courses
+ - [ ] Project idea: Write a simple relational database management system from scratch.
+ - [ ] Repeat all of the steps with more ADVANCED projects.
+
 
 ### DevOps
+
 DevOps is something very complex instead of having a one strict route you cna carve your way up however it is very important to have a mental map of dev ops that consists of these. Try to understand each topic and atleast do a small lite demo of the things you like for practice.
 
 - [ ] Learn: Operating Systems, Either unix -> FreeBSD or Linux --> RHEL || CentOS || Ubuntu || Fedora
