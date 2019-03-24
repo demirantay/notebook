@@ -209,9 +209,11 @@ Every developer should code once:
  - [X] API's
  - [X] Basic Terminal Usage
  - [X] Learn to research
- - [X] Data Structures and Algorithms -- skipped since I will learn it in compsci at top
+ - [ ] Data Structures and Algorithms -- skipped since I will learn it in compsci at top
  - [X] HTTP/HTTPS
  - [ ] Design Patterns
+ - [ ] Course : GO UP AND FINISH COMPUTER ARCHITECTURE HEADER ON [SECTION 1](#databases)
+ - [ ] Course : GO UP AND FINISH ALGORITHMS HEADER ON [SECTION 1](#databases)
 
  ### Front End
  This may seem basic since in the core there are only three technologies how ever what is really hard is that not everyone has the eye for killer design skills.
@@ -273,7 +275,6 @@ Every developer should code once:
  - [ ] Learn: Again option, look into Graph Databases, at least you can have a little udnerstanding of what they are.
  - [ ] We have a lot more stuff like Profiling, Static Analysis, DDD SOAP, etc. Go on your journey now!
  - [ ] Course : GO UP AND FINISH DATABASE HEADER ON [SECTION 1](#databases)
- - [ ] Project idea: Write a simple relational database management system from scratch.
  - [ ] Repeat all of the steps with more ADVANCED projects.
 
 
@@ -302,6 +303,8 @@ DevOps is something very complex instead of having a one strict route you cna ca
 - [ ] Learn: Setting up a firewall
 - [ ] Learn: TLS, STARTLS, SSL, HTTTPS, SCP, SSH, SFTP
 - [ ] Learn: Postmortem analysis when something bad happens.
+- [ ] Course : GO UP AND FINISH OPERATING SYSTEMS HEADER ON [SECTION 1](#databases)
+- [ ] Course : GO UP AND FINISH NETWORKING HEADER ON [SECTION 1](#databases)
 
 
 ---
