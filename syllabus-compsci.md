@@ -205,11 +205,9 @@ Every developer should code once:
 
  - [X] Git - Version Control
  - [X] GitHub for public repos, GitLab for private
- - [X] SSH -- skimmed through it since it is more cryptography than webdev
  - [X] API's
  - [X] Basic Terminal Usage
  - [X] Learn to research
- - [ ] Data Structures and Algorithms -- skipped since I will learn it in compsci at top
  - [X] HTTP/HTTPS
  - [ ] Design Patterns
  - [ ] Course : GO UP AND FINISH COMPUTER ARCHITECTURE HEADER ON [SECTION 1](#computer-architecture)
