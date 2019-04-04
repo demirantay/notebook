@@ -113,14 +113,18 @@ To run any of the Nand2Tetris Course emulator tools you need to run this command
 
 # Boolean Arithmetic
 
-- a
+- Remarkably, most of the operations performed by digital computers can be reduced to elementary additions of binary numbers. Therefore, constructive understanding of binary addition holds the key to the implementation of numerous computer operations that depend on it, one way or another.
+
+- I REALLY DID NOT UNDERSTAND THIS PART RETURN TO IT LATER ON ...
 
 <br>
 <br>
 
 # Sequential Logic
 
-...
+- Combinational chips compute functions that depend solely on combinations of their input values. These relatively simple chips provide many important processing functions (like the ALU), but they cannot maintain state. Since computers must be able to not only compute values but also store and recall values, they must be equipped with memory elements that can preserve data over time. These memory elements are built from sequential chips.
+
+- The implementation of memory elements is an intricate art involving synchronization, clocking, and feedback loops. Conveniently, most of this complexity can be embedded in the operating logic of very low-level sequential gates called flip-flops.
 
 <br>
 <br>
