@@ -212,7 +212,10 @@ Every developer should code once:
  - [ ] Design Patterns
  - [ ] Course : GO UP AND FINISH COMPUTER ARCHITECTURE HEADER ON [SECTION 1](#computer-architecture)
  - [ ] Course : GO UP AND FINISH ALGORITHMS HEADER ON [SECTION 1](#algorithms)
- - [ ] Project: Do each box with a more advanced project
+ - [ ] Project: Clone git
+ - [ ] Project: Clone github
+ - [ ] Project: A nicer 8bit computer or 16
+ - [ ] Project: Implement the algorithms below
 
  ### Front End
  This may seem basic since in the core there are only three technologies how ever what is really hard is that not everyone has the eye for killer design skills.
