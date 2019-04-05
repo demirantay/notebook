@@ -35,3 +35,44 @@
 ### Output Unit
 
 - The output unit consists of devices with the help of which we get the information from the computer. This unit is a link between the computer and the users. Output devices translate the computer's output into a form understandable by the users.
+
+<br>
+<br>
+
+# CPU (Control Processing Unit)
+
+- Central Processing Unit (CPU) consists of the following features −
+  - CPU is considered as the brain of the computer.
+  - CPU performs all types of data processing operations.
+  - It stores data, intermediate results, and instructions (program).
+  - It controls the operation of all parts of the computer.
+  
+- CPU itself has following three components.
+  - Memory or Storage Unit
+  - Control Unit
+  - ALU(Arithmetic Logic Unit)
+  
+### Memory (Storage Unit)
+
+- This unit can store instructions, data, and intermediate results. This unit supplies information to other units of the computer when needed. It is also known as internal storage unit or the main memory or the primary storage or Random Access Memory (RAM).
+
+- Its size affects speed, power, and capability. Primary memory and secondary memory are two types of memories in the computer. Functions of the memory unit are −
+  - It stores all the data and the instructions required for processing.
+  - It stores intermediate results of processing.
+  - It stores the final results of processing before these results are released to an output device.
+  - All inputs and outputs are transmitted through the main memory.
+
+### Control Unit
+
+- This unit controls the operations of all parts of the computer but does not carry out any actual data processing operations. Functions of this unit are −
+  - It is responsible for controlling the transfer of data and instructions among other units of a computer.
+  - It manages and coordinates all the units of the computer.
+  - It obtains the instructions from the memory, interprets them, and directs the operation of the computer.
+  - It communicates with Input/Output devices for transfer of data or results from storage.
+  - It does not process or store data.
+  
+### ALU (Arithmetic Logic Unit)
+
+- This unit consists of two subsections namely 1) Arithmetic Section, 2) Logic Section
+  - `Arithmetic Section`: Function of arithmetic section is to perform arithmetic operations like addition, subtraction, multiplication, and division. All complex operations are done by making repetitive use of the above operations.
+  - `Logic Section`: Function of logic section is to perform logic operations such as comparing, selecting, matching, and merging of data.
