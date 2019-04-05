@@ -13,6 +13,7 @@ Fundemental Computer Science Cirriculum
 
 Don’t be the person who “never quite understood” something like recursion
 
+ - [ ] Read: The [TutorialsOnPoint](https://www.tutorialspoint.com/computer_programming/computer_programming_environment.htm) for a overview. Note this to README of the folder
  - [X] Course : [Helsinki MOOC's](http://mooc.fi/courses/2013/programming-part-1/material.html) for the desired language.
  - [X] Book : SICP (Structured Interpretion of Computer Programs)-*(shelved it for later it is hard)*
  - [X] Book : [modern c book](https://www.scribd.com/doc/39933932/C-Programming-a-Modern-Approach-2nd-Edition-K-N-King)(Did not finish left at pg.292 )
@@ -21,6 +22,7 @@ Don’t be the person who “never quite understood” something like recursion
 
   If you don’t have a solid mental model of how a computer actually works, all of your higher-level abstractions will be brittle.
   
+  - [ ] Read: The [TutorialsOnPoint](https://www.tutorialspoint.com/computer_fundamentals/index.htm) for a overview. Note this to README of the folder
   - [ ] Book : Nand2Tetris
   - [ ] Book : [Hidden Language of Computers: CODE](ftp://ftp.borg.moe/yarr/Gentoomen%20Library/Programming/Misc/Charles%20Petzold%20-%20Code%20-%20The%20Hidden%20Language%20of%20Computer%20Hardware%20and%20Software.pdf)
   - [ ] Book : Computer Organization and Design (left at page 91)
@@ -30,6 +32,7 @@ Don’t be the person who “never quite understood” something like recursion
 
   If you don’t know how to use ubiquitous data structures like stacks, queues, trees, and graphs, you won’t be able to solve hard problems.
   
+  - [ ] Read: The [TutorialsOnPoint](https://www.tutorialspoint.com/data_structures_algorithms/index.htm) for a overview. Note this to README of the folder
   - [ ] Book: [The Algorithm Design Manual](https://www.amazon.com/Algorithm-Design-Manual-Steven-Skiena/dp/1848000693/?pldnSite=1) There are [vidoes](http://www3.cs.stonybrook.edu/~algorith/video-lectures/) avilable too.
   - [ ] Book: [PSAD using python](http://interactivepython.org/runestone/static/pythonds/index.html)
   - [ ] Exercise : HackerRank- solve around 100 problems.
@@ -40,6 +43,7 @@ Don’t be the person who “never quite understood” something like recursion
 
    Most of the code you write is run by an operating system, so you should know how those interact.
 
+   - [ ] Read: The [TutorialsOnPoint](https://www.tutorialspoint.com/operating_system/index.htm) for a overview. Note this to README of the folder
    - [ ] Book : [Operating Systems: Three Easy Pieces](http://pages.cs.wisc.edu/~remzi/OSTEP/)
    - [ ] Course : [ops-class.org : hack the kernel](https://www.ops-class.org/) You can go with the book simotenously.
    - [ ] Tutorial: [little OS tutorial](https://littleosbook.github.io/)
@@ -50,6 +54,7 @@ Don’t be the person who “never quite understood” something like recursion
 
    The Internet turned out to be a big deal: understand how it works to unlock its full potential.
 
+   - [ ] Read: The [TutorialsOnPoint](https://www.tutorialspoint.com/data_communication_computer_network/index.htm) for a overview. Note this to README of the folder
    - [ ] Book : [Computer Networking: A Top-Down Approach](https://www.amazon.com/Computer-Networking-Top-Down-Approach-7th/dp/0133594149/?pldnSite=1) -- do the exersices
    - [ ] Exersices : [Wireshark](http://www-net.cs.umass.edu/wireshark-labs/)
    - [ ] Course : [Stanford MOOC](https://lagunita.stanford.edu/courses/Engineering/Networking-SP/SelfPaced/about)
@@ -59,6 +64,7 @@ Don’t be the person who “never quite understood” something like recursion
 
    Data is at the heart of most significant programs, but few understand how database systems actually work.
 
+   - [ ] Read: The [TutorialsOnPoint](https://www.tutorialspoint.com/dbms/index.htm) for a overview. Note this to README of the folder
    - [ ] Course : [Berkley Course](https://archive.org/details/UCBerkeley_Course_Computer_Science_186)
    - [ ] Paper : [Database Architecture](http://db.cs.berkeley.edu/papers/fntdb07-architecture.pdf)
    - [ ] Book : [Red Book](http://www.redbook.io/) -- your next stop after berkley course
@@ -69,6 +75,7 @@ Don’t be the person who “never quite understood” something like recursion
 
    If you understand how languages and compilers actually work, you’ll write better code and learn new languages more easily
 
+   - [ ] Read: The [TutorialsOnPoint](https://www.tutorialspoint.com/compiler_design/index.htm) for a overview. Note this to README of the folder
    - [ ] Course : [Stanford Course](https://lagunita.stanford.edu/courses/Engineering/Compilers/Fall2014/about) read the [dragon book](https://www.amazon.com/Compilers-Principles-Techniques-Tools-2nd/dp/0321486811?pldnSite=1) on the units of stanford do not read all the book.
    - [ ] Project : Create a basic compiler for a learning langauge or a simple language you have created.
 
@@ -98,6 +105,8 @@ Don’t be the person who “never quite understood” something like recursion
    - [ ] Course : [Linear Algebra](https://ocw.mit.edu/courses/mathematics/18-06-linear-algebra-spring-2010/video-lectures/)
 
  ### Other Pet/Advanced Topics
+ 
+ Do not forget to use [TutorialsPoint](https://www.tutorialspoint.com/index.htm) for each of the subjects initial README
 
  - [ ] Course : [Software Debugging](om/course/software-debugging--cs259)
  - [ ] Course : [Game Developement](https://www.edx.org/course/cs50s-introduction-to-game-development)
