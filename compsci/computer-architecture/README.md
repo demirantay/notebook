@@ -9,8 +9,9 @@
   - Step 4 − Generates the output.
   - Step 5 − Controls all the above four steps.
   
-<br>
-<br>
+<br/>
+<br/>
+<br/>
 
 # Components
 
@@ -36,8 +37,9 @@
 
 - The output unit consists of devices with the help of which we get the information from the computer. This unit is a link between the computer and the users. Output devices translate the computer's output into a form understandable by the users.
 
-<br>
-<br>
+<br/>
+<br/>
+<br/>
 
 # CPU (Control Processing Unit)
 
@@ -76,3 +78,24 @@
 - This unit consists of two subsections namely 1) Arithmetic Section, 2) Logic Section
   - `Arithmetic Section`: Function of arithmetic section is to perform arithmetic operations like addition, subtraction, multiplication, and division. All complex operations are done by making repetitive use of the above operations.
   - `Logic Section`: Function of logic section is to perform logic operations such as comparing, selecting, matching, and merging of data.
+  
+<br/>
+<br/>
+<br/>
+
+# Input & Output Devices 
+
+- Following are some of the important input devices which are used in a computer − - Keyboard Mouse, Joy Stick , Light pen, Track Ball, Scanner, Graphic Tablet, Microphone, Magnetic Ink Card Reader(MICR), Optical Character Reader(OCR), Bar Code Reader, Optical Mark Reader(OMR)
+
+- Following are some of the important output devices used in a computer. - - Monitors, Graphic Plotter, Printer
+
+<br/>
+<br/>
+<br/>
+
+# Memory 
+
+- A memory is just like a human brain. It is used to store data and instructions. Computer memory is the storage space in the computer, where data is to be processed and instructions required for processing are stored. Memory is primarily of three types −
+  - Cache Memory
+  - Primary Memory/Main Memory
+  - Secondary Memory
