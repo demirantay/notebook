@@ -99,3 +99,31 @@
   - Cache Memory
   - Primary Memory/Main Memory
   - Secondary Memory
+  
+### Cache Memory
+
+- Cache memory is a very high speed semiconductor memory which can speed up the CPU. It acts as a buffer between the CPU and the main memory. It is used to hold those parts of data and program which are most frequently used by the CPU. The parts of data and programs are transferred from the disk to cache memory by the operating system, from where the CPU can access them.
+
+- Tha advantages of the cache memory: Cache memory is faster than main memory. It consumes less access time as compared to main memory. It stores the program that can be executed within a short period of time. It stores data for temporary use.
+
+- The disadvantages of the cache memory: Cache memory has limited capacity. It is very expensive.
+
+### Primary Memory
+
+- Primary memory holds only those data and instructions on which the computer is currently working. It has a limited capacity and data is lost when power is switched off. It is generally made up of semiconductor device. These memories are not as fast as registers. The data and instruction required to be processed resides in the main memory. It is divided into two subcategories RAM and ROM.
+
+- Characteristics of Main Memory: These are semiconductor memories. It is known as the main memory. Usually volatile memory. Data is lost in case power is switched off. It is the working memory of the computer. Faster than secondary memories. A computer cannot run without the primary memory.
+
+### Secondary Memory 
+
+- This type of memory is also known as external memory or non-volatile. It is slower than the main memory. These are used for storing data/information permanently. CPU directly does not access these memories, instead they are accessed via input-output routines. The contents of secondary memories are first transferred to the main memory, and then the CPU can access it. For example, disk, CD-ROM, DVD, etc.
+
+- The Characteristics of a Secondary Memory: These are magnetic and optical memories. It is known as the backup memory. It is a non-volatile memory. Data is permanently stored even if power is switched off. It is used for storage of data in a computer. Computer may run without the secondary memory. Slower than primary memories.
+
+<br/>
+<br/>
+<br/>
+
+# RAM (Random Accsess Memory)
+
+...
