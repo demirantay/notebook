@@ -126,4 +126,66 @@
 
 # RAM (Random Accsess Memory)
 
-...
+- RAM (Random Access Memory) is the internal memory of the CPU for storing data, program, and program result. It is a read/write memory which stores data until the machine is working. As soon as the machine is switched off, data is erased.
+
+- RAM is volatile, i.e. data stored in it is lost when we switch off the computer or if there is a power failure. Hence, a backup Uninterruptible Power System (UPS) is often used with computers. RAM is small, both in terms of its physical size and in the amount of data it can hold.
+
+- RAM is of two types − 1 ) StaticRAM (SRAM) , 2) DynamicRAM (DRAM)
+
+### Static RAM (SRAM)
+
+- The word static indicates that the memory retains its contents as long as power is being supplied. However, data is lost when the power gets down due to volatile nature. SRAM chips use a matrix of 6-transistors and no capacitors. Transistors do not require power to prevent leakage, so SRAM need not be refreshed on a regular basis.
+
+- There is extra space in the matrix, hence SRAM uses more chips than DRAM for the same amount of storage space, making the manufacturing costs higher. SRAM is thus used as cache memory and has very fast access.
+
+- Characteristics of SRAM - Long Life, No need to refresh, Faster, Used as cache memory, Larger size, Expensive, High power consumption
+
+### Dynamic RAM (DRAM)
+
+- DRAM, unlike SRAM, must be continually refreshed in order to maintain the data. This is done by placing the memory on a refresh circuit that rewrites the data several hundred times per second. DRAM is used for most system memory as it is cheap and small. All DRAMs are made up of memory cells, which are composed of one capacitor and one transistor.
+
+- Characteristics of DRAM - Short data lifetime, Needs to be refreshed continuously, Slower as compared to SRAM, Used as RAM, Smaller in size, Less expensive, Less power consumption
+
+<br/>
+<br/>
+<br/>
+
+# ROM (Read Only Memory) 
+
+- ROM stands for Read Only Memory. The memory from which we can only read but cannot write on it. This type of memory is non-volatile. The information is stored permanently in such memories during manufacture. A ROM stores such instructions that are required to start a computer. This operation is referred to as bootstrap. ROM chips are not only used in the computer but also in other electronic items like washing machine and microwave oven.
+
+- There are various types of ROMS: 
+  - `MROM`: inexpensive, has pre programmed data types inside it
+  - `PROM`: this can be modified only once and than it is unearasable
+  - `EPROM`: can be programmed via electronic stuff (unsure about this)
+  - `EEPROM`: this can be modified about ten thousand times
+  
+- Characteristics of ROM: Non-volatile in nature, Cannot be accidentally changed, Cheaper than RAMs, Easy to test, More reliable than RAMs, Static and do not require refreshing, Contents are always known and can be verified
+
+<br/>
+<br/>
+<br/>
+
+# Motherboard
+
+- The motherboard serves as a single platform to connect all of the parts of a computer together. It connects the CPU, memory, hard drives, optical drives, video card, sound card, and other ports and expansion cards directly or via cables. It can be considered as the backbone of a computer.
+
+- A motherboard comes with the following features : 
+  - Motherboard varies greatly in supporting various types of components.
+  - Motherboard supports a single type of CPU and few types of memories.
+  - Video cards, hard disks, sound cards have to be compatible with the motherboard to function properly.
+  - Motherboards, cases, and power supplies must be compatible to work properly together.
+  
+- The motherboard is mounted inside the case and is securely attached via small screws through pre-drilled holes. Motherboard contains ports to connect all of the internal components. It provides a single socket for CPU, whereas for memory, normally one or more slots are available. Motherboards provide ports to attach the floppy drive, hard drive, and optical drives via ribbon cables. Motherboard carries fans and a special port designed for power supply.
+
+- There is a peripheral card slot in front of the motherboard using which video cards, sound cards, and other expansion cards can be connected to the motherboard.
+
+- On the left side, motherboards carry a number of ports to connect the monitor, printer, mouse, keyboard, speaker, and network cables. Motherboards also provide USB ports, which allow compatible devices to be connected in plug-in/plug-out fashion. For example, pen drive, digital cameras, etc.
+
+<br/>
+<br/>
+<br/>
+
+# Memory Units
+
+
