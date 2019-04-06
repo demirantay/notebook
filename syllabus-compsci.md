@@ -18,17 +18,7 @@ Don’t be the person who “never quite understood” something like recursion
  - [X] Book : SICP (Structured Interpretion of Computer Programs)-*(shelved it for later it is hard)*
  - [X] Book : [modern c book](https://www.scribd.com/doc/39933932/C-Programming-a-Modern-Approach-2nd-Edition-K-N-King)(Did not finish left at pg.292 )
  
- ### Computer Architecture
-
-  If you don’t have a solid mental model of how a computer actually works, all of your higher-level abstractions will be brittle.
-  
-  - [ ] Read: The [TutorialsOnPoint](https://www.tutorialspoint.com/computer_fundamentals/index.htm) for a overview. Note this to README of the folder
-  - [ ] Book : Nand2Tetris
-  - [ ] Book : [Hidden Language of Computers: CODE](ftp://ftp.borg.moe/yarr/Gentoomen%20Library/Programming/Misc/Charles%20Petzold%20-%20Code%20-%20The%20Hidden%20Language%20of%20Computer%20Hardware%20and%20Software.pdf)
-  - [ ] Book : Computer Organization and Design (left at page 91)
-  - [ ] Project: Design and build a simple computer
- 
-### Algorithms and Data Structures
+ ### Algorithms and Data Structures
 
   If you don’t know how to use ubiquitous data structures like stacks, queues, trees, and graphs, you won’t be able to solve hard problems.
   
@@ -38,6 +28,29 @@ Don’t be the person who “never quite understood” something like recursion
   - [ ] Exercise : HackerRank- solve around 100 problems.
   - [ ] Book : [How to solve it](https://www.amazon.com/How-Solve-Mathematical-Princeton-Science/dp/069116407X/?pldnSite=1)
   - [ ] Project: View the bottom of this page and implement some of the algorithm map
+  
+  ### Databases
+
+   Data is at the heart of most significant programs, but few understand how database systems actually work.
+
+   - [ ] Read: The [TutorialsOnPoint](https://www.tutorialspoint.com/dbms/index.htm) for a overview. Note this to README of the folder
+   - [ ] Course : [Berkley Course](https://archive.org/details/UCBerkeley_Course_Computer_Science_186)
+   - [ ] Paper : [Database Architecture](http://db.cs.berkeley.edu/papers/fntdb07-architecture.pdf)
+   - [ ] Book : [Red Book](http://www.redbook.io/) -- your next stop after berkley course
+   - [ ] Course : [Stanford Course](https://lagunita.stanford.edu/courses/DB/2014/SelfPaced/about) -- Take all mini courses
+   - [ ] Project idea: Write a simple relational database management system from scratch.
+   
+ 
+ ### Computer Architecture
+
+  If you don’t have a solid mental model of how a computer actually works, all of your higher-level abstractions will be brittle.
+  
+  - [X] Read: The [TutorialsOnPoint](https://www.tutorialspoint.com/computer_fundamentals/index.htm) for a overview. Note this to README of the folder
+  - [ ] Book : Nand2Tetris
+  - [ ] Book : [Hidden Language of Computers: CODE](ftp://ftp.borg.moe/yarr/Gentoomen%20Library/Programming/Misc/Charles%20Petzold%20-%20Code%20-%20The%20Hidden%20Language%20of%20Computer%20Hardware%20and%20Software.pdf)
+  - [ ] Book : Computer Organization and Design (left at page 91)
+  - [ ] Project: Design and build a simple computer
+ 
   
  ### Operating Systems
 
@@ -60,17 +73,7 @@ Don’t be the person who “never quite understood” something like recursion
    - [ ] Course : [Stanford MOOC](https://lagunita.stanford.edu/courses/Engineering/Networking-SP/SelfPaced/about)
    - [ ] Project : Your own small internet, HTTP server or etc. dont forget to practice what you learn.
    
- ### Databases
 
-   Data is at the heart of most significant programs, but few understand how database systems actually work.
-
-   - [ ] Read: The [TutorialsOnPoint](https://www.tutorialspoint.com/dbms/index.htm) for a overview. Note this to README of the folder
-   - [ ] Course : [Berkley Course](https://archive.org/details/UCBerkeley_Course_Computer_Science_186)
-   - [ ] Paper : [Database Architecture](http://db.cs.berkeley.edu/papers/fntdb07-architecture.pdf)
-   - [ ] Book : [Red Book](http://www.redbook.io/) -- your next stop after berkley course
-   - [ ] Course : [Stanford Course](https://lagunita.stanford.edu/courses/DB/2014/SelfPaced/about) -- Take all mini courses
-   - [ ] Project idea: Write a simple relational database management system from scratch.
-   
 ### Languages and Compilers
 
    If you understand how languages and compilers actually work, you’ll write better code and learn new languages more easily
@@ -219,7 +222,6 @@ Every developer should code once:
  - [X] Learn to research
  - [X] HTTP/HTTPS
  - [ ] Design Patterns
- - [ ] Course : GO UP AND FINISH COMPUTER ARCHITECTURE HEADER ON [SECTION 1](#computer-architecture)
  - [ ] Course : GO UP AND FINISH ALGORITHMS HEADER ON [SECTION 1](#algorithms)
  - [ ] Project: Clone git
  - [ ] Project: Clone github
@@ -293,6 +295,7 @@ Every developer should code once:
 
 DevOps is something very complex instead of having a one strict route you cna carve your way up however it is very important to have a mental map of dev ops that consists of these. Try to understand each topic and atleast do a small lite demo of the things you like for practice.
 
+- [ ] Finish: All of the missing part of the theory education in section 1
 - [ ] Learn: Operating Systems, Either unix -> FreeBSD or Linux --> RHEL || CentOS || Ubuntu || Fedora
 - [ ] Learn: Automation, Either powershell, Puppet, AWS, Terraform .. etc.
 - [ ] Learn: Cloud, Either AWS, Heroku, DigitalOcean ... etc.
@@ -317,8 +320,6 @@ DevOps is something very complex instead of having a one strict route you cna ca
 - [ ] Course : GO UP AND FINISH OPERATING SYSTEMS HEADER ON [SECTION 1](#operating-systems)
 - [ ] Course : GO UP AND FINISH NETWORKING HEADER ON [SECTION 1](#computer-networking)
 - [ ] Project : Redo all boxes with a lot more advanced projects
-- [ ] Finish : Up the remaning subjects on section 1
-
 
 ---
 ---
