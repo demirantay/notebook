@@ -186,6 +186,18 @@
 <br/>
 <br/>
 
-# Memory Units
+# Ports
+
+- A port is a physical docking point using which an external device can be connected to the computer. It can also be programmatic docking point through which information flows from a program to the computer or over the Internet.
+
+- Ports have the following characteristics:
+  - External devices are connected to a computer using cables and ports.
+  - Ports are slots on the motherboard into which a cable of external device is plugged in.
+  - Examples of external devices attached via ports are the mouse, keyboard, monitor, microphone, speakers, etc.
+  
+<br/>
+<br/>
+<br/>
+
 
 
