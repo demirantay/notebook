@@ -39,6 +39,20 @@ Don’t be the person who “never quite understood” something like recursion
    - [ ] Book : [Red Book](http://www.redbook.io/) -- your next stop after berkley course
    - [ ] Course : [Stanford Course](https://lagunita.stanford.edu/courses/DB/2014/SelfPaced/about) -- Take all mini courses
    - [ ] Project idea: Write a simple relational database management system from scratch.
+   
+   
+ ### Computer Architecture
+
+  If you don’t have a solid mental model of how a computer actually works, all of your higher-level abstractions will be brittle.
+  
+  - [X] Read: The [TutorialsOnPoint](https://www.tutorialspoint.com/computer_fundamentals/index.htm) for a overview. Note this to README of the folder
+  - [ ] Book : Nand2Tetris
+  - [ ] Book : [Hidden Language of Computers: CODE](ftp://ftp.borg.moe/yarr/Gentoomen%20Library/Programming/Misc/Charles%20Petzold%20-%20Code%20-%20The%20Hidden%20Language%20of%20Computer%20Hardware%20and%20Software.pdf)
+  - [ ] Book : Computer Organization and Design (left at page 91)
+  - [ ] Project: Design and build a simple computer
+  - [ ] https://www.instructables.com/id/How-to-Build-an-8-Bit-Computer/
+  - [ ] https://eater.net/8bit
+ 
   
  ### Operating Systems
 
@@ -61,17 +75,7 @@ Don’t be the person who “never quite understood” something like recursion
    - [ ] Course : [Stanford MOOC](https://lagunita.stanford.edu/courses/Engineering/Networking-SP/SelfPaced/about)
    - [ ] Project : Your own small internet, HTTP server or etc. dont forget to practice what you learn.
    
-### Computer Architecture
 
-  If you don’t have a solid mental model of how a computer actually works, all of your higher-level abstractions will be brittle.
-  
-  - [X] Read: The [TutorialsOnPoint](https://www.tutorialspoint.com/computer_fundamentals/index.htm) for a overview. Note this to README of the folder
-  - [ ] Book : Nand2Tetris
-  - [ ] Book : [Hidden Language of Computers: CODE](ftp://ftp.borg.moe/yarr/Gentoomen%20Library/Programming/Misc/Charles%20Petzold%20-%20Code%20-%20The%20Hidden%20Language%20of%20Computer%20Hardware%20and%20Software.pdf)
-  - [ ] Book : Computer Organization and Design (left at page 91)
-  - [ ] Project: Design and build a simple computer
-  - [ ] https://www.instructables.com/id/How-to-Build-an-8-Bit-Computer/
-  - [ ] https://eater.net/8bit
    
 
 ### Languages and Compilers
