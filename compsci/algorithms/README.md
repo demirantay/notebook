@@ -211,4 +211,14 @@
 
 # Arrays
 
+- Array is a container which can hold a fix number of items and these items should be of the same type. Most of the data structures make use of arrays to implement their algorithms. Following are the important terms to understand the concept of Array.
+  - `Element` − Each item stored in an array is called an element.
+  - `Index` − Each location of an element in an array has a numerical index, which is used to identify the element.
+
+<br/>
+<br/>
+<br/>
+<br/>
+
+#
 
