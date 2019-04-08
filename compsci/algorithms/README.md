@@ -222,15 +222,20 @@
 <br/>
 <br/>
 
-The following are the different common data strcutres and algotihms used daily by millions of programmers:
-
 # Linked Lists 
 
-[Click here to view the page](./linked-lists.md)
+- aasdasd
+
+<br/>
+<br/>
+<br/>
+<br/>
+
+The following are the different common data strcutres and algotihms used daily by millions of programmers:
 
 # Stack & Queue
 
-[Click here to view the page](./stack-queue.md)
+[Click here to view the page](./stacks-queues.md)
 
 # Searching Techniques
 
