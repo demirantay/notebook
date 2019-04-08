@@ -222,5 +222,33 @@
 <br/>
 <br/>
 
-#
+The following are the different common data strcutres and algotihms used daily by millions of programmers:
+
+# Linked Lists 
+
+[Click here to view the page](./linked-lists.md)
+
+# Stack & Queue
+
+[Click here to view the page](./stack-queue.md)
+
+# Searching Techniques
+
+[Click here to view the page](./searching-techniques.md)
+
+# Sorting Techniques
+
+[Click here to view the page](./sorting-techniques.md)
+
+# Graph Data Structure
+
+[Click here to view the page](./graph-data-structure.md)
+
+# Tree Data Structure
+
+[Click here to view the page](./tree-data-structure.md)
+
+# Recrusion
+
+[Click here to view the page](./recrusion.md)
 
