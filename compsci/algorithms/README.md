@@ -1,5 +1,7 @@
 # Algorithms and Data Structures
 
+- *IRC explanation in nutshell: Each Data Structure is like a different styled array or a node and you use algorithms to get the data from the strcutres in a number of different ways *
+
 - Data Structures are the programmatic way of storing data so that data can be used efficiently. Almost every enterprise application uses various types of data structures in one or the other way
 
 - Data Structure is a systematic way to organize data in order to use it efficiently. Following terms are the foundation terms of a data structure.
