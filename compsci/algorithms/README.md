@@ -127,3 +127,59 @@
 # Greedy Algorithms
 
 - An algorithm is designed to achieve optimum solution for a given problem. In greedy algorithm approach, decisions are made from the given solution domain. As being greedy, the closest solution that seems to provide an optimum solution is chosen.
+
+- Greedy algorithms try to find a localized optimum solution, which may eventually lead to globally optimized solutions. However, generally greedy algorithms do not provide globally optimized solutions.
+
+- Lets see an example of a problem where we use greedy algorithm. This problem is to count to a desired value by choosing the least possible coins and the greedy approach forces the algorithm to pick the largest possible coin. Remember Optimisation and efficency is the key factor in greedy algorithms
+
+<br/>
+<br/>
+<br/>
+<br/>
+
+# Divide and Conquer 
+
+- In divide and conquer approach, the problem in hand, is divided into smaller sub-problems and then each problem is solved independently. When we keep on dividing the subproblems into even smaller sub-problems, we may eventually reach a stage where no more division is possible. Those "atomic" smallest possible sub-problem (fractions) are solved. The solution of all sub-problems is finally merged in order to obtain the solution of an original problem.
+
+- Broadly, we can understand divide-and-conquer approach in a three-step process.
+
+### Divide/Break
+
+- This step involves breaking the problem into smaller sub-problems. Sub-problems should represent a part of the original problem. This step generally takes a recursive approach to divide the problem until no sub-problem is further divisible. At this stage, sub-problems become atomic in nature but still represent some part of the actual problem.
+
+### Conquer/Solve
+
+- This step receives a lot of smaller sub-problems to be solved. Generally, at this level, the problems are considered 'solved' on their own.
+
+### Merge/Combine
+
+- When the smaller sub-problems are solved, this stage recursively combines them until they formulate a solution of the original problem. This algorithmic approach works recursively and conquer & merge steps works so close that they appear as one.
+
+<br/>
+<br/>
+<br/>
+<br/>
+
+# Dynamic Programming
+
+- Dynamic programming approach is similar to divide and conquer in breaking down the problem into smaller and yet smaller possible sub-problems. But unlike, divide and conquer, these sub-problems are not solved independently. Rather, results of these smaller sub-problems are remembered and used for similar or overlapping sub-problems.
+
+- Dynamic programming is used where we have problems, which can be divided into similar sub-problems, so that their results can be re-used. Mostly, these algorithms are used for optimization. Before solving the in-hand sub-problem, dynamic algorithm will try to examine the results of the previously solved sub-problems. The solutions of sub-problems are combined in order to achieve the best solution.
+
+- So we can say that −
+  - The problem should be able to be divided into smaller overlapping sub-problem.
+  - An optimum solution can be achieved by using an optimum solution of smaller sub-problems.
+  - Dynamic algorithms use Memoization.
+  
+- In contrast to greedy algorithms, where local optimization is addressed, dynamic algorithms are motivated for an overall optimization of the problem.
+
+- In contrast to divide and conquer algorithms, where solutions are combined to achieve an overall solution, dynamic algorithms use the output of a smaller sub-problem and then try to optimize a bigger sub-problem. Dynamic algorithms use Memoization to remember the output of already solved sub-problems.
+
+<br/>
+<br/>
+<br/>
+<br/>
+
+# Data Structures
+
+- 
