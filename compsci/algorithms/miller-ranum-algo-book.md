@@ -34,3 +34,30 @@ My notes on the digital book written by Brad Miller and David Rantum, Luther Col
 
 - As computer scientists, in addition to our ability to solve problems, we will also need to know and understand solution evaluation techniques. In the end, there are often many ways to solve a problem. Finding a solution and then deciding whether it is a good one are tasks that we will do over and over again.
 
+### Getting Starte With Data
+
+- We stated above that Python supports the object-oriented programming paradigm. This means that Python considers data to be the focal point of the problem-solving process. In Python, as well as in any other object-oriented programming language, we define a `class` to be a description of what the data look like (the state) and what the data can do (the behavior). Data items are called `objects` in the object-oriented paradigm. An object is an instance of a class. You can read more about python on the "programming" folder of this repository.
+
+### Summary
+
+- This is the summary of the first chapter: Introduction:
+  - Computer science is the study of problem solving.
+  - Computer science uses abstraction as a tool for representing both processes and data.
+  - Abstract data types allow programmers to manage the complexity of a problem domain by hiding the details of the data.
+  - Lists, tuples, and strings are built in Python sequential collections.
+  - Dictionaries and sets are nonsequential collections of data.
+  - Classes allow programmers to implement abstract data types.
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+# Analysis
+
+- In this chapter, we will understand: algorithm analysis's importance, big-O notation, importance of implementations impact on analysis ... etc. 
+
+### What is Algorithm Analysis
+
+
