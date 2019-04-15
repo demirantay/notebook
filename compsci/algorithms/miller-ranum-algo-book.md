@@ -78,3 +78,5 @@ My notes on the digital book written by Brad Miller and David Rantum, Luther Col
       return sum, end-start
   ```
   We need a better way to characterize these algorithms with respect to execution time. The benchmark technique computes the actual time to execute. It does not really provide us with a useful measurement, because it is dependent on a particular machine, program, time of day, compiler, and programming language. Instead, we would like to have a characterization that is independent of the program or computer being used. This measure would then be useful for judging the algorithm alone and could be used to compare algorithms across implementations.
+  
+
