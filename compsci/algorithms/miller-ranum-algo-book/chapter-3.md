@@ -8,7 +8,7 @@
 
 - What distinguishes one linear structure from another is the way in which items are added and removed, in particular the location where these additions and removals occur. For example, a structure might allow new items to be added at only one end. Some structures might allow items to be removed from either end. These variations give rise to some of the most useful data structures in computer science. They appear in many algorithms and can be used to solve a variety of important problems.
 
-### What is a Stack
+## What is a Stack
 
 - A stack (sometimes called a “push-down stack”) is an ordered collection of items where the addition of new items and the removal of existing items always takes place at the same end. This end is commonly referred to as the “top.” The end opposite the top is known as the “base.”
 
@@ -30,13 +30,83 @@
 
 - Now that we have clearly defined the stack as an abstract data type we will turn our attention to using Python to implement the stack. Recall that when we give an abstract data type a physical implementation we refer to the implementation as a data structure.
 
+- As we described in Chapter 1, in Python, as in any object-oriented programming language, the implementation of choice for an abstract data type such as a stack is the creation of a new class. The stack operations are implemented as methods. Further, to implement a stack, which is a collection of elements, it makes sense to utilize the power and simplicity of the primitive collections provided by Python. We will use a list.
 
+- Lets try to create a stack data structure see the code below:
+  ```python
+  class Stack:
+      
+      def __init__(self):
+          self.items = []
+          
+      def isEmpty(self):
+          if self.items == []
+              return True
+          else:
+              return False
+      
+      def push(self, item):
+          self.items.append(item)
+          
+      def pop(self):
+          return self.items.pop()
+          
+      def peek(self):
+          return(self.items[len(self.items) - 1])
+          
+      def size(self):
+          return len(self.items)
+  ```
 
+### Infix, Prefix and Posfix Expressions
 
+- I skipped this part on the book because I really did not understand a bit of it
 
+## What is a Queue
 
+- A queue is an ordered collection of items where the addition of new items happens at one end, called the “rear,” and the removal of existing items occurs at the other end, commonly called the “front.” As an element enters the queue it starts at the rear and makes its way toward the front, waiting until that time when it is the next element to be removed.
 
+- The most recently added item in the queue must wait at the end of the collection. The item that has been in the collection the longest is at the front. This ordering principle is sometimes called FIFO, first-in first-out. It is also known as “first-come first-served.”
 
+- The simplest example of a queue is the typical line that we all participate in from time to time. We wait in a line for a movie, we wait in the check-out line at a grocery store, and we wait in the cafeteria line (so that we can pop the tray stack). Well-behaved lines, or queues, are very restrictive in that they have only one way in and only one way out. There is no jumping in the middle and no leaving before you have waited the necessary amount of time to get to the front
+
+- Operating systems use a number of different queues to control processes within a computer. The scheduling of what gets done next is typically based on a queuing algorithm that tries to execute programs as quickly as possible and serve as many users as it can
+
+### The Queue Abstract Data Type
+
+- The queue abstract data type is defined by the following structure and operations. A queue is structured, as described above, as an ordered collection of items which are added at one end, called the “rear,” and removed from the other end, called the “front.” Queues maintain a FIFO ordering property. The queue operations are given below:  
+  - `Queue()` -- creates a new queue that is empty. It needs no parameters and returns an empty queue.
+  - `enqueue(item)` -- adds a new item to the rear of the queue. It needs the item and returns nothing.
+  - `dequeue()` -- removes the front item from the queue. It needs no parameters and returns the item. The queue is modified.
+  - `isEmpty()` -- tests to see whether the queue is empty. It needs no parameters and returns a boolean value.
+  - `size()` -- returns the number of items in the queue. It needs no parameters and returns an integer.
+
+### Implementing Queue in Python
+
+- It is again appropriate to create a new class for the implementation of the abstract data type queue. As before, we will use the power and simplicity of the list collection to build the internal representation of the queue.
+
+- We need to decide which end of the list to use as the rear and which to use as the front. The implementation shown in below assumes that the rear is at the end of the list. and front is at the front
+  ```python
+  class Queue:
+      
+      def __init__(self):
+          self.items = []
+          
+      def isEmpty(self):
+          if self.items == []:
+              return True
+          else:
+              return False
+              
+      def enqueue(self, item):
+          self.items.append(item)
+          
+      def dequeue(self):
+          self.items.pop(0)
+          
+      def size(self):
+          return len(self.items)
+  ````
 
 
 <hr>
