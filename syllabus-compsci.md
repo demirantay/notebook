@@ -331,24 +331,4 @@ DevOps is something very complex instead of having a one strict route you cna ca
  <img align="center" width="100%" src="/misc/images/algorithms.png" />
 
 
- ### Game Dev
 
- ## 🚀 Introduction
-
-![](https://github.com/utilForever/game-developer-roadmap/blob/master/Images/Intro.png)
-
-## 🎨 Client Roadmap for 2018 (WIP)
-
-![](https://github.com/utilForever/game-developer-roadmap/blob/master/Images/ClientProgrammer-2018.png)
-
-## 🎨 Client Roadmap
-
-![](https://github.com/utilForever/game-developer-roadmap/blob/master/Images/Client.png)
-
-## 👽 Server Roadmap (Thanks to [Heo Lyn](https://github.com/lynheo))
-
-![](https://github.com/utilForever/game-developer-roadmap/blob/master/Images/Server.png)
-
-## 📑 Game Tester (QA) Roadmap
-
-![](https://github.com/utilForever/game-developer-roadmap/blob/master/Images/GameTester(QA).png)
