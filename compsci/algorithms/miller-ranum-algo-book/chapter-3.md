@@ -152,14 +152,93 @@
       def removeRear(self):
           self.items.pop(0)
   ```
-  
+
+<br>
+<br>
+<br>
+<br>
+
 ## Lists
 
-- Throughout the discussion of basic data structures, we have used Python lists to implement the abstract data types presented. The list is a powerful, yet simple, collection mechanism that provides the programmer with a wide variety of operations. However, not all programming languages include a list collection. In these cases, the notion of a list must be implemented by the programmer.
+- Throughout the discussion of basic data structures, we have used Python lists to implement the abstract data types presented. The list is a powerful, yet simple, collection mechanism that provides the programmer with a wide variety of operations. However, not all programming languages include a list collection. In these cases, the notion of a list must be implemented by the programmer. Most of the other programming languages also call lists `Array`s
 
 - A list is a collection of items where each item holds a relative position with respect to the others. More specifically, we will refer to this type of list as an unordered list. We can consider the list as having a first item, a second item, a third item, and so on. We can also refer to the beginning of the list (the first item) or the end of the list (the last item). For simplicity we will assume that lists cannot contain duplicate items.
 
 - For example, the collection of integers 54, 26, 93, 17, 77, and 31 might represent a simple unordered list of exam scores. Note that we have written them as comma-delimited values, a common way of showing the list structure. Of course, Python would show this list as [54,26,93,17,77,31].
+
+### The Unordered List Abstract Data Type 
+
+- The structure of an unordered list, as described above, is a collection of items where each item holds a relative position with respect to the others. Some possible unordered list operations are given below:
+  - `List()` creates a new list that is empty. It needs no parameters and returns an empty list.
+  - `add(item)` adds a new item to the list. It needs the item and returns nothing. Assume the item is not already in the list.
+  - `remove(item)` removes the item from the list. It needs the item and modifies the list. Assume the item is present in the list.
+  - `search(item)` searches for the item in the list. It needs the item and returns a boolean value.
+  - `isEmpty()` tests to see whether the list is empty. It needs no parameters and returns a boolean value.
+  - `size()` returns the number of items in the list. It needs no parameters and returns an integer.
+  - `append(item)` adds a new item to the end of the list making it the last item in the collection. It needs the item and returns nothing. Assume the item is not already in the list.
+  - `index(item)` returns the position of item in the list. It needs the item and returns the index. Assume the item is in the list.
+  - `insert(pos,item` adds a new item to the list at position pos. It needs the item and returns nothing. Assume the item is not already in the list and there are enough existing items to have position pos.
+  - `pop()` removes and returns the last item in the list. It needs nothing and returns an item. Assume the list has at least one item.
+  - `pop(pos)` removes and returns the item at position pos. It needs the position and returns the item. Assume the item is in the list.
+  
+### Implementing an Unordered List: Linked Lists
+
+- In order to implement an unordered list, we will construct what is commonly known as a linked list. Recall that we need to be sure that we can maintain the relative positioning of the items. However, there is no requirement that we maintain that positioning in contiguous memory. For example, consider the collection of items distrubuted randomly acroos the screen. It appears that these values have been placed randomly. If we can maintain some explicit information in each item, namely the location of the next item, and the next item that comes after that, then the relative position of each item can be expressed by simply following the link from one item to the next.
+
+- It is important to note that the location of the first item of the list must be explicitly specified. Once we know where the first item is, the first item can tell us where the second is, and so on. The external reference is often referred to as the head of the list. Similarly, the last item needs to know that there is no next item.
+
+### The Node Class
+
+- The basic building block for the linked list implementation is the node. Each node object must hold at least two pieces of information. First, the node must contain the list item itself. We will call this the data field of the node. In addition, each node must hold a reference to the next node.
+
+- The Node class also includes the usual methods to access and modify the data and the next reference:
+  ```python
+  class Node:
+    
+      def __init__(self. initData)
+          self.data = initData
+          self.next = None
+          
+      def getData(self):
+          return self.data
+      
+      def getNext(self):
+          return self.next
+          
+      def setData(self, new_data):
+          self.data = new_data
+      
+      def setNext(self, new_next):
+          self.next = new_next
+  ```
+  The special Python reference value None will play an important role in the Node class and later in the linked list itself. A reference to None will denote the fact that there is no next node. Note in the constructor that a node is initially created with next set to None. Since this is sometimes referred to as “grounding the node,” we will use the standard ground symbol to denote a reference that is referring to None. It is always a good idea to explicitly assign None to your initial next reference values.
+  
+### The Unordered List Class
+
+- As we suggested above, the unordered list will be built from a collection of nodes, each linked to the next by explicit references. As long as we know where to find the first node (containing the first item), each item after that can be found by successively following the next links. With this in mind, the UnorderedList class must maintain a reference to the first node.
+
+-  The head of the list refers to the first node which contains the first item of the list. In turn, that node holds a reference to the next node (the next item) and so on. It is very important to note that the list class itself does not contain any node objects. Instead it contains a single reference to only the first node in the linked structure.
+
+- Here is the python implementation:
+  ```python
+  class UnorderedList():
+  
+      def __init__(self):
+          self.head == None
+          
+      def isEmpty(self):
+          if self.head == None:
+              return True
+          else: 
+              return False
+              
+      def add(self, item):
+          temp = Node(item)
+          temp.setNext(self.head)
+          self.head = temp
+  ```
+
+
 
 <hr>
 
