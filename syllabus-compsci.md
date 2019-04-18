@@ -189,21 +189,12 @@ Every developer should code once:
  - [ ] Deploy a server
  - [ ] Internet browser
  - [ ] Deploy browser
+ - [ ] Write markup languages like your own html and css for your browser
  - and so on about the low level parts about web
 - [ ] Project: Keep maintaining a web project it will be never done it is your open source commitment from now on.
-- [ ] Project: Update your Portfolio highlighting your best work. Make it professional you can get insparation from hipolabs.com they illustrate a very good example of freelanceers website
-- [ ] Project: Finish any questions you have remaining from Python Interview Prep
-- [ ] Project: Create and polish your Resume/CV.
-- [ ] Project: [Cracking the Coding Interview](https://www.hackerrank.com/domains/tutorials/cracking-the-coding-interview) on HackerRank
-- [ ] Project: Try to sell a frontend template code. Or atleast get your foot in the door for freelancing.
 - [ ] Important: **Start Contributing to Open Source projects**
   - [ ] [First Contributions](https://github.com/Roshanjossey/first-contributions)
   - [ ] [Open Source Guide](https://github.com/github/opensource.guide)
-
-  - [ ] Start earning money from what you code since you completed your fundemental basic education spend your time more wisely like contributing to big remote working friendly companies open source projects.
- - [ ] You can try to win [kaggle.com](https://www.kaggle.com/) prices since there are really good prices such as up to 1 million dollars
- - [ ] Learn game dev for money in the future
-
 
  ---
  ---
@@ -227,10 +218,7 @@ Every developer should code once:
  - [X] HTTP/HTTPS
  - [ ] Design Patterns
  - [ ] Course : GO UP AND FINISH ALGORITHMS HEADER ON [SECTION 1](#algorithms)
- - [ ] Project: Clone git
- - [ ] Project: Clone github
- - [ ] Project: A nicer 8bit computer or 16
- - [ ] Project: Implement the algorithms below
+ - [ ] Do a very good project for each box above
 
  ### Front End
  This may seem basic since in the core there are only three technologies how ever what is really hard is that not everyone has the eye for killer design skills.
