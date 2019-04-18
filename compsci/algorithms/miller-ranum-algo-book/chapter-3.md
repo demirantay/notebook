@@ -236,9 +236,27 @@
           temp = Node(item)
           temp.setNext(self.head)
           self.head = temp
+          
+      # There are other shit like search, size, pop ...etc
+      # but most of the languages implement its arrays(lists) 
+      # so if you really want to write your own data structures
+      # you can search more deeply later on
   ```
+  
+- There are also OrderedList's to implement however I am not going to note those since it is really not that necessary. If you really want to implement your own data structures you really need to research more about the Node Class structure and how it is used with your own custom data structures.
 
 
+### Summary
+
+- Linear data structures maintain their data in an ordered fashion.
+- Stacks are simple data structures that maintain a LIFO, last-in first-out, ordering.
+- The fundamental operations for a stack are push, pop, and isEmpty.
+- Queues are simple data structures that maintain a FIFO, first-in first-out, ordering.
+- The fundamental operations for a queue are enqueue, dequeue, and isEmpty.
+- Deques are data structures that allow hybrid behavior like that of stacks and queues.
+  The fundamental operations for a deque are addFront, addRear, removeFront, removeRear, and isEmpty.
+- Lists are collections of items where each item holds a relative position.
+  A linked list implementation maintains logical order without requiring physical storage requirements.
 
 <hr>
 
