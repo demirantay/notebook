@@ -1,17 +1,79 @@
 # Programming 
 
-Table of contents
+- Computer programming is the act of writing computer programs, which are a sequence of instructions written using a Computer Programming Language to perform a specified task by the computer.
+  - A computer program is also called a computer software, which can range from two lines to millions of lines of instructions.
+  - Computer program instructions are also called program source code and computer programming is also called program coding.
+  - A computer without a computer program is just a dump box; it is programs that make computers active.
+  
+- As we have developed so many languages to communicate among ourselves, computer scientists have developed several computer-programming languages to provide instructions to the computer (i.e., to write computer programs). We will see several computer programming languages in the folders in the README's root folder.
 
-- [Python](python/) 
-- [Java](java/)  
-- [C language](c/)
-- [Exersices](exersisces)
+### Uses of Computer Programs
 
-Try to implemet the exersices from the K.King's C book for the each language that you are learning new.
+- Today computer programs are being used in almost every field, household, agriculture, medical, entertainment, defense, communication, etc. Listed below are a few applications of computer programs −
+  - MS Word, MS Excel, Adobe Photoshop, Internet Explorer, Chrome, etc., are examples of computer programs.
+  - Computer programs are being used to develop graphics and special effects in movie making.
+  - Computer programs are being used to perform Ultrasounds, X-Rays, and other medical examinations.
+  - Computer programs are being used in our mobile phones for SMS, Chat, and voice communication.
+  
+### Algorithms
 
-## What is Programming 
+- From programming point of view, an algorithm is a step-by-step procedure to resolve any problem. An algorithm is an effective method expressed as a finite set of well-defined instructions.
 
-> ...
+- Thus, a computer programmer lists down all the steps required to resolve a problem before writing the actual code.
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+### Basics
+
+- We assume you are well aware of English Language, which is a well-known Human Interface Language. English has a predefined grammar, which needs to be followed to write English statements in a correct way. Likewise, most of the Human Interface Languages (Hindi, English, Spanish, French, etc.) are made of several elements like verbs, nouns, adjectives, adverbs, propositions, and conjunctions, etc.
+
+- Similar to Human Interface Languages, Computer Programming Languages are also made of several elements. We will take you through the basics of those elements and make you comfortable to use them in various programming languages. These basic elements include −
+  - Programming Environment
+  - Basic Syntax
+  - Data Types
+  - Variables
+  - Keywords
+  - Basic Operators
+  - Decision Making
+  - Loops
+  - Numbers
+  - Characters
+  - Arrays
+  - Strings
+  - Functions
+  - File I/O
+
+### Environment
+
+- You will need the following setup to start with programming using any programming language:
+  - A text editor to create computer programs.
+  - A compiler to compile the programs into binary format.
+  - An interpreter to execute the programs directly.
+  
+### Compiler ?
+
+- You write your computer program using your favorite programming language and save it in a text file called the program file. Now let us try to get a little more detail on how the computer understands a program written by you using a programming language. Actually, the computer cannot understand your program directly given in the text format, so we need to convert this program in a binary format, which can be understood by the computer. The conversion from text program to binary file is done by another software called Compiler and this process of conversion from text formatted program to binary format file is called program compilation. Finally, you can execute binary file to perform the programmed task.
+
+- So, if you are going to write your program in any such language, which needs compilation like C, C++, Java and Pascal, etc., then you will need to install their compilers before you start programming.
+
+### Interpreter ?
+
+- We just discussed about compilers and the compilation process. Compilers are required in case you are going to write your program in a programming language that needs to be compiled into binary format before its execution.
+
+- There are other programming languages such as Python, PHP, and Perl, which do not need any compilation into binary format, rather an interpreter can be used to read such programs line by line and execute them directly without any further conversion.
+
+- So, if you are going to write your programs in PHP, Python, Perl, Ruby, etc., then you will need to install their interpreters before you start programming.
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
 
 ## Difference of Programming Languages
 
