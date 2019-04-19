@@ -4,6 +4,8 @@ The syllabus is divided into sections. The first section is the basic theorotica
 
 For [finding the books](http://freecomputerbooks.com/)
 
+- [ ] Start contributing to Remote Companies Open Source projects 
+
 
 ## Section 1
 
