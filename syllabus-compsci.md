@@ -212,12 +212,12 @@ Every developer should code once:
  ### Intro
  These are the basic and essential skills that every developer shoould have it under their belt in todays market. Try to practice what you learn.
 
- - [X] Git - Version Control
- - [X] GitHub for public repos, GitLab for private
- - [X] API's
- - [X] Basic Terminal Usage
- - [X] Learn to research
- - [X] HTTP/HTTPS
+ - [ ] Git - Version Control
+ - [ ] GitHub for public repos, GitLab for private
+ - [ ] API's
+ - [ ] Basic Terminal Usage
+ - [ ] Learn to research
+ - [ ] HTTP/HTTPS
  - [ ] Design Patterns
  - [ ] Course : GO UP AND FINISH ALGORITHMS HEADER ON [SECTION 1](#algorithms)
  - [ ] Do a very good project for each box above
@@ -225,21 +225,21 @@ Every developer should code once:
  ### Front End
  This may seem basic since in the core there are only three technologies how ever what is really hard is that not everyone has the eye for killer design skills.
 
- - [X] Learn : HTML
- - [X] HTML : Clone a template content
- - [X] Learn : CSS
- - [X] CSS : Learn how to use 'grid' and 'flexbox' -- skipped since I use bootstraps- 12 grid system
- - [X] CSS : Learn Media Queries and Responsive Design
- - [X] CSS : Style the template you made above
- - [X] Learn : JavaScript
- - [X] JS : Learn the DOM api and how to manipulate it
- - [X] JS : finish YDKJS books for understanding hoisting, bubling ... etc. there are 10 min papares in your stars
+ - [ ] Learn : HTML
+ - [ ] HTML : Clone a template content
+ - [ ] Learn : CSS
+ - [ ] CSS : Learn how to use 'grid' and 'flexbox' -- skipped since I use bootstraps- 12 grid system
+ - [ ] CSS : Learn Media Queries and Responsive Design
+ - [ ] CSS : Style the template you made above
+ - [ ] Learn : JavaScript
+ - [ ] JS : Learn the DOM api and how to manipulate it
+ - [ ] JS : finish YDKJS books for understanding hoisting, bubling ... etc. there are 10 min papares in your stars
  - [ ] JS : Learn Ajax(XHR)
  - [ ] JS : Learn ES6 and writing modular javascript
  - [ ] Project : Make a fine Responsive website with interactivity with javascript
  - [ ] JS : Pick a package manager and learn it, either `npm` or `yarn`
  - [ ] CSS : Learn SASS a css proprecessor that lets you do things css can't do it by it self
- - [X] CSS : Learn BootStrap a framework for responive design
+ - [ ] CSS : Learn BootStrap a framework for responive design
  - [ ] CSS : Learn BEM, a css architecture to stucture your css code
  - [ ] Learn : Build tools in this order, 1: NPM scripts, 2: ESLint, 3:Webpack
  - [ ] Project : Create a library and publish it on npm and github
@@ -255,17 +255,17 @@ Every developer should code once:
  ### Back End
  It may seem daunting compared to front-end however and yes it is true that there is a learning curve. However it is a lot more fun to be able to understand what the fuck is going under all of this complexity.
 
- - [X] Learn : Pick a language for backend you may chose Scripting languages: Python, Ruby, PHP, Node or Functional languages: Haskell, Scala .. etc. or Multiparadigm langauges: Go, Rust or Enterprisey languages: Java, C#
- - [X] Practice: Exercise and make some command line application. Sample ideas, you can make a web scraper or get a API in JSON format and create someting, think of a daily task and automate it.
- - [X] Learn: Learn how to use a package manager for the language you have picked e.g. Python has pip etc.
- - [X] Learn: Standards and best practices. Each language has it is own e.g. Python has PEP
- - [X] Projeect: Make and Distribute some package / Library.
- - [X] Learn: Learn about testing. There are several ways to write tests such as unit , integration ..etc. Tests are very important do not skim through articles. Learn how to calculate test covarege.
- - [X] Project: Write tests for your package built above.
- - [X] Learn Relational Databases there are many options but pick either PostgreSQL or MySQL
- - [X] ProjectCreate a simple CRUD web applciation like a blog or something using everything you have learnt this far. It should have a registration, adminpanel, posts ...etc.
- - [X] Learn: a Framework e.g. Django, Flask
- - [X] Project: Make the application you made above with the framework you chose.
+ - [ ] Learn : Pick a language for backend you may chose Scripting languages: Python, Ruby, PHP, Node or Functional languages: Haskell, Scala .. etc. or Multiparadigm langauges: Go, Rust or Enterprisey languages: Java, C#
+ - [ ] Practice: Exercise and make some command line application. Sample ideas, you can make a web scraper or get a API in JSON format and create someting, think of a daily task and automate it.
+ - [ ] Learn: Learn how to use a package manager for the language you have picked e.g. Python has pip etc.
+ - [ ] Learn: Standards and best practices. Each language has it is own e.g. Python has PEP
+ - [ ] Projeect: Make and Distribute some package / Library.
+ - [ ] Learn: Learn about testing. There are several ways to write tests such as unit , integration ..etc. Tests are very important do not skim through articles. Learn how to calculate test covarege.
+ - [ ] Project: Write tests for your package built above.
+ - [ ] Learn Relational Databases there are many options but pick either PostgreSQL or MySQL
+ - [ ] ProjectCreate a simple CRUD web applciation like a blog or something using everything you have learnt this far. It should have a registration, adminpanel, posts ...etc.
+ - [ ] Learn: a Framework e.g. Django, Flask
+ - [ ] Project: Make the application you made above with the framework you chose.
  - [ ] Learn: a noSQL database you do not have to use it but understand how it is different from relational databases and why they are needed. MongoDB is a solid choice.
  - [ ] Learn: Caching, learn how to implenet app level caching using Redis or Memcached
  - [ ] Project: Implement caching to the application you have built above.
