@@ -309,6 +309,7 @@ DevOps is something very complex instead of having a one strict route you cna ca
 - [ ] Learn: Setting up a firewall
 - [ ] Learn: TLS, STARTLS, SSL, HTTTPS, SCP, SSH, SFTP
 - [ ] Learn: Postmortem analysis when something bad happens.
+- [ ] Course : Go up and brush upon your algorithms with code university because operating systems and networkign rqeuires algorithms
 - [ ] Course : GO UP AND FINISH OPERATING SYSTEMS HEADER ON [SECTION 1](#operating-systems)
 - [ ] Course : GO UP AND FINISH NETWORKING HEADER ON [SECTION 1](#computer-networking)
 - [ ] Project : Redo all boxes with a lot more advanced projects
