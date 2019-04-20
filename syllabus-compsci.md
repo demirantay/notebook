@@ -15,7 +15,7 @@ Fundemental Computer Science Cirriculum
 
 Don’t be the person who “never quite understood” something like recursion
 
- - [ ] Read: The [TutorialsOnPoint](https://www.tutorialspoint.com/computer_programming/computer_programming_environment.htm) for a overview. Note this to README of the folder
+ - [X] Read: The [TutorialsOnPoint](https://www.tutorialspoint.com/computer_programming/computer_programming_environment.htm) for a overview. Note this to README of the folder
  - [X] Course : [Helsinki MOOC's](http://mooc.fi/courses/2013/programming-part-1/material.html) for the desired language.
  - [X] Book : SICP (Structured Interpretion of Computer Programs)-*(shelved it for later it is hard)*
  - [X] Book : [modern c book](https://www.scribd.com/doc/39933932/C-Programming-a-Modern-Approach-2nd-Edition-K-N-King)(Did not finish left at pg.292 )
@@ -277,13 +277,11 @@ Every developer should code once:
  - [ ] Learn: Knowledge of Web Servers, There are several different options look at the differnt options understand differneces and limitations. Apache, Nginx .. etc.
  - [ ] Learn: how to use Web Sockets.
  - [ ] Project: Make sometinhg using web sockets.
- - [ ] Project: Createa micro web framework like django or flask you should check out WSGI and other stuff ...
  - [ ] Learn: GraphQL, this is not required and optional feel free to have a loot and what it is all about and why they are calling it the new REST
  - [ ] Learn: Again option, look into Graph Databases, at least you can have a little udnerstanding of what they are.
  - [ ] We have a lot more stuff like Profiling, Static Analysis, DDD SOAP, etc. Go on your journey now!
  - [ ] Course : GO UP AND FINISH DATABASE HEADER ON [SECTION 1](#databases)
- - [ ] Project : Repeat all of the steps with more ADVANCED projects.
-
+ - [ ] Project: Once you are done doing all of the above with django create your own framwork and implement each box again with more advanced projects.
 
 ### DevOps
 
