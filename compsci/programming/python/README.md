@@ -7,7 +7,7 @@
 <br>
 <br>
 
-# Basics
+## Basics
 
 - You can run your python scripts or code with the following command (you dont need to compile it since python is a interpreted language):
   ```
@@ -30,6 +30,42 @@
   ```
 
 - Most of the operators are the same e.g. `+`, `-`+ `*` .. `>`, `>=` .. etc. So Im not going to note it if you want to you can check it out in the official documentation However keep in mind that python allws you to say `and`, `or` ..etc. for `&&`, `||`
+
+<br>
+<br>
+
+## Control Flow
+
+- You can easily write control statements with eather a single if, nested decision makings and such here  is the way you write control flows in python:
+  ```python
+  if bar == 1:
+      if foo == 1:
+          ...
+      elif foo == 2: 
+          ...
+      elif foo == 3:
+          ...
+      else:
+          ...
+  else:
+    ...
+  ```
+  
+- You can also write switches in python but I am not going to note it at the moment since I dont usually use it.
+
+<br>
+<br>
+
+## Loops
+
+
+
+
+
+
+
+
+
 
 
 
