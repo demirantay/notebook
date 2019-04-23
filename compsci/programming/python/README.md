@@ -58,7 +58,35 @@
 
 ## Loops
 
+- Here the following code will show you how can you write loops with python: 
+  ```python
+  # while loop 
+  while foo < 10:
+    ...
+    foo += 1
+    
+  # for loops
+  for i in range(0, 10, 1): 
+      ...
+  
+  # or
+  
+  for item in array:
+      print(item)
+      
+  ```
 
+- There are loops control statements in any programming languages most common ones of course are `continue`, `pass`, `break`.
+  Im not gonna note what each of them does since it is easy if you dont know it just open up documentation.
+  ```python
+  while True:
+      if foo == 1:
+          continue
+      elif foo == 2:
+          pass
+      else:
+          break
+  ```
 
 
 
