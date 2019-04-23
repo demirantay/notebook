@@ -87,7 +87,44 @@
       else:
           break
   ```
+  
+<br>
+<br>
 
+## Numbers
+
+- Python supports 4 different numerical types:
+  - `int (signed integers)` − They are often called just integers or ints, are positive or negative whole numbers with no decimal point.
+  - `ong (long integers )` − Also called longs, they are integers of unlimited size, written like integers and followed by an uppercase or lowercase L.
+  - `float (floating point real values)` − Also called floats, they represent real numbers and are written with a decimal point 
+  - `complex (complex numbers)` − are of the form a + bJ ( they contain like `i` imaginary numbers so im not going to get into it right now)
+  ```python
+  a = 10; b = -25  # int
+  c = 51924361L    # long
+  d = 15.20        # float
+  
+  # You can also delete the objects
+  # and your variables with del
+  
+  del a, b, c, d
+  ```
+
+- There are lots of cool stuff you can do with pythons own modules such as `random`, `math` ... etc. Dont forget to check it out
+
+<br>
+<br>
+
+## Strings
+
+- Here is how you can write and assign a string to a variable
+  ```python
+  foo = "this is a string"
+  ```
+  
+- You can acsess a value of a string by this
+  ```python
+  
+  ```
 
 
 
