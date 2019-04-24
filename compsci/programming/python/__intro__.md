@@ -202,5 +202,135 @@
   
   tup3 = tup1 + tup3  # <-- new tuple with 6 items
   ```
+  
+- But remember if you really want to have a mutable data structure just use dictonaries or lists tuples are for creating constant data that should not be changed 
 
+<br>
+<br>
 
+## Dictionary
+
+- Dictionary is a very organised data structure when you compare it to lists or tuples. It has keys and values attached to each key. Here is how you write it:
+  ```python
+  dict = {
+      "Name": "John",
+      "Age": 21,
+      "Job": "Baker"
+  }
+  ```
+
+- We accsess the dictonaires with the existing keys such as this:
+  ```python
+  dict['name']     # <-- Returns 'John'
+  # or
+  dict[0]          # <-- Returns 'John'
+  # or
+  dict.get("name") # <-- Returns 'John'
+  ```
+  
+- You can easily update a dictinoary by using the keys:
+  ```python
+  dict['age'] = 30      # <-- age of dict is now 30
+  dict['height'] = 185  # <-- added a new key with a value to the dict
+  ```
+
+- You can use the `pop(key)` function to remove an key and its value from a dictionary:
+  ```python
+  dict.pop("name")  # <-- removes 'john' and 'name' key
+  ```
+  
+- There are tons of different built in methods for dictionaries in python make sure to visit official documentation to get more idea about what dictionaries are capabale of.
+
+<br>
+<br>
+
+## Functions
+
+- Writing functions requires no gimmick in python just the syntax can come a bit off wihtout the brackets:
+  ```python
+  def function_name(parameter1, parameter2):
+      return parameter1 + parameter2
+      
+  function_name(5, 4)  # <-- Returns 9
+  ```
+
+- You can put multi lined comments as your firs statemtn inside a function to give it a `__doc__`(documentation) object. See the snippet:
+  ```python
+  def foo():
+      """
+      name: foo
+      desc: does stuff
+      """
+      pass
+      
+  print(foo.__doc__)  # <-- prints the comment (documentation) on the first line 
+  ```
+  
+- While calling a function you can use the definition names to assing values. Look at this:
+  ```python
+  def foo(name, age):
+      ...
+      
+  foo(age=25, name="James")
+  ```
+  
+- While defining a function you can have default values for a case where the user forgots to input an argument:
+  ```python
+  def foo(name, age=18):
+      ...
+      
+  # Both of these are exceptable
+  foo("john", 30)
+  foo("maya")
+  ```
+  
+<br>
+<br>
+
+## Modules
+
+- A module is basically a single file that has your code in it. Usually programmers only store classes, functions and variables inside modules in order to be organised and retrieve their code if it is needed on their `main` program.
+
+- Lets say that you have this file:
+  ```python
+  # File name : module1.py
+  
+  def foo():
+      print("hello, world")
+  ```
+  Now if we create another file named `main` we can access the `foo` files code with the following way:
+  ```python
+  from module1 import foo
+  
+  # or you can get everything in the file with this
+  from module1 import *
+  ```
+  
+- The `dir()` built-in function returns a sorted list of strings containing the names defined by a module. The list contains the names of all the modules, variables and functions that are defined in a module. Following is a simple example −
+  ```python
+  # Import built-in module math
+  import math
+  
+  content = dir(math)
+  print content
+  ```
+  When the above code is executed, it produces the following result −
+  ```
+  ['__doc__', '__file__', '__name__', 'acos', 'asin', 'atan', 
+  'atan2', 'ceil', 'cos', 'cosh', 'degrees', 'e', 'exp', 
+  'fabs', 'floor', 'fmod', 'frexp', 'hypot', 'ldexp', 'log',
+  'log10', 'modf', 'pi', 'pow', 'radians', 'sin', 'sinh', 
+  'sqrt', 'tan', 'tanh']
+  ```
+  Here, the special string variable __name__ is the module's name, and __file__ is the filename from which the module was loaded.
+  
+- There are lot more to learn about packaging and modules in python code but it is another topic. So in the root folder of this file you can find notes on the topic in `pacakaging` file
+  
+<br>
+<br>
+
+## Input & Output
+  
+  
+  
+  
