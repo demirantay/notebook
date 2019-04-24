@@ -123,15 +123,84 @@
   
 - You can acsess a value of a string by this
   ```python
-  
+  foo = "this is a string"
+  print(foo[0])  # <-- prints "t"
   ```
 
+- Strings are immutable owever, you can update a string by reassaning, adding another piece of string into it or slicing or many other ways that you can lookup in the documentation:
+  ```python
+  foo = "string before"
+  new_string = foo[0:6] + "after"  # prints "string after"
+  ```
+  
+- You can use the string formatting technique that is used in C like this:
+  ```python
+  foo = "foo"
+  
+  bar = "this string contains %s " % foo 
+  ```
+  
+- There are many more things that you can do with strings such as `escape characters` like `\n`, `\t` ... etc. and there are many more string special operators like `slicing`, `multipliyng` look up the official documentation for more information. Dont forget to check out the built in string methods of python.
 
+<br>
+<br>
 
+## Lists
 
+- Remember while creating lists (arrays) in python yoou dont have to always put same data type into one list. Here is how you write a list:
+  ```python
+  array = [1, 2, 3, 4, 5, 6, 7, "eight"]
+  ```
+  You can accsess the index of the list above with this line:
+  ```python
+  array[1]     # <-- Returns `2`
+  array[0:3]   # <-- Returns `1, 2, 3
+  ```
 
+- You can update a list by either `.append(item)` which appends an item to the end of the list or use `insert(index, item)` to insert the item to the desired index within the list:
+  ```python
+  arr = ["foo", "bar"]
+  
+  arr.append("cat")       # <-- arr is `foo, bar, cat`
+  
+  arr.insert(0, "first")  # <-- arr is `first, foo, bar, cat`
+  ```
 
+- You can delete a element within the list with using `pop()` (which deletes the last item or `pop(index)` deletes the item at index:
+  ```python
+  arr = [1, 2, 3, 4]
+  
+  arr.pop()   # <-- arr is `1, 2, 3`
+  arr.pop(0)  # <-- arr is `2, 3`
+  ```
+  
+- There are basic list operations such as get the length of a list `len(arr)` or check if a item is in a list and such. Also you can index, slice find matrixes of python lists with the built in list-functions of the language. Dont forget to check them out in the official documentation.
 
+<br>
+<br>
 
+## Tuples
+
+- Tuples are basically has the same data structure as the lists however the difference is that they are immutable and written with parantheseses instead of brackets. Here is how you create one:
+  ```python 
+  foo = (1, 2, 3, 4, "five")
+  ```
+- You can accsess to the items the same way you do with lists:
+  ```python
+  foo[0]   # <-- returns you "1"
+  ```
+  
+- As mentioned above you cannot edit a tuple they are immutable such as this:
+  ```python
+  foo = (1, 2, 3)
+  foo[0] = 100  # WRONG! ERROR
+  ```
+  However if you really want to edit a tuple and for somereason you cannot use a mutable data structure this is how you do it:
+  ```python
+  tup1 = (1, 2, 3)
+  tup2 = (4, 5, 6)
+  
+  tup3 = tup1 + tup3  # <-- new tuple with 6 items
+  ```
 
 
