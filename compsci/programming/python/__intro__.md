@@ -331,6 +331,10 @@
 
 ## Input & Output
   
+- To output the most basic one is `print`ing:
+  ```python
+  print("foo")
+  ```
   
   
   
