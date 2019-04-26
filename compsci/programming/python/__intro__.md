@@ -350,6 +350,17 @@
 <br>
 <br>
 
+## Exception Handling
+
+- Python provides two very important features to handle any unexpected error in your Python programs and to add debugging capabilities in them −
+  - Exception Handling
+  - Assertions
+  
+- ...
+
+<br>
+<br>
+
 ## Files 
 
 - Until now, you have been reading and writing to the standard input and output. Now, we will see how to use actual data files. Python provides basic functions and methods necessary to manipulate files by default. You can do most of the file manipulation using a file object.
