@@ -333,8 +333,62 @@
   
 - To output the most basic one is `print`ing:
   ```python
-  print("foo")
+  print("foo is : ", 10, "!")
   ```
   
+- Python provides two built-in functions to read a line of text from standard input, which by default comes from the keyboard. These functions are −  
+  - raw_input
+  - input
+  ```python
+  str_1 = raw_input("Input 1: ")
+  str_2 = input("Input 2: ")
+  
+  print(str_1, str_2)
+  ```
+  they are basically nearly same there is a difference but most of the time in doubt use input. They both return a string so if you want another type you have to convert the type e.g. `int(input(...))`.
+  
+<br>
+<br>
+
+## Files 
+
+- Until now, you have been reading and writing to the standard input and output. Now, we will see how to use actual data files. Python provides basic functions and methods necessary to manipulate files by default. You can do most of the file manipulation using a file object.
+
+- Before you can read or write a file, you have to open it using Python's built-in open() function. This function creates a file object. Syntax :
+  ```python
+  file object = open(file_name [, access_mode][, buffering])
+  ```
+  - `file_name`: The file_name argument is a string value that contains the name of the file that you want to access.
+  - `accsess_mode`: The access_mode determines the mode in which the file has to be opened, i.e., read, write, append, etc.
+  - `buffering`: If the buffering value is set to 0, no buffering takes place. If the buffering value is 1, line buffering is performed while accessing a file.
+
+- Lets see an example :
+  ```python
+  # Open a file
+  fo = open("foo.txt", "wb")
+  print("Name of the file: ", fo.name)
+  ```
+  
+- The close() method of a file object flushes any unwritten information and closes the file object, after which no more writing can be done.
+  ```python
+  # Open a file
+  fo = open("foo.txt", "wb")
+  print("Name of the file: ", fo.name)
+
+  # Close opend file
+  fo.close()
+  ```
+  
+- You can edit the files inner content with the write method of the file object such as this:
+  ```python
+  # Open a file
+  fo = open("foo.txt", "wb")
+  fo.write( "Python is a great language.\nYeah its great!!\n");
+
+  # Close opend file
+  fo.close()
+  ```
+  
+- There are many more cool things that you can do with files a LOT MORE ACTUALLY, read, delete, position, rename, remove, mkdir, change dir ...etc. whatever you can think of. I am not going to note it at the moment because I dont usually use it. But for the challenging stuff for python I will write seperate note files for each subject in this files root folder.
   
   
