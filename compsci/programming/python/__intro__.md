@@ -356,7 +356,33 @@
   - Exception Handling
   - Assertions
   
-- ...
+### Assertions
+
+- An assertion is a sanity-check that you can turn on or turn off when you are done with your testing of the program. The easiest way to think of an assertion is to liken it to a raise-if statement (or to be more accurate, a raise-if-not statement). An expression is tested, and if the result comes up false, an exception is raised.
+
+- When it encounters an assert statement, Python evaluates the accompanying expression, which is hopefully true. If the expression is false, Python raises an AssertionError exception.
+
+- I DID NOT REALLY GET THEM IN THE TUTORIAL I WILL RETURN TO IT LATER ON
+
+### Exceptions
+
+- An exception is an event, which occurs during the execution of a program that disrupts the normal flow of the program's instructions. In general, when a Python script encounters a situation that it cannot cope with, it raises an exception. An exception is a Python object that represents an error. When a Python script raises an exception, it must either handle the exception immediately otherwise it terminates and quits.
+
+- If you have some suspicious code that may raise an exception, you can defend your program by placing the suspicious code in a try: block. After the try: block, include an except: statement, followed by a block of code which handles the problem as elegantly as possible.
+  ```python
+  try:
+   You do your operations here;
+   ......................
+  except ExceptionI:
+     If there is ExceptionI, then execute this block.
+  except ExceptionII:
+     If there is ExceptionII, then execute this block.
+     ......................
+  else:
+     If there is no exception then execute this block. 
+  ```
+
+- THERE ARE MANY MORE NOTE TAKING POINTS TO EXEPTION HANDLING AND ASSERTIONS HOWEVER I DO NOT WANT TO STUDY IT AT THE MOMENT. SO THIS IS A REMINDER TO RE-READ THE DOCUMENT ON THE TUTORIAL
 
 <br>
 <br>
