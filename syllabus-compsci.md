@@ -254,10 +254,10 @@ Every developer should code once:
  ### Back End
  It may seem daunting compared to front-end however and yes it is true that there is a learning curve. However it is a lot more fun to be able to understand what the fuck is going under all of this complexity.
 
- - [ ] Learn : Pick a language for backend you may chose Scripting languages: Python, Ruby, PHP, Node or Functional languages: Haskell, Scala .. etc. or Multiparadigm langauges: Go, Rust or Enterprisey languages: Java, C#
- - [ ] Practice: Exercise and make some command line application. Sample ideas, you can make a web scraper or get a API in JSON format and create someting, think of a daily task and automate it.
+ - [X] Learn : Pick a language for backend you may chose Scripting languages: Python, Ruby, PHP, Node or Functional languages: Haskell, Scala .. etc. or Multiparadigm langauges: Go, Rust or Enterprisey languages: Java, C#
+ - [X] Practice: Exercise and make some command line application. Sample ideas, you can make a web scraper or get a API in JSON format and create someting, think of a daily task and automate it.
  - [ ] Learn: Learn how to use a package manager for the language you have picked e.g. Python has pip etc.
- - [ ] Learn: Standards and best practices. Each language has it is own e.g. Python has PEP
+ - [X] Learn: Standards and best practices. Each language has it is own e.g. Python has PEP
  - [ ] Projeect: Make and Distribute some package / Library.
  - [ ] Learn: Learn about testing. There are several ways to write tests such as unit , integration ..etc. Tests are very important do not skim through articles. Learn how to calculate test covarege.
  - [ ] Project: Write tests for your package built above.
