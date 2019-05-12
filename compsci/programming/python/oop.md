@@ -105,6 +105,109 @@
 
 ## Built-In Class Attributes
 
-...
+- Every Python class keeps following built-in attributes and they can be accessed using dot operator like any other attribute   - `__dict__` − Dictionary containing the class's namespace.
+  - `__doc__` − Class documentation string or none, if undefined.
+  - `__name__` − Class name.
+  - `__module__` − Module name in which the class is defined. This attribute is "__main__" in interactive mode.
+  - `__bases__` − A possibly empty tuple containing the base classes, in the order of their occurrence in the base class list.
+
+### Class Inheritance
+
+- Instead of starting from scratch, you can create a class by deriving it from a preexisting class by listing the parent class in parentheses after the new class name. The child class inherits the attributes of its parent class, and you can use those attributes as if they were defined in the child class. A child class can also override data members and methods from the parent.
+
+- Lets see how we define a parennt and a child class with inheritance:
+  ```python
+  class Parent:        # define parent class
+   parentAttr = 100
+   def __init__(self):
+      print "Calling parent constructor"
+
+   def parentMethod(self):
+      print 'Calling parent method'
+
+   def setAttr(self, attr):
+      Parent.parentAttr = attr
+
+   def getAttr(self):
+      print "Parent attribute :", Parent.parentAttr
+
+
+  class Child(Parent): # define child class
+     def __init__(self):
+        print "Calling child constructor"
+
+     def childMethod(self):
+        print 'Calling child method'
+
+  ```
+  If we use the following statements (as you can see we can use both classes inner definitions from the child class:
+  ```
+  c = Child()          # instance of child
+  c.childMethod()      # child calls its method
+  c.parentMethod()     # calls parent's method
+  c.setAttr(200)       # again call parent's method
+  c.getAttr()          # again call parent's method
+  ```
+  When the above code is executed, it produces the following result -
+  ```
+  Calling child constructor
+  Calling child method
+  Calling parent method
+  Parent attribute : 200
+  ```
+  
+- You can also have multiple inheritances for the child class with this:
+  ```python
+  class foo(A, B):   # subclass of A and B
+  ```
+  
+### Overriding Methods
+
+- You can always override your parent class methods. One reason for overriding parent's methods is because you may want special or different functionality in your subclass. Lets see an example of it:
+  ```python
+  class Parent:        # define parent class
+   def myMethod(self):
+      print 'Calling parent method'
+
+  class Child(Parent): # define child class
+     def myMethod(self):
+        print 'Calling child method'
+
+  c = Child()          # instance of child
+  c.myMethod()         # child calls overridden method
+  ```
+  When the above code is executed, it produces the following result −
+  ```
+  Calling child method
+  ```
+
+### Data Hiding
+
+- An object's attributes may or may not be visible outside the class definition. You need to name attributes with a double underscore prefix, and those attributes then are not be directly visible to outsiders. It is just like java's `private` or `public` prefix of a variable definition. Lets see an example:
+  ```python
+  class JustCounter:
+   __secretCount = 0
+  
+   def count(self):
+      self.__secretCount += 1
+      print self.__secretCount
+
+  counter = JustCounter()
+  counter.count()
+  counter.count()
+  print counter.__secretCount
+  ```
+  When the above code is executed, it produces the following result −
+  ```
+  1
+  2
+  Traceback (most recent call last):
+     File "test.py", line 12, in <module>
+        print counter.__secretCount
+  AttributeError: JustCounter instance has no attribute '__secretCount'
+  ```
   
 
+<hr>
+
+### There are many more things to learn about object oriented programming, the design principles, the techincality (polymorphism etc.) however the notes above covers the very basic core principles about Object Oriented Programming. This is a future note and it will be removed. I need to exand and learn more about OOP.
