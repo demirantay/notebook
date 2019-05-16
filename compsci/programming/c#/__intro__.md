@@ -32,6 +32,10 @@
   ```
   $ foo
   ```
+  If you are using `mono` on mac or linux just use this to execute your program :
+  ```
+  $ mono foo.exe
+  ```
   
 - Lets see an example of a hello world program and then we will break it down to its pieces:
   ```cs
@@ -41,7 +45,6 @@
     class HelloWorld {
       static void Main(string[] args) {
         Console.WriteLine("Hello World");
-        Console.ReadKey();
       }
     }
   }
@@ -51,11 +54,40 @@
   - The next line has a class declaration, the class HelloWorld contains the data and method definitions that your program uses. Classes generally contain multiple methods. Methods define the behavior of the class. However, the HelloWorld class has only one method Main.
   - The next line defines the Main method, which is the entry point for all C# programs. The Main method states what the class does when executed.
   - WriteLine is a method of the Console class defined in the System namespace. This statement causes the message "Hello, World!" to be displayed on the screen.
-  - The last line Console.ReadKey(); is for the VS.NET Users. This makes the program wait for a key press and it prevents the screen from running and closing quickly when the program is launched from Visual Studio .NET
   - Unlike Java, program file name could be different from the class name.
 
 <br>
 <br>
 <br>
 
+## Variables
 
+- The basic value types provided in C# can be categorized as −
+  - `Integral Types`: sbyte, byte, short, ushort, int, uint, long, ulong, and char
+  - `Floating Point Types`: float and double
+  - `Decimal Types`: decimal
+  - `Boolean Types`: true or false
+  - `Null`: nullable data types
+  
+- defining variables in c# is same as c/c++ :
+  ```cs
+  int i, j = 100;
+  char f = "f";
+  double pi = 3.14159;
+  ```
+
+### Input and Output
+
+- The Console class in the System namespace provides a function `ReadLine()`. You need to convert the type if you want something other than a string in your ReadLine value:
+  ```cs
+  int foo;
+  
+  foo = Console.ReadLine();
+  ```
+
+- You can easily use the `WriteLine` of the console class for outputting.:
+  ```
+  foo = 15
+  bar = 42
+  Console.WriteLine("Var's values are : {0} , {1}", foo, bar);
+  ```
