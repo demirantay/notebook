@@ -46,10 +46,16 @@
     }
   }
   ```
-  - The first line of the program using System; - the using keyword is used to include the System namespace in the program. A program generally has multiple using statements.
+  - The first line of the program using System; - the using keyword is used to include the System namespace in the program. A program generally has multiple using statements. (it is like the `import` in python where you use other libraries
   - The next line has the namespace declaration. A namespace is a collection of classes. The HelloWorldApplication namespace contains the class HelloWorld.
   - The next line has a class declaration, the class HelloWorld contains the data and method definitions that your program uses. Classes generally contain multiple methods. Methods define the behavior of the class. However, the HelloWorld class has only one method Main.
   - The next line defines the Main method, which is the entry point for all C# programs. The Main method states what the class does when executed.
   - WriteLine is a method of the Console class defined in the System namespace. This statement causes the message "Hello, World!" to be displayed on the screen.
   - The last line Console.ReadKey(); is for the VS.NET Users. This makes the program wait for a key press and it prevents the screen from running and closing quickly when the program is launched from Visual Studio .NET
   - Unlike Java, program file name could be different from the class name.
+
+<br>
+<br>
+<br>
+
+
