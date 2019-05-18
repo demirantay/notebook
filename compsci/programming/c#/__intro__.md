@@ -68,6 +68,8 @@
   - `Decimal Types`: decimal
   - `Boolean Types`: true or false
   - `Null`: nullable data types
+  - `Char`: single characters
+  - `String`: array of characters
   
 - defining variables in c# is same as c/c++ :
   ```cs
@@ -90,4 +92,55 @@
   foo = 15
   bar = 42
   Console.WriteLine("Var's values are : {0} , {1}", foo, bar);
+  ```
+  
+### Constants 
+
+- A constat is a unchangable variable. Constants are defined using the const keyword. Syntax for defining a constant is −
+  ```cs
+  const <data_type> <constant_name> = value;
+  ```
+  Lets see an real example:
+  ```cs
+  const double pi = 3.14159;
+  ```
+
+<br>
+<br>
+<br>
+
+## Decision Making
+
+- You can write if and else statements in c# like this:
+  ```cs
+  int a = 100;
+  
+  if (a == 10) {
+     // ...
+  }
+  else if (a == 100) {
+     // ...
+  } 
+  else {
+     // ...
+  }
+  ```
+  
+- There is a `conditional operator ?: `which can be used to replace if...else statements. It has the following general form −
+  ```cs
+  Exp1 ? Exp2 : Exp3;
+  ```
+  Basically, the value of a ? expression is determined as follows: Exp1 is evaluated. If it is true, then Exp2 is evaluated and becomes the value of the entire ? expression. If Exp1 is false, then Exp3 is evaluated and its value becomes the value of the expression.
+ 
+- You can write `switch` too but I am not gonna note it at the moment since I do not use it very often.
+
+<br>
+<br>
+<br>
+ 
+## Loops 
+
+- C# provides following types of loop to handle looping requirements. Lets see how we write each one of them:
+  ```cs
+  
   ```
