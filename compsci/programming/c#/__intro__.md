@@ -142,5 +142,43 @@
 
 - C# provides following types of loop to handle looping requirements. Lets see how we write each one of them:
   ```cs
+  int n = 10;
   
+  /* While Loop */
+  while (a < 20) {
+    ...
+  }
+  
+  /* For Loop */
+  for (int i = 0; i < 20; i++) {
+    ...
+  }
+  
+  /* Do While Loop */
+  do {
+    ....
+  }
+  while (n < 20);
   ```
+  
+### Loop Control Statement
+
+- As like most of the other programming languages c# has loop control statemets lets see how to use them:
+  ```cs
+  
+  while (true) {
+    ...
+    if (foo == bar) {
+      break;
+    }
+    else {
+      continue;
+    }
+  }
+  ```
+
+<br>
+<br>
+<br>
+
+## Encapsulation
