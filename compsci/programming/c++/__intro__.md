@@ -35,4 +35,48 @@
   ```
   Which will give you a `a.out` file and you can run it with `./a.out` or you can use the `make` and run it with the files name.
   
-- Comments are like in javascript etiher with `// ...` or `/* ... */
+- Comments are like in javascript etiher with `// ...` or `/* ... */`
+
+<br>
+<br>
+<br>
+
+## Variables
+
+### Data Types
+
+- I am not really going to note a lot about what data types are because I have already done it many times. I am just going to show how to write them  in c++ (Im gonna cover specific types later on such as Enumaration, Pointers, Arrays, Refereces, Classes, Strings). Lets see the code snippet below:
+  ```cpp
+  char foo = "a";
+  int bar = 10;
+  float pi = 3.1415;
+  double baz;
+  
+  /*
+    There are many more types such as
+    signed char, unsigned int, short int
+    ... etc. Check the docs for more info
+  */
+  ```
+
+### typedef Declarations
+
+- You can create a new name for an existing type using typedef. Following is the simple syntax to define a new type using typedef −
+  ```
+  typedef type newname; 
+  ```
+  For example, the following tells the compiler that feet is another name for int −
+  ```cpp
+  typedef int feet;
+  ```
+  Now, the following declaration is perfectly legal and creates an integer variable called distance −
+  ```cpp
+  feet distance;
+  ```
+  
+  
+  
+  
+  
+  
+  
