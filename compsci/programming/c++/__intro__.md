@@ -58,6 +58,8 @@
     ... etc. Check the docs for more info
   */
   ```
+  
+- Quick Note: Since C++ is very close to C do not use 1 for true and 0 for false. True is `true` and false is `false` in C++
 
 ### typedef Declarations
 
@@ -73,6 +75,124 @@
   ```cpp
   feet distance;
   ```
+  
+### Variable Scopes
+
+- A scope is a region of the program and broadly speaking there are three places, where variables can be declared −
+  - Inside a function or a block which is called local variables,
+  - In the definition of function parameters which is called formal parameters.
+  - Outside of all functions which is called global variables.
+
+- Lets see an example of the scopes:
+  ```cpp
+  #include <iostream>
+  
+  // Gloabal Variable
+  int g = 200;
+  
+  int main () {
+    // Local Variable
+    int g = 10;
+    
+    cout << g;
+    
+    return 0;
+  }
+  ```
+  Local variables and global variables can share same names however the local variable will always get the presedence over the global one.
+  
+### Constants
+
+- Constants refer to fixed values that the program may not alter and they are also called `literals`. There are two simple ways in C++ to define constants −
+  - Using #define preprocessor.
+  - Using const keyword.
+
+- Following is the form to use #define preprocessor to define a constant (you do not put semicolon at the end) −
+  ```
+  #define identifier value
+  ```
+  Lets see it in a real life example:
+  ```cpp
+  #include <iostream>
+  
+  #define LENGTH 10
+  #define WIDTH 5
+  #define NEWLINE "\n"
+  
+  ...
+  ```
+  
+- The method above is very C-like so lets see a modern way. You can use const prefix to declare constants with a specific type as follows −
+  ```cpp
+  const type variable = value;
+  ```
+  Real time example is the following:
+  ```cpp
+  const int HEIGHT = 15;
+  const int WIDTH = 25;
+  ```
+  Note: You do not have to capitilize but it is good for readablity
+
+### Modifier Types
+
+- C++ allows the char, int, and double data types to have modifiers preceding them. A modifier is used to alter the meaning of the base type so that it more precisely fits the needs of various situations.
+
+- The Data type modifiers are - `signed`, `unsigned`, `long`, `short`
+
+- The modifiers signed, unsigned, long, and short can be applied to integer base types. In addition, signed and unsigned can be applied to char, and long can be applied to double.
+
+- The modifiers signed and unsigned can also be used as prefix to long or short modifiers. For example, `unsigned long int`.
+
+- I DO NOT KNOW WHAT THE TUTORIALS IS TRYING TO TEACH ABOUT MODIFIERS. I WILL RE-VISIT OR LEARN THEM LATER ON FROM BOOKS
+
+<br>
+<br>
+<br>
+
+## Storage Classes
+
+- A storage class defines the scope (visibility) and life-time of variables and/or functions within a C++ Program. These specifiers precede the type that they modify. There are following storage classes, which can be used in a C++ Program: `auto`, `register`, `static`, `extern`, `mutable`
+
+### auto
+
+- The auto storage class is the default storage class for all local variables.
+  ```cpp
+  {
+   int mount;
+   auto int month;
+  }
+  ```
+  The example above defines two variables with the same storage class, auto can only be used within functions, i.e., local variables.
+  
+### register
+  
+- The register storage class is used to define local variables that should be stored in a register instead of RAM. This means that the variable has a maximum size equal to the register size (usually one word) and can't have the unary '&' operator applied to it (as it does not have a memory location).
+  ```cpp
+  {
+   register int  miles;
+  }
+  ```
+  Do not use this if you really do not need a specific register or counter usage
+  
+### static
+
+- The static storage class instructs the compiler to keep a local variable in existence during the life-time of the program instead of creating and destroying it each time it comes into and goes out of scope. Therefore, making local variables static allows them to maintain their values between function calls.
+  
+  The static modifier may also be applied to global variables. When this is done, it causes that variable's scope to be restricted to the file in which it is declared.
+  ```cpp
+  static int n = 10;
+  
+### extern
+  ```
+  
+  
+  
+<br>
+<br>
+<br>
+
+## Loops
+ 
   
   
   
