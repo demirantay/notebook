@@ -151,7 +151,7 @@
 
 ## Storage Classes
 
-- A storage class defines the scope (visibility) and life-time of variables and/or functions within a C++ Program. These specifiers precede the type that they modify. There are following storage classes, which can be used in a C++ Program: `auto`, `register`, `static`, `extern`, `mutable`
+- A storage class defines the scope (visibility) and life-time of variables and/or functions within a C++ Program. These specifiers precede the type that they modify. There are following storage classes, which can be used in a C++ Program: `auto`, `register`, `static`, `extern`, `mutable` (I will note mutables later on in OOP)
 
 ### auto
 
@@ -181,11 +181,47 @@
   The static modifier may also be applied to global variables. When this is done, it causes that variable's scope to be restricted to the file in which it is declared.
   ```cpp
   static int n = 10;
-  
-### extern
   ```
   
+### extern
   
+- The extern storage class is used to give a reference of a global variable that is visible to ALL the program files. When you use 'extern' the variable cannot be initialized as all it does is point the variable name at a storage location that has been previously defined.
+  
+  When you have multiple files and you define a global variable or function, which will be used in other files also, then extern will be used in another file to give reference of defined variable or function. Just for understanding extern is used to declare a global variable or function in another file.
+  
+  The extern modifier is most commonly used when there are two or more files sharing the same global variables or functions as explained below.
+  
+- First file: Main.cpp
+  ```cpp
+  #include <iostream>
+  int count;
+  extern void toString();
+  
+  int main() {
+    count = 5;
+    toString();
+  }
+  ```
+  Second File: Foo.cpp
+  ```cpp
+  #include <iostream>
+  
+  extern int count;
+  
+  void toString(void) {
+    cout << "Count is" << count << "\n";
+  }
+  ```
+  Here, extern keyword is being used to declare count in another file. Now compile these two files as follows −
+  ```
+  $ gcc main.cpp foo.cpp -o baz
+  ```
+  and run these two files with simply:
+  ```
+  $ ./baz
+  ```
+
+- extern is important I will read more on it later on from the books ...
   
 <br>
 <br>
@@ -193,6 +229,12 @@
 
 ## Loops
  
+- I am not going to talk too much about loops since I have noted them a lot in other programming language documents. So I am just going to show how to write each one in c++:
+  ```cpp
+  /* While Loop */
+  int i = 10
+  
+  ```
   
   
   
