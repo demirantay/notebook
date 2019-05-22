@@ -212,14 +212,17 @@ Every developer should code once:
  These are the basic and essential skills that every developer shoould have it under their belt in todays market. Try to practice what you learn.
 
  - [ ] Git - Version Control
- - [ ] GitHub for public repos, GitLab for private
- - [ ] API's
- - [ ] Basic Terminal Usage
+ - [X] GitHub for public repos, GitLab for private
+ - [X] API's
+ - [X] Basic Terminal Usage
  - [ ] Learn to research
+ - [ ] SOLID. KISS, YAGNI
+ - [ ] Licenses
+ - [ ] Semantatic Versioning
  - [ ] HTTP/HTTPS
  - [ ] Design Patterns
+ - [ ] Character Encodings
  - [ ] Course : GO UP AND FINISH ALGORITHMS HEADER ON [SECTION 1](#algorithms)
- - [ ] Do a very good project for each box above
 
  ### Front End
  This may seem basic since in the core there are only three technologies how ever what is really hard is that not everyone has the eye for killer design skills.
