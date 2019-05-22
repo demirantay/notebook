@@ -8,3 +8,6 @@
 - Isaac Newton -- James Gleick
 - Richard Feynman -- James Gleick
 - Benjamin Franklin Autobiography
+
+
+*Ogretici Metinler: Deneme, Biyografi, Otobiyografi ... vb.*
