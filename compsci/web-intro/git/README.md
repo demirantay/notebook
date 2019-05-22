@@ -4,8 +4,9 @@
 
 <br>
 <br>
+<br>
 
-# Basic Concepts / Overview
+## Basic Concepts / Overview
 
 - Version Control System (VCS) is a software that helps software developers to work together and maintain a complete history of their work. Listed below are the functions of a VCS − 
   - Allows developers to work simultaneously.
@@ -49,5 +50,47 @@
 
 - `Branches`: Branches are used to create another line of development. By default, Git has a master branch, which is same as trunk in Subversion. Usually, a branch is created to work on a new feature. Once the feature is completed, it is merged back with the master branch and we delete the branch.
 
-- `Tags`: 
+- `Tags`: Tag assigns a meaningful name with a specific version in the repository. Tags are very similar to branches, but the difference is that tags are immutable. It means, tag is a branch, which nobody intends to modify.  Once a tag is created for a particular commit, even if you create a new commit, it will not be updated. Usually, developers create tags for product releases.
+
+- `Clone`: Clone operation creates the instance of the repository. Clone operation not only checks out the working copy, but it also mirrors the complete repository. Users can perform many operations with this local repository.
+
+- `Pull`: Pull operation copies the changes from a remote repository instance to a local one. The pull operation is used for synchronization between two repository instances.
+
+- `Push`: Push operation copies changes from a local repository instance to a remote one. This is used to store the changes permanently into the Git repository.
+
+- `HEAD`: HEAD is a pointer, which always points to the latest commit in the branch. Whenever you make a commit, HEAD is updated with the latest commit
+
+- `Revision`: Revision represents the version of the source code. Revisions in Git are represented by commits. These commits are identified by SHA1 secure hashes.
+
+- `URL`: URL represents the location of the Git repository. Git URL is stored in config file.
+
+### Environment Setup
+
+- Git will want you to set up the username, email, default editor ... etc. However I am not going to note all of that. If you are interested check the official documentation and you can simply see the listing of your git settings with this:
+  ```
+  $ git config --list
+  ```
+
+<br>
+<br>
+<br>
+
+## Life Cycle 
+
+- General workflow of git is as follows −
+  - You clone the Git repository as a working copy.
+  - You modify the working copy by adding/editing files.
+  - If necessary, you also update the working copy by taking other developer's changes.
+  - You review the changes before commit.
+  - You commit changes. If everything is fine, then you push the changes to the repository.
   
+<br>
+<br>
+<br>
+
+## Create Operation
+
+...
+
+
+** I STOPPED DOING THE TUTORIAL (https://www.tutorialspoint.com/git/index.htm) --> FINISH IT IN THE FUTURE (SELF NOTE)**
