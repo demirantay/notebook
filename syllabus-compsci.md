@@ -215,7 +215,6 @@ Every developer should code once:
  - [X] GitHub for public repos, GitLab for private
  - [X] API's
  - [X] Basic Terminal Usage
- - [ ] Learn to research
  - [ ] SOLID. KISS, YAGNI
  - [ ] Licenses
  - [ ] Semantatic Versioning
