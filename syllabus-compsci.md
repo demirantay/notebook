@@ -161,10 +161,12 @@ Don’t be the person who “never quite understood” something like recursion
 
  ### My own to-do list of projects
 
-Every developer should code once:
+First:
  - [ ] Editor
  - [ ] RogueLike
  - [ ] A Robot/ Bot
+ 
+Second:
  - [ ] Build a Server
  - [ ] Backup a server
  - [ ] Deploy a server
@@ -172,11 +174,15 @@ Every developer should code once:
  - [ ] Deploy browser
  - [ ] Mini Internet with your servers
  - [ ] Deploy your browser on your internet
+
+Third:
  - [ ] Language -- interpreted
  - [ ] Interpreter
  - [ ] Language -- compiled
  - [ ] Compiler
  - [ ] Virtual Machine Language / Translator
+ 
+Fourth:
  - [ ] Markup languages like HTML n CSS for your browser
  - [ ] JS like browser language for your browser
  - [ ] Framework for your markup languages
@@ -186,6 +192,8 @@ Every developer should code once:
  - [ ] Build a backend framwork
  - [ ] Redo a advanced CRUD app with frameworks
  - [ ] Redo the sectin 3 backend with your framework
+ 
+ Final:
  - [ ] Mini Operating System 
  - [ ] Version Control System
 
