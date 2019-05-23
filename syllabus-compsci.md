@@ -194,6 +194,7 @@ Fourth:
  - [ ] Redo the sectin 3 backend with your framework
  
  Final:
+ - [ ] Mini Computer (your architecture 16bit)
  - [ ] Mini Operating System 
  - [ ] Version Control System
 
