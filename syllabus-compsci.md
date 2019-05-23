@@ -165,7 +165,6 @@ Every developer should code once:
  - [ ] Editor
  - [ ] RogueLike
  - [ ] A Robot/ Bot
-
  - [ ] Build a Server
  - [ ] Backup a server
  - [ ] Deploy a server
@@ -173,13 +172,11 @@ Every developer should code once:
  - [ ] Deploy browser
  - [ ] Mini Internet with your servers
  - [ ] Deploy your browser on your internet
- 
  - [ ] Language -- interpreted
  - [ ] Interpreter
  - [ ] Language -- compiled
  - [ ] Compiler
  - [ ] Virtual Machine Language / Translator
- 
  - [ ] Markup languages like HTML n CSS for your browser
  - [ ] JS like browser language for your browser
  - [ ] Framework for your markup languages
@@ -189,7 +186,6 @@ Every developer should code once:
  - [ ] Build a backend framwork
  - [ ] Redo a advanced CRUD app with frameworks
  - [ ] Redo the sectin 3 backend with your framework
- 
  - [ ] Mini Operating System 
  - [ ] Version Control System
 
