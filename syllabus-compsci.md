@@ -159,43 +159,39 @@ Don’t be the person who “never quite understood” something like recursion
 
  Low level programming projects
 
- ### General Low Level Projects
-
- Try to build your knowledge up so that you can start building the tablet Operating system that is inspired from the westworld series. Try to go from top to down approach. Do not try to build everything atleast understand what it is and create a mini demo project if you are able to.
-
- - [ ] Mini Toy Operating System for learning tutorials and so on do not be hesistant to fail at least it is on qemu...
- - [ ] Final: A operating system for tablets that are designed for programming (UI like from westworld series)
--  [ ] Optional: medical bionics or robots for elderly people or pet companion like a butler
- - Best [OS dev source Wiki](https://wiki.osdev.org/Main_Page) definetly needs checking out
- - There is a person [creating a full hardware and os from scartch](https://github.com/pervognsen/bitwise) it may be useful
- - Roadmap for [OS sections](https://github.com/ghaiklor/ghaiklor-os-gcc)
- - [Low Level Programming University](https://github.com/gurugio/lowlevelprogramming-university)
- - [Rasberry PI OS](https://github.com/s-matyukevich/raspberry-pi-os)
- - [OS Tutorial](https://github.com/cfenollosa/os-tutorial)
+ ### My own to-do list of projects
 
 Every developer should code once:
  - [ ] Editor
  - [ ] RogueLike
- - [ ] A Robot
- - [ ] Language -- interpreted
- - [ ] Interpreter
- - [ ] Language -- compiled
- - [ ] Compiler
- - [ ] Virtual Machine Language / Translator
-
- ### Low Level Web Dev Projects
+ - [ ] A Robot/ Bot
 
  - [ ] Build a Server
  - [ ] Backup a server
  - [ ] Deploy a server
  - [ ] Internet browser
  - [ ] Deploy browser
- - [ ] Write markup languages like your own html and css for your browser
- - and so on about the low level parts about web
-- [ ] Project: Keep maintaining a web project it will be never done it is your open source commitment from now on.
-- [ ] Important: **Start Contributing to Open Source projects**
-  - [ ] [First Contributions](https://github.com/Roshanjossey/first-contributions)
-  - [ ] [Open Source Guide](https://github.com/github/opensource.guide)
+ - [ ] Mini Internet with your servers
+ - [ ] Deploy your browser on your internet
+ 
+ - [ ] Language -- interpreted
+ - [ ] Interpreter
+ - [ ] Language -- compiled
+ - [ ] Compiler
+ - [ ] Virtual Machine Language / Translator
+ 
+ - [ ] Markup languages like HTML n CSS for your browser
+ - [ ] JS like browser language for your browser
+ - [ ] Framework for your markup languages
+ - [ ] Framework for your browser lang
+ - [ ] Build Database
+ - [ ] Build a CRUD app 
+ - [ ] Build a backend framwork
+ - [ ] Redo a advanced CRUD app with frameworks
+ - [ ] Redo the sectin 3 backend with your framework
+ 
+ - [ ] Mini Operating System 
+ - [ ] Version Control System
 
  ---
  ---
