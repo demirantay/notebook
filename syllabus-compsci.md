@@ -162,7 +162,6 @@ Don’t be the person who “never quite understood” something like recursion
  ### My own to-do list of projects
 
 First:
- - [ ] Editor
  - [ ] RogueLike
  - [ ] A Robot/ Bot
  
@@ -174,6 +173,10 @@ Second:
  - [ ] Deploy browser
  - [ ] Mini Internet with your servers
  - [ ] Deploy your browser on your internet
+ 
+-  Final:
+ - [ ] Mini Computer (your architecture 16bit)
+ - [ ] Mini Operating System 
 
 Third:
  - [ ] Language -- interpreted
@@ -193,10 +196,7 @@ Fourth:
  - [ ] Redo a advanced CRUD app with frameworks
  - [ ] Redo the sectin 3 backend with your framework
  
- Final:
- - [ ] Mini Computer (your architecture 16bit)
- - [ ] Mini Operating System 
- - [ ] Version Control System
+
 
  ---
  ---
@@ -214,7 +214,7 @@ Fourth:
 
  - [ ] Git - Version Control
  - [X] GitHub for public repos, GitLab for private
- - [X] API's
+ - [ ] API's
  - [X] Basic Terminal Usage
  - [ ] SOLID. KISS, YAGNI
  - [ ] Licenses
