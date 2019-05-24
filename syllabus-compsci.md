@@ -175,7 +175,8 @@ Second:
  - [ ] Deploy your browser on your internet
 
 MIDDLE FINAL:
- - [ ] After finishing above start building your commercial idea
+ - [ ] Finish section 3 below
+ - [ ] After finishing above start building your commercial idea (human universals)
  - [ ] Everything below is optional hobby
  
 Final:
