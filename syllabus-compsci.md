@@ -173,8 +173,12 @@ Second:
  - [ ] Deploy browser
  - [ ] Mini Internet with your servers
  - [ ] Deploy your browser on your internet
+
+MIDDLE FINAL:
+ - [ ] After finishing above start building your commercial idea
+ - [ ] Everything below is optional hobby
  
--  Final:
+Final:
  - [ ] Mini Computer (your architecture 16bit)
  - [ ] Mini Operating System 
 
