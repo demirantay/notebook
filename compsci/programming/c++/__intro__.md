@@ -35,6 +35,8 @@
   ```
   Which will give you a `a.out` file and you can run it with `./a.out` or you can use the `make` and run it with the files name.
   
+- Even though `$ gcc` can compile c++ code, try to use `$ g++` it is the "right" compiler for c++ even though there is not a important difference
+  
 - Comments are like in javascript etiher with `// ...` or `/* ... */`
 
 <br>
@@ -232,9 +234,208 @@
 - I am not going to talk too much about loops since I have noted them a lot in other programming language documents. So I am just going to show how to write each one in c++:
   ```cpp
   /* While Loop */
-  int i = 10
+  int i = 10;
+  while(i < 20) {
+    ...  
+  }
   
+  /* For loop */
+  for (int i = 0; i < 10; i++) {
+    ...
+  }
+  
+  /* Do While loop */
+  do {
+    ...
+  }
+  while (i < 20);
   ```
+  
+- As with everyother programming language there are loop control statements for c++:
+  ```cpp
+  int i = 10;
+  
+  while (i < 20) {
+  
+    if (i == 15) {
+      continue;
+    }
+    else if (i == 19) {
+      break;
+    }
+    
+    i++;
+  }
+  ```
+  There is also a `goto` control statement however it is not adviced to use it in your program.
+  
+<br>
+<br>
+<br>
+
+## Decision Making
+
+- Decision making is where you put conditions in your code and depending on the conditions return value you make a decision. I will not note the logic behind it since I have written it a numerous times in my other programming language note files. Basically, decision making control statemetns are: `if`, `else`, and `switch` however I am not going to note down switch since I do not use it very often in my code:
+  ```cpp
+  int a = 10;
+  
+  if (a == 10) {
+    ...
+  } else if ( a == 20) {
+    ...
+  } else {
+    ...
+  }
+  ```
+  
+- The `?:` operator : This operator can be used to replace if ... else statemetns. The general form is-
+  ```
+  Exp1 ? Exp2 : Exp3;
+  ```
+  The value of a ‘?’ expression is determined like this: Exp1 is evaluated. If it is true, then Exp2 is evaluated and becomes the value of the entire ‘?’ expression. If Exp1 is false, then Exp3 is evaluated and its value becomes the value of the expression.
+  
+<br>
+<br>
+<br>
+
+## Functions
+
+- The general form of a C++ function definition is as follows −
+  ```cpp
+  int sum (int num1, int num2) {
+    int result = num1 + num2;
+    
+    return result;
+  }
+  ```
+  
+- **Note:** It is important that you declare your functions before your `main` function. You do not have to define its body code before main just the "decleration" just like in C. Lets see en exmaple with our function above:
+  ```cpp
+  #include <iostream>
+  using namespace std;
+  
+  // function declaration
+  int sum(int num1, int num2);
+  
+  int main () {
+    int a = 10;
+    int b = 20;
+    int c = sum(a, b);
+    
+    cout << "Sum of a , b is : << c << "\n";
+    
+    retrun 0;
+  }
+  
+  // function definition
+  int sum (int num1, int num2) {
+    int result = num1 + num2;
+    
+    return result;
+  }
+  ```
+  
+- When you define a function, you can specify a defauly value for each of the paremeters. This value will be used if the corresponding arugment is left blank when callig to the function:
+  ```cpp
+  int foo (int a = 10, int b) {
+    ...
+  }
+  ```
+  
+<br>
+<br>
+<br>
+
+## Arrays
+
+- Arrays are very important so there will be a lot of notes. Just like in C in order to declare an array in C++ the programmer specifies the type and the size of array required:
+  ```
+  type arrayName [ arraysize ];
+  ```
+  Lets see an real world example:
+  ```cpp
+  int numbers[10];
+  ```
+  
+- You can initialize C++ array elements either one by one or using a single statement as follows −
+  ```cpp
+  double balance[5] = {1000.0, 2.0, 3.4, 17.0, 50.0};
+  ```
+  The number of values between braces { } can not be larger than the number of elements that we declare for the array between square brackets `[]`
+  
+  If you omit the size of the array, an array just big enough to hold the initialization is created. Therefore, if you write 
+  ```cpp
+  double balance[] = {1000.0, 2.0, 3.4, 17.0, 50.0};
+  ```
+  
+  or if you are not lazy you can assign all of them seperatly with the index points:
+  ```cpp
+  balance[3] = 50.0;
+  ```
+  
+- You can acsess the values of arrays with using array index points:
+  ```cpp
+  dobule foo = balance[3] // foo has the value of arrays[3] point
+  ```
+  
+## Multi-dimensional Arrays
+  
+- For example, the following declaration creates a three dimensional 5 . 10 . 4 integer array −
+  ```cpp
+  int threedimarr[5][10][4];
+  ```
+
+- Lets initialize a simple two dimensional array with the length of 5 elements inside of the arrays:
+  ```cpp
+  int foo[2][5] = {
+    {0, 4, 6, 1, 7, 2},     // this is the array of foo[0]
+    {10, 1, 5, 3, 9, 5},    // this is the array of foo[1]
+    {50, 3, 6, 2, 198, 2},  // this is the array of foo[2]
+  };
+  ```
+  In order to accsess the values of your two dimensinal array you can use this:
+  ```cpp
+  int val = foo[1][0];  // <-- has the value 10
+  ```
+  
+### Pointer to an Array
+
+- An array name is a constant pointer to the first element of the array. Therefore, in the declaration:
+  ```cpp
+  double balance[50];
+  ```
+  balance is a pointer to `&balance[0]`, which is the address of the first element of the array balance - Thus, the following program fragment assigns p the address of the first element of balance −
+  ```cpp
+  double *p;
+  double balance[10];
+  
+  p = balance;
+  ```
+  esentially making `p` the array. It is legal to use array names as constant pointers, and vice versa. Therefore, *(balance + 4) is a legitimate way of accessing the data at balance[4].
+  
+  Once you store the address of first element in p, you can access array elements using *p, *(p+1), *(p+2) and so on. Lets see an example:
+  ```cpp
+  ...
+  
+  int main () {
+    int numbers[5] = {4, 1, 19, 2, 52};
+    int p*;
+    
+    p = numbers;
+    
+    specific_number = *(p + 2);
+    
+    cout << specific_number << "\n";  // <-- outputs `1`
+  
+    return 0;
+  }
+  ```
+  
+  
+  
+  
+  
+  
   
   
   
