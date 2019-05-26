@@ -388,14 +388,13 @@
 - Lets initialize a simple two dimensional array with the length of 5 elements inside of the arrays:
   ```cpp
   int foo[2][5] = {
-    {0, 4, 6, 1, 7, 2},     // this is the array of foo[0]
+    {99, 4, 6, 1, 7, 2},     // this is the array of foo[0]
     {10, 1, 5, 3, 9, 5},    // this is the array of foo[1]
-    {50, 3, 6, 2, 198, 2},  // this is the array of foo[2]
   };
   ```
   In order to accsess the values of your two dimensinal array you can use this:
   ```cpp
-  int val = foo[1][0];  // <-- has the value 10
+  int val = foo[1][0];  // <-- has the value 99
   ```
   
 - **I may have messed it up while writing the syntax of the multi-dimensional arrays. Furue note: Check the multi diensonal arrays later on**
@@ -435,9 +434,71 @@
   
 ### Passing Arrays to Functions
 
+- C++ does not allow to pass an entire array as an argument to a function. However, You can pass a pointer to an array by specifying the array's name without an index. If you want to pass a single-dimension array as an argument in a function, you would have to declare function formal parameter in one of following three ways and all three declaration methods produce similar results because each tells the compiler that an integer pointer is going to be received.
+  
+- **This part of the tutorial is very poorly documented so future note: I need to find better reading about passing arrays to functions**
 
+- **C++ also does not allow functions to return arrays but it lets the function to return pointers that can point to arrays. This part of the tutorial is also very poorly documented. self note: stduy this chapter from another source**
+
+<br>
+<br>
+<br>
+
+## Strings
+
+- C++ provides following two types of string representations −
+  - The C-style character string.
+  - The string class type introduced with Standard C++.
+
+### The C-Style Character String
+
+- The C-style character string originated within the C language and continues to be supported within C++. This string is actually a one-dimensional array of characters which is terminated by a null character '\0'.
+
+  The following declaration and initialization create a string consisting of the word "Hello". To hold the null character at the end of the array, the size of the character array containing the string is one more than the number of characters in the word "Hello."
+  ```cpp
+  greeting[6] = {'H', 'e', 'l', 'l', 'o', '\0'};
+  ```
+  If you follow the rule of array initialization, then you can write the above statement as follows −
+  ```cpp
+  char greeting[] = "Hello";
+  ```
+  Actually, you do not place the null character at the end of a string constant. The C++ compiler automatically places the '\0' at the end of the string when it initializes the array
   
+- C++ supports a wide range of functions that manipulate null-terminated strings − 
+  - `strcpy(s1, s2);` - Copies string s2 into string s1.
+  - `strcat(s1, s2);` - Concatenates string s2 onto the end of string s1.
+  - `strlen(s1);` - Returns the length of string s1.
+  - `strcmp(s1, s2);` - Returns 0 if s1 and s2 are the same; less than 0 if s1<s2; greater than 0 if s1>s2.
+  - `strchr(s1, ch);` - Returns a pointer to the first occurrence of character ch in string s1.
+  - `strstr(s1, s2);` - Returns a pointer to the first occurrence of string s2 in string s1.
+
+### The String Class in C++
+
+- The standard C++ library provides a string class type that supports all the operations mentioned above, additionally much more functionality. To use this class you need to `#include <strin>` library Let us check the following example -
+  ```cpp
+  #include <iostream>
+  #include <string>
   
+  int main() {
+    string foo = "hello";
+    
+    cout << foo << "\n";
+  
+    return 0;
+  }
+  ```
+  This class is way much more easier to use than the C like string implementation
+
+
+
+
+
+
+
+
+
+
+
   
   
   
