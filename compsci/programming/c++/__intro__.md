@@ -378,7 +378,7 @@
   dobule foo = balance[3] // foo has the value of arrays[3] point
   ```
   
-## Multi-dimensional Arrays
+### Multi-dimensional Arrays
   
 - For example, the following declaration creates a three dimensional 5 . 10 . 4 integer array −
   ```cpp
@@ -397,6 +397,8 @@
   ```cpp
   int val = foo[1][0];  // <-- has the value 10
   ```
+  
+- **I may have messed it up while writing the syntax of the multi-dimensional arrays. Furue note: Check the multi diensonal arrays later on**
   
 ### Pointer to an Array
 
@@ -430,6 +432,10 @@
     return 0;
   }
   ```
+  
+### Passing Arrays to Functions
+
+
   
   
   
