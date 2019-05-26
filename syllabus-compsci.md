@@ -177,6 +177,7 @@ Second:
 MIDDLE FINAL:
  - [ ] Finish section 3 below
  - [ ] After finishing above start building your commercial idea (human universals)
+ - [ ] Learn Finance for your  commercial idea
  - [ ] Everything below is optional hobby
  
 Final:
