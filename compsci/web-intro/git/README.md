@@ -64,9 +64,21 @@
 
 - `URL`: URL represents the location of the Git repository. Git URL is stored in config file.
 
-### Environment Setup
+<br>
+<br>
+<br>
 
-- Git will want you to set up the username, email, default editor ... etc. However I am not going to note all of that. If you are interested check the official documentation and you can simply see the listing of your git settings with this:
+## Environment Setup
+
+- For mac and windows you need to install git from its official site but for linux you can simply use:
+  ```
+  [ubuntu ~]$ sudo apt-get install git-core
+  ```
+### Customize Git Environment
+
+- Git provides the git config tool, which allows you to set configuration variables. Git stores all global configurations in .gitconfig file, which is located in your home directory
+
+- Git will want you to set up the username, email, default editor. You can easily see what are your configurations are on your git with this command:
   ```
   $ git config --list
   ```
@@ -90,7 +102,3 @@
 
 ## Create Operation
 
-...
-
-
-** I STOPPED DOING THE TUTORIAL (https://www.tutorialspoint.com/git/index.htm) --> FINISH IT IN THE FUTURE (SELF NOTE)**
