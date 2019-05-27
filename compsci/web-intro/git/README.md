@@ -76,13 +76,22 @@
   ```
 ### Customize Git Environment
 
-- Git provides the git config tool, which allows you to set configuration variables. Git stores all global configurations in .gitconfig file, which is located in your home directory
+- Git provides the git config tool, which allows you to set configuration variables. Git stores all global configurations in .gitconfig file, which is located in your home directory. To set these configuration values as global, add the --global option, and if you omit --global option, then your configurations are specific for the current Git repository.
 
-- Git will want you to set up the username, email, default editor. You can easily see what are your configurations are on your git with this command:
+- To give example configurations for the above explanation lets set up a username and a email for our devices git:
+  ```
+  $ git config --global user.name "john smith"
+  ```
+  And lets set up an email:
+  ```
+  $ git config --global user.email "john.smith@foo.com"
+  ```
+  You can see a list of all of your configurations on your devices git with this command:
   ```
   $ git config --list
   ```
-
+  *Note: You can configure lots of things within the git but ofc i am not going to note all of them in this file. If you are interested check the official documentation*
+  
 <br>
 <br>
 <br>
