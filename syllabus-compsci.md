@@ -162,10 +162,6 @@ Don’t be the person who “never quite understood” something like recursion
  ### My own to-do list of projects
 
 First:
- - [ ] RogueLike
- - [ ] A Robot/ Bot
- 
-Second:
  - [ ] Build a Server
  - [ ] Backup a server
  - [ ] Deploy a server
@@ -174,24 +170,24 @@ Second:
  - [ ] Mini Internet with your servers
  - [ ] Deploy your browser on your internet
 
-MIDDLE FINAL:
+FINAL:
  - [ ] Finish section 3 below
  - [ ] After finishing above start building your commercial idea (human universals)
  - [ ] Learn Finance for your  commercial idea
  - [ ] Everything below is optional hobby
  
-Final:
+Hobby:
  - [ ] Mini Computer (your architecture 16bit)
  - [ ] Mini Operating System 
 
-Third:
+Hobby:
  - [ ] Language -- interpreted
  - [ ] Interpreter
  - [ ] Language -- compiled
  - [ ] Compiler
  - [ ] Virtual Machine Language / Translator
  
-Fourth:
+Hobby:
  - [ ] Markup languages like HTML n CSS for your browser
  - [ ] JS like browser language for your browser
  - [ ] Framework for your markup languages
