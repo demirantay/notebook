@@ -45,3 +45,48 @@
   $ gcc foo.c -o newname
   ```
   You can also use the `make` instead of a gcc which will automatically name the exec file with the name of your .c file
+
+<br>
+<br>
+<br>
+
+## Variables
+
+- I am not going to what variables are or what is the logic behind it since I have written them too many times in differnt programming language files. So here is the variable types and how do you write them in C:
+  ```c
+  int i,k = 1;
+  char c, ch = "foo";
+  float f = 1.0;
+  double pi = 3.1415;
+  ```
+  There are many more types such as arrays, pointers, enumarations, bytes ... etc. However the 4 above are enough for the basics right now.
+  
+### Constants
+
+- Constnats are immutable variables. There are two simple ways in C to define constants −
+  - Using #define preprocessor.
+  - Using const keyword.
+  
+- Given below is the form to use #define preprocessor to define a constant 
+  ```
+  #define identifier value
+  ```
+  Now lets look at real world examples:
+  ```c
+  #define PI 3.14
+  #define NEWLINE "\n"
+  ```
+  
+- You can use const prefix to declare constants with a specific type as follows −
+  ```
+  const type variable = value;
+  ```
+  Now lets see a real world example:
+  ```c
+  const int PI = 3.14;
+  const int HEIGHT = 100;
+  ```
+
+  
+
+
