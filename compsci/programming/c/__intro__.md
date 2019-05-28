@@ -243,7 +243,7 @@
 
 ## Functions 
 
-- - I am not going to write what is the role of the functions in a programming language because I have written the logic part of it too many times in different programming language files. Im just going to note how to write them in C:
+- I am not going to write what is the role of the functions in a programming language because I have written the logic part of it too many times in different programming language files. Im just going to note how to write them in C:
   This is how you write a function
   ```c
   int sum (int num1, int num2) {
@@ -321,4 +321,56 @@
 <br>
 <br>
 
+## Arrays
 
+- Arrays are important to C and should need a lot more attention. So be prepeared for a long read
+
+- You declare an array like this:
+  ```
+  type arrayName [ arraySize ];
+  ```
+  Lets declare a real world array with a size of 10 elements:
+  ```c
+  double balance[10];
+  ```
+   
+- You can initialize an array in C either one by one or using a single statement as follows :
+  ```c
+  double balance[5] = {1000.0, 2.0, 3.4, 7.0, 50.0};
+  ```
+  The number of values between braces { } cannot be larger than the number of elements that we declare for the array between square brackets [ ].
+  
+- If you omit the size of the array, an array just big enough to hold the initialization is created. Therefore, if you write:
+  ```c
+  double balance[] = {1000.0, 2.0, 3.4, 7.0, 50.0, 1.9};
+  ```
+  This will create an array with the size of 6
+  
+- You can accsess and change the elements of the array with the index points such as this:
+  ```c
+  double foo[] = {4, 6, 1, 2};
+  
+  arr_element = foo[0];  // gives you `4`
+  
+  foo[2] = 15;           // changes `1` to `15`
+  ```
+
+### Multi-dimensional Arrays
+
+- You can define as many dimensions inan array as you want but for now im just going to stick with 2 for this note file. The way you define is this way:
+  ```c
+  int foo[2][5] = {
+    {5, 1, 6, 2, 1},
+    {8, 9, 0, 4, 3}
+  };
+  ```
+  The way you accsess to its elemens are like this:
+  ```c
+  foo[0][1]   // <-- gives you `1`
+  ```
+  
+- **Self Note: There are more things to note about multi dimensional arrays. Return to this from a differenete resource later on**
+
+### Passing Arrays as Function Arguments
+
+...
