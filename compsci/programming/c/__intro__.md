@@ -86,7 +86,65 @@
   const int PI = 3.14;
   const int HEIGHT = 100;
   ```
-
   
 
+<br>
+<br>
+<br>
 
+## Storage Classes
+
+- A storage class defines the scope (visibility) and life-time of variables and/or functions within a C Program. They precede the type that they modify. We have four different storage classes in a C program −
+  - auto
+  - register
+  - static
+  - extern
+  
+### auto
+
+- The auto storage class is the default storage class for all local variables.
+  ```c
+  {
+    int a = 10;
+    auto int a = 10; 
+  }
+  ```
+  Both are same. The example above defines two variables with in the same storage class. 'auto' can only be used within functions, i.e., local variables.
+  
+### register
+
+- The register storage class is used to define local variables that should be stored in a register instead of RAM. This means that the variable has a maximum size equal to the register size (usually one word) and can't have the unary '&' operator applied to it (as it does not have a memory location)
+  ```c
+  {
+   register int  miles;
+  }
+  ```
+  The register should only be used for variables that require quick access such as counters. You shouldnt use this storage class if you do not have a sepcific reason to. 
+  
+### static
+
+- The static storage class instructs the compiler to keep a local variable in existence during the life-time of the program instead of creating and destroying it each time it comes into and goes out of scope. Therefore, making local variables static allows them to maintain their values between function calls.
+  ```c
+  void func () {
+    static int foo = 10;
+  }
+  
+  int main() {
+    /*
+      you can accsess into the local `foo`
+      variable of the function above in here
+    */
+  }
+  ```
+
+### extern
+
+- The extern storage class is used to give a reference of a global variable that is visible to ALL the program files. When you have multiple files and you define a global variable or function, which will also be used in other files, then extern will be used in another file to provide the reference of defined variable or function. The extern modifier is most commonly used when there are two or more files sharing the same global variables or functions as explained below. -
+  main.c
+  ```c
+  a
+  ```
+  other_file.c
+  ```c
+  a
+  ```
