@@ -142,9 +142,183 @@
 - The extern storage class is used to give a reference of a global variable that is visible to ALL the program files. When you have multiple files and you define a global variable or function, which will also be used in other files, then extern will be used in another file to provide the reference of defined variable or function. The extern modifier is most commonly used when there are two or more files sharing the same global variables or functions as explained below. -
   main.c
   ```c
-  a
+  #include <stdio.h>
+ 
+  int count ;
+  extern void write_extern();
+
+  main() {
+     count = 5;
+     write_extern();
+  }
   ```
   other_file.c
   ```c
-  a
+  #include <stdio.h>
+ 
+  extern int count;
+
+  void write_extern(void) {
+     printf("count is %d\n", count);
+  }
   ```
+  **Note: I understand that `extern` is esentialy how you import your classes and funcs from one module to another. However I did not understand the C sytnax part of the tutorial self note: return to extern and study from a different source**
+  
+<br>
+<br>
+<br>
+
+## Decision Making 
+
+- I am not going to write what are the decision makers in a programming language because I have written the logic part of it too many times in different programming language files. Im just going to note how to write them in C:
+  ```c
+  int a = 10;
+  
+  if (a == 0) {
+    ...
+  } else if (a == 4) {
+    ...
+  } else if (a == 10) {
+    ...
+  } else {
+    ...
+  }
+  ```
+  I am not going to note down switch since I do not use it very often
+  
+- The `?:` Operator - can be used to replace if...else statements. It has the following general form −
+  ```
+  Exp1 ? Exp2 : Exp3;
+  ```
+  - Exp1 is evaluated. If it is true, then Exp2 is evaluated and becomes the value of the entire ? expression.
+  - If Exp1 is false, then Exp3 is evaluated and its value becomes the value of the expression.
+
+<br>
+<br>
+<br>
+
+### Loops 
+
+- I am not going to write what are the roles of loops in a programming language because I have written the logic part of it too many times in different programming language files. Im just going to note how to write them in C:
+  ```c
+  /* while loop */
+  int a = 10;
+  
+  while (a < 20) {
+    ...    
+  }
+  
+  /* for loop */
+  for (int i = 0; i < 10; i++) {
+    ...
+  }
+  
+  /* do while loop */
+  do {
+    ...
+  } while ( a < 20);
+  ```
+
+- As like any other programming language C has loop control statemetns:
+  ```c
+  int i = 0;
+  
+  while (i < 10) {
+    
+    if (i == 5) {
+      continue;
+    } 
+    else if (i == 9) {
+      break;
+    }
+    
+    i++;
+  }
+  ```
+  There is also `goto` control statement however it is not adviced to use it in your code if you do not know what are you doing.
+  
+<br>
+<br>
+<br>
+
+## Functions 
+
+- - I am not going to write what is the role of the functions in a programming language because I have written the logic part of it too many times in different programming language files. Im just going to note how to write them in C:
+  This is how you write a function
+  ```c
+  int sum (int num1, int num2) {
+    result = num1 + num2;
+    return result;
+  }
+  ```
+  You need to remember that you need to declare a function on the top of the file in order to let the `main` function know where to look for when the function is called inside the `main`. You can define it later on that is fine.
+  ```c
+  #include <stdio.h>
+  
+  // function decleration
+  int sum (int num1, int num2);
+  
+  int main () {
+   int a, b = 5;
+   
+   // function call
+   sum(a, b);
+   
+   return 0;
+  }
+  
+  // function definition
+  int sum(int num1, int num2) {
+    return num1 + num2;
+  }
+  ```
+  
+<br>
+<br>
+<br>
+
+## Scope Rules
+
+- A scope in any programming is a region of the program where a defined variable can have its existence and beyond that variable it cannot be accessed. There are three places where variables can be declared in C programming language −
+  - Inside a function or a block which is called local variables
+  - Outside of all functions which is called global variables.
+  - In the definition of function parameters which are called formal parameters.
+  
+- Lets see an example of where we will use them all:
+  ```c
+  #include <stdio.h>
+  
+  // global vars
+  int a = 10;
+  int b = 20;
+  
+  int main() {
+    // local vars
+    int a = 100;
+    int b = 200;
+  }
+  ```
+  The local variables always take presedence over the global ones so on the code above a is 100 and b is 200.
+  
+### Global Variables
+
+- Global variables are defined outside a function, usually on top of the program. Global variables hold their values throughout the lifetime of your program and they can be accessed inside any of the functions defined for the program.
+
+### Local Variables
+
+- Variables that are declared inside a function or block are called local variables. They can be used only by statements that are inside that function or block of code. Local variables are not known to functions outside their own. 
+
+### Formal Parameters
+
+- Formal parameters, are treated as local variables with-in a function and they take precedence over global variables. Following is an example − Here is an example:
+  ```c
+  int foo(int a, int b) {  // <-- these are the formal parameters and treated as locals vars
+    ...
+  }
+  ```
+
+<br>
+<br>
+<br>
+
+
