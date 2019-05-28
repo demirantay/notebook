@@ -111,3 +111,4 @@
 
 ## Create Operation
 
+- In this chapter, we will see how to create a remote Git repository; from now on, we will refer to it as Git Server. We need a Git server to allow team collaboration.
