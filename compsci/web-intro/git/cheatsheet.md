@@ -1,5 +1,8 @@
 # GIT Notes For Myself
 
+- [Official Docs Cheat Sheet](https://git-scm.com/docs)
+- [Githubs Cheat Sheet](https://github.github.com/training-kit/downloads/github-git-cheat-sheet.pdf)
+
 ## Vocabulary
 
 *Directory*: A folder used for storing multiple files.
