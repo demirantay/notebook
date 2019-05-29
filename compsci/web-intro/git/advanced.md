@@ -2,7 +2,7 @@
 
 - After you complete reading the README.md file on this directory. You should read this file in order to advance your understanding of `git`
 
-- You can read https://www.atlassian.com/git/tutorials/what-is-version-control this file for the full version of this note file. Be aware it is a huge read.
+- ***There are many more things to read about Git see this very well covered tutorial for more https://www.atlassian.com/git/tutorials/what-is-version-control***
 
 <br>
 <br>
@@ -146,4 +146,5 @@
 - This document will discuss the Git concept of tagging and the git tag command. Tags are ref's that point to specific points in Git history. Tagging is generally used to capture a point in history that is used for a marked version release (i.e. v1.0.1). A tag is like a branch that doesn’t change. Unlike branches, tags, after being created, have no further history of commits.
 
 - So basically tags are the backup and snapshots of each version so if something fucks up on the next version it is very easty roll back and fix the project.
+
 
