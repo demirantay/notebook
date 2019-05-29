@@ -373,4 +373,114 @@
 
 ### Passing Arrays as Function Arguments
 
-...
+- If you want to pass a single-dimension array as an argument in a function, you would have to declare a formal parameter in one of following three ways and all three declaration methods produce similar results because each tells the compiler that an integer pointer is going to be received
+
+- *There are 3 ways to do this, however I am not going to note it at the moment. Self note for the future restudy this later on from a different source*
+
+### Return Array From a Function
+
+- *This part of the documentation is very poorly documented I need to find a better reosurce to read this*
+
+
+### Pointer to Array
+
+- An array name is a constant pointer to the first element of the array. Therefore, in the declaration −
+  ```c
+  double balance[50];
+  ```
+  balance is a pointer to &balance[0], which is the address of the first element of the array balance. Thus, the following program fragment assigns p as the address of the first element of balance −
+  ```c
+  double *p;
+  double balance[10];
+  
+  p = balance;
+  ```
+  So therefore your pointer is esentialy your array (it is not a exact expalanation but take it). It is legal to use array names as constant pointers, and vice versa. Therefore, *(balance + 4) is a legitimate way of accessing the data at balance[4]. Once you store the address of the first element in 'p', you can access the array elements using *p, *(p+1), *(p+2) and so on. Lets see an example:
+  ```c
+  double balance[3] = {4, 6, 9};
+  double *p;
+  
+  p = balance;
+  
+  *(p + 1) = 2500;  // <-- changes the `6` to `2500`
+  ```
+  
+<br>
+<br>
+<br>
+<br>
+
+## Pointers 
+
+- Pointers are very important to C and should need a lot more attention. So be prepeared for a long read. Pointers in C are easy and fun to learn. Some C programming tasks are performed more easily with pointers, and other tasks, such as dynamic memory allocation, cannot be performed without using pointers. So it becomes necessary to learn pointers to become a perfect C programmer
+
+- As you know, every variable is a memory location and every memory location has its address defined which can be accessed using ampersand (&) operator, which denotes an address in memory. Consider the following example, which prints the address of the variables defined −
+  ```c
+  int var1;
+  char var2[10];
+  
+  printf("Var 1 memory adress : %x \n", &var1);
+  pirntf("Var 2 memory adress : %x \n", &var2);
+  ```
+  When the above code is compiled and executed, it produces the following result −
+  ```
+  Address of var1 variable: bff5a400
+  Address of var2 variable: bff5a3f6
+  ```
+
+### What are Pointers
+
+- A pointer is a variable whose value is the address of another variable, i.e., direct address of the memory location. Like any variable or constant, you must declare a pointer before using it to store any variable address. The general form of a pointer variable declaration is −
+  ```
+  type *var-name;
+  ``` 
+  Here, type is the pointer's base type; it must be a valid C data type and var-name is the name of the pointer variable. The asterisk * used to declare a pointer is the same asterisk used for multiplication. However, in this statement the asterisk is being used to designate a variable as a pointer. Take a look:
+  ```c
+  int    *ip;    /* pointer to an integer */
+  double *dp;    /* pointer to a double */
+  float  *fp;    /* pointer to a float */
+  char   *ch     /* pointer to a character */
+  ```
+  
+### How to Use Pointers 
+
+- There are a few important operations, which we will do with the help of pointers very frequently. (a) We define a pointer variable, (b) assign the address of a variable to a pointer and (c) finally access the value at the address available in the pointer variable. This is done by using unary operator `*`.  that returns the value of the variable located at the address specified by its operand. Because using `&` this will give you the adress in memory not the object itself. for that we need the asterisk. Lets see an exmaple:
+  ```c
+  int foo = 10;
+  int *p;
+  
+  p = &foo;
+  
+  /* Adress */
+  printf("This is the adress of foo: %x \n", p);
+  
+  /* Value */
+  printf("This is the value of the adress: %d \n", *p);
+  ```
+ 
+### Null Pointers
+
+- It is always a good practice to assign a NULL value to a pointer variable in case you do not have an exact address to be assigned. This is done at the time of variable declaration. A pointer that is assigned NULL is called a null pointer.
+
+- The NULL pointer is a constant with a value of zero defined in several standard libraries. Consider the following program:
+  ```c
+  int *foo;         // bad practice
+  
+  int *baz = Null   // good practice
+  ```
+
+### Pointer Arithmetic
+
+-  pointer in c is an address, which is a numeric value. Therefore, you can perform arithmetic operations on a pointer just as you can on a numeric value. There are four arithmetic operators that can be used on pointers: ++, --, +, and -
+  
+  
+  
+  
+<br>
+<br>
+<br>
+<br>
+
+## Strings
+
+- a
