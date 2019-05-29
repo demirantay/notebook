@@ -471,11 +471,24 @@
 
 ### Pointer Arithmetic
 
--  pointer in c is an address, which is a numeric value. Therefore, you can perform arithmetic operations on a pointer just as you can on a numeric value. There are four arithmetic operators that can be used on pointers: ++, --, +, and -
+- A pointer in c is an address, which is a numeric value. Therefore, you can perform arithmetic operations on a pointer just as you can on a numeric value. There are four arithmetic operators that can be used on pointers: ++, --, +, and -
   
+- To understand pointer arithmetic, let us consider that ptr is an integer pointer which points to the address 1000. Assuming 32-bit integers, let us perform the following arithmetic operation on the pointer
+  ```
+  ptr++
+  ```
+  After the above operation, the ptr will point to the location 1004 because each time ptr is incremented, it will point to the next integer location which is 4 bytes next to the current location. This operation will move the pointer to the next memory location without impacting the actual value at the memory location. If ptr points to a character whose address is 1000, then the above operation will point to the location 1001 because the next character will be available at 1001
   
+- As you can see in the explanation above you can also `--` decrement a pointer adress which will reduce 4 points if the var is 32 bytes. You can also `+` add and `-` subtract whatever amount to have an adress from your memory adress. 
+
+- You can also compare pointers with `>=`, `==` ... etc.
+
+- *I need to re-study this part because this part of the tutorial is poorly documented. Self note: study this again with a better resource*. 
+  - original source: https://www.tutorialspoint.com/cprogramming/c_pointer_arithmetic.htm
+  - new source : NA at the moment
   
-  
+### Array of Pointers 
+
 <br>
 <br>
 <br>
