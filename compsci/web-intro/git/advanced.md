@@ -2,56 +2,48 @@
 
 - After you complete reading the README.md file on this directory. You should read this file in order to advance your understanding of `git`
 
+- You can read https://www.atlassian.com/git/tutorials/what-is-version-control this file for the full version of this note file. Be aware it is a huge read.
+
+<br>
 <br>
 
-# Getting Started
-
-- This part of the notes are going to cover :
-  - Initializing a new Git repo
-  - Cloning an existing Git repo
-  - Committing a modified version of a file to the repo
-  - Configuring a Git repo for remote collaboration
-  - Common Git version control commands
-
-### Initializing a New Git Repo
-
-- To create a new repo, you'll use the `git init` command. `git init` is a one-time command you use during the initial setup of a new repo. Executing this command will create a new `.git` subdirectory in your current working directory. This will also create a new master branch. 
-
-- Lets see an real worlds example:
-  ```
-  cd sourcecode_folder
-  git init
-  ```
-  
-- Et volia you have git now. You can [see more](https://www.atlassian.com/git/tutorials/setting-up-a-repository/git-init) from this document about `git init`
-
-### Cloning an Existing Repository
-
-- If a project has already been set up in a central repository, the clone command is the most common way for users to obtain a local development clone. Like `git ini`t, cloning is generally a one-time operation. Once a developer has obtained a working copy, all version control operations are managed through their local repository.
-  ```
-  git clone <repo url>
-  ```
-  
-- Git uses two methods of user authentication for cloning: 1 - SSH, 2 - User login. You can easily login while cloning a project or pushing a project. However if you are suing a public internet never enter your creditentials in that wifi. NEVER!. So it is very logicical to use SSH key cryption which is a very easy way to setup while going through the user authentication.
-  - SSH Setup Resource: https://help.github.com/en/articles/connecting-to-github-with-ssh
-
-### Saving Changes to the Repository: add & commit
-
-- Now that you have a repository cloned or initialized, you can commit file version changes to it. When you make a modification in your file you simply follow this flow:
-  ```
-  cd source_code
-  git add <modfied file name>
-  git commit -m"message for team"
-  ```
-  After executing this example, your repo will now have `<modified file name>` added to the history and will track future updates to the file. We have covered `add` and `commit` in the first README. if there is no explanation to the commands it is because this note file expects you to already know them.
-  
-### Repo to Repo Collabaration: push
-
-- It’s important to understand that Git’s idea of a “working copy” is very different from the working copy you get by checking out source code from an SVN repository. Unlike SVN, Git makes no distinction between the working copies and the central repository—they're all full-fledged Git repositories.
-
-- If you used `git clone` in the previous "Initializing a new Repository" section to set up your local repository, your repository is already configured for remote collaboration. `git clone` will automatically configure your repo with a remote pointed to the Git URL you cloned it from. This means that once you make changes to a file and commit them, you can `git push` those changes to the remote repository.
-
-- If you used `git init` to make a fresh repo, you'll have no remote repo to push changes to. A common pattern when initializing a new repo is to go to a hosted Git service like github and create a repo there. The service will provide a `Git URL` that you can then add to your local Git repository and `git push` to the hosted repo.
-
 ### Configuration: git config
+
+- Once you have a remote repo setup, you will need to add a remote repo url to your local git config, and set an upstream branch for your local branches. The git remote command offers such utility.
+  ```
+  git remote add <remote_name> <remote_repo_url>
+  ```
+  Once you have mapped the remote repo you can push local branches to it.
+  ```
+  git push -u <remote_name> <local_branch_name>
+  ```
+  his command will push the local repo branch under <local_branc_name> to the remote repo at <remote_name>.
+  
+- In addition to configuring a remote repo URL, you may also need to set global Git configuration options such as username, or email. The git config command lets you configure your Git installation (or an individual repository) from the command line. This command can define everything from user info, to preferences, to the behavior of a repository
+  
+  Git stores configuration options in three separate files, which lets you scope options to individual repositories (local), user (Global), or the entire system (system):
+  
+  Define the author name to be used for all commits in the current repository. Typically, you’ll want to use the --global flag to set configuration options for the current user.
+  ```
+  git config --global user.name <name>
+  ```
+  
+  Adding the --local option or not passing a config level option at all, will set the user.name for the current local repository.
+  ```
+  git config --local user.email <email>
+  ```
+  
+  You can see all of your configration list with this:
+  ```
+  git config --list
+  ```
+  
+- Typically, you’ll only need to configure a Git installation the first time you start working on a new development machine, and for virtually all cases, you'll want to use the --global flag. One important exception is to override the author email address. You may wish to set your personal email address for personal and open source repositories, and your professional email address for work-related repositories.
+
+
+  There are many things to do with git configuration like edit ui-colors, set-editor ... etc. you can view most of them in this nice resouce (or go to the official docs) : https://www.atlassian.com/git/tutorials/setting-up-a-repository/git-config
+
+<br>
+<br>
+<br>
 
