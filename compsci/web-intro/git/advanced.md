@@ -2,7 +2,9 @@
 
 - After you complete reading the README.md file on this directory. You should read this file in order to advance your understanding of `git`
 
-- ***There are many more things to read about Git see this very well covered tutorial for more https://www.atlassian.com/git/tutorials/what-is-version-control***
+- Since there is a *lot* to learn about git and its subjects I did not cover everything there is to learn in each subject, instead I touched it briefly and provided the necesseary reading to cover the rest. This was a necessary way of laying out the notes becuase otherwise this file would be huge. 
+
+- *There are many more things to read about Git see this very well covered tutorial for more https://www.atlassian.com/git/tutorials/what-is-version-control*
 
 <br>
 <br>
@@ -147,4 +149,55 @@
 
 - So basically tags are the backup and snapshots of each version so if something fucks up on the next version it is very easty roll back and fix the project.
 
+- To create a new tag on the **current commit** execute the following command:
+  ```
+  git tag <tagname>
+  ```
+  Replace `<tagname>` with a semantic identifier to the state of the repo at the time the tag is being created. A common pattern is to use version numbers like `git tag v1.4.` Git supports two different types of tags, annotated and lightweight tags. The previous example created a lightweight tag. Lightweight tags and Annotated tags differ in the amount of accompanying meta data they store. A best practice is to consider Annotated tags as public, and Lightweight tags as private.Lightweight tags are essentially 'bookmarks' to a commit,they are just a name and a pointer to a commit, useful for creating quick links to relevant commits.
+  
+- You can list stored tahs in a repo with this:
+  ```
+  git tag
+  ```
+  
+- You can do many more things with tags such as tagging old commits, retagging replacing old tags, deletings tags ... etc. Tags are very very important for distinguishing your versions. Here is a very good resoruce to learn the essential parts of the tags:
+  - Resouce: https://www.atlassian.com/git/tutorials/inspecting-a-repository/git-tag
+  
+<br>
+<br>
+<br>
 
+# Undoing Commits 
+
+- When you fuck up in your code and want to reverse it back to the last commit where everything was nice and calm. There are lots of command on git for undoing or reversing your commits, tese are: `git checkout`, `git clean`, `git revert`, `git reset`, `git rm`
+
+- I am not going to note every single one of these undo commands since there are a lot. You can view them from this very well documented and covered tutorial named `undoing changes`:
+  - Resource : https://www.atlassian.com/git/tutorials/undoing-changes
+  
+<br>
+<br>
+<br>
+
+# Rewriting Commits
+
+- Git's main job is to make sure you never lose a committed change. But it's also designed to give you total control over your development workflow. This includes letting you define exactly what your project history looks like; however, it also creates the potential of losing commits. Git provides its history-rewriting commands under the disclaimer that using them may result in lost content.
+
+- Git has several mechanisms for storing history and saving changes. These mechanisms include: Commit --amend, git rebase and git reflog. These options give you powerful work flow customization options. See detailed information on all of them with this link:
+  - Resource: https://www.atlassian.com/git/tutorials/rewriting-history
+
+<br>
+<br>
+<br>
+
+# Git syncing
+
+- Git's distributed collaboration model, which gives every developer their own copy of the repository, complete with its own local history and branch structure. Users typically need to share a series of commits rather than a single changeset. Instead of committing a changeset from a working copy to the central repository, Git lets you share entire branches between repositories. In order to sync in harmony with your team mates there are few commands to master. These are: `git remote`, `git fetch`, `git push`, `git pull`
+
+- You can read about them in this very well documented and covered site: 
+  - Resource: https://www.atlassian.com/git/tutorials/syncing
+  
+<br>
+<br>
+<br>
+
+# Making a Pull Request
