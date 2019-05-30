@@ -201,3 +201,18 @@
 <br>
 
 # Making a Pull Request
+
+... I am gonna add these later link of where I left the tutorial : https://www.atlassian.com/git/tutorials/making-a-pull-request
+
+<br>
+<br>
+<br>
+
+# Using branches
+
+
+... I am gonna add these later link of where I left the tutorial : https://www.atlassian.com/git/tutorials/using-branches
+
+<br>
+<br>
+<br>
