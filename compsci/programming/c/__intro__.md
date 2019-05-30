@@ -61,6 +61,19 @@
   ```
   There are many more types such as arrays, pointers, enumarations, bytes ... etc. However the 4 above are enough for the basics right now.
   
+- There are no boolean types built in to the C. So esentially you either use `1` for true and `0` for false. However this becomes irritating and unreadable after a while so you either #include booleans from a library or define them with `typedef` and assign constatns to them:
+  ```c
+  /* option 1 */
+  #include <stdbool.h>
+  
+  /* option 2 */
+  typedef int bool;
+  #define true 1
+  #define false 0
+  
+  bool foo = true;
+  ```
+  
 ### Constants
 
 - Constnats are immutable variables. There are two simple ways in C to define constants −
@@ -489,6 +502,48 @@
   
 ### Array of Pointers 
 
+- You can create an array of pointers just like any other variable:
+  ```
+  int *p_nums[10];
+  int foo = 10;
+  
+  *p_nums[0] = &foo;
+  ```
+  
+- I did not want to note too much about this part of pointers if you want check other resources to learn about creating an array of pointers
+
+### Pointer to Pointer
+
+- A pointer to a pointer is a form of multiple indirection, or a chain of pointers. Normally, a pointer contains the address of a variable. When we define a pointer to a pointer, the first pointer contains the address of the second pointer, which points to the location that contains the actual value 
+
+- A variable that is a pointer to a pointer must be declared as such. This is done by placing an additional asterisk in front of its name. For example, the following declaration declares a pointer to a pointer of type int −
+  ```c
+  int **p;
+  ```
+  
+- When a target value is indirectly pointed to by a pointer to a pointer, accessing that value requires that the asterisk operator be applied twice, as is shown below in the example −
+  ```c
+  int foo = 10;
+  int *p;
+  int **ptp;
+  
+  p = &foo;
+  
+  /* assing pointer to pointer */
+  ptp = &p;
+  
+  /* normal pointer value accsess */
+  printf("%d", *p);
+  
+  /* pointer to pointer value acsess */
+  printf("&d", **ptp);
+  ```
+  
+### Passing and Returning Pointers to Functions
+
+- You can pass pointers as parameters to a function or return them this is commonly used for using arrays with functions however the original tutorial that I am following is doing a terrible job explaning this concept so: self note - re study this from a different source in the future:
+  - original source: [first](https://www.tutorialspoint.com/cprogramming/c_passing_pointers_to_functions.htm), [second](https://www.tutorialspoint.com/cprogramming/c_return_pointer_from_functions.htm)
+
 <br>
 <br>
 <br>
@@ -496,4 +551,33 @@
 
 ## Strings
 
-- a
+- Strings are actually one-dimensional array of characters terminated by a null character '\0'. The following declaration and initialization create a string consisting of the word "Hello". To hold the null character at the end of the array, the size of the character array containing the string is one more than the number of characters in the word "Hello." :
+  ```
+  char greeting[6] = {'h', 'e', 'l', 'l', 'o', '\0'};
+  ```
+  If you follow the rule of array initialization then you can write the above statement as follows −
+  ```
+  char greeting[] = "hello";
+  ```
+  which lets you work easily without having to count every goddamn char in a string while programming. Actually, you do not place the null character at the end of a string constant. The C compiler automatically places the '\0' at the end of the string when it initializes the array.
+  
+- C supports a wide range of functions that manipulate null-terminated strings-
+  - `strycpy(s1, s2);` - Copies string s2 into string s1.
+  - `strcat(s1, s2);` - Concatenates string s2 onto the end of string s1.
+  - `strlen(s1);` - Returns the length of string s1.
+  - `strcmp(s1, s2);` - Returns 0 if s1 and s2 are the same; less than 0 if s1<s2; greater than 0 if s1>s2.
+  - `strchr(s1, ch);` - Returns a pointer to the first occurrence of character ch in string s1.
+  - `strstr(s1, s2);` - Returns a pointer to the first occurrence of string s2 in string s1.
+
+<br>
+<br>
+<br>
+
+## Structures
+
+
+
+
+
+
+
