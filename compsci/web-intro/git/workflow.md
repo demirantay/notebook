@@ -54,3 +54,17 @@
 <br>
 
 ## Github Workflow
+
+- Popular within many open source projects but not only.
+
+- `Master` branch of a specific location (Github, Gitlab, Bitbucket, local server) contains the latest shippable version. For each new feature/bug fix/architectural change each developer creates a branch.
+
+- Changes happen on that branch and can be discussed in a pull request, code review, etc. Once accepted they get merged to the master branch.
+
+- Full flow by Scott Chacon:
+  - Anything in the master branch is deployable
+  - To work on something new, create a descriptively named branch off of master
+  - Commit to that branch locally and regularly push your work to the same named branch on the server
+  - When you need feedback or help, or you think the branch is ready for merging, open a pull request
+  - After someone else has reviewed and signed off on the feature, you can merge it into master
+  - Once it is merged and pushed to ‘master’, you can and should deploy immediately
