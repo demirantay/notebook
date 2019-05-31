@@ -561,7 +561,7 @@
   ```
   which lets you work easily without having to count every goddamn char in a string while programming. Actually, you do not place the null character at the end of a string constant. The C compiler automatically places the '\0' at the end of the string when it initializes the array.
   
-- C supports a wide range of functions that manipulate null-terminated strings-
+- C supports a wide range of functions that manipulate null-terminated strings- you need to `#include <string.h>` library for these:
   - `strycpy(s1, s2);` - Copies string s2 into string s1.
   - `strcat(s1, s2);` - Concatenates string s2 onto the end of string s1.
   - `strlen(s1);` - Returns the length of string s1.
@@ -573,11 +573,5 @@
 <br>
 <br>
 
-## Structures
 
-
-
-
-
-
-
+### Continue with [chapter 2](#./README-2.md)
