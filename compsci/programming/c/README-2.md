@@ -41,5 +41,24 @@
   }
   ```
 
+- You can pass any structure to any function the same way you pass other variable types:
+  ```c
+  void function_name (struct Books book) {...}
+  ```
+  
+- You can define pointers to structures in the same way as you define pointer to any other variable −
+  ```c
+  struct Books *pointer;
+  
+  pointer = &struct_instance;
+  ```
+  To access the members of a structure using a pointer to that structure, you must use the `→` operator as follows −
+  ```c
+  pointer->title;
+  ```
+  
+<br>
+<br>
+<br>
 
-
+## Unions
