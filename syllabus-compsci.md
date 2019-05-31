@@ -217,11 +217,10 @@ Hobby:
  - [X] Git - Version Control
  - [ ] GitHub for public repos, GitLab for private (fix readmes)
  - [X] Basic Terminal Usage
- - [ ] SOLID. KISS, YAGNI
  - [ ] Licenses
  - [ ] Semantatic Versioning
  - [ ] HTTP/HTTPS
- - [ ] Design Patterns
+ - [X] Design Patterns (SOLID, KISS, YAGNI) -- skipped for now
  - [ ] Character Encodings
  - [ ] Course : GO UP AND FINISH ALGORITHMS HEADER ON [SECTION 1](#algorithms)
 
