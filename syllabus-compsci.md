@@ -214,8 +214,8 @@ Hobby:
  ### Intro
  These are the basic and essential skills that every developer shoould have it under their belt in todays market. Try to practice what you learn.
 
- - [ ] Git - Version Control
- - [X] GitHub for public repos, GitLab for private
+ - [X] Git - Version Control
+ - [ ] GitHub for public repos, GitLab for private (fix readmes)
  - [ ] API's
  - [X] Basic Terminal Usage
  - [ ] SOLID. KISS, YAGNI
