@@ -216,7 +216,6 @@ Hobby:
 
  - [X] Git - Version Control
  - [ ] GitHub for public repos, GitLab for private (fix readmes)
- - [ ] API's
  - [X] Basic Terminal Usage
  - [ ] SOLID. KISS, YAGNI
  - [ ] Licenses
