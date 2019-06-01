@@ -126,3 +126,72 @@
 
 ## Typedef
 
+- The C programming language provides a keyword called typedef, which you can use to give a type a new name. And after giving it a new name we can declare variabes with its new name. Lets see an exmaple:
+  ```c
+  typedef int Bool;
+  
+  Bool true = 1;
+  Bool false = 0;
+  ```
+  its case sensetive so `Bool` and `bool` is not same.
+  
+### Typedef VS #define
+
+- `#define` is a C-directive which is also used to define the aliases for various data types similar to `typedef` but with the following differences −
+  - `typedef` is limited to giving symbolic names to types only where as `#define` can be used to define alias for values as well, q., you can define 1 as ONE etc.
+   ```c
+   typedef int bool;
+   bool true = 1;
+   
+   // is equal to
+   
+   #define TRUE 1
+   ```
+
+<br>
+<br>
+<br>
+
+## Input and Output
+
+- There are maany ways to get an input and give an output in C programming language. Lets see each one and their usage.
+
+### fgets() and outs()
+
+- In the standart library you can use `gets()` and `puts()` function to get an input and output one. Note: `gets` function is now deprecated in the standart library, the functions name is `fgets` now:
+  ```c
+  #include <stdio.h>
+  int main() {
+    
+    char foo[100];
+    
+    printf("Your input: ");
+    fgets( foo );
+    
+    printf("Your output: ");
+    outs( foo );
+    
+    return 0;
+  }
+  ```
+  
+### printf() and scanf()
+
+- These functions are the most used built in input and output functions because there are lots of options for formatiing. The format can be a simple  string, but you can specify %s, %d, %c, %f, etc., to print or read strings, integer, character or float respectively. There are many other formatting options available which can be used based on requirements.
+
+- Scanf uses memory adresess to `&` to assign values its gets from the keyboard to the targeted variables. Lets see an example:
+  ```c
+  int main() {
+    
+    int foo, baz;
+    
+    printf("Enter your values: ");
+    scanf("%d %d", &foo, &baz);
+    
+    pritnf("Your values are %d and %d", foo, baz);
+    
+    return 0;
+  }
+  ```
+
+
