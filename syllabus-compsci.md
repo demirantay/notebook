@@ -217,7 +217,7 @@ Hobby:
  - [X] Git - Version Control
  - [ ] GitHub for public repos, GitLab for private (fix readmes)
  - [X] Basic Terminal Usage
- - [ ] Licenses
+ - [X] Licenses
  - [ ] Semantatic Versioning
  - [ ] HTTP/HTTPS
  - [X] Design Patterns (SOLID, KISS, YAGNI) -- skipped for now
