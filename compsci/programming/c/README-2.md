@@ -76,7 +76,7 @@
   Now, a variable of `Data` type can store an integer, a floating-point number, or a string of characters. It means a single variable, i.e., same memory location, can be used to store multiple types of data. You can use any built-in or user defined data types inside a union based on your requirement.
   
 - To access any member of a union, we use the `member access operator (.)` Lets try to acsess the union defined above:
-  ```
+  ```c
   #include <stdio.h>
   #include <string.h>
   
@@ -193,5 +193,78 @@
     return 0;
   }
   ```
+  
+<br>
+<br>
+<br>
 
+## File I/O
 
+- The last chapter explained the standard input and output devices handled by C programming language. This chapter cover how C programmers can create, open, close text or binary files for their data storage. A file represents a sequence of bytes, regardless of it being a text file or a binary file. C programming language provides access on high level functions as well as low level (OS level) calls to handle file on your storage devices. 
+
+### Opening a file
+
+- You can use the `fopen( )` function to create a new file or to open an existing file. This call will initialize an object of the type `FILE`, which contains all the information necessary to control the stream. The prototype of this function call is as follows −
+  ```
+  FILE *fopen( const char * filename, const char * mode );
+  ```
+  Here, `filename` is a string literal, which you will use to name your file, and access `mode` can have one of the following values −
+  - `r`  : Opens an existing text file for reading purpose.
+  - `w`  : Opens a text file for writing. If it does not exist, then a new file is created.
+  - `a`  : Opens a text file for writing in appending mode. If it does not exist, then a new file is created. 
+  - `r+` : Opens a text file for both reading and writing.
+  - `w+` : Opens a text file for both reading and writing. It first truncates the file to zero length if it exists, otherwise creates a file if it does not exist.
+  - `a+` : Opens a text file for both reading and writing. It creates the file if it does not exist. The reading will start from the beginning but writing can only be appended.
+  
+### Closing a file
+
+- To close a file, use the fclose( ) function. The prototype of this function is −
+  ```
+  int fclose( FILE *fp );
+  ```
+  The `fclose()` function returns zero on success, or EOF if there is an error in closing the file.
+
+### Writing a file
+
+- Following is the simplest function to write individual characters to a stream −
+  ```
+  int fputc( int c, FILE *fp );
+  ```
+  You can use the following functions to write a null-terminated string to a stream −
+  ```
+  int fputs( const char *s, FILE *fp );
+  ```
+
+- Lets see an real example with the code above: (Make sure you have /tmp directory available. If it is not, then before proceeding, you must create this directory on your machine.)
+  ```c
+  #include <stdio.h>
+  
+  main() {
+     FILE *fp;
+
+     fp = fopen("/tmp/test.txt", "w+");
+     fputs("This is testing for fputs...\n", fp);
+     fclose(fp);
+  }
+  ```
+  When the above code is compiled and executed, it creates a new file test.txt in /tmp directory and writes two lines using two different functions. Let us read this file in the next section.
+  
+### Reading a file
+
+- Given below is the simplest function to read a single character from a file −
+  ```
+  int fgetc( FILE * fp );
+  ```
+  The following function allows to read a string from a stream −
+  ```
+  char *fgets( char *buf, int n, FILE *fp );
+  ```
+  
+<br>
+<br>
+<br>
+
+## Preprocessors
+
+- All preprocessor commands begin with a hash symbol (#). It must be the first nonblank character, and for readability. The following section lists down all the important preprocessor directives −
+  - `#define` - 
