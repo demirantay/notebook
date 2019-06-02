@@ -215,11 +215,11 @@ Hobby:
  These are the basic and essential skills that every developer shoould have it under their belt in todays market. Try to practice what you learn.
 
  - [X] Git - Version Control
- - [ ] GitHub for public repos, GitLab for private (fix readmes)
+ - [X] GitHub for public repos, GitLab for private 
  - [X] Basic Terminal Usage
  - [X] Licenses
- - [ ] Semantatic Versioning
- - [ ] HTTP/HTTPS
+ - [X] Semantatic Versioning
+ - [X] HTTP/HTTPS
  - [X] Design Patterns (SOLID, KISS, YAGNI) -- skipped for now
  - [ ] Character Encodings
  - [ ] Course : GO UP AND FINISH ALGORITHMS HEADER ON [SECTION 1](#algorithms)
