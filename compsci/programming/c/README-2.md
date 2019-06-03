@@ -357,7 +357,26 @@
 
 ## Type Casting
 
-- ype casting is a way to convert a variable from one data type to another data type. For example, if you want to store a 'long' value into a simple integer then you can type cast 'long' to 'int'. 
+- Type casting is a way to convert a variable from one data type to another data type. For example, if you want to store a 'long' value into a simple integer then you can type cast 'long' to 'int'. You can convert the values from one type to another explicitly using the cast operator as follows −
+  ```
+  (type_name) expression
+  ```
+  Lets see a real world example:
+  ```c
+  int a = 10, b = 20;
+  double sum;
+  
+  sum = (double) a + b;
+  ```
+  See we convert the two intergers into a one double
+  
+<br>
+<br>
+<br>
+
+## Error Handling 
+
+
   
 
 
