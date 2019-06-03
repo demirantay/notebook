@@ -267,4 +267,98 @@
 ## Preprocessors
 
 - All preprocessor commands begin with a hash symbol (#). It must be the first nonblank character, and for readability. The following section lists down all the important preprocessor directives −
-  - `#define` - 
+  - `#define` - Substitutes a preprocessor macro.
+  - `#include` - Inserts a particular header from another file.
+  - `#undef` - Undefines a preprocessor macro.
+  - `#ifdef` - Returns true if this macro is defined.
+  - `#ifndef` - Returns true if this macro is not defined.
+  - `#if` - Tests if a compile time condition is true.
+  - `#else` - The alternative for #if.
+  - `#elif` - #else and #if in one statement.
+  - `#endif` - Ends preprocessor conditional.
+  - `#error` - Prints error message on stderr.
+  - `#pragma` -  Issues special commands to the compiler, using a standardized method.
+  
+- Lets ses some real world examples for the preprecessors above:
+  ```c
+  #include <stdio.h>
+  
+  #define FOO 10
+  #undef FOO
+  
+  #ifndef FOO
+    #define FOO 200
+  #endif
+  ```
+  
+### Pre-defined macros
+
+- ANSI C defines a number of macros. Although each one is available for use in programming, the predefined macros should not be directly modified.
+  - `__DATE__` - The current date as a character literal in "MMM DD YYYY" format.
+  - `__TIME__` - The current time as a character literal in "HH:MM:SS" format.
+  - `__FILE__` - This contains the current filename as a string literal.
+  - `__LINE__` - This contains the current line number as a decimal constant.
+  - `__STDC__` - Defined as 1 when the compiler complies with the ANSI standard.
+
+- Lets try them in a example:
+  ```c
+  int main() {
+    printf("File :%s\n", __FILE__ );   // <-- prints "foo.c"
+  }
+  ```
+  
+- There are MANY more things to learn about preprocessors and macros however the tutorial that I am following is not quite good at explaning it. Self note: study this from a different resoruce:
+  - original source: https://www.tutorialspoint.com/cprogramming/c_preprocessors.htm
+  
+<br>
+<br>
+<br>
+
+## Header Files
+
+- A header file is a file with extension `.h` which contains C function declarations and macro definitions to be shared between several source files. There are two types of header files: the files that the programmer writes and the files that comes with your compiler.
+
+- You request to use a header file in your program by including it with the C preprocessing directive `#include`, like you have seen inclusion of `stdio.h` header file, which comes along with your compiler.
+
+- Both the user and the system header files are included using the preprocessing directive `#include`. It has the following two forms −
+  This form is used for system header files. It searches for a file named 'file' in a standard list of system directories.
+  ```c
+  #include <file>
+  ```
+  The form below is used for header files of your own program. It searches for a file named 'file' in the directory containing the current file.
+  ```c
+  #include "file"
+  ```
+  
+- Lets see an real world example. Our first file is called `foo.h`:
+  ```h
+  // foo.h
+  
+  int greeting() {
+    printf("Hello\n");
+  }
+  ```
+  And this is our main.c file:
+  ```c
+  // main.c
+  
+  #include <stdio.h>
+  
+  #include "foo.h"
+  
+  int main() {
+    greeting();   // outputs "hello"
+  }
+  ```
+  
+<br>
+<br>
+<br>
+
+## Type Casting
+
+- ype casting is a way to convert a variable from one data type to another data type. For example, if you want to store a 'long' value into a simple integer then you can type cast 'long' to 'int'. 
+  
+
+
+
