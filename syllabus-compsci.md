@@ -236,6 +236,20 @@ Hobby:
 - [ ] Learn CSS pre-processors such as SASS or POST CSS
 - [ ] Learn CSS frameworks: Boostrap is the most used option
 - [ ] Learn about CSS architecture: BEM
+- [ ] Build tools: learn about Linters and Formatters (Prettier, ESLint .etc.)
+- [ ] Build tools: learn about module bundlers(webpack)
+- [ ] Build tools: learn about task runners (npm scripts)
+- [ ] Learn a js framework (React, agnular, vue
+- [ ] Learn about CSS in JS : styled components, CSS modules, Emotion, Radium, Glamarous
+- [ ] Learn how to test your frontend apps
+- [ ] Progressive Web Apps: Learn different web APIs : Storage, web scokets, service workers, location, notification, device orientation, payment, credentials
+- [ ] Progressive Web Apps: Learn about monitoring and improving performance: PRPL patter, RAil model, performence metrics, light house, dev tools
+- [ ] Learn about type checkers (typescript)
+- [ ] Learn about serveri side rendering with your framework of choice
+- [ ] Static site generators
+- [ ] Desktop Applications (electron)
+- [ ] Optional mobile applications with frontend (react native)
+- [ ] Do a very advanced project and use everything you have learned so far.
 
  ### Back End
  It may seem daunting compared to front-end however and yes it is true that there is a learning curve. However it is a lot more fun to be able to understand what the fuck is going under all of this complexity.
@@ -244,13 +258,12 @@ Hobby:
  - [X] Practice: Exercise and make some command line application. Sample ideas, you can make a web scraper or get a API in JSON format and create someting, think of a daily task and automate it.
  - [ ] Learn: Learn how to use a package manager for the language you have picked e.g. Python has pip etc.
  - [X] Learn: Standards and best practices. Each language has it is own e.g. Python has PEP
- - [ ] Projeect: Make and Distribute some package / Library.
+ - [ ] Project: Make and Distribute some package / Library.
  - [ ] Learn: Learn about testing. There are several ways to write tests such as unit , integration ..etc. Tests are very important do not skim through articles. Learn how to calculate test covarege.
  - [ ] Project: Write tests for your package built above.
  - [ ] Learn Relational Databases there are many options but pick either PostgreSQL or MySQL
- - [ ] ProjectCreate a simple CRUD web applciation like a blog or something using everything you have learnt this far. It should have a registration, adminpanel, posts ...etc.
  - [ ] Learn: a Framework e.g. Django, Flask
- - [ ] Project: Make the application you made above with the framework you chose.
+ - [ ] Project: Make a CRUD application with the framework of your chosing
  - [ ] Learn: a noSQL database you do not have to use it but understand how it is different from relational databases and why they are needed. MongoDB is a solid choice.
  - [ ] Learn: Caching, learn how to implenet app level caching using Redis or Memcached
  - [ ] Project: Implement caching to the application you have built above.
@@ -266,39 +279,39 @@ Hobby:
  - [ ] Learn: Again option, look into Graph Databases, at least you can have a little udnerstanding of what they are.
  - [ ] We have a lot more stuff like Profiling, Static Analysis, DDD SOAP, etc. Go on your journey now!
  - [ ] Course : GO UP AND FINISH ALGORITHMS HEADER ON [SECTION 1](#algorithms)
+ - [ ] Course : GO UP AND FINISH CODE UNIVERSITY HEADER ON [SECTION 1](#code-university)
  - [ ] Course : GO UP AND FINISH DATABASE HEADER ON [SECTION 1](#databases)
- - [ ] Project: Once you are done doing all of the above with django create your own framwork and implement each box again with more advanced projects.
+ - [ ] Project: Once you are done doing all of the above with django create your own framwork with wsgi or cgi and implement each box again with more advanced projects. You can also create your own server, backup it deploy it and use it to build applicaitons with your newly built framework.
 
 ### DevOps
 
 DevOps is something very complex instead of having a one strict route you cna carve your way up however it is very important to have a mental map of dev ops that consists of these. Try to understand each topic and atleast do a small lite demo of the things you like for practice.
 
-- [ ] Finish: All of the missing part of the theory education in section 1
-- [ ] Learn: Operating Systems, Either unix -> FreeBSD or Linux --> RHEL || CentOS || Ubuntu || Fedora
-- [ ] Learn: Automation, Either powershell, Puppet, AWS, Terraform .. etc.
-- [ ] Learn: Cloud, Either AWS, Heroku, DigitalOcean ... etc.
-- [ ] Learn: CI/CD , Either Jenkins, Travis, CircleCI .. etc.
-- [ ] Learn: Monitoring and Alerting, Either, AppDynamics, Naglos, Munin, New Relic ...etc.
-- [ ] Learn: Log Management & Analysis, Either ELK ...etc.
-- [ ] Learn: Cluster Managers, Either Kubernetes, Nomad, Docker Swarrm .. etc.
-- [ ] Learn: Love for Terminal, learn compiling apps from source, gcc and etc.
-- [ ] Learn: Bash Scripts
-- [ ] Learn: Vim/Nano/Emacs
-- [ ] Learn: Command Tools, Text Manipulation (awk, sed, grep, sort, uniq, cat, echo ..etc), Process Monitoring(ps, top, htop,atop ..etc), System Performance(nmon, iostat, sar ..etc), Network(nmap, tcdump, ping, mtr, traceroute ..etc)
-- [ ] Learn: Containers, Either Docker ...etc.
-- [ ] Learn: Web Servers, Either Apache, Nginx, Tomcat .. etc.
-- [ ] Learn: OSI Model. TCP/IP/UDP Common ports
-- [ ] Learn: Knowledge about different file systems.
-- [ ] Learn: Setting up a Reverse Proxy(Nginx)
-- [ ] Learn: Setting up a caching Server(Squid, Nginx)
-- [ ] Learn: Setting up a load balancer(HAProxy, Ngixns)
-- [ ] Learn: Setting up a firewall
-- [ ] Learn: TLS, STARTLS, SSL, HTTTPS, SCP, SSH, SFTP
-- [ ] Learn: Postmortem analysis when something bad happens.
-- [ ] Course : Go up and brush upon your algorithms with code university because operating systems and networkign rqeuires algorithms
+- [ ] Learn a Systems Programming language like : C/C++, Go, Rust
+- [ ] Understand different Operating Systems concepts: Process Management, Threads and Concurrency, Sockets, I/O management, Virtualization, Memory/Storage, File Systems
+- [ ] Learn about Managing Servers: get some administratio experience in a OS especially linux
+- [ ] Terminal: learn Bash Scripting
+- [ ] Termianl: learn either Vim, Nano, Emacs, powershell
+- [ ] Terminal: Compiling apps from the source 
+- [ ] Terminal: Learn about System Performance commands
+- [ ] Terminal: Learn about Text Manipulation Tools commands 
+- [ ] Terminal: learn about Process Monitoring commands
+- [ ] Terminal: learn about Network commands 
+- [ ] Networking and Security: DNS, OSI model, http/https, ftp, SSL/TLS
+- [ ] Learn setting up a reverse proxy, forward proxy, caching servver, load balancer, firewall
+- [ ] Learn about web servers (apache, nginx, etc.)
+- [ ] Infustructure as Code: Learn about Containers (docker ,etc.)
+- [ ] Infustructure as Code: learn about Configuration Management (ansible , etc.)
+- [ ] Infustructure as Code: learn about Container Orchestration (kubernetees .etc.)
+- [ ] Infustructure as Code: learn about Infustructure Provisoning (terraform)
+- [ ] Learn some CI/CD Tool (Jenkins ...etc.)
+- [ ] Monitoring Software: learn about Infustructure Monitoring (Nagios, etc.)
+- [ ] Monitoring Software: learn about Application Monitoring (NEw relic ..etc)
+- [ ] Monitoring Software: learn about Logs Management (ELK stack etc.)
+- [ ] Learn about CLOUD providers (AWS, azure, digital ocean ... etc.)
 - [ ] Course : GO UP AND FINISH OPERATING SYSTEMS HEADER ON [SECTION 1](#operating-systems)
 - [ ] Course : GO UP AND FINISH NETWORKING HEADER ON [SECTION 1](#computer-networking)
-- [ ] Course : Go UP AND FINISH CODE UNIVERSITY HEADER ON [SECTION 1](#code-university)
+- [ ] Course : FINISH THE REST OF THE SECTION 1 ABOVE
 - [ ] Project : Redo all boxes with a lot more advanced projects
 
 ---
