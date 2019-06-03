@@ -20,27 +20,6 @@ Don’t be the person who “never quite understood” something like recursion
  - [X] Book : SICP (Structured Interpretion of Computer Programs)-*(shelved it for later it is hard)*
  - [X] Book : [modern c book](https://www.scribd.com/doc/39933932/C-Programming-a-Modern-Approach-2nd-Edition-K-N-King)(Did not finish left at pg.292 )
  
- ### Algorithms and Data Structures
-
-  If you don’t know how to use ubiquitous data structures like stacks, queues, trees, and graphs, you won’t be able to solve hard problems.
-  
-  - [ ] Read: The [TutorialsOnPoint](https://www.tutorialspoint.com/data_structures_algorithms/index.htm) for a overview. Note this to README of the folder
-  - [ ] Book: [PSAD using python](http://interactivepython.org/runestone/static/pythonds/index.html)
-  - [ ] Project: View the bottom of this page and implement some of the algorithm map
-  - [ ] Book: [The Algorithm Design Manual](https://www.amazon.com/Algorithm-Design-Manual-Steven-Skiena/dp/1848000693/?pldnSite=1) There are [vidoes](http://www3.cs.stonybrook.edu/~algorith/video-lectures/) avilable too.
-  - [ ] Book : [How to solve it](https://www.amazon.com/How-Solve-Mathematical-Princeton-Science/dp/069116407X/?pldnSite=1)
-  
-  ### Databases
-
-   Data is at the heart of most significant programs, but few understand how database systems actually work.
-
-   - [ ] Read: The [TutorialsOnPoint](https://www.tutorialspoint.com/dbms/index.htm) for a overview. Note this to README of the folder
-   - [ ] Course : [Berkley Course](https://archive.org/details/UCBerkeley_Course_Computer_Science_186)
-   - [ ] Paper : [Database Architecture](http://db.cs.berkeley.edu/papers/fntdb07-architecture.pdf)
-   - [ ] Book : [Red Book](http://www.redbook.io/) -- your next stop after berkley course
-   - [ ] Course : [Stanford Course](https://lagunita.stanford.edu/courses/DB/2014/SelfPaced/about) -- Take all mini courses
-   - [ ] Project idea: Write a simple relational database management system from scratch.
-   
    
  ### Computer Architecture
 
@@ -77,6 +56,32 @@ Don’t be the person who “never quite understood” something like recursion
    - [ ] Project : Your own small internet, HTTP server or etc. dont forget to practice what you learn.
    
 
+ ### Algorithms and Data Structures
+
+  If you don’t know how to use ubiquitous data structures like stacks, queues, trees, and graphs, you won’t be able to solve hard problems.
+  
+  - [ ] Read: The [TutorialsOnPoint](https://www.tutorialspoint.com/data_structures_algorithms/index.htm) for a overview. Note this to README of the folder
+  - [ ] Book: [PSAD using python](http://interactivepython.org/runestone/static/pythonds/index.html)
+  - [ ] Project: View the bottom of this page and implement some of the algorithm map
+  - [ ] Book: [The Algorithm Design Manual](https://www.amazon.com/Algorithm-Design-Manual-Steven-Skiena/dp/1848000693/?pldnSite=1) There are [vidoes](http://www3.cs.stonybrook.edu/~algorith/video-lectures/) avilable too.
+  - [ ] Book : [How to solve it](https://www.amazon.com/How-Solve-Mathematical-Princeton-Science/dp/069116407X/?pldnSite=1)
+  
+### Code University
+
+  - [ ] Guide : [Code Univeristy Guide](https://github.com/jwasham/coding-interview-university) : Finish this guide after finishing the sections above this guide suppose to take your time nearly a year so go through each item very seriously. If you are able to come this far hell go apply for big 4.
+  - [ ] Project: Once you are done you can solve the algorithms that are listed as a roadmap in a image at the bottom of this file.
+  - [ ] **Once you are done with the fundementals open up "Human Universals" and try to come up with an idea to build** 
+  
+  ### Databases
+
+   Data is at the heart of most significant programs, but few understand how database systems actually work.
+
+   - [ ] Read: The [TutorialsOnPoint](https://www.tutorialspoint.com/dbms/index.htm) for a overview. Note this to README of the folder
+   - [ ] Course : [Berkley Course](https://archive.org/details/UCBerkeley_Course_Computer_Science_186)
+   - [ ] Paper : [Database Architecture](http://db.cs.berkeley.edu/papers/fntdb07-architecture.pdf)
+   - [ ] Book : [Red Book](http://www.redbook.io/) -- your next stop after berkley course
+   - [ ] Course : [Stanford Course](https://lagunita.stanford.edu/courses/DB/2014/SelfPaced/about) -- Take all mini courses
+   - [ ] Project idea: Write a simple relational database management system from scratch.
    
 
 ### Languages and Compilers
@@ -94,12 +99,6 @@ Don’t be the person who “never quite understood” something like recursion
    - [ ] Book : [Distibuted Systems, 3rd edition](https://www.distributed-systems.net/index.php/books/distributed-systems-3rd-edition-2017/)
    - [ ] Project: Do something to implement the theory you have learned.
  
-
-### Code University
-
-  - [ ] Guide : [Code Univeristy Guide](https://github.com/jwasham/coding-interview-university) : Finish this guide after finishing the sections above this guide suppose to take your time nearly a year so go through each item very seriously. If you are able to come this far hell go apply for big 4.
-  - [ ] Project: Once you are done you can solve the algorithms that are listed as a roadmap in a image at the bottom of this file.
-  - [ ] **Once you are done with the fundementals open up "Human Universals" and try to come up with an idea to build** 
   
 ### Mathematics
 
@@ -204,6 +203,10 @@ Hobby:
  ---
  ---
  ---
+ 
+ <br>
+ <br>
+ <br>
 
 ## Section 3
 
@@ -221,37 +224,18 @@ Hobby:
  - [X] Semantatic Versioning
  - [X] HTTP/HTTPS
  - [X] Design Patterns (SOLID, KISS, YAGNI) -- skipped for now
- - [ ] Course : GO UP AND FINISH ALGORITHMS HEADER ON [SECTION 1](#algorithms)
+ 
 
  ### Front End
  This may seem basic since in the core there are only three technologies how ever what is really hard is that not everyone has the eye for killer design skills.
 
- - [ ] Learn : HTML
- - [ ] HTML : Clone a template content
- - [ ] Learn : CSS
- - [ ] CSS : Learn how to use 'grid' and 'flexbox' -- skipped since I use bootstraps- 12 grid system
- - [ ] CSS : Learn Media Queries and Responsive Design
- - [ ] CSS : Style the template you made above
- - [ ] Learn : JavaScript
- - [ ] JS : Learn the DOM api and how to manipulate it
- - [ ] JS : finish YDKJS books for understanding hoisting, bubling ... etc. there are 10 min papares in your stars
- - [ ] JS : Learn Ajax(XHR)
- - [ ] JS : Learn ES6 and writing modular javascript
- - [ ] Project : Make a fine Responsive website with interactivity with javascript
- - [ ] JS : Pick a package manager and learn it, either `npm` or `yarn`
- - [ ] CSS : Learn SASS a css proprecessor that lets you do things css can't do it by it self
- - [ ] CSS : Learn BootStrap a framework for responive design
- - [ ] CSS : Learn BEM, a css architecture to stucture your css code
- - [ ] Learn : Build tools in this order, 1: NPM scripts, 2: ESLint, 3:Webpack
- - [ ] Project : Create a library and publish it on npm and github
- - [ ] Learn : Pick a framework from this three, 1:React--redux, 2:Vue--vuex, 3:Angular2--Rx.js
- - [ ] Project : You now know what a modern javascript developer should now. Go build a fully developed front end application.
- - [ ] Learn : How to imporove the performance of your application built above such as, eg. Interactivity time, Page speed index, Lighthouse Score.
- - [ ] Learn : Testing your front end applications [here is a good resource](https://medium.com/welldone-software/an-overview-of-javascript-testing-in-2018-f68950900bc3)
- - [ ] Learn : To make progressive web apps, you need to learn about service workers to make them
- - [ ] Learn : Static Type Checkers, you dont need to learn them but they give you overrpower of your code, `TypeScript` is a good option
- - [ ] Learn : Server side rendering in whatever framework you have chosen. If it is 1:react -- Next.js, 2:vue -- Nuxt.js, 3:Angular2 -- Universal
- - [ ] ETC : There are lots of things to learn go figure such as, Canvas, HTML5 APIs, SVG, Functional Programming .. etc.
+- [ ] HTML, after the basics learn these key points: writing semantic HTML, basic SEO, Accsessibilty
+- [ ] CSS, after the basics learn these: Making layouts, Media Queries, CSS 3
+- [ ] Javascript, after learning the language ([tutorias on point](https://www.tutorialspoint.com/javascript/)) learn the following: DOM API, fetching API with Ajax, ES6+modular javscript
+- [ ] Learn pacakage managers (either one npm or yarn)
+- [ ] Learn CSS pre-processors such as SASS or POST CSS
+- [ ] Learn CSS frameworks: Boostrap is the most used option
+- [ ] Learn about CSS architecture: BEM
 
  ### Back End
  It may seem daunting compared to front-end however and yes it is true that there is a learning curve. However it is a lot more fun to be able to understand what the fuck is going under all of this complexity.
@@ -281,6 +265,7 @@ Hobby:
  - [ ] Learn: GraphQL, this is not required and optional feel free to have a loot and what it is all about and why they are calling it the new REST
  - [ ] Learn: Again option, look into Graph Databases, at least you can have a little udnerstanding of what they are.
  - [ ] We have a lot more stuff like Profiling, Static Analysis, DDD SOAP, etc. Go on your journey now!
+ - [ ] Course : GO UP AND FINISH ALGORITHMS HEADER ON [SECTION 1](#algorithms)
  - [ ] Course : GO UP AND FINISH DATABASE HEADER ON [SECTION 1](#databases)
  - [ ] Project: Once you are done doing all of the above with django create your own framwork and implement each box again with more advanced projects.
 
