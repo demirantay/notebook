@@ -221,7 +221,6 @@ Hobby:
  - [X] Semantatic Versioning
  - [X] HTTP/HTTPS
  - [X] Design Patterns (SOLID, KISS, YAGNI) -- skipped for now
- - [ ] Character Encodings
  - [ ] Course : GO UP AND FINISH ALGORITHMS HEADER ON [SECTION 1](#algorithms)
 
  ### Front End
