@@ -5,6 +5,7 @@ The syllabus is divided into sections. The first section is the basic theorotica
 For [finding the books](http://freecomputerbooks.com/)
 
 - [ ] Start contributing to Remote Companies Open Source projects 
+- [ ] Think of this as Duolingo tree, you can reset them all and re-do them with more advanced notes. You are never done.
 
 
 ## Section 1
