@@ -376,8 +376,94 @@
 
 ## Error Handling 
 
+- As such, C programming does not provide direct support for error handling but being a system programming language, it provides you access at lower level in the form of return values. Most of the C or even Unix function calls return -1 or NULL in case of any error and set an error code `errno`. It is set as a global variable and indicates an error occurred during any function call. You can find various error codes defined in `<error.h>` header file.
 
+### errno, perror(), strerror()
+
+- The C programming language provides `perror()` and `strerror()` functions which can be used to display the text message associated with `errno`.
+  - `perror()` -  function displays the string you pass to it, followed by a colon, a space, and then the textual representation of the current errno value.
+  - `strerror()` -  function, which returns a pointer to the textual representation of the current errno value
   
+- There are more to learn about error handling in C the original tutorial that I am following is not that great. Future note: find a better resoruce and study again:
+  - original source: https://www.tutorialspoint.com/cprogramming/c_error_handling.htm
+  - new source : null
+  
+<br>
+<br>
+<br>
 
+## Recursion
+
+- I do not know why recursion a algorithm concept is inside a C tutorial however it is basically a function caling itself in its definition, lets see a more prooper description: Recursion is the process of repeating items in a self-similar way. In programming languages, if a program allows you to call a function inside the same function, then it is called a recursive call of the function.
+  ```c
+  void foo() {
+    foo()   // function calls itself 
+  }
+  ```
+  But while using recursion, programmers need to be careful to define an exit condition from the function, otherwise it will go into an infinite loop.
+  Recursive functions are very useful to solve many mathematical problems, such as calculating the factorial of a number, generating Fibonacci series, etc.
+  
+<br>
+<br>
+<br>
+
+## Variable Arguments 
+
+- Sometimes, you may come across a situation, when you want to have a function, which can take variable number of arguments, i.e., parameters, instead of predefined number of parameters. The C programming language provides a solution for this. Lets see an example:
+  ```c
+  int func(int, ... ) {
+     .
+     .
+     .
+  }
+
+  int main() {
+     func(1, 2, 3);
+     func(1, 2, 3, 4);
+  }
+  ```
+  It should be noted that the function `func()` has its last argument as ellipses, i.e. three dotes (...) and the one just before the ellipses is always an `int` which will represent the total number variable arguments passed. To use such functionality, you need to make use of `stdarg.h` header file which provides the functions and macros to implement the functionality of variable arguments and follow the given steps −
+    - Define a function with its last parameter as ellipses and the one just before the ellipses is always an `int` which will represent the number of arguments.
+    - Create a `va_list` type variable in the function definition. This type is defined in stdarg.h header file.
+    - Use `int` parameter and `va_start` macro to initialize the `va_list` variable to an argument list. The macro va_start is defined in stdarg.h header file.
+    - Use `va_arg` macro and `va_list` variable to access each item in argument list.
+    - Use a macro `va_end` to clean up the memory assigned to `va_list` variable.
+
+- Now lets see a rea world example that shows what we have explained above:
+  ```c
+  #include <stdio.h>
+  #include <stdarg.h>
+
+  double average(int num,...) {
+
+     va_list valist;
+     double sum = 0.0;
+     int i;
+
+     /* initialize valist for num number of arguments */
+     va_start(valist, num);
+
+     /* access all the arguments assigned to valist */
+     for (i = 0; i < num; i++) {
+        sum += va_arg(valist, int);
+     }
+
+     /* clean memory reserved for valist */
+     va_end(valist);
+
+     return sum/num;
+  }
+  
+  int main() {
+     printf("Average of 2, 3, 4, 5 = %f\n", average(4, 2,3,4,5));  // look it is allowed for 4 arguments
+     printf("Average of 5, 10, 15 = %f\n", average(3, 5,10,15));   // look it is allowed for 3 arguments
+  }
+  ``
+  
+<br>
+<br>
+<br>
+
+## Memory Management 
 
 
