@@ -37,7 +37,31 @@
   
 ### Choosing a Test runner
 
+- There are many test runners available for Python. The one built into the Python standard library is called `unittest`. In this tutorial, you will be using `unittest test cases` and the `unittest test runner`. The principles of unittest are easily portable to other frameworks
 
+- `unittest` contains both a testing framework and a test runner. `unittest` has some important requirements for writing and executing tests. `unittest` requires:
+  - You put your tests into classes as methods
+  - You use a series of special assertion methods in the unittest.TestCase class instead of the built-in assert statement
+
+- Do you remember the `sum()` function test we have written above without using any test runners ? lets convert the code into a `unittest`. (remember while writing unittest your test function names needs to descriptive in order to know where to look if there is an error:
+  ```python
+  import unittest
+  
+  class TestSum(unittest.TestCase):
+    
+    def test_sum_if_it_is_equal_to_six(self):
+      self.assertEqual(sum(1, 5), 6)
+      
+  if __name__ == "__main__":
+    unittest.main()
+  ```
+  
+- In order to run unittest there are many path ways to discover however the most easiest way for python is with this go to your base/root/parent folder of the project and run:
+  ```
+  $ python -m unittest discover
+  ```
+  
+- There are other test runners too like `nose`, `pytest` ... however do not use them if you do not feel that comfortable with testing, unittest is tailored for basic and advanced work. Most of the commercial or open source software uses it. 
 
 <br>
 <br>
@@ -45,4 +69,7 @@
 
 ## Writing Your First Tests
 
+
 ### Where to Write the tests
+
+
