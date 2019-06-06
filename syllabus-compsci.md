@@ -314,6 +314,7 @@ DevOps is something very complex instead of having a one strict route you cna ca
 - [ ] Course : GO UP AND FINISH NETWORKING HEADER ON [SECTION 1](#computer-networking)
 - [ ] Course : FINISH THE REST OF THE SECTION 1 ABOVE
 - [ ] Project : Redo all boxes with a lot more advanced projects
+- [ ] START LEARNING FINANCE AND WORKING ON YOUR BRAND (human universals)
 
 ---
 ---
