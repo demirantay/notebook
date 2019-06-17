@@ -69,7 +69,34 @@
 
 ## Writing Your First Tests
 
+- It is usually common practice to establish a folder called `tests/` in the parent directory and place all of your test files in there. It is ordered to ensure each file starts with `test_<name>` so all test runners will assume that Python file contains tests to be executed. Some very large projects split tests into more subdirectories based on their purpose or usage.
 
-### Where to Write the tests
+### How to structure a simple test
+
+- Before you dive into writing tests, you’ll want to first make a couple of decisions:
+  - What do you want to test?
+  - Are you writing a unit test or an integration test?
+  Remember while tsting do not test third party apps since those pacakges or the languages you use are already tested many times before reaching your hands
+  
+### How to write assertions
+
+- The last step of writing a test is to validate the output against a known response. This is known as an `assertion`. There are some general best practices around how to write assertion. Make sure tests are repeatable and run your test multiple times to make sure it gives the same result every time
+
+- unittest comes with lots of methods to assert on the values, types, and existence of variables. Here are some of the most commonly used methods:
+  - `.assertEqual(a, b)` is equivelent to `a == b`
+  - `.assertTrue(x)` is equivalent to `bool(x) is True`
+  - `.assertFalse(x)` is equivalent to `bool(x) is False`
+  - `.assertIs(a, b)` is equivalent to `a is b`
+  - `.assertIsNone(x)` is equivalent to `	x is None`
+  - `.assertIn(a, b)` is equivalent to `	a in b`
+  - `.assertIsInstance(a, b)` is equivalent to `	isinstance(a, b)`
+  
+  .assertIs(), .assertIsNone(), .assertIn(), and .assertIsInstance() all have opposite methods, named .assertIsNot(), and so forth.
+
+<br>
+<br>
+<br>
+
+## Executing your First Tests
 
 
