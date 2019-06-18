@@ -6,7 +6,7 @@
 <br>
 <br>
 
-## Testing your code
+# Testing your code
  
 - There are many ways to test your code. In this tutorial, you’ll learn the techniques from the most basic steps and work towards advanced methods.
 
@@ -67,7 +67,7 @@
 <br>
 <br>
 
-## Writing Your First Tests
+# Writing Your First Tests
 
 - It is usually common practice to establish a folder called `tests/` in the parent directory and place all of your test files in there. It is ordered to ensure each file starts with `test_<name>` so all test runners will assume that Python file contains tests to be executed. Some very large projects split tests into more subdirectories based on their purpose or usage.
 
@@ -97,6 +97,91 @@
 <br>
 <br>
 
-## Executing your First Tests
+# Executing your First Tests
+
+- Now that you’ve created the first test, you want to execute it. Sure, you know it’s going to pass, but before you create more complex tests, you should check that you can execute the tests successfully.
+
+- The Python application that executes your test code, checks the assertions, and gives you test results in your console is called the `test runner`.
+
+- At the bottom of test.py, you added this small snippet of code:
+  ```python
+  if __name__ == '__main__':
+     unittest.main()
+  ``` 
+  This is a command line entry point. It means that if you execute the script alone by running python test.py at the command line, it will call unittest.main(). This executes the test runner by discovering all classes in this file that inherit from unittest.TestCase.
+  
+- This is one of many ways to execute the unittest test runner. When you have a single test file named `test.py`, calling `$ python test.py` is a great way to get started.
+
+  Another way is using the unittest command line. Try this:
+  ```
+  $ python -m unittest test
+  ```
+  You can provide additional options to change the output. One of those is -v for verbose for making the test output more elegant ... etc. check the docs for more info on unittest command line arguments 
+  
+- Instead of providing the name of a module containing tests, you can request an auto-discovery using the following:
+  ```
+  $ python -m unittest discover
+  ```
+  This will search the current directory for any files named `test*.py` and attempt to test them. **This is one of the most commonly used ones since it j=discovers the tests without you needing to lift your finger**. There are much more to learn about `discover` cmd argument, however since I want to keep the readme.md short you should check out the official documentation for more information.
+  
+  
+<br>
+<br>
+<br>
+
+# Testing for Web Frameworks like Django
+
+- If you’re writing tests for a web application using one of the popular frameworks like Django or Flask, there are some important differences in the way you write and run the tests.
+
+- Think of all the code you’re going to be testing in a web application. The routes, views, and models all require lots of imports and knowledge about the frameworks being used. This is similar to the car test at the beginning of the tutorial: you have to start up the car’s computer before you can run a simple test like checking the lights. Django and Flask both make this easy for you by providing a test framework based on unittest.
+
+### How to use it in Django
+
+- The Django startapp template will have created a tests.py file inside your application directory. If you don’t have that already, you can create it with the following contents:
+  ```python
+  from django.test import TestCase
+
+  class MyTestCase(TestCase):
+      # Your test methods
+  ```
+  The major difference with the examples so far is that you need to inherit from the django.test.TestCase instead of unittest.TestCase. These classes have the same API, but the Django TestCase class sets up all the required state to test.
+  
+  To execute your test suite, instead of using unittest at the command line, you use manage.py test:
+  ```
+  $ python manage.py test
+  ```
+  
+- If you want multiple test files, replace tests.py with a folder called tests, insert an empty file inside called __init__.py, and create your test_*.py files. Django will discover and execute these.
+
+- More information:
+  - https://docs.djangoproject.com/en/2.1/topics/testing/overview/
+  - or just go to my django folder on this digital noteboo. Therea re notes on how to test django apps.
+
+<br>
+<br>
+<br>
+
+# More Advanced Testing Senarios
+
+- Before you step into creating tests for your application, remember the three basic steps of every test:
+  - Create your inputs
+  - Execute the code, capturing the output
+  - Compare the output with an expected result
+
+- It’s not always as easy as creating a static value for the input like a string or a number. Sometimes, your application will require an instance of a class or a context. What do you do then?
+
+- The data that you create as an input is known as a fixture. It’s common practice to create `fixtures` and reuse them.
+
+- If you’re running the same test and passing different values each time and expecting the same result, this is known as `parameterization`.
+
+### Isolating behaviors in your application
+
+...
 
 
+
+- I cannot simply tell all of the advanced parts of testing. You should chechk books, documentation, turorials TDD principles and all of that ...
+
+<br>
+<br>
+<br>
