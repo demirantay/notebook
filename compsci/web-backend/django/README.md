@@ -110,9 +110,78 @@
   - Oracle (django.db.backends.oracle) and NoSQL DB
   - MongoDB (django_mongodb_engine)
       
-      
-      
- 
+- ** There are tons of things to do and configure in your settings however the focus of this note file is not to give a specific feature of django. If you want to learn more on settings configuration see the parent directory of this file.
+
+- Now that your project is created and configured make sure it's working:
+  ```
+  $ python manage.py runserver
+  ```
+  
+<br>
+<br>
+<br>
+
+# Apps
+
+- A project is a sum of many applications. Every application has an objective and can be reused into another project, like the contact form on a website can be an application, and can be reused for others. See it as a module of your project. Try to be specific with your django applicaitons such as: contact, blog, forums, shop, profile, home ... etc.
+
+- In order to create an django app go to your parent folder and do:
+  ```
+  $ python manage.py startapp <app_name>
+  ```
+  You just created myapp application and like project, Django create a “<app_name>” folder with the application structure −
+  ```
+  myapp/
+     __init__.py
+     admin.py
+     models.py
+     tests.py
+     views.py
+  ```
+  - `__init__.py` − Just to make sure python handles this folder as a package.
+  - `admin.py` − This file helps you make the app modifiable in the admin interface.
+  - `models.py` − This is where all the application models are stored.
+  - `tests.py` − This is where your unit tests are.
+  - `views.py` − This is where your application views are.
+
+- At this stage we have our new application, now we need to register it with our Django project "`config`". To do so, update INSTALLED_APPS tuple in the settings.py file of your project (add your app name) −
+  ```python
+  INSTALLED_APPS = (
+   'django.contrib.admin',
+   'django.contrib.auth',
+   'django.contrib.contenttypes',
+   'django.contrib.sessions',
+   'django.contrib.messages',
+   'django.contrib.staticfiles',
+   
+   '<app_name>',   # <-- you new app registered here
+  )
+  ```
+  
+<br>
+<br>
+<br>
+
+# Admin Interface
+
+- Django provides a ready-to-use user interface for administrative activities. We all know how an admin interface is important for a web project. Django automatically generates admin UI based on your project models.
+
+- Before launching your server, to access your Admin Interface, you need to initiate the database −
+  ```
+  $ python manage.py migrate
+  ```
+  syncdb will create necessary tables or collections depending on your db type, necessary for the admin interface to run. Even if you don't have a superuser, you will be prompted to create one.
+  
+- If you already have a superuser or have forgotten it, you can always create one using the following code −
+  ```
+  $ python manage.py createsuperuser
+  ```
+  
+  
+  
+  
+  
+
  
  
  
