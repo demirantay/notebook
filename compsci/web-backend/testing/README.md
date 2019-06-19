@@ -176,7 +176,23 @@
 
 ### Isolating behaviors in your application
 
-...
+- Earlier in the tutorial, you learned what a side effect is. Side effects make unit testing harder since, each time a test is run, it might give a different result, or even worse, one test could impact the state of the application and cause another test to fail!
+
+- There are some simple techniques you can use to test parts of your application that have many side effects:
+  - Mocking out any method or function calls to remove side effects (mocking is long to write find other resoruce to learn it)
+  - Using integration testing instead of unit testing for this piece of the application
+
+### Integration tests
+
+- So far, you’ve been learning mainly about unit testing. Unit testing is a great way to build predictable and stable code. But at the end of the day, your application needs to work when it starts!
+
+- Integration testing is the testing of multiple components of the application to check that they work together. Integration testing might require acting like a consumer or user of the application by:
+  - 
+
+
+
+
+
 
 
 
