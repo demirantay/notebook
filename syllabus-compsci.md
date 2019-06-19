@@ -260,9 +260,9 @@ Hobby:
  - [X] Learn: Learn how to use a package manager for the language you have picked e.g. Python has pip etc.
  - [X] Learn: Standards and best practices. Each language has it is own e.g. Python has PEP
  - [X] Project: Make and Distribute some package / Library.
- - [ ] Learn: Learn about testing. There are several ways to write tests such as unit , integration ..etc. Tests are very important do not skim through articles. Learn how to calculate test covarege.
+ - [X] Learn: Learn about testing. There are several ways to write tests such as unit , integration ..etc. Tests are very important do not skim through articles. Learn how to calculate test covarege.
  - [X] Project: Write tests for your package built above.
- - [ ] Learn Relational Databases there are many options but pick either PostgreSQL or MySQL
+ - [X] Learn Relational Databases there are many options but pick either PostgreSQL or MySQL
  - [ ] Learn: a Framework e.g. Django, Flask
  - [ ] Project: Make a CRUD application with the framework of your chosing
  - [ ] Learn: a noSQL database you do not have to use it but understand how it is different from relational databases and why they are needed. MongoDB is a solid choice.
