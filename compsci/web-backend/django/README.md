@@ -177,6 +177,114 @@
   $ python manage.py createsuperuser
   ```
   
+- Now to start the Admin Interface, we need to make sure we have configured a URL for our admin interface. Open the config/url.py and you should have something like 
+  ```python
+  from django.contrib import admin
+  from django.urls import path, include
+
+  urlpatterns = [
+    # Your admin url
+    path('admin/', admin.site.urls)
+    ...
+  ]
+  ```
+
+<br>
+<br>
+<br>
+
+# Creating Views
+
+- A view function, or “view” for short, is simply a Python function that takes a web request and returns a web response. This response can be the HTML contents of a Web page, or a redirect, or a 404 error, or an XML document, or an image, etc. Example: You use view to create web pages, note that you need to associate a view to a URL to see it as a web page. In Django, views have to be created in the app's views.py file.
+
+- See the following snippet:
+  ```python
+  from django.http import HttpResponse
+
+  def hello(request):
+     text = """<h1>welcome to my app !</h1>"""
+     return HttpResponse(text)
+  ```
+  In this view, we use HttpResponse to render the HTML (as you have probably noticed we have the HTML hard coded in the view). To see this view as a page we just need to map it to a URL 
+  
+- This is not the best way to render pages. Django supports the MVT pattern so to make the precedent view, Django - MVT like, we will need − A template: app_name/templates/hello.html . And now our view will look like −
+  ```python
+  from django.shortcuts import render
+
+  def hello(request):
+     return render(request, "myapp/template/hello.html", {})
+  ```
+  
+- Views can also accept parameters −
+  ```python
+  from django.http import HttpResponse
+
+  def hello(request, number):
+     text = "<h1> %s! </h1>" % number
+     return HttpResponse(text)
+  ```
+  When linked to a URL, the page will display the number passed as a parameter. Note that the parameters will be passed via the URL (discussed in the next chapter).
+ 
+<br>
+<br>
+<br>
+
+# URL Mapping
+
+- Now that we have a working view as explained in the previous chapters. We want to access that view via a URL. Django has his own way for URL mapping and it's done by editing your project url.py file (config/url.py). The url.py file looks like −
+  ```python
+  from django.urls import path, include
+
+  urlpatterns = [
+    path('path/to/view/', app_name.views.hello, name=hello_page)
+  ]
+  ```
+  But this is a very bad practice to do in your config folder. It is a good practice to just include all of the urls of your app in the config folder and then deal with the url mapping of that particular app inside its urls.py which does not get created the first time you create your app. So you have to create urls.py file in your app.
+
+- Lets see ane xample of where we include the apps urls and than deal with the mapping inside the app_name/urls.py:
+  ```python
+  # config/urls.py
+  
+  from django.contrib import admin
+  from django.urls import path, include
+
+  urlpatterns = [
+    path('admin/', admin.site.urls),
+    
+    #including all of the paths of the targeted app
+    path('app_name/', include('app-name.urls')),
+  ]
+  ```
+  Now that we set up a path `/app_name/` for our apps urls we can go ahead and create a urls.py in our app and code this:
+  ```python
+  from django.urls import path, include
+  from . import views
+  
+  urlpatterns = [
+    path('foo/', views.foo, name='foo')
+  ]
+  ```
+  Now that you set up your urls you can accsess to your view with this :: `name.com/app_name/foo/`
+  
+- You can also pass parameters to your urls like this:
+  ```
+  ...
+  path('foo/<id:number>/', views.foo, name=""),
+  ```
+  You can give as many different types as you can like `str`, `float`, `int` ... etc. And the parameter you pass will be given to the views function argument, you can use the above path with the this example `/foo/10/` in your view like this :
+  ```python
+  def view_name(requests, number):
+    print(number)  # <-- prints 10
+    ...
+  ```
+  
+<br>
+<br>
+<br>
+
+# Template System
+
+- 
   
   
   
