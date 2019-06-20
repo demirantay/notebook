@@ -96,12 +96,65 @@
 
 # File Uploading
 
+- It is generally useful for a web app to be able to upload files (profile picture, songs, pdf, words.....). Let's discuss how to upload files in this chapter.
+
+- You can use the PIL ajdnuse a `ImageField` on your forms and models. This note is too specific to go to a README file, So I will explain this in more depth and  add more notes to it in my note file about forms. Or you can use the official docs
+
+<br>
+<br>
+<br>
+
+# Cookies Handling
+
+- I am not going to note about cookies at the moment ... Maybe later on a different file
+
+- I will work more on these in the django playground
+
+<br>
+<br>
+
+# Sessions
+
+- I am not going to note about sessions at the moment ... Maybe later on a different file
+
+- I will work more on these in the django playground
 
 
+<br>
+<br>
 
+# Caching
 
+- I am not going to note about sessions at the moment ... Maybe later on a different file
 
+- I will work more on these in the django playground
 
+<br>
+<br>
+
+# Comments
+
+- I am not going to note about sessions at the moment ... Maybe later on a different file
+
+- I will work more on these in the django playground
+
+<br>
+<br>
+
+# RSS
+
+- I am not going to note about sessions at the moment ... Maybe later on a different file
+
+- I will work more on these in the django playground
+
+<br>
+<br>
+
+# AJAX
+
+- I am not going to note about sessions at the moment ... Maybe later on a different file
+
+- I will work more on these in the django playground
 
 
 
