@@ -308,11 +308,156 @@
   <p> {{ data }} </p>
   ```
   
+- There are filters that you can use to filter out the data you pass in to your tepmlates.  Filters structure looks like the following: {{var|filters}}. LLets see some examples :
+  - `{{string|truncatewords:80}}` − This filter will truncate the string, so you will see only the first 80 words.
+  - `{{string|lower}}` − Converts the string to lowercase.
+  - `{{string|escape|linebreaks}}` − Escapes string contents, then converts line breaks to tags
   
+  There are many more filters, see the official documentation for more information.
   
+- `Tags`: lets you perform the following conditional staemetns: if conditions, loops and .. etc. Lets see an example:
+  ```html
+  <body>
+      {% if foo == 1 %}
+        ...
+      {% elif foo == 30 %}
+        ...
+      {% else %}
+        ...
+      {%endif%}
+      
+   </body>
+  ```
+  Just lie if we can use loops mostly for inside our templates like this: (imageine that we have an array already passed to the tempalte):
+  ```html
+  {% for element in array %}
+    {{ element.var }}
+  {% endfor %}
+  ```
   
+- For the basics we can finalise our template information with inheritance and blocking tempalte code. For example most of the time instead of repeting yourself too much and using DRY principles you will need to cut blocks out of your code and paste them whenever you want. This is done with `block` and `extend` tags. Lets see an example:
+  ```html
+  <!-- BASE HTML -->
+   <html>
+     <head>
 
+        <title>
+           {% block title %}Page Title{% endblock %}
+        </title>
+
+     </head>
+
+     <body>
+
+        {% block content %}
+           Body content
+        {% endblock %}
+
+     </body>
+  </html>
+  ```
+  Now that we have our parent base. We can inherit its code with the keywork `extends`:
+  ```
+  <!-- NEW HTML FILE -->
+  
+  {% extends base.html %}
+  
+  {% block title %} Foo {% endblock %}
+  
+  {% block content %}
+    <p>
+      Lorem ipsum dolor si amet mi fami
+    </p>
+  {% endblock %}
+  ```
+
+<br>
+<br>
+<br>
+
+# Models
+
+- A model is a class that represents table or collection in our DB, and where every attribute of the class is a field of the table or collection. Models are defined in the app/models.py
+
+- Lets create a Model as an exmaple so that we can talk about it:
+  ```python
+  from django.db import models
+  
+  class ModelName(models.Model):
+    
+    name = models.CharField(max_length = 50)
+    age = models.IntegerField()
+  ```
+  Every model inherits from django.db.models.Model. The fields of the model are self explanatory. However you should read more about foreign keys, field types and so on from here: https://docs.djangoproject.com/en/1.5/ref/models/fields/#field-types . Models are very important and a huge topic so I will create another seperate file for it.
+  
+- After creating your model, you will need Django to generate the actual database wtih these commands −
+  ```
+  $ python manage.py makemigrations
+  $ python manage.py migrate
+  ```
+  
+- You can manipulate the data in a lot of ways. Since this is a basic note lets just see the filtering and crud operations:
+  ```python
+  from myapp.models import ModelName
+  
+  def view(request):
+    
+    # createing an row
+    new_row = ModelName(name="foo", age=18)
+    new_row.save()
+    
+    # reading all the rows
+    objects = ModelName.objects.all()
+    
+    # reading a specific entry
+    specific_object = ModelName.objects.get(name="foo")
+    
+    # deleteing a row
+    specific_object.delete()
+    
+    #...
+  
+    return render(...)
+  ```
+  You can also filter your models data with
+  ```python
+  data = ModelName.objects.filter(name='foo')
+  data2 = ModelName.objects.order_by("foo")
+  ```
+  Both of them give you an list of data and so on.
+  
+- You can also link one of your model to another. This is one of the most important aspect of relational databases design principles. See the models.py file or just visit the official documentation for more information.
+  
+There are many things you can do in models I cannot list them all here you should check the official documents and books for more information
+  
+<br>
+<br>
+<br>
+
+ # Page Redirection
  
+ - Page redirection is needed for many reasons in web application. You might want to redirect a user to another page when a specific action occurs, or basically in case of error. For example, when a user logs in to your website, he is often redirected either to the main home page or to his personal dashboard. In Django, redirection is accomplished using the 'redirect' method.
+
+- The 'redirect' method takes as argument: The URL you want to be redirected to as string A view's name:
+  ```python
+  from django.shortcuts impoert render, redirect
+  
+  def view_1(request):
+    ...
+    return render(...)
+    
+  def view_2(request):
+    if foo == true:
+      return redirect(view_1)  # <-- see!
+    elesE:
+      return render(...)
+  ```
+  If the url that you redicert needs a url parameter you can add to it in your redirect function, see the offficial documentation for more information.
+  
+---
+
+[Part 2](./README2.md)
+
  
  
  
