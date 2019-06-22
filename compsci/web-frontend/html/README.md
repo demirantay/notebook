@@ -145,12 +145,80 @@
 
 - The HTML <meta> tag is used to provide metadata about the HTML document which includes information about page expiry, page author, list of keywords, page description etc.
 
+- Following are few of the important usages of <meta> tag inside an HTML document −
+  ```html
+  <!DOCTYPE html>
+  <html>
 
+     <head>
+        <title>HTML Meta Tag Example</title>
 
+        <!-- Provide list of keywords -->
+        <meta name = "keywords" content = "C, C++, Java, PHP, Perl, Python">
 
+        <!-- Provide description of the page -->
+        <meta name = "description" content = "Simply Easy Learning by Tutorials Point">
 
+        <!-- Author information -->
+        <meta name = "author" content = "Tutorials Point">
 
+        <!-- Page content type -->
+        <meta http-equiv = "content-type" content = "text/html; charset = UTF-8">
 
+        <!-- Page refreshing delay -->
+        <meta http-equiv = "refresh" content = "30">
+
+        <!-- Page expiry -->
+        <meta http-equiv = "expires" content = "Wed, 21 June 2006 14:25:27 GMT">
+
+        <!-- Tag to tell robots not to index the content of a page -->
+        <meta name = "robots" content = "noindex, nofollow">
+
+     </head>
+
+     <body>
+        <p>Hello, World!</p>
+     </body>
+
+  </html>
+  ```
+
+### `<link>` Tag
+
+- The HTML <link> tag is used to specify relationships between the current document and external resource. Following is an example to link an external style sheet file available in css sub-directory within web root
+  ```html
+   <head>
+      <title>HTML link Tag Example</title>
+      <link rel = "stylesheet" type = "text/css" href = "/css/style.css">
+   </head>
+  ```
+  
+### `<style>` Tag
+
+- You can write css code inside your html file with the `<style>` tag liek this:
+  ```html
+  <head>
+    
+    <style>
+      html {
+          color: red;
+        }
+    <style> 
+      
+  <head> 
+  ```
+  This is note very recommended. So try to break your code into multiple css modules and link your html to them.
+
+### `<script>` Tag
+
+- You can write your js codes inside the script tags however as stated above instead of writing js into a html file try to break it into differnet javascript modules. Then link your html file to those modules with this:
+  ```html
+  <sciprt src="path/to/your/module"></script>
+  ```
+
+---
+
+- There are much more to learn about the `<head>` section. This is just a very oversmiplied version. Check out the official documentation, link is at the top.
 
 
 
