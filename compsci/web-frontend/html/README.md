@@ -171,8 +171,8 @@
         <!-- Page expiry -->
         <meta http-equiv = "expires" content = "Wed, 21 June 2006 14:25:27 GMT">
 
-        <!-- Tag to tell robots not to index the content of a page -->
-        <meta name = "robots" content = "noindex, nofollow">
+        <!-- Tag to tell robots  to index the content of a page for SEO -->
+        <meta name = "robots" content = "index, follow">
 
      </head>
 
