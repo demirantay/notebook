@@ -182,6 +182,7 @@
 
   </html>
   ```
+  The meta tags are so important for SEO (search engine optimization) try to learn them very deeply in the future.
 
 ### `<link>` Tag
 
