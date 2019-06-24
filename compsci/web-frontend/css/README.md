@@ -177,12 +177,78 @@
   
 ### Margins
   
+- Lets view how to set `margin` styles for html elements in css:
+  - `margin` - specifies a shorthand property for setting the margin properties in one declaration
+  - `margin-bottom` - specifies the bottom margin of an element.
+  - `margin-top` - specifies the top margin of an element.
+  - `margin-left` - specifies the left margin of an element.
+  - `margin-right` - specifies the right margin of an element.
+  ```css
+  #element {
+    margin-top : 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin: 20px 20px 20px 20px;
+  }
+  ```
   
+### Lists
+
+- Lets view how to set `list` styles for element in css:
+  - `list-style-type` - allows you to control the shape or appearance of the marker.
+  - `list-style-position` - specifies whether a long point that wraps to a second line should align with the first line or start underneath the start of the marker.
+  - `list-style-image` - specifies an image for the marker rather than a bullet point or number.
+  - `list-style` - serves as shorthand for the preceding properties.
+  - `marker-offset` specifies the distance between a marker and the text in the list.
   
+### Padding
+
+- Lets view how to set `padding` styles for element in css:
+  - `padding-bottom` -  specifies the bottom padding of an element.
+  - `padding-top` - specifies the top padding of an element.
+  - `padding-left` - specifies the left padding of an element.
+  - `padding-right` - specifies the right padding of an element.
+  - `padding` - serves as shorthand for the preceding properties.
+  ```css
+  #element {
+    padding-bottom: 10px;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding: 20px 20px 20px 20px;
+  }
+  ```
   
+### Cursors
+
+- I am not gonna note down cursors since there are too many of them however the basic logic is that when you hover a link, button ...etc. your mouse icon will turn into a cursor of your choosing like a hand, loading icon ... etc.
   
+### Dimension
+
+- Lets see how to set dimensions and measurements of a box (div, span, img ...etc.):
+  - `height` - property is used to set the height of a box.
+  - `width` - property is used to set the width of a box.
+  - `line-height` - property is used to set the height of a line of text.
+  - `max-height` - property is used to set a maximum height that a box can be.
+  - `min-height` - property is used to set the minimum height that a box can be
+  - `max-width` - property is used to set the maximum width that a box can be
+  - `min-width` - property is used to set the minimum width that a box can be.
   
+### Scrollbars
+
+- Lets view what you can do with the scrollbars styles in css:
+  - `visible` - Allows the content to overflow the borders of its containing element.
+  - `hidden` - The content of the nested element is simply cut off at the border of the containing element and no scrollbars is visible.
+  - `scroll` - The size of the containing element does not change, but the scrollbars are added to allow the user to scroll to see the content.
+  - `auto` - The purpose is the same as scroll, but the scrollbar will be shown only if the content does overflow.
   
+<br>
+<br>
+<br>
+<br>
+
+# Visibility
   
   
   
