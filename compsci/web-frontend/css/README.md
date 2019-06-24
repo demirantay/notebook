@@ -63,18 +63,135 @@
 
 # Quick Notes for CSS
 
+### Colors
+
 - Color styles are either written with `keywords: red` or `hex: #RRGGBB` or `rgba: rgb(0,0,255)`
 
+### Backgrounds
 
+- For most of the html elements you can set up background properties:
+  - `background-color` -  property is used to set the background color of an element.
+  - `background-image` -  property is used to set the background image of an element.
+  - `background-repeat` -  property is used to control the repetition of an image in the background.
+  - `background-position` -  property is used to control the position of an image in the background.
+  - `background-attachment` -  property is used to control the scrolling of an image in the background.
+  - `background` -  property is used as a shorthand to specify a number of other background properties.
 
+### Fonts
 
+- Lets view how to set `font` for html elements in css:
+  - `font-family` -  property is used to change the face of a font
+  - `font-style` -  property is used to make a font italic or oblique.
+  - `font-variant` -  property is used to create a small-caps effect.
+  - `font-weight` -  property is used to increase or decrease how bold or light a font appears.
+  - `font-size` -  property is used to increase or decrease the size of a font.
+  - `font` -  property is used as shorthand to specify a number of other font properties.
+    ```css
+    #foo {
+      font-family: serif;
+      font-style: italic;
+      font-variant: small-caps;
+      font-weight: 500;
+      font-size: 15px;
+      font: seif italic small-caps 500 15px;
+    }
+    ```
+    
+### Texts
+    
+- Lets view how to set `text` styles for html elements in css:
+  - `color` -  property is used to set the color of a text.
+  - `direction` - property is used to set the text direction
+  - `letter-spacing` - property is used to add or subtract space between the letters that make up a word.
+  - `word-spacing` - property is used to add or subtract space between the words of a sentence.
+  - `text-indent` - property is used to indent the text of a paragraph.
+  - `text-align` property is used to align the text of a document.
+  - `text-decoration` - property is used to underline, overline, and strikethrough text.
+  - `text-transform` -  property is used to capitalize text or convert text to uppercase or lowercase letters.
+  - `white-space` - property is used to control the flow and formatting of text.
+  - `text-shadow` - property is used to set the text shadow around a text.
+    ```css
+    #foo {
+      color: red;
+      direction: rtl;
+      letter-spacing: 5px;
+      word-spacing: 5px;
+      text-indent: 5px;
+      text-align: center;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+    ```
+    
+### Images
 
+- Lets view how to set `img` styles for html elements in css:
+  - `border` -  property is used to set the width of an image border
+  - `height` - property is used to set the height of an image
+  - `width` -  property is used to set the width of an image.
+    ```css
+    #img-id {
+      border: 1px solid black;
+      height: 100px;
+      width: 100px;
+    }
+    ```
+  
+### Links
 
+- Lets view how to set `link` styles for html elements in css:
+  - `:link` - signifies unvisited hyperlinks.
+  - `:visited` - signifies visited hyperlinks.
+  - `:hover` - signifies an element that currently has the user's mouse pointer hovering over it.
+  - `:active` - signifies an element on which the user is currently clicking.
+  ```css
+  #link-id:visited {
+    color: red;
+  }
+  
+  #link-id:hover {
+    color: orange;
+  }
+  
+  #link:active {
+    color:green;
+  }
+  ```
+  
+- I am skipping `tables` for notetaking since I do not use them so oftenly. If I need it I can just fire up the documetnation
 
+### Borders
 
-
-
-
-
-
+- Lets view how to set `border` styles for html elements in css:
+  - `border-color` - specifies the color of a borde
+  - `border-style` - specifies whether a border should be solid, dashed line, double line, or one of the other possible values.
+  - `border-width` - specifies the width of a border.
+  ```css
+  #element {
+    border: 1px solid black;
+    border-color: red;
+    border-style: solid;
+    border-width: 1px;
+  }
+  ```
+  
+### Margins
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
 
