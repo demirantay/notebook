@@ -248,11 +248,65 @@
 <br>
 <br>
 
+#### Below this point I will take notes on more advanced CSS stuff than coloring or styling elements:
+
+---
+
 # Visibility
   
+- A property called visibility allows you to hide an element from view. You can use this property along with JavaScript to create very complex menu and very complex webpage layouts.
   
+  You may choose to use the visibility property to hide error messages that are only displayed if the user needs to see them, or to hide answers to a quiz until the user selects an option.
   
+- The style options for visibilty:
+  - `visible` - The box and its contents are shown to the user.
+  - `hidden` - The box and its content are made invisible, although they still affect the layout of the page.
+  - `collapse` - This is for use only with dynamic table columns and row effects.
   
+<br>
+<br>
+<br>
+
+# Positioning
+
+- CSS helps you to position your HTML element. You can put any HTML element at whatever location you like. You can specify whether you want the element positioned relative to its natural position in the page or absolute based on its parent element. Lets see al the positioning properties:
+
+### relative
+
+- Relative positioning changes the position of the HTML element relative to where it normally appears. So "left:20" adds 20 pixels to the element's LEFT position. ( I really do note get the relative positioning since it just appears to do nothing. I assume the default positioning is relative but I will have to check in the future I am not sure)
+
+### absolute
+
+- An element with position: absolute is positioned at the specified coordinates relative to your screen top-left corner. You can use `left`, `top` properities with it to give margin to the absolute position 
+
+### fixed
+
+- Fixed positioning allows you to fix the position of an element to a particular spot on the page, regardless of scrolling. Specified coordinates will be relative to the browser window.
+
+### z-index
+
+- `z-index` property isnt neccessairly a posititoning subject however I taught it is worth mentioning here. You can use zindex to give presedence over values for example if two divs appread on the same cordinates you can give one of them zindex of 1 and the other 99 which in that case as you can guess the div with 99 valued z-index will appear on top.
+
+<br>
+<br>
+<br>
+
+# Pseudo Classes 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   
   
   
