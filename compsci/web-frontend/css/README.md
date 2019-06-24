@@ -291,24 +291,78 @@
 <br>
 <br>
 
-# Pseudo Classes 
+# Pseudo Elements 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+- CSS pseudo-elements are used to add special effects to some selectors. You do not need to use JavaScript or any other script to use those effects. A simple syntax of pseudo-element is as follows 
+  ```
+  selector:pseudo-element {property: value}
+  ```
   
+  The most commonly used pseudo-elements are as follows - 
+    - `:first-line` - Use this element ot add special styles to the first line of the text ina selector
+    - `:first-letter` - Use this element ot add special style to the first letter of the text in a selector
+    - `:before` - Use this element to insert some content before an element
+    - `:after` - Use this element to insert some content after an element
+    ```css
+    p:first-letter { font-size: 50px; }
+    p:first-line { text-decoratio:underline; }
+    ```
+    
+<br>
+<br>
+<br>
+
+# @ Rules
+
+- This chapter will cover the following important @ rules −
+  - `@import`: rule imports another style sheet into the current style sheet.
+  - `@charset`: rule indicates the character set the style sheet uses.
+  - `@font-face`: rule is used to exhaustively describe a font face for use in a document.
+  - `!important`: rule indicates that a user-defined rule should take precedence over the author's style sheets.
   
+  Note: there are other `@` rules however this all note file only contains the most commonly used properties of css
+
+### @import
+
+- The @import rule allows you to import styles from another style sheet. It should appear right at the start of the style sheet before any of the rules, and its value is a URL.
+  ```css
+  @import "stylename.css";
+  
+  /* OR */
+  
+  @import url("stylename.css");
+  ```
+  The significance of the @import rule is that it allows you to develop your style sheets with a modular approach
+  
+### @charset
+
+- If you are writing your document using a character set other than ASCII or ISO-8859-1 you might want to set the @charset rule at the top of your style sheet to indicate what character set the style sheet is written in.
+  ```css
+  @charset "ASCII"
+  ```
+
+### @font-face
+
+The @font-face rule is used to exhaustively describe a font face for use in a document.In general, @font-face is extremely complicated, and its use is not recommended for any except those who are expert in font metrics.
+  - Since it is not recommended I am not going to give an code exmaple
+  
+### !important
+
+- In CSS a property of an element can overwrite itself. For example lets say that we have two css properties giving 2 different colors for a same element:
+  ```css
+  #element { color: red; }
+  
+  #element { color: blue; }
+  ```
+  As said above since CSS allows overwritting the color of the element is `blue` since it is defined at the bottom and overrites the oldone. If we want define a property that will never be overwritten we can use `!improtant` like this:
+  ```css
+  #element {color: red !important; }
+  
+  #element {color: blue }
+  ```
+  Now the color of the element is red since it is defined that it cannot be overwritten.
+  
+
   
   
   
