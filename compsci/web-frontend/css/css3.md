@@ -35,7 +35,8 @@
     border-image-source: foo.jpg
   }
   ```
-  There are other important value properties for border-images such as:
+  
+- There are other important value properties for border-images such as:
     - `border-image-source` - Used to set the image path
     - `border-image-slice` - Used to slice the boarder image
     - `border-image-width` - Used to set the boarder image width
