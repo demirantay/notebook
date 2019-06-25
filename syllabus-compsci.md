@@ -231,7 +231,7 @@ Hobby:
  This may seem basic since in the core there are only three technologies how ever what is really hard is that not everyone has the eye for killer design skills.
 
 - [X] HTML, after the basics learn these key points: writing semantic HTML, basic SEO, Accsessibilty
-- [ ] CSS, after the basics learn these: Making layouts, Media Queries, CSS 3
+- [X] CSS, after the basics learn these: Making layouts, Media Queries, CSS 3
 - [ ] Javascript, after learning the language ([tutorias on point](https://www.tutorialspoint.com/javascript/)) learn the following: DOM API, fetching API with Ajax, ES6+modular javscript
 - [ ] Learn pacakage managers (either one npm or yarn)
 - [ ] Learn CSS pre-processors such as SASS or POST CSS
