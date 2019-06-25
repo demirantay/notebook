@@ -8,7 +8,7 @@
     background-color: blue;
   }
   
-  @media screen and (min-width: 480px) {
+  @media screen and (max-width: 480px) {
     body {
       background-color: red;
     }
