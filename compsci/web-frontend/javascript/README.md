@@ -156,6 +156,107 @@
 
 # Cookies
 
+- Web Browsers and Servers use HTTP protocol to communicate and HTTP is a stateless protocol. But for a commercial website, it is required to maintain session information among different pages. For example, one user registration ends after completing many pages. But how to maintain users' session information across all the web pages.
 
+  In many situations, using cookies is the most efficient method of remembering and tracking preferences, purchases, commissions, and other information required for better visitor experience or site statistics
+
+- You can mainpulate create read write delete cookies with javascript however since it is a long note and I want to keep this intro file short i am not going to note down everything
+
+<br>
+<br>
+<br>
+
+# Page Redirection
+
+- You can also redirect pages with javascript however, you can also redirect with a backend language and since I am more concerned with the backend I will skip noting this part
+
+<br>
+<br>
+<br>
+
+# Dialog Boxes
+
+- JavaScript supports three important types of dialog boxes. These dialog boxes can be used to raise and alert, or to get confirmation on any input or to have a kind of input from the users. 
+
+### Alert Box
+
+- An alert dialog box is mostly used to give a warning message to the users. Nonetheless, an alert box can still be used for friendlier messages. Alert box gives only one button "OK":
+  ```javascript
+  alert("Whatch out!");
+  ```
   
+### Confirmation Box
+
+- A confirmation dialog box is mostly used to take user's consent on any option. It displays a dialog box with two buttons: OK and Cancel. If the user clicks on the OK button, the window method confirm() will return true. If the user clicks on the Cancel button, then confirm() returns false. You can use a confirmation dialog box as follows.
+  ```javascript
+  var value = confirm("do you want to proceed?");
+  
+  if (value === true) { 
+    ...
+  }
+  else {
+    ...
+  } 
+  ```
+
+# Prmopt Box
+
+- The prompt dialog box is very useful when you want to pop-up a text box to get user input. Thus, it enables you to interact with the user. The user needs to fill in the field and then click OK.
+  ```javascript
+  var value = prompt("your name");
+  
+  document.write("your anme is : " + value);
+  ```
+
+<br>
+<br>
+<br>
+
+# Objects Overview
+
+- JavaScript is an Object Oriented Programming (OOP) language. Objects are composed of attributes. If an attribute contains a function, it is considered to be a method of the object, otherwise the attribute is considered a property.
+
+### Object Properties
+
+- Object properties are usually variables that are used internally in the object's methods, but can also be globally visible variables that are used throughout the page. Lets see an example:
+  ```javascript
+  var str = document.title;
+  ```
+  
+### Object Methods
+
+- Methods are the functions that let the object do something or let something be done to it. There is a small difference between a function and a method – at a function is a standalone unit of statements and a method is attached to an object and can be referenced by the this keyword. Lets see an example:
+  ```javascript
+  document.write("This is test");
+  ```
+  
+### User Defined Objects
+
+- All user-defined objects and built-in objects are descendants of an object called Object. The new operator is used to create an instance of an object. To create an object, the new operator is followed by the constructor method. Lets see an example:
+  ```javascript
+  var employee = new Object();
+  var books = new Array("C++", "Perl", "Java");
+  var day = new Date("August 15, 1947");
+  ```
+  
+- I will discuss OOP in javascript in a different file so this is enough for an introduction
+
+<br>
+<br>
+<br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
