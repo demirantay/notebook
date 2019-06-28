@@ -232,7 +232,7 @@ Hobby:
 
 - [X] HTML, after the basics learn these key points: writing semantic HTML, basic SEO, Accsessibilty
 - [X] CSS, after the basics learn these: Making layouts, Media Queries, CSS 3
-- [ ] Javascript, after learning the language ([tutorias on point](https://www.tutorialspoint.com/javascript/)) learn the following: DOM API, fetching API with Ajax, ES6+modular javscript
+- [ ] Javascript, after learning the language ([tutorias on point](https://www.tutorialspoint.com/javascript/)) learn the following: DOM API, fetching API with Ajax, ES6+modular javscript, Hoisting, Event Bubbling, Scope, Prototype, Shadow DOM, strict, how browsers work, DNS, HTTP
 - [ ] Learn pacakage managers (either one npm or yarn)
 - [ ] Learn CSS pre-processors such as SASS or POST CSS
 - [ ] Learn CSS frameworks: Boostrap is the most used option
