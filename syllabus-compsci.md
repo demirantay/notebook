@@ -33,6 +33,17 @@ Don’t be the person who “never quite understood” something like recursion
   - [ ] Project: Design and build a simple computer
   - [ ] https://www.instructables.com/id/How-to-Build-an-8-Bit-Computer/
   - [ ] https://eater.net/8bit
+  
+
+ ### Algorithms and Data Structures
+
+  If you don’t know how to use ubiquitous data structures like stacks, queues, trees, and graphs, you won’t be able to solve hard problems.
+  
+  - [ ] Read: The [TutorialsOnPoint](https://www.tutorialspoint.com/data_structures_algorithms/index.htm) for a overview. Note this to README of the folder
+  - [ ] Book: [PSAD using python](http://interactivepython.org/runestone/static/pythonds/index.html)
+  - [ ] Project: View the bottom of this page and implement some of the algorithm map
+  - [ ] Book: [The Algorithm Design Manual](https://www.amazon.com/Algorithm-Design-Manual-Steven-Skiena/dp/1848000693/?pldnSite=1) There are [vidoes](http://www3.cs.stonybrook.edu/~algorith/video-lectures/) avilable too.
+  - [ ] Book : [How to solve it](https://www.amazon.com/How-Solve-Mathematical-Princeton-Science/dp/069116407X/?pldnSite=1)
  
   
  ### Operating Systems
@@ -44,7 +55,7 @@ Don’t be the person who “never quite understood” something like recursion
    - [ ] Course : [ops-class.org : hack the kernel](https://www.ops-class.org/) You can go with the book simotenously.
    - [ ] Tutorial: [little OS tutorial](https://littleosbook.github.io/)
    - [ ] Book : Modern Operating Systems Book by Andrew S. Tanenbaum
-   - [ ] Project : Code a small OS kernel
+   - [ ] Project : Code a small Operating System
 
  ### Computer Networking
 
@@ -54,26 +65,9 @@ Don’t be the person who “never quite understood” something like recursion
    - [ ] Book : [Computer Networking: A Top-Down Approach](https://www.amazon.com/Computer-Networking-Top-Down-Approach-7th/dp/0133594149/?pldnSite=1) -- do the exersices
    - [ ] Exersices : [Wireshark](http://www-net.cs.umass.edu/wireshark-labs/)
    - [ ] Course : [Stanford MOOC](https://lagunita.stanford.edu/courses/Engineering/Networking-SP/SelfPaced/about)
-   - [ ] Project : Your own small internet, HTTP server or etc. dont forget to practice what you learn.
+   - [ ] Project : Your own small internet,  build a server backup a server or etc. Try to use what you have learned. 
    
-
- ### Algorithms and Data Structures
-
-  If you don’t know how to use ubiquitous data structures like stacks, queues, trees, and graphs, you won’t be able to solve hard problems.
-  
-  - [ ] Read: The [TutorialsOnPoint](https://www.tutorialspoint.com/data_structures_algorithms/index.htm) for a overview. Note this to README of the folder
-  - [ ] Book: [PSAD using python](http://interactivepython.org/runestone/static/pythonds/index.html)
-  - [ ] Project: View the bottom of this page and implement some of the algorithm map
-  - [ ] Book: [The Algorithm Design Manual](https://www.amazon.com/Algorithm-Design-Manual-Steven-Skiena/dp/1848000693/?pldnSite=1) There are [vidoes](http://www3.cs.stonybrook.edu/~algorith/video-lectures/) avilable too.
-  - [ ] Book : [How to solve it](https://www.amazon.com/How-Solve-Mathematical-Princeton-Science/dp/069116407X/?pldnSite=1)
-  
-### Code University
-
-  - [ ] Guide : [Code Univeristy Guide](https://github.com/jwasham/coding-interview-university) : Finish this guide after finishing the sections above this guide suppose to take your time nearly a year so go through each item very seriously. If you are able to come this far hell go apply for big 4.
-  - [ ] Project: Once you are done you can solve the algorithms that are listed as a roadmap in a image at the bottom of this file.
-  - [ ] **Once you are done with the fundementals open up "Human Universals" and try to come up with an idea to build** 
-  
-  ### Databases
+ ### Databases
 
    Data is at the heart of most significant programs, but few understand how database systems actually work.
 
@@ -82,16 +76,16 @@ Don’t be the person who “never quite understood” something like recursion
    - [ ] Paper : [Database Architecture](http://db.cs.berkeley.edu/papers/fntdb07-architecture.pdf)
    - [ ] Book : [Red Book](http://www.redbook.io/) -- your next stop after berkley course
    - [ ] Course : [Stanford Course](https://lagunita.stanford.edu/courses/DB/2014/SelfPaced/about) -- Take all mini courses
-   - [ ] Project idea: Write a simple relational database management system from scratch.
-   
-
+   - [ ] Project idea: Write a simple database to understand and practice what you have learned
+ 
 ### Languages and Compilers
 
    If you understand how languages and compilers actually work, you’ll write better code and learn new languages more easily
 
    - [ ] Read: The [TutorialsOnPoint](https://www.tutorialspoint.com/compiler_design/index.htm) for a overview. Note this to README of the folder
    - [ ] Course : [Stanford Course](https://lagunita.stanford.edu/courses/Engineering/Compilers/Fall2014/about) read the [dragon book](https://www.amazon.com/Compilers-Principles-Techniques-Tools-2nd/dp/0321486811?pldnSite=1) on the units of stanford do not read all the book.
-   - [ ] Project : Create a basic compiler for a learning langauge or a simple language you have created.
+   - [ ] Project : Create a basic compiler for a langauge and build a simple language.
+   
 
  ### Distributed Systems
 
@@ -99,7 +93,15 @@ Don’t be the person who “never quite understood” something like recursion
 
    - [ ] Book : [Distibuted Systems, 3rd edition](https://www.distributed-systems.net/index.php/books/distributed-systems-3rd-edition-2017/)
    - [ ] Project: Do something to implement the theory you have learned.
- 
+   
+
+  
+### Code University
+
+  - [ ] Guide : [Code Univeristy Guide](https://github.com/jwasham/coding-interview-university) : Finish this guide after finishing the sections above this guide suppose to take your time nearly a year so go through each item very seriously. If you are able to come this far hell go apply for big 4.
+  - [ ] Project: Once you are done you can solve the algorithms that are listed as a roadmap in a image at the bottom of this file.
+  - [ ] **Once you are done with the fundementals open up "Human Universals" and try to come up with an idea to build** 
+  
   
 ### Mathematics
 
@@ -132,73 +134,7 @@ Don’t be the person who “never quite understood” something like recursion
  - [ ] Course : [Natural Language Processing](https://www.coursera.org/learn/natural-language-processing)
 
  There are a lot more online free courses check OSS University or Other starred guide repos ...
-
----
----
----
----
----
----
----
----
----
-
-
-
-  - [ ] Make a game like The Journey/Inside (sizofreni)
-  - [ ] New Yorker Magazine -- turkce
-
-
-
- ---
- ---
- ---
- ---
-
- ## Section 2
-
- Low level programming projects
-
- ### My own to-do list of projects
-
-First:
- - [ ] Build a Server
- - [ ] Backup a server
- - [ ] Deploy a server
- - [ ] Internet browser
- - [ ] Deploy browser
- - [ ] Mini Internet with your servers
- - [ ] Deploy your browser on your internet
-
-FINAL:
- - [ ] Finish section 3 below
- - [ ] After finishing above start building your commercial idea (human universals)
- - [ ] Learn Finance for your  commercial idea
- - [ ] Everything below is optional hobby
  
-Hobby:
- - [ ] Mini Computer (your architecture 16bit)
- - [ ] Mini Operating System 
-
-Hobby:
- - [ ] Language -- interpreted
- - [ ] Interpreter
- - [ ] Language -- compiled
- - [ ] Compiler
- - [ ] Virtual Machine Language / Translator
- 
-Hobby:
- - [ ] Markup languages like HTML n CSS for your browser
- - [ ] JS like browser language for your browser
- - [ ] Framework for your markup languages
- - [ ] Framework for your browser lang
- - [ ] Build Database
- - [ ] Build a CRUD app 
- - [ ] Build a backend framwork
- - [ ] Redo a advanced CRUD app with frameworks
- - [ ] Redo the sectin 3 backend with your framework
- 
-
 
  ---
  ---
@@ -279,10 +215,13 @@ Hobby:
  - [ ] Learn: GraphQL, this is not required and optional feel free to have a loot and what it is all about and why they are calling it the new REST
  - [ ] Learn: Again option, look into Graph Databases, at least you can have a little udnerstanding of what they are.
  - [ ] We have a lot more stuff like Profiling, Static Analysis, DDD SOAP, etc. Go on your journey now!
- - [ ] Course : GO UP AND FINISH ALGORITHMS HEADER ON [SECTION 1](#algorithms)
- - [ ] Course : GO UP AND FINISH CODE UNIVERSITY HEADER ON [SECTION 1](#code-university)
- - [ ] Course : GO UP AND FINISH DATABASE HEADER ON [SECTION 1](#databases)
  - [ ] Project: Once you are done doing all of the above with django create your own framwork with wsgi or cgi and implement each box again with more advanced projects. You can also create your own server, backup it deploy it and use it to build applicaitons with your newly built framework.
+ 
+ ---
+ 
+ - [ ] Go and finish up Section 1 above
+ 
+ ---
 
 ### DevOps
 
@@ -310,11 +249,17 @@ DevOps is something very complex instead of having a one strict route you cna ca
 - [ ] Monitoring Software: learn about Application Monitoring (NEw relic ..etc)
 - [ ] Monitoring Software: learn about Logs Management (ELK stack etc.)
 - [ ] Learn about CLOUD providers (AWS, azure, digital ocean ... etc.)
-- [ ] Course : GO UP AND FINISH OPERATING SYSTEMS HEADER ON [SECTION 1](#operating-systems)
-- [ ] Course : GO UP AND FINISH NETWORKING HEADER ON [SECTION 1](#computer-networking)
 - [ ] Course : FINISH THE REST OF THE SECTION 1 ABOVE
 - [ ] Project : Redo all boxes with a lot more advanced projects
 - [ ] START LEARNING FINANCE AND WORKING ON YOUR BRAND (human universals)
+
+### Final Project
+
+These are final projects for the subjects you have learned above. Do them if you have time:
+
+- [ ] Now that you have a computer, an operating system, your own servers, compiler, langauge, web framework. Try to combine all of them and create a mini ecosystem on your own. You can build a simple web broswer to try your gadgets. This is a highly challenging project do not rush it.
+- [ ] If you are able to do the ecosystem project above. Just start building your commercial idea  (67 universals)
+
 
 ---
 ---
