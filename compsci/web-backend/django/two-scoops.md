@@ -256,13 +256,37 @@ managers to this module
 
 # Settings and Requirements Files
 
+- Settings are loaded when your server starts up, and experienced Django developers stay away from trying to change settings in production since they require a server restart. As your project grows, your Django settings can get pretty complex.
 
+- Some best practices the books suggests:
+	- **All settings files need to be version-controlled**  is is especially true in production environ- ments, where dates, times, and explanations for settings changes absolutely must be tracked.
+	- **Dont Repeat Yourself** You should inherit from a base settings  le rather than cutting-and- pasting from one  le to another.
+	- **Keep secret keys safe**  They should be kept out of version control.
 
-# 41
+- As developers, we have our own necessary settings for development, such as settings for debug tools which should be disabled (and often not installed to) staging or production servers.
 
+	Furthermore, there are often good reasons to keep speci c settings out of public or private code repositories.  e SECRET_KEY setting is the  rst thing that comes to mind, but API key settings to services like Amazon, Stripe, and other password-type variables need to be protected.
 
+- **Warning**: The SECRET_KEY setting is used in Django’s cryptographic signing functionality, and needs to be set to a unique, unpredictable setting best kept out of version control. Running Django with a known SECRET_KEY defeats many of Django’s security protections, which can lead to serious security vulnerabilities.
 
+- A common solution is to create local_settings.py modules that are created locally per server or develop- ment machine, and are purposefully kept out of version control. But, solving the problem with a single local_settings file isnt going to cut it because in the future this solution can cause you literally days of fixing a bug. A better solution is to reak up development, staging, test, and production settings into separate components that inherit from a common base object in a settings  le tracked by version control. Plus, we’ll make sure we do it in such a way that server secrets will remain secret.
 
+### Using Multiple Settings Files
+
+- Instead of having one settings.py  le, with this setup you have a settings/ directory containing your settings  les.  is directory will typically contain something like the following:
+	```
+	settings/
+   ├── __init__.py
+   ├── base.py
+   ├── local.py
+   ├── staging.py
+   ├── test.py
+   ├── production.py
+	```
+	- `base.py` - Settings common to all instances of the project.
+	- `local.py` -  is is the settings  le that you use when you’re working on the project locally. Local development-speci c settings include DEBUG mode, log level, and activation of developer tools like django-debug-toolbar.
+	- `staging.py` - Staging version for running a semi-private version of the site on a production server.  is is where managers and clients should be looking before your work is moved to production.
+	- `test.py` - Settings for running tests including test runners, in-memory database de nitions, and log settings.
 
 
 
