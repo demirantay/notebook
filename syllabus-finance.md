@@ -16,6 +16,8 @@ Do these in order however after the intro you are free to choose specializing in
 - [ ] Course: [Invesment Management](https://www.coursera.org/specializations/investment-management)
 - [ ] Course: [Portfolio Management](https://www.coursera.org/specializations/investment-portolio-management)
 
+- [ ] The resources are very weak. Improve it
+
 ### Future syllabus topics
 
 Try to add new courses and books for each of the topic of your choosing and change the syllabus in the future 
