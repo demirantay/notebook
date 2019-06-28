@@ -17,235 +17,152 @@
 <br>
 <br>
 
-# Basics
+# Language Overview
 
-- JavaScript can be implemented using JavaScript statements that are placed within the <script>... </script> HTML tags in a web page. You can place the <script> tags, containing your JavaScript, anywhere within your web page, but it is normally recommended that you should keep it within the <head> tags.
-  
-- The script tag takes two important attributes −
-  - `Language` - This attribute specifies what scripting language you are using. Typically, its value will be javascript
-  - `Type` − This attribute is what is now recommended to indicate the scripting language in use and its value should be set to "text/javascript".
-    ```html
-    <script language="javascript" type="text/javascript">...</script>
-    ```
-    But it is good practice to move your javascript to another module and link it from your html with `src` like this:
-    ```html
-    <script type="text/javascript" src="path/to/your/module.js"> ... </script>
-    ```
-  
- - You can omit the `;` semicolon if you want however it is good practice that you dont
- 
-<br>
-<br>
-<br>
+ I will not write any api related javascript like DOM , geolocation, ..etc. I will only note the vanilla js properties in this file.	
 
-# Variables
+ ### Printing	
 
-- JavaScript allows you to work with 3 primitive data types −
-  - `Numbers` - eg. 123, 120.50 etc.
-  - `Strings` - of text e.g. "This text string" etc.
-  - `Boolean` -  e.g. true or false.
-  
-  *Note − JavaScript does not make a distinction between integer values and floating-point values. All numbers in JavaScript are represented as floating-point values*
-  
-  Javascript also includes `null`, `undefined` and `objects` however they are not primitive and I will discuss them later, on different headers.
-  ```javascript
-  var number = 10;
-  var string = "hello";
-  var boolean = true;
-  ```
-  Unlike many other languages, you don't have to tell JavaScript during variable declaration what type of value the variable will hold.
-  
-### Variable Scopes
+ - This is how you write the famous hello world:	
+  ```js	
+  console.log("Hello, World!");	
+  ```	
 
-- The scope of a variable is the region of your program in which it is defined. JavaScript variables have only two scopes:
-  - `Global Variables` − A global variable has global scope which means it can be defined anywhere in your JavaScript code.
-  - `Local Variables` − A local variable will be visible only within a function where it is defined. Function parameters are always local to that function.
-  
-  Within the body of a function, a local variable takes precedence over a global variable with the same name. If you declare a local variable or function parameter with the same name as a global variable, you effectively hide the global variable.
-  
-### Operators
+ - You do not have to compile your code even though javascript is a compiled language the engine compiles your code on the fly and acts like a interpreted but compiled language. 	
 
-- Nearly all of the javascript operators are the same however plase do note that insetad of using `==` comparison use `===` this since this strictly checks weeather the values are equal the `==` double equal sign doesnt strictly checks the values and may cause problematic bugs
+ - You can define variables like this:	
+  ```js	
+  var foo = "foo";	
+  var bar = 3;	
+  var pi = 3.14159;	
+  ```	
+  If you write the following javascript will convert one type to another (it is a weird powerful and also very dangerous feature of the langauge it is called type conversion):	
+  ```js	
+  var x = 12 + "12";	
+  // this treats the var like this: "12" + "12" so this becomes a string concetatantion	
+  console.log(x);  // "1212" is the result that will be printed	
+  ```	
 
-<br>
-<br>
-<br>
+ ### User Input	
 
-# Control Flow
+ - There is no built in input prompt like other languages have such as `input(..)` for python or `scanf("..")` in C but we can use the DOM api to get information from the user for now:	
+  ```js	
+  prompt("Please enter a value: ");	
+  ```	
 
-- Lets first see how to write if and else statments in javascript:
-  ```javascript
-  var foo = 10;
-  
-  if (foo === 20) {
-    ...
-  } 
-  else if (foo === 10) {
-    ...
-  }
-  else {
-    ...
-  }
-  ```
-  
- - You can also write switch statements for control flow, but I am not going to note it right now since I do not use it very oftern.
- 
- <br>
- <br>
- <br>
- 
- # Loops
- 
- - I am not going to note down what the logic is behind the loops because I have done it many times in other language files.
- 
- - Lets see some examples of loops:
-  ```javascript
-  // while loop
-  var foo = 10;
-  while (foo < 20) { ... }
-  
-  // do..while loop
-  do {
-    ...
-  } while (foo < 20)
-  
-  // for loop
-  for (int i = 0; i < 10; i++) { ... }
-  
-  // for .. in loop
-  for (element in array) { ... }
-  ```
-  
-- You can also do `loop control` with the following keywords: `break`, `continue`
+ ### Conditional statements	
 
-<br>
-<br>
-<br>
+ - Writing conditional statements and control flow is fairly simple in javascript however the only thing you should definetly look out for is the type conversions so you would want to use `===`, `>==`, `<==`,  `!==`  instead of `==` .. etc. if you include one more `=` it makes the type comparison regulated and does not allow the javascript to convert types e.g. int to string because this can cause huge problems.	
+  ```js	
+  foo = 12;	
+  bar = 10;	
+  	
+  if (foo === bar ) {	
+    // ...	
+  } else if (foo > bar ) {	
+    // ...	
+  } else if (foo < bar ) {	
+    // ...	
+  } else {	
+    // ...	
+  }	
+  ```	
 
-# Functions
+ ### Loops	
 
-- I am not going to note the logic behind the functions, since I have defined them many times in perivous programming language files. Lets just see how to write them in javascript:
-  ```javascript
-  function name(parameters) {
-    return foo
-  }
-  ```
-  In order to call your function you need to use DOM API (`onclick=func()`)
-  
- <br>
- <br>
- <br>
- 
- # Events
- 
- - JavaScript's interaction with HTML is handled through events that occur when the user or the browser manipulates a page. When the page loads, it is called an event. When the user clicks a button, that click too is an event. Other examples include events like pressing any key, closing a window, resizing a window, etc.
- 
-  Events are a part of the Document Object Model (DOM) Level 3 and every HTML element contains a set of events which can trigger JavaScript Code.
-  
-  
--We will see the DOM API more deeply on a differnet subject however lets see the most commonly used ones:
-  - `onclick` - This is the most frequently used event type which occurs when a user clicks the left button of his mouse. You can put your validation, warning etc., against this event type:
-  - `onsubmit` - onsubmit is an event that occurs when you try to submit a form. You can put your form validation against this event type:
-  - `onmouseover`/`onmouseout` - These two event types will help you create nice effects with images or even with text as well. The onmouseover event triggers when you bring your mouse over any element and the onmouseout triggers when you move your mouse out from that element. (with css3 you can dow it with `:hover` effect
-  
-  There are many more evenets just visit th w3, mdn or other documentatio for viewing the full list
-  
-<br>
-<br>
-<br>
+ - Most of the loops are written same in javascript:	
+  ```js	
+  for (var i = 0; i < 10; i++) {	
+    // ...	
+  }	
+  	
+  var i = 0;	
+  while (i < 10) {	
+    // ...	
+    i++;	
+  }	
+  ```	
 
-# Cookies
+ ### Arrays	
 
-- Web Browsers and Servers use HTTP protocol to communicate and HTTP is a stateless protocol. But for a commercial website, it is required to maintain session information among different pages. For example, one user registration ends after completing many pages. But how to maintain users' session information across all the web pages.
+ - You can define arrays very easily, there are many built in functions for arrays and strings like sort, substr and etc. you can read them from reference:	
+  ```js	
+  var array = ["hey", "aa", "basd"];	
+  	
+  array[0] // "hey"	
+  ```	
 
-  In many situations, using cookies is the most efficient method of remembering and tracking preferences, purchases, commissions, and other information required for better visitor experience or site statistics
+ ### Methods	
 
-- You can mainpulate create read write delete cookies with javascript however since it is a long note and I want to keep this intro file short i am not going to note down everything
+ - You can define functions very easily or you can define anonomys functions and assing them to a variable which is also easy:	
+  ```js	
+  function normal_func (param1, param2) {	
+    return param1 + param2;	
+  }	
+  normal_func(1,2);	
+  	
+  	
+  var anon_func = function (x, y) {	
+    return x - y;	
+  }	
+  anon_func(1,2);	
+  ```	
 
-<br>
-<br>
-<br>
+ ### Scopes	
 
-# Page Redirection
+ - In javascript there are two types of scopes 1:local scope, 2:global scope and javascript creates scopes within blocks of code and most of the time the blocks come with functions or loops. The main idea is that the variable defined inside a block is not accsessible from the outside of the block but the variable defined outside of the block is accessible from the inside of the block. Confusing ? Lets see the code snippet:	
+  ```js	
+  var foo = 3;	
+  	
+  function baz() {	
+    var hop = 123.123123;	
+    console.log(foo);  // this is correct you can assess foo	
+  }	
+  	
+  console.log(hop)  // you cannot do this since `hop` is defined in baz() function	
+  	
+  ```	
 
-- You can also redirect pages with javascript however, you can also redirect with a backend language and since I am more concerned with the backend I will skip noting this part
+ ### Hoisting	
 
-<br>
-<br>
-<br>
+ - Hoisting is the default behaviour of javascript that moves declerations to the top of the file. To see what we are trying to understand first lets see these two code snippets:	
+  ```js	
+  x = 5;  // no `var` decleration	
+  	
+  consoloe.log(x) // 5	
+  	
+  var x;  // declares x	
+  ```	
+  And the code above actually is code below:	
+  ```js	
+  var x;	
+  x = 5;	
+  	
+  console.log(x); //5	
+  ```	
+  So to understand why this is happening first we have to understand what hoisting is. You should understand that assignin a value to a variable is not same as declaring a variable. For example lets view this code `var x = 5;` the only declaration in this code is `var x` so only a undefined value of `x` will be hoisted at the top of the page and the value 5 will be assigned to it on the line the code is written in.	
 
-# Dialog Boxes
+ - A good number of thumb is that if you are not as comfortable with hoisting as much you should try to define your varialbes at the top of your file becuase hoisting is a overlooked feature of the language and may cause really unexpected problems.	
 
-- JavaScript supports three important types of dialog boxes. These dialog boxes can be used to raise and alert, or to get confirmation on any input or to have a kind of input from the users. 
+ ### this	
 
-### Alert Box
-
-- An alert dialog box is mostly used to give a warning message to the users. Nonetheless, an alert box can still be used for friendlier messages. Alert box gives only one button "OK":
-  ```javascript
-  alert("Whatch out!");
-  ```
-  
-### Confirmation Box
-
-- A confirmation dialog box is mostly used to take user's consent on any option. It displays a dialog box with two buttons: OK and Cancel. If the user clicks on the OK button, the window method confirm() will return true. If the user clicks on the Cancel button, then confirm() returns false. You can use a confirmation dialog box as follows.
-  ```javascript
-  var value = confirm("do you want to proceed?");
-  
-  if (value === true) { 
-    ...
-  }
-  else {
-    ...
-  } 
-  ```
-
-# Prmopt Box
-
-- The prompt dialog box is very useful when you want to pop-up a text box to get user input. Thus, it enables you to interact with the user. The user needs to fill in the field and then click OK.
-  ```javascript
-  var value = prompt("your name");
-  
-  document.write("your anme is : " + value);
-  ```
-
-<br>
-<br>
-<br>
-
-# Objects Overview
-
-- JavaScript is an Object Oriented Programming (OOP) language. Objects are composed of attributes. If an attribute contains a function, it is considered to be a method of the object, otherwise the attribute is considered a property.
-
-### Object Properties
-
-- Object properties are usually variables that are used internally in the object's methods, but can also be globally visible variables that are used throughout the page. Lets see an example:
-  ```javascript
-  var str = document.title;
-  ```
-  
-### Object Methods
-
-- Methods are the functions that let the object do something or let something be done to it. There is a small difference between a function and a method – at a function is a standalone unit of statements and a method is attached to an object and can be referenced by the this keyword. Lets see an example:
-  ```javascript
-  document.write("This is test");
-  ```
-  
-### User Defined Objects
-
-- All user-defined objects and built-in objects are descendants of an object called Object. The new operator is used to create an instance of an object. To create an object, the new operator is followed by the constructor method. Lets see an example:
-  ```javascript
-  var employee = new Object();
-  var books = new Array("C++", "Perl", "Java");
-  var day = new Date("August 15, 1947");
-  ```
-  
-- I will discuss OOP in javascript in a different file so this is enough for an introduction
-
-<br>
-<br>
-<br>
+ - `this` keyword is the same in java and `self` is the same thing used in python. It simply lets you accssess the ./objects properties for example lets view the following javascript object and the use of `this` keyword:	
+  ```js	
+  var person = {	
+    firstName: "John",	
+    lastName: "Doe",	
+    id:1,	
+    toString: function() {	
+      return this.firstName + this.lastName;	
+    }	
+  }	
+  ```	
+  It is simple and same with java.	
 
 
+ ### Reference	
+
+ - [W3Schools have exellent reference for js](https://www.w3schools.com/jS/default.asp)
 
 
 
