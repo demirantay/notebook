@@ -287,8 +287,7 @@ managers to this module
 	- `local.py` -  is is the settings  le that you use when you’re working on the project locally. Local development-speci c settings include DEBUG mode, log level, and activation of developer tools like django-debug-toolbar.
 	- `staging.py` - Staging version for running a semi-private version of the site on a production server.  is is where managers and clients should be looking before your work is moved to production.
 	- `test.py` - Settings for running tests including test runners, in-memory database de nitions, and log settings.
-
-
+	- `production.py` -                                                                                                                                                                                                    
 
 
 
