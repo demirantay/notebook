@@ -289,19 +289,68 @@ managers to this module
 	- `test.py` - Settings for running tests including test runners, in-memory database de nitions, and log settings.
 	- `production.py` -  This is the settings file used by your live production servers. That is the server that host the real website. This file contains production level settings only it is sometimes called prod.py
 	
-- **Tip:** 
+- **Tip:** You’ll also want to have a ci.py module containing that server’s settings. Similarly, if it’s a large project and you have other special-purpose servers, you might have custom settings files for each of them.
 
+- To run the local development server with your settings/local.py settings file:
+	```
+	python manage.py runserver --settings=config.settings.local
+	```
+	Just change the module name for which settings file you would like to use
+	
+- As mentioned earlier, we need settings configured for development, such as selecting the console
+	email backend, setting the project to run in DEBUG mode, and setting other configuration options
+	that are used solely for development purposes. We place development settings like the following into
+	`settings/local.py`:
+	```
+	from .base import *
+	
+	DEBUG = True
+	
+	EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+	
+	DATABASES = {
+		'default': {
+			'ENGINE': 'django.db.backends.postgresql_psycopg2',
+			'NAME': 'twoscoops',
+			'HOST': 'localhost',
+		}
+	}
+	
+	INSTALLED_APPS += ['debug_toolbar', ]
+	```
 
+- Sometimes we’re working on a large project where different developers need different settings, and
+	sharing the same local.py settings module with teammates won’t do.
+	
+	Well, it’s still better tracking these settings in version control than relying on everyone customizing
+	the same `local.py` module to their own tastes. A nice way to do this is with multiple dev settings files,
+	e.g. `local_audrey.py` and `local_pydanny.py`:
 
+- Now lets talk about our secret keys inside our settings files. The most basic idea that comes to mind to protect our secrets is to leave them out of the version control system. But that is a dangerous game you play since there is a very big chance of single point faliure and losing all your important settings. To resolve this, our answer is to use environment variables in a pattern we like to call, well, `The Environment Variables Pattern`. 
 
+	Here are the benefits of using environment variables for secret keys:
+		- Keeping secrets out of settings allows you to store every settings file in version control without hesitation. All of your Python code really should be stored in version control, including your settings
+		- Instead of each developer maintaining an easily-outdated, copy-and-pasted version of the local_settings.py.example file for their own development purposes, everyone shares the same version-controlled settings/local.py
+		- ➤ Most platforms-as-a-service recommend the use of environment variables for configuration and have built-in features for setting and managing them.
 
+### Environment Variables
 
+- Before you begin setting environment variables, you should have the following:
+	- A way to manage the secret information you are going to store
+	- A good understanding of how bash works with environment variables on servers, or a willingness to have your project hosted by a platform-as-a-service.
+	
+- **Warning**: Enviornment variables do not work with apache
 
+- *I am skipping this part of the books since I am not really good with bash scripting at this point ...*
+	
+	I will return to this chapter of the book
+	
+<br>
+<br>
+<br>
+<br>
 
-
-
-
-
+# Model Best Practices
 
 
 
