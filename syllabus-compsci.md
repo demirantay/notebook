@@ -217,11 +217,7 @@ Don’t be the person who “never quite understood” something like recursion
  - [ ] We have a lot more stuff like Profiling, Static Analysis, DDD SOAP, etc. Go on your journey now!
  - [ ] Project: Once you are done doing all of the above with django create your own framwork with wsgi or cgi and implement each box again with more advanced projects. You can also create your own server, backup it deploy it and use it to build applicaitons with your newly built framework.
  
- ---
- 
- - [ ] Go and finish up Section 1 above
- 
- ---
+
 
 ### DevOps
 
@@ -253,10 +249,16 @@ DevOps is something very complex instead of having a one strict route you cna ca
 - [ ] Project : Redo all boxes with a lot more advanced projects
 - [ ] START LEARNING FINANCE AND WORKING ON YOUR BRAND (human universals)
 
-### Final Project
+### Final Tour
 
-These are final projects for the subjects you have learned above. Do them if you have time:
+Final tour is important but you should go at your own pace for it:
 
+ ---
+ 
+ - [ ] Go and finish up Section 1 above
+ 
+ ---
+ 
 - [ ] Now that you have a computer, an operating system, your own servers, compiler, langauge, web framework. Try to combine all of them and create a mini ecosystem on your own. You can build a simple web broswer to try your gadgets. This is a highly challenging project do not rush it.
 - [ ] If you are able to do the ecosystem project above. Just start building your commercial idea  (67 universals)
 
