@@ -352,7 +352,27 @@ managers to this module
 
 # Model Best Practices
 
+- Models are the foundation of most Django projects. Racing to write Django models without thinking things through can lead to problems down the road.
+	
+	All too frequently we developers rush into adding or modifying models without considering the
+	ramifications of what we are doing. The quick fix or sloppy “temporary” design decision that we toss
+	into our code base now can hurt us in the months or years to come, forcing crazy workarounds or
+	corrupting existing data
+	
+	So keep this in mind when adding new models in Django or modifying existing ones. Take your time to think things through, and design your foundation to be as strong and sound as possible.
+	
+### Basics
 
+- If there are 20+ models in a single app, think about ways to break it down into smaller apps, as it
+	probably means your app is doing too much. In practice, we like to lower this number to no more
+	than five models per app.
+	
+- I skipped the part where it explains about model inheritance
+
+### Database Migrations
+
+
+# 67
 
 
 
