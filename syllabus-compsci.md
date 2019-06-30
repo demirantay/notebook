@@ -172,7 +172,7 @@ Don’t be the person who “never quite understood” something like recursion
 - [ ] Learn pacakage managers (either one npm or yarn)
 - [ ] Learn CSS pre-processors such as SASS or POST CSS
 - [ ] Learn CSS frameworks: Boostrap is the most used option
-- [ ] Learn about CSS architecture: BEM
+- [X] Learn about CSS architecture: BEM
 - [ ] Build tools: learn about Linters and Formatters (Prettier, ESLint .etc.)
 - [ ] Build tools: learn about module bundlers(webpack)
 - [ ] Build tools: learn about task runners (npm scripts)
