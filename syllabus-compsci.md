@@ -260,7 +260,7 @@ Final tour is important but you should go at your own pace for it:
  ---
  
 - [ ] Now that you have a computer, an operating system, your own servers, compiler, langauge, web framework. Try to combine all of them and create a mini ecosystem on your own. You can build a simple web broswer to try your gadgets. This is a highly challenging project do not rush it.
-- [ ] If you are able to do the ecosystem project above. Just start building your commercial idea  (67 universals)
+- [ ] If you are able to do the ecosystem project above. Just start building your commercial idea  (67 universals) -- (before trying any commercial project test your feet with a very well coded ad helpful open source app - try to market it etc. and after that begin your commercial idea)
 
 
 ---
