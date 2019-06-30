@@ -20,7 +20,8 @@
 	- If many people are working on the same site, then should use the same preprocessor. Some people use Sass and some people use CSS to edit the files directly. Therefore, it becomes difficult to work on the site.
 	- There are chances of losing benefits of browser's built-in element inspector.
 	
-	
-	... I will come back to it later on
+--- 
+
+- Don't forget you need to download sass, it isnt a internal module of CSS
 	
 	
