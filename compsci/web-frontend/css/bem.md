@@ -35,3 +35,7 @@
 - If we are reading the markup instead of CSS, we should be able to quickly get an idea of which element depends on another (in the previous example we can see that `.btn__price` depends on .btn, even if we don't know what that does just yet.)
 
 - Designers and developers can consistently name components for easier communication between team members. In other words, BEM gives everyone on a project a declarative syntax that they can share so that they're on the same page.
+
+---
+
+Of Course BEM is not a industry standart if you dont want to use then dont. But remember a css folder that you fear of touching is a terrible experience to have.
