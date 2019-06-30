@@ -127,15 +127,64 @@ The simplest way to make an element on a web page respond to an event is to set 
 	
 ### WC3 Event Model
   
-  
-  
-  
-  
-  
-  
-  
-  
-  
+- The traditional model used above scales badly. Don't use it. Consider what would happen if two different libraries attempted to set an event handler on the same element. The second library would clobber the first. As JavaScript applications grew in size this became an increasing problem:
+
+	The `addEventListener` function provides a more flexible method of handling events. The syntax is: `element.addEventListener('click', yourFunction, false)`
+	
+- In order to give an example lets first define out html
+  ```html
+	<button id="foo"> Execute </button>
+	```
+	Lets now add our javascript eventlisteners:
+	```javascript
+	var button = document.getElementById("foo");
+	
+	button.addEventListener("click", function() {
+		alert("hello");
+	});
+	```
+	There are other parameters can be added to the eventListener 
+
+<br>
+<br>
+<br>
+<br>
+
+# Document Properties
+
+- List of DOM properties and their descriptions:
+	- `body` - A reference to the element object that represents the <body> tag of this document. (ex - document.body)
+	- `defaultView` - Its Read-only property and represents the window in which the document is displayed. (ex - document.defaultView)
+	- `documentElement` - A read-only reference to the <html> tag of the document. (ex - document.documentElement)
+	- `implementation` - It is a read-only property and represents the DOMImplementation object that represents the implementation that created this document. (ex - document.implementation )
+
+<br>
+<br>
+<br>
+
+# Document Methods
+
+- List of DOM methods and their descriptions:
+	- `createAttribute()` - Returns a newly-created Attr node with the specified name (ex - document.createAttribute(name) )
+	- `createComment()` - Creates and returns a new Comment node containing the specified text. (ex - document.createComment(text)
+	- `createDocumentFragment()` - Creates and returns an empty DocumentFragment node. (ex - document.createDocumentFragment)
+	- `createElement()` - Creates and returns a new Element node with the specified tag name. (ex - document.createElement(tagName)
+	- `createTextNode()` - Creates and returns a new Text node that contains the specified text. (ex - document.createTextNode(text) 
+	- `getElementById()` - Returns the Element of this document that has the specified value for its id attribute, or null if no such Element exists in the document. (ex - document.getElementById(id)
+	- `getElementsByName()` - Returns an array of nodes of all elements in the document that have a specified value for their name attribute. If no such elements are found, returns a zero-length array (ex - document.getElementsByName(name))
+	- `getElementsByTagName()` - Returns an array of all Element nodes in this document that have the specified tag name. The Element nodes appear in the returned array in the same order they appear in the document source. (ex - document.getElementsByTagName(tagname)
+	- `importNode()` - 
+Creates and returns a copy of a node from some other document that is suitable for insertion into this document. If the deep argument is true, it recursively copies the children of the node too. Supported in DOM Version 2 (ex - document.importNode(importedNode, deep)
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
   
   
   
