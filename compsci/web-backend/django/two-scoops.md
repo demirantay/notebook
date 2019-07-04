@@ -42,26 +42,26 @@ becomes extremely useful. What this means is that you should go the extra mile t
   - Keep functions and methods short. A good rule of thumb is that scrolling should not be nec-
   - essary to read an entire function or method.
   - Use the 79-Character limit
-  
+
 - PEP 8 suggest that imports should be grouped in the following order:
   - 1 - Standart library imports
   - 2 - Imports from core Django.
   - 3 - Related third-party imports
   - 4 - Local application or library specific imports
-  
+
   Do not hesitate to put comments on your imports liek this (remember readabiltiy is more important than beauty or personal preference:
   ```python
   #stdlib improts
   from math import sqrt
   from os.path import abspath
-  
+
   # Core Django imports
   from django.db import models
   from django.utils.translation import foo
-  
+
   # Thirds-party app imports
   from django_extension..db.models import foo
-  
+
   # Imports from your apps
   from app.models import ModelName
   ```
@@ -75,9 +75,9 @@ becomes extremely useful. What this means is that you should go the extra mile t
 # The Optimal Django Environment Setup
 
 - Use the same database for everywhere. A common developer pitfall is using SQLite3 for local development and PostgreSQL (or MySQL) in production.  is section applies not only to the SQLite3/PostgreSQL scenario, but to any scenario where you’re using two di erent databases and expecting them to behave identically.
-  
+
   Keep in mind that di erent databases handle typing of  eld data di erently. Django’s ORM attempts to accommodate those di erences, but there’s only so much that it can do. Most problems usually can’t be discovered until the project is run on a strongly typed database (e.g. PostgreSQL or MySQL). When these types of bugs hit, you end up kicking yourself and scrambling to set up your local development machine with the right database.
-  
+
 - TIP: Django+PostgreSQL Rocks. Most Django developers that we know prefer to use PostgreSQL for all environments: de- velopment, staging, QA, and production systems.
 
 - WARNING: Don’t Use SQLite3 with Django in Production. For any web project with more than one user, or requiring anything but light concurrency, SQLite3 is a nightmare in the making. In the simplest terms possible, SQLite3 works great in production until it doesn’t. We’ve experienced it ourselves, and heard horror stories from others.
@@ -85,17 +85,17 @@ becomes extremely useful. What this means is that you should go the extra mile t
 -  The official Django documentation describes several ways of installing Django. Our recommended installation method is with pip and requirements  les.
 
 - What works on a programmer’s laptop might not work in production. But what if your local devel- opment environment was identical to your project’s staging, test, and production environments?
-  
+
   Of course, if the production infrastructure consists of 10,000 servers, it’s completely unrealistic to have another 10,000 local servers for development purposes. So when we say identical, we mean “as identical as realistically possible.”
-  
+
   In order to achieve that we use `containers` (e.g. docker .etc.) however at this time of writing i do not know how to write docker, so I will need to revisit this part in the future. But, the potential downsides of `containers` are:
    - Extra complexity that is not needed in many situations. For simpler projects where we’re not too worried about OS-level differences, it’s easier to skip this.
-   
+
 <br>
 <br>
 <br>
 
-# How to Layout Django Projects 
+# How to Layout Django Projects
 
 - Project layout is one of those areas where core Django developers have differing opinions about
 what they consider best practice. In this chapter, we present our approach, which is one of the most
@@ -113,14 +113,14 @@ explain why.
   |--- <django_project_root>/
   ```
   Let’s go over each level in detail:
-  
+
 ### Top Level: repositroy_root
 
 - The `<repository_root>` directory is the absolute root directory of the project. In addition to the
 `<django_project_root>` and `<configuration_root>`, we also include other critical components like the
 `README` , `docs/` directory, `manage.py`, `.gitignore`, `requirements.txt` files, and other high-level files
 that are required for deployment and running the project
-  
+
   **TIP**: Some developers like to combine the <django_project_root> into the <repository_root> of the
 project
 
@@ -128,7 +128,7 @@ project
 
 - The `<django_project_root>/` directory is the root of the actual Django project. Non-configuration
 Python code files are inside this directory, its subdirectories, or below.
-  
+
   If using `django-admin.py startproject`, you would run the command from within the repos-
 itory root. The Django project that it generates would then be the project root
 
@@ -136,7 +136,7 @@ itory root. The Django project that it generates would then be the project root
 
 - The `<configuration_root>` directory is where the settings module and base URLConf (urls.py) are
 placed. This must be a valid Python package (containing an __init__.py module)
-  
+
   If using `django-admin.py startproject`, the configuration root is initially inside of the Django
 project root. It should be moved to the repository root.
 
@@ -186,11 +186,11 @@ with the Python packaging tools
 
 - James Bennett is a Django core developer. He taught us everything that we know about good Django
 app design. We quote him:
-	
+
 	> "The art of creating and maintaining a good Django app is that it should follow the
 	truncated Unix philosophy according to Douglas McIlroy: ‘Write programs that do one
 	thing and do it well."
-	
+
 - In essence, each app should be tightly focused on its task. If an app can’t be explained in a single
 sentence of moderate length, or you need to say ‘and’ more than once, it probably means the app is
 too big and should be broken up.
@@ -247,7 +247,7 @@ managers to this module
 	- `signals.py` - Whiel we argue against providing custom signals this can be a useful place to put them
 	- `utils.py` - Synoymous with helpers.py
 	- `viewmixins.py` - View modules nad packages can be thinned by moving any view mixins to this module
-	
+
 - We will visit each of them in other chapters so, do not stress about it. This is just an overview
 
 <br>
@@ -288,27 +288,5 @@ managers to this module
 	- `staging.py` - Staging version for running a semi-private version of the site on a production server.  is is where managers and clients should be looking before your work is moved to production.
 	- `test.py` - Settings for running tests including test runners, in-memory database de nitions, and log settings.
 	- `production.py` -  This is the settings file used by your live production servers. That is the server that host the real website. This file contains production level settings only it is sometimes called prod.py
-	
-- **Tip:** 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+- **Tip:**
