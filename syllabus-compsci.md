@@ -274,8 +274,8 @@ Final tour is important but you should go at your own pace for it:
  <img align="center" width="100%" src="/misc/images/intro.png" />
  <img align="center" width="100%" src="/misc/images/frontend.png" />
  <img align="center" width="100%" src="/misc/images/backend.png" />
- <img align="center" width="100%" src="/misc/images/server.png" /> 
  <img align="center" width="100%" src="/misc/images/devops.png" />
+ <img align="center" width="100%" src="/misc/images/Server.png" /> 
  
  
 ### Algorithms
