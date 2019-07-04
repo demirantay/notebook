@@ -172,7 +172,7 @@ Don’t be the person who “never quite understood” something like recursion
 - [ ] Learn pacakage managers (either one npm or yarn)
 - [ ] Learn CSS pre-processors such as SASS or POST CSS
 - [ ] Learn CSS frameworks: Boostrap is the most used option
-- [ ] Learn about CSS architecture: BEM
+- [X] Learn about CSS architecture: BEM
 - [ ] Build tools: learn about Linters and Formatters (Prettier, ESLint .etc.)
 - [ ] Build tools: learn about module bundlers(webpack)
 - [ ] Build tools: learn about task runners (npm scripts)
@@ -215,13 +215,10 @@ Don’t be the person who “never quite understood” something like recursion
  - [ ] Learn: GraphQL, this is not required and optional feel free to have a loot and what it is all about and why they are calling it the new REST
  - [ ] Learn: Again option, look into Graph Databases, at least you can have a little udnerstanding of what they are.
  - [ ] We have a lot more stuff like Profiling, Static Analysis, DDD SOAP, etc. Go on your journey now!
+ - [ ] Project: Create an CRUD app without a framework
  - [ ] Project: Once you are done doing all of the above with django create your own framwork with wsgi or cgi and implement each box again with more advanced projects. You can also create your own server, backup it deploy it and use it to build applicaitons with your newly built framework.
  
- ---
- 
- - [ ] Go and finish up Section 1 above
- 
- ---
+
 
 ### DevOps
 
@@ -253,12 +250,18 @@ DevOps is something very complex instead of having a one strict route you cna ca
 - [ ] Project : Redo all boxes with a lot more advanced projects
 - [ ] START LEARNING FINANCE AND WORKING ON YOUR BRAND (human universals)
 
-### Final Project
+### Final Tour
 
-These are final projects for the subjects you have learned above. Do them if you have time:
+Final tour is important but you should go at your own pace for it:
 
+ ---
+ 
+ - [ ] Go and finish up Section 1 above
+ 
+ ---
+ 
 - [ ] Now that you have a computer, an operating system, your own servers, compiler, langauge, web framework. Try to combine all of them and create a mini ecosystem on your own. You can build a simple web broswer to try your gadgets. This is a highly challenging project do not rush it.
-- [ ] If you are able to do the ecosystem project above. Just start building your commercial idea  (67 universals)
+- [ ] If you are able to do the ecosystem project above. Just start building your commercial idea  (67 universals) -- (before trying any commercial project test your feet with a very well coded ad helpful open source app - try to market it etc. and after that begin your commercial idea)
 
 
 ---

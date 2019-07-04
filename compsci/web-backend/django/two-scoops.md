@@ -289,4 +289,150 @@ managers to this module
 	- `test.py` - Settings for running tests including test runners, in-memory database de nitions, and log settings.
 	- `production.py` -  This is the settings file used by your live production servers. That is the server that host the real website. This file contains production level settings only it is sometimes called prod.py
 
+- **Tip:** You’ll also want to have a ci.py module containing that server’s settings. Similarly, if it’s a large project and you have other special-purpose servers, you might have custom settings files for each of them.
+
+- To run the local development server with your settings/local.py settings file:
+	```
+	python manage.py runserver --settings=config.settings.local
+	```
+	Just change the module name for which settings file you would like to use
+
+- As mentioned earlier, we need settings configured for development, such as selecting the console
+	email backend, setting the project to run in DEBUG mode, and setting other configuration options
+	that are used solely for development purposes. We place development settings like the following into
+	`settings/local.py`:
+	```
+	from .base import *
+
+	DEBUG = True
+
+	EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+	DATABASES = {
+		'default': {
+			'ENGINE': 'django.db.backends.postgresql_psycopg2',
+			'NAME': 'twoscoops',
+			'HOST': 'localhost',
+		}
+	}
+
+	INSTALLED_APPS += ['debug_toolbar', ]
+	```
+
+- Sometimes we’re working on a large project where different developers need different settings, and
+	sharing the same local.py settings module with teammates won’t do.
+
+	Well, it’s still better tracking these settings in version control than relying on everyone customizing
+	the same `local.py` module to their own tastes. A nice way to do this is with multiple dev settings files,
+	e.g. `local_audrey.py` and `local_pydanny.py`:
+
+- Now lets talk about our secret keys inside our settings files. The most basic idea that comes to mind to protect our secrets is to leave them out of the version control system. But that is a dangerous game you play since there is a very big chance of single point faliure and losing all your important settings. To resolve this, our answer is to use environment variables in a pattern we like to call, well, `The Environment Variables Pattern`.
+
+	Here are the benefits of using environment variables for secret keys:
+		- Keeping secrets out of settings allows you to store every settings file in version control without hesitation. All of your Python code really should be stored in version control, including your settings
+		- Instead of each developer maintaining an easily-outdated, copy-and-pasted version of the local_settings.py.example file for their own development purposes, everyone shares the same version-controlled settings/local.py
+		- ➤ Most platforms-as-a-service recommend the use of environment variables for configuration and have built-in features for setting and managing them.
+
+### Environment Variables
+
+- Before you begin setting environment variables, you should have the following:
+	- A way to manage the secret information you are going to store
+	- A good understanding of how bash works with environment variables on servers, or a willingness to have your project hosted by a platform-as-a-service.
+
+- **Warning**: Enviornment variables do not work with apache
+
+---
+
+- *I am skipping this part of the books since I am not really good with bash scripting at this point ...*
+
+	I will return to this chapter of the book
+
+<br>
+<br>
+<br>
+<br>
+
+# Model Best Practices
+
+- Models are the foundation of most Django projects. Racing to write Django models without thinking things through can lead to problems down the road.
+
+	All too frequently we developers rush into adding or modifying models without considering the
+	ramifications of what we are doing. The quick fix or sloppy “temporary” design decision that we toss
+	into our code base now can hurt us in the months or years to come, forcing crazy workarounds or
+	corrupting existing data
+
+	So keep this in mind when adding new models in Django or modifying existing ones. Take your time to think things through, and design your foundation to be as strong and sound as possible.
+
+### Basics
+
+- If there are 20+ models in a single app, think about ways to break it down into smaller apps, as it
+	probably means your app is doing too much. In practice, we like to lower this number to no more
+	than five models per app.
+
+- I skipped the part where it explains about model inheritance
+
+### Database Migrations
+
+- Django comes with a powerful database change propagation library aptly called “migrations”,
+or as we prefer to refer in the book, django.db.migrations.
+
+- Tips for Creating Migrations
+	- As soon as a new app or model is created, take that extra minute to create the initial
+django.db.migrations for that new model. All we do is type `python manage.py
+makemigrations`.
+	- Examine the generated migration code before you run it, especially when complex changes are
+involved. Also review the SQL that will be used with the `sqlmigrate` command.
+	- Use the MIGRATION_MODULES setting to manage writing migrations for third-party apps that
+don’t have their own django.db.migrations-style migrations.
+	- Don’t worry about how many migrations are created. If the number of migrations becomes
+unwieldy, use `squashmigrations` to bring them to heel.
+	- Always back up your data before running a migration.
+
+### Deployment and Management of Migrations
+
+- It goes without saying, but we’ll say it anyway: Always back up your data before running a
+migration.
+
+- Before deployment, check that you can rollback migrations!We can’t always have perfect roundtrips, but not being able to roll back to an earlier state really hurts bug tracking and sometimes
+deployment in larger projects.
+
+- If a project has tables with millions of rows in them, do extensive tests against data of that size
+on staging servers before running a migration on a production server. Migrations on real data
+can take much, much, much more time than anticipated.If not careful, schema changes on heavily populated tables can take a long time. Not seconds or minutes, but hours.
+
+- **Tip:** Including migration code in VCS is an absolute necessity. Not including migration code in
+version control is just like not including settings files in VCS: You might be able to develop,
+but should you switch machines or bring someone else into the project, then everything will
+break.
+
+## Django Model Design
+
+- One of the most difficult topics that receives the least amount of attention is how to design good Django models. How do you design for performance without optimizing prematurely? Let’s explore some strategies
+here.
+
+- **Start Normalized**:
+	- We suggest that readers of this book need to be familiar with `database normalization.` If you are
+unfamiliar with database normalization, make it your responsibility to gain an understanding, as
+working with models in Django effectively requires a working knowledge of this
+
+		When you’re designing your Django models, always start off normalized. Take the time to make sure
+that no model should contain data already stored in another model.
+
+- **Cache Before Denormalizing**:
+	-  Often, setting up caching in the right places can save you the trouble of denormalizing your models
+
+- **Denormalize Only if Absolutely Needed**:
+	- It can be tempting, especially for those new to the concepts of data normalization, to denormalize prematurely. Don’t do it! Denormalization may seem like a panacea for what causes problems in a project. However it’s a tricky process that risks adding complexity to your project and dramatically raises the risk of losing data. Please, please, please explore caching before denormalization.
+
+### Try to Avoid Using Generic Relations
+
+- In general we advocate against generic relations and use of models.field.GenericForeignKey.
+They are usually more trouble than they are worth. Using them is often a sign that troublesome
+shortcuts are being taken, that the wrong solution is being explored.
+
+### Fat Models
+
+... skipped it for now -- return to it later on
+
+
 - **Tip:**
