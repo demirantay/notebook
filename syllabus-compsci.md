@@ -246,7 +246,7 @@ DevOps is something very complex instead of having a one strict route you cna ca
 - [ ] Monitoring Software: learn about Application Monitoring (NEw relic ..etc)
 - [ ] Monitoring Software: learn about Logs Management (ELK stack etc.)
 - [ ] Learn about CLOUD providers (AWS, azure, digital ocean ... etc.)
-- [ ] Course : FINISH THE REST OF THE SECTION 1 ABOVE
+- [ ] Course : Go down do the server image. (Write new boxes for each of them, I am lazy at the time of writing this)
 - [ ] Project : Redo all boxes with a lot more advanced projects
 - [ ] START LEARNING FINANCE AND WORKING ON YOUR BRAND (human universals)
 
@@ -274,6 +274,7 @@ Final tour is important but you should go at your own pace for it:
  <img align="center" width="100%" src="/misc/images/intro.png" />
  <img align="center" width="100%" src="/misc/images/frontend.png" />
  <img align="center" width="100%" src="/misc/images/backend.png" />
+ <img align="center" width="100%" src="/misc/images/server.png" /> 
  <img align="center" width="100%" src="/misc/images/devops.png" />
  
  
