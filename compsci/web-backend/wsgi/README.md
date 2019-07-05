@@ -25,3 +25,10 @@ of those bytes often has some kind of textual interpretation, and in Python, str
 
 - The application object is simply a callable object that accepts two arguments. The term "object" should not be misconstrued as requiring an actual object instance: a function, method, class, or instance with a __call__ method are all acceptable for use as an application object. Application objects must be able to be invoked more than once, as virtually all servers/gateways (other than CGI) will make such repeated requests
 
+---
+
+- I stopped for now. The link I was at:
+  - https://www.python.org/dev/peps/pep-3333/#specification-overview
+  - https://www.sitepoint.com/python-web-applications-the-basics-of-wsgi/
+  - 
+
