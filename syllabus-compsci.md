@@ -27,7 +27,7 @@ Don’t be the person who “never quite understood” something like recursion
   If you don’t have a solid mental model of how a computer actually works, all of your higher-level abstractions will be brittle.
   
   - [X] Read: The [TutorialsOnPoint](https://www.tutorialspoint.com/computer_fundamentals/index.htm) for a overview. Note this to README of the folder
-  - [ ] Book : Nand2Tetris
+  - [X] Book : Nand2Tetris
   - [ ] Book : [Hidden Language of Computers: CODE](ftp://ftp.borg.moe/yarr/Gentoomen%20Library/Programming/Misc/Charles%20Petzold%20-%20Code%20-%20The%20Hidden%20Language%20of%20Computer%20Hardware%20and%20Software.pdf)
   - [ ] Book : Computer Organization and Design (left at page 91)
   - [ ] Project: Design and build a simple computer
