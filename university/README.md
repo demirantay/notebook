@@ -1,0 +1,13 @@
+- Anadolu universitesi acik iktisat donemlik ucret 225
+- Yaz okulu ile okul hizli bitirebiliyor
+- donemlik minimum 30 maksimum 45 kredi alniabiliyor
+- yaz okulu 20 - 25 kredi arasi alinabiliyor
+- fakulte farki yok
+- eKampus butun ders ihtiyaclarini buradan karsiliyorsun
+- Kayit islemleri burodan
+- Eskisehire gitmeye gerek yok
+- Kayitlar agustosta aciklanacak
+- Osym terchini yap sonra kayita git
+- Sinavlar cogunlukla kasim-aralik ve nisan-mayis ta oluyor
+- Sinavlar 20 soru 60 dakika 4 yanlis 1 dogruyu goturen 
+- gecmis cikmis sinav sorulari ile genellikle ayni oluyor
