@@ -39,4 +39,5 @@ I shelved this for now. The links I left at reading:
   - https://hackernoon.com/get-more-clients-as-a-freelance-developer-with-these-8-helpful-tips-824094d65437
   - https://www.sitepoint.com/7-tips-landing-first-client-freelance-developer/
   - https://www.raywenderlich.com/1330-freelance-software-development-tips
+  - https://www.reddit.com/r/freelance/comments/313zxs/a_year_of_freelancing_my_experiences_with/
  
