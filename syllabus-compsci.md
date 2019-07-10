@@ -14,17 +14,12 @@ Fundemental Computer Science Cirriculum
 
 ### Programming
 
-Don’t be the person who “never quite understood” something like recursion
-
  - [X] Read: The [TutorialsOnPoint](https://www.tutorialspoint.com/computer_programming/computer_programming_environment.htm) for a overview. Note this to README of the folder
  - [X] Course : [Helsinki MOOC's](http://mooc.fi/courses/2013/programming-part-1/material.html) for the desired language.
  - [X] Book : SICP (Structured Interpretion of Computer Programs)-*(shelved it for later it is hard)*
  - [X] Book : [modern c book](https://www.scribd.com/doc/39933932/C-Programming-a-Modern-Approach-2nd-Edition-K-N-King)(Did not finish left at pg.292 )
  
-   
- ### Computer Architecture
-
-  If you don’t have a solid mental model of how a computer actually works, all of your higher-level abstractions will be brittle.
+### Computer Architecture
   
   - [X] Read: The [TutorialsOnPoint](https://www.tutorialspoint.com/computer_fundamentals/index.htm) for a overview. Note this to README of the folder
   - [X] Book : Nand2Tetris
@@ -33,22 +28,16 @@ Don’t be the person who “never quite understood” something like recursion
   - [ ] Project: Design and build a simple computer
   - [ ] https://www.instructables.com/id/How-to-Build-an-8-Bit-Computer/
   - [ ] https://eater.net/8bit
-  
 
- ### Algorithms and Data Structures
-
-  If you don’t know how to use ubiquitous data structures like stacks, queues, trees, and graphs, you won’t be able to solve hard problems.
+### Algorithms and Data Structures
   
   - [ ] Read: The [TutorialsOnPoint](https://www.tutorialspoint.com/data_structures_algorithms/index.htm) for a overview. Note this to README of the folder
   - [ ] Book: [PSAD using python](http://interactivepython.org/runestone/static/pythonds/index.html)
   - [ ] Project: View the bottom of this page and implement some of the algorithm map
   - [ ] Book: [The Algorithm Design Manual](https://www.amazon.com/Algorithm-Design-Manual-Steven-Skiena/dp/1848000693/?pldnSite=1) There are [vidoes](http://www3.cs.stonybrook.edu/~algorith/video-lectures/) avilable too.
   - [ ] Book : [How to solve it](https://www.amazon.com/How-Solve-Mathematical-Princeton-Science/dp/069116407X/?pldnSite=1)
- 
   
- ### Operating Systems
-
-   Most of the code you write is run by an operating system, so you should know how those interact.
+### Operating Systems
 
    - [ ] Read: The [TutorialsOnPoint](https://www.tutorialspoint.com/operating_system/index.htm) for a overview. Note this to README of the folder
    - [ ] Book : [Operating Systems: Three Easy Pieces](http://pages.cs.wisc.edu/~remzi/OSTEP/)
