@@ -46,9 +46,7 @@ Fundemental Computer Science Cirriculum
    - [ ] Book : Modern Operating Systems Book by Andrew S. Tanenbaum
    - [ ] Project : Code a small Operating System
 
- ### Computer Networking
-
-   The Internet turned out to be a big deal: understand how it works to unlock its full potential.
+### Computer Networking
 
    - [ ] Read: The [TutorialsOnPoint](https://www.tutorialspoint.com/data_communication_computer_network/index.htm) for a overview. Note this to README of the folder
    - [ ] Book : [Computer Networking: A Top-Down Approach](https://www.amazon.com/Computer-Networking-Top-Down-Approach-7th/dp/0133594149/?pldnSite=1) -- do the exersices
@@ -57,8 +55,6 @@ Fundemental Computer Science Cirriculum
    - [ ] Project : Your own small internet,  build a server backup a server or etc. Try to use what you have learned. 
    
  ### Databases
-
-   Data is at the heart of most significant programs, but few understand how database systems actually work.
 
    - [ ] Read: The [TutorialsOnPoint](https://www.tutorialspoint.com/dbms/index.htm) for a overview. Note this to README of the folder
    - [ ] Course : [Berkley Course](https://archive.org/details/UCBerkeley_Course_Computer_Science_186)
@@ -69,21 +65,14 @@ Fundemental Computer Science Cirriculum
  
 ### Languages and Compilers
 
-   If you understand how languages and compilers actually work, you’ll write better code and learn new languages more easily
-
    - [ ] Read: The [TutorialsOnPoint](https://www.tutorialspoint.com/compiler_design/index.htm) for a overview. Note this to README of the folder
    - [ ] Course : [Stanford Course](https://lagunita.stanford.edu/courses/Engineering/Compilers/Fall2014/about) read the [dragon book](https://www.amazon.com/Compilers-Principles-Techniques-Tools-2nd/dp/0321486811?pldnSite=1) on the units of stanford do not read all the book.
    - [ ] Project : Create a basic compiler for a langauge and build a simple language.
-   
-
- ### Distributed Systems
-
-   These days, most systems are distributed systems.
+  
+### Distributed Systems
 
    - [ ] Book : [Distibuted Systems, 3rd edition](https://www.distributed-systems.net/index.php/books/distributed-systems-3rd-edition-2017/)
    - [ ] Project: Do something to implement the theory you have learned.
-   
-
   
 ### Code University
 
@@ -91,10 +80,7 @@ Fundemental Computer Science Cirriculum
   - [ ] Project: Once you are done you can solve the algorithms that are listed as a roadmap in a image at the bottom of this file.
   - [ ] **Once you are done with the fundementals open up "Human Universals" and try to come up with an idea to build** 
   
-  
 ### Mathematics
-
-  CS is basically a runaway branch of applied math, so learning math will give you a competitive advantage.
 
   - [ ] Study : Most important math for CS is discrete math. Finish the prerequisites from khan academy.
   - [ ] Course : [Important dicrete course](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-042j-mathematics-for-computer-science-fall-2010/video-lectures/)
@@ -134,14 +120,9 @@ Fundemental Computer Science Cirriculum
  <br>
  <br>
 
-## Section 3
+## Section 2
 
- Market Skills Road Map
-
- It is important to learn in this sequence 1-Intro, 2-Backend, 3-Frontend, 4-DevOps. And do not try to build atleast one thing after learning each subject.
-
- ### Intro
- These are the basic and essential skills that every developer shoould have it under their belt in todays market. Try to practice what you learn.
+### Intro
 
  - [X] Git - Version Control
  - [X] GitHub for public repos, GitLab for private 
@@ -151,9 +132,7 @@ Fundemental Computer Science Cirriculum
  - [X] HTTP/HTTPS
  - [X] Design Patterns (SOLID, KISS, YAGNI) -- skipped for now
  
-
- ### Front End
- This may seem basic since in the core there are only three technologies how ever what is really hard is that not everyone has the eye for killer design skills.
+### Front End
 
 - [X] HTML, after the basics learn these key points: writing semantic HTML, basic SEO, Accsessibilty
 - [X] CSS, after the basics learn these: Making layouts, Media Queries, CSS 3
@@ -177,8 +156,7 @@ Fundemental Computer Science Cirriculum
 - [ ] Optional mobile applications with frontend (react native)
 - [ ] Do a very advanced project and use everything you have learned so far.
 
- ### Back End
- It may seem daunting compared to front-end however and yes it is true that there is a learning curve. However it is a lot more fun to be able to understand what the fuck is going under all of this complexity.
+### Back End
 
  - [X] Learn : Pick a language for backend you may chose Scripting languages: Python, Ruby, PHP, Node or Functional languages: Haskell, Scala .. etc. or Multiparadigm langauges: Go, Rust or Enterprisey languages: Java, C#
  - [X] Practice: Exercise and make some command line application. Sample ideas, you can make a web scraper or get a API in JSON format and create someting, think of a daily task and automate it.
@@ -207,11 +185,7 @@ Fundemental Computer Science Cirriculum
  - [ ] Project: Create an CRUD app without a framework
  - [ ] Project: Once you are done doing all of the above with django create your own framwork with wsgi or cgi and implement each box again with more advanced projects. You can also create your own server, backup it deploy it and use it to build applicaitons with your newly built framework.
  
-
-
 ### DevOps
-
-DevOps is something very complex instead of having a one strict route you cna carve your way up however it is very important to have a mental map of dev ops that consists of these. Try to understand each topic and atleast do a small lite demo of the things you like for practice.
 
 - [ ] Learn a Systems Programming language like : C/C++, Go, Rust
 - [ ] Understand different Operating Systems concepts: Process Management, Threads and Concurrency, Sockets, I/O management, Virtualization, Memory/Storage, File Systems
@@ -237,7 +211,6 @@ DevOps is something very complex instead of having a one strict route you cna ca
 - [ ] Learn about CLOUD providers (AWS, azure, digital ocean ... etc.)
 - [ ] Course : Go down do the server image. (Write new boxes for each of them, I am lazy at the time of writing this)
 - [ ] Project : Redo all boxes with a lot more advanced projects
-- [ ] START LEARNING FINANCE AND WORKING ON YOUR BRAND (human universals)
 
 ### Final Tour
 
@@ -251,7 +224,6 @@ Final tour is important but you should go at your own pace for it:
  
 - [ ] Now that you have a computer, an operating system, your own servers, compiler, langauge, web framework. Try to combine all of them and create a mini ecosystem on your own. You can build a simple web broswer to try your gadgets. This is a highly challenging project do not rush it.
 - [ ] If you are able to do the ecosystem project above. Just start building your commercial idea  (67 universals) -- (before trying any commercial project test your feet with a very well coded ad helpful open source app - try to market it etc. and after that begin your commercial idea)
-
 
 ---
 ---
