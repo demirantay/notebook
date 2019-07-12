@@ -22,7 +22,7 @@ Weekly schedule:
 <br>
 <br>
 
-- [ ] First order is to finish the remaining checkboxes in the backend seciton. Try to stick your comapnies language however if you want you can always use your own language of preference. Try to at least master each checkbox in your target language at the time. Try not to jump between langs too much
+- [ ] First order is to finish the remaining checkboxes in the backend seciton. Try to stick your comapnies language however if you want you can always use your own language of preference. Try to at least master each checkbox in your target language at the time. Try not to jump between langs too much. Before finishing the framework finish all checkboxes with the langauge first. Then redo them with the framework of chosing. Lastly to use the frameowork better choose a server and develop a web serer mirroring the features of the framework you are trying to learn (e.g python - > django -> django clone with wsgi)
 
   &darr;
 
