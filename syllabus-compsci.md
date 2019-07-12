@@ -166,8 +166,8 @@ Fundemental Computer Science Cirriculum
  - [X] Learn: Learn about testing. There are several ways to write tests such as unit , integration ..etc. Tests are very important do not skim through articles. Learn how to calculate test covarege.
  - [X] Project: Write tests for your package built above.
  - [ ] Learn Relational Databases there are many options but pick either PostgreSQL or MySQL
- - [ ] Learn: a Framework e.g. Django, Flask
- - [ ] Project: Make a CRUD application with the framework of your chosing
+ - [X] Learn: a Framework e.g. Django, Flask (do not learn too much -- just play with it understand it)
+ - [X] Project: Make a CRUD application with the framework of your chosing
  - [ ] Learn: a noSQL database you do not have to use it but understand how it is different from relational databases and why they are needed. MongoDB is a solid choice.
  - [ ] Learn: Caching, learn how to implenet app level caching using Redis or Memcached
  - [ ] Project: Implement caching to the application you have built above.
@@ -182,8 +182,10 @@ Fundemental Computer Science Cirriculum
  - [ ] Learn: GraphQL, this is not required and optional feel free to have a loot and what it is all about and why they are calling it the new REST
  - [ ] Learn: Again option, look into Graph Databases, at least you can have a little udnerstanding of what they are.
  - [ ] We have a lot more stuff like Profiling, Static Analysis, DDD SOAP, etc. Go on your journey now!
- - [ ] Project: Create an CRUD app without a framework
- - [ ] Learn: Everything from [fullstackpython](https://www.fullstackpython.com/table-of-contents.html) DO NOT SKIM THROUGH LEARN THORUGH EVERYTHING. (the language doesnt have to be python just adapt and modify the python libraries with the language you choose)
+ - [ ] Learn: Learn the framework of your choice fully!! be very good at it (if django, finish two scoops, examine each feature ... read more books, practice .etc)
+ - [ ] Project: Implement every checkbox at top again, but use the framework (flask, django ... etc.) instead of pure python
+ - [ ] Project: Create an CRUD website without a framework just cgi
+ - [ ] Learn: Everything from [fullstackpython](https://www.fullstackpython.com/table-of-contents.html) do not skim through learn everything!!. (the language doesnt have to be python just adapt and modify the python libraries with the language you choose)
  - [ ] Project: Once you are done doing all of the above with django create your own framwork with wsgi or cgi and implement each box again with more advanced projects. You can also create your own server, backup it deploy it and use it to build applicaitons with your newly built framework.
  
 ### DevOps
