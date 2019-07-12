@@ -53,7 +53,151 @@
   ```
   
 - A NULL value in a table is a value in a field that appears to be blank, which means a field with a NULL value is a field with no value. It is very important to understand that a NULL value is different than a zero value or a field that contains spaces. A field with a NULL value is the one that has been left blank during a record creation.
+
+### SQL Constraints
+
+- Constraints are the rules enforced on data columns on a table. These are used to limit the type of data that can go into a table. This ensures the accuracy and reliability of the data in the database. Constraints can either be column level or table level
+
+### Database Normalization
+
+- Database normalization is the process of efficiently organizing data in a database. There are two reasons of this normalization process −
+   - Eliminating redundant data, for example, storing the same data in more than one table.
+   - Ensuring data dependencies make sense.
   
+  Both these reasons are worthy goals as they reduce the amount of space a database consumes and ensures that data is logically stored. Normalization consists of a series of guidelines that help guide you in creating a good database structure. Normalization guidelines are divided into normal forms, check out google for more info
+  
+- *Note: There are many databases e.g. postgres, mysql, oracle, sqlite ... etc. Just choose one that is used by your language or framework ecosystem*
+  
+<br>
+<br>
+<br>
+
+# Data Types
+
+- Apart from the most used common data types of SQL such as :`int` `decimal` `float` `char` `text` there are many more. You can see all of them listed in this article in a neatly matter:
+   Reosurce: https://www.tutorialspoint.com/sql/sql-data-types.htm
+   
+<br>
+<br>
+<br>
+
+# Operators
+
+- An operator is a reserved word or a character used primarily in an SQL statement's WHERE clause to perform operation(s), such as comparisons and arithmetic operations. These Operators are used to specify conditions in an SQL statement and to serve as conjunctions for multiple conditions in a statement. (same with any other language just written in a WHERE instead of an IF
+
+- There are 3 types of operators:
+   - Arithmetic Operators:  +, -, /, * ...etc
+   - Comparison Operators:  >, >=, <, ==, != ...etc
+   - Logical Operators :  AND, OR, BETWEEN ...etc
+
+- See the full list in this document:
+   - https://www.tutorialspoint.com/sql/sql-operators.htm
+   
+<br>
+<br>
+<br>
+
+# Expressions
+
+-  These SQL EXPRESSIONs are like formulae and they are written in query language. You can also use them to query the database for a specific set of data. Consider the basic syntax of the SELECT statement as follows −
+   ```
+   SELECT column1, column2, columnN 
+   FROM table_name 
+   WHERE [CONDITION|EXPRESSION];
+   ```
+   
+<br>
+<br>
+<br>
+
+# CREATE Database
+
+- The SQL CREATE DATABASE statement is used to create a new SQL database. The basic syntax of this CREATE DATABASE statement is as follows −
+   ```sql
+   CREATE DATABASE DatabaseName;
+   ```
+   Always the database name should be unique within the RDBMS. 
+   
+- Make sure you have the admin privilege before creating any database. Once a database is created, you can check it in the list of databases as follows −
+   ```sql
+   SHOW DATABASES;
+   ```
+ 
+<br>
+<br>
+<br>
+
+# DROP or DELETE Database
+
+- The SQL DROP DATABASE statement is used to drop an existing database in SQL schema. The basic syntax of DROP DATABASE statement is as follows −
+   ```sql
+   DROP DATABASE DatabaseName;
+   ```
+
+- NOTE − Be careful before using this operation because by deleting an existing database would result in loss of complete information stored in the database. Always know how to backup your databases
+
+<br>
+<br>
+<br>
+
+# SELECT Database 
+
+- The SQL SELECT statement is used to fetch the data from a database table which returns this data in the form of a result table. These result tables are called result-sets. The basic syntax of the SELECT statement is as follows −
+   ```sql
+   SELECT column1, column2, columnN FROM table_name;
+   ```
+   Here, column1, column2... are the fields of a table whose values you want to fetch. If you want to fetch all the fields available in the field, then you can use the following syntax.
+   ```sql
+   SELECT * FROM table_name;
+   ```
+   
+- Lets see an real world example. Consider the CUSTOMERS table having the following records −:
+   ```sql
+   +----+----------+-----+-----------+----------+
+   | ID | NAME     | AGE | ADDRESS   | SALARY   |
+   +----+----------+-----+-----------+----------+
+   |  1 | Ramesh   |  32 | Ahmedabad |  2000.00 |
+   |  2 | Khilan   |  25 | Delhi     |  1500.00 |
+   |  3 | kaushik  |  23 | Kota      |  2000.00 |
+   +----+----------+-----+-----------+----------+
+   ```
+   Lets select the following columns:
+   ```sql
+   SELECT ID, NAME, SALARY FROM CUSTOMERS;
+   ```
+   This would produce the following result −
+   ```
+   +----+----------+----------+
+   | ID | NAME     | SALARY   |
+   +----+----------+----------+
+   |  1 | Ramesh   |  2000.00 |
+   |  2 | Khilan   |  1500.00 |
+   |  3 | kaushik  |  2000.00 |
+   +----+----------+----------+
+   ```
+   
+<br>
+<br>
+<br>
+
+# WHERE Clause
+
+
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+
+
+
+
+
   
   
   
