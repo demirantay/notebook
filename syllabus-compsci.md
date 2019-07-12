@@ -183,6 +183,7 @@ Fundemental Computer Science Cirriculum
  - [ ] Learn: Again option, look into Graph Databases, at least you can have a little udnerstanding of what they are.
  - [ ] We have a lot more stuff like Profiling, Static Analysis, DDD SOAP, etc. Go on your journey now!
  - [ ] Project: Create an CRUD app without a framework
+ - [ ] Learn: Everything from [fullstackpython](https://www.fullstackpython.com/table-of-contents.html) DO NOT SKIM THROUGH LEARN THORUGH EVERYTHING. (the language doesnt have to be python just adapt and modify the python libraries with the language you choose)
  - [ ] Project: Once you are done doing all of the above with django create your own framwork with wsgi or cgi and implement each box again with more advanced projects. You can also create your own server, backup it deploy it and use it to build applicaitons with your newly built framework.
  
 ### DevOps
