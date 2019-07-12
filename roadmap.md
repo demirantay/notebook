@@ -1,5 +1,11 @@
 ## Roadmap
 
+Boilerplate websites to look at before a new technology:
+- wikipedia
+- tutorialspoint
+- fullstackpython
+- ...
+
 Weekly schedule:
 
 - Weekdays:
