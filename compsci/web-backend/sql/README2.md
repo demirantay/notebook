@@ -227,8 +227,104 @@ I am too lazy at the moment to write notes about this -- just read this document
 
 # ALTER TABLE Command
 
-
+- The SQL ALTER TABLE command is used to add, delete or modify columns in an existing table. You should also use the ALTER TABLE command to add and drop various constraints on an existing table. The basic syntax of an ALTER TABLE command to add a New Column in an existing table is as follows:
+  ```sql
+  ALTER TABLE table_name ADD column_name datatype;
+  ```
+  The basic syntax of an ALTER TABLE command to DROP COLUMN in an existing table is as follows.
+  ```sql
+  ALTER TABLE table_name DROP COLUMN column_name;
+  ```
+  The basic syntax of an ALTER TABLE command to change the DATA TYPE of a column in a table is as follows.
+  ```sql
+  ALTER TABLE table_name MODIFY COLUMN column_name datatype;
+  ```
+  The basic syntax of an ALTER TABLE command to add a NOT NULL constraint to a column in a table is as follows.
+  ```sql
+  ALTER TABLE table_name MODIFY column_name datatype NOT NULL;
+  ```
+  The basic syntax of ALTER TABLE to ADD UNIQUE CONSTRAINT to a table is as follows.
+  ```sql
+  ALTER TABLE table_name 
+  ADD CONSTRAINT MyUniqueConstraint UNIQUE(column1, column2...);
+  ```
+  ...
   
+- You can view all of the altering list, and a real world example in this link:
+  - https://www.tutorialspoint.com/sql/sql-alter-command.htm
+  
+<br>
+<br>
+<br>
+
+# TRUNCATE TABLE Command
+
+- The SQL TRUNCATE TABLE command is used to delete complete data from an existing table. You can also use DROP TABLE command to delete complete table but it would remove complete table structure form the database and you would need to re-create this table once again if you wish you store some data.
+
+  The basic syntax of a TRUNCATE TABLE command is as follows.
+  ```sql
+  TRUNCATE TABLE  table_name;
+  ```
+  
+<br>
+<br>
+<br>
+
+# Using Views
+
+- A view is nothing more than a SQL statement that is stored in the database with an associated name. A view is actually a composition of a table in the form of a predefined SQL query. 
+
+  A view can contain all rows of a table or select rows from a table. A view can be created from one or many tables which depends on the written SQL query to create a view.
+  
+  Views, which are a type of virtual tables allow users to do the following −
+    - Structure data in a way that users or classes of users find natural or intuitive.
+    - Restrict access to the data in such a way that a user can see and (sometimes) modify exactly what they need and no more.
+    - Summarize data from various tables which can be used to generate reports.
+    
+- This document is too long to summarize in here, so if you want to have more info you can start reading from here:
+  - https://www.tutorialspoint.com/sql/sql-using-views.htm
+  
+<br>
+<br>
+<br>
+
+# Transactions
+
+- A transaction is a unit of work that is performed against a database. Transactions are units or sequences of work accomplished in a logical order, whether in a manual fashion by a user or automatically by some sort of a database program
+
+  A transaction is the propagation of one or more changes to the database. For example, if you are creating a record or updating a record or deleting a record from the table, then you are performing a transaction on that table. It is important to control these transactions to ensure the data integrity and to handle database errors.
+  
+  Practically, you will club many SQL queries into a group and you will execute all of them together as a part of a transaction.
+
+- Transactions have the following four standard properties, usually referred to by the acronym ACID:
+  - `Atomicity` - nsures that all operations within the work unit are completed successfully. Otherwise, the transaction is aborted at the point of failure and all the previous operations are rolled back to their former state.
+  - `Consistency` - ensures that the database properly changes states upon a successfully committed transaction.
+  - `Isolation` - enables transactions to operate independently of and transparent to each other
+  - `Durability` - ensures that the result or effect of a committed transaction persists in case of a system failure.
+  
+- Transaction Controls:
+  - COMMIT − to save the changes.
+  - ROLLBACK − to roll back the changes.
+  - SAVEPOINT − creates points within the groups of transactions in which to ROLLBACK.
+  - SET TRANSACTION − Places a name on a transaction
+  
+- I am tired right now I will just leave a link for how they are implemented in the sql code. You can start reading from here:
+  - https://www.tutorialspoint.com/sql/sql-transactions.htm
+  
+<br>
+<br>
+<br>
+
+# Wildcards
+
+
+
+
+
+
+
+
+
 
 
   
