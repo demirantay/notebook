@@ -28,7 +28,7 @@ Weekly schedule:
 <br>
 <br>
 
-- [ ] First order is to finish the remaining checkboxes in the backend seciton. Try to stick your comapnies language however if you want you can always use your own language of preference. Try to at least master each checkbox in your target language at the time. Try not to jump between langs too much. Before finishing the framework finish all checkboxes with the langauge first. Then redo them with the framework of chosing. Lastly to use the frameowork better choose a server and develop a web serer mirroring the features of the framework you are trying to learn (e.g python - > django -> django clone with wsgi)
+- [ ] First order is to finish the remaining checkboxes in the backend seciton. Try to stick your comapnies language however if you want you can always use your own language of preference. Try to at least master each checkbox in your target language at the time. Try not to jump between langs too much. Before finishing the framework finish all checkboxes with the langauge first. Then redo them with the framework of chosing. Lastly to use the frameowork better choose a server and develop a web serer mirroring the features of the framework you are trying to learn (e.g python - > django -> django clone with wsgi and a built server like nginx, apache) (try to redo the checkboxes with your new framework again)
 
   &darr;
 
@@ -52,11 +52,11 @@ Weekly schedule:
 
   &darr;
   
-- [ ] Now that the bolier plate checkboxes are done, lets move on to the hard stuff, if you feel your servers are tehinally up to date you can just skip this part if not try to improve it into the current web standarts (ofc you achievements do all standarts. Now start building your own web backend framwork. Try to mirror a certain framework that you are trying to learn so that it will save time. 
+- [ ] Now that the bolier plate checkboxes are done, lets move on to the hard stuff, if you feel your servers are tehinally up to date you can just skip this part if not try to improve it into the current web standarts (ofc you achievements do all standarts. Do you remember the framework you built int he backend with a standart server like nginx, try to use your own server for your frameowkr.
 
   &darr;
   
-- [ ] After building your web framework and upgrading your servers, try redoing every checkbox on the backend section on your framework and servers. Affter finishing that redo the same in devops checkboxes with your framework and servers. all of these will be very important for your 
+- [ ] After connectiong your web framework to your servers, try redoing every checkbox on the backend section on your framework and servers. Affter finishing that redo the same in devops checkboxes with your framework and servers. all of these will be very important for your 
   
   &darr;
   
