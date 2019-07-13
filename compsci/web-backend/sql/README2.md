@@ -60,7 +60,23 @@
 <br>
 <br>
 
-# Sorting 
+# Constraints
+
+- Constraints are the rules enforced on the data columns of a table. These are used to limit the type of data that can go into a table. This ensures the accuracy and reliability of the data in the database. Constraints could be either on a column level or a table level. The column level constraints are applied only to one column, whereas the table level constraints are applied to the whole table.
+
+- Following are some of the most commonly used constraints available in SQL. (There are much more you can check the docs):
+  - NOT NULL
+  - DEFAULT
+  - UNIQUE
+  - PRIMARY Key
+  - FOREIGN Key
+  - CHECK
+  - INDEX
+  
+  Lets view all of them more specifically, (You can always drop constraints remember! (check docs for more info)
+  
+  ### NOT NULL
+  
 
 
 
