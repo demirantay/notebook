@@ -140,7 +140,32 @@
 <br>
 <br>
 
-# SELECT Database 
+# INSERT Query
+- The SQL INSERT INTO Statement is used to add new rows of data to a table in the database. There are two basic syntaxes of the INSERT INTO statement which are shown below.
+   ```sql
+   INSERT INTO TABLE_NAME (column1, column2, column3,...columnN)  
+   VALUES (value1, value2, value3,...valueN);
+   ```
+   or you can use this too:
+   ```sql
+   INSERT INTO TABLE_NAME VALUES (value1,value2,value3,...valueN);
+   ```
+   But it is always better to use the first one for security
+   
+   
+- Lets see a real world example:
+   ```sql
+   INSERT INTO CUSTOMERS (ID,NAME,AGE,ADDRESS,SALARY)
+   VALUES (1, 'Ramesh', 32, 'Istanbul', 2000.00 );
+   ```
+   
+- Remember you can populate the table with filtered data with `WHERE` clause you can check google for more info on filtered insertion
+
+<br>
+<br>
+<br>
+
+# SELECT Query
 
 - The SQL SELECT statement is used to fetch the data from a database table which returns this data in the form of a result table. These result tables are called result-sets. The basic syntax of the SELECT statement is as follows −
    ```sql
@@ -182,13 +207,118 @@
 
 # WHERE Clause
 
+- The SQL WHERE clause is used to specify a condition while fetching the data from a single table or by joining with multiple tables. If the given condition is satisfied, then only it returns a specific value from the table. You should use the WHERE clause to filter the records and fetching only the necessary records.
 
+   The WHERE clause is not only used in the SELECT statement, but it is also used in the UPDATE, DELETE statement, etc., which we would examine in the subsequent chapters. The basic syntax of the SELECT statement with the WHERE clause is as shown below.
+   ```sql
+   SELECT column1, column2, columnN 
+   FROM table_name
+   WHERE [condition]
+   ```
+   
+- Consider the CUSTOMERS table having the following records −
+   ```sql
+   +----+----------+-----+-----------+----------+
+   | ID | NAME     | AGE | ADDRESS   | SALARY   |
+   +----+----------+-----+-----------+----------+
+   |  1 | Ramesh   |  32 | Ahmedabad |  2000.00 |
+   |  2 | Khilan   |  25 | Delhi     |  1500.00 |
+   |  3 | kaushik  |  23 | Kota      |  2000.00 |
+   +----+----------+-----+-----------+----------+
+   ```
+   The following code is an example which would fetch the ID, Name and Salary fields from the CUSTOMERS table, where the salary is greater than 1800 −
+   ```sql
+   SELECT ID, NAME, SALARY 
+   FROM CUSTOMERS
+   WHERE SALARY > 1800;
+   ```
+   This would produce the following result −
+   ```
+   +----+----------+----------+
+   | ID | NAME     | SALARY   |
+   +----+----------+----------+
+   |  1 | Ramesh   |  2000.00 |
+   |  3 | kaushik  |  2000.00 |
+   +----+----------+----------+
+   ```
 
+<br>
+<br>
+<br>
 
+# UPDATE Query
  
- 
- 
- 
+- The SQL UPDATE Query is used to modify the existing records in a table. You can use the WHERE clause with the UPDATE query to update the selected rows, otherwise all the rows would be affected. The basic syntax of the UPDATE query with a WHERE clause is as follows −
+   ```sql
+   UPDATE table_name
+   SET column1 = value1, column2 = value2...., columnN = valueN
+   WHERE [condition];
+   ```
+
+- Consider the CUSTOMERS table having the following records −
+   ```sql
+   +----+----------+-----+-----------+----------+
+   | ID | NAME     | AGE | ADDRESS   | SALARY   |
+   +----+----------+-----+-----------+----------+
+   |  1 | Ramesh   |  32 | Ahmedabad |  2000.00 |
+   |  2 | Khilan   |  25 | Delhi     |  1500.00 |
+   |  3 | kaushik  |  23 | Kota      |  2000.00 |
+   +----+----------+-----+-----------+----------+
+   ```
+   The following query will update the ADDRESS for a customer whose ID number is 1 in the table.
+   ```sql
+   UPDATE CUSTOMERS
+   SET ADDRESS = 'Pune'
+   WHERE ID = 1;
+   ```
+   
+ - If you want to modify all the ADDRESS and the SALARY column values in the CUSTOMERS table, you do not need to use the WHERE clause as the UPDATE query would be enough as shown in the following code block.
+   ```sql
+   UPDATE CUSTOMERS
+   SET ADDRESS = 'Pune', SALARY = 1000.00;
+   ```
+   This would change all rows int the column 
+   
+<br>
+<br>
+<br>
+
+# DELETE Query
+
+- The SQL DELETE Query is used to delete the existing records from a table. You can use the WHERE clause with a DELETE query to delete the selected rows, otherwise all the records would be deleted. The basic syntax of the DELETE query with the WHERE clause is as follows -
+   ```sql
+   DELETE FROM table_name
+   WHERE [condition];
+   ```
+   
+- Consider the CUSTOMERS table having the following records −
+   ```sql
+   +----+----------+-----+-----------+----------+
+   | ID | NAME     | AGE | ADDRESS   | SALARY   |
+   +----+----------+-----+-----------+----------+
+   |  1 | Ramesh   |  32 | Ahmedabad |  2000.00 |
+   |  2 | Khilan   |  25 | Delhi     |  1500.00 |
+   |  3 | kaushik  |  23 | Kota      |  2000.00 |
+   +----+----------+-----+-----------+----------+
+   ```
+   The following code has a query, which will DELETE a customer, whose ID is 1:
+   ```sql
+   DELETE FROM CUSTOMERS
+   WHERE ID = 1;
+   ```
+   
+- If you want to DELETE all the records from the CUSTOMERS table, you do not need to use the WHERE clause and the DELETE query would be as follows −
+   ```sql
+   DELETE FROM CUSTOMERS;
+   ```
+   This deletes all rows but not the table
+   
+   
+<br>
+<br>
+<br>
+
+# LIKE Clause
  
  
 
