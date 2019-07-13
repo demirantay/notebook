@@ -315,8 +315,17 @@ I am too lazy at the moment to write notes about this -- just read this document
 <br>
 <br>
 
-# Wildcards
+# Clone Tables
 
+- There may be a situation when you need an exact copy of a table and the CREATE TABLE ... or the SELECT... commands does not suit your purposes because the copy must include the same indexes, default values and so forth. All RDBMS systems use different commands for cloning search in thier docs
+
+<br>
+<br>
+<br>
+
+---
+
+There are much more to learn about SQL but this is a good starting point that will atleast cover your 80% of your day to day work.
 
 
 
