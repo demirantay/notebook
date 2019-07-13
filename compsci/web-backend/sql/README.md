@@ -320,8 +320,98 @@
 
 # LIKE Clause
  
- 
+ The SQL LIKE clause is used to compare a value to similar values using wildcard operators. There are two wildcards used in conjunction with the LIKE operator.
+   - The percent sign : %
+   - The underscorde : _
+   
+- This clause is not hard to understand however there are many examples of the usage of the two signs `(%, _)` see this artice for a very good summarized more info:
+   - https://www.tutorialspoint.com/sql/sql-like-clause.htm
+   
+<br>
+<br>
+<br>
 
+# TOP, LIMIT or ROWNUM Clauses
+
+- The basic syntax of the TOP clause with a SELECT statement would be as follows.
+   ```sql
+   SELECT TOP number|percent column_name(s)
+   FROM table_name
+   WHERE [condition]
+   ```
+   
+- Consider the CUSTOMERS table having the following records −
+   ```sql
+   +----+----------+-----+-----------+----------+
+   | ID | NAME     | AGE | ADDRESS   | SALARY   |
+   +----+----------+-----+-----------+----------+
+   |  1 | Ramesh   |  32 | Ahmedabad |  2000.00 |
+   |  2 | Khilan   |  25 | Delhi     |  1500.00 |
+   |  3 | kaushik  |  23 | Kota      |  2000.00 |
+   +----+----------+-----+-----------+----------+
+   ```
+   The following query is an example on the SQL server, which would fetch the top 3 records from the CUSTOMERS table.
+   ```sql
+   SELECT TOP 2 * FROM CUSTOMERS;
+   ```
+   This produce the following result
+   ```sql
+   +----+---------+-----+-----------+---------+
+   | ID | NAME    | AGE | ADDRESS   | SALARY  |
+   +----+---------+-----+-----------+---------+
+   |  1 | Ramesh  |  32 | Ahmedabad | 2000.00 |
+   |  2 | Khilan  |  25 | Delhi     | 1500.00 |
+   +----+---------+-----+-----------+---------+
+   ```
+
+- Not all RDBMS use TOP< some use LIMIT, some use ROWNUM
+
+<br>
+<br>
+<br>
+
+# ORDER BY Clause
+
+- The SQL ORDER BY clause is used to sort the data in ascending or descending order, based on one or more columns. Some databases sort the query results in an ascending order by default. The basic syntax of the ORDER BY clause is as follows −
+   ```sql
+   SELECT column-list 
+   FROM table_name 
+   [WHERE condition] 
+   [ORDER BY column1, column2, .. columnN] [ASC | DESC];
+   ```
+   You can use more than one column in the ORDER BY clause. Make sure whatever column you are using to sort that column should be in the column-list.
+   
+- Consider the CUSTOMERS table having the following records −
+   ```sql
+   +----+----------+-----+-----------+----------+
+   | ID | NAME     | AGE | ADDRESS   | SALARY   |
+   +----+----------+-----+-----------+----------+
+   |  1 | Ramesh   |  32 | Ahmedabad |  2000.00 |
+   |  2 | Khilan   |  25 | Delhi     |  1500.00 |
+   |  3 | kaushik  |  23 | Kota      |  2000.00 |
+   +----+----------+-----+-----------+----------+
+   ```
+   The following code block has an example, which would sort the result in the descending order by AGE.
+   ```sql
+   SELECT * FROM CUSTOMERS
+   ORDER BY AGE DESC;
+   ```
+   
+ <br>
+ <br>
+ <br>
+ 
+ ---
+ 
+ Continue to [PART 2](./README2.md)
+ 
+ 
+ 
+ 
+   
+   
+   
+   
 
 
 
