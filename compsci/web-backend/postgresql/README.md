@@ -99,8 +99,7 @@ Note: I will not note most of the PostgreSQL since it jsut basically teaches you
 
 
 
-  
-  
+- There arent much difference to learn other than psql and few tweaks since it is a rdmbs system built on top of SQL. If I have something more useful to note i will create different files than this README intro.
   
   
   
