@@ -2,8 +2,10 @@
 
 The syllabus is divided into sections. The first section is the basic theorotical resources that every software engineer should know. The following sections are my own preferred choosings (each section is divided with hr lines).
 
-For [finding the books](http://freecomputerbooks.com/)
-
+Best resources:
+ - For [finding the books](http://freecomputerbooks.com/)
+ - For [finding tutorials](https://github.com/danistefanovic/build-your-own-x#build-your-own-web-server)
+ 
 - [ ] Start contributing to Remote Companies Open Source projects 
 - [ ] Think of this as Duolingo tree, you can reset them all and re-do them with more advanced notes. You are never done.
 
