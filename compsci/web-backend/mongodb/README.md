@@ -297,10 +297,65 @@
 <br>
 <br>
 
-# Projection
+# Limit Records 
+
+- To limit the records in MongoDB, you need to use limit() method. The method accepts one number type argument, which is the number of documents that you want to be displayed. The basic syntax of limit() method is as follows −
+  ```
+  >db.COLLECTION_NAME.find().limit(NUMBER)
+  ```
  
- 
- 
+- Lets see a real world example. Consider the collection myycol has the following data:
+  ```
+  { "_id" : ObjectId(5983548781331adf45ec5), "title":"MongoDB Overview"}
+  { "_id" : ObjectId(5983548781331adf45ec6), "title":"NoSQL Overview"}
+  { "_id" : ObjectId(5983548781331adf45ec7), "title":"Tutorials Point Overview"}
+  ```
+  Following example will display only two documents while querying the document.
+  ```
+  >db.mycol.find({},{"title":1,_id:0}).limit(2)
+  {"title":"MongoDB Overview"}
+  {"title":"NoSQL Overview"}
+  ```
+
+- skip() ...
+
+<br>
+<br>
+<br>
+
+# Sorting Records
+
+...
+
+
+---
+
+I stopped doing the tutorial at this part :https://www.tutorialspoint.com/mongodb/mongodb_limit_record.htm . After the tutorial the reading list was this:
+  - https://realpython.com/introduction-to-mongodb-and-python/ 
+
+---
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br>
+<br>
+<br>
+<br>
+
+---
+
+Since learning MongoDb is not a priority for me at the moment I am not going to write too much notes or at least advacned notes on it. I just wanted to assimilate myself to the techonolgy you can find more info from other soruces. This is a great place to start for advacned mongoDB:
+  - https://www.tutorialspoint.com/mongodb/mongodb_relationships.htm
  
  
  
