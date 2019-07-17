@@ -249,7 +249,7 @@
   ```
   
 - Consider the mycol collection has the following data 
-  ```json
+  ```
   { "_id" : ObjectId(5983548781331adf45ec5), "title":"MongoDB Overview"}
   { "_id" : ObjectId(5983548781331adf45ec6), "title":"NoSQL Overview"}
   ```
@@ -257,8 +257,47 @@
   ```
   >db.mycol.update({'title':'MongoDB Overview'},{$set:{'title':'I changed the title wubababa'}})
   ```
+
+- The save() method replaces the existing document with the new document passed in the save() method. The basic syntax of MongoDB save() method is shown below −
+  ```
+  >db.COLLECTION_NAME.save({_id:ObjectId(),NEW_DATA})
+  ```
  
- 
+<br>
+<br>
+<br>
+
+# Delete Document
+
+- MongoDB's remove() method is used to remove a document from the collection. remove() method accepts two parameters. One is deletion criteria and second is justOne flag.
+  - `deletion criteria` − (Optional) deletion criteria according to documents will be removed.
+  - `justOne` − (Optional) if set to true or 1, then remove only one document.
+
+- Basic syntax of remove() method is as follows −
+  ```
+  >db.COLLECTION_NAME.remove(DELLETION_CRITTERIA)
+  ```
+  Lets see a real world example:
+  ```
+  >db.mycol.remove({'title':'MongoDB Overview'})
+  ```
+  
+- If there are multiple records and you want to delete only the first record, then set justOne parameter in remove() method.
+  ```
+  >db.COLLECTION_NAME.remove(DELETION_CRITERIA,1)
+  ```
+  
+- If you don't specify deletion criteria, then MongoDB will delete whole documents from the collection.
+  ```
+  >db.mycol.remove({})
+  ```
+  Removes all documents 
+  
+<br>
+<br>
+<br>
+
+# Projection
  
  
  
