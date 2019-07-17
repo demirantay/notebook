@@ -185,7 +185,78 @@
 <br>
 
 # Insert Document 
+
+- To insert data into MongoDB collection, you need to use MongoDB's insert() or save() method. The basic syntax of insert() command is as follows −
+  ```
+  >db.COLLECTION_NAME.insert(document)
+  ```
+  Lets see a real world example:
+  ```
+  >db.mycol.insert({
+     _id: ObjectId(7df78ad8902c),
+     title: 'MongoDB Overview', 
+     description: 'MongoDB is no sql database',
+     by: 'tutorials point',
+     url: 'http://www.tutorialspoint.com',
+     tags: ['mongodb', 'database', 'NoSQL'],
+     likes: 100
+  })
+  ```
+  Here `mycol` is our collection name, as created in the previous chapter. If the collection doesn't exist in the database, then MongoDB will create this collection and then insert a document into it. In the inserted document, if we don't specify the _id parameter, then MongoDB assigns a unique ObjectId for this document. _id is 12 bytes hexadecimal number unique for every document in a collection. 
  
+<br>
+<br>
+<br>
+
+# Query Document
+
+- To query data from MongoDB collection, you need to use MongoDB's find() method. The basic syntax of find() method is as follows −
+  ```
+  >db.COLLECTION_NAME.find()
+  ```
+  find() method will display all the documents in a non-structured way.
+  
+  To display the results in a formatted way, you can use pretty() method.
+  ```
+  >db.mycol.find().pretty()
+  ```
+  Apart from find() method, there is findOne() method, that returns only one document.
+  
+  ### RDBMS Comparisons
+  
+  To query the document on the basis of some condition, you can use following operations.
+  
+  |Operation|Syntax|Example|RDBMS|
+  |------|-----|------|------|
+  |Equality|{key:value}|db.mycol.find({"by":"tutorials point"}).pretty()| WHERE by = 'tutorials point'|
+  |Less Than|{key:{$lt:value}}| db.mycol.find({"likes":{$lt:50}}).pretty()| WHERE likes < 50 |
+  |Less Than Equals|{key:{$lte:value}}| db.mycol.find({"likes":{$lte:50}}).pretty() | WHERE likes <= 50 |
+  |Greater Than|{key:{$gt:value}}|db.mycol.find({"likes":{$gt:50}}).pretty() | WHERE where likes > 50 |
+  |...|...|...|...|
+  
+  There are many more comparisons with `or` and `and` clauses however there is no point of trying to write them here. Just see this document for the list:
+    - https://www.tutorialspoint.com/mongodb/mongodb_query_document.htm
+    
+<br>
+<br>
+<br>
+
+# Update Document
+
+- MongoDB's update() and save() methods are used to update document into a collection. The update() method updates the values in the existing document while the save() method replaces the existing document with the document passed in save() method. The basic syntax of update() method is as follows −
+  ```
+  >db.COLLECTION_NAME.update(SELECTION_CRITERIA, UPDATED_DATA)
+  ```
+  
+- Consider the mycol collection has the following data 
+  ```json
+  { "_id" : ObjectId(5983548781331adf45ec5), "title":"MongoDB Overview"}
+  { "_id" : ObjectId(5983548781331adf45ec6), "title":"NoSQL Overview"}
+  ```
+  Following example will set the new title 'New MongoDB Tutorial' of the documents whose title is 'MongoDB Overview'
+  ```
+  >db.mycol.update({'title':'MongoDB Overview'},{$set:{'title':'I changed the title wubababa'}})
+  ```
  
  
  
