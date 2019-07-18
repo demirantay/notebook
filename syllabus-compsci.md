@@ -146,6 +146,7 @@ Fundemental Computer Science Cirriculum
 - [ ] Build tools: learn about Linters and Formatters (Prettier, ESLint .etc.)
 - [ ] Build tools: learn about module bundlers(webpack)
 - [ ] Build tools: learn about task runners (npm scripts)
+- [ ] Learn CMS dev likse wordpress, squarespcae etc. (If you are working freelance)
 - [ ] Learn a js framework (React, agnular, vue
 - [ ] Learn about CSS in JS : styled components, CSS modules, Emotion, Radium, Glamarous
 - [ ] Learn how to test your frontend apps
