@@ -54,6 +54,8 @@
   - Small devices (tablets, 768px and up) -- (max column width:  60px / divided into 12 col)
   - Medium devices (desktops, 992px and up) -- (max column width: 78px / divided into 12 col)
   - Large devices (large desktops, 1200px and up) -- (max column width: 95px / divided into 12 col)
+  
+  Note: Remember try not give more than 15px of padding inside the columns.
     
  
 - Grid systems are used for creating page layouts through a series of rows and columns that house your content. Here's how the Bootstrap grid system works −
@@ -64,7 +66,147 @@
   - Columns create gutters (gaps between column content) via padding. That padding is offset in rows for the first and the last column via negative margin on `.rows`
   - Grid columns are created by specifying the number of twelve available columns you wish to span. For example, three equal columns would use three `.col-xs-4`
   
+- Lets see a basic structure of the bootstrap grid:
+  ```html
+  <div class="container">
   
+    <div class="row">
+      <div class="col-xs-6">
+      <div class="col-xs-6>
+    </div>
   
+    <div class="row">...</div>
+  
+  </div>
+  ```
+  While developing for multiple screens remember you can give column multiple size classes like this:
+  ```html
+  <div class="col-xs-1 col-sm-3 col-md-6 col-lg-8"> ...
+  ```
+  
+- While developing bootstrap you will sometimes run into bugs in overlapping not sizing properly problems inside your grid system, before you attempt anything just write this simple code in between the columns that has the problem:
+  ```html
+  <div class="col-**"> ... </div>
+   
+  <div class = "clearfix visible-xs"></div>
+      
+  <div class="col-**"> ... </div>
+  ```
+  If this does not work then try debugging it on your own
+  
+- You can nest columns inside a column like this:
+  ```html
+  <div class="row">
+    <div class="col-md-12">
+      <div class="row">
+        <div class="col-md-6">...</div>
+        <div class="col-md-6">...</div>
+      </div>
+    </div>
+  </div>
+  ```
+  
+- There are much more to learn about the grid system in bootstrap. Go figure it, the link below is just a good starting point:
+  - https://www.tutorialspoint.com/bootstrap/bootstrap_grid_system.htm
+  
+<br>
+<br>
+<br>
+<br>
+
+# CSS Overview
+
+- Bootstrap makes use of certain HTML elements and CSS properties that require the use of the HTML5 doctype. Do not ferget to include it at the top of your webpage:
+  ```html
+  <!DOCTYPE html>
+  ...
+  ```
+  
+- Since Bootstrap 3 has been launched, Bootstrap has become mobile first. It means 'mobile first' styles can be found throughout the entire library instead of them in separate files. You need to add the viewport meta tag to the <head> element, to ensure proper rendering and touch zooming on mobile devices.
+  ```html
+  <meta name = "viewport" content = "width = device-width, initial-scale = 1.0">
+  ```
+  Add user-scalable = no to the content attribute to disable zooming capabilities on mobile devices as shown below. Users are only able to scroll and not zoom with this change, and results in your site feeling a bit more like a native application. So the code will be actually (note bootstrap does not recomment this attribute):
+  ```html
+  <meta name = "viewport" content = "width = device-width, initial-scale = 1.0, maximum-scale = 1.0, user-scalable = no">
+  ```
+  
+<br>
+<br>
+<br>
+
+# Typography
+
+- There are many things you can do with the typagrahy in bootstrap. The most commonly used ones that come to my minde are:
+  ```html
+  class="text-center"
+  class="text-warning"
+  class="text-info"
+  class="list-inline"
+  ...
+  ```
+  
+- You can check out most of the typography stuff from the documentation but before doing that definelty read this first:
+  - https://www.tutorialspoint.com/bootstrap/bootstrap_typography.htm
+  
+<br>
+<br>
+<br>
+
+# Buttons
+
+- You can easily create buttons with bootstrap and give them colors by assagning warning, succsess, info ...etc.
+  ```html
+  <a href=".." class="btn btn-success">
+  ```
+  You can change the buttons size with:
+  ```html
+  <a href=".." class="btn btn-lg">
+  ```
+  
+- There are much more you can do check out the official docs. But before you do it you can start by reading this awsome tutorial:
+  - https://www.tutorialspoint.com/bootstrap/bootstrap_buttons.htm
+  
+<br>
+<br>
+<br>
+
+# Images 
+
+- Bootstrap provides you 3 types of image classes and they are self explanatory from their class names:
+  ```html
+  <img class = "img-rounded">
+  <img class = "img-circle">
+  <img class = "img-thumbnail">
+  ```
+
+<br>
+<br>
+
+---
+
+# Other Bootstrap CSS Pointers
+
+As I said many times there are lot of things in bootstrap that cannot be covered in a single note file. For more info on Bootstraps `CSS` check out the documentation plus you can start reading these awsome tutorials:
+  - `Code` - https://www.tutorialspoint.com/bootstrap/bootstrap_code.htm
+  - `Tables` - https://www.tutorialspoint.com/bootstrap/bootstrap_tables.htm
+  - `Forms` - https://www.tutorialspoint.com/bootstrap/bootstrap_forms.htm
+  - `Helpers` - https://www.tutorialspoint.com/bootstrap/bootstrap_helper_classes.htm
+  - `Responsivness` -  https://www.tutorialspoint.com/bootstrap/bootstrap_responsive_utilities.htm
+  
+<br>
+<br>
+<br>
+<br>
+
+# Bootstrap Layout Components
+
+- I cannot note all of these components in a single or two note files. These are just references to what you can with each og the component, instead of noting everything I am just going to provide pointer to the relative tutorials for future use.
+
+- Layout Components:
+  - `Glyphicons` - You can add icons to your links, buttons, paragraphs ... etc. (https://www.tutorialspoint.com/bootstrap/bootstrap_glyphicons.htm)
+  - `Drop Downs` - This will help you create a drop down menu without having to deal with javascripts display on and off. It is just a one simple class (https://www.tutorialspoint.com/bootstrap/bootstrap_dropdowns.htm)
+  - 
+
   
   
