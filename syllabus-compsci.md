@@ -157,7 +157,9 @@ Fundemental Computer Science Cirriculum
 - [ ] Static site generators
 - [ ] Desktop Applications (electron)
 - [ ] Optional mobile applications with frontend (react native)
-- [ ] Do a very advanced project and use everything you have learned so far.
+- [ ] Try to redo everyproject with more advanced use of the technology
+- [ ] Create a markup lang like html, design a styling for it, optional: you can try to clone javascript to udnerstand the language more
+- [ ] Try to clone a frontend framework so that you can understand more about the tech you are trying to understand 
 
 ### Back End
 
