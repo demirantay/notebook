@@ -141,7 +141,7 @@ Fundemental Computer Science Cirriculum
 - [ ] Javascript, after learning the language ([tutorias on point](https://www.tutorialspoint.com/javascript/)) learn the following: DOM API, fetching API with Ajax, ES6+modular javscript, Hoisting, Event Bubbling, Scope, Prototype, Shadow DOM, strict, how browsers work, DNS, HTTP
 - [ ] Learn pacakage managers (either one npm or yarn)
 - [ ] Learn CSS pre-processors such as SASS or POST CSS
-- [ ] Learn CSS frameworks: Boostrap is the most used option
+- [X] Learn CSS frameworks: Boostrap is the most used option
 - [X] Learn about CSS architecture: BEM
 - [ ] Build tools: learn about Linters and Formatters (Prettier, ESLint .etc.)
 - [ ] Build tools: learn about module bundlers(webpack)
