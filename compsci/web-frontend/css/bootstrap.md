@@ -215,7 +215,17 @@ As I said many times there are lot of things in bootstrap that cannot be covered
   - `Label` - styling labels help us understand what is info, danger, warning etc. [Click here for more info](https://www.tutorialspoint.com/bootstrap/bootstrap_labels.htm)
   - `Badges` - You can create badges like notifications alert, message numbers etc. [Click here for more info](https://www.tutorialspoint.com/bootstrap/bootstrap_badges.htm)
   - `Jumbotron` -  This is used mostly for welcome banners at the top of the page. [Click here for more info](https://www.tutorialspoint.com/bootstrap/bootstrap_jumbotron.htm)
-  - `Thumbnail` - 
+  - `Thumbnail` - A lot of sites need a way to lay out images, videos, text, etc, in a grid. [Click here for more info](https://www.tutorialspoint.com/bootstrap/bootstrap_thumbnails.htm)
+  - `Alerts` - Alerts provide a way to style messages to the user. [Click here for more info](https://www.tutorialspoint.com/bootstrap/bootstrap_alerts.htm)
+  - `Progress Bars` - The purpose of progress bars is to show that assets are loading, in progress. [Click here for more info](https://www.tutorialspoint.com/bootstrap/bootstrap_progress_bars.htm)
+  - `Media Object` - These are abstract object styles for building various types of components (like blog comments, Tweets, etc.) that feature a left-aligned or right-aligned image alongside the textual content. [Click here for more info](https://www.tutorialspoint.com/bootstrap/bootstrap_media_object.htm)
+  - `List Group` -  The purpose of list group component is to render complex and customized content in lists. To get a basic list group. [Click here for more info](https://www.tutorialspoint.com/bootstrap/bootstrap_list_group.htm)
+
+<br>
+<br>
+<br>
+
+# Plugins Overview
   
 
   
