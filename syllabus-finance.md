@@ -9,6 +9,7 @@ Do these in order however after the intro you are free to choose specializing in
 - [ ] Read: Yatirim 101
 - [ ] Read: Ekonomi 101
 - [ ] amazondan butun 101 kitaplarini al
+- (( Tutorial Point ten de spesifik konulara bakmayi unutma))
 - [ ] Read: Benjamin Graham -- Smart Investor
 - [ ] Course: Khan Academy -- [Personal Finance](https://www.khanacademy.org/college-careers-more/personal-finance)
 - [ ] Course: Khan Academy -- [Finance and Capital Markets](https://www.khanacademy.org/economics-finance-domain/core-finance)
