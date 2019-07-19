@@ -204,9 +204,19 @@ As I said many times there are lot of things in bootstrap that cannot be covered
 - I cannot note all of these components in a single or two note files. These are just references to what you can with each og the component, instead of noting everything I am just going to provide pointer to the relative tutorials for future use.
 
 - Layout Components:
-  - `Glyphicons` - You can add icons to your links, buttons, paragraphs ... etc. (https://www.tutorialspoint.com/bootstrap/bootstrap_glyphicons.htm)
-  - `Drop Downs` - This will help you create a drop down menu without having to deal with javascripts display on and off. It is just a one simple class (https://www.tutorialspoint.com/bootstrap/bootstrap_dropdowns.htm)
-  - 
+  - `Glyphicons` - You can add icons to your links, buttons, paragraphs ... etc. [Click here for more info](https://www.tutorialspoint.com/bootstrap/bootstrap_glyphicons.htm)
+  - `Drop Downs` - This will help you create a drop down menu without having to deal with javascripts display on and off. It is just a one simple class [Click here for more info](https://www.tutorialspoint.com/bootstrap/bootstrap_dropdowns.htm)
+  - `Button Groups` - Button groups allow multiple buttons to be stacked together on a single line.  [Click here for more info](https://www.tutorialspoint.com/bootstrap/bootstrap_button_groups.htm)
+  - `Button Dropdowns` - These classes let you have a drop down menu for your buttons. [Click here for more info]
+  - `Input Groups` - You can edit your inputs with these calsses. [Click here for more info](https://www.tutorialspoint.com/bootstrap/bootstrap_input_groups.htm)
+  - `Navigation Elements` - You can edit the navigation elements esaily. [Click here for more info](https://www.tutorialspoint.com/bootstrap/bootstrap_navigation_elements.htm)
+  - `Navbar` - Instead of the navs elements you can edit the nav iteslf too. [Click here for more info](https://www.tutorialspoint.com/bootstrap/bootstrap_navbar.htm)
+  - `Pagination` - pagination is mostly adding links to your pages down below. [Click here for more info](https://www.tutorialspoint.com/bootstrap/bootstrap_pagination.htm) 
+  - `Label` - styling labels help us understand what is info, danger, warning etc. [Click here for more info](https://www.tutorialspoint.com/bootstrap/bootstrap_labels.htm)
+  - `Badges` - You can create badges like notifications alert, message numbers etc. [Click here for more info](https://www.tutorialspoint.com/bootstrap/bootstrap_badges.htm)
+  - `Jumbotron` -  This is used mostly for welcome banners at the top of the page. [Click here for more info](https://www.tutorialspoint.com/bootstrap/bootstrap_jumbotron.htm)
+  - `Thumbnail` - 
+  
 
   
   
