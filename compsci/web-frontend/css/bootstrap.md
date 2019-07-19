@@ -226,6 +226,35 @@ As I said many times there are lot of things in bootstrap that cannot be covered
 <br>
 
 # Plugins Overview
+
+- The components discussed in the previous chapters under Layout Components are just the beginning. Bootstrap comes bundled with 12 jQuery plugins that extend the features and can add more interaction to your site.
+
+- All plugins depend on jQuery. So jQuery must be included before the plugin files. Check bower.json to see which versions of jQuery are supported.
+
+- All of the Bootstrap plugins are accessible using the included Data API. Hence, you don’t need to include a single line of JavaScript to invoke any of the plugin features.
+  
+  In some situations it may be desirable to turn this functionality of Data API off. If you need to turn off the Data API, you can unbind the attributes by adding the following line of JavaScript −
+  ```js
+  $(document).off('.data-api')
+  ```
+  To turn off a specific/single plugin, just include the plugin's name as a namespace along with the data-api namespace like this −
+  ```js
+  $(document).off('.alert.data-api')
+  ```
+  
+- There are many plugins so it is not possible to note them all down in a single file. Instead like I did above I will list them with their respective headers and links to tutorials that teach it better:
+  - `Transition Plugin` - The transition plugin provides a simple transition effects. [Click here for more info](https://www.tutorialspoint.com/bootstrap/bootstrap_transition_plugin.htm)
+  - `Modal Plugin` - A modal is a child window that is layered over its parent window. Typically, the purpose is to display content from a separate source that can have some interaction without leaving the parent window. Child windows can provide information, interaction, or more. [Click here for more info](https://www.tutorialspoint.com/bootstrap/bootstrap_modal_plugin.htm)
+  - `Dropdown Plugin` - Using Dropdown plugin you can add dropdown menus to any components like navbars, tabs, pills and buttons. [Click here for more info](https://www.tutorialspoint.com/bootstrap/bootstrap_dropdown_plugin.htm)
+  - `Scrollspy Plugin` - The Scroll spy (auto updating nav) plugin allows you to target sections of the page based on the scroll position. [Click here for more info](https://www.tutorialspoint.com/bootstrap/bootstrap_scrollspy_plugin.htm)
+  - `Tab Plugin` - Tabs were introduced in the chapter Bootstrap Navigation Elements. By combining a few data attributes, you can easily create a tabbed interface. With this plug-in you can transition through panes of local content in tabs or pills, even via drop down menus. [Click here for more info](https://www.tutorialspoint.com/bootstrap/bootstrap_tab_plugin.htm)
+  - `Tooltip Plugin` - Tooltips are useful when you need to describe a link. [Click here for more info](https://www.tutorialspoint.com/bootstrap/bootstrap_tooltip_plugin.htm)
+  - `Popover Plugin` - The popover is similar to tooltip, offering an extended view complete with a heading. For the popover to activate, a user just needs to hover the cursor over the element. [Click here for more info](https://www.tutorialspoint.com/bootstrap/bootstrap_popover_plugin.htm)
+  - `Alert Plugin` - Alert messages are mostly used to display information such as warning or confirmation messages to the end users. [Click for more info](https://www.tutorialspoint.com/bootstrap/bootstrap_alert_plugin.htm)
+  - `Button Plugin` - With this plugin you can add in some interaction such as control button states or create groups of buttons for more components like toolbars. [Click here for more info](https://www.tutorialspoint.com/bootstrap/bootstrap_button_plugin.htm)
+  - `Collapse Plugin` - The collapse plugin makes it easy to make collapsing divisions of the page. Whether you use it to build an accordion navigation or content boxes, it allows for a lot of content options. [Click here for more info](https://www.tutorialspoint.com/bootstrap/bootstrap_collapse_plugin.htm)
+  - `Carousel Plugin` - The Bootstrap carousel is a flexible, responsive way to add a slider to your site. In addition to being responsive, the content is flexible enough to allow images, iframes, videos, or just about any type of content that you might want. [Click here for more info](https://www.tutorialspoint.com/bootstrap/bootstrap_carousel_plugin.htm)
+  - `Affix Plugin` - The affix plugin allows a <div> to become affixed to a location on the page. You can also toggle it's pinning on and off using this plugin. A common example of this are social icons. They will start in a location, but as the page hits a certain mark, the <div> will be locked in place and will stop scrolling with the rest of the page. [Click here for more info](https://www.tutorialspoint.com/bootstrap/bootstrap_affix_plugin.htm)
   
 
   
