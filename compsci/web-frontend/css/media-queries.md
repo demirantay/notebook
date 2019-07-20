@@ -8,13 +8,11 @@
     background-color: blue;
   }
   
-  @media screen and (max-width: 480px) {
+  @media screen and (min-width: 0px) and (max-width: 480px) {
     body {
       background-color: red;
     }
   }
-  
-  /* you can also use `min` check the docs for more info
   ```
   So initially when the site is fired up the background color is `blue` however when ever the browser that is displaying our page get shrinked from the sides and its width goes below or equal to `480px` then the background color changes to red;
   
