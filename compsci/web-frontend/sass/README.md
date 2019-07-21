@@ -24,7 +24,7 @@
 <br>
 <br>
 
-# Running Sass
+# Compiling Sass
 
 - Once you start tinkering with Sass, it will take your preprocessed Sass file and compile it as a normal CSS file that you can use in your website. 
 
@@ -33,6 +33,17 @@
   $ sass input.scss output.css
   ```
   from your terminal would take a single Sass file, `input.scss`, and compile that file to `output.css`.
+  
+- You can also watch individual files or directories with the --watch flag. The watch flag tells Sass to watch your source files for changes, and re-compile CSS each time you save your Sass. If you wanted to watch (instead of manually build) your input.scss file, you'd just add the watch flag to your command, like so:
+  ```
+  $ sass --watch input.scss output.css
+  ```
+  
+  
+  ---
+  ---
+  
+  Shelved learning SASS for now I will come back in the future
 
 
 	
