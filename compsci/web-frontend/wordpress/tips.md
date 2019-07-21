@@ -83,8 +83,25 @@ Hosting`: You should always know what host to recommend your clients. For almost
 
 - Link: https://www.hostinger.com/tutorials/how-to-become-wordpress-developer
 
+- With wordpress you can create:
+	- Themes – the look and the feel of the site;
+	- Plugins – changes or extends to the behaviour of WP;
+	- Widgets – to appear in sidebars and present specific information;
+	- Entire WordPress websites – combining themes, plugins, and custom code to create a unique website based on a client’s -	needs; for this, you need fast and secure WordPress hosting;
+	- New applications that use WordPress as the backend, using the REST API;
 		
-		
+- Plugins modify the behaviour of WordPress without touching the core code. PHP is used heavily, so understanding of how to call and write functions is required. They are standalone code that interfaces with WordPress using functions provided by the core code. You can see this link for more info: https://www.hostinger.com/tutorials/how-to-create-wordpress-plugin
+
+- Another useful resource for using SQL with Wordpress:
+	- https://codex.wordpress.org/Class_Reference/wpdb
+	
+- If you are making a WordPress powered website for a client, you’ll typically need to create themes and plugins. Any features/functions that are independant of the theme should be a plugin, so that in the future the person can easily switch to a new theme without losing important functions. It’s important to get an accurate picture of what the client wants before formally agreeing to do the work.
+
+- However, first you should make your own themes or plugins and upload them to the WordPress repository. Nothing sells you more than practical experience. The stronger your portfolio, the more likely you are to find higher paying work. Even just creating a demo WordPress site is valuable for your portfolio – some people just need help getting started.
+
+- When making an agreement with a client, it’s important to have recorded proof of your agreement. You should always make a contract that both you and the client must sign. It should clearly state your pay rate for the work and the extent of the work. It should state whether you are charging a flat fee or an hourly rate. There should be an agreed deadline or time frame for delivery to the client. You should also give the client a reasonable amount of time to complete payment upon delivery.
+	
+	After the work is complete you should send the client an invoice that lists your work, the date it was delivered, the final price, etc.
 		
 		
 		
