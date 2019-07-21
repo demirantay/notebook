@@ -54,6 +54,8 @@
 	 $ php filename.php
 	 ```
 	 
+- If you are using XAMPP for local development just open its folders and create a new project(directory) inside the `htdocs` and than start the server.
+	 
 <br>
 <br>
 <br>
@@ -81,7 +83,7 @@
 	$bool = TRUE;
 	$nada = NULL;
 	$str = "hello";
-	$arr = [1, 2];
+	$arr = array(1, 2);
 	...
 	```
 	
@@ -95,6 +97,22 @@
 	```php
 	echo "number: , 5231923
 	```
+	or you can include vars in strings:
+	```
+	"number: $int_var"
+	```
+	Note: this method will not work with single quoted strings
+	
+	Btw if you want to concatenete two strings you can use the `,` like in python but php community actually likes more if you use `.` dots:
+	```php
+	$str1.$str2."\n";
+	```
+	
+- You can get the length of a string with:
+	```php
+	strlen($str);
+	```
+	There are much more things you can do. PHP docs are really well documented you can check out for more ...
 	
 <br>
 <br>
@@ -122,6 +140,89 @@
 <br>
 
 # Loops
+
+- For loop:
+  ```php
+  for ($i = 0; $i < 10; $i++) { ... }
+  ```
+  
+- While Loop
+  ```php
+  while ($i < 10) {...}
+  ```
+  
+- Do ... While loop:
+	```php
+	do {
+		...
+	} while($i < 10)
+	```
+	
+- Foreach loop:
+	```php
+	foreach ($element as $array) {...}
+	```
+	
+- There are `break` and `continue` control statements in loops while using php
+
+<br>
+<br>
+<br>
+
+# Arrays
+
+- Normal Arrays:
+	```php
+	$numbers = array(1, 2, 3, 4, 5);
+	```
+	You accsess values like this:
+	```php
+	$numbers[0];
+	```
+	
+- Associative Arrays: ( Associative array will have their index as string so that you can establish a strong association between key and values.)
+	```php
+	$salaries = array("john" => 2000, "beck" => 3400);
+	```
+	You access values like this:
+	```php
+	$salaries['john'];
+	```
+	
+- Multidimensional array:
+	```php
+	$multidim = array(
+		"foo" => array(
+				"a" => 10
+		),
+		
+		"bar" => array(
+				"b" => 30
+		)
+	);
+	```
+	You can access the elements with this:
+	```php
+	$multidim["foo"]["a"];
+	```
+
+<br>
+<br>
+<br>
+
+# Web Concepts
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
 
 
 
