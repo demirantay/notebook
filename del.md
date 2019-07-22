@@ -23,6 +23,7 @@
 
 
 apps:
+- brew
 - android file transfer
 - atom:
   - ppacakges (atom-beautify, atom-html-preview, autoclose-html, autocomplete-python, busy-signal, color-picker, highlight-selected, intentions, linter, linter-flake8, minimap, pigments, file-icons) Colors: Atom dark - monokai
