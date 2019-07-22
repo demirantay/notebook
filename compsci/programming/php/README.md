@@ -54,7 +54,7 @@
 	 $ php filename.php
 	 ```
 	 
-- If you are using XAMPP for local development just open its folders and create a new project(directory) inside the `htdocs` and than start the server.
+- If you are using XAMPP for local development just open its folders and create a new project(directory) inside the `htdocs` and than start the server. You can accsess the admin interface typing `localhost/phpmyadmin` in your url tab while running your server.
 	 
 <br>
 <br>
@@ -210,12 +210,151 @@
 <br>
 <br>
 
+# File Inclusion
+
+- You can include the content of a PHP file into another PHP file before the server executes it. There are two PHP functions which can be used to included one PHP file into another PHP file:
+	- The include() Function
+	- The require() Function
+	
+	This is a strong point of PHP which helps in creating functions, headers, footers, or elements that can be reused on multiple pages. This will help developers to make it easy to change the layout of complete website with minimal effort. If there is any change required then instead of changing thousand of files just change included file.
+	
+- `include()` -  The include() function takes all the text in a specified file and copies it into the file that uses the include function. If there is any problem in loading a file then the include() function generates a warning but the script will continue execution.
+
+
+	```php
+	<html>
+		 <body>
+
+				<?php include("menu.php"); ?>
+				<p>This is an example to show how to include PHP file!</p>
+
+		 </body>
+	</html>
+	```
+	
+- `require()` - function takes all the text in a specified file and copies it into the file that uses the include function. If there is any problem in loading a file then the require() function generates a fatal error and halt the execution of the script.
+	
+	So there is no difference in require() and include() except they handle error conditions. It is recommended to use the require() function instead of include(), because scripts should not continue executing if files are missing or misnamed.
+	```php
+	<html>
+		 <body>
+
+				 <?php require("xxmenu.php"); ?>
+				 <p>This is an example to show how to include wrong PHP file!</p>
+
+		 </body>
+	</html>
+	```
+	
+<br>
+<br>
+<br>
+
+# Functions
+
+- I am not going to into details about the logics in functions since I have done it many times in other programming language files. You can write them like this:
+	```php
+	function squared ($n) {
+		return $n * $n;
+	}
+	```
+	
+- You can set default values to your function parameters in php like this:
+	```php
+	function foo ($num=10) {...}
+	```
+	
+- It is also possible to assign function names as strings to variables and then treat these variables exactly as you would the function name itself. Following example depicts this behaviour.
+	```php
+	function sayHello() {
+  	echo "Hello<br />";
+  }
+         
+  $function_holder = "sayHello";
+  $function_holder();
+	```
+
+<br>
+<br>
+<br>
+
 # GET & POST Methods
 
 - There are two ways the browser client can send information to the web server:
 	- The GET Method
 	- The POST Method
+	
+- I am not going to note it down since this note file is getting too large. You can view it from the following resources or go to the official documentation:
+	- TutorialPoint - https://www.tutorialspoint.com/php/php_get_post.htm
+	- Video: 
 
+...
+
+<br>
+<br>
+<br>
+
+# Cookies 
+
+- There are three steps involved in identifying returning users −
+	- Server script sends a set of cookies to the browser. For example name, age, or identification number etc.
+	- Browser stores this information on local machine for future use.
+	- When next time browser sends any request to web server then it sends those cookies information to the server and server uses that information to identify the user.
+	
+- I am not going to note it down since this note file is getting too large. You can view it from the following resources or go to the official documentation:
+	- TutorialPoint - https://www.tutorialspoint.com/php/php_cookies.htm
+	- Video: 
+
+<br>
+<br>
+<br>
+
+# Files & I/O
+
+- Since php is a programming language you can do:
+	- Opening a file
+	- Reading a file
+	- Writing a file
+	- Closing a file
+	
+- Since this note file is getting too large I am not going to note this down you can visit these links for a starting point:
+	- TutorialPoint - https://www.tutorialspoint.com/php/php_files.htm
+	- Video - 
+
+<br>
+<br>
+<br>
+
+# Sessions
+
+- An alternative way to make data accessible across the various pages of an entire website is to use a PHP Session. A session creates a file in a temporary directory on the server where registered session variables and their values are stored. This data will be available to all pages on the site during that visit.
+
+- - Since this note file is getting too large I am not going to note this down you can visit these links for a starting point:
+	- TutorialPoint - https://www.tutorialspoint.com/php/php_sessions.htm
+	- Video - 
+
+<br>
+<br>
+<br>
+
+# Sending Emails
+
+- You can send emails using php however as I satated above this note file is getting too large just visit the links below or read the official documentation:
+	- TutorialPoint: https://www.tutorialspoint.com/php/php_sending_emails.htm
+	- Vide - 
+	
+<br>
+<br>
+<br>
+
+# File Uploading
+
+- A PHP script can be used with a HTML form to allow users to upload files to the server. Initially files are uploaded into a temporary directory and then relocated to a target destination by a PHP script.
+
+- 
+- - Since this note file is getting too large I am not going to note this down you can visit these links for a starting point:
+	- TutorialPoint - https://www.tutorialspoint.com/php/php_file_uploading.htm
+	- Video - 
 
 
   
