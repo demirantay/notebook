@@ -23,6 +23,7 @@
 
 
 apps:
+- git
 - brew
 - android file transfer
 - atom:
