@@ -1,0 +1,22 @@
+- linkedin
+- kondisyon aleti
+- mutfak terazisi
+- onetab
+- acikogretim
+- upwork
+- freelancer
+- peopleperhour
+- hackerrank 
+- evarkadasi
+- milanote
+- https://ais.osym.gov.tr/IslemTakvimi
+- http://www.osym.gov.tr/genel/anasayfa.aspx
+- https://wordpress.org/support/article/introduction-to-blogging/
+- https://www.tutorialspoint.com/php/php_coding_standard.htm
+- https://www.youtube.com/watch?v=ZFEAwdxH5xM&list=PL0eyrZgxdwhwBToawjm9faF1ixePexft-&index=16
+- https://www.tutorialspoint.com/wordpress/wordpress_installation.htm
+- https://wordpress.org/support/
+- https://wordpress.org/support/article/how-to-install-wordpress/
+- https://wordpress.org/download/
+- https://wordpress.org/support/article/new_to_wordpress_-_where_to_start/
+- https://codex.wordpress.org/
