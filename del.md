@@ -20,3 +20,17 @@
 - https://wordpress.org/download/
 - https://wordpress.org/support/article/new_to_wordpress_-_where_to_start/
 - https://codex.wordpress.org/
+
+
+apps:
+- android file transfer
+- atom:
+  - ppacakges (atom-beautify, atom-html-preview, autoclose-html, autocomplete-python, busy-signal, color-picker, highlight-selected, intentions, linter, linter-flake8, minimap, pigments, file-icons) Colors: Atom dark - monokai
+- discord
+- firefox
+- chrome
+- flux
+- postgres
+- python
+- spotify
+- xampp
