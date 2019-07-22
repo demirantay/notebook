@@ -210,7 +210,11 @@
 <br>
 <br>
 
-# Web Concepts
+# GET & POST Methods
+
+- There are two ways the browser client can send information to the web server:
+	- The GET Method
+	- The POST Method
 
 
 
