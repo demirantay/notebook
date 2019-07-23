@@ -286,7 +286,7 @@
 	
 - I am not going to note it down since this note file is getting too large. You can view it from the following resources or go to the official documentation:
 	- TutorialPoint - https://www.tutorialspoint.com/php/php_get_post.htm
-	- Video: 
+	- Video: https://www.youtube.com/watch?v=pkxqlfLioCk&list=PL0eyrZgxdwhwBToawjm9faF1ixePexft-&index=26
 
 ...
 
@@ -303,7 +303,7 @@
 	
 - I am not going to note it down since this note file is getting too large. You can view it from the following resources or go to the official documentation:
 	- TutorialPoint - https://www.tutorialspoint.com/php/php_cookies.htm
-	- Video: 
+	- Video: https://www.youtube.com/watch?v=jort8_4U-88&list=PL0eyrZgxdwhwBToawjm9faF1ixePexft-&index=27
 
 <br>
 <br>
@@ -331,7 +331,7 @@
 
 - - Since this note file is getting too large I am not going to note this down you can visit these links for a starting point:
 	- TutorialPoint - https://www.tutorialspoint.com/php/php_sessions.htm
-	- Video - 
+	- Video - https://www.youtube.com/watch?v=3CS-eQdcMLU&list=PL0eyrZgxdwhwBToawjm9faF1ixePexft-&index=28
 
 <br>
 <br>
@@ -355,6 +355,32 @@
 - - Since this note file is getting too large I am not going to note this down you can visit these links for a starting point:
 	- TutorialPoint - https://www.tutorialspoint.com/php/php_file_uploading.htm
 	- Video - 
+	
+<br>
+<br>
+<br>
+
+# Predefined Variables
+
+- PHP provides a large number of predefined variables to any script which it runs. PHP provides an additional set of predefined arrays containing variables from the web server the environment, and user input. These new arrays are called superglobals −
+
+- You can a neatly listed version of predefined variables at this link:
+	- https://www.tutorialspoint.com/php/php_predefined_variables.htm
+	
+<br>
+<br>
+<br>
+
+# Error Handling
+
+- Error handling is the process of catching errors raised by your program and then taking appropriate action. If you would handle errors properly then it may lead to many unforeseen consequences. This file is getting too large instead of noting it here you can visit the following links as a starter point to the part of the technollogy:
+	- TutorialsPoint - https://www.tutorialspoint.com/php/php_error_handling.htm
+	- Vide:
+	
+<br>
+<br>
+<br>
+	
 
 
   
