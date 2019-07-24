@@ -18,4 +18,11 @@
   
   # Tips
   
-  - a
+- Things to know apart from wordpress to become a good WP dev:
+  - SEO Professional
+  - Web and Graphic designer
+  - Digital Marketing, social media marketing, content marketing
+  - Copt Writer (requires a deep understanding of both SEO and content marketing)
+  
+
+... I will add more not finished
