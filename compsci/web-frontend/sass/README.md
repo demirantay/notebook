@@ -38,12 +38,47 @@
   ```
   $ sass --watch input.scss output.css
   ```
+  You can watch and output to directories by using folder paths as your input and output, and separating them with a colon. In this example:
+  ```
+  $ sass --watch app/sass:public/stylesheets
+  ```
+  
+<br>
+<br>
+<br>
+
+# Nested Rules
+
+- Nesting you css code isniside different element blocks is actually called CSS Exention's however for simplicty I noted it as nesting rules.
+
+- `Nested Selectors`: Nesting is combining of different logic structures. Using SASS, we can combine multiple CSS rules within one another. If you are using multiple selectors, then you can use one selector inside another to create compound selectors. For example instead of writing your css code like this:
+	```css
+	#conainer h1 {...}
+	
+	#container p {...}
+	
+	#container p a {...}
+	```
+	You can nest them in each other in SASS like this:
+	```css
+	#container {
+	  p {...}
+		
+		p a {...}
+	}
+	```
+	
+- You can also save repetition by using nesting properties. Lets just say that you have the following css code:
+	```css
+	p {
+	  font-family: Lucida Sans Unicode;
+   	font-size: 20px;
+   	font-weight: bold;
+	}
+	```
+	
   
   
-  ---
-  ---
-  
-  Shelved learning SASS for now I will come back in the future
 
 
 	
