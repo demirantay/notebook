@@ -117,15 +117,77 @@
 	body { color: $theme_color; }
 	```
 	
+- You can set the default values for variables by adding !default flag to the end of the variable value. It will not re-assign the value, if it is already assigned to the variable.
+	```css
+	$foo: 50px !default;
+	```
+	
 - Just like any other vraiable scripts you can do in other programming langauges, you can do them in sass as well. For example while you are defining your variables you can add different `data types` and do various kind of `operations` on them (you can even add two colors together). See the following links for info:
 	- Data Types: https://www.tutorialspoint.com/sass/datatypes.htm
 	- Operations: https://www.tutorialspoint.com/sass/operations.htm
+	
+- You can also write functions inside css files with sass. You can visit the official docs for more info.:
+	- https://sass-lang.com/documentation/at-rules/function
+	
+	
+
+<br>
+<br>
+<br>
+
+# Interpolation
+
+- Yes, you can concatenete strings but if you do not want to do that you can write logic inside data types with interpolation. You simply put the specific logic inside #{} curly braces. lets see an example:
+	```css
+	p {
+		content: "I have #{6+2+2} books on SASS";
+	}
+	```
+	This sass file will create a css file like this:
+	```css
+	p {
+		content: "I have 10 books on SASS";
+	}
+	```
 	
 <br>
 <br>
 <br>
 
-# Functions
+# @import 
+
+- Import directives, imports the SASS or SCSS files. It directly takes the filename to import. All the files which are imported in SASS will get combined in a single CSS file. There are few things that are compiled to a CSS when we use @import rule. You can import in 4 ways:
+	```css
+	@import "style.css";
+	@import "http://tutorialspoint.com/bar";
+	@import url(style);
+	@import "style" screen;
+	```
+	
+- For example lets say that we have a file named `colors.scss` :
+	```css
+	$main: red;
+	$hover: pink;
+	$content: green;
+	```
+	We can import these in a different css file and use its code:
+	```css
+	@import "colors";
+	
+	body {
+		background-color: $main;
+		color: $content;
+	}
+	```
+
+<br>
+<br>
+<br>
+
+# 
+	
+
+
 
 
   
