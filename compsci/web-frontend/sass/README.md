@@ -60,20 +60,30 @@
 	#container p a {...}
 	```
 	You can nest them in each other in SASS like this:
-	```css
+	```
 	#container {
 	  p {...}
 		
-		p a {...}
+	  p a {...}
 	}
 	```
 	
 - You can also save repetition by using nesting properties. Lets just say that you have the following css code:
 	```css
 	p {
-	  font-family: Lucida Sans Unicode;
-   	font-size: 20px;
-   	font-weight: bold;
+		font-family: Lucida Sans Unicode;
+  	font-size: 20px;
+  	font-weight: bold;
+	}
+	```
+	You can use the nested properties in SASS like this:
+	```
+	p {
+		font: {
+			family: Lucida Sans Unicode;
+      size:20px;
+      weight: bold;
+		}
 	}
 	```
 	
