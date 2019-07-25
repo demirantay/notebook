@@ -108,8 +108,26 @@
 <br>
 <br>
 
-# 
+# Variables
+
+- You can use variables inside sass files. This is such a reief since you have to write so many repeating code in css. For example you can add colors to a single variable and when you want to change the theme of the site you will not have to update every goddamn css property in the file. You can simply just update a single variable. See how to write variables:
+	```
+	$theme_color: red;
 	
+	body { color: $theme_color; }
+	```
+	
+- Just like any other vraiable scripts you can do in other programming langauges, you can do them in sass as well. For example while you are defining your variables you can add different `data types` and do various kind of `operations` on them (you can even add two colors together). See the following links for info:
+	- Data Types: https://www.tutorialspoint.com/sass/datatypes.htm
+	- Operations: https://www.tutorialspoint.com/sass/operations.htm
+	
+<br>
+<br>
+<br>
+
+# Functions
+
+
   
   
 
