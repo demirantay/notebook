@@ -70,22 +70,45 @@
 	
 - You can also save repetition by using nesting properties. Lets just say that you have the following css code:
 	```css
-	p {
-		font-family: Lucida Sans Unicode;
-  	font-size: 20px;
-  	font-weight: bold;
-	}
+		p {
+			font-family: Lucida Sans Unicode;
+			font-size: 20px;
+			font-weight: bold;
+		}
 	```
 	You can use the nested properties in SASS like this:
 	```
-	p {
-		font: {
-			family: Lucida Sans Unicode;
-      size:20px;
-      weight: bold;
+		p {
+			font: {
+				family: Lucida Sans Unicode;
+				size:20px;
+				weight: bold;
+			}
 		}
-	}
 	```
+	
+- You can view more about CSS Extensions here: https://www.tutorialspoint.com/sass/sass_css_extensions.htm
+
+<br>
+<br>
+<br>
+
+# Comments
+
+- People who use css always tend to use:
+	```
+	/* this type of comments */
+	```
+	However with sass you can also use singline line:
+	```
+	// language like comments
+	```
+	
+<br>
+<br>
+<br>
+
+# 
 	
   
   
