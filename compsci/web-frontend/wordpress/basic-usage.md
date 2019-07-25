@@ -65,4 +65,51 @@
 
 # Pages
 
+- In WordPress, you can put content on your site as either a “post” or a “page”. When you’re writing a regular blog entry, you write a post. Posts, in a default setup, appear in reverse chronological order on your blog’s home page.
+  
+- In contrast, pages are for non-chronological content: pages like “About” or “Contact” would be common examples. Pages live outside of the normal blog chronology, and are often used to present timeless information about yourself or your site — information that is always relevant. 
+  
+  In addition to the common “About” and “Contact” pages, other examples include “Copyright”, “Disclosure”, “Legal Information”, “Reprint Permissions”, “Company Information” or “Accessibility Statement”.
+  
+- After creating a page for your site you can accsess it through the permalink of the page. You can change the URL's definition from the same menu where you write pages.
+
+- Pages can:
+  - Pages can be organized into pages and subpages.
+  - Pages can use different page templates, including template files, Template Tags and other PHP code.
+  - It’s quite possible to make a website using WordPress which only contains pages.
+
+- Pages cannot:
+  - Pages are not posts, so they don’t appear in the time-structured views within a blog section of a website.
+  - Pages are not included in your site’s “feeds”. (e.g. RSS or Atom.)
+  
+<br>
+<br>
+<br>
+
+# Media Library Screen
+
+- Media consists of the images, video, recordings, and files that you upload and use in your blog. Media is typically uploaded and inserted into the content when writing a Post or writing a Page. Note that the Uploading Setting in the Settings Media Screen describes the location and structure of the upload directory (where your media files are stored). If you do need to upload Media, even if that Media is not related to a Post or Page, then you need to use the Media Add New Screen.
+
+- You can add images, songs, videos ... etc. and many more things check the official documentation for more info.
+
+<br>
+<br>
+<br>
+
+# Comments
+
+- Comments allow your website’s visitors to have a discussion with you and each other. When you activate comments on a Page or post, WordPress inserts several text boxes after your content where users can submit their comments. Once you approve a comment, it appears underneath your content. Whether you want to customize how your receive comments or tweak how your site displays comments, WordPress provides a thorough set of options to build a community from the visitors to your site.
+
+- Before you enable comments on posts or Pages, reviewing the options under Settings > Discussion can help make your life as a moderator easier. Settings > Discussion contains a list of options that change how WordPress processes comments. Experimenting with these settings can help you find a balance between restricting comments to reduce the amount of spam or less-relevant comments you receive and encouraging your users to actively participate on your site
+
+- Because spam is pervasive on the Web, some of the comments you receive will most likely be spam. However, WordPress developers and administrators have already developed a number of successful strategies to help you prevent spam comments from appearing on your site. In addition to experimenting with different options in Settings > Discussion, you can install a WordPress Plugin like Akismet or make other changes to help you keep spam comments under control.
+
+<br>
+<br>
+<br>
+
+# Users Profile 
+
+- The Your Profile Screen is accessible from both the main navigation menu under Users and by clicking on your name link at the top of the WordPress screen. Here you can specify your name and how it will be displayed on your site, your e-mail address (for administrative purposes), other personal information, and personal options.
+
 
