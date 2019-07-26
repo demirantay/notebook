@@ -184,8 +184,38 @@
 <br>
 <br>
 
-# 
-	
+# @media
+
+- This selector is actually very important even for css responsivness. At the moment I am skipping it because I will write a single notefile just for it
+
+<br>
+<br>
+<br>
+
+# @extend
+
+- The @extend directive is used to share rules and relationships between selectors. It can extend all another class styles in one class and can also apply its own specific styles. There are many ways to extend classes but the most common and easiest one is the following:
+	```css
+	h2 {
+		 font-size: 40px;
+	}
+
+	.container{
+		 @extend h2
+	}
+	```
+	The sass content above would be compiled into this CSS code:
+	```css
+	h2, .container {
+		 font-size: 40px;
+	}
+	```
+
+<br>
+<br>
+<br>
+
+# @at-root
 
 
 
