@@ -77,9 +77,15 @@
 <br>
 <br>
 
-# Dashboard
+# Using Permalinks
 
-- From the Dashboard Screen, you can quickly access your site’s content and get glimpses into other areas of the WordPress community. The Dashboard screen presents information in blocks called widgets. By default, WordPress delivers five widgets on this page: At a Glance, Activity, Quick Draft, WordPress Events and News, and Welcome.
+- Permalinks are the permanent URLs to your individual weblog posts, as well as categories and other lists of weblog postings. A permalink is what another weblogger will use to link to your article (or section), or how you might send a link to your story in an e-mail message. The URL to each post should be permanent, and never change — hence permalink.
+
+- There are three basic types of WordPress permalinks:
+  - Default - `http://example.com/?p=N`
+  - mod_rewrite - `http://example.com/2012/post-name/`
+  - PATHINFO - `http://example.com/index.php/yyyy/mm/dd/post-name/`
+    
 
 
 
