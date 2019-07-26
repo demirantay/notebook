@@ -215,10 +215,130 @@
 <br>
 <br>
 
-# @at-root
+# errors, debuggins ... etc.
 
+- You can catch errors, debug your errors and throw fully customizable warning message to your users.  I am not going to note on each @rules instead you can read the following links to have a good starting point for all ofthe directives listed above:
+	- `@error` - https://www.tutorialspoint.com/sass/directives_error.htm
+	- `@debug` - https://www.tutorialspoint.com/sass/directives_debug.htm
+	- `@warn` - https://www.tutorialspoint.com/sass/directives_warn.htm
+	
+<br>
+<br>
+<br>
 
+# Control Directives and Expressions
 
+- I am not going to expalain the logic behind control flows and loops since I have noted them many times in perivious note files. Just learn how to write them in SASS:
+
+- The `@if` directive is used to selectively execute the code statements based on the result of evaluating an expression. The `@if` statements can be followed by several `@else if` statements"
+	```css
+	$type: audi;
+	
+	p {
+		 @if $type == benz {
+				color: red;
+		 } @else if $type == mahindra {
+				color: blue;
+		 } @else if $type == audi {
+				color: green;
+		 } @else {
+				color: black;
+		 }
+	}
+	```
+	
+- The `@for` directive allows you to generate styles in a loop. The counter variable is used to set the output for each iteration:
+	```css
+	@for $i from 1 to 4 {
+		 .p#{$i} { padding-left : $i * 10px; }
+	}
+	```
+	
+- You can write `@while` loos inside sass:
+	```css
+	$i: 50;
+	@while $i > 0 {
+		 .paddding-#{$i} { padding-left: 1px * $i; }
+		 $i: $i - 10;
+	}
+	```
+	This simple sass code would help you writing tons of css repetable code like the following:
+	```css
+	.paddding-50 {
+   	padding-left: 50px;
+	}
+
+	.paddding-40 {
+		 padding-left: 40px; 
+	}
+
+	.paddding-30 {
+		 padding-left: 30px; 
+	}
+
+	.paddding-20 {
+		 padding-left: 20px; 
+	}
+
+	.paddding-10 {
+		 padding-left: 10px; 
+	}
+	```
+	
+	
+- There is also `@each` directive for selection queries but I did not get it at the moment. Im leaving the link where I  left reading at:
+	- https://www.tutorialspoint.com/sass/each_directive.htm
+
+<br>
+<br>
+<br>
+
+# Mixins
+
+- Mixins allow creating a group of styles, which are reusable throughout your stylesheet without any need to recreation of non-semantic classes. In CSS, the mixins can store multiple values or parameters and call function; it helps to avoid writing repetitive codes.
+
+- `Defining a Mixin` - The @mixin directive is used to define the mixins. It includes optionally the variables and argument after the name of the mixin:
+	```css
+	@mixin style {
+		 .cont{
+				color: #77C1EF;
+		 }
+	}
+	
+	@include style;
+	```
+	After compliing this sass code, the css code would only have this class at the top nothing more:
+	```css
+	.cont {
+		color: #77C1EF;
+	}
+	```
+	Note: The @include directive is used to include the mixin in the document. The name of mixin is taken and optional arguments are passed into it. The styles defined by the mixin can be included into the current rule.
+
+- `Arguments` - The SassScript values can be taken as arguments in mixins, which are passed when mixin is included and are available as variable within the mixin. The argument is a name of a variable, which is separated by comma while defining a mixin. There are two types of arguments such as −
+	- Keyword Arguments
+	- Variable Arguments
+	
+	You can write and use keyword arguments like in the following snippet:
+	```css
+	@mixin bordered($color, $width: 2px) {
+		 color: #77C1EF;
+		 border: $width solid black;
+		 width: 450px;
+	}
+
+	.style  {
+		 @include bordered($color:#77C1EF, $width: 2px);
+	}
+	```
+	
+	You can also pass as much as arguments you want without specifiyng their declaration in the definition by using variable arguments but I am too lazy to note them down so instead read this:  https://www.tutorialspoint.com/sass/arguments.htm
+	
+<br>
+<br>
+<br>
+
+# Function Directives 
 
   
   
