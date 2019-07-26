@@ -1,3 +1,13 @@
+---
+
+- I left learning at these links:
+  - https://wordpress.org/support/article/using-permalinks/
+  - https://wordpress.org/support/
+  - https://codex.wordpress.org/
+  - https://www.tutorialspoint.com/wordpress/wordpress_dashboard.htm
+
+---
+
 # Wordpress
 
 - WordPress is an open source Content Management System (CMS), which allows the users to build dynamic websites and blog. WordPress is the most popular blogging system on the web and allows updating, customizing and managing the website from its back-end CMS and components.
