@@ -340,6 +340,25 @@
 
 # Function Directives 
 
+- In this chapter, we will study about Function Directives. In SASS, you can create your own function and use them in your script context or can be used with any value. Functions are called by using the function name and with any parameters.
+	```css
+	$first-width: 5px;
+	$second-width: 5px;
+
+	@function adjust_width($n) {
+		 @return $n * $first-width + ($n - 1) * $second-width;
+	}
+
+	#set_width { padding-left: adjust_width(10); }
+	```
+	You can write functions like that. ( I just copied and pasted it from the tutorial since at the moment i do not know where to use the functions)
+	
+<br>
+<br>
+<br>
+
+There are many more things you can do with sass but at the moment I am not going to note them down because I think this is enough for a starting point cehck out tis official documentation. Sass is one of the best documented tech out there:
+	- Docs: https://sass-lang.com/documentation
   
   
 
