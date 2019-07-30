@@ -15,6 +15,12 @@
 - Limitations:
   - Covers only the view layer of the app, hence you still need to choose other technologies to get a complete tooling set for development such as django, laravel ..etc for your backend models controllers etc.
   
+<br>
+<br>
+<br>
+
+# Installation
+
 - First before development install react with npm:
   ```
   $ npm install react
