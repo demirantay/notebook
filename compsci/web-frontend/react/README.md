@@ -82,3 +82,63 @@
   ```js
   const element = <h1>Hello world</h1>;
   ```
+  This funny tag syntax is neither a string nor HTML. It is called JSX, and it is a syntax extension to JavaScript. We recommend using it with React to describe what the UI should look like. JSX may remind you of a template language, but it comes with the full power of JavaScript.
+  
+  React doesn’t require using JSX, but most people find it helpful as a visual aid when working with UI inside the JavaScript code. It also allows React to show more useful error and warning messages.
+  
+### Embedding Expressions in JSX
+
+- In the example below, we declare a variable called name and then use it inside JSX by wrapping it in curly braces:
+  ```js
+  const name = "john";
+  const element = <h1>Hello, {name}</h1>
+  ```
+  You can put any valid JavaScript expression inside the curly braces in JSX. For example, `2 + 2`, `user.firstName`, or `formatName(user)` are all valid JavaScript expressions.
+  
+- You can also use JSX inside of if statements and for loops, assign it to variables, accept it as arguments, and return it from functions:
+  ```js
+  function getGreeting(user) {
+    if (user) {
+      return <h1>Hello, {user.name}</h1>;
+    }
+    return <h1>Hello, Stranger.</h1>;
+  }
+  ```
+  
+### Specifiying Attributes with JSX
+
+- You may use quotes to specify string literals as attributes:
+  ```js
+  const element = <div tabIndex="0"></div>;
+  ```
+  You may also use curly braces to embed a JavaScript expression in an attribute:
+  ```js
+  const element = <img src={user.avatarUrl}></img>;
+  ```
+  Don’t put quotes around curly braces when embedding a JavaScript expression in an attribute. You should either use quotes (for string values) or curly braces (for expressions), but not both in the same attribute.
+  
+- SX tags may contain children:
+  ```js
+  const element = (
+    <div>
+      <h1>Hello!</h1>
+      <h2>Good to see you here.</h2>
+    </div>
+  );
+  ```
+  
+> Note: Since JSX is closer to JavaScript than to HTML, React DOM uses `camelCase` property naming convention instead of HTML     attribute names. For example, `class` becomes `className` in JSX, and `tabindex` becomes `tabIndex`.
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
