@@ -129,8 +129,93 @@
   
 > Note: Since JSX is closer to JavaScript than to HTML, React DOM uses `camelCase` property naming convention instead of HTML     attribute names. For example, `class` becomes `className` in JSX, and `tabindex` becomes `tabIndex`.
   
+<br>
+<br>
+<br>
+
+# Rendering Elements
+
+- Elements are the smallest building blocks of React apps. An element describes what you want to see on the screen:
+  ```js
+  const element = <h1>Hello, world</h1>;
+  ```
+  Unlike browser DOM elements, React elements are plain objects, and are cheap to create. React DOM takes care of updating the DOM to match the React elements.
   
+  Note: One might confuse elements with a more widely known concept of “components”. We will introduce components in the next section. Elements are what components are “made of”, 
   
+### Rendering and Element into the DOM
+
+- Let’s say there is a <div> somewhere in your HTML file:
+  ```js
+  <div id="root"></div>
+  ```
+  We call this a “root” DOM node because everything inside it will be managed by React DOM. Applications built with just React usually have a single root DOM node. If you are integrating React into an existing app, you may have as many isolated root DOM nodes as you like.
+  
+- To render a React element into a root DOM node, pass both to `ReactDOM.render()`:
+  ```js
+  const element = <h1>Hello, world</h1>;
+  ReactDOM.render(element, document.getElementById('root'));
+  ```
+  
+- React elements are `immutable`. Once you create an element, you can’t change its children or attributes. An element is like a single frame in a movie: it represents the UI at a certain point in time. With our knowledge so far, the only way to update the UI is to create a new element, and pass it to ReactDOM.render().
+
+  Note: In practice, most React apps only call ReactDOM.render() once. In the next sections we will learn how such code gets encapsulated into stateful components.
+  
+<br>
+<br>
+<br>
+
+# Components and Props
+
+- Components let you split the UI into independent, reusable pieces, and think about each piece in isolation. This page provides an introduction to the idea of components. You can find a detailed component [API reference here](https://reactjs.org/docs/react-component.html).
+  
+  Conceptually, components are like JavaScript functions. They accept arbitrary inputs (called “props”) and return React elements describing what should appear on the screen.
+  
+- The simplest way to define a component is to write a JavaScript function:
+  ```js
+  function Welcome(props) {
+    return <h1>Hello, {props.name}</h1>;
+  }
+  ```
+  This function is a valid React component because it accepts a single “props” (which stands for properties) object argument with data and returns a React element. We call such components “function components” because they are literally JavaScript functions.
+
+- Elements can also represent user-defined components. Lets use the function component we defined above in our code:
+  ```js
+  const element = <Welcome name="Sara" />;
+  ```
+  
+- **Note - Always start component names with a capital letter:** React treats components starting with lowercase letters as DOM tags. For example, <div /> represents an HTML div tag, but <Welcome /> represents a component and requires Welcome to be in scope.
+
+### Composing Components
+
+- Components can refer to other components in their output. This lets us use the same component abstraction for any level of detail. A button, a form, a dialog, a screen: in React apps, all those are commonly expressed as components.
+
+  For example, we can create an `form` component that renders `input` many times:
+  ```js
+  function Input(type) {
+    return <input ...>;
+  }
+
+  function Form() {
+    return (
+      <div>
+        <Input type="..." />
+        <Input type="..." />
+        <Input type="..." />
+      </div>
+    );
+  }
+  
+  function App() {
+    return <Form />
+  }
+  
+  ReactDOM.render(
+    <App />,
+    document.getElementById('root')
+  );
+  ```
+  Typically, new React apps have a single `App` component at the very top. However, if you integrate React into an existing app, you might start bottom-up with a small component like `Button` and gradually work your way to the top of the view hierarchy.
   
   
   
