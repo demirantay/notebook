@@ -187,9 +187,15 @@
   const element = <Welcome name="Sara" />;
   ```
   
-  Note: you can also define components with `class`es check the documentation for more info. I am not going to note it since I like functions syntax more.
-  
-- **Note - Always start component names with a capital letter:** React treats components starting with lowercase letters as DOM tags. For example, <div /> represents an HTML div tag, but <Welcome /> represents a component and requires Welcome to be in scope.
+- You can also write components with ES6 Classes:
+  ```js
+  class Welcome extends React.Component {
+    render() {
+      return <h1>Hello, {this.props.name}</h1>;
+    }
+  }
+  ```
+  The good rule of thumb is if you have a stateless simple reusable small chunk use `functional components` if you have much logic like states, control statements etc. use `class componoents`.
 
 ### Composing Components
 
@@ -249,12 +255,91 @@
 
 # State and Lifecycle
 
+- I HAVENT UNDERSTOOD THIS SECTION QUITE CLEARLY READ AGAIN [TUTORIAL](https://reactjs.org/docs/state-and-lifecycle.html) OR FIND A BETTER DOCUMENT
 
+- Here is a good explanation from stackoverflow:
+  > Before someone upvoted your question, you can imagine your question or think it as question component had `vote state = 0`    and after that it became 1 and so on. So interactivity with the application changed something in the application. That        changed something/ value can be called state.
+  > State in application/ component can change due to interactivity(event) or during time.
+  > As time you can imagine this Post or `Post Component` before 30 minutes/ some time ago had no answer i.e `answer state =      0`. And now it has some (3) answers. So answer `state = 0` changed to `answer state = 3`.
   
+- Note: I need to revisit states and lifecycles
+
+<br>
+<br>
+<br>
+<br>
+
+# Handling Events
+
+- Handling events with React elements is very similar to handling events on DOM elements. There are some syntactic differences:
+  - React events are named using camelCase, rather than lowercase
+  - With JSX you pass a function as the event handler, rather than a string.
   
+- For example, the HTML:
+  ```html
+  <button onclick="activateLasers()">
+    Activate Lasers
+  </button>
+  ```
+  is slightly different in React:
+  ```js
+  <button onClick={activateLasers}>
+    Activate Lasers
+  </button>
+  ```
   
+- I DID NOT FULLY UNDERSTAND THIS PART ON THE DOCUMENTATION I WILL NEED TO RESTUDY THIS FROM A DIFFERENT RESOURCE
+
+<br>
+<br>
+<br>
+<br>
+
+# Conditional Rendering
   
+- In React, you can create distinct components that encapsulate behavior you need. Then, you can render only some of them, depending on the state of your application.
+
+  Conditional rendering in React works the same way conditions work in JavaScript. Use JavaScript operators like `if` or the conditional operator to create elements representing the current state, and let React update the UI to match them
+
+- Consider these two components:
+  ```js
+  function UserGreeting(props) {
+    return <h1>Welcome back!</h1>;
+  }
+
+  function GuestGreeting(props) {
+    return <h1>Please sign up.</h1>;
+  }
+  ```
+  We’ll create a `Greeting` component that displays either of these components depending on whether a user is logged in:
+  ```js
+  unction Greeting(props) {
+  const isLoggedIn = props.isLoggedIn;
+  if (isLoggedIn) {
+      return <UserGreeting />;
+    }
+    return <GuestGreeting />;
+  }
+
+  ReactDOM.render(
+    // Try changing to isLoggedIn={true}:
+    <Greeting isLoggedIn={false} />,
+    document.getElementById('root')
+  );
+  ```
   
+- You can write all sorts of control statements inside React. Here is another example of inline `condition ? true : false.`:
+  ```js
+  render() {
+    const isLoggedIn = this.state.isLoggedIn;
+    return (
+      <div>
+        The user is <b>{isLoggedIn ? 'currently' : 'not'}</b> logged in.
+      </div>
+    );
+  }
+  ```
+
   
   
   
