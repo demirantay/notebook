@@ -366,11 +366,36 @@
   
 - A with everything in react we usually should write Lists in Components but there is a catch in react if you want to use lists in components you would need to assign `key`s to it.  A “key” is a special string attribute you need to include when creating lists of elements. 
 
-  Let’s assign a key to our list items inside numbers.map() and fix the missing key issue.
-  ```js
-  
-  ```
 
+### Keys
+
+- Keys help React identify which items have changed, are added, or are removed. Keys should be given to the elements inside the array to give the elements a stable identity:
+  ```js
+  const numbers = [1, 2, 3, 4, 5];
+  const listItems = numbers.map((number) =>
+    <li key={number.toString()}>
+      {number}
+    </li>
+  );
+  ```
+  The best way to pick a key is to use a string that uniquely identifies a list item among its siblings. Most often you would use IDs from your data as keys:
+  ```js
+  const todoItems = todos.map((todo) =>
+    <li key={todo.id}>
+      {todo.text}
+    </li>
+  );
+  ```
+   If you choose not to assign an explicit key to list items then React will default to using indexes as keys. Which is not recommended to use in react
+   
+<br>
+<br>
+
+---
+
+<br>
+
+[Part 2])(./README2.md)
 
   
   
