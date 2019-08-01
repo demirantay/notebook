@@ -347,7 +347,31 @@
 
 # List and Keys
 
+- You can build collections of elements and include them in JSX using curly braces `{}`
+
+  Below, we loop through the `numbers` array using the JavaScript `map()` function. We return a `<li>` element for each item. Finally, we assign the resulting array of elements to `listItems`:
+  ```js
+  const numbers = [1, 2, 3, 4, 5];
+  const listItems = numbers.map((number) =>
+    <li>{number}</li>
+  );
+  ```
+  We include the entire `listItems` array inside a `<ul>` element, and render it to the DOM:
+  ```js
+  ReactDOM.render(
+    <ul>{listItems}</ul>,
+    document.getElementById('root')
+  );
+  ```
   
+- A with everything in react we usually should write Lists in Components but there is a catch in react if you want to use lists in components you would need to assign `key`s to it.  A “key” is a special string attribute you need to include when creating lists of elements. 
+
+  Let’s assign a key to our list items inside numbers.map() and fix the missing key issue.
+  ```js
+  
+  ```
+
+
   
   
   
