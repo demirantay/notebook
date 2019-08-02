@@ -98,7 +98,67 @@
  <br>
  <br>
  
- # Creating Themes
+# Creating Themes
+ 
+- To generate its HTML output, Pelican uses the Jinja templating engine due to its flexibility and straightforward syntax.  you can define `THEME` in your settings to point to the location of your preferred theme.
+ 
+### Structure
+ 
+- To make your own theme, you must follow the following structure:
+  ```
+  ├── static
+  │   ├── css
+  │   └── images
+  └── templates
+      ├── archives.html         // to display archives
+      ├── period_archives.html  // to display time-period archives
+      ├── article.html          // processed for each article
+      ├── author.html           // processed for each author
+      ├── authors.html          // must list all the authors
+      ├── categories.html       // must list all the categories
+      ├── category.html         // processed for each category
+      ├── index.html            // the index (list all the articles)
+      ├── page.html             // processed for each page
+      ├── tag.html              // processed for each tag
+      └── tags.html             // must list all the tags. Can be a tag cloud.
+  ```
+  static contains all the static assets, which will be copied to the output theme folder. The above filesystem layout includes CSS and image folders, but those are just examples. Put what you need here.
+  
+  templates contains all the templates that will be used to generate the content. The template files listed above are mandatory; you can add your own templates if it helps you keep things organized while creating your theme.
+  
+- All templates will receive the variables defined in your settings file, as long as they are in all-caps. You can access them directly.All of these settings will be available to all templates:
+  - `output_file` - The name of the file currently being generated. For instance, when Pelican is rendering the home page, output_file will be “index.html”.
+  - `articles` - The list of articles, ordered descending by date. All the elements are Article objects, so you can access their attributes (e.g. title, summary, author etc.). Sometimes this is shadowed (for instance in the tags page). You will then find info about it in the all_articles variable.
+  - `dates` - The same list of articles, but ordered by date, ascending.
+  - `drafts` - The list of draft articles
+  - `authors` - A list of (author, articles) tuples, containing all the authors and corresponding articles (values)
+  - `categories` - A list of (category, articles) tuples, containing all the categories and corresponding articles (values)
+  - `tags` - A list of (tag, articles) tuples, containing all the tags and corresponding articles (values)
+  - `pages` - 	The list of pages
+  - `hidde_pages` - The list of hidden pages
+  - `draft_pages` - The list of draft pages
+  
+- You can use the following metadata while writing the header(metadata) section of an article:
+  - `author` - The Author of this article.
+  - `category` - 	The Category of this article.
+  - `content` - The rendered content of the article.
+  - `date` - Datetime object representing the article date.
+  - `date_format` - Either default date format or locale date format.
+  - `default_template` - Default template name. 
+  - `in_default_lang` - Boolean representing if the article is written in the default language.
+  - `lang` - Language of the article.
+  - `locale_date` - Date formatted by the date_format.
+  - `metadata` - 	Article header metadata dict.
+  - `save_as` - Location to save the article page.
+  - `slug` - Page slug
+  - `source_path` - Full system path of the article source file.
+  - `status` - The article status, can be any of ‘published’ or ‘draft’.
+  - `summary` - Rendered summary content.
+  - `tags` - List of Tag objects.
+  - `title` - Title of the article
+  
+  ... and much more
+
  
 <br>
 <br>
