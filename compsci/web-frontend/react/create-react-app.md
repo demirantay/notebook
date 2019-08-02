@@ -1,6 +1,6 @@
 # Create React App
 
-- This note file is about the `create-react-app` command of React.js
+- This note file is about the `create-react-app` command of `React.js`. The are lots of things that I did not note on this subjet if you want a full overview of the program [read the official docs here](https://facebook.github.io/create-react-app/docs/documentation-intro)
 
 <br>
 <br>
@@ -60,3 +60,31 @@
 <br>
 
 # Development 
+
+- Usually, in an app, you have a lot of UI components, and each of them has many different states. For an example, a simple button component could have the following states:
+  - In a regular state, with a text label.
+  - In the disabled mode.
+  - In a loading state.
+  
+### Analyzing bundle size
+
+- I do not understand this part now I will get back to it later ... doc link: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+
+### Using HTTPS in Development
+
+- I do not understand this part now I will get back to it later ... doc link: https://facebook.github.io/create-react-app/docs/using-https-in-development
+
+<br>
+<br>
+
+---
+
+<br>
+<br>
+
+# Adding a Stylesheet
+
+...
+
+Re read the documentation and do it all again. 
+
