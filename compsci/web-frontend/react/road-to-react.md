@@ -18,4 +18,11 @@ These are my notes on the book: Road to React
 <br>
 <br>
 
-# Introduction to JSX
+# ES6 const and let
+
+- JavaScript ES6 comes with two more ways to declare variables: const and let. In JavaScript ES6, you will rarely find var anymore. A variable declared with const cannot be re-assigned or re-declared, and cannot be changed or modified. Once the variable is assigned, you cannot change it:
+  ```js
+  const PI = 3.1415;        // cannot be modified
+  let hello = "local var";  // can be modified
+  ```
+  There are varying opinions about when to use const and when to use let. I would recommend using const whenever possible to show the intent of keeping your data structures immutable, so you only have to worry about the values contained in objects and arrays. Immutability is embraced in the React ecosystem, so const should be your default choice when you define a variable, though it’s not really about immutability, but about assigning variables only once. It shows the intent of not changing (re-assigning) the variable even though its content can be changed.
