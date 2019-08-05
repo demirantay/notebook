@@ -26,3 +26,32 @@ These are my notes on the book: Road to React
   let hello = "local var";  // can be modified
   ```
   There are varying opinions about when to use const and when to use let. I would recommend using const whenever possible to show the intent of keeping your data structures immutable, so you only have to worry about the values contained in objects and arrays. Immutability is embraced in the React ecosystem, so const should be your default choice when you define a variable, though it’s not really about immutability, but about assigning variables only once. It shows the intent of not changing (re-assigning) the variable even though its content can be changed.
+
+<br>
+<br>
+<br>
+
+# ReactDOM
+
+- Rememer the `App` component should be located in your entry point to the React world: the src/index.js file:
+  ```javascript
+  import React from 'react';
+  import ReactDOM from 'react-dom';
+  import App from './App';
+  import './index.css';
+  
+  ReactDom.render(
+    <App />
+    document.getelementById('root')
+  );
+  ```
+  `ReactDOM.render()` uses a DOM node in your HTML to replace it with JSX. It’s a way to integrate React in any foreign application easily, and you can use `ReactDOM.render()` multiple times across your application. You can use it to bootstrap simple JSX syntax, a React component, multiple React components, or an entire application. In a plain React application, you would only use it once to bootstrap the component tree.
+  
+  `ReactDOM.render()` expects two arguments. The first argument is for rendering the JSX. The second argument specifies the place where the React application hooks into your HTML. It expects an element with an id='root', found in the public/index.html file.
+  
+  <br>
+  <br>
+  <br>
+  
+# Hot Module Replacement
+
