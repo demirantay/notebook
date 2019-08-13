@@ -153,7 +153,11 @@ To update configuration, you can edit `redis.conf` file directly or you can upda
 - Redis key commands are used for managing keys in Redis. Following is the syntax for using redis keys commands.
 
 
+---
 
+This is where I left of learning. Continue here:
+  - https://www.tutorialspoint.com/redis/redis_keys.htm
+  - https://realpython.com/python-redis/
 
 
 
