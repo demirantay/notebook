@@ -194,6 +194,12 @@ Fundemental Computer Science Cirriculum
  - [ ] Project: Create an CRUD website without a framework just cgi
  - [ ] Project: Once you are done doing all of the above with django create your own framwork with wsgi or cgi and implement each box again with more advanced projects. You can also create your own server, backup it deploy it and use it to build applicaitons with your newly built framework.
  
+---
+
+Finish until `Database`s part on the Section 1
+
+---
+ 
 ### DevOps
 
 - [ ] Learn a Systems Programming language like : C/C++, Go, Rust
