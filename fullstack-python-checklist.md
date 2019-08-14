@@ -2,20 +2,6 @@
 
 Check list of the content on the [full stack python](https://www.fullstackpython.com/table-of-contents.html)
 
-### 1 Introduction
-
-- [ ] Learn Programming
-  - [ ] The Python Language
-  - [ ] Why Use Python?
-  - [ ] Python 2 or 3?
-  - [ ] Enterprise Python
-
-- [ ] Python Community
-  - [ ] Companies Using Python  
-  - [ ] Best Python Resources
-  - [ ] Must-watch Python Videos
-  - [ ] Podcasts
-  
   <br>
   
 ### 2 Development Envioronments
