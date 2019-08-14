@@ -55,3 +55,29 @@
 
 # Routing
 
+- Modern web frameworks use the routing technique to help a user remember application URLs. It is useful to access the desired page directly without having to navigate from the home page. The `route()` decorator in Flask is used to bind URL to a function. For example −
+  ```python
+  @app.route(‘/hello’)
+  def index():
+     return ‘hello world’
+  ```
+  
+- You can also `add_url_rule()` function of an application object is also available to bind a URL with a function as in the above example, `route()` is used. (like in Django)
+  ```
+  def index():
+   return ‘hello world’
+  
+  app.add_url_rule(‘/’, ‘hello’, index)
+  ```
+
+<Br>
+<br>
+<br>
+  
+ # Variable Rules
+  
+  ...
+
+
+
+
