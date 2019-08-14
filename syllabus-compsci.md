@@ -159,8 +159,9 @@ Fundemental Computer Science Cirriculum
 - [ ] Optional mobile applications with frontend (react native)
 - [ ] Try to redo everyproject with more advanced use of the technology
 - [ ] Create a markup lang like html, design a styling for it, optional: you can try to clone javascript to udnerstand the language more
+- [ ] Try to create your own markdown languages like html and css and javascript
 - [ ] Try to clone a frontend framework so that you can understand more about the tech you are trying to understand 
-- [ ] Try to build everything you see above from scracth with your own taste and without using any 3rd party help
+- [ ] Try to build everything you see above from scracth with your own markdown langs, frontend frameowork ... etc.
 
 ### Back End
 
