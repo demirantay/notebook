@@ -317,3 +317,116 @@ To update configuration, you can edit `redis.conf` file directly or you can upda
 
 # HyperLogLog
   
+- Redis HyperLogLog is an algorithm that uses randomization in order to provide an approximation of the number of unique elements in a set using just a constant, and small amount of memory.
+
+- Following example explains how Redis HyperLogLog works.
+  ```
+  redis 127.0.0.1:6379> PFADD tutorials "redis"  
+  1) (integer) 1  
+  redis 127.0.0.1:6379> PFADD tutorials "mongodb"  
+  1) (integer) 1  
+  redis 127.0.0.1:6379> PFADD tutorials "mysql"  
+  1) (integer) 1  
+  redis 127.0.0.1:6379> PFCOUNT tutorials  
+  (integer) 3 
+  ```
+  
+- Note: I didnt understand hyperloglog a lot. You can use this tutorial as a starter point:
+  - https://www.tutorialspoint.com/redis/redis_hyperloglog.htm
+  
+<br>
+<br>
+<br>
+
+# Publish Subscribe
+
+- Redis Pub/Sub implements the messaging system where the senders (in redis terminology called publishers) sends the messages while the receivers (subscribers) receive them. The link by which the messages are transferred is called `channel`. In Redis, a client can subscribe any number of channels
+
+- Following example explains how publish subscriber concept works. In the following example, one client subscribes a channel named ‘redisChat’.
+  ```
+  redis 127.0.0.1:6379> SUBSCRIBE redisChat  
+  Reading messages... (press Ctrl-C to quit) 
+  1) "subscribe" 
+  2) "redisChat" 
+  3) (integer) 1 
+  ```
+  Now, two clients are publishing the messages on the same channel named ‘redisChat’ and the above subscribed client is receiving messages.
+  ```
+  redis 127.0.0.1:6379> PUBLISH redisChat "Redis is a great caching technique"  
+  (integer) 1  
+  redis 127.0.0.1:6379> PUBLISH redisChat "Learn redis by tutorials point"  
+  (integer) 1   
+  1) "message" 
+  2) "redisChat" 
+  3) "Redis is a great caching technique" 
+  1) "message" 
+  2) "redisChat" 
+  3) "Learn redis by tutorials point" 
+  ```
+  
+- Just like I listed the key commands that you can use in the `key`s section there are commands that you can use with `publish/subscribe`, however it would take a lot of space to list them here. Instead visit the link below and at the bottom you will see a list table with tutorial to each command:
+  - https://www.tutorialspoint.com/redis/redis_pub_sub.htm
+  
+<br>
+<br>
+<br>
+
+# Transactions
+
+- Redis transactions allow the execution of a group of commands in a single step. Following are the two properties of Transactions:
+  - All commands in a transaction are sequentially executed as a single isolated operation. It is not possible that a request issued by another client is served in the middle of the execution of a Redis transaction.
+  - Redis transaction is also atomic. Atomic means either all of the commands or none are processed.
+  
+- Redis transaction is initiated by command `MULTI` and then you need to pass a list of commands that should be executed in the transaction, after which the entire transaction is executed by `EXEC` command.
+  ```
+  redis 127.0.0.1:6379> MULTI 
+  OK 
+  List of commands here 
+  redis 127.0.0.1:6379> EXEC
+  ```
+  
+  Following example explains how Redis transaction can be initiated and executed.
+  ```
+  redis 127.0.0.1:6379> MULTI 
+  OK 
+  redis 127.0.0.1:6379> SET tutorial redis 
+  QUEUED 
+  redis 127.0.0.1:6379> GET tutorial 
+  QUEUED 
+  redis 127.0.0.1:6379> INCR visitors 
+  QUEUED 
+  redis 127.0.0.1:6379> EXEC  
+  1) OK 
+  2) "redis" 
+  3) (integer) 1 
+  ```
+  
+- Just like I listed the key commands that you can use in the `key`s section there are commands that you can use with `transactions`, however it would take a lot of space to list them here. Instead visit the link below and at the bottom you will see a list table with tutorial to each command:
+  - https://www.tutorialspoint.com/redis/redis_transactions.htm
+  
+<br>
+<br>
+<br>
+
+# Scripting 
+
+- You can write scripts with redis. However, I am not going to note it down here if you want to you can read it here:
+  - https://www.tutorialspoint.com/redis/redis_scripting.htm
+  
+<br>
+<br>
+<br>
+
+
+
+<br>
+<br>
+<br>
+
+---
+
+[Part 2](./README2.md)
+
+
+
+
