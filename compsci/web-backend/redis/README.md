@@ -150,18 +150,170 @@ To update configuration, you can edit `redis.conf` file directly or you can upda
 
 # Keys
 
-- Redis key commands are used for managing keys in Redis. Following is the syntax for using redis keys commands.
+- Redis key commands are used for managing keys in Redis. Following is the syntax for using redis keys commands. The sytax is like this:
+  ```
+  redis 127.0.0.1:6379> COMMAND KEY_NAME
+  ```
+  Lets see a real world example:
+  ```
+  redis 127.0.0.1:6379> SET tutorialspoint redis 
+  OK 
+  redis 127.0.0.1:6379> DEL tutorialspoint 
+  (integer) 1
+  ```
+  In the above example, `DEL` is the command, while `tutorialspoint` is the key. If the key is deleted, then the output of the command will be (integer) 1, otherwise it will be (integer) 0.
+  
+- Following points list some basic commands related to keys. You can visit it each to get a real world usage and a tutorial:
+  - [DEL key](https://www.tutorialspoint.com/redis/keys_del.htm): This command deletes the key, if it exists.
+  - [DUMP key](https://www.tutorialspoint.com/redis/keys_dump.htm) : This command returns a serialized version of the value stored at the specified key.
+  - [EXISTS key](https://www.tutorialspoint.com/redis/keys_exists.htm) : This command checks whether the key exists or not.
+  - [EXPIRE key second](https://www.tutorialspoint.com/redis/keys_expire.htm) : Sets the expiry of the key after the specified time.
+  - [EXPIREAT key timestamp](https://www.tutorialspoint.com/redis/keys_expireat.htm) : Sets the expiry of the key after the specified time. Here time is in Unix timestamp format. 
+  - [PEXPIREAT key milliseconds-timestamp](https://www.tutorialspoint.com/redis/keys_pexpire.htm) : Sets the expiry of the key in Unix timestamp specified as milliseconds.
+  - [KEYS pattern](https://www.tutorialspoint.com/redis/keys_keys.htm) : Finds all keys matching the specified pattern.
+  - [MOVE key db](https://www.tutorialspoint.com/redis/keys_move.htm) : Moves a key to another database
+  - [PERSIST key](https://www.tutorialspoint.com/redis/keys_persist.htm) : Removes the expiration from the key. 
+  - [PTTL key](https://www.tutorialspoint.com/redis/keys_pttl.htm) : Gets the remaining time in keys expiry in milliseconds.
+  - [TTL key](https://www.tutorialspoint.com/redis/keys_ttl.htm) : Gets the remaining time in keys expiry.
+  - [RANDOMKEY](https://www.tutorialspoint.com/redis/keys_randomkey.htm) : Returns a random key from Redis.
+  - [RENAME key newkey](https://www.tutorialspoint.com/redis/keys_rename.htm) : Changes the key name.
+  - [RENAMENX key newkey](https://www.tutorialspoint.com/redis/keys_renamenx.htm) : Renames the key, if a new key doesn't exist.
+  - [TYPE key](https://www.tutorialspoint.com/redis/keys_type.htm) : Returns the data type of the value stored in the key.
 
+<br>
+<br>
+<br>
 
----
+# Strings 
 
-This is where I left of learning. Continue here:
-  - https://www.tutorialspoint.com/redis/redis_keys.htm
-  - https://realpython.com/python-redis/
+- As we discussed erlier Redis strings commands are used for managing string values in Redis. Following is the syntax for using Redis string commands. Lets see en example again:
+  ```
+  redis 127.0.0.1:6379> SET tutorialspoint redis 
+  OK 
+  redis 127.0.0.1:6379> GET tutorialspoint 
+  "redis" 
+  ```
+  In the above example, `SET` and `GET` are the commands, while `tutorialspoint` is the key.
+  
+- Just like I listed the key commands that you can use int he above section there are commands that you can use with strings, however it would take a lot of space to list them here. Instead visit the link below and at the bottom you will see a list table with tutorial to each command:
+  - https://www.tutorialspoint.com/redis/redis_strings.htm
+  
+<br>
+<br>
+<br>
 
+# Hashes
 
+- As we discuessed erlier Redis Hashes are maps between the string fields and the string values. Hence, they are the perfect data type to represent objects.
 
+  In Redis, every hash can store up to more than 4 billion field-value pairs. Let see an example:
+  ```
+  redis 127.0.0.1:6379> HMSET tutorialspoint name "redis tutorial" 
+  description "redis basic commands for caching" likes 20 visitors 23000 
+  OK 
+  redis 127.0.0.1:6379> HGETALL tutorialspoint  
+  1) "name" 
+  2) "redis tutorial" 
+  3) "description" 
+  4) "redis basic commands for caching" 
+  5) "likes" 
+  6) "20" 
+  7) "visitors" 
+  8) "23000"
+  ```
+  In the above example, we have set Redis tutorials detail (name, description, likes, visitors) in hash named ‘tutorialspoint’.
 
+- Just like I listed the key commands that you can use in the `key`s section there are commands that you can use with `hashes`, however it would take a lot of space to list them here. Instead visit the link below and at the bottom you will see a list table with tutorial to each command:
+  - https://www.tutorialspoint.com/redis/redis_hashes.htm
+  
+<br>
+<br>
+<br>
+  
+# Lists
 
+- Redis Lists are simply lists of strings, sorted by insertion order. You can add elements in Redis lists in the head or the tail of the list.
 
+  Maximum length of a list is 232 - 1 elements (4294967295, more than 4 billion of elements per list). Lets see an example:
+  ```
+  redis 127.0.0.1:6379> LPUSH tutorials redis 
+  (integer) 1 
+  redis 127.0.0.1:6379> LPUSH tutorials mongodb 
+  (integer) 2 
+  redis 127.0.0.1:6379> LPUSH tutorials mysql 
+  (integer) 3 
+  redis 127.0.0.1:6379> LRANGE tutorials 0 10  
+  1) "mysql" 
+  2) "mongodb" 
+  3) "redis"
+  ```
+  In the above example, three values are inserted in Redis list named ‘tutorials’ by the command `LPUSH`.
+  
+- Just like I listed the key commands that you can use in the `key`s section there are commands that you can use with `lists`, however it would take a lot of space to list them here. Instead visit the link below and at the bottom you will see a list table with tutorial to each command:
+  - https://www.tutorialspoint.com/redis/redis_lists.htm
+  
+<br>
+<br>
+<br>
 
+# Sets
+
+- Redis Sets are an unordered collection of unique strings. Unique means sets does not allow repetition of data in a key.
+
+  In Redis set add, remove, and test for the existence of members in O(1) (constant time regardless of the number of elements contained inside the Set). The maximum length of a list is 232 - 1 elements (4294967295, more than 4 billion of elements per set). Lets see an exapmle:
+  ```
+  redis 127.0.0.1:6379> SADD tutorials redis 
+  (integer) 1 
+  redis 127.0.0.1:6379> SADD tutorials mongodb 
+  (integer) 1 
+  redis 127.0.0.1:6379> SADD tutorials mysql 
+  (integer) 1 
+  redis 127.0.0.1:6379> SADD tutorials mysql 
+  (integer) 0 
+  redis 127.0.0.1:6379> SMEMBERS tutorials  
+  1) "mysql" 
+  2) "mongodb" 
+  3) "redis"
+  ```
+  In the above example, three values are inserted in Redis set named ‘tutorials’ by the command `SADD`.
+  
+- Just like I listed the key commands that you can use in the `key`s section there are commands that you can use with `sets`, however it would take a lot of space to list them here. Instead visit the link below and at the bottom you will see a list table with tutorial to each command:
+  - https://www.tutorialspoint.com/redis/redis_sets.htm 
+  
+<br>
+<br>
+<br>
+
+# Sorted Sets
+
+- Redis Sorted Sets are similar to Redis Sets with the unique feature of values stored in a set. The difference is, every member of a Sorted Set is associated with a score, that is used in order to take the sorted set ordered, from the smallest to the greatest score. Lets see a real world example:
+  ```
+  redis 127.0.0.1:6379> ZADD tutorials 1 redis 
+  (integer) 1 
+  redis 127.0.0.1:6379> ZADD tutorials 2 mongodb 
+  (integer) 1 
+  redis 127.0.0.1:6379> ZADD tutorials 3 mysql 
+  (integer) 1 
+  redis 127.0.0.1:6379> ZADD tutorials 3 mysql 
+  (integer) 0 
+  redis 127.0.0.1:6379> ZADD tutorials 4 mysql 
+  (integer) 0 
+  redis 127.0.0.1:6379> ZRANGE tutorials 0 10 WITHSCORES  
+  1) "redis" 
+  2) "1" 
+  3) "mongodb" 
+  4) "2" 
+  5) "mysql" 
+  6) "4" 
+  ```
+  In the above example, three values are inserted with its score in Redis sorted set named ‘tutorials’ by the command `ZADD`.
+
+- Just like I listed the key commands that you can use in the `key`s section there are commands that you can use with `sorted sets`, however it would take a lot of space to list them here. Instead visit the link below and at the bottom you will see a list table with tutorial to each command:
+  - https://www.tutorialspoint.com/redis/redis_sorted_sets.htm
+  
+<br>
+<br>
+<br>
+
+# HyperLogLog
+  
