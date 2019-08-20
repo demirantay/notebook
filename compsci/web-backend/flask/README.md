@@ -273,11 +273,112 @@
 
 # Sessions
 
+- Unlike a Cookie, Session data is stored on server. Session is the time interval when a client logs into a server and logs out of it. The data, which is needed to be held across this session, is stored in a temporary directory on the server.
+
+- A session with each client is assigned a `Session ID`. The Session data is stored on top of cookies and the server signs them cryptographically. For this encryption, a Flask application needs a defined `SECRET_KEY`.
+ 
+  Session object is also a dictionary object containing key-value pairs of session variables and associated values. For example let's set a key named 'username' to our session dictionary:
+  ```python
+  Session['username'] = 'admin'
+  ```
+  To release(delete) a session variable use pop() method.
+  ```python
+  session.pop('username', None)
+  ```
+  
+- Lets see a real world very basic example of how sessions are used with Flask:
+  ```python
+  @app.route('/login', methods = ['GET', 'POST'])
+  def login():
+     if request.method == 'POST':
+        session['username'] = request.form['username']
+        return redirect(url_for('index'))
+  ```
+  And we can also use the `pop()` function with the logout view:
+  ```python
+  @app.route('/logout')
+  def logout():
+     # remove the username from the session if it is there
+     session.pop('username', None)
+     return redirect(url_for('index'))
+  ````
+  
+- Run the application and visit the homepage. (Ensure to set secret_key in the application's configuration)
+  ```python
+  from flask import Flask, session, redirect, url_for, escape, request
+  app = Flask(__name__)
+  app.secret_key = 'any random string’
+  ```
+  
 <br>
 <br>
 <br>
 
 # Redirect & Errors
+
+- Flask class has a redirect() function. When called, it returns a response object and redirects the user to another target location with specified status code.
+
+  Prototype of redirect() function is as below −
+  ```python
+  Flask.redirect(location, statuscode, response)
+  ```
+  In the above function −
+    - `location` parameter is the URL where response should be redirected.
+    - `statuscode` sent to browser’s header, defaults to 302 which is for ‘found’..
+    - `response` parameter is used to instantiate response.
+    
+- Let's see a real world example: 
+  ```python
+  from flask import Flask, redirect, url_for, render_template, request
+  ...
+  
+  @app.route('/login',methods = ['POST', 'GET'])
+  def login():
+     if request.method == 'POST' and request.form['username'] == 'admin' :
+         return redirect(url_for('success'))
+  ```
+    
+- You can also `abort()` the redirect in case if the request method has an error. Lets modify our login gate above to haev an abort function init:
+  ```python
+  @app.route('/login',methods = ['POST', 'GET'])
+  def login():
+     if request.method == 'POST':
+        if request.form['username'] == 'admin' :
+           return redirect(url_for('success'))
+        else:
+           abort(401)
+  ```
+    
+<br>
+<br>
+<br>
+
+# File Uploading
+
+- Handling file upload in Flask is very easy. It needs an HTML form with its enctype attribute set to ‘multipart/form-data’, posting the file to a URL. The URL handler fetches file from `request.files[]` object and saves it to the desired location.
+
+  Each uploaded file is first saved in a temporary location on the server, before it is actually saved to its ultimate location. Name of destination file can be hard-coded or can be obtained from filename property of `request.files[file]` object. However, it is recommended to obtain a secure version of it using the `secure_filename()` function.
+ 
+ It is possible to define the path of default upload folder and maximum size of uploaded file in configuration settings of Flask object.
+ ```python
+ app.config[‘UPLOAD_FOLDER’]  # Defines path for upload folder
+
+  app.config[‘MAX_CONTENT_PATH’]	# Specifies maximum size of file yo be uploaded – in bytes 
+ ```
+ 
+- Let's see a real world example. First do not forget to add enctype attrbiute to your form in the template:
+  ```html
+  <form method = "POST" action="..." enctype = "multipart/form-data" > 
+  ```
+  and you can process the form in your flask view like this:
+  ```python
+  @app.route('/uploader', methods = ['GET', 'POST'])
+  def upload_file():
+     if request.method == 'POST':
+        f = request.files['file']
+        f.save(secure_filename(f.filename))
+        return 'file uploaded successfully'
+  ```
 
 <br>
 <br>
@@ -285,11 +386,8 @@
 
 # Message Flashing
 
-<br>
-<br>
-<br>
-
-# File Uploading
+- At the moment I am not going to note it down since I do not usually use it. However, self note: Note this down in the future from this web page:
+  - https://www.tutorialspoint.com/flask/flask_message_flashing.htm
 
 <br>
 <br>
@@ -297,11 +395,17 @@
 
 # Extensions
 
+- At the moment I am not going to note it down since I do not usually use it. However, self note: Note this down in the future from this web page:
+  - https://www.tutorialspoint.com/flask/flask_extensions.htm
+
 <br>
 <br>
 <br>
 
 # Mail
+
+- At the moment I am not going to note it down since I do not usually use it. However, self note: Note this down in the future from this web page:
+  - https://www.tutorialspoint.com/flask/flask_mail.htm
 
 <br>
 <br>
@@ -309,11 +413,36 @@
 
 # WTF
 
+- At the moment I am not going to note it down since I do not usually use it. However, self note: Note this down in the future from this web page:
+  - https://www.tutorialspoint.com/flask/flask_wtf.htm
+
+<br>
+<br>
+<br>
+
+# SQLite 
+
+- At the moment I am not going to note it down since I do not usually use it. However, self note: Note this down in the future from this web page:
+  - https://www.tutorialspoint.com/flask/flask_sqlite.htm
+
+
+<br>
+<br>
+<br>
+
+# SQLAlchemy
+
+- At the moment I am not going to note it down since I do not usually use it. However, self note: Note this down in the future from this web page:
+  - https://www.tutorialspoint.com/flask/flask_sqlalchemy.htm
+
 <br>
 <br>
 <br>
 
 # Sijax
+
+- At the moment I am not going to note it down since I do not usually use it. However, self note: Note this down in the future from this web page:
+  - https://www.tutorialspoint.com/flask/flask_sijax.htm
 
 <br>
 <br>
@@ -321,12 +450,18 @@
 
 # Deployment
 
+
+- At the moment I am not going to note it down since I do not usually use it. However, self note: Note this down in the future from this web page:
+  - https://www.tutorialspoint.com/flask/flask_deployment.htm
+
 <br>
 <br>
 <Br>
   
 # Fast CGI
 
+- At the moment I am not going to note it down since I do not usually use it. However, self note: Note this down in the future from this web page:
+  - https://www.tutorialspoint.com/flask/flask_fastcgi.htm
 
 
 
