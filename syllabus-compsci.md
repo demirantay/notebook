@@ -192,7 +192,8 @@ Fundemental Computer Science Cirriculum
  - [ ] Learn: Learn the framework of your choice fully!! be very good at it (if django, finish two scoops, examine each feature ... read more books, practice .etc)
  - [ ] Project: Implement every checkbox at top again, but use the framework (flask, django ... etc.) instead of pure python
  - [ ] Project: Create an CRUD website without a framework just cgi
- - [ ] Project: Once you are done doing all of the above with django create your own framwork with wsgi or cgi and implement each box again with more advanced projects. You can also create your own server, backup it deploy it and use it to build applicaitons with your newly built framework.
+ - [ ] Build a project with django (make it scalable so that it will handle millions of requests with bots like youa re creating reddit down below you can try another "big clone project"
+ - [ ] Project: Once you are done doing all of the above with django create your own framwork with wsgi or cgi and build a very scalable reddit clone on top of it that can hadndle billions of requests (traffic is created by bots) in a day.
  
 ---
 
