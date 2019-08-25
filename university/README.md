@@ -68,7 +68,7 @@ Not: Buro ya sor:
   - Cikmis Sinav Sorulari
   - Dis Kaynaklar
   
- - Calisma Teknigi:
+- Calisma Teknigi:
   - 1 - E-kampusteki ders ozetlerini oku
   - 2 - Sorularla ogrenelim metinlerini oku
   - 3 - E kampusteki yaprak testi ve cozumlu testleri coz
