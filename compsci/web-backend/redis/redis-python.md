@@ -70,3 +70,5 @@ TLDR just checkout the translations of redis commands to --> python-sytanxly wri
 <br>
 
 At the moment I do not know where to use Redis other than trivial to-do apps. Once I need to use it for real I will learn it fully and add more notes on it.
+
+For example serilazation, crypotgrahy, pipelining are very important topics that I want to touch in the future to reach the full potential of redis.
