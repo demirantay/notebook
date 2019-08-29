@@ -1,5 +1,7 @@
 # CompSci Syllabus
 
+> Remember whenever you finish a subject gather your understandings and explain each component with the feynman technique. After doing that proof check your understanding of each compoenet by step by step on the IRC and finally ask if there are any components of the subject you have missed.
+
 The syllabus is divided into sections. The first section is the basic theorotical resources that every software engineer should know. The following sections are my own preferred choosings (each section is divided with hr lines).
 
 Best resources:
