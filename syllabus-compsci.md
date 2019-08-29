@@ -29,7 +29,9 @@ Fundemental Computer Science Cirriculum
   - [ ] Book : Computer Organization and Design (left at page 91)
   - [ ] Project: Design and build a simple computer
   - [ ] https://www.instructables.com/id/How-to-Build-an-8-Bit-Computer/
-  - [ ] https://eater.net/8bit
+  - [ ] Do the 80bit computer https://eater.net/8bit
+  - [ ] Do the vga:graphics https://eater.net/vga
+  - [ ] Do the error detection https://eater.net/crc
 
 ### Algorithms and Data Structures
   
@@ -54,6 +56,7 @@ Fundemental Computer Science Cirriculum
    - [ ] Book : [Computer Networking: A Top-Down Approach](https://www.amazon.com/Computer-Networking-Top-Down-Approach-7th/dp/0133594149/?pldnSite=1) -- do the exersices
    - [ ] Exersices : [Wireshark](http://www-net.cs.umass.edu/wireshark-labs/)
    - [ ] Course : [Stanford MOOC](https://lagunita.stanford.edu/courses/Engineering/Networking-SP/SelfPaced/about)
+   - [ ] Project: Do the ben eaters How to create a internet [tutorial from here[(https://eater.net/inet)
    - [ ] Project : Your own small internet,  build a server backup a server or etc. Try to use what you have learned. 
    
  ### Databases
