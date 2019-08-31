@@ -7,8 +7,8 @@
 - [ ] Render your dream house (library, botanic garden ... etc.) with beatiful assets and scenery.
 - [ ] A program that controls something in the outside world in some way (a robot, via ardunio or ... etc)
 - [ ] Write your own texteditor/IDE you can clone pycharm, eclipse ... etc. try to clone the features at something complex with many features not something like atom.
-- [ ] Write a interpreted high level language with a interpreter
-- [ ] Write a compiled low level language with a compiler
+- [ ] Write interpreter and after that write a high level interpreted langauge
+- [ ] Write a compiler and than write a compiled low level language
 - [ ] Build a computer that is not too basic but do not overcompilcate yourself and spend so many hours on it. youc an make it 32-64 bits
 - [ ] Write your own basic webserver hook it up to the internet and host a basic website from it (static pages)
 - [ ] Create a basic database like sql lite
