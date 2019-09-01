@@ -28,10 +28,9 @@ Fundemental Computer Science Cirriculum
   - [X] Read: The [TutorialsOnPoint](https://www.tutorialspoint.com/computer_fundamentals/index.htm) for a overview. Note this to README of the folder
   - [X] Book : Nand2Tetris
   - [ ] Book : [Hidden Language of Computers: CODE](ftp://ftp.borg.moe/yarr/Gentoomen%20Library/Programming/Misc/Charles%20Petzold%20-%20Code%20-%20The%20Hidden%20Language%20of%20Computer%20Hardware%20and%20Software.pdf)
-  - [ ] Book : Computer Organization and Design (left at page 91)
+  - [ ] Book : Computer Organization and Design (start over)
   - [ ] Project: Design and build a simple computer
-  - [ ] https://www.instructables.com/id/How-to-Build-an-8-Bit-Computer/
-  - [ ] Do the 80bit computer https://eater.net/8bit
+  - [ ] Do the 8bit computer https://eater.net/8bit
   - [ ] Do the vga:graphics https://eater.net/vga
   - [ ] Do the error detection https://eater.net/crc
 
