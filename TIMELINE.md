@@ -7,15 +7,15 @@
 
 # Traditional Learning 
 
-- 2019 Eylul/Ekim/Kasim -> Computer Architecture
-- 2019/20 Aralik/Ocak/Subat -> Algorithms and Data Structs
-- 2020 Mart/Nisan/Mayis -> Operating Systems
-- 2020 Haziran/Temmuz/Agustos -> Computer Networking
-- 2020 Eylul/Ekim/Kasim -> Databases
-- 2020/21 Aralik/Ocak/Subat ->Langauge and Compilers
-- 2021 Mart/Nisan/Mayis -> Distrubuted Systems
-- 2021 Haziran/Temmuz/Agustos -> Code University
-- 2021 Eylul/... -> Bu noktadan sonra syllabus taki web dev kismina odaklan kendi sirketin icin gerekli olanlari ogren. Zaten bu aydan itibaren DELF sinavi ile fransa da yasam okul masraflar falan dusunmen lazim. cunku Aralik ta okul bitiyor.
+- 2019 Eylul/Ekim/Kasim/Aralik -> Computer Architecture
+- 2020 Ocak/Subat/Mart/Nisan -> Algorithms and Data Structs
+- 2020 Mayis/Haziran/Temmuz/Agustos -> Operating Systems
+- 2020 Eylul/Ekim/Kasim/Aralik -> Computer Networking
+- 2021 Ocak/Subat/Mart/Nisan -> Databases
+- 2021 Mayis/Haziran/Temmuz/Agustos ->Langauge and Compilers
+- 2021 Eylul/Ekim/Kasim/Aralik -> Distrubuted Systems
+- 2022 Ocak/Subat/Mart/Nisan -> Code University 
+- 2022 Mayis/... -> Bu noktadan sonra syllabus taki web dev kismina odaklan kendi sirketin icin gerekli olanlari ogren. Zaten bu sirada fransa veya kanadada olacaksin 2022 den itibaren tarihleri cok kafana takmasanda olur.
 
 <br>
 <br>
