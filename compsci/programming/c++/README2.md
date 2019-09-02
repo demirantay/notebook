@@ -121,12 +121,14 @@
 <Br>
 <br>
 <br>
+<br>
  
 # Date and Time
 
 - There are too much info to note down on a single file read it fully from here and research for other resources if you want more info because this is just a simple tutorial:
   - https://www.tutorialspoint.com/cplusplus/cpp_date_time.htm
   
+<br>
 <br>
 <br>
 <br>
@@ -189,6 +191,7 @@
 
 - I do not have an example to give at the moment you should research this from another soruce tutorialspoint's explanation of clog is pretty bad.
 
+<br>
 <br>
 <br>
 <br>
@@ -296,4 +299,9 @@
   ```cpp
   struct_pointer->title;
   ```
+  
+<br>
+<br>
+<br>
+<br> 
   
