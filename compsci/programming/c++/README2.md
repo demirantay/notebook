@@ -91,3 +91,36 @@
 
 # References
 
+- A reference variable is an alias, that is, another name for an already existing variable. Once a reference is initialized with a variable, either the variable name or the reference name may be used to refer to the variable.
+
+- References are often confused with pointers but three major differences between references and pointers are −
+  - You cannot have NULL references. You must always be able to assume that a reference is connected to a legitimate piece of storage.
+  - Once a reference is initialized to an object, it cannot be changed to refer to another object. Pointers can be pointed to another object at any time.
+  - A reference must be initialized when it is created. Pointers can be initialized at any time.
+  
+- Think of a variable name as a label attached to the variable's location in memory. You can then think of a reference as a second label attached to that memory location. Therefore, you can access the contents of the variable through either the original variable name or the reference. Lets see:
+  ```cpp
+  int foo = 42;
+  
+  int& bar = foo;  // <-- this is your reference 
+  ```
+  Read the & in these declarations as reference.
+  
+- References are usually used for function argument lists and function return values. So following are two important subjects related to C++ references which should be clear to a C++ programmer −
+
+### References as Parameters
+
+- You can read about it from here. This document is just a starting point. Dig deeper if you want to understand more:
+  - https://www.tutorialspoint.com/cplusplus/passing_parameters_by_references.htm
+  
+### References as Return Values
+
+- You can read about it from here. This document is just a starting point. Dig deeper if you want to understand more:
+  - https://www.tutorialspoint.com/cplusplus/returning_values_by_reference.htm
+
+<Br>
+<br>
+<br>
+ 
+# Date and Time
+
