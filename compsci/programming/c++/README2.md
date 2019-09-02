@@ -124,3 +124,176 @@
  
 # Date and Time
 
+- There are too much info to note down on a single file read it fully from here and research for other resources if you want more info because this is just a simple tutorial:
+  - https://www.tutorialspoint.com/cplusplus/cpp_date_time.htm
+  
+<br>
+<br>
+<br>
+
+# Basic Input/Output
+
+- The C++ standard libraries provide an extensive set of input/output capabilities which we will see in subsequent chapters. This chapter will discuss very basic and most common I/O operations required for C++ programming.
+
+- There are following header files important to C++ programs −
+  - `<iostream>` - This file defines the cin, cout, cerr and clog objects, which correspond to the standard input stream, the standard output stream, the un-buffered standard error stream and the buffered standard error stream, respectively.
+  - `<iomanip>` - This file declares services useful for performing formatted I/O with so-called parameterized stream manipulators, such as "setw" and "setprecision".
+  - `<fstream>` - This file declares services for user-controlled file processing. We will discuss about it in detail in File and Stream related chapter.
+  
+### The Standard Output Stream (cout)
+
+- The predefined object cout is an instance of ostream class. The cout object is said to be "connected to" the standard output device, which usually is the display screen. The cout is used in conjunction with the stream insertion operator, which is written as <<
+  ```cpp
+  cout << "Value of foo is : " << foo << endl;
+  ```
+
+### The Standard Input Stream (cin)
+
+- The predefined object cin is an instance of iostream class. The cin object is said to be attached to the standard input device, which usually is the keyboard. The cin is used in conjunction with the stream extraction operator, which is written as >>
+  ```cpp
+  char name[50];
+ 
+  cout << "Please enter your name: ";
+  cin >> name;
+  cout << "Your name is: " << name << endl;
+  ```
+  
+- The stream extraction operator >> may be used more than once in a single statement. To request more than one datum you can use the following −
+  ```cpp
+  cin >> name >> age;
+  ```
+  This will be equivalent to the following two statements −
+  ```cpp
+  cin >> name;
+  cin >> age;
+  ```
+  
+### The Standard Error Stream (cerr)
+
+- The predefined object cerr is an instance of ostream class. The cerr object is said to be attached to the standard error device, which is also a display screen but the object cerr is un-buffered and each stream insertion to cerr causes its output to appear immediately.
+  ```cpp
+  #include <iostream>
+ 
+  using namespace std;
+
+  int main() {
+     char str[] = "Unable to read....";
+
+     cerr << "Error message : " << str << endl;
+  }
+  ```
+
+### The Standard Log Stream (clog)
+
+- The predefined object clog is an instance of ostream class. The clog object is said to be attached to the standard error device, which is also a display screen but the object clog is buffered. This means that each insertion to clog could cause its output to be held in a buffer until the buffer is filled or until the buffer is flushed.
+
+- I do not have an example to give at the moment you should research this from another soruce tutorialspoint's explanation of clog is pretty bad.
+
+<br>
+<br>
+<br>
+
+# Data Structures 
+  
+- C/C++ arrays allow you to define variables that combine several data items of the same kind, but structure is another user defined data type which allows you to combine data items of different kinds.
+  
+  Structures are used to represent a record, suppose you want to keep track of your books in a library. You might want to track the following attributes about each book −
+  - Title
+  - Author
+  - Subject
+  - Book ID
+  
+### Defining a Strucutre 
+
+- To define a structure, you must use the struct statement. The struct statement defines a new data type, with more than one member, for your program. The format of the struct statement is this −
+  ```
+  struct [structure tag] {
+     member definition;
+     member definition;
+     ...
+     member definition;
+  } [one or more structure variables];  
+  ```
+  The structure tag is optional and each member definition is a normal variable definition, such as int i; or float f; or any other valid variable definition. At the end of the structure's definition, before the final semicolon, you can specify one or more structure variables but it is optional. Here is the way you would declare the Book structure −
+  ```cpp
+  struct Books {
+     char  title[50];
+     char  author[50];
+     char  subject[100];
+     int   book_id;
+  } book; //<- optional var  
+  ```
+  
+### Accessing Structure Members
+
+- To access any member of a structure, we use the member access operator (.). The member access operator is coded as a period between the structure variable name and the structure member that we wish to access. You would use struct keyword to define variables of structure type.
+  ```cpp
+  #include <iostream>
+  #include <cstring>
+
+  using namespace std;
+
+  struct Books {
+     char  title[50];
+     char  author[50];
+     char  subject[100];
+     int   book_id;
+  };
+
+  int main() {
+     struct Books Book1;        // Declare Book1 of type Book
+     
+     // book 1 specification
+     strcpy( Book1.title, "Learn C++ Programming");
+     strcpy( Book1.author, "Chand Miyan"); 
+     strcpy( Book1.subject, "C++ Programming");
+     Book1.book_id = 6495407;
+     
+     // Print Book1 info
+     cout << "Book 1 title : " << Book1.title <<endl;
+     cout << "Book 1 author : " << Book1.author <<endl;
+     cout << "Book 1 subject : " << Book1.subject <<endl;
+     cout << "Book 1 id : " << Book1.book_id <<endl;
+     
+     return 0;
+  }
+  ```
+  
+### Structures as Function Arguments 
+
+- You can pass a structure as a function argument in very similar way as you pass any other variable or pointer. You would access structure variables in the similar way as you have accessed in the above example −
+  ```cppp
+  // ...
+  
+  void printBook( struct Books book );
+  
+  int main() {
+    // ...
+    
+    // Print Book1 info
+     printBook( Book1 );
+  }
+  
+  void printBook( struct Books book ) {
+     cout << "Book title : " << book.title <<endl;
+     cout << "Book author : " << book.author <<endl;
+     cout << "Book subject : " << book.subject <<endl;
+     cout << "Book id : " << book.book_id <<endl;
+  }
+  ```
+ 
+### Pointers to Structures 
+
+- You can define pointers to structures in very similar way as you define pointer to any other variable as follows −
+  ```cpp
+  struct Books *struct_pointer;
+  ```
+  Now, you can store the address of a structure variable in the above defined pointer variable. To find the address of a structure variable, place the & operator before the structure's name as follows −
+  ```cpp
+  struct_pointer = &Book1;
+  ```
+  To access the members of a structure using a pointer to that structure, you must use the `->` operator instead of the `*` as follows 
+  ```cpp
+  struct_pointer->title;
+  ```
+  
