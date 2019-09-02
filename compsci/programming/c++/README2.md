@@ -82,7 +82,28 @@
   Value of *ip variable: 20
   ```
   
-  ...
+### Null Pointers 
+
+- It is always a good practice to assign the pointer NULL to a pointer variable in case you do not have exact address to be assigned. This is done at the time of variable declaration. A pointer that is assigned NULL is called a null pointer
+  ```cpp
+  int  *ptr = NULL;
+  ```
+  
+### Pointer Arithmetic
+
+- As you understood pointer is an address which is a numeric value; therefore, you can perform arithmetic operations on a pointer just as you can a numeric value. There are four arithmetic operators that can be used on pointers: ++, --, +, and 
+
+- I understand how to do pointer arithmetic but I do not see why we should we do it at the moment. If you want to re-read the tutorial that I followed go ahead: https://www.tutorialspoint.com/cplusplus/cpp_pointer_arithmatic.htm  . But you should check out for other resources to understand pointer arithmetic since I did not udnerstand that much.
+
+### More info on pointers
+
+- There are many more things that you can do with pointers but I am too lazy to summarize these single file readings at the moment:
+  - `Pointers vs Arrays` - There is a close relationship between pointers and arrays. [Click here to read more](https://www.tutorialspoint.com/cplusplus/cpp_pointers_vs_arrays.htm)
+  - `Array of Pointers` - You can define arrays to hold a number of pointers. [Click here to read more](https://www.tutorialspoint.com/cplusplus/cpp_array_of_pointers.htm)
+  - `Pointer to Pointer` - C++ allows you to have pointer on a pointer and so on. [Click here to read more](https://www.tutorialspoint.com/cplusplus/cpp_pointer_to_pointer.htm)
+  - `Passing Pointers to Functions` - Passing an argument by reference or by address both enable the passed argument to be changed in the calling function by the called function. [Click here to read more](https://www.tutorialspoint.com/cplusplus/cpp_passing_pointers_to_functions.htm)
+  - `Return Pointer From Functions` - C++ allows a function to return a pointer to local variable, static variable and dynamically allocated memory as well. [Click here to read more](https://www.tutorialspoint.com/cplusplus/cpp_return_pointer_from_functions.htm)
+
   
 <br>
 <br>
