@@ -38,7 +38,6 @@ Fundemental Computer Science Cirriculum
 
 ### Algorithms and Data Structures
  
-  - [ ] Read: The [TutorialsOnPoint](https://www.tutorialspoint.com/data_structures_algorithms/index.htm) for a overview. Note this to README of the folder
   - [ ] Book: [PSAD using python](http://interactivepython.org/runestone/static/pythonds/index.html)
   - [ ] Project: View the bottom of this page and implement some of the algorithm map
   - [ ] Book: [The Algorithm Design Manual](https://www.amazon.com/Algorithm-Design-Manual-Steven-Skiena/dp/1848000693/?pldnSite=1) There are [vidoes](http://www3.cs.stonybrook.edu/~algorith/video-lectures/) avilable too.
