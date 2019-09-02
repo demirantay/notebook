@@ -24,6 +24,8 @@ Fundemental Computer Science Cirriculum
  - [X] Book : [modern c book](https://www.scribd.com/doc/39933932/C-Programming-a-Modern-Approach-2nd-Edition-K-N-King)(Did not finish left at pg.292 )
  
 ### Computer Architecture
+
+> Ben eater gibi uzun sureli bilgisayar yapimi tarzi projecleri suanlik atliyorum cunku ogrenmekten ziyade sadece parcalari tak cikar yapacagim. Ayriyetten iyi bir bilgisayar yapabilmek icin elektrik, mekatrnoik falan da bilmen lazim bunlari ogrendikten sonra yap.
   
   - [X] Read: The [TutorialsOnPoint](https://www.tutorialspoint.com/computer_fundamentals/index.htm) for a overview. Note this to README of the folder
   - [X] Book : Nand2Tetris
@@ -35,7 +37,7 @@ Fundemental Computer Science Cirriculum
   - [ ] Do the error detection https://eater.net/crc
 
 ### Algorithms and Data Structures
-  
+ 
   - [ ] Read: The [TutorialsOnPoint](https://www.tutorialspoint.com/data_structures_algorithms/index.htm) for a overview. Note this to README of the folder
   - [ ] Book: [PSAD using python](http://interactivepython.org/runestone/static/pythonds/index.html)
   - [ ] Project: View the bottom of this page and implement some of the algorithm map
