@@ -167,6 +167,80 @@
         ~Line();  // This is the destructor: declaration
     ```
 
+### Copy Constructor
+
+- The copy constructor is a constructor which creates an object by initializing it with an object of the same class, which has been created previously. The copy constructor is used to −
+  - Initialize one object from another of the same type.
+  - Copy an object to pass it as an argument to a function.
+  - Copy an object to return it from a function.
+  
+- I didn't get exaclty this part I need to find another resource to read. The resource I left reading:
+  - https://www.tutorialspoint.com/cplusplus/cpp_copy_constructor.htm
+  
+### Friend Functions
+
+- A friend function of a class is defined outside that class' scope but it has the right to access all private and protected members of the class. Even though the prototypes for friend functions appear in the class definition, friends are not member functions
+  
+  A friend can be a function, function template, or member function, or a class or class template, in which case the entire class and all of its members are friends.
+  
+  
+To declare a function as a friend of a class, precede the function prototype in the class definition with keyword `friend` as follows −
+  ```cpp
+  class Box {
+     double width;
+
+     public:
+        double length;
+        friend void printWidth( Box box );  // here is your friend
+        void setWidth( double wid );
+  };
+  ```
+  so now lets define these two functions above:
+  ```cpp
+  // Member function definition
+  void Box::setWidth( double wid ) {
+     width = wid;
+  }
+
+  // Note: printWidth() is not a member function of any class.
+  void printWidth( Box box ) {
+     /* Because printWidth() is a friend of Box, it can
+     directly access any member of this class */
+     cout << "Width of box : " << box.width <<endl;
+  }
+  ```
+  Now for the final touches if we would like to use both of these functions in the `main` function, we would use it like this:
+  ```cpp
+  int main() {
+     Box box;
+
+     // set box width without member function
+     box.setWidth(10.0);
+
+     // Use friend function to print the wdith.
+     printWidth( box );
+
+     return 0;
+  }
+  ```
+
+### Inline Functions 
+
+- C++ inline function is powerful concept that is commonly used with classes. If a function is inline, the compiler places a copy of the code of that function at each point where the function is called at compile time.
+
+  To inline a function, place the keyword `inline` before the function name and define the function before any calls are made to the function. The compiler can ignore the inline qualifier in case defined function is more than a line.
+
+  A real world example would be something like this:
+  ```cpp
+  inline int Max(int x, int y) {
+     return (x > y)? x : y;
+  }
+  ```
+
+- *Note: I am not sure where to use this*
+
+### 'this' Pointer 
+
 <br>
 <br>
 <br>
