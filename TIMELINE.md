@@ -34,5 +34,5 @@
 - 2021 Mart/Nisan - Computer 32 - 64 bits
 - 2021 Mayis/Haziran - Basic Webserver and host a Website on it
 - 2021 Temmuz/Agustos - Basic Database like SQLite
-- 2021 Eylul/Ekim - Operating System on your Computer
+- 2021 Eylul/Ekim - Basic Operating System on your Computer
 - 2021 Kasim/... - Start building your web framework clone and a reddit clone on top of it. Plus remember after this point you should be focusing on your company and your studies in france
