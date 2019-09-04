@@ -241,6 +241,38 @@ To declare a function as a friend of a class, precede the function prototype in 
 
 ### 'this' Pointer 
 
+- Every object in C++ has access to its own address through an important pointer called `this` pointer. The `this` pointer is an implicit parameter to all member functions. Therefore, inside a member function, `this` may be used to refer to the invoking object.
+ 
+  Friend functions do not have a `this` pointer, because friends are not members of a class. Only member functions have a `this` pointe
+
+### Pointer to Classes
+
+- A pointer to a C++ class is done exactly the same way as a pointer to a structure and to access members of a pointer to a class you use the member access operator `->` operator, just as you do with pointers to structures. Also as with all pointers, you must initialize the pointer before using it. 
+  ```cpp
+   Box Box1(3.3, 1.2, 1.5);    // Declare box1
+   Box *ptrBox;                // Declare pointer to a class.
+
+   // Save the address of first object
+   ptrBox = &Box1;
+
+   // Now try to access a member using member access operator
+   cout << "Foo function of Box1: " << ptrBox->foo() << endl;
+  ```
+
+### Static Members of a Class
+
+- We can define class members static using `static` keyword. When we declare a member of a class as static it means no matter how many objects of the class are created, there is only one copy of the static member.
+  
+  A static member is shared by all objects of the class. All static data is initialized to zero when the first object is created, if no other initialization is present. We can't put it in the class definition but it can be initialized outside the class as done in the following example by redeclaring the static variable, using the scope resolution operator :: to identify which class it belongs to.
+  
+  ```cpp
+  class Box {
+    static foo = 42;  // this member is shared in all object instances 
+  }
+  ```
+  
+
+<br>
 <br>
 <br>
 <br>
@@ -248,4 +280,56 @@ To declare a function as a friend of a class, precede the function prototype in 
 
 # Inheritance 
 
-a
+- One of the most important concepts in object-oriented programming is that of inheritance. Inheritance allows us to define a class in terms of another class, which makes it easier to create and maintain an application. This also provides an opportunity to reuse the code functionality and fast implementation time.
+
+  When creating a class, instead of writing completely new data members and member functions, the programmer can designate that the new class should inherit the members of an existing class. This existing class is called the `base` class, and the new class is referred to as the `derived` class.
+  
+### Base and Derived Classes
+
+- A class can be derived from more than one classes, which means it can inherit data and functions from multiple base classes. To define a derived class, we use a class derivation list to specify the base class(es). A class derivation list names one or more base classes and has the form −
+  ```
+  class derived-class: access-specifier base-class
+  ```
+  Where access-specifier is one of `public`, `protected`, or `private`, and base-class is the name of a previously defined class. If the access-specifier is not used, then it is private by default.
+  
+- Consider a base class Shape and its derived class Rectangle as follows −
+  ```cpp
+  #include <iostream>
+ 
+  using namespace std;
+
+  // Base class
+  class Shape {
+     public:
+        void setWidth(int w) {
+           width = w;
+        }
+        void setHeight(int h) {
+           height = h;
+        }
+
+     protected:
+        int width;
+        int height;
+  };
+
+  // Derived class
+  class Rectangle: public Shape {
+     public:
+        int getArea() { 
+           return (width * height); 
+        }
+  };
+
+  int main(void) {
+     Rectangle Rect;
+
+     Rect.setWidth(5);
+     Rect.setHeight(7);
+
+     // Print the area of the object.
+     cout << "Total area: " << Rect.getArea() << endl;
+
+     return 0;
+  }
+  ```
