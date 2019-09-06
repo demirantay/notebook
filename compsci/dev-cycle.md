@@ -1,0 +1,6 @@
+- 1) Project Definition (free of charge)
+- 2) Planning
+- 3) Design, Review and Approval
+- 4) Coding
+- 5) Testing (optional)
+- 6) Documentation (optional)
