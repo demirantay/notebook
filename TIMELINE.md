@@ -33,10 +33,6 @@
 
 > Always Divide and Conquer and tackle each part. Try to keep a developer log and try to tell it in a more tutorial kind of way rather than a documentation so that you will know where you messed up in case of a bug. 
 
-- [ ] Pong Clone
-- [ ] RogueLike Clone
-- [ ] Minecraft Clone
-- [ ] Render your Dream House
 - [ ] Text Editor Clone
 - [ ] Database
 - [ ] Web Server 
