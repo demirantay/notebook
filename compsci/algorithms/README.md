@@ -68,3 +68,98 @@
 
 - When it comes to analysing the complexity of any algorithm in terms of time and space, we can never provide an exact number to define the time required and the space required by the algorithm, instead we express it using some standard notations, also known as `Asymptotic Notations`.
 
+### What is Asymptotic Behaviour 
+
+- If we have two algorithms with the following expressions representing the time required by them for execution, then:
+  - `Expression 1` - (20n2 + 3n - 4)
+  - `Expression 2` - (n3 + 100n - 2)
+
+  Now, as per asymptotic notations, we should just worry about how the function will grow as the value of `n`(input) will grow, and that will entirely depend on `n2` for the Expression 1, and on `n3` for Expression 2. Hence, we can clearly say that the algorithm for which running time is represented by the Expression 2, will grow faster than the other one, simply by analysing the highest power coeeficient and ignoring the other constants(20 in 20n2) and insignificant parts of the expression(`3n - 4` and `100n - 2`).
+  
+  The main idea behind casting aside the less important part is to make things **manageable**.
+  
+  So while analysing algorithm complexities you do not need to calculate all of the expressions inside a formula. Just take the biggest exponened one(s) and base your complexity around that single n3, n2 ... etc. You get the idea.
+  
+### Types of Asymptotic Notations
+
+- We use three types of asymptotic notations to represent the growth of any algorithm, as input increases:
+  - Big Theta (Θ)
+  - Big Oh(O)
+  - Big Omega (Ω)
+  
+### Tight Bounds: Theta
+
+- For example, if for some algorithm the time complexity is represented by the expression 3n2 + 5n, and we use the Big-Θ notation to represent this, then the time complexity would be Θ(n2), ignoring the constant coefficient and removing the insignificant part, which is 5n.
+
+### Upper Bounds: Big-O
+
+- This notation is known as the upper bound of the algorithm, or a Worst Case of an algorithm. It tells us that a certain function will never exceed a specified time for any value of input n. I didn't understand the explanation here. Find a different resource:
+  - https://www.studytonight.com/data-structures/aysmptotic-notations
+  
+### Lower Bounds: Omega
+
+- Big Omega notation is used to define the lower bound of any algorithm or we can say the best case of any algorithm. This always indicates the minimum time required for any algorithm for all input values, therefore the best case of any algorithm.
+
+  This always indicates the minimum time required for any algorithm for all input values, therefore the best case of any algorithm.
+
+<br>
+<br>
+
+---
+
+<br>
+<br>
+
+# Space Complexity of Algorithms 
+
+- Whenever a solution to a problem is written some memory is required to complete. For any algorithm memory may be used for the following:
+  - Variables (This include the constant values, temporary values)
+  - Program Instruction
+  - Execution
+  
+  > Space complexity is the amount of memory used by the algorithm (including the input values to the algorithm) to execute and produce the result.
+
+- Sometime Auxiliary Space is confused with Space Complexity. But Auxiliary Space is the extra space or the temporary space used by the algorithm during it's execution.
+
+  *Space Complexity = Auxiliary Space + Input space*
+  
+### Memory Usage while Execution
+
+- While executing, algorithm uses memory space for three reasons:
+  - `Instruction Space` - It's the amount of memory used to save the compiled version of instructions.
+  - `Environmental Stack` - Sometimes an algorithm(function) may be called inside another algorithm(function). In such a situation, the current variables are pushed onto the system stack, forcing the original algorithm to have the other algotihms stack on its space.
+  - `Data Space` - Amount of space used by the variables and constants.
+  
+  Important: But while calculating the `Space Complexity` of any algorithm, we usually consider only `Data Space` and we neglect the `Instruction Space` and `Environmental Stack`.
+
+### Calculating Space Complexity 
+
+- For calculating the space complexity, we need to know the value of memory used by different type of datatype variables, which generally varies for different operating systems, but the method for calculating the space complexity remains the same.
+
+- Sizes of var types:
+  - `bool`, `char`, `unsigned char`, `signed char` -- 1 Byte
+  - `__int16`, `short`, `unsigned short`, `wchar_t`, `__wchar_t` -- 2 Bytes
+  - `float`, `__int32`, `int`, `unsigned int`, `long`, `unsigned long` -- 4 Bytes
+  - `double`, `__int64`, `long double`, `long long` -- 8 Bytes
+
+  Now let's learn how to compute space complexity by taking a few example:
+  ```cpp
+  {
+      int z = a + b + c;
+      return(z);
+  }
+  ```
+  In the above expression, variables a, b, c and z are all integer types, hence they will take up 4 bytes each, so total memory requirement will be `(4(4) + 4) = 20` bytes, this additional 4 bytes is for `return` value. And because this space requirement is fixed for the above example, hence it is called `Constant Space Complexity`. If we had a variable that needed input such as `n2` and we did not know how much space it woudl take we would call it `Linear Space Complexity.`
+  
+  Remember: We should always focus on writing algorithm code in such a way that we keep the space complexity minimum.
+  
+<br>
+<br>
+
+---
+
+<br>
+<br>
+
+# Time Complexity of Algorithms
+
