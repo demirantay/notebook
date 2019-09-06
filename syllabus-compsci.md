@@ -23,11 +23,18 @@ Fundemental Computer Science Cirriculum
  - [X] Book : SICP (Structured Interpretion of Computer Programs)-*(shelved it for later it is hard)*
  - [X] Book : [modern c book](https://www.scribd.com/doc/39933932/C-Programming-a-Modern-Approach-2nd-Edition-K-N-King)(Did not finish left at pg.292 )
  
+### Algorithms and Data Structures
+ 
+  - [ ] Read: The [This tutorial](https://www.studytonight.com/data-structures/time-complexity-of-algorithms)
+  - [ ] Book: [PSAD using python](http://interactivepython.org/runestone/static/pythonds/index.html)
+  - [ ] Project: Impelement Algorithms and Data Structures in any language
+  - [ ] Book: [The Algorithm Design Manual](https://www.amazon.com/Algorithm-Design-Manual-Steven-Skiena/dp/1848000693/?pldnSite=1) There are [vidoes](http://www3.cs.stonybrook.edu/~algorith/video-lectures/) avilable too.
+ 
 ### Computer Architecture
 
 > Ben eater gibi uzun sureli bilgisayar yapimi tarzi projecleri suanlik atliyorum cunku ogrenmekten ziyade sadece parcalari tak cikar yapacagim. Ayriyetten iyi bir bilgisayar yapabilmek icin elektrik, mekatrnoik falan da bilmen lazim bunlari ogrendikten sonra yap.
   
-  - [X] Read: The [TutorialsOnPoint](https://www.tutorialspoint.com/computer_fundamentals/index.htm) for a overview. Note this to README of the folder
+  - [ ] Read: Read [this tutorial](https://www.studytonight.com/computer-architecture/)
   - [X] Book : Nand2Tetris
   - [ ] Book : [Hidden Language of Computers: CODE](ftp://ftp.borg.moe/yarr/Gentoomen%20Library/Programming/Misc/Charles%20Petzold%20-%20Code%20-%20The%20Hidden%20Language%20of%20Computer%20Hardware%20and%20Software.pdf)
   - [ ] Book : Computer Organization and Design (start over)
@@ -36,16 +43,9 @@ Fundemental Computer Science Cirriculum
   - [ ] Do the vga:graphics https://eater.net/vga
   - [ ] Do the error detection https://eater.net/crc
 
-### Algorithms and Data Structures
- 
-  - [ ] Book: [PSAD using python](http://interactivepython.org/runestone/static/pythonds/index.html)
-  - [ ] Project: View the bottom of this page and implement some of the algorithm map
-  - [ ] Book: [The Algorithm Design Manual](https://www.amazon.com/Algorithm-Design-Manual-Steven-Skiena/dp/1848000693/?pldnSite=1) There are [vidoes](http://www3.cs.stonybrook.edu/~algorith/video-lectures/) avilable too.
-  - [ ] Book : [How to solve it](https://www.amazon.com/How-Solve-Mathematical-Princeton-Science/dp/069116407X/?pldnSite=1)
-  
 ### Operating Systems
 
-   - [ ] Read: The [TutorialsOnPoint](https://www.tutorialspoint.com/operating_system/index.htm) for a overview. Note this to README of the folder
+   - [ ] Read: The [This tutorial](https://www.studytonight.com/operating-system/)
    - [ ] Book : [Operating Systems: Three Easy Pieces](http://pages.cs.wisc.edu/~remzi/OSTEP/)
    - [ ] Course : [ops-class.org : hack the kernel](https://www.ops-class.org/) You can go with the book simotenously.
    - [ ] Tutorial: [little OS tutorial](https://littleosbook.github.io/)
@@ -54,7 +54,7 @@ Fundemental Computer Science Cirriculum
 
 ### Computer Networking
 
-   - [ ] Read: The [TutorialsOnPoint](https://www.tutorialspoint.com/data_communication_computer_network/index.htm) for a overview. Note this to README of the folder
+   - [ ] Read: The [This tutorial](https://www.studytonight.com/computer-networks/)
    - [ ] Book : [Computer Networking: A Top-Down Approach](https://www.amazon.com/Computer-Networking-Top-Down-Approach-7th/dp/0133594149/?pldnSite=1) -- do the exersices
    - [ ] Exersices : [Wireshark](http://www-net.cs.umass.edu/wireshark-labs/)
    - [ ] Course : [Stanford MOOC](https://lagunita.stanford.edu/courses/Engineering/Networking-SP/SelfPaced/about)
