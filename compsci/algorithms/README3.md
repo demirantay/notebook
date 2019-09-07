@@ -41,7 +41,7 @@
 <br>
 <br>
 
-# Bubble Sort 
+# Bubble Sort Algorithm
 
 - Bubble Sort is a simple algorithm which is used to sort a given set of `n` elements provided in form of an array with `n` number of elements. Bubble Sort compares all the element one by one and sort them based on their values.
 
@@ -118,4 +118,61 @@
 <br>
 <br>
 
-# Insertion Sort 
+# Insertion Sort Algorithm
+
+- Consider you have 10 cards out of a deck of cards in your hand. And they are sorted, or arranged in the ascending order of their numbers. If I give you another card, and ask you to `insert` the card in just the right position, so that the cards in your hand are still sorted. What will you do?
+
+  Well, you will have to go through each card from the starting or the back and find the right position for the new card, comparing it's value with each card. Once you find the right position, you will `insert` the card there.
+  
+  Similarly, if more new cards are provided to you, you can easily repeat the same process and insert the new cards and keep the cards sorted too. This is exactly how `insertion sort` works too. 
+  
+- Following are some of the important characteristics of Insertion Sort:
+  - It is efficient for smaller data sets, but very inefficient for larger lists.
+  - Insertion Sort is adaptive, that means it reduces its total number of steps if a partially sorted array is provided as input, making it efficient.
+  - It is better than Selection Sort and Bubble Sort algorithms.
+  - It is better than Selection Sort and Bubble Sort algorithms.
+  
+### Implementing Insertion Sort Algorithm 
+  
+- Following are the steps involved in insertion sort:
+  - 1 - We start by making the second element of the given array, i.e. element at index `1`, the `key`. The `key` element here is the new card that we need to add to our existing sorted set of card
+  - 2 - We compare the `key` element with the element(s) before it, in this case, element at index `0`:
+    - If the `key` element is less than the first element, we insert the key element before the first element.
+    - If the `key` element is greater than the first element, then we insert it after the first element.
+  - 3 - Then, we make the third element of the array as key and will compare it with elements to it's left and insert it at the right position.
+  - 4 - And we go on repeating this, until the array is sorted.
+  
+- Lets implement it with `python`:
+  ```python
+  def insertion_sort(array):
+  
+  for i in range(1, len(array), 1):
+    key = None
+    j = i
+    
+    while (j > 0 and array[j - 1] > array[j]):
+      key = array[j]
+      array[j] = array[j-1]
+      array[j-1] = key
+      j--;
+  ```
+  
+- `Note:` I didn't neccesairly understand this part but I think that when I implement it on my onw project and study it more than fucking 5 minutes it will make sense.
+
+<br>
+<br>
+
+---
+
+<br>
+<br>
+
+# Selection Sort Algorithm 
+
+
+
+
+
+
+
+
