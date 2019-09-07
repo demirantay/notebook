@@ -163,3 +163,83 @@
 
 # Time Complexity of Algorithms
 
+- For any defined problem, there can be N number of solution. This is true in general. Similarly for any problem which must be solved using a program, there can be infinite number of solutions. For exmaple we want to get the number `2` from two numbers. We can add them, subtact them ... etc. the number of solution is infinite:
+  ```
+  0 + 2 = 2
+  1 + 1 = 2
+  1.2 + 0.8 = 2
+  98 - 96 = 2
+  ...
+  ```
+  Remember that programs have many solutions
+  
+### What is Time Complexity
+
+- Time complexity of an algorithm signifies the total time required by the program to run till its completion. The time complexity of algorithms is most commonly expressed using the big O notation. It's an asymptotic notation to represent the time complexity.
+
+  Time Complexity is most commonly estimated by counting the number of elementary steps performed by any algorithm to finish execution. And since the algorithm's performance may vary with different types of input data, hence for an algorithm we usually use the `worst-case Time complexity` of an algorithm because that is the maximum time taken for any input size.
+
+### Calculating Time Compleixty
+
+- Now lets tap onto the next big topic related to Time complexity, which is How to Calculate Time Complexity. It becomes very confusing some times, but we will try to explain it in the simplest way.
+
+  Now the most common metric for calculating time complexity is Big O notation. This removes all constant factors so that the running time can be estimated in relation to `N`, as `N` approaches infinity. In general you can think of it like this :
+  ```cpp
+  statement;
+  ```
+  Above we have a single statement. Its Time Complexity will be Constant. The running time of the statement will not change in relation to `N`.
+  ```cpp
+  for(i=0; i < N; i++)
+  {
+      statement;
+  }
+  ```
+  The time complexity for the above algorithm will be `Linear`. The running time of the loop is directly proportional to `N`. When N doubles, so does the running time.
+  ```cpp
+  for(i=0; i < N; i++) 
+  {
+      for(j=0; j < N;j++)
+      { 
+      statement;
+      }
+  }
+  ```
+  This time, the time complexity for the above code will be `Quadratic`. The running time of the two loops is proportional to the square of N. When N doubles, the running time increases by N * N.
+  ```cpp
+    while(low <= high) 
+  {
+      mid = (low + high) / 2;
+      if (target < list[mid])
+          high = mid - 1;
+      else if (target > list[mid])
+          low = mid + 1;
+      else break;
+  }
+  ```
+  This is an algorithm to break a set of numbers into halves, to search a particular field(we will study this in detail later). Now, this algorithm will have a `Logarithmic` Time Complexity. The running time of the algorithm is proportional to the number of times N can be divided by 2(N is high-low here). This is because the algorithm divides the working area in half with each iteration.
+
+### Types of Notations for Time Complexity 
+
+- Now we will discuss and understand the various notations used for Time Complexity.
+  - 1 - `Big Oh` denotes "fewer than or the same as" <expression> iterations.
+  - 2 - `Big Omega` denotes "more than or the same as" <expression> iterations.
+  - 3 - `Big Theta` denotes "the same as" <expression> iterations.
+  - 4 - `Little Oh` denotes "fewer than" <expression> iterations.
+  - 5 - `Little Omega` denotes "more than" <expression> iterations
+  
+- `O(expression)` is the set of functions that grow slower than or at the same rate as expression. It indicates the maximum required by an algorithm for all input values. It represents the worst case of an algorithm's time complexity.
+
+- `Omega(expression)` is the set of functions that grow faster than or at the same rate as expression. It indicates the minimum time required by an algorithm for all input values. It represents the best case of an algorithm's time complexity.
+
+
+- `Theta(expression)` consist of all the functions that lie in both O(expression) and Omega(expression). It indicates the average bound of an algorithm. It represents the average case of an algorithm's time complexity.
+
+<br>
+<br>
+
+---
+
+<br>
+<br>
+
+[Part 2](./README2.md)
