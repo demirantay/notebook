@@ -154,7 +154,7 @@
       key = array[j]
       array[j] = array[j-1]
       array[j-1] = key
-      j--;
+      j--
   ```
   
 - `Note:` I didn't neccesairly understand this part but I think that when I implement it on my onw project and study it more than fucking 5 minutes it will make sense.
@@ -169,6 +169,7 @@
 
 # Selection Sort Algorithm 
 
+- Selection sort is conceptually the most simplest sorting algorithm. This algorithm will first find the `smallest` element in the array and swap it with the element in the `first` position, then it will find the `second smallest` element and swap it with the element in the `second` position, and it will keep on doing this until the entire array is sorted.
 
 
 
