@@ -1,3 +1,11 @@
+---
+
+Note: Where I left of:
+  - http://library.bagrintsev.me/CPP/Stroustrup%20-%20A%20Tour%20of%20C%2B%2B%20-%202013.pdf
+  - https://doc.lagout.org/programmation/C/Addison.Wesley.Effective.CPP.3rd.Edition.May.2005.pdf 
+
+---
+
 # C++
 
 - C++ is a middle-level programming language developed by Bjarne Stroustrup starting in 1979 at Bell Labs. C++ runs on a variety of platforms, such as Windows, Mac OS, and the various versions of UNIX.
