@@ -64,6 +64,7 @@ Fundemental Computer Science Cirriculum
  ### Databases
 
    - [ ] Read: The [TutorialsOnPoint](https://www.tutorialspoint.com/dbms/index.htm) for a overview. Note this to README of the folder
+   - [ ] Read: Do this [tutorial](https://www.studytonight.com/dbms/)
    - [ ] Course : [Berkley Course](https://archive.org/details/UCBerkeley_Course_Computer_Science_186)
    - [ ] Paper : [Database Architecture](http://db.cs.berkeley.edu/papers/fntdb07-architecture.pdf)
    - [ ] Book : [Red Book](http://www.redbook.io/) -- your next stop after berkley course
