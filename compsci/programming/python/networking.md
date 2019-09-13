@@ -147,3 +147,75 @@
   | SOCK_STREAM | SOCK_DGRAM | 
   |--|--|
   | For TCP protocols | For UDP protocols |
+  | Reliable delivery | Unrelible delivery |
+  | Order Guranteed	| No order guaranteed |
+  | Connection-oriented | No notion of connection(UDP) | 
+  | Bidirectional	| Not Bidirectional | 
+  
+### Socket Module in Python
+
+- To create a socket, we must use `socket.socket()` function available in the Python socket module, which has the general syntax as follows:
+  ```python
+  import socket
+  
+  S = socket.socket(socket_family, socket_type, protocol=0)
+  ```
+  - `socket_family:` This is either `AF_UNIX `or `AF_INET`. We are only going to talk about INET sockets in this tutorial, as they account for at least 99% of the sockets in use.
+  - `socket_type:` This is either SOCK_STREAM or SOCK_DGRAM.
+  - `protocol:` This is usually left out, defaulting to 0.
+
+### Client Socket Methods 
+
+- Following are some client socket methods:
+  - `connect()` -- To connect to a remote socket at an address. An address format(host, port) pair is used for **AF_INET** address family.
+
+### Server Socket Methods
+
+- Following are some server socket methods:
+  - `bind()` -- This method binds the socket to an address. The format of address depends on socket family mentioned above(AF_INET).
+  - `listen(backlog)` -- This method listens for the connection made to the socket. The backlog is the maximum number of queued connections that must be listened before rejecting the connection.
+  - `accept()` -- This method is used to accept a connection. The socket must be bound to an address and listening for connections. The return value is a `pair(conn, address)` where **conn** is a new socket object which can be used to send and receive data on that connection, and address is the address bound to the socket on the other end of the connection.
+
+> For detailed view of methods refer documentation: https://docs.python.org/2/library/socket.html
+
+
+### Few General Socket Methods
+
+- | TCP Socket Methods | 	UDP Socket Methods |
+  | -- | -- |
+  | `s.recv()` -> Receives TCP messages | `s.recvfrom()` -> Receives UDP messages |
+  | `s.send()` -> Transmits TCP messages | `s.sendto()` -> Transmits UDP messages |
+
+### Some Basic Socket Methods
+
+- Some basic socket methods are listed below:
+  - `close()` -- This method is used to close the socket connection.
+  - `gethostname()` This method returns a string containing the hostname of the machine where the python interpreter is currently executing. For example: localhost.
+  - `gethostbyname()` If you want to know the current machine's IP address, you may use `gethostbyname(gethostname())`.
+  
+
+<br>
+<br>
+
+---
+
+<br>
+<br>
+
+# Working with TCP Sockets
+
+
+### Simple Server Program
+
+### Simple Client Program
+
+
+<br>
+<br>
+
+---
+
+<br>
+<br>
+
+# Working with UDP Sockets
