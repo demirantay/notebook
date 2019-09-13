@@ -204,11 +204,54 @@
 
 # Working with TCP Sockets
 
+- As of now, you guys must be familiar with the socket methods described in the previous section. Now we will use those methods in a simple Client-Server Program.
 
 ### Simple Server Program
 
+- ```python
+  #This is tcp_server.py script
+
+  import socket			                #line 1: Import socket module
+
+  s = socket.socket()		                #line 2: create a socket object
+  host = socket.gethostname()	            #line 3: Get current machine name
+  port = 9999			                    #line 4: Get port number for connection
+
+  s.bind((host,port))		                #line 5: bind with the address
+
+  print "Waiting for connection..."	
+  s.listen(5)			                    #line 6: listen for connections
+
+  while True:
+    conn,addr = s.accept()	            #line 7: connect and accept from client
+    print 'Got Connection from', addr
+    conn.send('Server Saying Hi')
+    conn.close()		                #line 8: Close the connection
+  ```
+  This script will do nothing as of now. It waits for a client to connect at the port specified. If we run this script now, without having a client, it will wait for the connection,
+  
+  Similarly, every website you visit has a server on which it is hosted, which is always waiting for clients to connect. Now let's create a `client.py` program and try to connect with our `server.py.`
+
 ### Simple Client Program
 
+- Below is the `client.py` program. The client tries to connect to server's port, `9999`(well defined port). The code line, `s.connect((host, port))` opens up a TCP connection to the hostname on the port 9999.
+  ```python
+  #This is tcp_client.py script
+
+  import socket			
+
+  s = socket.socket()		
+  host = socket.gethostname()	        # Get current machine name
+  port = 9999			                    # Client wants to connect to server's
+                                      # port number 9999
+  s.connect((host,port))
+  print s.recv(1024)		              # 1024 is bufsize or max amount 
+                                      # of data to be received at once
+  s.close()
+  ```
+  Note: Here we are running both client and server on the same machine but a real life scenario is surely different from this, but is similar.
+  
+  Notice that after executing, terminates but server.py is still running. This is what happens in real scenario too. After fulfiling your request, the Studytonight server keeps on running 24*7 to serve other users.
 
 <br>
 <br>
@@ -219,3 +262,17 @@
 <br>
 
 # Working with UDP Sockets
+
+### Simple UDP Server Program
+
+### Simple UDP Client 
+
+<br>
+<br>
+
+---
+
+<br>
+<br>
+
+# Handling Recieved Data
