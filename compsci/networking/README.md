@@ -1,3 +1,9 @@
+---
+
+Note: Left at here: https://www.studytonight.com/computer-networks/network-topology-types
+
+---
+
 # Networking 
 
 - Modern world scenario is ever changing. Data Communication and network have changed the way business and other daily affair works. Now, they highly rely on computer networks and internetwork.
