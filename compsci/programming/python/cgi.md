@@ -1,3 +1,0 @@
-# Common Gateway Interface (CGI)
-
-> I will write my notes soon ...
