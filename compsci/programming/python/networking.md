@@ -263,9 +263,51 @@
 
 # Working with UDP Sockets
 
+- If we do not mention the socket_family and socket_type, then by default it is `TCP`. So, if we want to create a UDP socket than we have to specify socket_family and socket_type explicitly. For UDP socket we define:
+  ```python
+  s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+  ```
+  and, if you explicitly want to define a TCP socket:
+  ```python
+  s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+  ```
+
 ### Simple UDP Server Program
 
+- This is the udpserver.py script:
+  ```python
+  import socket
+
+  sock = socket.socket(socket.AF_INET,socket.SOCK_DGRAM)      # For UDP
+
+  udp_host = socket.gethostname()		        # Host IP
+  udp_port = 12345			                # specified port to connect
+
+  sock.bind((udp_host,udp_port))
+
+  while True:
+    print "Waiting for client..."
+    data,addr = sock.recvfrom(1024)	        #receive data from client
+    print "Received Messages:",data," from",addr
+  ```
+
 ### Simple UDP Client 
+
+- This is the udpclient.py script:
+  ```python
+  import socket
+
+  sock = socket.socket(socket.AF_INET,socket.SOCK_DGRAM)      # For UDP
+
+  udp_host = socket.gethostname()		# Host IP
+  udp_port = 12345			        # specified port to connect
+
+  msg = "Hello Python!"
+  print "UDP target IP:", udp_host
+  print "UDP target Port:", udp_port
+
+  sock.sendto(msg,(udp_host,udp_port))		# Sending message to UDP server
+  ```
 
 <br>
 <br>
@@ -275,4 +317,36 @@
 <br>
 <br>
 
-# Handling Recieved Data
+# Blocking and Non-Blocking Socket I/O
+
+
+### Blocking Socket I/O
+
+### Non-Blocking Scoket I/O
+
+
+<br>
+<br>
+
+---
+
+<br>
+<br>
+
+# Securing Sockets
+
+### TSL/SSL
+
+### SSL Handshake 
+
+
+
+<br>
+<br>
+
+---
+
+<br>
+<br>
+
+[Part 2](./networking2.md)
