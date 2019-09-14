@@ -222,4 +222,91 @@
 
 # Linear Linked List 
 
+- Linear Linked list is the default linked list and a linear data structure in which data is not stored in contiguous memory locations but each data node is connected to the next data node via a pointer, hence forming a chain.
+
+- The element in such a linked list can be inserted in 2 ways:
+  - Insertion at beginning of the list.
+  - Insertion at the end of the list.
+  
+- We will also be adding some other useful methods like to a linked list class:
+  - Checking whether Linked List is empty or not.
+  - Searching any data element in the Linked List
+  - Deleting a particular Node(data element) from the List
+  
+  Before learning how we insert data and create a linked list, we must understand the components forming a linked list, and the main component is the `Node`.
+
+### What is a Node 
+
+- A Node in a linked list holds the data value and the pointer which points to the location of the next node in the linked list.
+
+  You must be wondering why we need to store the location of the next node. Well, because the memory locations allocated to these nodes are not contiguous hence each node should know where the next node is stored.
+  
+- Lets build it using python:
+  ```python
+  class Node:
+  
+    def __init__(self, data, next_node):
+      self.data = data
+      self.next = next_node
+      
+    def get_data(self):
+      return self.data
+      
+    def get_next(self):
+      return self.next
+      
+    def set_next(self, new_next):
+      self.next = new_next
+  ```
+
+### Linked List Class Implementation
+
+- Now that we have a `Node` class lets use it in order to create a linked list:
+  ```python
+  class LinkedList:
+    
+    def __init__(self, head=None):
+      self.head = head
+      
+    def insert(self, data):
+      new_node = Node(data)
+      new_node.set_next(self.head)
+      self.head = new_node
+      
+    def search(...)
+    
+    def size(...)
+    
+    def delete(...)
+  ```
+
+<br>
+<br>
+
+---
+
+<br>
+<br>
+
+# Circular & Doubly Linked List 
+
+- Since I know the basics of a linked list and node classes noting these too would take too much time, plus I will code them inisde my algorithm implementation repo so no need to re-write it again. 
+
+<br>
+<br>
+
+---
+
+<br>
+<br>
+
+# Introduction to Binary Tree 
+
+
+
+
+
+
+
+
 
