@@ -319,10 +319,22 @@
 
 # Blocking and Non-Blocking Socket I/O
 
+- In client server applications, when a client makes a request to a server, server processes the request and sends back a response. For this, both the client and the server first needs to establish a connection with one another through sockets (TCP or UDP).
 
 ### Blocking Socket I/O
 
+- By default, TCP sockets are placed in a `blocking` mode. This means that the control is not returned to your program until some specific operation is complete.
+
+  For example, if you call the `connect()` method, the connection blocks your program until the operation is complete. On many occasions, we don't want to keep our program waiting forever.
+  
+  Taking another example, when we write a web browser client that connects to a web server, we should consider a **stop functionality** that can cancel an active connection process in the middle of its operation. This can be achieved by placing the socket in the **non-blocking mode**.
+
 ### Non-Blocking Scoket I/O
+
+- We can call `setblocking(1)` to set up blocking or `setblocking(0)` to unset blocking. Let's understand it with the help of an example.
+
+-  I did not quite get this part. Read again: 
+  - https://www.studytonight.com/network-programming-in-python/blocking-and-nonblocking-socket-io
 
 
 <br>
@@ -335,11 +347,25 @@
 
 # Securing Sockets
 
+- In this part we will understand the concept of securing the sockets over TSL/SSL.
+
 ### TSL/SSL
+
+- Before diving into the depth of `TSL` and `SSL`, we should first understand what is **Encryption**. According to wikipedia, *"Encryption is the process of encoding a message or information in such a way that only authorized parties can access it. In an encryption scheme, the intended information or message, referred to as plaintext, is encrypted using an encryption algorithm, generating ciphertext that can only be read if decrypted."*
+
+  > Encryption is necessary to ensure the confidentiality of message/data.
+  
+- `TLS(Transport Layer Security)` and `SSL(Secure Sockets Layer)` are protocols that provide data encryption and authentication between applications and servers in scenarios where that data is being sent across an insecure network.
+
+  The terms SSL and TLS are often used interchangeably, but one is in fact the predecessor of the other — SSL 3.0 served as the basis for TLS 1.0 which, as a result, is sometimes referred to as SSL 3.1.
 
 ### SSL Handshake 
 
+- For SSL/TLS handshake to take place, the system administrator must have:
+  - `Private Key`: Used for data encryption.
+  - `Certificate`: To ensure the authenticity of client.
 
+- SSL/TSL is a too big topic to explain it in just a section I will create a new note directory just for it ...
 
 <br>
 <br>
