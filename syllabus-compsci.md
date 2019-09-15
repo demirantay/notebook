@@ -25,7 +25,7 @@ Fundemental Computer Science Cirriculum
  
 ### Algorithms and Data Structures
  
-  - [ ] Read: The [This tutorial](https://www.studytonight.com/data-structures/time-complexity-of-algorithms)
+  - [X] Read: The [This tutorial](https://www.studytonight.com/data-structures/time-complexity-of-algorithms)
   - [ ] Book: [PSAD using python](http://interactivepython.org/runestone/static/pythonds/index.html)
   - [ ] Project: Impelement Algorithms and Data Structures in any language
   - [ ] Book: [The Algorithm Design Manual](https://www.amazon.com/Algorithm-Design-Manual-Steven-Skiena/dp/1848000693/?pldnSite=1) There are [vidoes](http://www3.cs.stonybrook.edu/~algorith/video-lectures/) avilable too.
