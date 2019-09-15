@@ -169,7 +169,29 @@
 
 # Selection Sort Algorithm 
 
-- Selection sort is conceptually the most simplest sorting algorithm. This algorithm will first find the `smallest` element in the array and swap it with the element in the `first` position, then it will find the `second smallest` element and swap it with the element in the `second` position, and it will keep on doing this until the entire array is sorted.
+- Selection sort is conceptually the most simplest sorting algorithm. This algorithm will first find the `smallest` element in the array and swap it with the element in the `first` position, then it will find the `second smallest` element and swap it with the element in the `second` position, and it will keep on doing this until the entire array is sorted. It is called selection sort because it repeatedly selects the next-smallest element and swaps it into the right place.
+
+### How Selection Sort Works
+
+- Following are the steps involved in selection sort(for sorting a given array in ascending order):
+  - 1 -Starting from the first element, we search the smallest element in the array, and replace it with the element in the first position.
+  - 2 - We then move on to the second position, and look for smallest element present in the subarray, starting from index 1, till the last index.
+  - 3 - We replace the element at the second position in the original array, or we can say at the first position in the subarray, with the second smallest element.
+  - 4 - This is repeated, until the array is completely sorted.
+
+- Note: I am skipping the implementation part because I will be implementing the algorithms in my algorithm implementation repository
+
+<br>
+<br>
+
+---
+
+<br>
+<br>
+
+# Summary
+
+I am not going to note down rest of the algorithms because you get the idea. Algoritmhs are steps for solving a particular problem with an ending to it. It can be efficent or it can be terrible it is up to you which one you will use. 
 
 
 
