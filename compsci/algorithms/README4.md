@@ -302,6 +302,73 @@
 
 # Introduction to Binary Tree 
 
+- A binary tree is a hierarchical data structure in which each node has at most two children generally referred as left child and right child.
+  
+  Each node contains three components:
+  - Pointer to left subtree
+  - Pointer to right subtree
+  - Data element
+  
+  The topmost node in the tree is called the root. An empty tree is represented by NULL pointer.
+  
+### Binary Tree: Common Terminologies
+
+- Terminologies:
+  - `Root`: Topmost node in a tree.
+  - `Parent`: Every node (excluding a root) in a tree is connected by a directed edge from exactly one other node. This node is called a parent.
+  - `Child`: A node directly connected to another node when moving away from the root.
+  - `Leaf/External node`: Node with no children.
+  - `Internal node`: Node with atleast one children.
+  - `Depth of a node`: Number of edges from root to the node.
+  - `Height of a node`: Number of edges from the node to the deepest leaf. Height of the tree is the height of the root.
+
+### Advantages of Trees 
+
+- Trees are so useful and frequently used, because they have some very serious advantages:
+  - Trees reflect structural relationships in the data.
+  - Trees are used to represent hierarchies.
+  - Trees provide an efficient insertion and searching.
+  - Trees are very flexible data, allowing to move subtrees around with minumum effort.
+
+### Types of Binary Trees (Based on Structure)
+
+- Types:
+  - `Rooted binary tree`: It has a root node and every node has atmost two children.
+  - `Full binary tree`: It is a tree in which every node in the tree has either 0 or 2 children.
+  - `Perfect binary tree`: It is a binary tree in which all interior nodes have two children and all leaves have the same depth or same level.
+  - `Complete binary tree`: It is a binary tree in which every level, except possibly the last, is completely filled, and all nodes are as far left as possible.
+  - `Degenarate tree`: It is a tree is where each parent node has only one child node. It behaves like a linked list.
+
+
+<br>
+<br>
+
+---
+
+<br>
+<br>
+
+# Binary Search Tree
+
+- A binary search tree is a useful data structure for fast addition and removal of data.
+  
+  It is composed of nodes, which stores data and also links to upto two other child nodes. It is the relationship between the leaves linked to and the linking leaf, also known as the parent node, which makes the binary tree such an efficient data structure.
+  
+  For a binary tree to be a binary search tree, the data of all the nodes in the left sub-tree of the root node should be less than the data of the root. The data of all the nodes in the right subtree of the root node should be greater than equal to the data of the root. As a result, the leaves on the farthest left of the tree have the lowest values, whereas the leaves on the right of the tree have the greatest values.
+  
+- Well I am bored as fuck of reading the tutorial so if you want to see the implementation just go to your algoritm implementation repo 
+
+<br>
+<br>
+
+---
+
+<br>
+
+This is enough introduction for now if you want to read more on about data structures or algortihms search about them. You already know the basics.
+ 
+ 
+
 
 
 
