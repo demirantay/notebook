@@ -1,20 +1,30 @@
 # CompSci Syllabus
 
-> Remember whenever you finish a subject gather your understandings and explain each component with the feynman technique. After doing that proof check your understanding of each compoenet by step by step on the IRC and finally ask if there are any components of the subject you have missed.
+---
+
+> **Remember whenever you finish a subject gather your understandings and explain each component with the feynman technique.**
+
+---
 
 The syllabus is divided into sections. The first section is the basic theorotical resources that every software engineer should know. The following sections are my own preferred choosings (each section is divided with hr lines).
 
 Best resources:
  - For [finding the books](http://freecomputerbooks.com/)
  - For [finding tutorials](https://github.com/danistefanovic/build-your-own-x#build-your-own-web-server)
- 
-- [ ] Start contributing to Remote Companies Open Source projects 
+
+Remember:
 - [ ] Think of this as Duolingo tree, you can reset them all and re-do them with more advanced notes. You are never done.
 
 
 ## Section 1
 
 Fundemental Computer Science Cirriculum
+
+### Pre-Requisites
+
+- [ ] Math: Finish Everything in Khan Academy
+- [ ] Physics: Finish Everything in Khan Academy
+- [ ] Electrical Engineering: Finish Everytihing in Khan Academy
 
 ### Programming
 
@@ -23,13 +33,7 @@ Fundemental Computer Science Cirriculum
  - [X] Book : SICP (Structured Interpretion of Computer Programs)-*(shelved it for later it is hard)*
  - [X] Book : [modern c book](https://www.scribd.com/doc/39933932/C-Programming-a-Modern-Approach-2nd-Edition-K-N-King)(Did not finish left at pg.292 )
  
-### Algorithms and Data Structures
- 
-  - [X] Read: The [This tutorial](https://www.studytonight.com/data-structures/time-complexity-of-algorithms)
-  - [ ] Book: [PSAD using python](http://interactivepython.org/runestone/static/pythonds/index.html)
-  - [ ] Project: Impelement Algorithms and Data Structures in any language
-  - [ ] Book: [The Algorithm Design Manual](https://www.amazon.com/Algorithm-Design-Manual-Steven-Skiena/dp/1848000693/?pldnSite=1) There are [vidoes](http://www3.cs.stonybrook.edu/~algorith/video-lectures/) avilable too.
- 
+
 ### Computer Architecture
 
 > Ben eater gibi uzun sureli bilgisayar yapimi tarzi projecleri suanlik atliyorum cunku ogrenmekten ziyade sadece parcalari tak cikar yapacagim. Ayriyetten iyi bir bilgisayar yapabilmek icin elektrik, mekatrnoik falan da bilmen lazim bunlari ogrendikten sonra yap.
@@ -42,6 +46,14 @@ Fundemental Computer Science Cirriculum
   - [ ] Do the 8bit computer https://eater.net/8bit
   - [ ] Do the vga:graphics https://eater.net/vga
   - [ ] Do the error detection https://eater.net/crc
+  
+### Algorithms and Data Structures
+ 
+  - [X] Read: The [This tutorial](https://www.studytonight.com/data-structures/time-complexity-of-algorithms)
+  - [ ] Book: [PSAD using python](http://interactivepython.org/runestone/static/pythonds/index.html)
+  - [ ] Project: Impelement Algorithms and Data Structures in any language
+  - [ ] Book: [The Algorithm Design Manual](https://www.amazon.com/Algorithm-Design-Manual-Steven-Skiena/dp/1848000693/?pldnSite=1) There are [vidoes](http://www3.cs.stonybrook.edu/~algorith/video-lectures/) avilable too.
+ 
 
 ### Operating Systems
 
@@ -87,15 +99,6 @@ Fundemental Computer Science Cirriculum
   - [ ] Guide : [Code Univeristy Guide](https://github.com/jwasham/coding-interview-university) : Finish this guide after finishing the sections above this guide suppose to take your time nearly a year so go through each item very seriously. If you are able to come this far hell go apply for big 4.
   - [ ] Project: Once you are done you can solve the algorithms that are listed as a roadmap in a image at the bottom of this file.
   - [ ] **Once you are done with the fundementals open up "Human Universals" and try to come up with an idea to build** 
-  
-### Mathematics
-
-  - [ ] Study : Most important math for CS is discrete math. Finish the prerequisites from khan academy.
-  - [ ] Course : [Important dicrete course](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-042j-mathematics-for-computer-science-fall-2010/video-lectures/)
-  - [ ] Read : [Lecture notes for Discrete Mathematics](http://www.cs.elte.hu/~lovasz/dmbook.ps)
-  - [ ] Course : [Mathemtaics for Computer Scinece](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-042j-mathematics-for-computer-science-spring-2015/index.htm)
-   - [ ] Course: [Essence of Linear Algebra](https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab)
-   - [ ] Course : [Linear Algebra](https://ocw.mit.edu/courses/mathematics/18-06-linear-algebra-spring-2010/video-lectures/)
 
  ### Other Pet/Advanced Topics
  
