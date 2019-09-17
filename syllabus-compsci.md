@@ -33,25 +33,20 @@ Fundemental Computer Science Cirriculum
  - [X] Book : SICP (Structured Interpretion of Computer Programs)-*(shelved it for later it is hard)*
  - [X] Book : [modern c book](https://www.scribd.com/doc/39933932/C-Programming-a-Modern-Approach-2nd-Edition-K-N-King)(Did not finish left at pg.292 )
  
-
 ### Computer Architecture
-
-> Ben eater gibi uzun sureli bilgisayar yapimi tarzi projecleri suanlik atliyorum cunku ogrenmekten ziyade sadece parcalari tak cikar yapacagim. Ayriyetten iyi bir bilgisayar yapabilmek icin elektrik, mekatrnoik falan da bilmen lazim bunlari ogrendikten sonra yap.
   
   - [ ] Read: Read [this tutorial](https://www.studytonight.com/computer-architecture/)
-  - [X] Book : Nand2Tetris
   - [ ] Book : [Hidden Language of Computers: CODE](ftp://ftp.borg.moe/yarr/Gentoomen%20Library/Programming/Misc/Charles%20Petzold%20-%20Code%20-%20The%20Hidden%20Language%20of%20Computer%20Hardware%20and%20Software.pdf)
   - [ ] Book : Computer Organization and Design (start over)
   - [ ] Project: Design and build a simple computer
   - [ ] Do the 8bit computer https://eater.net/8bit
   - [ ] Do the vga:graphics https://eater.net/vga
-  - [ ] Do the error detection https://eater.net/crc
   
 ### Algorithms and Data Structures
  
   - [X] Read: The [This tutorial](https://www.studytonight.com/data-structures/time-complexity-of-algorithms)
   - [ ] Book: [PSAD using python](http://interactivepython.org/runestone/static/pythonds/index.html)
-  - [ ] Project: Impelement Algorithms and Data Structures in any language
+  - [ ] Project: Impelement Algorithms and Data Structures in any language. [Do all of these here](https://github.com/trekhleb/javascript-algorithms) (You alread y started implementing them in a repo)
   - [ ] Book: [The Algorithm Design Manual](https://www.amazon.com/Algorithm-Design-Manual-Steven-Skiena/dp/1848000693/?pldnSite=1) There are [vidoes](http://www3.cs.stonybrook.edu/~algorith/video-lectures/) avilable too.
  
 
