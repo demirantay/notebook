@@ -21,20 +21,12 @@ I am not going to note down the depths of every phyics topic in the universe, ho
  - Forces and Newtons law of motion
  - Centripetal force and gravitation
  - Work and energy
- - Impacts and Linear momentum 
- - Torque angular momentum
- - Oscillations and mechanical waves 
- - Fluids 
- - Thermodynamics 
  - Electric charge, field, and Potential 
  - Circuits 
  - Magnetic Forces, magnetic fields, faradys Law
  - Electromagnetic waves interference 
- - Gemoetric optics
- - Special Relativity
  - Quantum physics 
  - Discoveries and projects
- - Cosmology and Astronomy
  
  
  
