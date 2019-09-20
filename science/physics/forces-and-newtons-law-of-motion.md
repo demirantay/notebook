@@ -1,3 +1,9 @@
+---
+
+Where I left: https://www.khanacademy.org/science/physics/forces-newtons-laws/newtons-laws-of-motion/a/what-is-newtons-second-law?modal=1
+
+---
+
 # Forces and Newtons Law of Motion
 
 - The notes down are taken from khan academy's physics course.
@@ -34,6 +40,16 @@
     The inertia of an object is measured by its mass. Mass can be determined by measuring how difficult an object is to accelerate. The more mass an object has, the harder it is to accelerate. Also, roughly speaking, the more “stuff”—or matter—in something, the more mass it will have, and the harder it will be to change its velocity, i.e., accelerate.
     
 ### Second Law:
+
+- In the world of introductory physics, Newton's second law is one of the most important laws you'll learn. It's used in almost every chapter of every physics textbook, so it's important to master this law as soon as possible.
+
+  We know objects can only accelerate if there are forces on the object. Newton's second law tells us exactly how much an object will accelerate for a given net force: `a = ΣF / m` (To be clear, aaa is the acceleration of the object, `ΣF` is the net force on the object, and mmm is the mass of the object.) But people usually write newtons second law in this form: 
+  `F = m * a`
+  
+- `What does net force mean`: A force is a push or a pull, and the net force `ΣF` is the total force—or sum of the forces—exerted on an object. Adding vectors is a little different from adding regular numbers. When adding vectors, we must take their direction into account. For instance, consider the two forces of magnitude 30 N and 20 N that are exerted to the right and left respectively on the sheep :
+
+  ΣF=30 N−20 N<br>
+  ΣF=10 N to the right
 
 
 <br>
