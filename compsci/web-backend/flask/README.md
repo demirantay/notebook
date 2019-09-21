@@ -382,86 +382,12 @@
 
 <br>
 <br>
-<br>
-
-# Message Flashing
-
-- At the moment I am not going to note it down since I do not usually use it. However, self note: Note this down in the future from this web page:
-  - https://www.tutorialspoint.com/flask/flask_message_flashing.htm
-
-<br>
-<br>
-<br>
-
-# Extensions
-
-- At the moment I am not going to note it down since I do not usually use it. However, self note: Note this down in the future from this web page:
-  - https://www.tutorialspoint.com/flask/flask_extensions.htm
-
-<br>
-<br>
-<br>
-
-# Mail
-
-- At the moment I am not going to note it down since I do not usually use it. However, self note: Note this down in the future from this web page:
-  - https://www.tutorialspoint.com/flask/flask_mail.htm
-
-<br>
-<br>
-<br>
-
-# WTF
-
-- At the moment I am not going to note it down since I do not usually use it. However, self note: Note this down in the future from this web page:
-  - https://www.tutorialspoint.com/flask/flask_wtf.htm
-
-<br>
-<br>
-<br>
-
-# SQLite 
-
-- At the moment I am not going to note it down since I do not usually use it. However, self note: Note this down in the future from this web page:
-  - https://www.tutorialspoint.com/flask/flask_sqlite.htm
 
 
-<br>
-<br>
-<br>
+---
 
-# SQLAlchemy
+[Part 2](./README2.md)
 
-- At the moment I am not going to note it down since I do not usually use it. However, self note: Note this down in the future from this web page:
-  - https://www.tutorialspoint.com/flask/flask_sqlalchemy.htm
-
-<br>
-<br>
-<br>
-
-# Sijax
-
-- At the moment I am not going to note it down since I do not usually use it. However, self note: Note this down in the future from this web page:
-  - https://www.tutorialspoint.com/flask/flask_sijax.htm
-
-<br>
-<br>
-<br>
-
-# Deployment
-
-
-- At the moment I am not going to note it down since I do not usually use it. However, self note: Note this down in the future from this web page:
-  - https://www.tutorialspoint.com/flask/flask_deployment.htm
-
-<br>
-<br>
-<Br>
-  
-# Fast CGI
-
-- At the moment I am not going to note it down since I do not usually use it. However, self note: Note this down in the future from this web page:
-  - https://www.tutorialspoint.com/flask/flask_fastcgi.htm
 
 
 
