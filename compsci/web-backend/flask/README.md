@@ -58,6 +58,12 @@
   - `debug` : Defaults to false. If set to true, provides a debug information
   - `options` : To be forwarded to underlying Werkzeug server.
   
+- Run flask's local devleopment server with:
+  ```
+  $ export FLASK_APP=filename.py
+  $ flask run
+  ```
+  
 <br>
 <br>
 <br>
