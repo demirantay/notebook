@@ -99,7 +99,65 @@
   - `MAIL_SUPPRESS_SEND` - Sending suppressed if app.testing set to true
   - `MAIL_ASCII_ATTACHMENTS` - If set to true, attached filenames converted to ASCII
   
+- I won't note more because it will take too much space if youa re interested pllease raed the documentations but for a starting point tutorial this page is excellent:
+  - https://www.tutorialspoint.com/flask/flask_mail.htm
   
+<br>
+<br>
+
+---
+
+<br>
+<br>
+
+# FLask-WTF
+
+- One of the essential aspects of a web application is to present a user interface for the user. HTML provides a <form> tag, which is used to design an interface. A Form’s elements such as text input, radio, select etc. can be used appropriately.
+
+  Data entered by a user is submitted in the form of Http request message to the server side script by either GET or POST method.
+  - The Server side script has to recreate the form elements from http request data. So in effect, form elements have to be defined twice – once in HTML and again in the server side script.
+  - Another disadvantage of using HTML form is that it is difficult (if not impossible) to render the form elements dynamically. HTML itself provides no way to validate a user’s input.
+  
+  This is where `WTForms`, a flexible form, rendering and validation library comes handy. Flask-WTF extension provides a simple interface with this WTForms library.
+  
+- Using Flask-WTF, we can define the form fields in our Python script and render them using an HTML template. It is also possible to apply validation to the WTF field.
+
+  Like above since it would take a huge space to note Flask WTF I am just going to link a tutorial page and if you want to read more do your research:
+    - https://www.tutorialspoint.com/flask/flask_wtf.htm
+    
+<br>
+<br>
+
+---
+
+<br>
+<br>
+
+# SQLAlchemy
+
+- Using raw SQL in Flask web applications to perform CRUD operations on database can be tedious. Instead, SQLAlchemy, a Python toolkit is a powerful OR Mapper that gives application developers the full power and flexibility of SQL. Flask-SQLAlchemy is the Flask extension that adds support for SQLAlchemy to your Flask application.
+
+- SQL ALchemy is just an ORM for flask and again it would be impractical to note it down here at the moment. so just read this:
+  - https://www.tutorialspoint.com/flask/flask_sqlalchemy.htm
+  - than research more
+  
+<br>
+<bR>
+  
+---
+
+<br>
+<br>
+
+# Sijax
+
+- Sijax stands for ‘Simple Ajax’ and it is a Python/jQuery library designed to help you easily bring Ajax to your application. It uses jQuery.ajax to make AJAX requests.
+
+- No point of noting it down here, start here:
+  - https://www.tutorialspoint.com/flask/flask_sijax.htm
+  - research more ...
+
+
   
   
   
