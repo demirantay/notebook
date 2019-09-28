@@ -77,7 +77,14 @@
     username = db.Column(db.String(90), unique=True, nullable=False)
     email = db.Column(db.String(120), unique=True, nullable=False)
     
-    def __repr__(self):
+    def __init__(self, username, email):
+       self.username = username
+       self.email = email
+       
+  class Post(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    content = db.Column(db.Text)
+    user_id = db.Column(db.Integer, db.ForeignKey('user.id')
       
   ```
   Use Column to define a column. The name of the column is the name you assign it to. If you want to use a different name in the table you can provide an optional first argument which is a string with the desired column name, such as:
@@ -101,17 +108,15 @@
 
   Relationships are expressed with the `relationship()` function. However the foreign key has to be separately declared with the `ForeignKey` class:
   ```python
-  class Person(db.Model):
+  class User(db.Model):
+    __tablename__ = "user"
     id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String(50), nullable=False)
-    addresses = db.relationship('Address', backref='person', lazy=True)
-    
-  class Address(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    email = db.Column(db.String(120), nullable=False)
-    person_id = db.Column(db.Integer, db.ForeignKey('person.id'),
-        nullable=False)
+    name = db.Column(db.String(80))
+    email = db.Column(db.String(120), unique=True)
+    posts = db.relationship('Post', backref='user')
+   
   ```
+  
   So what do `backref` and `lazy` mean? `backref` is a simple way to also declare a new property on the `Address` class. You can then also use `my_address.person` to get to the person at that address. `lazy` defines when SQLAlchemy will load the data from the database:
 
 ### Many-to-Many Relationship
@@ -221,7 +226,12 @@
 
 ### Queries in Views
 
-- a 
+- If you write a Flask view function it’s often very handy to return a 404 error for missing entries. Because this is a very common idiom, Flask-SQLAlchemy provides a helper for this exact purpose. Instead of `get()` one can use `get_or_404()` and instead of `first()`, `first_or_404()`. This will raise 404 errors instead of returning None:
+  ```python
+  @app.route('/user/<username>')
+  def show_user(username):
+      user = User.query.filter_by(username=username).first_or_404()
+  ```
 
 <br>
 <br>
@@ -233,12 +243,41 @@
 
 # Multiple Databases with Binds 
 
+- Flask-SQLAlchemy can easily connect to multiple databases. To achieve that it preconfigures SQLAlchemy to support multiple “binds”. What are binds? In SQLAlchemy speak a bind is something that can execute SQL statements and is usually a connection or engine. In Flask-SQLAlchemy binds are always engines that are created for you automatically behind the scenes. Each of these engines is then associated with a short key (the bind key). This key is then used at model declaration time to assocate a model with a specific engine.
+
+  If no bind key is specified for a model the default connection is used instead (as configured by `SQLALCHEMY_DATABASE_URI`).
+
 ### Example Configuration 
+
+- The following configuration declares three database connections. The special default one as well as two others named users (for the users) and appmeta (which connects to a sqlite database for read only access to some data the application provides internally):
+  ```python
+  SQLALCHEMY_DATABASE_URI = 'postgres://localhost/main'
+  SQLALCHEMY_BINDS = {
+      'users':        'mysqldb://localhost/users',
+      'appmeta':      'sqlite:////path/to/appmeta.db'
+  }
+  ```
 
 ### Creating and Dropping Tables
 
+- The `create_all()` and `drop_all()` methods by default operate on all declared binds, including the default one. This behavior can be customized by providing the bind parameter. It takes either a single bind name, `'__all__'` to refer to all binds or a list of binds. The default bind (SQLALCHEMY_DATABASE_URI) is named `None`:
+  ```python
+  >>> db.create_all()
+  >>> db.create_all(bind=['users'])
+  >>> db.create_all(bind='appmeta')
+  >>> db.drop_all(bind=None)
+  ```
+
 ### Reffering to Binds 
 
+- If you declare a model you can specify the bind to use with the `__bind_key__` attribute:
+  ```python
+  class User(db.Model):
+    __bind_key__ = 'users'
+    id = db.Column(db.Integer, primary_key=True)
+    username = db.Column(db.String(80), unique=True)
+  ```
+  If you specified the `__bind_key__` on your models you can use them exactly the way you are used to. The model connects to the specified database connection itself.
 
 <br>
 <br>
