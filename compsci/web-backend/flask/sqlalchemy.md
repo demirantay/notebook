@@ -81,10 +81,7 @@
        self.username = username
        self.email = email
        
-  class Post(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    content = db.Column(db.Text)
-    user_id = db.Column(db.Integer, db.ForeignKey('user.id')
+  
       
   ```
   Use Column to define a column. The name of the column is the name you assign it to. If you want to use a different name in the table you can provide an optional first argument which is a string with the desired column name, such as:
@@ -114,6 +111,11 @@
     name = db.Column(db.String(80))
     email = db.Column(db.String(120), unique=True)
     posts = db.relationship('Post', backref='user')
+    
+  class Post(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    content = db.Column(db.Text)
+    user_id = db.Column(db.Integer, db.ForeignKey('user.id')
    
   ```
   
