@@ -287,12 +287,13 @@
 <br>
 <Br>
   
-# Signalling Support & Customizing 
+# Customizing 
+
+- Flask-SQLAlchemy defines sensible defaults. However, sometimes customization is needed. There are various ways to customize how the models are defined and interacted with.
 
 ### Model Class
 
-### Model Mixins
+- SQLAlchemy models all inherit from a declarative base class. This is exposed as db.Model in Flask-SQLAlchemy, which all models extend. This can be customized by subclassing the default and passing the custom class to `model_class`.
 
-### Query Class 
-
-### Model Metaclass 
+- There are much more you can do for customizing your sqlaclhemy orm for using it with flask but I am not going to note down everything about it at the moment. Just see this link for a starter tutorial:
+  - https://flask-sqlalchemy.palletsprojects.com/en/2.x/customizing/
