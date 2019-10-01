@@ -12,3 +12,25 @@
     - `Proton`: the numbers of protons in the nucleus of an atom, that is what defines the element + when you look at the periodic table they are actually written in order of atomic number and the atomic number is literally just the number of protons.
     
     
+<br>
+<br>
+
+---
+
+<br>
+<br>
+
+# Ions and Compounds
+
+
+<br>
+<br>
+
+---
+
+<Br>
+<Br>
+  
+# Names and Formulas of Ionic Compounds 
+    
+    
