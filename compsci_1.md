@@ -28,10 +28,10 @@
 
 | Learning | Status | Evidence |
 | ---|---|---|
-| [Read: Study Tonight's Introductiory Tutorial](https://www.studytonight.com/data-structures/time-complexity-of-algorithms) | `Completed` | ... |
-| [Book: PSAD using python](https://runestone.academy/runestone/books/published/pythonds/index.html) | | |
-| Book: The Algorithm Design Manual There are vidoes avilable too. | | |
-| __Practice__ | __Status__ | __Evidence__ |
+| [Read: Study Tonight's Introductiory Tutorial](https://www.studytonight.com/data-structures/time-complexity-of-algorithms) | `Completed` | ... | 
+| [Book: PSAD using python](https://runestone.academy/runestone/books/published/pythonds/index.html) | | | 
+| Book: The Algorithm Design Manual There are vidoes avilable too. | | | 
+| __Practice__ | __Status__ | __Evidence__ | 
 | Project: Impelement Algorithms and Data Structures in multiple languages. [Do all of these here](https://github.com/trekhleb/javascript-algorithms). | | |
 
 ### Computer Architecture
