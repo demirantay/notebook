@@ -162,17 +162,74 @@
   /user0/home/amrood
   ```
   
-### Creating Directories 
+### Directory Commands
 
 - We will now understand how to create directories. Directories are created by the following command −
   ```
   $mkdir dirname
   ```
   If you give more than one directory on the command line, mkdir creates each of the directories. For example, −
-  ```
+  `
   $mkdir dirname dirname2 dirname3
   ```
+  
+- You can remove directories with this:
+  ```
+  $ rmdir dirname
+  ```
+  Note − To remove a directory, make sure it is empty which means there should not be any file or sub-directory inside this directory. If it is empty you can add -R
+  ```
+  $ rm -R diranme
+  ```
+  
+- You can use the `mv` command to rename the direcotries
+  ```
+  $ mv dirname newname
+  ```
+  
+<bR>
+<br>
+  
+---
 
+<br>
+<br>
+
+# File Permissions
+
+- In this chapter, we will discuss in detail about file permission and access modes in Unix. File ownership is an important component of Unix that provides a secure method for storing files. Every file in Unix has the following attributes −
+  - `Owner permissions` − The owner's permissions determine what actions the owner of the file can perform on the file.
+  - `Group permissions` − The group's permissions determine what actions a user, who is a member of the group that a file belongs to, can perform on the file.
+  - `Other (world) permissions` − The permissions for others indicate what action all other users can perform on the file.
+  
+### Permission Indicators
+
+### File Access Modes
+
+- The permissions of a file are the first line of defense in the security of a Unix system. The basic building blocks of Unix permissions are the read, write, and execute permissions, which have been described below −
+  - `read` - Grants the capability to read, i.e., view the contents of the file. 
+  - `write` - Grants the capability to modify, or remove the content of the file.
+  - `execute` - User with execute permissions can run a file as a program.
+  
+### Directory Access Modes
+
+- Directory access modes are listed and organized in the same manner as any other file. There are a few differences that need to be mentioned −
+  - `read` - Access to a directory means that the user can read the contents. The user can look at the filenames inside the directory.
+  - `write` - Access means that the user can add or delete files from the directory.
+  - `execute` -  Executing a directory doesn't really make sense, so think of this as a traverse permission. A user must have __execute access__ to the bin directory in order to execute the ls or the cd command.
+  
+  
+__`I NEED TO CONTINUE OF THIS PART OF THE TUTORIAL`__
+
+<br>
+<br>
+
+---
+
+<br>
+<br>
+
+# Environment 
 
 
 
