@@ -231,5 +231,9 @@ __`I NEED TO CONTINUE OF THIS PART OF THE TUTORIAL`__
 
 # Environment 
 
+- In this chapter, we will discuss in detail about the Unix environment. An important Unix concept is the `environment`, which is defined by environment variables. Some are set by the system, others by you, yet others by the shell, or any program that loads another program.
+
+  A variable is a character string to which we assign a value. The value assigned could be a number, text, filename, device, or any other type of data.
+
 
 
