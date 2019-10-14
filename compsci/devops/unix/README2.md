@@ -417,7 +417,14 @@ There are variable subtitions too, but I am too lazy to note this section at the
 <br>
 <br>
 
-# Shell IO Redirections
+# Shell Input/Output Redirections
+
+- In this chapter, we will discuss in detail about the Shell input/output redirections. Most Unix system commands take input from your terminal and send the resulting output back to your terminal. A command normally reads its input from the standard input, which happens to be your terminal by default. Similarly, a command normally writes its output to standard output, which is again your terminal by default.
+
+### Output Redirection
+
+
+
 
 <br>
 <br>
