@@ -220,7 +220,274 @@
 <br>
 <br>
 
+# Shell Arrays
 
+- I am not going to note down the logic of the arrays, I am just going to note down about how to write arrays in shell scripts. You can write arrays in the following matter:
+  ```sh
+  NAME[0]="Zara"
+  NAME[1]="Qadir"
+  NAME[2]="Mahnaz"
+  NAME[3]="Ayan"
+  NAME[4]="Daisy"
+  ```
 
+- After you have set any array variable, you access it as follows:
+  ```
+  ${array_name[index]}
+  ```
+  Let's see a real world example:
+  ```sh
+  #!/bin/sh
+
+  NAME[0]="Zara"
+  NAME[1]="Qadir"
+  
+  echo "First Index: ${NAME[0]}"
+  ```
+  You can access all the items in an array in one of the following ways −
+  ```sh
+  ${array_name[*]}
+  ${array_name[@]}
+  ```
+  
+<br>
+<br>
+
+---
+
+<br>
+<br>
+
+# Shell Control Statements and Shell Operators
+
+- I am not going to note down the logic behind if statments. I am just going to note down how to write them in a .sh fashion:
+  ```sh
+  #!/bin/sh
+  a=10
+  b=20
+  
+  # if statement
+  if [ $a == $b ]
+  then 
+    echo "a is equal to b"
+  elif [ $a -gt $b ]
+  then 
+    echo "a is greater than b"
+  elif [ $a -lt $b ]
+  then
+    echo "a is less than b"
+  else
+    echo "none of the condition is met"
+  fi
+  ```
+  
+- As you can se .sh does can use normal operators such as `>`, `<` ... etc. Lets see the usual operators of shell scripts:
+  - `-eq` is equivelent of `==`
+  - `-ne` is equievelent of `!=`
+  - `-gt` is equivelent of `>`
+  - `-lt` is equeivelent of `<`
+  - `-ge` is equievelent of `>=`
+  - `-le` is equievelent of `<=`
+  
+<br>
+<br>
+
+---
+
+<br>
+<br>
+
+# Shell Loops and Loop Control
+  
+- I am not going to note down about the logic behind loops in programming, I am just going to note how to write them in bash scripting langauge:
+  
+  while loop:
+  ```sh
+  while [ $foo -lt 10 ]
+  do 
+    exho $foo
+    foo=`expr $foo + 1`
+  done
+  ```
+  
+  for loop:
+  ```sh
+  for var in 0 1 2 3 4 5 6 7 8 9
+  do 
+    echo $var
+  done 
+  ```
+  
+  until loop:
+  ```sh
+  until [ ! $foo -lt 1 ]
+  do 
+    exho $foo
+    foo=`expr $foo + 1`
+  done
+  ```
+  (unitl loop is a negative while loop like (e.g. != instead of ==)
+  
+  select loop:
+  (I am gonna note a select example but I do not use it on a day to day basis, so it is here just for a refresher)
+  ```sh
+  #!/bin/ksh
+
+  select DRINK in tea cofee water juice appe all none
+  do
+     case $DRINK in
+        tea|cofee|water|all) 
+           echo "Go to canteen"
+           ;;
+        juice|appe)
+           echo "Available at home"
+        ;;
+        none) 
+           break 
+        ;;
+        *) echo "ERROR: Invalid selection" 
+        ;;
+     esac
+  done
+  ```
+  
+- You can also use loop controls:
+  - break
+  - continue
+  
+  lets see a real world example:
+  ```sh
+  a=0
+  
+  while [ $a -lt 10 ]
+  do 
+    if [ $a -eq 5 ]
+    then
+      break
+    fi
+    a=`expr $a + 1`
+  done
+  ```
+  
+<br>
+<br>
+
+---
+
+<br>
+<br>
+
+# Shell Substitutions
+
+There are variable subtitions too, but I am too lazy to note this section at the moment. This is where I left of: https://www.tutorialspoint.com/unix/unix-shell-substitutions.htm
+
+<br>
+<br>
+
+---
+
+<br>
+<br>
+
+# Shell Quoting Mechanisms
+
+- Unix Shell provides various metacharacters which have special meaning while using them in any Shell Script and causes termination of a word unless quoted.
+
+  For example, `?` matches with a single character while listing files in a directory and an `*` matches more than one character. Here is a list of most of the shell special characters (also called metacharacters) −
+  ```
+  * ? [ ] ' " \ $ ; & ( ) | ^ < > new-line space tab
+  ```
+  
+  For example let's see a real world usage of metacharacters
+  ```sh
+  echo Hello; Word  # this will cause an error
+  ```
+  but lets try with a escape metacharacter
+  ```sh
+  echo Hello\; Word  # corects because now it can output the ;
+  ```
+  
+  ... `continue`
+
+<br>
+<br>
+
+---
+
+<br>
+<br>
+
+# Shell IO Redirections
+
+<br>
+<br>
+
+---
+
+<br>
+<br>
+
+# Shell Functions
+
+- I am not going to write about the logic of the shell functions, I m just going to note down how to write it in .sh -
+  ```sh
+  # define your function here
+  hello () {
+    echo "hello world"
+  } 
+  
+  # invoke your function
+  hello
+  ```
+  
+- Writing functions with Parameters is little bit funky but not hard see this:
+  ```sh
+  #definition
+  Hello() {
+    echo "Hello world $param1 $param2"
+  }
+  
+  #invoke
+  Hello Foo Bar
+  ```
+
+<br>
+<br>
+
+---
+
+<br>
+<br>
+
+# Shell Manpage Help
+
+- All the Unix commands come with a number of optional and mandatory options. It is very common to forget the complete syntax of these commands.
+
+  Because no one can possibly remember every Unix command and all its options, we have online help available to mitigate this right from when Unix was at its development stage.
+  
+  Unix's version of Help files are called man pages. If there is a command name and you are not sure how to use it, then Man Pages help you out with every step.
+  
+- Here is the simple command that helps you get the detail of any Unix command while working with the system −
+  ```
+  $man command
+  ```
+  Lets see a real world example:
+  ```
+  $man ls
+  ```
+  
+- But i keep a list of useful commands that i like to use on my own cheatsheet
+
+<br>
+<br>
+
+---
+
+<br>
+<br>
+
+- [Part 3](./README3.md)
+  
+  
 
   
