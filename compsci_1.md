@@ -33,6 +33,7 @@
 | Book: The Algorithm Design Manual There are vidoes avilable too. | | | 
 | __Practice__ | __Status__ | __Evidence__ | 
 | Project: Impelement Algorithms and Data Structures in multiple languages. [Do all of these here](https://github.com/trekhleb/javascript-algorithms). | | |
+| Write feynman notes about everything you have learned so far | | |
 
 ### Computer Architecture
 
@@ -46,6 +47,7 @@
 | Build a small Ardunio Project | | |
 | Build a very advanced Ardunio Project (spend a good bit of time on it | | |
 | You can also try to do Ben Eaters Videos but remember to not go deep into the computer architecture since you are not a computer engineer | | |
+| Write feynman notes about everything you have learned so far | | |
 
 ### Operating Systems
 
@@ -58,6 +60,7 @@
 | Important: Finish #osdev | | | |
 | __Practice__ | __Status__ | __Evidence__ |
 | Code a small Operating System | | |
+| Write feynman notes about everything you have learned so far | | |
 
 ### Computer Networking
 
@@ -70,6 +73,7 @@
 | Exersice: [Wireshark](http://www-net.cs.umass.edu/wireshark-labs/) | | |
 | Project : build your own small LAN, build a server backup a server or etc. Try to use what you have learned. | | |
 | Project: I am unsure about this but you can try to connect your LAN to istanbul WAN | | |
+| Write feynman notes about everything you have learned so far | | |
 
 ### Databases
 
@@ -84,6 +88,7 @@
 | Course : [Stanford Course](https://lagunita.stanford.edu/courses/DB/2014/SelfPaced/about) -- Take all mini courses | | |
 | __Practice__ | __Status__ | __Evidence__ |
 | Project: Write a simple database to understand and practice what you have learned | | |
+| Write feynman notes about everything you have learned so far | | |
 
 ### Languages and Compilers
 
@@ -94,6 +99,7 @@
 | __Practice__ | __Status__ | __Evidence__ |
 | Project: Build a compiler and a compiled language to it | |
 | Project: Build a Intrepereter and a interpreted language on top of your compiler | | 
+| Write feynman notes about everything you have learned so far | | |
 
 ### Distrubuted Systems
 
@@ -102,6 +108,7 @@
 | Book : [Distibuted Systems, 3rd edition](https://www.distributed-systems.net/index.php/books/distributed-systems-3rd-edition-2017/) | | |
 | __Practice__ | __Status__ | __Evidence__ |
 | Project: Do something to implement the theory you have learned. I am not sure what to do at the moment. Will edit later on | | |
+| Write feynman notes about everything you have learned so far | | |
 
 ### Code University
 
@@ -110,6 +117,7 @@
 |  Guide : [Code Univeristy Guide](https://github.com/jwasham/coding-interview-university) -- Finish this guide after finishing the sections above this guide suppose to take your time nearly a year so go through each item very seriously. If you are able to come this far hell go apply for big 4. | | |
 | __Practice__ | __Status__ | __Evidence__ |
 | To-do: If you are able to come this far try opensourcing company products and apply for remote/full time positions | | |
+| Write feynman notes about everything you have learned so far | | |
 
 ### Specialization
 
