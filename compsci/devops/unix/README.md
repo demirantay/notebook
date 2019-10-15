@@ -219,21 +219,31 @@
   - `execute` -  Executing a directory doesn't really make sense, so think of this as a traverse permission. A user must have __execute access__ to the bin directory in order to execute the ls or the cd command.
   
   
-__`I NEED TO CONTINUE OF THIS PART OF THE TUTORIAL`__
+### Changing Permissions
+
+- To change the file or the directory permissions, you use the `chmod` (change mode) command. There are two ways to use chmod   the symbolic mode and the absolute mode.
+
+- `Using chmod in Symbolic Mode`: The easiest way for a beginner to modify file or directory permissions is to use the symbolic mode. With symbolic permissions you can add, delete, or specify the permission set you want by using the operators in the following table.
+  - `+` : Adds the designated permission(s) to a file or directory.
+  - `-` : Removes the designated permission(s) from a file or directory
+  - `=` : Sets the designated permission(s).
+  
+  Here's an example using testfile. Running ls -l on the testfile shows that the file's permissions are as follows −
+  ```
+  $ls -l testfile
+  -rwxrwxr--  1 amrood   users 1024  Nov 2 00:10  testfile
+  ```
+  Then each example `chmod` command from the preceding table is run on the testfile, followed by `ls –l`, so you can see the permission changes −
+
+__`... I stopped writing this tutorial for now`__
 
 <br>
-<br>
 
----
-
-<br>
-<br>
-
-# Environment 
-
-- In this chapter, we will discuss in detail about the Unix environment. An important Unix concept is the `environment`, which is defined by environment variables. Some are set by the system, others by you, yet others by the shell, or any program that loads another program.
-
-  A variable is a character string to which we assign a value. The value assigned could be a number, text, filename, device, or any other type of data.
-
+This is where I left of:
+  - https://www.tutorialspoint.com/unix/unix-file-permission.htm
+  - https://ryanstutorials.net/bash-scripting-tutorial/
+  - http://www.tldp.org/LDP/Bash-Beginners-Guide/html/Bash-Beginners-Guide.html
+  - http://www.tldp.org/LDP/abs/html/index.html
+  - https://github.com/jlevy/the-art-of-command-line#meta
 
 
