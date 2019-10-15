@@ -55,7 +55,7 @@
 | Read: [Study Tonight Introductiory Tutorial](https://www.studytonight.com/operating-system/) | | |
 | Book: [Operating Systems: Three Easy Pieces](http://pages.cs.wisc.edu/~remzi/OSTEP/). You can use this [course](https://www.ops-class.org/) to go simotenously with the book | | |
 | Book : Modern Operating Systems Book by Andrew S. Tanenbaum | | |
-| Tutorial: little OS tutorial | | | 
+| Tutorial: [little OS tutorial](https://littleosbook.github.io/) | | | 
 | Important: Finish #osdev | | | |
 | __Practice__ | __Status__ | __Evidence__ |
 | Code a small Operating System | | |
