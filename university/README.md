@@ -47,6 +47,8 @@ Not: Buro ya sor:
 
 # CALISMA SISTEMI
 
+https://adaletokuyorum.com/adalet-bolumu-ders-calisma-teknikleri-neler/
+
 > Not: Ilk bi hepsini bitir, baktin cok hizli bitti ve ogrendin (cunku cogu kisi internette yok 1 haftada yalayip yuttum diyor). Dedigim gibi baktin hizlica bitti sende sinavlara 1 ay kala basla sadece o bir ay icinde bitirsen bile tekrar tekrar birdaha yap cunku ortalaman cok onemli olcak fransa icin. O bir ay icinde yanliz nerdeyse cogu zamanini buna ayir, oyle gunde sadece 3 saat degil.
 
 ## Schedule
