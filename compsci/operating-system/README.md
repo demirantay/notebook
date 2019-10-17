@@ -1,3 +1,7 @@
+---
+- This is where i left of : https://www.tutorialspoint.com/operating_system/os_overview.htm
+---
+
 # Operating System
 
 - An operating system (OS) is a collection of software that manages computer hardware resources and provides common services for computer programs. The operating system is a vital component of the system software in a computer system
