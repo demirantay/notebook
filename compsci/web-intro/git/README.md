@@ -51,6 +51,8 @@
 
 - `git push` - pdates the remote repository with any commits made locally to a branch.
 
+- `git push --tags` - Updates the tags on commits of the repositroy
+
 There are many more commands for git however these above are roughly enough for your day to day development for more reference you:
   - [Official Docs](https://git-scm.com/docs)
   - [Cheat Sheet](https://github.github.com/training-kit/downloads/github-git-cheat-sheet.pdf)
