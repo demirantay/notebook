@@ -83,9 +83,10 @@
 
 ### Basic Features of the HTTP
 
-### REST and HTTP
-
-### HTTP Methods/Verbs
+- As we have already learnt HTTP is a protocol which allows us to send files back and forth on the web, which involves a client and a server. HTTP is text based, which makes it easier to monitor. The basic features of HTTP are:
+  - HTTP is connectionless.
+  - HTTP is media independent, which means any type of data can be sent through the http.
+  - HTTP is stateless, neither the server nor the client keeps a track of the last request.
 
 <br>
 <br>
@@ -95,4 +96,30 @@
 <br>
 <br>
 
-# Designing the REST API
+# Designing the REST API: Registration Application
+
+- Now whenever we talk about the REST Web services, there are two terms that should always come to your mind - first is, either you are exposing the web service (acting as server) or you will be consuming the web service (acting as client).
+
+  Exposing a web service means that you have made the web service and has deployed it on your server and this can be consumed by any client by using the URL to our service.
+  
+  Let us make a simple REST API and also understand the design aspects of making the REST API. In this tutorial we will build a simple Registration API. It will have students, classes and the information of students enrolled in different classes.
+  
+  So first, let's summarise what this registration app can do:
+    - 1 -  
+    - 2 -
+    - 3 -
+    - 4 -
+    - 5 -
+    - 6 -
+    - 7 -
+
+
+<br>
+<br>
+
+---
+
+<br>
+<br>
+
+# Using HTTP Methods 
