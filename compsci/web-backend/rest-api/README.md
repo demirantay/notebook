@@ -73,6 +73,14 @@
 
 # Understanding HTTP: The Backbone of REST
 
+- To understand the REST architecture, it is very important that we understand the HTTP clearly because all the http protocols are used while building a REST API.
+  
+  HTTP is all over the internet. Every time when we hit a URL in our browser, an HTTP request is sent to the webserver and we receive the HTML content in response. An important thing to note here is that, while the website is usually for the human consumption the REST Api is usually for application(program) consumption. 
+  
+  Therefore, while requesting the data from a website, the data should be in a browser readable format, which is HTML, while in case of the REST API, response can be anything like XML/JSON or any other media type.
+  
+- One very important point about REST is, that it is not connected to web, and will return no response when tried to access via a browser, although it is based on HTTP.
+
 ### Basic Features of the HTTP
 
 ### REST and HTTP
