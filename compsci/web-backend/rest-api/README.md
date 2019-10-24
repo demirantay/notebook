@@ -105,13 +105,16 @@
   Let us make a simple REST API and also understand the design aspects of making the REST API. In this tutorial we will build a simple Registration API. It will have students, classes and the information of students enrolled in different classes.
   
   So first, let's summarise what this registration app can do:
-    - 1 -  
-    - 2 -
-    - 3 -
-    - 4 -
-    - 5 -
-    - 6 -
-    - 7 -
+    - 1 - It can insert a new record of the student.
+    - 2 - It can get the record of the student.
+    - 3 - It can list all the courses which are available.
+    - 4 - It can get the information of all the courses.
+    - 5 - It can be used to enroll for a course by a particular student.
+    - 6 - It can be used to get all the courses enrolled by any particular student.
+    - 7 - It can be used to get all the students who have enrolled for any particular course.
+
+
+- where i left of : https://www.studytonight.com/rest-web-service/designing-the-rest-api
 
 
 <br>
