@@ -1,8 +1,9 @@
-To Do List:
-----------
+### Cheatlist
+
+- Bash Scripting: [click here](./compsci/devops/unix/cheatsheet.md) 
+
+### To Do List:
 
 - [ ] Doktor Hasan
-- [ ] Ehliyet
-- [ ] Derma -- 
-- [ ] Kondisyon --
-- [ ] Balik / Tirmanma
+- [ ] Ehliyet]
+- [ ] Balik
