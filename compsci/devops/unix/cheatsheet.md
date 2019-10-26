@@ -1,8 +1,49 @@
-# My Unix Command Line Cheatsheet
+# My Linux/Unix Command Line Cheatsheet
 
+### Bash and Linux Command Line
 
-### file commands
+### Help and man pages
 
-- `$ touch filename` - creates a file
+### Getting Information Commands
 
-... I will add this later on
+### Navigating through Directories
+
+### File Operations
+
+### File Move-Copy-Delete
+
+### Directory Creation and Deletion
+
+### File Compressions-Open-Archive
+
+### File and Directory Access Permissions
+
+### User Operations
+
+### Processes
+
+### Disk Operations
+
+### Runlevels-Services
+
+### Symbolic/Strct Links
+
+### Upgrading and installing programs
+
+### Wildcards
+
+### Regular Expressions
+
+### Sed and Awk
+
+### Vim 
+
+### Network Commands
+
+### SSH Services
+
+### WGET and File Downloading
+
+### Scheduled Tasks
+
+### LOG Files
