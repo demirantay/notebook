@@ -126,13 +126,19 @@
   
 - `Linux is Case Sensetive` -- This is very important and a common source of problems for people new to Linux. Other systems such as Windows, Mac OS are case insensitive when it comes to referring to files. Linux is not like this. As such it is possible to have two or more files and directories with the same name but letters of different case.
 
-- `Spaces in Names` --
+- `Quotes` -- The first approach involves using quotes around the entire item. You may use either single or double quotes (later on we will see that there is a subtle difference between the two but for now that difference is not a problem). Anything inside quotes is considered a single item.
+  ```
+  $ cd 'Holiday Photos'
+  $ pwd
+  /home/ryan/Documents/Holiday Photos
+  ```
 
-- `Quotes` --
-
-- `Escape Characters` --
-
-- `Hidden Files and Directories` --
+- `Hidden Files and Directories` -- Linux actually has a very simple and elegant mechanism for specifying that a file or directory is hidden. If the file or directory's name begins with a `.` (full stop) then it is considered to be hidden. You don't even need a special command or action to make a file hidden.
+  
+  The command ls which we have seen in the previous section will not list hidden files and directories by default. We may modify it by including the command line option `-a` so that it does show hidden files and directories.
+  ```
+  $ ls -a
+  ```
 
 <br>
 <br>
@@ -142,4 +148,63 @@
 <br>
 <br>
 
-# Man Pages
+# Manual Pages
+
+- The manual pages are a set of pages that explain every command available on your system including what they do, the specifics of how you run them and what command line arguments they accept. Some of them are a little hard to get your head around but they are fairly consistent in their structure so once you get the hang of it it's not too bad. You invoke the manual pages with the following command:
+  ```
+  man <command to look up>
+  ```
+  Lets see a real world example:
+  ```
+  $ man ls
+  
+  Name
+      ls - list directory contents
+
+  Synopsis
+      ls [option] ... [file] ...
+
+  Description
+      List information about the FILEs (the current directory by default). Sort entries alphabetically if none of -cftuvSUX nor --sort is specified.
+
+      Mandatory arguments to long options are mandatory for short options too.
+
+      -a, --all
+          do not ignore entries starting with .
+
+      -A, --almost-all
+          do not list implied . and ..
+
+  ...
+  ```
+  - First it tells us the actual command followed by a simple one line description of it's function.
+  -  synopsis. This is really just a quick overview of how the command should be run. Square brackets ( [ ] ) indicate that something is optional. (option on this line refers to the command line options listed below the description)
+  - Description:  presents us with a more detailed description of the command. and all the command line options that are available for the command.
+  
+  __Tip:__ To exit the man pages press 'q' for quit.
+  
+### Searching
+
+- It is possible to do a keyword search on the Manual pages. This can be helpful if you're not quite sure of what command you may want to use but you know what you want to achieve. To be effective with this approach, you may need a few goes. It is not uncommon to find that a particular word exists in many manual pages.
+  ```
+  $ man -k <search term>
+  ```
+
+### More on the Running Commands
+
+- A lot of being proficient at Linux is knowing which command line options we should use to modify the behaviour of our commands to suit our needs. A lot of these have both a long hand and short hand version. eg. Above you will notice that to list all directory entries (including hidden files) we can use the option -a or --all (remember from last section what files and directories beginning with a . are?). The long hand is really just a more human readable form. You may use either, they both do the same thing. One advantage of using long hand is that it can be easier for you to remember what your commands are doing.
+  ```
+  $ ls -a
+  $ ls --all
+  ```
+  As you can see, long hand command line options begin with two dashes ( -- ) and short hand options begin with a single dash ( - ). Remember that if you want to use the full command names
+  
+<br>
+<br>
+
+---
+
+<br>
+<br>
+
+# File Manipulation
