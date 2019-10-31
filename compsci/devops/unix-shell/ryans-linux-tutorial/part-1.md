@@ -208,3 +208,55 @@
 <br>
 
 # File Manipulation
+
+-  To begin with we'll learn to make some files and directories and move them around. Future sections will deal with putting content in them and more interesting manipulation.
+
+### Making a Directory
+
+- Creating a directory is pretty easy. The command we are after is mkdir which is short for Make Directory.
+  ```
+  mkdir [options] <Directory>
+  ```
+  Lets see a real world example:
+  ```
+  $ mkdir newFolder
+  ```
+  
+- Remember that when we supply a directory in the above command we are actually supplying a path. Is the path we specified relative or absolute? Here are a few more examples of how we can supply a directory to be created
+  - mkdir /home/ryan/foo
+  - mkdir ./blah
+  - mkdir ../dir1
+  - mkdir ~/linuxtutorialwork/dir2
+
+### Removing a Directory
+
+- Creating a directory is pretty easy. Removing or deleting a directory is easy too. One thing to note, however, is that there is no undo when it comes to the command line on Linux (Linux GUI desktop environments typically do provide an undo feature but the command line does not). Just be careful with what you do. The command to remove a directory is rmdir, short for remove directory.
+  ```
+  rmdir [options] <Directory>
+  ```
+  Real world example
+  ```
+  $ rmdir fooDirName
+  ```
+  if youw wanna remove a dir you need to have it empty otherwise you will need to use the `-r` options on `rmdir` command.
+
+### Creating a Blank File 
+
+### Copying a File or Directory
+
+### Moving a File or Directory
+
+### Removing a File
+
+### One Final Note
+
+<br>
+<br>
+
+
+---
+
+<br>
+<br>
+
+[Part 2](./part-2.md)
