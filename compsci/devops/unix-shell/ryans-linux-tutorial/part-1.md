@@ -242,13 +242,66 @@
 
 ### Creating a Blank File 
 
+- A lot of commands that involve manipulating data within a file have the nice feature that they will create a file automatically if we refer to it and it does not exist. In fact we can make use of this very characteristic to create blank files using the command `touch`.
+  ```
+  $ touch filename.foo
+  ```
+
 ### Copying a File or Directory
 
-### Moving a File or Directory
+- There are many reasons why we may want to make a duplicate of a file or directory. Often before changing something, we may wish to create a duplicate so that if something goes wrong we can easily revert back to the original. The command we use for this is `cp` which stands for copy.
+  ```
+  cp [options] <source> <destination>
+  ```
+  Real world example:
+  ```
+  $ cp filename copyfilename
+  ```
+  You can copy directories ... etc. everything remember because in the end they are all the same, they are just files. But creating a directory copy requires options which is `-r`
 
-### Removing a File
+### Moving / Re-naming a File or Directory 
 
-### One Final Note
+- To move a file we use the command `mv` which is short for move. It operates in a similar way to cp. One slight advantage is that we can move directories without having to provide the -r option.
+  ```
+  mv [options] <source> <destination>
+  ```
+  Real World exmaple:
+  ```
+  $ mkdir foo
+  $ touch file
+  $ mv file foo/
+  ```
+
+- Now just as above with the command touch, we can use the basic behaviour of the command `mv` in a creative way to achieve a slighly different outcome. Normally `mv` will be used to move a file or directory into a new directory.  Now if we specify the destination to be the same directory as the source, but with a different name, then we have effectively used mv to rename a file or directory.
+  ```
+  $ ls
+  foo 
+  $ mv foo bar
+  $ls
+  bar
+  ```
+  
+### Removing File/Directory
+
+- As with rmdir, removing a file is an action that may not be undone so be careful. The command to remove or delete a file is `rm` which stands for remove.
+  ```
+  rm [options] <file>
+  ```
+  Real world exmaple:
+  ```
+  $ ls
+  foo bar
+  $ rm foo
+  $ ls
+  bar
+  ```
+
+- When rm is run with the `-r` option it allows us to remove directories and all files and directories contained within. The r option of rm is kinda like an OP move so use it very carefully
+  ```
+  $ rm -r dirName
+  ```
+  A good option to use in combination with `r` is `i` which stands for interactive. This option will prompt you before removing each file and directory and give you the option to cancel the command.
+
 
 <br>
 <br>
