@@ -39,6 +39,16 @@
 
 ### Ways to View Content
 
+- vi allows us to edit files. If we wanted, we could use it to view files as well, but there are two other commands which are a bit more convenient for that purpose. The first one is `cat` which actually stands for concatenate. It's main purpose is to join files together but in it's most basic form it is useful for just viewing files.
+  ```
+  cat filename
+  ```
+  
+- This command is nice when we have a small file to view but if the file is large then most of the content will fly across the screen and we'll only see the last page of content. For larger files there is a better suited command which is `less`
+  ```
+  less filename
+  ```
+
 ### Navigating a File
 
 ### Deleting Content
