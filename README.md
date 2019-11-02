@@ -1,6 +1,6 @@
 ### Cheatlist
 
-- Bash Scripting: [click here](./compsci/devops/unix/cheatsheet.md) 
+- Bash Scripting: [click here](./compsci/devops/unix-shell/cheatsheet.md) 
 
 ### To Do List:
 
