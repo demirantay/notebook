@@ -126,3 +126,57 @@
 
 ### NMAP
 
+- Nmap stands for Network Mapper. It is an open source tool that is used widely for network discovery and security auditing. Nmap was originally designed to scan large networks, but it can work equally well for single hosts. Network administrators also find it useful for tasks such as network inventory, managing service upgrade schedules, and monitoring host or service uptime.
+
+- Nmap uses raw IP packets to determine −
+  - what hosts are available on the network,
+  - what services those hosts are offering,
+  - what operating systems they are running on,
+  - what type of firewalls are in use, and other such characteristics.
+  
+  Nmap runs on all major computer operating systems such as Windows, Mac OS X, and Linux.
+
+### Metasploit
+
+- With Metasploit, you can perform the following operations −
+  - Conduct basic penetration tests on small networks
+  - Run spot checks on the exploitability of vulnerabilities
+  - Discover the network or import scan data
+  - Browse exploit modules and run individual exploits on hosts
+  
+### Burp Suit
+
+### Angry IP Scanner
+
+### Cain & Abel
+
+### Ettercap
+
+### EtherPeek
+
+### SuperScan
+
+### QualysGuard
+
+### WebInspect
+
+### LC4
+
+### LANguard Network Security Scanner
+
+### Network Stumbler
+
+### ToneLoc
+
+
+
+<br>
+<br>
+
+---
+
+<br>
+<br>
+
+
+
