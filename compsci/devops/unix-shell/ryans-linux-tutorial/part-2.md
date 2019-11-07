@@ -51,6 +51,12 @@
 
 ### Navigating a File
 
+- In insert mode you may use the arrow keys to move the cursor around. Below are some of the many commands you may enter to move around the file:
+  - `Arrow keys` - move the cursor around
+  - `j, k, h, l` - move the cursor down, up, left and right (similar to the arrow keys)
+  - `^ (caret)` - move cursor to beginning of current line
+  - `$` - move cursor to end of the current line
+
 ### Deleting Content
 
 ### Undoing 
