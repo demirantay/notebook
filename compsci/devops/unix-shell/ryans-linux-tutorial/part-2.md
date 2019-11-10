@@ -93,12 +93,62 @@
 
 # Wildcards 
 
+- In the section on File Manipulation we learnt about a few commands to do interesting things. The problem was that they all operated on a single file at a time, not very efficient. Now I'm going to introduce a means to play about with a set of files at once.
+
 ### What are they ?
 
-### Under the hood
+- Wildcards are a set of building blocks that allow you to create a pattern defining a set of files or directories. As you would remember, whenever we refer to a file or directory on the command line we are actually referring to a path. Whenever we refer to a path we may also use wildcards in that path to turn it into a set of files or directories.
 
+- Here is the basic set of wildcards:
+  - `*` - represents zero or more characters
+  - `?` - represents a single character
+  - `[]` - represents a range of characters
+  
+  Lets see an quick example:
+  ```
+  $ pwd
+  /home/ryan/linuxtutorialwork
+  $ ls
+  barry.txt blah.txt bob example.png firstfile foo1 foo2
+  foo3 frog.png secondfile thirdfile video.mpeg
+  $ ls b*
+  barry.txt blah.txt bob
+  ```
+  
 ### Examples
 
+- Remember the wildards use bash scripting under the hood so you can even write your own wildcards for different commands. So usage of wildcards are limitless in a terminal's scope and limiatiotons. However lets see some examples, but as I said remember there are tons of wildcards usages other than these:
+  
+   For all the examples below, assume we are in the directory linuxtutorialwork and that it contains the files as listed above
+   
+- Every file with an extension of txt at the end. In this example we have used an absolute path. Wildcards work just the same if the path is absolute or relative.
+  ```
+  $ ls /home/ryan/linuxtutorialwork/*.txt
+  /home/ryan/linuxtutorialwork/barry.txt     /home/ryan/linuxtutorialwork/blah.txt
+  ```
+  
+- Now let's introduce the ? operator. In this example we are looking for each file whose second letter is i. As you can see, the pattern can be built up using several wildcards.
+  ```
+  $ ls ?i*
+  firstfile video.mpeg
+  ```
+
+- Or how about every file with a three letter extension. Note that video.mpeg is not matched as the path name must match the given pattern exactly.
+  ```
+  $ ls *.???
+  barry.txt blah.txt example.png frog.png
+  ```
+  
+- And finally the range operator ( [ ] ). Unlike the previous 2 wildcards which specified any character, the range operator allows you to limit to a subset of characters. In this example we are looking for every file whose name either begins with a s or v.
+  ```
+  $ ls [sv]*
+  secondfile video.mpeg
+  ```
+ 
+- Note: the exampples above may not mean muhc because they are not real world exmaples but as I said wildcards are limitless and usually are specific to personal usage. But lets see a common method of moving files from a real world example: (Move all files of type either jpg or png (image files) into another directory.)
+  ```
+  $ mv public_html/*.??g public_html/images/
+  ```
 
 <br>
 <br>
@@ -109,3 +159,43 @@
 <br>
   
 # Permissions
+
+- In this section we'll learn about how to set Linux permissions on files and directories. Permissions specify what a particular person may or may not do with respect to a file or directory. As such, permissions are important in creating a secure environment. For instance you don't want other people to be changing your files and you also want system files to be safe from damage
+
+### What are they ?
+
+- Linux permissions dictate 3 things you may do with a file, read, write and execute. They are referred to in Linux by a single letter each.
+  - `r` read - you may view the contents of the file.
+  - `w` write - you may change the contents of the file.
+  - `x` execute - you may execute or run the file if it is a program or script.
+  
+- For every file we define 3 sets of people for whom we may specify permissions.
+  - `owner` - a single person who owns the file. (typically the person who created the file but ownership may be granted to some one else by certain users)
+  - `group` - every file belongs to a single group.
+  - `others` - everyone else who is not in the group or the owner.
+  
+  Three persmissions and three groups of people. That's about all there is to permissions really. Now let's see how we can view and change them.
+
+### View Permissions
+
+### Change Permissions
+
+### Shorthand
+
+### Directories
+
+### The Root User
+
+### Basic Security
+
+
+<br>
+<Br>
+  
+---
+
+<br>
+<br>
+
+# Filters
+
