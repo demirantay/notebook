@@ -178,11 +178,63 @@
 
 ### View Permissions
 
+- To view permissions for a file we use the long listing option for the command ls.
+  ```
+  ls -l [path]
+  ```
+  Lets see a real world example:
+  ```
+  $ ls -l /home/ryan/linuxtutorialwork/frog.png
+  -rwxr----x 1 harry users 2.7K Jan 4 07:32 /home/ryan/linuxtutorialwork/frog.png
+  ```
+  - The first character identifies the file type. If it is a dash ( - ) then it is a normal file. If it is a d then it is a directory.
+  - The following 3 characters represent the permissions for the owner. A letter represents the presence of a permission and a dash ( - ) represents the absence of a permission. In this example the owner has all permissions (read, write and execute).
+  - The following 3 characters represent the permissions for the group. In this example the group has the ability to read but not write or execute. Note that the order of permissions is always read, then write then execute.
+  - Finally the last 3 characters represent the permissions for others (or everyone else). In this example they have the execute permission and nothing else
+
 ### Change Permissions
+
+- To change permissions on a file or directory we use a command called chmod It stands for change file mode bits which is a bit of a mouthfull but think of the mode bits as the permission indicators.
+  ```
+  chmod [permissions] [path]
+  ```
+  chmod has permission arguments that are made up of 3 components
+    - Who are we changing the permission for? `[ugoa]` - user (or owner), group, others, all
+    - Are we granting or revoking the permission - indicated with either a plus ( + ) or minus ( - )
+    - Which permission are we setting? - read ( r ), write ( w ) or execute ( x )
+    
+- Now lets see a real world example: Grant the execute permission to the group. Then remove the write permission for the owner --
+  ```
+  $ ls -l frog.png
+  -rwxr----x 1 harry users 2.7K Jan 4 07:32 frog.png
+  $ chmod g+x frog.png
+  $ ls -l frog.png
+  -rwxr-x--x 1 harry users 2.7K Jan 4 07:32 frog.png
+  $ chmod u-w frog.png
+  $ ls -l frog.png
+  -r-xr-x--x 1 harry users 2.7K Jan 4 07:32 frog.png
+  ```
+  Don't want to assign permissions individually? We can assign multiple permissions at once.
+  ```
+  $ chmod g+wx frog.png
+  or
+  $ chmod go-x frog.png
+  ```
+  It may seem odd that as the owner of a file we can remove our ability to read, write and execute that file but there are valid reasons we may wish to do this. Maybe we have a file with data in it we wish not to accidentally change for instance.
 
 ### Shorthand
 
+- The method outlined above is not too hard for setting permissions but it can be a little tedious if we have a specific set of permissions we would like to apply regularly to certain files (scripts for instance that we'll see in section 13). Luckily, there is a shorthand way to specify permissions that makes this easy. 
+
+  I am skipping this for now since I am not that familiar with boolean algebra and bianry. You can revisit it here:
+    - https://ryanstutorials.net/linuxtutorial/permissions.php#shorthand
+
 ### Directories
+
+- The same series of permissions may be used for directories but they have a slightly different behaviour.
+  - `r` - you have the ability to read the contents of the directory (ie do an ls)
+  - `w` - you have the ability to write into the directory (ie create files and directories)
+  - `x` - you have the ability to enter that directory (ie cd)
 
 ### The Root User
 
