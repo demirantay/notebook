@@ -238,8 +238,13 @@
 
 ### The Root User
 
+- On a Linux system there are only 2 people usually who may change the permissions of a file or directory. The owner of the file or directory and the root user. The root user is a superuser who is allowed to do anything and everything on the system. Typically the administrators of a system would be the only ones who have access to the root account and would use it to maintain the system. Typically normal users would mostly only have access to files and directories in their home directory and maybe a few others for the purposes of sharing and collaborating on work and this helps to maintain the security and stability of the system.
+
 ### Basic Security
 
+- Most users would give themselves full read, write and execute permissions for their home directory and no permissions for the group or others however some people for various reasons may have a slighly different set up.
+
+  Normally, for optimal security, you should not give either the group or others write access to your home directory, but execute without read can come in handy sometimes. This allows people to get into your home directory but not allow them to see what is there. An example of when this is used is for personal web pages.
 
 <br>
 <Br>
@@ -251,3 +256,161 @@
 
 # Filters
 
+- One of the underlying principles of Linux is that every item should do one thing and one thing only and that we can easily join these items together. Think of it like a set of building blocks that we may put together however we like to build anything we want. In this section and the next we will learn about a few of these building blocks.
+
+### So what are they ?
+
+- A filter, in the context of the Linux command line, is a program that accepts textual data and then transforms it in a particular way. Filters are a way to take raw data, either produced by another program, or stored in a file, and manipulate it to be displayed in a way more suited to what we are after.
+
+  These filters often have various command line options that will modify their behaviour so it is always good to check out the man page for a filter to see what is available.
+
+  Let's dive in and introduce you to some of them. (remember, the examples here will only give you a taste of what is possible with these commands. Make sure you explore and use your creativity to see what else you may do with them.)
+  
+- For each of the demonstrations below I will be using the following file as an example. This example file contains a list of content purely to make the examples a bit easier to understand but realise that they will work the same with absolutely any other textual data. Also, remember that the file is actually specified as a path and so you may use absolute and relative paths and also wildcards.
+  ```
+  $ cat mysampledata.txt
+  
+  Fred apples 20
+  Susy oranges 5
+  Mark watermellons 12
+  Robert pears 4
+  Terry oranges 9
+  Lisa peaches 7
+  Susy oranges 12
+  Mark grapes 39
+  Anne mangoes 7
+  Greg pineapples 3
+  Oliver rockmellons 2
+  Betty limes 14
+  ```
+
+### head
+
+- Head is a program that prints the first so many lines of it's input. By default it will print the first 10 lines but we may modify this with a command line argument.
+  ```
+  head [-number of lines to print] [path]
+  ```
+  
+  Lets see a real world example but instead of default 10 lets limit it to 4:
+  ```
+  $ head -4 mysampledata.txt
+  
+  Fred apples 20
+  Susy oranges 5
+  Mark watermellons 12
+  Robert pears 4
+  ```
+
+### tail
+
+- Tail is the opposite of head. Tail is a program that prints the last so many lines of it's input. By default it will print the last 10 lines but we may modify this with a command line argument.
+  ```
+  tail [-number of lines to print] [path]
+  ```
+  
+  Lets see a real world example but instead of default 10 lets limit it to 3:
+  ```
+  $ tail -3 mysampledata.txt
+  Greg pineapples 3
+  Oliver rockmellons 2
+  Betty limes 14
+  ```
+
+### sort
+
+- Sort will sort it's input, nice and simple. By default it will sort alphabetically but there are many options available to modify the sorting mechanism. Be sure to check out the man page to see everything it may do.
+  ```
+  sort [-options] [path]
+  ```
+  
+  Lets see a example:
+  ```
+  $ sort mysampledata.txt
+  
+  Anne mangoes 7
+  Betty limes 14
+  Fred apples 20
+  Greg pineapples 3
+  Lisa peaches 7
+  Mark grapes 39
+  Mark watermellons 12
+  Oliver rockmellons 2
+  Robert pears 4
+  Susy oranges 12
+  Susy oranges 5
+  Terry oranges 9
+  ```
+
+### nl
+
+- nl stands for number lines and it does just that.
+  ```
+  nl [-options] [path]
+  ```
+  
+  Lets see an example:
+  ```
+  $ nl mysampledata.txt
+
+  1 Fred apples 20
+  2 Susy oranges 5
+  3 Mark watermellons 12
+  4 Robert pears 4
+  5 Terry oranges 9
+  6 Lisa peaches 7
+  7 Susy oranges 12
+  8 Mark grapes 39
+  9 Anne mangoes 7
+  10 Greg pineapples 3
+  11 Oliver rockmellons 2
+  12 Betty limes 14
+  ```
+
+### wc
+
+- wc stands for word count and it does just that (as well as characters and lines). By default it will give a count of all 3 but using command line options we may limit it to just what we are after.
+  ```
+  wc [-options] [path]
+  ```
+  
+  Real world example:
+  ```
+  $ wc mysampledata.txt
+  12 36 195 mysampledata.txt
+  ```
+
+### cut
+
+- cut is a nice little program to use if your content is separated into fields (columns) and you only want certain fields.
+  ```
+  cut [-options] [path]
+  ```
+  
+  In our sample file we have our data in 3 columns, the first is a name, the second is a fruit and the third an amount. Let's say we only wanted the first column.
+  ```
+  
+  ```
+
+### sed
+
+### uniq
+
+### tac
+
+### Others
+
+- Here are two other programs that are worth investigating if you want to take your knowledge even further. They are a quite powerfull but also more complex than the programs listed above
+  - awk 
+  - diff
+  
+
+
+<br>
+<br>
+
+---
+
+<br>
+<br>
+
+- [Part 3](./part-3.md)
