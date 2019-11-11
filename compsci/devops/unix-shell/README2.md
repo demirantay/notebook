@@ -1,4 +1,4 @@
-- [Part 1](./part-1.md)
+- [Part 1](./README.md)
 
 <br>
 
@@ -381,17 +381,33 @@
 
 ### cut
 
-- cut is a nice little program to use if your content is separated into fields (columns) and you only want certain fields.
-  ```
-  cut [-options] [path]
-  ```
-  
-  In our sample file we have our data in 3 columns, the first is a name, the second is a fruit and the third an amount. Let's say we only wanted the first column.
-  ```
-  
-  ```
+- I didn't fucking get how to use it from this part of the tutorial. If you want to revisit it again : https://ryanstutorials.net/linuxtutorial/filters.php#cut
 
 ### sed
+
+- sed stands for Stream Editor and it effectively allows us to do a search and replace on our data. It is quite a powerful command but we will use it here in it's basic format.
+  ```
+  sed <expression> [path]
+  ```
+  A basic expression is of the following format: `s/search/replace/g`. Lets see a real world example, Say we ran out of oranges and wanted to instead give those people bananas.
+  ```
+  $ sed 's/oranges/bananas/g' mysampledata.txt
+  
+  Fred apples 20
+  Susy bananas 5
+  Mark watermellons 12
+  Robert pears 4
+  Terry bananas 9
+  Lisa peaches 7
+  Susy bananas 12
+  Mark grapes 39
+  Anne mangoes 7
+  Greg pineapples 3
+  Oliver rockmellons 2
+  Betty limes 14
+  ```
+  It's important to note that sed does not identify words but strings of characters
+
 
 ### uniq
 
@@ -458,4 +474,4 @@
 <br>
 <br>
 
-- [Part 3](./part-3.md)
+- [Part 3](./README3.md)
