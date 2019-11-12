@@ -46,14 +46,14 @@
 | __Practice__ | __Status__ | __Evidence__ |
 | Build a small Ardunio Project | | |
 | Build a very advanced Ardunio Project (spend a good bit of time on it | | |
-| You can also try to do Ben Eaters Videos but remember to not go deep into the computer architecture since you are not a computer engineer | | |
+| Optional: Ben Eater's Videos | | |
 | Write feynman notes about everything you have learned so far | | |
 
 ### Operating Systems
 
 | Learning | Status | Evidence |
 |---|---|---|
-| Book: [Operating Systems: Three Easy Pieces](http://pages.cs.wisc.edu/~remzi/OSTEP/). You can use this [course](https://www.ops-class.org/) to go simotenously with the book | | |
+| Book: [Operating Systems: Three Easy Pieces](http://pages.cs.wisc.edu/~remzi/OSTEP/). Use this [course](https://www.ops-class.org/) to go simotenously | | |
 | Book : Modern Operating Systems Book by Andrew S. Tanenbaum | | |
 | Tutorial: [little OS tutorial](https://littleosbook.github.io/) | | | 
 | Important: Finish #osdev | | | |
@@ -67,7 +67,7 @@
 |---|---|---|
 | Read: [Study Tonight Introductiory Tutorial](https://www.studytonight.com/computer-networks/) | | |
 | Book : [Computer Networking: A Top-Down Approach](https://www.amazon.com/Computer-Networking-Top-Down-Approach-7th/dp/0133594149/?pldnSite=1) -- do the exersices | | | 
-| Course: [Stanford MOOC](https://lagunita.stanford.edu/courses/Engineering/Networking-SP/SelfPaced/about) I am unsure about this since I do not really like following video structured learning approach, I may delete this later. But i may make an exception since this is a gold resource | | |
+| Course: [Stanford MOOC](https://lagunita.stanford.edu/courses/Engineering/Networking-SP/SelfPaced/about). Important | | |
 | __Practice__ | __Status__ | __Evidence__ |
 | Exersice: [Wireshark](http://www-net.cs.umass.edu/wireshark-labs/) | | |
 | Project : build your own small LAN, build a server backup a server or etc. Try to use what you have learned. | | |
@@ -94,7 +94,7 @@
 | Learning | Status | Evidence |
 |---|---|---|
 | Read: The [TutorialsOnPoint](https://www.tutorialspoint.com/compiler_design/index.htm) to give yourself an introductionary overview of the topic | | |
-| Course: Do the [Stanford MOOC](https://lagunita.stanford.edu/courses/Engineering/Compilers/Fall2014/about), it is hard to do all of it but you can read the [Dragon book](https://www.amazon.com/Compilers-Principles-Techniques-Tools-2nd/dp/0321486811?pldnSite=1) simultaneosly | | |
+| Course: Do the [Stanford MOOC](https://lagunita.stanford.edu/courses/Engineering/Compilers/Fall2014/about), Optional: [Dragon book](https://www.amazon.com/Compilers-Principles-Techniques-Tools-2nd/dp/0321486811?pldnSite=1) simultaneosly | | |
 | __Practice__ | __Status__ | __Evidence__ |
 | Project: Build a compiler and a compiled language to it | |
 | Project: Build a Intrepereter and a interpreted language on top of your compiler | | 
@@ -106,7 +106,7 @@
 |---|---|---|
 | Book : [Distibuted Systems, 3rd edition](https://www.distributed-systems.net/index.php/books/distributed-systems-3rd-edition-2017/) | | |
 | __Practice__ | __Status__ | __Evidence__ |
-| Project: Do something to implement the theory you have learned. I am not sure what to do at the moment. Will edit later on | | |
+| Project:I am not sure what to do at the moment. Will edit later on | | |
 | Write feynman notes about everything you have learned so far | | |
 
 ### Code University
@@ -205,10 +205,10 @@ For now I chose to stick with full stack develoment from the above but I may swi
 
 | Learning/Project | Status | Evidence | Feynman Notes | 
 | --- | --- | --- | --- |
-| HTML, after the basics learn these key points: writing semantic HTML, basic SEO, Accsessibilty | `Completed` | ... | |
+| HTML basics, writing semantic HTML, basic SEO, Accsessibilty | `Completed` | ... | |
 | CSS, after the basics learn these: Making layouts, Media Queries, CSS 3 | `Completed` | ... | |
 | Project: Make a CSS library | | | |
-| Javascript, after learning the language (tutorias on point) learn the following: DOM API, fetching API with Ajax, ES6+modular javscript, Hoisting, Event Bubbling, Scope, Prototype, Shadow DOM, strict, how browsers work, DNS, HTTP | | |
+| Javascript, learn it flly it is the most important thing in frontend | | |
 | Project: Create a JS-Playground and for starters [do these](https://skillcrush.com/2018/06/18/projects-you-can-do-with-javascript/) | | | |
 | Learn pacakage managers (either one npm or yarn) | | | |
 | Learn CSS pre-processors such as SASS or POST CSS | | | |
