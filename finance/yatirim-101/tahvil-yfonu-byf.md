@@ -37,4 +37,9 @@ Tabikide tek yatirim yapabileceginiz hisse senetleri degildir. Onun disinda en o
  
  ## Neden Tahvil Alinmali ?
  
- ...
+ - Yatirim portfoyunuze biraz tahvil veya yatirim fonu ilave etmek iyi bir fikirdir ozellikle de risk toleransiniz dusukse. Tahviler her turder yatirimci icin cok cesitli bakimlardan faydalidir. Bunlardan okellikle ikisi onemlidir
+    - 1 Tahivller yatirimcinin borsanin dalgalanmasina maruz kalmasini telafi ederek portfoyunu dengelemesine yardimci olur. 
+    - 2 Tahviller genellikle faiz odemelerini programli bir sekilde yaparlar (sifir kupon tahviller haric, onlar vade tariginde faizlerini oderler.) Bu cazip ozerllik yatirimcilarin beklenen guncel gelir ihtiyaclarini veya universite harci ve emeklilik gelirleri gibi gelecekteki belirli parasal ihtiyaclarini karsilamalrina yardim eder. 
+    
+ - Ihbarli tahvil ve odeme aktarmali menkul kiymetlerin tahmin edilebilrigi daha azdir fakar bu belirsizlik daha yuksekgetirilerle telafi edilir.
+    
