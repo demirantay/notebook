@@ -29,6 +29,8 @@ Do these in order however after the intro you are free to choose specializing in
 - [ ] Course: Khan Academy -- Miro Macro Economics
 
 
+Remember:
+
 - [ ] Unutma: Cok fazla konu var pragmatik olmalisin hepsini ogrenecek zamanin yok. Yukaridaki cogu konuyu ozumsedik ten sonra en senin icin ve gelecekteki planlarin icin en onemli olan sirket management & ekonomisi en iyi nasil ekonomik ve isletme olarak yonetilir bunlari ogrenmen lazim.
 
 - Not: Eger istersen divide and conquer algoritmasiyla olusturdugun ogrenme haritandaki birkac ilgini ceken konuya vakit ayirabilrsin e.g. accounting, hisse senetleri, borsalar, bankalar ... etc.
