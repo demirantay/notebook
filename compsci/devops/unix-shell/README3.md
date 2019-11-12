@@ -33,10 +33,30 @@
   Oliver rockmellons 2
   ```
   The basic behaviour of egrep is that it will print the entire line for every line which contains a string of characters matching the given pattern. This is important to note, we are not searching for a word but a string of characters.
+  
+  Sometimes we want to know not only which lines matched but their line number as well. Use `n` option
+  ```
+  egrep -n 'mellon' mysampledata.txt
+  ```
 
 ### Learning Regular Expressions
 
+- I will dedicate another regex tutorial in a different directory but since we are dipping our toes in the water at the moment. You are 100% going to make mistakes while coding regexpressions. So here is a structured debugging strategy:
+  - First off, check for typo's. If you're like me then you're prone to making them.
+  - Maybe what you thought a particular operator did was slightly different to what it actually does and re reading you will notice a point you may have missed the first time.
+  - Break your pattern down into individual components and test each of these individually. This will help you to get a feel for which parts of the pattern is right and which parts you need to adjust.
+  - Examine your output. Your current pattern may not have worked the way you want but we can still learn from it. Looking at what we actually did match and using it to help understand what actually did happen will help us to work out what we should try changing to get closer to what we actually want.
+
 ### Regular Exxpressions Overview
+
+- I will outline the basic building blocks of regex's below then follow on with a set of examples to demonstrate their usage.
+  - `.` (dot) - a single character.
+  - `?` - the preceding character matches 0 or 1 times only.
+  - `*` - the preceding character matches 0 or more times.
+  -
+  -
+  -
+  
 
 <Br>
 <br>
