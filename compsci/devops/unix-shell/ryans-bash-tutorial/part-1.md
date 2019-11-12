@@ -23,6 +23,26 @@
 <br>
 <br>
 
-# Structure
+# What is a Bash Script
+
+- This page is mostly foundation information. It's kinda boring but essential stuff that will help you to appreciate why and how certian things behave the way they do once we start playing about with the fun stuff
+
+### So what exactly are they ?
+
+### How do they work ?
+
+### How do we run them ? 
+
+### Formatting 
+
+<br>
+<br>
+
+---
+
+<Br>
+<Br>
+  
+# Variables 
 
 
