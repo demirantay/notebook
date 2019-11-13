@@ -29,11 +29,55 @@
 
 ### So what exactly are they ?
 
+-  In the context of Bash scripts we are telling the Bash shell what it should do. A Bash script is a plain text file which contains a series of commands. These commands are a mixture of commands we would normally type ouselves on the command line (such as ls or cp for example) and commands we could type on the command line but generally wouldn't 
+
+  An important point to remember though is: __Anything you can run normally on the command line can be put into a script and it will do exactly the same thing. Similarly, anything you can put into a script can also be run normally on the command line and it will do exactly the same thing.__
+  
+- Linux is an extensionless system so a script doesn't necessarily have to have this characteristic in order to work. But never the less It is convention to give files that are Bash scripts an extension of `.sh`
+
 ### How do they work ?
+
+- In the realm of Linux (and computers in general) we have the concept of programs and processes. A program is a blob of binary data consisting of a series of instructions for the CPU and possibly other resources (images, sound files and such) organised into a package and typically stored on your hard disk. When we say we are running a program we are not really running the program but a copy of it which is called a process. What we do is copy those instructions and resources from the hard disk into working memory (or RAM). We also allocate a bit of space in RAM for the process to store variables (to hold temporary working data) and a few flags to allow the operating system (OS) to manage and track the process during it's execution. `Essentially a process is a running instance of a program.`
+
+  When we are at the terminal we have a Bash process running in order to give us the Bash shell. If we start a script running it doesn't actually run in that process but instead starts a new process to run inside.
 
 ### How do we run them ? 
 
+-  Before we can execute a script it must have the execute permission set (for safety reasons this permission is generally not set by default)
+    ```
+    $ chmod +x file.sh
+    ```
+    and than  run it with:
+    ```
+    $ ./file.sh
+    ```
+
+- Do you want to know why we run it with `./` ? click here to read more: https://ryanstutorials.net/bash-scripting-tutorial/bash-script.php#running
+
+### The Shebang(#!)
+
+- Every bash file starts with this:
+  ```
+  #!/bin/bash
+  ```
+  This is the first line of the script above. The hash exclamation mark ( #! ) character sequence is referred to as the Shebang. Following it is the path to the interpreter (or program) that should be used to run (or interpret) the rest of the lines in the text file. (For Bash scripts it will be the path to Bash, but there are many other types of scripts and they each have their own interpreter.)
+  
+  Formatting is important here. The shebang must be on the very first line of the file (line 2 won't do, even if the first line is blank). There must also be no spaces before the # or between the ! and the path to the interpreter.
+  
+  Whilst you could use a relative path for the interpreter, most of the time you are going to want to use an absolute path. You will probably be running the script from a variety of locations so absolute is the safest
+  
+- It is possible to leave out the line with the shebang and still run the script but it is unwise. Plus it is good practice to add shebang to most of your scripts not just bash. You can use python too :
+  ```
+  #!/bin/python
+  ```
+  This makes it executable like bash with `./` but it is the other way around too, if you do not want to use shebang with bash you can run it like you runa python, ruby, js script:
+  ```
+  bash filename.sh
+  ```
+
 ### Formatting 
+
+- As we saw above, formatting for the shebang was important (ie no spaces, must be on first line). There are many areas in Bash scripts where formatting is important. Typically it involves spaces and either the presence or absence of a space can be the difference between the command working or not.
 
 <br>
 <br>
@@ -45,4 +89,88 @@
   
 # Variables 
 
+- I am not going to note about the logic behind variables, since i already know it. This is just the pinpoints of how to write them in bash.
+
+- Here are a few quick points on syntax. They will be elaborated on and demonstrated as we go into more detail below:
+  - When referring to or reading a variable we place a `$` sign before the variable name.
+  - When setting a variable we leave out the `$` sign.
+  - Some people like to always write variable names in uppercase so they stand out. It's your preference however. They can be all uppercase, all lowercase, or a mixture.
+  - A variable may be placed anywhere in a script (or on the command line for that matter) and, when run, Bash will replace it with the value of the variable. This is made possible as the substitution is done before the command is run.
+  
+### Command Line Variables
+
+- You can use all of the command line blocks inside a sciprt such as:
+  ```sh
+  #!/bin/bash
+  
+  cd desktop
+  touch file1.txt
+  ```
+
+### Other Special Variables
+
+- There are a few other variables that the system sets for you to use as well.
+  - `$0` - The name of the Bash script.
+  - `$1 - $9` - The first 9 arguments to the Bash script. (We will see usage of them in Input.)
+  - `$#` - How many arguments were passed to the Bash script.
+  - `$@` - All the arguments supplied to the Bash script.
+  - `$?` - The exit status of the most recently run process.
+  - `$$` - The process ID of the current script.
+  - `$USER` - The username of the user running the script.
+  - `$HOSTNAME` - The hostname of the machine the script is running on.
+  - `$SECONDS` - The number of seconds since the script was started.
+  - `$RANDOM` - Returns a different random number each time is it referred to.
+  - `$LINENO` - Returns the current line number in the Bash script.
+
+  __Note:__ If you type the command `env` on the command line you will see a listing of other variables which you may also refer to.
+
+### Setting Our Own Variables
+
+- This is one of those areas where formatting is important. Note there is no space on either side of the equals ( = ) sign. We also leave off the $ sign from the beginning of the variable name when setting it.
+  ```
+  foo=Hello
+  bar=Fred
+  
+  echo $foo $bar
+  
+  dirname=/Users/demir/desktop
+  
+  ls $dirname
+  ```
+  As you can see you can do houdini shit with files directories and paths.
+
+### Quotes
+
+- Usage of strings is tricky if you are useing dirnames ... etc. you do not have to use quotes (strings) but it is good ractice to use them and anything more than a single word, it requires the data of the variable to be a string:
+  ```sh
+  $ myvar='Hello World'
+  $ echo $myvar
+  Hello World
+  $ newvar="More $myvar"
+  $ echo $newvar
+  More Hello World
+  ```
+
+### Command Substition
+
+- Command substitution allows us to take the output of a command or program (what would normally be printed to the screen) and save it as the value of a variable. To do this we place it within brackets, preceded by a $ sign.
+  ```sh
+  myvar=$( ls /etc | wc -l )
+  echo There are $myvar entries in the directory /etc
+  ```
+
+- `Remember`: Command substitution is nice and simple if the output of the command is a single word or line. If the output goes over several lines then the newlines are simply removed and all the output ends up on a single line.
+  
+### Exporting Variables
+
+
+<br>
+<br>
+
+---
+
+<br>
+<br>
+
+# Input
 
