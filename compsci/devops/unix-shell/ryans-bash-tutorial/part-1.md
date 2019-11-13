@@ -239,11 +239,99 @@
   
 # Arithmetic
 
+- There are several ways to go about arithmetic in Bash scripting. We'll cover them for completeness but the recommended approach is arithmetic expansion (covered last).
+
 ### Let
+
+- let is a builtin function of Bash that allows us to do simple arithmetic. It follows the basic format:
+  ```
+  let <arithmetic expression>
+  ```
+  Let's look at a simple example:
+  ```sh
+  let a=5+4*6/5/2
+  
+  # or
+  let a++
+  let a--
+  
+  #or 
+  let $var1 + $var2
+  ```
 
 ### Expr
 
+- `expr` is similar to let except instead of saving the result to a variable it instead prints the answer. Unlike let you don't need to enclose the expression in quotes. You also must have spaces between the items of the expression. It is also common to use expr within command substitution to save the output to a variable.
+  ```sh
+  expr 5 + 4
+  
+  # or subtite the command
+  
+  a=$( expr 10 - 3 )
+  echo $a
+  ```
+
 ### Double Parantheses
 
-### 
+- In the section on Variables we saw that we could save the output of a command easily to a variable. It turns out that this mechanism is also able to do basic arithmetic for us if we tweak the syntax a little. We do so by using double brackets like so:
+  ```sh
+  a=$(( 4 + 5 ))
+  echo $a # 9
+  ```
+  Because if you look close the first parantheses actually adds 4 and 5 and then the output 9 gets enclosed inside var $a. which we echo it later on.
 
+### Length of a Variable
+
+- This isn't really arithmetic but it can be quite useful. If you want to find out the lengh of a variable (how many characters) you can do the following:
+  ```
+  ${#variable}
+  ```
+  Here's an example:
+  ```sh
+  a='Hello World'
+  echo ${#a} # 11
+  ```
+
+<br>
+<br>
+
+---
+
+<bR>
+<br>
+  
+# If Statements
+
+- I am not going to note down the logic of if statements since I know them already these are the notes that i should know about.
+
+### If, Elif and Else
+
+- You can write if and else statements in bash scrips like this (There aren't any rules regarding indenting in Bash so you may indent or not indent however you like and your scripts will still run exactly the same, but indent nevertheless and always pay attention to the syntax of your scripts)
+  ```sh
+  a=1
+  b=2
+  
+  if [ $a -gt $b ]
+  then
+    echo "a is greater than b"
+  elif [ $a == $b ]
+  then
+    echo "a is equal to b"
+  else:
+    echo "b is greater than a"
+  fi
+  ```
+
+### Comparison Operators
+
+### Boolean Operations
+
+<br>
+<br>
+
+---
+
+<br>
+<Br>
+  
+# Loops 
