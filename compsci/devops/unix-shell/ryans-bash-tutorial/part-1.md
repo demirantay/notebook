@@ -163,6 +163,10 @@
   
 ### Exporting Variables
 
+- Remember how in the previous section we talked about scripts being run in their own process? This introduces a phenomenon known as scope which affects variables amongst other things. The idea is that variables are limited to the process they were created in. Normaly this isn't an issue but sometimes, for instance, a script may run another script as one of its commands. If we want the variable to be available to the second script then we need to export the variable.
+
+  The exapmle to note from the tutorial is kinda long so re-read it if you want to : https://ryanstutorials.net/bash-scripting-tutorial/bash-variables.php#exporting Remember how in the previous section we talked about scripts being run in their own process? This introduces a phenomenon known as scope which affects variables amongst other things. The idea is that variables are limited to the process they were created in. Normaly this isn't an issue but sometimes, for instance, a script may run another script as one of its commands. If we want the variable to be available to the second script then we need to export the variable.
+
 
 <br>
 <br>
@@ -173,4 +177,73 @@
 <br>
 
 # Input
+
+### Ask User for Input
+
+- If we would like to ask the user for input then we use a command called read. This command takes the input and will save it into a variable.
+  ```sh
+  read var1
+  ```
+  Real life usage
+  ```sh 
+  echo Hello, who am I talking to?
+  read varname
+  echo It\'s nice to meet you $varname
+  ```
+  
+- You are able to alter the behaviour of read with a variety of command line options. (See the man page for read to see all of them.) Two commonly used options however are `-p` which allows you to specify a prompt and `-s` which makes the input silent. This can make it easy to ask for a username and password combination like the example below:
+  ```sh
+  read -p 'Username: ' uservar
+  read -sp 'Password: ' passvar
+  echo "\n"
+  echo Thankyou $uservar we now have your login details
+  ```
+
+- `More Variables` : So far we have looked at a single word as input. We can do more than that however:
+  ```sh
+  echo What cars do you like?
+  
+  read car1 car2 car3
+  
+  echo Your first car was: $car1
+  echo Your second car was: $car2
+  echo Your third car was: $car3
+  ```
+  
+### Command Line Arguments (inputs)
+
+- Do you remember that `$1 - $9 - The first 9 arguments to the Bash script` was mentioned above. Now we will use them to to use the functionality of command line arguments.
+  ```sh
+  echo Output: $1 , $2 , $3
+  ```
+  Lets run it:
+  ```
+  $ file.sh hello mon ami
+  Output: hello mon ami 
+  ```
+
+### Reading from STDIN
+
+- It's common in Linux to pipe a series of simple, single purpose commands together to create a larger solution tailored to our exact needs. The ability to do this is one of the real strenghs of Linux. It turns out that we can easily accommodate this mechanism with our scripts also. By doing so we can create scripts that act as filters to modify data in specific ways for us.
+
+ I understood the linux part but I did no neccessairly get how to use the bash part of the STDIN< STDOUT and STDERR. Re-read: 
+  - https://ryanstutorials.net/bash-scripting-tutorial/bash-input.php#stdin
+
+<br>
+<Br>
+  
+---
+
+<br>
+<Br>
+  
+# Arithmetic
+
+### Let
+
+### Expr
+
+### Double Parantheses
+
+### 
 
