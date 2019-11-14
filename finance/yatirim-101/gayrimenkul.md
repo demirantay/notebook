@@ -1,0 +1,1 @@
+# Gayrimenkule Yatirim Yapmak
