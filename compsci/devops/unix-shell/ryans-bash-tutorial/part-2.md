@@ -155,10 +155,7 @@
 
 # User Interface
 
-### TPut
+- When most people think about the user interface they think about the bits the end user sees and how they interact with the tool. For Bash scripts I like to think about the layout and structure of the commands inside the script as well. Bash scripts are often small tools used to automate tedious and repetitive tasks. They are always readable by the end user and often modified to suit changing requirements. Therefore the ease with which the user (often yourself) may modify and extend the script is also very important.
 
-### Supplying Data
-
-### Presenting Data 
-
-### Organising Your Code 
+- __I got tired of doing this tutorial and this was the last part so, I skipped it. If you want to re-read it here you go:__
+  - https://ryanstutorials.net/bash-scripting-tutorial/bash-user-interface.php
