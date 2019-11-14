@@ -53,7 +53,14 @@ Tabikide tek yatirim yapabileceginiz hisse senetleri degildir. Onun disinda en o
     
  - `Faiz Orani Riski` - Vade tarihine kadar bir tahvvili elinizde tutuyorsaniz faiz oani riski o kadar da buyuk bir mesele degildir, cunku faiz oranlarinin degismesinden ozellikle etkilenmezsiniz. Gelgelelim eger bir tahvili satiyorsaniz tahvilin getirisyle baglantili faiz orani konusunda endiselenmeniz gerekir. 
  
+- Finans komisyonculari tahvillerdeki faiz dalgalanmalari hakkinda pek cok se soyler. Bunun nedeni alim satim isi yapmalaridir. Bunlara kulak asmayin at sikine kelebek gibidirler. Dolayisiyla bircok tahvil sahibi tahvilleri yillarca saklar ve gelirinin tadini cikarir. Ancak tahvil almadan once komisyoncu pezevenklerin fikirlerini sormadan gercekten bir yol haritasniz olmasi gerekir cunku hemen alip hemen satacaksaniz buyuk ihtimalle zarar edeceksinizdir. 
+ 
  ## Tahvil Derecelendirmeleri ve Getiriler
+ 
+ - Sirket Tahvilleri ve bazi belediye tahvilleri Standard & Poors (S&P) ve Moody's in yani sira baskakuruslardaki finansal analizciler tarafindan derecelendirilir. Dereceler tahvili cikaranin kredilbilitesini gosterir ve dolayisiyla tahvili cikaran hakkinda bir tur karnedir. 
+    - AAA derecelendirmesi en yuksek kalitedeki tahvile verilir
+    - BB, B tahvilleri daha kuskuludur
+    - C veya D dusuk derecli yani iskarta tahviller olarak kabul edilir.
  
  ## Hazine ve Belediye Tahvilleri
  
