@@ -61,6 +61,18 @@ Tabikide tek yatirim yapabileceginiz hisse senetleri degildir. Onun disinda en o
     - AAA derecelendirmesi en yuksek kalitedeki tahvile verilir
     - BB, B tahvilleri daha kuskuludur
     - C veya D dusuk derecli yani iskarta tahviller olarak kabul edilir.
+    
+ - Bununlar beraber dogru yukselen sirketi secerseniz iskarta yani yuksek getirili tahvil cok basarili olabillir. Ancak riskler ozellikle borcu odeyememe riski yuksektir. Dha onceden saglam olarak derecelendirilikren fakat su anda zor zamanlar geciren sirket tahvilleriniz varsa iki seceneginiz vardir: satmak veya elinizde tutmak . Seciminizi sirketin kendini toparlayip borclarini odeyebilecegine inanip inanmamaniza bagli olarak yaparsiniz, ama secimi cabuk da yapmaniz gerekir. 
+ 
+ - Tahvillerde faiz ekonomik kosullara gore degisebilir fakat sabit gaiz en yaygin uygulamadir. Sifir kuponlu yahviller surekli faiz odemezler. Bunun yerine cok indirimli satilir ve deger yitirmeden paraya cevrililirler. Boylece bilesik faiz vasitasiyla gorunur degerlerine ulasirlar.
+ 
+- Tahil cikaran kurulusun derecelendirmeleri zaman icinde degisebilir. BBB tahvillerini cikaran bir sirket oldukca basarili bir sirket olarak cok daha dengeli bir demirbas haline gelebilir ve tahvilleri de bir sonraki derecelendirmede A olarak derecelendirilebilir. Tam tersi de olabilir. Yuksek derecelendirlimis sirketler zor zamanlar gecirebilir ve borclari bazen buyuk olcude derecelerinin dusmesine yol acabilir. Yeniden satis amaciniz varsa sahip oldugunuz tahvillerin derecelerine izlemek iyi bir fikirdir cunku dereceler tahvilin satilabilirligini etkiler.
+
+- Tahvil yatirimi soz konusu oldugunda iki tur getiri hakkinda bili sahibi olmaniz gerekir: vade tarihindeki getiri ve guncel getiri. Bunlar kesinlikle tahvilinizin acik piyasadaki degerini etkiler. TAhvil getirilerini dolayisiyla tahbil fiyatlarini belirlemede en onemlisi olmasa da en onemli faktorlerden biri cari faiz oranidir. Esasen tahvilinizdeki bildirilen faiz orani esdeger borclanma araclarinin guncel faiz oraniyla kiyaslanacaktir. Bu oranin daha mi yuksek yoksa daha mi dusuk oldugu bu tahvili satabileceginiz miktar acisindan cok fark eder.
+
+- `Tahvillerde Ortalama Getiri`: tarihsel olarak tahvillerin ozellikle hazine bonolarinin ortalama getirisi hisse senetlerinin getirisiyle kiyaslandiginda cok dusuktur. Ancak bu durum ekonomik durgunluklarda cogu zaman tersine doner cunku herkes kacacak guvenli bir liman ister.
+
+- `Vade Sonu Getirisi`: Genellikle daha anlamli rakam olarak kabul edilen vade sonu getirisi satin aldiginiz zamandan vade sonuna erisinceye kadar (vade tariginde elinizde tuttunuguzu farz edersek) tahvilden kazanilan toplam miktardir.
  
  ## Hazine ve Belediye Tahvilleri
  
