@@ -13,6 +13,7 @@ Do these in order however after the intro you are free to choose specializing in
 - [ ] Read: Management 101 
 - [ ] Read: Accounting 101 
 - [ ] Read: Negotiating 101 
+- [ ] Read: Sales 101
 - [ ] Read: Real Estatae Investing 101 
 - [ ] Read: Stock Market 101 - Michele Cagan (adams 101)
 - [ ] Read: Budgeting 101 
