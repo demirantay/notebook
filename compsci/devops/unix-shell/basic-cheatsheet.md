@@ -1,4 +1,4 @@
-# My Linux/Unix Command Line Cheatsheet
+# Basic Unix Command Cheatsheet
 
 ### Bash and Linux Command Line
 
