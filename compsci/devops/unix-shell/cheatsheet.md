@@ -49,7 +49,13 @@
 
 ### File Compressions-Open-Archive
 
-### File and Directory Access Permissions
+### Permissions
+
+- _r (read) w (write) x (execute)_
+- _Owner or User, Group and Others_
+- `ls -l [path]` - View the permissions of a file or all items in a directory.
+- `chmod <permissions> <path>` - Change permissions. Permissions can be either shorthand (eg. 754) or longhand (eg. g+x).
+
 
 ### User Operations
 
@@ -64,6 +70,11 @@
 ### Upgrading and installing programs
 
 ### Wildcards
+
+- _May be used anywhere in any path._
+- `*` -- Zero or more characters (eg. b*).
+- `?` -- Single character (eg. file.???).
+- `[]` -- Range (eg. b[aio]t).
 
 ### Regular Expressions
 
