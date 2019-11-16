@@ -52,6 +52,16 @@
 
 ### Grep
 
+- `egrep or grep -E` -- Run grep with extended regular expressions.
+- `-i` -- Ignore case (ie uppercase, lowercase letters).
+- `-v` -- Return all lines which don't match the pattern.
+- `-w` -- Select only matches that form whole words.
+- `-c` -- Print a count of matching lines. Can be combined with the -v option to print a count of non matchine lines.
+- `-l` -- Print the name of each file which contains a match. Normally used when grep is invoked with wildcards for the file argument.
+- `-n` -- Print the line number before each line that matches.
+- `-r` -- Recursive, read all files in given directory and subdirectories.
+- grep can as easy as __egrep 'mellon' myfile.txt__ or as complex as __egrep '\b[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}\b' myfile.txt__
+
 ### File Move-Copy-Delete
 
 ### Directory Creation and Deletion
@@ -92,11 +102,8 @@
 - `?` -- Single character (eg. file.???).
 - `[]` -- Range (eg. b[aio]t).
 
-### Regular Expressions
 
 ### Sed and Awk
-
-### Vim 
 
 ### Network Commands
 
