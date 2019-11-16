@@ -43,6 +43,15 @@
 - `mv <source> <destination>` -- Move the source file to the destination. May also be used to rename files or directories.
 - `rm <path>` -- Remove a file or directory. _Common options: -r -f_
 
+### Filters 
+
+- `head` -- Show the first n lines.
+- `tail` -- Show the last n lines.
+- `sort` -- Sort lines in a given way.
+- `wc` -- How many words, characters and lines.
+
+### Grep
+
 ### File Move-Copy-Delete
 
 ### Directory Creation and Deletion
@@ -56,10 +65,17 @@
 - `ls -l [path]` - View the permissions of a file or all items in a directory.
 - `chmod <permissions> <path>` - Change permissions. Permissions can be either shorthand (eg. 754) or longhand (eg. g+x).
 
-
 ### User Operations
 
-### Processes
+### Process Management
+
+- `CTRL + C` -- Cancel the currently running process.
+- `kill <process id>` -- Cancel the given process. Include the option -9 to kill a stubborn process.
+- `top` -- Monitors all of the running processes in a nice, structured way.
+- `ps` -- Obtain a listing of processes and their id's. Including the option aux will show all processes.
+- `CTRL + Z` -- Pause the currently running process and put it in the background.
+- `jobs` -- See a list of current processes in the background. 
+- `fg <job number>` -- Move the given process from the background to the foreground.
 
 ### Disk Operations
 
