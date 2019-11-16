@@ -1,6 +1,7 @@
 ### Cheatlist
 
-- Bash : [click here](./compsci/devops/unix-shell/cheatsheet.md) 
+- Basic Bash : [click here](./compsci/devops/unix-shell/basic-cheatsheet.md) 
+- Advanced Bash : [click here](./compsci/devops/unix-shell/advanced-cheatsheet.md)
 - Regex : [click here](./compsci/devops/regex/cheatsheet.md)
 - Vim : [click here](./compsci/devops/vim/cheatsheet.md)
 
