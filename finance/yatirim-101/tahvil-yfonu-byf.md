@@ -73,8 +73,48 @@ Tabikide tek yatirim yapabileceginiz hisse senetleri degildir. Onun disinda en o
 - `Tahvillerde Ortalama Getiri`: tarihsel olarak tahvillerin ozellikle hazine bonolarinin ortalama getirisi hisse senetlerinin getirisiyle kiyaslandiginda cok dusuktur. Ancak bu durum ekonomik durgunluklarda cogu zaman tersine doner cunku herkes kacacak guvenli bir liman ister.
 
 - `Vade Sonu Getirisi`: Genellikle daha anlamli rakam olarak kabul edilen vade sonu getirisi satin aldiginiz zamandan vade sonuna erisinceye kadar (vade tariginde elinizde tuttunuguzu farz edersek) tahvilden kazanilan toplam miktardir.
+
+- `Vade Sonu FAiz Oranlarinin Onemi` : TAhvil piyasasinda ticaret yaparken akilda tutulmasi gereken en basit kural ahvil fiyatlarinin faiz oranlarinin aksi yonde tepki verecegidir. Dusuk faiz oranlari yuksek tahvil fiatlari ve yuksesk faiz oranlari da dusuk tavil fiyatlari demektir. Nedeni sudur: FAiz oranlari duserken ve diger taviller yuzde 6 oderken sizin yuzde 8 odeyen tahvilinize talep vardir. ancak faiz oranlari yukseldiginde ve yeni tahviller yuzde 10 odediginde aniden 8 veren tahvilinizin deferi duser ve satmasi zorlasir. 
+
+- `Tahviller Nasil Fiyatlandirilir`: Eger bir tahvil satmak veya tahvil piyasassindan bir tahvil satin almak istiyorsaniz oncelikkle son tahvil fiyatlarini bilmeniz gerekir. Bunun icin Wall Street Journal Barrons veya USA Todayin finans bolumune veya internetten yerel gazetenize bakabilirinisz. Tahvil fiyatlari inip cikar bu yuzden gordugunuz fiyat sonraki is gunu boyunca birkac kez degisebilir. 
+    
+    Tavil listlerinde hazine, belediye, sirket ve ipotege dayali tahviller icin teel bilgileri bulursunuz. Rakamlar format olarak belgeden belgeye degisse de assagidaki bilgileri icerirler:
+    - Oran Yuzde 6.5 -- Bu tahvilin odedigi getiridir.
+    - Vade Tarihi MArt 2018 -- Bu son vade tarihidir 
+    - Teklif 103:12 -- By alicinin gorunur degeri oan 1000 dolardan tahvil alan hissedara 1000 dolarlik tahvilde 1.033 dolar yaniyuzde 3 ten biraz fazla kar sundugu anlamina gelir.
+    - Satus 104:00 --  Bu saticinin en dusukj satis fiyatidir burada 1040 dolardir
+    
+ - `Hisse Senedi mi Tahvil mi ?` -- Borsa uzun donemli oyunculara istikrarli kazanclar sunarken fiyatlarda gorulen dalgalanamalar bazi yatirimcilar icin katlanilmaz seyler olabilir. Ozellikle dalgali donemlerde tahvil piyasasina yonelen yatirimcilar artar. Ayrica 401k ve emeklilik planlari gibi planlardan paralarini cekip yeniden yatirim yapan insanlar arttikca tagbiller yatirim araci larak daha cazip hale gelirler.Tahviller hisse senetlerinden daha guvencelidir ve dusuk risklidir. 
+ 
+ - `Tahvil ALim Satimi` -- Tahviller nerdeyse her zaman aracilar veya araci kurumlar vasitasila satin alinir. Belli basli butun araci kurumlar vasitasiyla satin alinir. Belli basli butun araci kurumlar tahvil satar ve size en iyi tahvil fiyatlarini alabilirler. Piyasada olan tahvillerin ticaretini yapar ve size yeni cikarilan tahviller hakkinda bilgi verirler. Bu hazine bonolari gibi devlet tahvillerinin belirli turlerinin yani sira sirket ve belediye tahvilleri icin de gecerlidir. 
  
  ## Hazine ve Belediye Tahvilleri
+ 
+ - `Tahvil Kategorilerine Genel Bakis` -- Devletin cikardigindan tutun da daha spekulatif ve hatta yabanci sirket ve devlet tahvillerine dek cok ceistli tahvil turkleri vardir. Bunlarin risk ve atirim ozellikleri farklidir ve farkli vergi durumlari olusturulabilir. 
+ 
+ - `Bes Tahvil Turu` -- YAtirimcilarin secebilecekleri bes temel tahvil turuu vardir:
+  - 1 Birlesik Devletler kamu menkul kiymetler
+  - 2 Ipotek teminatli menkul degerler 
+  - 3 Yerel yonetimce cikarilan tahviller
+  - 4 Sirket tahvilleri
+  - 5 Iskarta tahviller
+  
+  Her turun kendi yarar ve sakincalari vardir ve bazilari portfoyunuze digerlerinden daha iyi uyar. Yatirimclarin tahvil almansinin iki ana amai vardir: periyodik faiz odemelerinden duzenli bir gelir almak veya sermayelerini korumak ve takviye etmek.
+  
+- `Devlet Hazine Kagitlari` -- Eger hisse sendirnin degerinin dusme olasiligi sizi rahatsiz ediyorsa veya guvenli nakirt benzeri degerlere yatirim yapmaniz gerekiyorsa develt hazine kagitlarini dusunun. Hazine kagitlari olarka bulinen bu tahviller tahmin edilebilirdir ve getirileri ortalama olarak hisse senetlerinden daha dusuktur fakat cok daha guvenilirdir. 
+
+  Hazine kagitlari ayni zamanda devlet garantisi altindadir. Yine de hazine kagitlarini bu kadar makbul kilan son derece likit yatirimlar olmalari ve nakit para elde etmek amaciyla cabucak satilabilmeleridir. Bunlar ayni zamanda diger tahvillerde daha kolay satilabilir cunku develt tahvil piyasasi cok buyuktur. 
+  
+  Hazine kagitlarinin uc temel niteligi vardir:
+    - 1 - Hazine Bonolari -- (H-bonolari) Vade tarihleri dort haftadan bir yila kadar degisen cok kisa donemli menkul degelerdir. H bonolari en az 100 dolarlik satin alma fiyatiyla 100 daloarlik artislar soz konusudr ve gorunur degerlerinden inidrimli sayilirlar. Indirim menkul deger uzerindeki faiz gelirini temsil eder.
+    - 2 - Orta Vadeli Hazine Tahvilleri -- iki bes ve on yillik orta sureli vade tarihleri vardir bu tahviller en az 100 dolarik yatirimla 100 dolarlik artisilarla satilir. Sabit faiz oranlari ve faiz odemleri alti ayda birdir. 
+    - 3 - Hazine Tahvilleri -- vade tarihleri otuz yil olan uzun donemli menkul degelerdir. 100 dolardan baslarlar bu tahvillerin kupon oranlari sabittir ve vade tarigine kadar her alti ayda bir faiz oderler. 
+    
+ - `Belediye Tahvilleri` -- Bu tahviller vergi odememe avantajlari  nedeniyle cok populerdir. Eyalet sehir kasaba belediye vve devlet kuruluslari bunlari okul, park gibi toplumumuzun onemli islerini yaptirmak icin cikarirlar.
+ 
+  Belediye tahvillerinin getirilieri genellikle sirket tahvilleri kadar yuksek degildir. Gelgelelim sirket tahvillerinin vergi kesintilerinden sonra sagladigi getiriyi goz onune aldigimizda belediye tavilleri genellikle hic gena degildir. OZellikle yuske vergilerin oldugu eyalet veya ulkelerde. Vergi haric faizi vergi beyannamesinde rapor etmeniz gerekir
+  
+  Sirket tahivilleri gibi bircok belediye tahvili de derecelendirlilir ve en yuksek puanlari alanlar dusuk risk dereceleri yonunden sadece develt tahvilleriyle rekabet ederler. Standard and Poors Moodys gibi sirketler ve diger yatirim hizmetleri tahvilleri sirket tahvillerini derecelendirdikleri sekilde derecelendirirler. AAA (SnP) veya Aaa(moodys) en yuksek derecelerdir
  
  ## Sirket Tahvilleri
  
