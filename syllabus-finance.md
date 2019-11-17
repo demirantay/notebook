@@ -8,6 +8,7 @@ Do these in order however after the intro you are free to choose specializing in
 
 - [ ] Read: Invesment 101 
 - [ ] Read: Ekonomi 101 
+- [ ] https://www.core-econ.org/
 - [ ] Read: Day Trading 101 
 - [ ] Read: Psych 101 
 - [ ] Read: Management 101 
