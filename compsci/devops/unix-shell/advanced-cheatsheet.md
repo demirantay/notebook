@@ -50,15 +50,14 @@
 ### Navigating through Directories
 
 - `pwd` -- Shows you where you currently are in the path 
-- `cd` --
-- `pushd-popd` --
-- `ls` --
+- `cd` -- Changes directories
+- `ls` -- List files and directories
 
 ### File Operations
 
-- `touch` --
-- `cat` --
-- `echo` --
+- `touch <filename>` -- creates an empty file 
+- `cat <file>` -- lets you viewvthe content of a file 
+- `echo` -- There are much more things to do with echo than just printing out stuff but I mostly use it for printing.
 - `more` --
 - `less` --
 - `head` --
