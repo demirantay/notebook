@@ -2,7 +2,7 @@
 
 > Keep in mind some of them are Linux based and not Unix
 
-### Bash and Linux Command Line
+### Linux Command Line Intro
 
 - `env` -- lists all the envorionment variables
 - `echo $SHELL` -- Shows you which type of shell you are running
@@ -10,43 +10,46 @@
 - `echo $<env_var_name>` -- You can echo any environment variable you choose
 - `export <env_var_name>=new value` -- You can change the values of env variables with __export__
   > If you want this env value change to be perminent you need to save it into the .bashrc file
-- `alt+F4` --
+
+### Bash Shell Shortcuts
+
+- `ctrl+A` -- Moves the cursor to the start of the line
+- `ctrl+E` -- Moves the cursor to the end of the line
+- `ctrl+L` -- clears the terminal
+- `ctrl+C` -- kills the process
+- `ctrl+Z` -- Moves the current running process to the background
+- `ctrl+D` -- same as exit. terminates the terminal
+  > /bin/bash  |  /etc/profile  |  /.bashrc   -> These three files are bash shell config files
 
 ### Help and man pages
 
-- `help` -- 
-- `man <command>` --
-- `whatis` --
-- `apropos` --
+- `<command> --help` -- Prints the help page for that specific command , usage, exmaples ... etc. 
+- `man <command>` -- Prints manual page for a command, usage, options, description ... etc.
+- `whatis <command>` -- Prints a summirised versions of manual (help) pages. usually single line.
 
 ### Getting Information Commands
 
-- `lsb_release` --
-- `etc/issue` --
-- `uname` -- 
-- `cal` --
-- `date` --
-- `hostname` --
-- `who-whoami` --
-- `uptime` --
-- `whereis` --
-- `which` --
-- `locate` --
-- `dmidecode` --
-- `proc` --
-- `fdisk -l` --
-- `df` --
-- `du` --
-- `free` --
-- `hdparm` --
-- `modinfo` --
-- `stat` --
-- `vmstat` --
-- `history` --
+- `lsb_release -a` -- Get the information about the linux distro you are using
+- `uname -a` -- Prints the version of Kernel that is being used 
+- `cal [options]` -- Prints you out a calender 
+- `date` -- Prints out you the date
+- `hostname` -- Prints out you the host name
+- `w-who-whoami` -- Prints out the users currently logged in, last login dates ... etc.
+- `uptime` -- Prints out how long the system have been open
+- `dmidecode -t <hardware>` --  Shows you the information about the hardware. 
+- `fdisk -l` -- Shows you the disk information of your system
+- `df -h` -- Shows you a detailed information of disk space usage. Without the -h option it looks really bad
+- `du` -- shows you the disk usage of the subdirectories of the dir where this command is ran
+- `hdparm <disk>` -- Shows you information about the targeted disk e.g. `sda` ... etc.
+- `modinfo lsmod` -- Lists you the kernel modules
+- `modinfo <module>` -- Shows you information about a single module of the kernel
+- `stat <dirname>` -- Shows you information about the targeted directory 
+- `vmstat [-options]` -- Shows the general information about the system 
+- `history` -- Shows you the history of commands ran in that terminal process
 
 ### Navigating through Directories
 
-- `pwd` --
+- `pwd` -- Shows you where you currently are in the path 
 - `cd` --
 - `pushd-popd` --
 - `ls` --
