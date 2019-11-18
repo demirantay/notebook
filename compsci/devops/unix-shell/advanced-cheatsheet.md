@@ -4,7 +4,12 @@
 
 ### Bash and Linux Command Line
 
-- ...
+- `env` -- lists all the envorionment variables
+- `echo $SHELL` -- Shows you which type of shell you are running
+- `echo $HOME` -- Shows you where your home dir is located at
+- `echo $<env_var_name>` -- You can echo any environment variable you choose
+- `export <env_var_name>=new value` -- You can change the values of env variables with __export__
+  > If you want this env value change to be perminent you need to save it into the .bashrc file
 - `alt+F4` --
 
 ### Help and man pages
