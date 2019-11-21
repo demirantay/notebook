@@ -112,11 +112,34 @@ Tabikide tek yatirim yapabileceginiz hisse senetleri degildir. Onun disinda en o
     
  - `Belediye Tahvilleri` -- Bu tahviller vergi odememe avantajlari  nedeniyle cok populerdir. Eyalet sehir kasaba belediye vve devlet kuruluslari bunlari okul, park gibi toplumumuzun onemli islerini yaptirmak icin cikarirlar.
  
-  Belediye tahvillerinin getirilieri genellikle sirket tahvilleri kadar yuksek degildir. Gelgelelim sirket tahvillerinin vergi kesintilerinden sonra sagladigi getiriyi goz onune aldigimizda belediye tavilleri genellikle hic gena degildir. OZellikle yuske vergilerin oldugu eyalet veya ulkelerde. Vergi haric faizi vergi beyannamesinde rapor etmeniz gerekir
-  
-  Sirket tahivilleri gibi bircok belediye tahvili de derecelendirlilir ve en yuksek puanlari alanlar dusuk risk dereceleri yonunden sadece develt tahvilleriyle rekabet ederler. Standard and Poors Moodys gibi sirketler ve diger yatirim hizmetleri tahvilleri sirket tahvillerini derecelendirdikleri sekilde derecelendirirler. AAA (SnP) veya Aaa(moodys) en yuksek derecelerdir
+      Belediye tahvillerinin getirilieri genellikle sirket tahvilleri kadar yuksek degildir. Gelgelelim sirket tahvillerinin vergi kesintilerinden sonra sagladigi getiriyi goz onune aldigimizda belediye tavilleri genellikle hic gena degildir. OZellikle yuske vergilerin oldugu eyalet veya ulkelerde. Vergi haric faizi vergi beyannamesinde rapor etmeniz gerekir
+
+      Sirket tahivilleri gibi bircok belediye tahvili de derecelendirlilir ve en yuksek puanlari alanlar dusuk risk dereceleri yonunden sadece develt tahvilleriyle rekabet ederler. Standard and Poors Moodys gibi sirketler ve diger yatirim hizmetleri tahvilleri sirket tahvillerini derecelendirdikleri sekilde derecelendirirler. AAA (SnP) veya Aaa(moodys) en yuksek derecelerdir
+      
+      Belediye tahvillerinin farkli birkac turu vardir:
+       - `gelir tahvilleri` - Bu tahviller genellikle kopru havalimani veya otoyol gibi belirli bir projeye fon saglamak iicn cikarilan tahvillerdir. Yol ve kopru paralari harclar yani bir anlamda projden toplanan gelirler tahvil sahiplerine faiz odemek icin kullanilir. 
+       - `Ahlaki yukumluluk tahvilleri` - Bunlar esasen bir eyaletin cikardigi fakat kendine mahsus bir maddesi olan gelir tahvilleridir
+       - `Genel Yukumluluk tahvilleri` - Tahvilleri cikaran kurum vergilendirme yoluyla bu tahvilerin faiz odemelerini desekler
+       - `Vergilendirilebilir Belediye tahvilleri` - Eger vergilendirilmeyen belediye tahvilleri varsa insanlar neden vergiye tabi belediye tahilleri istesinler ki? Bunlarin daha cok sirket tahvilleriyle kiyaslanabilir genellikle ock riskli olmayan daha yuksek getirileri vardir. 
+       - `Ozel faaliyet tahvilleri` - Eger bir tahvil hem kamu hem de ozel faaliyetler icin kullaniliyorsa buna ozel faaliyet tahvivli denir. 
+       - `Yerlestirme Tahvilleri` - Bu tahviller sizin belirlenen vade tarihinden once belirli bir tarihte yatiriminizi gorunur degeri uzerinden paraya cevirmenize olanak tanir. 
+       - `Dlagalanan ve degisken ornali belediye tahvilleri` - Eger faiz orani yukselecek gibi gorunuyorsa o zaman bunlar iyi araclardir cunku isimlerinin de gosterdigi gibi faiz oranlari da buna bagli olarak degisir. Dogal oalrak bu tarz tahvillerdle ilisklili riskler daha fazladir. 
+       - `Sifir Kuponlu TAhviller` - Sifir kuponlu tahviller sirket develt kurumlari veya belediyeler tarafindan cikarilabillr Kisaca sifir olarak bilinen bu tahviller cogu tahvilin yaptigi gibi periyodik olarak faiz odemezler. Bunun yerine indirimli satin alinir ve vade tarihi doldugunda daha yuksek bir oran hem faiz hem de anapara oderler. 
+       > Portfoyunuzde likitide istiyorsaniz sifir yani sifir kupnolu tahvil almayin. vergilere felince hicbir faiz odemesi almamamniza ragmen her yil tahvil ne kadar artiyorsa o miktari bildirmeniz gerekir. 
  
  ## Sirket Tahvilleri
+ 
+ - Hisse senedi aldiginizda bir sirketten pay sahibi olurunuz sirket tahbilleri aldiginizda ise sikete belirli bir zaman dilimi icin ve belirli bir faiz oraninda odunc para veriyorsunuz demektir. Sirket tahbilleri develt veya belediye tahbillerdinden daha riskli olmalarinaragmen uzun donemli sirket tahillerinin eprformanis son elli yilda emsalleri olan devlet ve belediye tahvillerini gecmistir. Ancak develtin aksine sirketler iflas edebilir ki bu da tagbillerinizi duvar kagidina cevirebilir.
+    
+    Sirket tabilleri vade tarihleri doldugunda cesitli tahvillere kiyasla daha yuksek getiriler oderler. Elde ettingiz gelir em federal devlet hem de eyalet taragindan vergilendirilmesine ragen bu sonucu alirsiniz. 
+    
+- `Tahvillin Geri Cagirilmasi` - Geti cagirma bildirilern vade tarihlerinden once edelini verip tahvilleri geri almalidir. Bu durum genellikle sirket daha dusuk bir faiz oraninda yeni bir tahbil serisi cikarmak istediginde meydana gelir. GEti cagirilabilen bir tahvilde geri cagirilma sarti olarak bilnen bir madde vardir ve bu madde eger sirket bu yola basvurmak isterse tam oarak ne zaman tahbillerin geri cagilrabilecegini bildirr. On bes yillik bir tahbil sekiz yildan sonra geri cagirilabilecegi kosuluyla satisa cikarlabilir. Geri cagirilmis bir tahbile genellikle daha dusuk faiz oranlari karsiliginda yeniden yatirim yapilir.
+
+- `Borc Odeme Fonu Sarti` - Borc odeme fonu sarti sirket icindeki kazanclarin yillik olarak belirli sayida yahvile vadesinden once odeme yapmak icin kullanildigi anlaina gelir. TAhibil sartlarinda acikca boyle bir ozellik oldugu belirtilmelidir. Her yil bunun icin yeterli nakit ayirilir. Genellikle kurayla secilen tahvillerin bir kismina vadeisnden once odeme yapilir. 
+
+    TAhvillerin erken geri cagirilmalarinin baska nedenleri de vardir ve bunlar tahvilleri satin aldiginizda tahvil sartlarinizda yazilidir. Herhangi bir yatirim urnu satin alirken oldugu gibi tahvil satin alirken de her seyi dikkatle okuyun.
+    
+- `yuksek getirili tahviller` -
  
  ## Yatirim Fonlari
  
