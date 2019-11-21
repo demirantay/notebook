@@ -58,19 +58,16 @@
 - `touch <filename>` -- creates an empty file 
 - `cat <file>` -- lets you viewvthe content of a file 
 - `echo` -- There are much more things to do with echo than just printing out stuff but I mostly use it for printing.
-- `more` --
-- `less` --
-- `head` --
-- `tail` --
-- `tee` --
-- `tac` --
-- `rev` --
-- `sort` --
-- `wc` --
-- `nl` --
-- `pr` --
-- `paste` --
-- `grep` --
+- `more <filename>` -- This lets you view the file inside the terminal just like cat. Uses space for scrolling down and end for escaping
+- `less <filename>` -- This lets you view the file in a more structured way for long files. This is like "cat"
+- `head <filename>` -- lets you view the first 10 lines of a file. You can give options to specifiy more than 10 lines
+- `tail <filename>` -- lets you view the last 10 lines of a file. You can give options to specify more than 10 lines.
+- `tac <file>` -- reverse of cat. lets you view a file from bottom to top. 
+- `sort <file>` -- Alphabetically sorts the content of a file
+- `wc <file>` -- Shows you the character and line count
+- `nl <file>` -- Same as "cat" with -n operator. Shows the lines of and lets you view the file
+- `pr` -- lets you view the file again but makes it more readable and sperates the different files. Very useful if you want to get something printed out.
+- `grep` -- grep is used for filtering out strings in a file. It is too long to note it down here.
 - `cut` --
 - `tr` --
 - `cmp` --
