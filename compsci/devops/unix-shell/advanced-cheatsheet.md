@@ -26,6 +26,7 @@
 - `<command> --help` -- Prints the help page for that specific command , usage, exmaples ... etc. 
 - `man <command>` -- Prints manual page for a command, usage, options, description ... etc.
 - `whatis <command>` -- Prints a summirised versions of manual (help) pages. usually single line.
+- `apropos` -- Lets you search the manual page names and descriptions
 
 ### Getting Information Commands
 
@@ -36,10 +37,14 @@
 - `hostname` -- Prints out you the host name
 - `w-who-whoami` -- Prints out the users currently logged in, last login dates ... etc.
 - `uptime` -- Prints out how long the system have been open
+- `whereis` -- locate the binary, source, and manual page files for a command
+- `which` -- locate a command
+- `locate` -- list files in databases that match a pattern
 - `dmidecode -t <hardware>` --  Shows you the information about the hardware. 
 - `fdisk -l` -- Shows you the disk information of your system
 - `df -h` -- Shows you a detailed information of disk space usage. Without the -h option it looks really bad
 - `du` -- shows you the disk usage of the subdirectories of the dir where this command is ran
+- `free` -- Display amount of free and used memory in the system
 - `hdparm <disk>` -- Shows you information about the targeted disk e.g. `sda` ... etc.
 - `modinfo lsmod` -- Lists you the kernel modules
 - `modinfo <module>` -- Shows you information about a single module of the kernel
@@ -62,18 +67,20 @@
 - `less <filename>` -- This lets you view the file in a more structured way for long files. This is like "cat"
 - `head <filename>` -- lets you view the first 10 lines of a file. You can give options to specifiy more than 10 lines
 - `tail <filename>` -- lets you view the last 10 lines of a file. You can give options to specify more than 10 lines.
+- `tee` -- read from standard input and write to standard output and files
 - `tac <file>` -- reverse of cat. lets you view a file from bottom to top. 
+- `rev` -- reverse lines of a file or files
 - `sort <file>` -- Alphabetically sorts the content of a file
 - `wc <file>` -- Shows you the character and line count
 - `nl <file>` -- Same as "cat" with -n operator. Shows the lines of and lets you view the file
 - `pr` -- lets you view the file again but makes it more readable and sperates the different files. Very useful if you want to get something printed out.
-- `grep` -- grep is used for filtering out strings in a file. It is too long to note it down here.
-- `cut` -- just like grep used for filtering out strings ina file . It is too long to note it down here.
+- `grep` -- print lines matching a pattern
+- `cut` -- remove sections from each line of files
 - `cmp <file> <file2>` -- Compares two files and prints out their differences.
 - `diff <file> <file2>` -- Just like cmp it compares two files and prints out their differences
 - `find` -- lets you find files or directories. It is too big to note in a single sentence. 
-- `exec` -- ...
-- `xargs` -- ...
+- `exec` -- execute commands and open, close, or copy file descriptors
+- `xargs` -- build and execute command lines from standard input
 
 ### File Move-Copy-Delete
 
@@ -89,28 +96,14 @@
 
 ### File Compressions-Open-Archive
 
-- `tar` -- comopresses files into a single tar file 
-- `gzip-bzip2-gunzip-bunzip2` -- ...
-- `zcat-zgrep-bzcat-bzgrep` -- ...
-- `unrar-unzip` -- ...
-
-### Permissions
-
-- ...
-- suid ?
-- `unmask` --
-- `chattr` --
-
-### User Operations
-
-- `shadow` --
-- `passwd` --
-- ...
+- `tar` -- The GNU version of the tar archiving utility
+- `gzip-bzip2-gunzip-bunzip2` -- compress or expand files
+- `zcat-zgrep-bzcat-bzgrep` -- compress or expand files
+- `unrar-unzip` -- extract files from rar archives
 
 ### Process Management
 
-- `process` --
-- `ps` --
+- `ps` -- report a snapshot of the current processes. `aux` option is very useful for readability
 - `pstree` --
 - `top` --
 - `pgrep` --
