@@ -68,33 +68,31 @@
 - `nl <file>` -- Same as "cat" with -n operator. Shows the lines of and lets you view the file
 - `pr` -- lets you view the file again but makes it more readable and sperates the different files. Very useful if you want to get something printed out.
 - `grep` -- grep is used for filtering out strings in a file. It is too long to note it down here.
-- `cut` --
-- `tr` --
-- `cmp` --
-- `diff` --
-- `find` --
-- `exec` --
-- `xargs` --
+- `cut` -- just like grep used for filtering out strings ina file . It is too long to note it down here.
+- `cmp <file> <file2>` -- Compares two files and prints out their differences.
+- `diff <file> <file2>` -- Just like cmp it compares two files and prints out their differences
+- `find` -- lets you find files or directories. It is too big to note in a single sentence. 
+- `exec` -- ...
+- `xargs` -- ...
 
 ### File Move-Copy-Delete
 
-- `cp` --
-- `mv` --
-- `rm` --
-- `shred` --
+- `cp <file> <copyfile>` -- Copies an file to another newly created file. 
+- `mv <file> <dirname>` -- Moves a file to a new path, if the path does not exists instead of moving the dirname becomes the new nameof the file.
+- `rm <file>` -- Used for deleting a file. IF it is stubborn use `-r` option
 
 ### Directory Creation and Deletion
 
-- `mkdir` --
-- `rmdir` --
-- `rm -r <dirname>` --
+- `mkdir <dirname>` -- Creates a directory
+- `rmdir <dirname>` -- Removes a directory, only works if the directory is empty
+- `rm -r <dirname>` -- Removes a directory even if it is not empty.
 
 ### File Compressions-Open-Archive
 
-- `tar` --
-- `gzip-bzip2-gunzip-bunzip2` --
-- `zcat-zgrep-bzcat-bzgrep` --
-- `unrar-unzip` --
+- `tar` -- comopresses files into a single tar file 
+- `gzip-bzip2-gunzip-bunzip2` -- ...
+- `zcat-zgrep-bzcat-bzgrep` -- ...
+- `unrar-unzip` -- ...
 
 ### Permissions
 
