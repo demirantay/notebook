@@ -104,8 +104,8 @@
 ### Process Management
 
 - `ps` -- report a snapshot of the current processes. `aux` option is very useful for readability
-- `pstree` --
-- `top` --
+- `pstree` -- Lets you see the processes in a hierarchical way. 
+- `top` -- Lets you see all of the proecss in a monitor way. Just like the actviity monitor app in the GUI
 - `pgrep` --
 - `kill` --
 - `kilall` --
