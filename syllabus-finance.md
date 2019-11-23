@@ -10,7 +10,9 @@ Do these in order however after the intro you are free to choose specializing in
 - [ ] Feynman note ^
 - [ ] Read: Ekonomi 101 
 - [ ] Feynman note ^
-- [ ] https://www.core-econ.org/
+- [ ] https://www.core-econ.org/ : THE ECONOMY
+- [ ] Feynman note ^
+- [ ] https://www.core-econ.org/ :ECONOMY, SOCIETY, AND PUBLIC POLICY
 - [ ] Feynman note ^
 - [ ] Read: Day Trading 101 
 - [ ] Feynman note ^
@@ -52,6 +54,12 @@ Do these in order however after the intro you are free to choose specializing in
 - [ ] Feynman note ^
 - [ ] Course: Khan Academy -- Miro Macro Economics
 - [ ] Feynman note ^
+
+---
+
+Practice on Real-time data: Build yourself applications with data science that updates its data in realtime and try to practice what you have learned.
+
+---
 
 
 Remember:
