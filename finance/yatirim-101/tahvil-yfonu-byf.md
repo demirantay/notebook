@@ -165,7 +165,35 @@ Tabikide tek yatirim yapabileceginiz hisse senetleri degildir. Onun disinda en o
  
     Fonlar likidite varliklardir. BAzi onde gelen finans kaynaklarinin derecelendirdigi en tepedeki on yirmi vea elli fonu bulmak ve sonra bunlari cevrimci satin almak zor degildir 
     
+- `Cesitlendirme` -- Yatirim fonuna yatirim yapmak tek bir hisse senedine sahip olmaktan daha az risklidir. Bunun nedeni fonun profosyonelce yonetilmesi ve cesitlendirilimis olmasidir. Yatirim  fonlari isin hepsini size yaptirmadan cesitlendirme sunar. 
+
+    Bu cesitlilik riskinizin buyuk bir kismini en aza indirir. Eger herseyinizi tek bir hisse senedine yatirirsaniz yatiriminiz tamamen o hisse senedinin fiyatina baglanir kalir. Eger alti hisse sendi alirsaniz daha az risk alirsiniz cunku alti hisse senedi alirsaniz daha az risk alirsiniz cunku alti hisse senedinin altisinin da ayni anada dusme olasiligi daha azdir. 
+    
+    Yatirim fonlari da ayni birlikten guc dogar ilkesiyle calisir. Cesitli risk seviyelerinde fonlar olmasina ragmen bircok yatirim fonu yuksek riskli yatirimlari dusuk riskli ve doalyisiyla daha guvenli araclarla dengeleyerek yatirimciya sinirli risk sunar. Birden fazla fon satin alarak da daha fazla cesitlendirme elde edebilirsiniz. Ornegin portfoyunuz assagidakileri icerebilir
+        - Daha muhafazakar bir tahbil fonu
+        - Yogun ilgi uyandiran bir endustride nakde cevrilebilecek bir teknik fon
+        - Yuksek riskli uluslararasi bir fon
+        - Dusuk riskli birinci kalite sirket fonu
+        - Bir deger artisi fonu
+    
+    Ancak belirli bir zamanda alti-yediden fazla yatirim fonunu elde tutmanin genellikle tavsiye edilmedigini aklinizda tutun. 
+    
+ - `Fon Yoneticiliginin Onemi` -- Iyi bir fon yoneticini degelerndirirken fonun veya onceki fonlarin yonetiminde istikrarli olup olmadigini saptamak icin birkac illik gecmisine bakin. Ayrica fon yoneticinsin fonunun finans gedeflerine bagli kalip kalmadigini da gormek isteyebilirsiniz. Ornegin eger daha tutucu bir deger satisi ve gelir fonu ariyorsaniz fon yontecisinin yuksek riskli yatirimlar yapmasini ve fonu farkli bir yone gorumesini (tarz kaymasi) dogal olarak istemezsiniz. Ne yazik ki fonun bildirilern hedefine uymayan hisse senetlerini gozden geciren ve alan gozu disarida fon yeticileri dusunebileceginizden daha fazladir. Ote yandan eger bir fon ayakta kalmak icin mucadele veriyorsa yatiriminizi kurtarmak icin yonunu degistrimeye baslayan bir fon yoneticinis i de takdir edebilirsiniz. 
+    Ayrica bir yatirim fonunun portfoyunu de yakindan incelemelisiniz. Her bir satin alma knusunda bilginiz olmayabilir, ancak en son trendleri yakip mi ediyorlar yoksa normal gidisattan farkli mi davraniyorlar ogrenebilirsiniz. 
+    
+    Fon yoneticinsin 2011 deki kurlarin dustugu piyasa ile 2008 deki durgunluga ne gibi tepkiler verdigini arastirin. Fonlarinin tekrar ne gizla yukseldigine bakin. Pnaikleyip buyuk hamleler mi yapmis yoksa sogukkanligini koruyup firtinayi atlatmis mi?
+    
+    Forbes kiplingers ve Money gibi dergiler ve morningstar.com gibi cevrimici kaynaklar yatirim fonlarini derecelendirir ve cogu kez fon yoneticinin profilini veya icyuzunu verir. Istikrar onemlidir. Bir fon yoneticisnin gecmiste bir fondan digerine atlamis olmasi eger fonu elinizde uzun sure tutmak istiyorsaniz iyiye isaret defildir. Ayrica her yil farkli bir yoneticinin denetimine giren bir fona sahip olmak da sizin avantajiniza degildir. 
+    
  ## Fonlar Nasil Is Gorur ?
+ 
+ - Her bir fonun yatirim tarzi kendine has olmalidir. Fonun tam olarak ne tur menkul degeler icerecegini her bir menkul deger turunun yaklasik oranlarini ve fonun ne kdara aktif yonetilecegini bilmeniz gerekir. Ornegin endeks fonlari aktif bir bicimde yonetilemez ve esas olarak endeksin adinda belirtilen menkul degerleri icerir. Ote yandan agresif buyume fonlari cok aktif yonetilir ve menkul degelerini cok duzenli olarak degistirebilirler. Birden fazla yatirim fonuna yatirim yapiyorsaniz tarzlaarninin ortusmediklerinden emin olmaniz onemlidir. 
+ 
+    Eger gizli masraflar aniden ortaya cikmaya baslarsa baska bir yer aramaniz daha iyi olabilir. Ozetle herhangi bir baska adi olan komisyonsuzlar esasen komisyonlu fonlardir. Yeni bir yatirimci olarak  ister komisyonlu ister komisyonsuz olsun temel ilkelere bagli kalmaniz avantajiniza olur. 
+    
+- `Ucretler, Masraflar ve Isletme Masrflari` -- Yatirim fonlari his supheiz birey acisindan yatirim masraflarini azalttigi halde komisyonsuz fonda dahi herhangi  bir fon turunun bir hissedari olmak icin zorunl olan cesitli ucret ve masraflar vadir. Bu uccretler oneml olcude farklilik gostereiblir bu yuzden onlari nasil bulup anlayacaginizi anlamaniz onemlidir. 
+    
+    Genellikle masraf orani olarak listelenen hissedarlarin fon hizmetleri ve yonetimi icin odeyecegi birkatikm masraflar varidr bunu da unutmamak gerek.
  
  ## Fon Cesitleri
  
