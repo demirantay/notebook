@@ -193,10 +193,57 @@ Tabikide tek yatirim yapabileceginiz hisse senetleri degildir. Onun disinda en o
     
 - `Ucretler, Masraflar ve Isletme Masrflari` -- Yatirim fonlari his supheiz birey acisindan yatirim masraflarini azalttigi halde komisyonsuz fonda dahi herhangi  bir fon turunun bir hissedari olmak icin zorunl olan cesitli ucret ve masraflar vadir. Bu uccretler oneml olcude farklilik gostereiblir bu yuzden onlari nasil bulup anlayacaginizi anlamaniz onemlidir. 
     
-    Genellikle masraf orani olarak listelenen hissedarlarin fon hizmetleri ve yonetimi icin odeyecegi birkatikm masraflar varidr bunu da unutmamak gerek.
+    Genellikle masraf orani olarak listelenen hissedarlarin fon hizmetleri ve yonetimi icin odeyecegi birkatikm masraflar varidr bunu da unutmamak gerek. Uluslararsi fonlarin masraf oranlari genellikle yerel olanlarinkinden daha yuksektir cunku denizasiri sirketlerle is yaparlar. Genellikle tahsil edilen ucretler sunlardir:
+    - `Hizmet Ucretler` - Bu ucretler musterilerle fonla iliskili sorular da yardimi olan ve onla ilgili bilgi ve tavsiye veren planlamaci analist ve aracilara vermek icin kullanilir. Muhaseve be hukuki hizmetler de dahil edilebilir.  
+    - `Yonetim UCretleri` - Bunlar ofis personeli ofis yeri ve arac gerec dahil bir isi yurutmek icin gerekli temel seylerle iliskili ucretlerdir.
+    - `Idari Ucretler` - Bu fon yoneticisine verieln yuzdedir. Bu duz bir yuzde veya getirilere dayanan fon buyumesiyle ortusen bir duzenleme olabilir. Genellikle fon varliklari ne nkadar buyukse yuzde o kadar dusuk olur. 
+    - `12b-1 ucreti` - Bu ucret (genellikle yillik varliklarin yuzde 025 ile 1 arasi) oncellikle fonu pazarlamak ve reklamini yapmak icin kllanilir. Odenen ucret sadece fonun reklam butcesine bir katki degil fonun buyumesinde de yardim edecek bir seydir. 
+   
+- `Fon Raporlarini Cozmek` -- Yatirim fonunuzun yillik veya alti aylik faaliyet raporu fonun performanisini olcemede kullanilan bir aractir. Rapor icindeki en enomli bilgiler arasinda fon varliklari bolumu vardir. Fon yoneticisnin tarz degistiren biri olup olmadigini elirlemek icin bu listeye cok dikkatle bakin. Baska bir deyisle kucuk sirketlerin hisse senetini satin almasi gereken bir fon aniden buyuk sirketlere yatirim yapiyor oalbilir veya bir sirket tahbili fonu aniden hazine kagitlarini cok miktarda satin aliyor olabilir. 
+
+    Portfoy icerigine bakarken bu onemli verilere bakmaniz iyi olur:
+    - `Tandidik Isimler` -- Coaca-Cola gibi cok tanina bir isim kucuk firmalarin oldugu bir fonda ortaya cikmaz. Bu fona ait olan daha kucuk sirketleri ararsiniz. Bir fonunuzun olmasi sirketlerin faaliyetlerini ve hisse sentlerini arti ktakip etmeyeceksiniz demek degildir. Fonunuzda hoslanmadiginiz sirketler gorurseniz daha umut vaat edici oldugunu dusundugunuz hisse sentleri olan baska fonlara da bakabilirsiniz.
+    - `Portfoy yogunlugu` - Rapor size portfoyde neler oldugunun yani sira fonun her bir alanda ne kadar yani ne yuzdeyle yatirim yaptigini da gosterir. 
+    - `Performans` - Bu bilginin iyi performans gosteren fonlar icin bazen sayadan firlamasi hic sasirtici degildir. Iyi performans gostermeyen bir fonu desifre etmek daha zor olablir. 
+    
+    Yillik faaliyet raporunu okuduktan sonra ya kendinizi guvende hissedip fonda kalmaya ya da hisseleriniz satmaya karar vermenlisiniz. Eger ne yapmaniz gerektii konusunda kararsiz kalirsaniz elinizde yeterli bilgi olmadigini dusunebilirsiniz veya  rapor kolay anlasilabilir olmayabilir) fonunuzu irdelemek icin morningstar.com kiplingers veya wall street journal gibi cevrimici veya basili kaynaklara basvurmalinsiz. 
+    
+    Ayrica fonu veya fon ailesini de arayabilir ve onlara bazi sorulariniz oldugunu soyleyebilirsiniz ne de olsa hizmet masraflarini iceren  bir isletme ucreti oduyorsunuz bu yuzden birakin da size bazi yanitlar vererek hizmet etsinler. Eger bir fon kendinizi rahat hissetmenize yardimci olmuyorsa o zaman o sizin icin dogru yatirim degildir. Unutmayin para sizin paraniz 
  
  ## Fon Cesitleri
  
+ - Piyasada en cok tartisilan yatirim fonlari hisse senedi (ynai oz sermaye) fonlaridir fakat kuskusuz tek fon cesidi bunlar degildir. Mtlaka en iyi fonlar oldguklari da soylenemez esas fon varlginidan bagimsiz olarak kar potansiyeliniz genellikle basarili bir fon yoneticisnin deger kaybeden kafitlardan cok deger kazanan kagitlari fonlarrda biriktirirmesinden kaynaklanir. Ve her yairimda oldugu gibi sizin isiniz sizin icin agir isleri yapacak fon yoneticisini oldugunda dahi neye yatirim apmak ta oldgunuzu anlamaktir. 
+ 
+ - `Endeks Fonlari` -- Endeks fonlari belirli bir endekse umak iicn ugrasirlar ve bunu da adi verilen endeksint akip ettigi menul degleri icererek yaparlar. Bu fonlar pasif olarka yonetilir yani cok fazla alim satim olmaz ve sizin icin dusuk masraflar anlamina gelir. Bu fon cesidinin yatirim amaci en populeri SnP 500 olan bir endeksi yansitmaktir. 
+ 
+ - `Buyume Amacli Fonlar ve Gelir Fonlari` -- Para kazanmak icin yatirim dunyasina girdiyseniz bunu ypamanin iki temel yolu vardir: buyumek ve gelir saglamak . Bugun aldiginiz buyume amacli menkul kiymetler yarin daha deglenir. Gelir menkul kiymetleri size hemen simdi duzenli araliklarla faiz veya kar payi oder. Ve her biri hatta her ikisi icin tasarlanmis fonlar vardir. 
+ 
+    Buyume amacli fonlar hisse sendinin cari fiyatina odaklanmaz ilgileri sirketin satis ve kazanclarina ve bunlarin buyuyecegi beklentisine odakalnir ki bu da hisse sendi fiyatinin artmasina yol acar. Burdaki fikir geleneksel "dusukten al, yuksekten sat" ilkesi degildir, bunun yerine "hani fiyattan olursa olsun al ve sirketin ivme kazanmasini, sansinin acilmasini ve buyumesini zile" dir. Buyume amacli hisse senedi pesinde olan yatirimcilar yeni urunlere ozgun hizmetlere ve birinci sinif yonetime dayali muazzam potansiyeli olan sirketleri arastirirlar. Uzun donemli buyume amacli fonlar microsoft gibi buyuk duzenli buyuyen sirketlerden yararlanmaya calisir. AGresif buyume amacli fonlar amazon.ocm gibi patlama yapan kucuk sirketleri icerir. 
+    
+- `Agresif Buyume Amacli Fonlar` - Kmi zaman sermaye kazanci fonlari da denilen bu fonlar en cok baski yaratan fonlardir. Iyi gittiklerinde cok iyi olurlar. Bunlarin bazilari muazzam sonuclar vermistir ama tam tersi de dogrudur. Bunlar riskli yatirimlaridr. 
+
+- `Gelir Fonlari` -- Gelir fonlari duzenli gelir seklinde hemen sonuc almak isteyen yatirimaclr icin en iyi seceneklerdir. Kar payi ureten hisse senetlerini iceren bu fonlar bu kar paylarini fon hissedarlarina verir. Bu fonlardan bazilari ayni zamanda tahvil gibi faiz odeyen menkul kiymetleri icerebilir bu kazanclar da fon ggissedarlarina aktarilir. Gelir gemen elinize gecse bile duzenli odeme almak erine tekrar yatirim yapmayi terchig edebilrsiniz. Ancak bu kazanclarin ister nakit olarka odeme alin ister yeniden yatirim yapin vergilendirildiklerini unutmayin. Bu fonlar tutucu kabul edilir. Piyasa donemlerindeki calkalanmadan cok da fazla etkilenmezler. 
+
+- `Buyume Amacli ve GElir Bilesik Fonlari` -- Ayrica ozel olarak hem hisse senetlerinin buyumesi beklenen hem de kar payi odeyen sirketleri arayan bir fonu da tercih edebilirinisiniz. Boy e bir fon duzenli gelir saglar ki bu piyasadaki buyuk ani inisler sirasinda bile nakit akisini surdurmek isteyen birisine cazip gelir. Boyle bir fon yatirimcinin hem anaparasini bir miktar korumasina olanak verir em de gecimin saglamasi icin nakit temin eder. 
+
+- `Deger ve Sektor Fonlari` -- Bir deger yatirim fonu ercek degerinden daha az deger goren isse senetlerine yatirim yapar. Bunlar su ya da bu sebeple bir mucadele icinde olan sirketlerdir ve irketin hisse senedi fiyatlari dusuk oldugu halde gercek degeri cok daha yuksek olabilir. Kimi zaman bu piyasada rekabetin cok yogun olmasi meselesidir;kimi zaman ise soz konusu sirket ya da sirketler teknolojik bakimdan geri kalmis veya son zamanlarda onemli atilim yapamamis olabilirler. Deger fonlari eski ozdeyis "dusukten al, yuksekten sat" sozunu benimser. 40 dolar deger bicilen fakat 20 dalardan satilan bir hisse senedi size daha cok hata payi birakir. Hisse basina 30 dolar bile odeseniz yine de karli cikarsiniz. 
+    
+- `Uluslararasi ve Kuresel Fonlar` -- Bircok yatirimci uluslararsi ve kursele fonlarin ayni sey oldugunu zanneder. Ama degildir. Kuresel fonlar butun dunyadan menkul kiymetler icerdigi halde uluslararasi fonlar yatirimcinin ulkesinde ki menkul kiymetleri icermez. Bu yuzden bir Amerikali icin uluslararsi bir fon birlesik devletler mekul kiymetini icermezken kursele bir fon icerebilir.
+     
+     Genellikle bircok denizasiri piyasanin asiri dengesizligi nedeniyle yeni baslayan bir yatirimci  icin uygun degillerdir. Bu nedenle fonlardaki menkul degelernizi toplam portfonuzun kucuk bir bolumuyle siki bir sekilde sinirlayarak ayaginizi alistirabilrsiniz. 
+     
+- `Dengeli Fonlar ve Portfoy Dagilimi` -- Dengeli fonlarin ozelligi ismlerinin de gosterdigi gibi yatirima yonelik dengeli yaklasimlaridir. Bu fonlar hisse senedi ve tahbil agirlikli olmak uzere bir yatirim karisimindan sermaye kazanci elde ederler. 
+
+    Dengeli fonlar maksimum cesitlilik saglar ve yoneticilerinin daha istikrarsiz yatirimlari develt tahvilleri  gibi guvenli dusuk riskli yatiriimlarla dengelenmelerine olanak saglar. Dogal olarak bu fon cesidi genis bir yatirim araligina sahip olabiliecegi icin fonun portfoyunu incelemeeniz ve dengeli fonunuzdaki dengeyi neyin olusturduguna dair fikir sahibi olmaniz onemlidir. Bu fonlarin iyi getirilerin ve guzel kazanclarin bir birlesimi olmalari onlari dikkate deger kilar. 
+    
+    DEngeli bir fon hisse senetleri ve tahviller arasinda bir denge surdurmeye calistigi halde bir portfoy dagilimi fonu bir yilda yuzde 75 hisse senedi sonraki yil yuzde 75 tahvil icereilbir. Bu piyasaya bagldir. Eger ekonmi bir ayi piyasasina dogru yondegistirecek olursa tahvillerin yuzdesi artar. Bir boga piyasainda ise hisse snetlerini yuzdesi artar. 
+    
+- `Buyuk, Orta ve Kucuk Olcekli Fonlar` --Yatirim fonlari dunyasinda "kap" "kapital" anlamina gelir ve fonun yatirim yaptigi sirketlerin buyuklugunu fosterir buyuk olcekli fonlar buyuk sirketlere yatirim yapar. kucuk olcekli fonlar daha kucuk genellikle buyuyen sirketleri arastirir ve orta olcekkli fonlar yatirmlarini da ikisi arasinda bir yerdedir.  Cesitlendirkemk icin her olcegi kullanin
+
+- `Mega Fon` -- Bu baska fonlardan hisse satin alan fondur buyuk baligin kucuk baligi yemesi gibi bu kucuk fonlari inceler ve cesitlendirmenizi daha da ceistlenidmernizi saglar. Yatirim fonu sayisi arrtikca yatirim fonlarinin ellerinin altindaki binlerce hisse senedi arasindan secim yapmalarina cok benzer sekilde daha cok sayida mega fonun yatirim fonu aldigini goreiblirsiniz. 
+
+- `Tahivl Fonlari` --
+     
  ## Borsa Yatirim Fonlari (BYF)
  
  ## Fon Yonetimi
