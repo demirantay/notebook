@@ -139,10 +139,32 @@ Tabikide tek yatirim yapabileceginiz hisse senetleri degildir. Onun disinda en o
 
     TAhvillerin erken geri cagirilmalarinin baska nedenleri de vardir ve bunlar tahvilleri satin aldiginizda tahvil sartlarinizda yazilidir. Herhangi bir yatirim urnu satin alirken oldugu gibi tahvil satin alirken de her seyi dikkatle okuyun.
     
-- `yuksek getirili tahviller` -
+- `yuksek getirili tahviller` - Finans dunyasinda resmi isimleriyle yuksek getirili tahvil fakat bir cok yatirimci tarafindan iskarta tahvil olarak bilinen bu tahviller diger bircok tahvile gore daha yuksek oranda bir getiri yani daha yuksek kazanc saglayabilir. Ama iskarta tahviller riskli bir yatirimdir. 
+
+    Yuksek getirli tahviller gecmiste bekleneni vermemeis tahvillerdir.Buyumekte yeniden oragnize olmakta olan veya hangi nedenle olursa olsun tahbil borclarini odemede daha riski kabuledilen sirketler taragindan cikarilan tahillerdir.
+    
+    Bazen bi sirket dusuk dereceli yuksek getirli tahviller cikararak baslar ve durumu iyi gider satis rakamlari yukselir. Nihayet bu sirket  daha yuksek dereceli tahviller cikarabildigi bir seviyeye ulasir. Bu da kisa donemde ilk dusuk dereceli tahvillerinden yuksek getiriler elde edebileceginiz anlamina gelir. Bu ayni zamanda daha dusuk getirli bir tahbil cikarrir cikarmaz tahvilleri geri cagiracaklari anlamina da gelir.
+    
+- `Ipotege Dayali Menkul Kiymetler` -- 1980 lerden bu yana populer bir tahbil kategorisi olan ipotege dayali menkul kiymetler MBS oldukca karli son derece karmasik ve hayli riskli bir yatiim secenegidir. Ancak burdaki anhtar keilime karmasik sozcugudur ve soz konusu menkul kiymetlerin bazilarinin ozellikle de CMO ynai teminatli ipotek senetleri bu karmasikligi acemi yatirimcilar icin uygun degildir. 
+
+- `Portfoyunuz icin Tahvil Secimi` -- Basarili tahvil yatirimciliginin anaharlarindan biri de cesitlendirmedir. Vade tarihleri farkli tahvilleri elinizde tutmak (bu genellikle merdivenleme adi verilen bir stratejidir) faiz oranlari birden arttiginda portfoyunuzun cok buyuk bir darbe almamasina yardim eder. Tahvil merdiveninizin genel finansal planinizla uyusan ortalama bir vade tarihi olmalidir. Bu portfoy ceistlendirmeye yardim eder.
+
+    Hangi tahvilleri alacaginiza karar verirken goz onune almaniz gereken birkac tane daha kisiel mesele vardir. VErgiler listenin en basinda yer alir. Bazi tahbiller ozellikle de develt tahvilleri daha yuksek bir vergi kademesindeki birine ock cazip gelecilecek bazi vergi avantajlari sunabilir. 
+    
+    Goz onune almaniz gereken baska bir faktor de enflasyon drurumunuzdur: EGer gelirinizin geri kalani enflasyonun negatif etkilerine karsi nispeten guvendeyse avatnajli konumda olmak icin riskli tahvil seicmleri yapmak zorunda kalmayablairsiniz. GEnellikle instanlar tahvil alirken riskten kacinmaya calisirlar tahviller cogunlukla guvenli limandir. 
  
  ## Yatirim Fonlari
  
+ - Yatirim fonlari yatirim yapmak ozellikle yeni baslayanlar icin munefrit hisse senetlerine yatitimr yapmaktan cok dahakolay olabilir . Evvela kisisel bir yatirim danismanini size malyetinden cok daha zina birinci  sinif bir yatirim fonu yoneticisinin hizmetlerini alirsiniz. Bu kisi genellikle yatirim yaptiginiz alanda veya sektorde bir uzmandir ki bu da sizin uzman olmak zorunda olmadiginiz anlamina gelir. Bir de satin alma faktoru vardir. Ozetle yatirim fonuna yatirim ypamak ucuzdur. Genellikle 25 ile 50 dolar gibi kucuk rakamlara fon yatirimi yapabilirsiniz. bu karisima esneklilk tercih idarede kolylik ve yillar icinde genellikle pozitif performanslarini da ilave ettiginizde neden bu kadar populer olduklarini gorebilirsiniz. 
+ 
+ - `Yatirim Fonu nedir` -- YAtirim fonu, bir gurup yatirimcinin daha iyi sonuclar elde etmek amaciyla paralarini birlestirerek ortak bir yatitirm hedefine dogru daha etkili bir bicimde calismalari ciin bir firsat sunar. YAtirim fonlari finans profesyonelleri tarafindan yonetilir, bunlar fon yatriimcilari taragindan havuza aktarilan parayi genellikle hisse senedi veya tahvil bicimindeki belirli menkul degerlere yatirmaktan sorumludur. Bir yatirim fonuna yatirim yaptiginizda fonun hissedari olurusunuz.
+ 
+    Ortak otomobil kullaniminin herkes icin seyehat masraflarini azaltarak havuzun her bir uyesi icin para tassarrufu saglamasina benzer sekilde yatirim fonlarida her bir yatirimci icin islem maliyetlerini azaltir. Ancak yatirim fonlarinin en buyuk avantaji cesitlendirmedir. Cesitlilik fonlara kolay ulasabilme ve yatiriminizin buyumesi icin calisan becerikli profesyonel bi r para yonetici yatirim fonlarini bu kadar popler hal egelmelerinin en onemli uc nedeniridr. 
+    
+- `Gunumuzde Yatirim Fonlari` -- Gunumuzde fon satin almak bir telefon konusmasi yapmak veya bilgisayarinizin karsisinda oturmak kadar koalydir. Fon aileleri buyuk yatirim firmalari veya bircok fonu olan araci kurumlar elektornik ticaretin popularitesindeki ani artisin farkina vardilar. Fonlara butun yatirimcilarin kolayca erisilebilmeleri icin yatirim fonlarini alip satmanizi kolaylastiran ucretsiz hatlar ve web siteleri kurdular. Islemler ayrica eski moda geleneklsel postayla da yapilabilir. 
+ 
+    Fonlar likidite varliklardir. BAzi onde gelen finans kaynaklarinin derecelendirdigi en tepedeki on yirmi vea elli fonu bulmak ve sonra bunlari cevrimci satin almak zor degildir 
+    
  ## Fonlar Nasil Is Gorur ?
  
  ## Fon Cesitleri
