@@ -1,1 +1,0 @@
-# Genel Isletme
