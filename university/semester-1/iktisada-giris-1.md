@@ -1,1 +1,0 @@
-# Iktisada Giris 1
