@@ -106,78 +106,58 @@
 - `ps` -- report a snapshot of the current processes. `aux` option is very useful for readability
 - `pstree` -- Lets you see the processes in a hierarchical way. 
 - `top` -- Lets you see all of the proecss in a monitor way. Just like the actviity monitor app in the GUI
-- `pgrep` --
-- `kill` --
-- `kilall` --
-- `xkill` --
-- `fg-bg` --
+- `pgrep` -- look up or signal processes based on name and other attributes
+- `kill` -- send a signal to a process to end it. You need to pass the __pid__ as a argument.
+- `kilall` -- kill processes by name
+- `xkill` -- kill a client by its X resource
+- `fg` -- run jobs in the foreground
+- `bg` -- run jobs in the background
 
 ### Disk Operations
 
-- `fdisk` --
-- `cfdisk` --
-- `badblocks` --
-- `fsck` --
-- `parted` --
-- `mkfs` --
-- `mount` --
-- `unmount` --
-- `dd`
-- `cpio` --
+- > Be careful while working with disks, remember you may alter something unintentioanlly, always have a backup
+- `fdisk` -- manipulate disk partition table
+- `cfdisk` -- display or manipulate disk partition table (basically better looking fdisk)
+- `badblocks` -- search a device for bad blocks
+- `fsck` -- check and repair a Linux filesystem
+- `mkfs` -- build a Linux filesystem
+- `mount` -- mount a filesystem
+- `unmount` -- unmount a filesystem
+- `dd` -- convert and copy a file
+- `cpio` -- copy files to and from archives
 
 ### Runlevels-Services
 
-- ...
-- `service` --
-- `reboot` --
-- `halt` --
-
-### Symbolic/Strict Links
-
-- `inode` --
-- ...
+- `service` -- run a System V init script
+- `reboot` -- reboot or stop the system
+- `halt` -- reboot or stop the system
 
 ### Upgrading and installing programs
 
-- `dpkg` --
-- `apt-get` --
-- ...
-- `aptitude` --
-- `tasksel` --
-
-### Wildcards
-
-- ...
-
-### Regex
-
-- ...
-
-### Vim 
-
-- ...
+- `dpkg` -- package manager for Debian
+- `apt-get` -- APT package handling utility - - command-line interface
+- `aptitude` -- high-level interface to the package manager
+- `tasksel` -- a user interface for installing tasks
 
 ### Sed and Awk
 
-- `sed` --
-- `awk` --
+- `sed` -- stream editor for filtering and transforming text
+- `awk` -- pattern scanning and processing language
 
 ### Network Commands
 
-- `ifconfig` --
-- `ip` --
-- `route` --
-- `ping` --
-- `traceroute` --
-- `netstat` --
-- `nslookup` --
-- `whois` --
-- `host` --
-- `dig` --
-- `arp` --
-- `tcpdump` --
-- `dns` --
-- `hosts/` --
+- `ifconfig` -- configure a network interface
+- `ip` -- show / manipulate routing, devices, policy routing and tunnels
+- `route` -- show / manipulate the IP routing table
+- `ping` -- send ICMP ECHO_REQUEST packets to network hosts
+- `traceroute` -- Trace the route to a host
+- `netstat` -- Print network connections, routing tables, interface statistics, masquerade connections, and multicast memberships
+- `nslookup` -- query Internet name servers interactively
+- `whois` -- client for the whois directory service
+- `host` -- DNS lookup utility
+- `dig` -- DNS lookup utility
+- `arp` -- manipulate the system ARP cache
+- `tcpdump` -- dump traffic on a network
 
 ### SSH Services
 
