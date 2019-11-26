@@ -1,1 +1,0 @@
-# Yabanci Dil 1
