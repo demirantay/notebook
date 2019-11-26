@@ -161,29 +161,20 @@
 
 ### SSH Services
 
-- ...
-- `scp` --
-- `authorized_keys` --
-- `putty` --
-- `sftp` --
-- `filezilla` --
-
-### WGET and File Downloading
-
-- `wetget` --
+- `scp` -- secure copy (remote file copy program)
+- `putty` -- GUI SSH, Telnet and Rlogin client for X
+- `sftp` -- secure file transfer program
+- `filezilla` -- FTP client
 
 ### Scheduled Tasks
 
-- `cron` --
-- `crontab` --
+- `cron` -- daemon to execute scheduled commands (Vixie Cron)
+- `crontab` -- maintain crontab files for individual users (Vixie Cron)
 
 ### LOG Files
 
-- ...
-- `tail` --
-- `dmesg` --
-- `last` --
-- `btmp` --
-- `lastlog` --
-- `utmp-wtmp` --
-- `lsof` --
+- `tail` -- output the last part of files
+- `dmesg` -- print or control the kernel ring buffer
+- `last` -- show listing of last logged in users
+- `lastlog` -- reports the most recent login of all users or of a given user
+- `lsof` -- list open files
