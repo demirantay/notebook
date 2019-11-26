@@ -1,1 +1,0 @@
-# Sosyolojiye Giris
