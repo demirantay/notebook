@@ -173,7 +173,7 @@ Try to specilize in a field such as these, just chose one or two. However, remem
 
 # Practical
 
-> From the specializations above I chose full-stack/dev-ops. So if you are reading this and dont like it, tough shit create your own syllabus. Each category (intro, frontend, backend, devops) is divided into 3 packets. First packet is learning the subjects. Second packet is for feynman-noting the subjects.
+> From the specializations above I chose full-stack/dev-ops. So if you are reading this and dont like it, tough shit create your own syllabus. Each category (intro, frontend, backend, devops) is divided into 3 packets. First packet is learning the subjects. Second packet is for feynman-noting the subjects. Third one contains the practice projects.
 
 # Intro
 
@@ -275,15 +275,60 @@ Try to specilize in a field such as these, just chose one or two. However, remem
 
 ### Packet #1
 
+- [ ] Programming Language -- (python, java, ruby .. etc)
+- [ ] Practice -- (the language you have learned above)
+- [ ] Package Manager -- (pip, npm .. etc)
+- [ ] Standarts & Best Practices -- (PEP8 .. etc)
+- [ ] Testing -- (unit, functional, integration)
+- [ ] Relational Databases -- (Mysql, Postgresql .. etc)
+- [ ] Framework -- (django, flask, rails .. etc)
+- [ ] NoSQL -- (MongoDB .. etc)
+- [ ] Caching -- (Redis .. etc)
+- [ ] REST API 
+- [ ] Auth: OAuth
+- [ ] Auth: Basic Authentication
+- [ ] Auth: Token Authentication
+- [ ] Auth: JWT
+- [ ] Auth: OpenID
+- [ ] Message Brokers -- (RabbitMQ, Kafka)
+- [ ] Search Engine -- (ElasticSearch, solr .. etc)
+- [ ] Docker
+- [ ] Web Servers -- (Apache, Nginx)
+- [ ] Web Sockets
+- [ ] GraphQL 
+- [ ] Graph Databases
+
 ### Packet #2 
 
-- [ ] Feynman:
-- [ ] Feynman:
-- [ ] Feynman:
-- [ ] Feynman:
-- [ ] Feynman:
+- [ ] Feynman: Specific Programming Language (e.g. Python)
+- [ ] Feynman: Package Managaer
+- [ ] Feynman: Standarts & Best Practices
+- [ ] Feynman: Backend Testing
+- [ ] Feynman: Relational Databases
+- [ ] Feynman: Framework
+- [ ] Feynman: NoSQL
+- [ ] Feynman: Caching
+- [ ] Feynman: REST API
+- [ ] Feynman: Authentication, oauth, token, jwt .. etc
+- [ ] Feynman: Message Brokers
+- [ ] Feynman: Search Engines
+- [ ] Feynman: Docker
+- [ ] Feynman: Web Servers
+- [ ] Feynman: Web Sockets
+- [ ] Feynman: GraphQL
+- [ ] Feynman: Graph Databases
 
 ### Packet #3
+
+- [ ] Level 0: Write a command line application
+- [ ] Level 1: Clone a medium-complex python package
+- [ ] Level 2: Write a project like py-psql for NoSQL and Redis ... etc.
+- [ ] Level 3: Write bots to create fake data about poeple and crete a virtual life of bots. They will buy things , spend money on cinema, date, making kids ... etc. and all of the data will be updated. And create a admin panel (god-panel) that views all of the data with different search engines, message brokers ... manipulating the data with Redis, NosqL ... etc.
+- [ ] Level 4: Create a very detailed Instagram clone with flask or django (already started just continue)
+- [ ] Level 5: Build a webserver
+- [ ] Level 6: Build a web framework on top of your web server
+- [ ] Level 7: Build a very basic todo app with your web framework
+- [ ] Level 8: Build the instagram clone built above but this time with your own framework and webserver
 
 
 > If you finish frontend or backend sections start `[Code Univeristy Guide](https://github.com/jwasham/coding-interview-university)` of jwsaham and try to getting ready for job applications (possibly in Canada) when their time of the month comes.
@@ -295,14 +340,64 @@ Try to specilize in a field such as these, just chose one or two. However, remem
 
 ### Packet #1
 
+- [ ] System Programming Languages -- (Python, C/C++, Go.. etc.)
+- [ ] OS Concepts -- (I/O, Memory Storage, Process Management, Sockets, File Systems ... etc.)
+- [ ] Unix/Linux Envioroment
+- [ ] Terminal -- (bash scripting)
+- [ ] Terminal -- (Vim/Nano/Emacs...etc.)
+- [ ] Terminal -- (Text Manipulation: awk, sed, grep, sort, cat ...etc)
+- [ ] Terminal -- (Process Monitoring: ps, top, htop, lsof ... etc.)
+- [ ] Terminal -- (Network: nmap, tcpdump, ping, traceroute, ip ...etc)
+- [ ] Terminal -- (Sys Performance: nmon, iostat, sar, vmstat ...etc.)
+- [ ] Terminal -- (All other neccessary information: history, df ...etc)
+- [ ] Networking 
+- [ ] Cyber Security 
+- [ ] Web Servers -- (nginx, apache, tomcat ... etc)
+- [ ] Caching Servers
+- [ ] Load Balancer
+- [ ] Reverse Proxy
+- [ ] Forward Proxy
+- [ ] Firewall
+- [ ] Containers -- (Docker ...etc)
+- [ ] Configuration Management -- (Ansible)
+- [ ] Container Orchestration -- (Kubernetees)
+- [ ] Infustructure Provisioning -- (Terraform)
+- [ ] CI/CD -- (Jenkins, Circle CI ...etc)
+- [ ] Infustructure Monitoring -- (Nagios, Icinga, Datadog ... etc)
+- [ ] Application Monitoring -- (New Relic, AppDynamics .. etc)
+- [ ] Logs Management -- (ELK Stack, Graylog, Splunk .. etc)
+- [ ] Cloud Providers -- AWS
+
 ### Packet #2 
 
-- [ ] Feynman:
-- [ ] Feynman:
-- [ ] Feynman:
-- [ ] Feynman:
+- [ ] Feynman: System Progrmaming Languages (python, c/c++, go)
+- [ ] Feynman: OS Concepts
+- [ ] Feynman: Unix/Linux Envioronment
+- [ ] Feynman: Terminal Shell
+- [ ] Feynman: Bash Scripting
+- [ ] Feynman: Tools - (text maniupation, process mointoring, network, sys performance)
+- [ ] Feynman: Networking
+- [ ] Feynman: Cyber Security
+- [ ] Feynman: Web Servers
+- [ ] Feynman: Caching Servers
+- [ ] Feynman: Load Balancer
+- [ ] Feynman: Reverse Proxy
+- [ ] Feynman: Forward Proxy
+- [ ] Feynman: Firewall
+- [ ] Feynman: Containers -- (Docker ...etc)
+- [ ] Feynman: Configuration Management -- (Ansible)
+- [ ] Feynman: Container Orchestration -- (Kubernetees)
+- [ ] Feynman: Infustructure Provisioning -- (Terraform)
+- [ ] Feynman: CI/CD -- (Jenkins, Circle CI ...etc)
+- [ ] Feynman: Infustructure Monitoring -- (Nagios, Icinga, Datadog ... etc)
+- [ ] Feynman: Application Monitoring -- (New Relic, AppDynamics .. etc)
+- [ ] Feynman: Logs Management -- (ELK Stack, Graylog, Splunk .. etc)
+- [ ] Feynman: Cloud Providers -- AWS
 
 ### Packet #3
+
+- [ ] Level 0: To be fair I am unsure about what to build in this. I will decide if i can come this far
+- [ ] Level 1: At this point I should have a job and start building my own idea
 
 
 <br>
