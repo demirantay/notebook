@@ -157,6 +157,8 @@ Try to specilize in a field such as these, just chose one or two. However, remem
 - [ ] Languages and Compilers -- feynman it
 - [ ] Distributed Systems -- feynman it
 
+> Once everything ends do `[Code Univeristy Guide](https://github.com/jwasham/coding-interview-university)` of jwsaham and try to getting ready for job applications (possibly in Canada) 
+
 <br>
 <Br>
 <br>
@@ -170,15 +172,100 @@ Try to specilize in a field such as these, just chose one or two. However, remem
 
 # Practical
 
-> From the specializations above I chose full-stack/dev-ops. So if you are reading this and dont like it, tough shit create your own syllabus. Each category (frontend, backend, devops) is divided into 3 packets. First packet is learning the subjects. Second packet is for feynman-noting the subjects.
+> From the specializations above I chose full-stack/dev-ops. So if you are reading this and dont like it, tough shit create your own syllabus. Each category (intro, frontend, backend, devops) is divided into 3 packets. First packet is learning the subjects. Second packet is for feynman-noting the subjects.
+
+# Intro
+
+### Packet #1
+
+- [ ] Git - Version Control
+- [ ] GitHub for public repos, GitLab for private
+- [ ] Licenses
+- [ ] Semantatic Versioning
+- [ ] HTTP/HTTPS
+- [ ] Design Patterns (SOLID, KISS, YAGNI) 
+- [ ] Devolopment Cycle Designs
+
+### Packet #2 
+
+- [ ] Feynman: Git and Githubs Usage
+- [ ] Feynman: Licenses
+- [ ] Feynman: Semantic Versioning
+- [ ] Feynman: HTTP/HTTPS
+- [ ] Feynman: Design Patterns (SOLID, KISS, YAGNI)
+- [ ] Feynman: Devolopment Cycle Designs
+
+### Packet #3
+
+- [ ] Level 0: Clone Mini Git
+- [ ] Level 1: Clone Mini Github
+
+<br>
+<Br>
 
 # Frontend
 
 ### Packet #1
 
+- [ ] HTML -- (basics, semantic html, basic seo, accessibility .. etc)
+- [ ] CSS -- (basics, layouts, media queries, css3, responsivness .. etc)
+- [ ] JavaScript -- (basics, DOM manipulation, API/AJAX, ES6+/modular js, read YDKJS for hoisting .. etc)
+- [ ] Package Managers --  (npm or yarn)
+- [ ] CSS Pre-precessor -- (Sass .. etc)
+- [ ] CSS Frameworks -- (Bootstrap .. etc)
+- [ ] CSS Architecture -- (BEM)
+- [ ] Build: Linters & Formatters -- (Prettier, ESLint .. etc)
+- [ ] Build: Module Bundlers -- (webpack .. etc)
+- [ ] Build: Task Runners -- (npm scripts .. etc)
+- [ ] Framework -- (React .. etc)
+- [ ] CSS in JS -- (styled components, CSS modules .. etc)
+- [ ] Testing -- (jest, enzyme or cypress) (learn unit, functional, integration)
+- [ ] Progressive Web App -- (Learn what they are)
+- [ ] PWA ^ API's -- (Storage, Web Sockets, Service Workers, Location, Notifications, Payments, Credentials)
+- [ ] PWA ^ Methods -- (PRPL Pattern, RAIL model, Performance Metrics, Using Light House, Using Dev Tools)
+- [ ] Type Checkers -- (typescript)
+- [ ] Server Side Rendering -- (react ~ next.js)
+- [ ] Static Site Generators -- (GatsbyJS)
+- [ ] Desktop Applications -- (Electron)
+- [ ] Mobile Applications -- (React Native)
+- [ ] Web Assembly
+
 ### Packet #2 
 
+- [ ] Feynman: HTML
+- [ ] Feynman: CSS
+- [ ] Feynman: JavaScript
+- [ ] Feynman: Package Managers
+- [ ] Feynman: CSS Pre-precessors
+- [ ] Feynman: CSS Frameworks
+- [ ] Feynman: CSS Architecture
+- [ ] Feynman: Linters and Formatters
+- [ ] Feynman: Module Bundlers
+- [ ] Feynman: Task Runners
+- [ ] Feynman: Frontend Frameworks
+- [ ] Feynman: CSS in JS
+- [ ] Feynman: Frontend Testing 
+- [ ] Feynman: Progressive Web Apps, APIs, Methods
+- [ ] Feynman: Type Checkers
+- [ ] Feynman: Server Side Rendering
+- [ ] Feynman: Static Site Generators 
+- [ ] Feynman: Desktop Applications 
+- [ ] Feynman: Mobile Applications
+- [ ] Feynman: Web Assembly
+
 ### Packet #3
+
+- [ ] Level 0: Create a template holder and add your templates to it. Add more than the usual.
+- [ ] Level 1: Write your own CSS library
+- [ ] Level 2: Do all of [these](https://simplestepscode.com/javascript-project-ideas/) if the link is dead [alternative link](https://dev.to/yaphi1/javascript-project-ideas-and-practical-uses)
+- [ ] Level 3: Clone a mediumly-complex package from npm or yarn
+- [ ] Level 4: Create a mini-bootstrap (css framework) clone for your own taste. 
+- [ ] Level 5: Create all of [these with react](https://www.freecodecamp.org/news/every-time-you-build-a-to-do-list-app-a-puppy-dies-505b54637a5d/)
+- [ ] Level 6: Do all of [these](http://eugenkiss.github.io/7guis/tasks/) for practicing little bit of electron. No need to go too big.
+- [ ] Level 7: Do all of [these here](https://www.instamobile.io/react-native-tutorials/react-native-app-ideas-beginners/) to practice react native. Dont skip anything.
+- [ ] Level 8: Clone a mini React Clone
+
+> If you finish frontend or backend sections start `[Code Univeristy Guide](https://github.com/jwasham/coding-interview-university)` of jwsaham and try to getting ready for job applications (possibly in Canada) when their time of the month comes.
 
 <br>
 <Br>
@@ -189,10 +276,16 @@ Try to specilize in a field such as these, just chose one or two. However, remem
 
 ### Packet #2 
 
+- [ ] Feynman:
+- [ ] Feynman:
+- [ ] Feynman:
+- [ ] Feynman:
+- [ ] Feynman:
+
 ### Packet #3
 
 
-> If you finish the frontend and backend sections start `[Code Univeristy Guide](https://github.com/jwasham/coding-interview-university)` of jwsaham and try to getting ready for job applications (possibly in Canada) go simultaneously with devops.
+> If you finish frontend or backend sections start `[Code Univeristy Guide](https://github.com/jwasham/coding-interview-university)` of jwsaham and try to getting ready for job applications (possibly in Canada) when their time of the month comes.
 
 <br>
 <Br>
@@ -202,6 +295,11 @@ Try to specilize in a field such as these, just chose one or two. However, remem
 ### Packet #1
 
 ### Packet #2 
+
+- [ ] Feynman:
+- [ ] Feynman:
+- [ ] Feynman:
+- [ ] Feynman:
 
 ### Packet #3
 
