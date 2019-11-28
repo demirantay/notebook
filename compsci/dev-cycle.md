@@ -30,3 +30,13 @@
 - LvL 4 - I can evaluate a solution and identify how good/ robust/ elegant it is.
 
 ---
+
+
+
+
+# ==============================
+
+I need to finish all of this in another dir : https://ryanstutorials.net/software-design-and-development/  
+> It is very important, design is like burecracy (extremly slow but also axtremly important for the survival)
+
+# ==============================
