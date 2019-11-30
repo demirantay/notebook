@@ -34,6 +34,8 @@ Do these in order however after the intro you are free to choose specializing in
 - [ ] Feynman note ^
 - [ ] Read: The Infographic Guide to Personal Finance 
 - [ ] Feynman note ^
+- [ ] Read: Retirement 101
+- [ ] Feynman note ^
 - [ ] Read: American Governement 101
 - [ ] Feynman note ^
 - [ ] Read: U.S. History 101
