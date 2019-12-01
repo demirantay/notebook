@@ -28,10 +28,24 @@
   
 - `Turevlerin Cozumu` -- Turevler deglerini baska bir seyden alan yatirimlardir. Kendi baslarina gercekte bir degleri yoktur. Degerleri bir dayanak varliktan ve bunun degerindeki degisimlerden kaynaklanir. Bu nedenle her ture bir bahisle ayni seydir. Turev tuccarlari genellikle dayanak varliklari etkileyen anlik haraketlere baagli olarka kumar oynarlar. 
 
-
-
 ## Emtia ev Kiymetli Madenler
 
-## Opsiyonlar
+- Yatirimcilar dogrudan kaynaga gitmek istediklerinde emtia veya kiymetli madenlere yatirim yapabilirler. Bu hammaddeler yiyecek gii temel ihtiyaclardan sanal gerceklik oyunlari gibi ileri teknoloji ihtiyaclarina kadar dunyadaki buutun endustriler icin uretim arzini beslerler. Bol miktarda bulunduklari ve yerleri doldurulabildigi muddetce bu mallarin fiyatlari dusuk kalabilir. Ancak kitlik fiyatlari yukseltir. Kitlik korkusu bile (petrolde tanik oldugumuz gibi) fiyatlari yukseltebilir. Bilgili ve sezgili yatirimcilar dunyanin en buyuk oranlarda tuketmesini umduklari bu emtiaya paralarini yatirirlar. 
 
-## Aciga Satis
+  Bu yatirim sinifi diger siniflardan daha riskli olmasina ragmen bir sekilde emtia bulundurmak yatirim fonunda olsa bile bir portfoye cesitlendirme ve enflasyon korumasi saglar. 
+
+- `Emtia Dili` - Emtia piyasasinin kendi dili vardir. Emtiaya "asil" denir. "Yakin" bir emtia vadeli islem sozlesmesinin altindaki asillarini fiziksel olarak teslim edilmek uzere olduklari anlamina gelir. Ve bir "ariza" da vadeli bir islem sozlesmesinin alindaki emtiayi negatif olarak etkileyen dogal bir olay (kasirga veya mevsim disi don olayi) anlamina gelir.
+
+- `Emtia` -- ornekleri arasinda sunlar mevcuttur:
+  - kereste, ev insa etmek disinda pek cok alanda kullanilir.
+  - petrol: etkileri nakliye masraflarindan daha oteye uzanir
+  - pamuk: giysiden kahve filtrelerine kadar bircok maddede kullanilir
+  - bugday: yuzlerce yiyecekteki ana bilesendir
+  - misir: yiyecek insaat malzemeleri ve biyo yakitlarda kullanilabilir
+  - altin: mucevher yapimi disinda cok fazla alanda kullanilir.
+  
+- `Kiymetli Madenler` -- Kiymetli madenler ozellikle de altin bu bireysel yatirim kuralinin istisnalaridir. Dunya uzerindeki milyonlarca yatirimci altin alip saar ve cok daha fazla yatirimci bu mala hisse senetleriyle ve kiymetli madenler fonlariyla yatirim yapar. Zamanla altinin deger kazanacagi inanciyla altin alip ellerinde tutan yatirimcilara "altin bocek" denir. 
+
+  Dogrudan altina yatirim yapmak altin cubuk veya sikke almak gibi birkac farkli sekilde oalbilir. Kulce altin bir cubuk haline getirilmeden onceki saf, haf altindir; cok az (eger varsa) bireysel yatirimci elinde kulce altin bulundurur. Altin kulceleri (ya da cubuklari) bircok kisinin altin deyince akillarina gelen seydir : altin tula yiginlari altin kulceleri karat olarak olclen en az yuzde 99.5 saf kulce altindan yapilir. Altin kulceleri genellikle 400 ons gelir (ons, altini tartmak icin kullanilarn standart agirlik olcusu birimidir) ancak bunlari birer standart onsluk kucuk parcalar hlainde de bulabilirsiniz. Altin sikkeler som altindan yapilma gercek paralardir. Artik nadiren para olarak kullanilmalarina ragmen bu sikkelerin genellikle sadece altin degerlerinden daha fazla belirli degerleri vardir. Cogu yatirimci altin sikke almayi tercih eder ve genellikle koleksiyonlarindan buyuk gurur duyarlar. Insanlar baska kiymetli madenlere de yatirim yapabilirler. Bir kac ornek verecek olursak gumus platin ve vakiri da genellikle yatirimcilar siskke ofrmunda alip satarlar. Bu madenler her ne kadar uretim amaciyla endustri tarafindan cok aransalar da altin kadar ticari degerleri yoktur. 
+
+- `Altin yol` -- altin sadece boyunda guzel gorunen veya degerli taslari cevreleyen guzel parlak bir metal degildir. Altin ayni zamanda tibbi makinelerden uzay ekipmanlarina ve cama dek bircok esya ve malzemenin uretiminde kullanilir. Ve elbette 3000 yildan uzun sure para olarak kullanilmistir
