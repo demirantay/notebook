@@ -1,1 +1,0 @@
-# Egitim ve Emeklilik Planlamasi
