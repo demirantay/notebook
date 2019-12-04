@@ -208,8 +208,8 @@ Try to specilize in a field such as these, just chose one or two. However, remem
 
 ### Packet #1
 
-- [ ] HTML -- (basics, semantic html, basic seo, accessibility .. etc)
-- [ ] CSS -- (basics, layouts, media queries, css3, responsivness .. etc)
+- [x] HTML -- (basics, semantic html, basic seo, accessibility .. etc)
+- [x] CSS -- (basics, layouts, media queries, css3, responsivness .. etc)
 - [ ] JavaScript -- (basics, DOM manipulation, API/AJAX, ES6+/modular js, read YDKJS for hoisting .. etc)
 - [ ] Package Managers --  (npm or yarn)
 - [ ] CSS Pre-precessor -- (Sass .. etc)
