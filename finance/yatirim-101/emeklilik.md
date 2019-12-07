@@ -18,5 +18,27 @@
 
 - `401k nin primeleri` -- Bir 401k planini bir isveren birkac farkli sekilde olusturabilir bazilari hemen devreye girerken bazilari da siz sirkette belirli bir zaman calistiktan sonra devreye girer. 2015 itibariyle belirli bir yilda 401k planiniza maasinizin 18000 dolara kadar olan kismini prime olarak odeyebilirsiniz. 
 
-- `401k yatirim stratejiniz` -- 
+- `401k yatirim stratejiniz` -- Her seyi hesaba kattigimizda 401k plani emekliliginizi planlamaniz ve bunu kendinizi en rahat hissedeceginiz seviyede yapmaniz icin mukemmel bir firasttir. Bir finans analizcisinin belirttigi gibi ben ne soylersem soyleyeyim veya onerirsem onreriyim asil onemli olan kisinin geceleri rahat uyumasidir. Bunlarin hepsi yine risk toleransina cikar. Ilk olarak geleceginizi kontrol altina alin ve emeklilik planiniza para yatirmayi unutmayin ikinci olarak 401k icin hangi risk seviyesinin sizin icin uygun oldugununu belirleyin. 
+
+- `is degisikliklerinde 401kinizi korumak` -- isinizi ne zaman neden ve ne siklikta degistirdiginizden bagimsiz olarak 401k yatiriminiz vergi erteleme ozelligini koruyabilir Eger yeni isvereniniz bir 401k teklif ederse mevcut yatiriminizi direkt olarak yeni bir hesaba aktarabilir veya devredebilirsiniz.  Yasalara gore isverenler 401k nizi devretmenize izin vermek zorundadir 
+
+- `401k dan para cekmek` -- Bazen insanlarin yeni bir konut almak icin evin haczedilemesini onlemek gelecek yilin universite ucretini odemek veya karsilanmayan tibbi masraflari yapmak gibi maddi zorluklar nedeniyle emeklilik fonlarindan vaktinden once para cekmeleri gerekir. Bu durumda cekilen miktar uzerinden tam bergi faturasi arti yuzde 10 ceza odenir. 
+
+  Gercekten paraya ihtiyaciniz oludungda daha iyi bir cozum ne olabilir ? Planinizdan borc almak; bircok 401k plani borc alinmasina olanak tanir ve vergi cezalari soz konusu degildir. Tek sakincasi sudur; plani surduren sirketten ayrilamadan once borcun hepsini odemek gerekir. 
+  
+- `Bireysel Emeklilik Hesaplari(BES)` -- Son on yildir en populer emeklilik plani kesinlikle bireysel emeklilik plani yani BESdir. Gunumuzde iki turu olan (geleneksel ve Roth)BESler size paranizin emeklilik yillariniz icin artmasinin guvenli vergi avantajli bir yolunu sunar)
+
+- `Geleneksel BESler` -- Geleneksel bir BESe yilda 5500 dolara kadar prim odeyebilirsiniz (2015 itibariyle) eger evliyseniz siz ve esiniz BES hesaplarinizdan ayri ayri 4000 dolarak kadar prim odeyebilirsiniz ODediginiz primlerin hepsi beya bir kismi vergiden dusurebilir. 
+
+  Elli dokuz bucuk yasinizi gecer gecmez paranizi cekebilirsiniz, yetmis bucuk yasiniza girdiginizde devlet yillik olarak cekmeniz gereken minimumlari belirlemeye baslar.
+  
+  Bir BESi bir banka bir aracilik firmasi evya yatirim fonu basitasiyla baslatabilirisniz. Gelenekesel olarak , bankalar araci kurumlardan daha az secenek sunarlar genellikle MSler gibi daha guvenli seceeklere bagli kalirlar.
+  
+  Cok fazla sayida insan pralarini bir BESe yatirip daha sonra buununlar ilgili hicbirsey yapmiyor. Genellikle elli dokz bucuk yasina girene kadar cekemeyecegniz icin bir kez paraniz BESe girdi mi paraya dokunamayacaksiniz gibi bir dusunce var. Durum boyle degil aslinda BESe yatirmakta oldugunuz parayla ilgili ileriye yonelik akttif olmanizda ynalis bir sey yoktur. Aslinda olmalisiniz da.
+  
+- `Roth BESler` -- Bu nispeten yeni BESde halen yillik yatirim tavani olan 5500 dolarla sinirlsinizi. Bir roth BESe yatirdiginiz primler vergiden dusurulmez bu emeklilik hesaplarindan birine giden her dolar icin vergi odersiniz. Bununla birklikte bu hesaptan para cekme zamani geldiginde artik hic vergiye tabi olmazsiniz. 
+
+  2015 itibari ile Roth opsiyonu duzeltilmis brut gelir tek vergi odeyenler icin 116.00 ila 131.000 ve ortak vergi odeyenler icin 183.000 ila 193.000 dolara ulastiginda asamali oalrak sonra erer. Emeklilikten once paranin bir kismina ihtiyaciniz olabilcegini dusunuyorsaniz bir Rot BES daha iyi bir seicm olabilir. Gelecek soz konusu oldugunda bircok uzman eger odeyebliiyorsaniz vergiyi simdi odemeniz konusunda gemfikirdir; bu daha sonra cok daha fazla odemekten cok daha iyidir. emen simdiki vergi bilinen bir miktardir. Ama gelecekteki vergi bir soru isaretidir. nerdeyse kesinlikle gelecekteki vergi her zaman daha buyuk olacaktir. 
+
+- `Roth Kimdir` -- 
 
