@@ -6,7 +6,7 @@ The course syllabus is not in final shape at the moment I will edit as I go alon
 
 Do these in order however after the intro you are free to choose specializing in whatever topic you would like to specilize.
 
-- [ ] Read: Invesment 101 
+- [x] Read: Invesment 101 
 - [ ] Feynman note ^
 - [ ] Read: Ekonomi 101 
 - [ ] Feynman note ^
