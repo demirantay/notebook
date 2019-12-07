@@ -40,5 +40,11 @@
 
   2015 itibari ile Roth opsiyonu duzeltilmis brut gelir tek vergi odeyenler icin 116.00 ila 131.000 ve ortak vergi odeyenler icin 183.000 ila 193.000 dolara ulastiginda asamali oalrak sonra erer. Emeklilikten once paranin bir kismina ihtiyaciniz olabilcegini dusunuyorsaniz bir Rot BES daha iyi bir seicm olabilir. Gelecek soz konusu oldugunda bircok uzman eger odeyebliiyorsaniz vergiyi simdi odemeniz konusunda gemfikirdir; bu daha sonra cok daha fazla odemekten cok daha iyidir. emen simdiki vergi bilinen bir miktardir. Ama gelecekteki vergi bir soru isaretidir. nerdeyse kesinlikle gelecekteki vergi her zaman daha buyuk olacaktir. 
 
-- `Roth Kimdir` -- 
+- `Roth Kimdir` -- Roth BESin adi yaraticisi merhum senator william roth tan gelir Delawareden Cumhuriyetcilerin senatoru olan Roth yatirimcilarin emeklilik tasarruflarina onden vergi odemelerine ve ilave vergiler odemeden bu tasarruflarini cekmelerine olanak saglayan bir yasayi destekledi. Bu 1 Ocak 1998 da yuruluge giren 1997 vergi mukellefi destek yasasinin bir parcasiydi. 
+
+- `Hangisi Daha iyi` -- Hem geleneksel hem de Roth BESler icin uygun ozelliklere sahip oldgunuzu farz edersek en buyuk belirleyici faktor sudur: Vergi yi simdi mi sonra mi odeyeceksiniz? Simdi indirimden yararlanip daha sonra parayi cektiniizde vergi odemek mi yoksa primleriniz uzerinden simdi vergi odeyip bir daha bu konuda asla endiselenmemek mii sizin icin daha avatnajli olur? Hangi BESin size uygun oldugunu belirlemek icin kisiel mali durumunuza bakmalsiniz. 
+
+  Sozun ozu ne kadar hesaplarsaniz hesaplayin gelecek otuz yilda vergiler enflasyon orani gecim masraflari kendi sagliginiz isinizin sitikrari ne durumda olacagini kesin olarak bilemezsiniz. emeklilik yillariniz icin bir koseye para ayirmak size avantaj kazandirmakla birlekte geleneksel beya Roth BESi secme karari gorundugu kadar zor degildir. 
+  
+- `Odaginizi Kayetmeyin` -- Ayni anda hem bir 401k ya hem de BES e yatirim yapamayacaiginizi soyleyen hicbir kural yoktur. En onemli nokta yararlanabileceginiz vergi ertelemeli butun yatirim firsatlarindan yararlanmanizdir. Baslayabileceginiz kadar erken baslayin ve yaz kis demeden yatirimlariniza para aktarin. 
 
