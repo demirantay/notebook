@@ -14,15 +14,15 @@ The course syllabus is not in final shape at the moment I will edit as I go alon
 - [ ] Ekonomi 101 
 - [ ] https://www.core-econ.org/ : THE ECONOMY
 - [ ] https://www.core-econ.org/ :ECONOMY, SOCIETY, AND PUBLIC POLICY
-- [ ] Day Trading 101 
 - [ ] Psych 101 
 - [ ] Management 101 
 - [ ] Accounting 101 
 - [ ] Negotiating 101 
 - [ ] Sales 101
+- [ ] Budgeting 101 
 - [ ] Real Estatae Investing 101 
 - [ ] Stock Market 101 - Michele Cagan (adams 101)
-- [ ] Budgeting 101 
+- [ ] Day Trading 101 
 - [ ] The Infographic Guide to Personal Finance 
 - [ ] Retirement 101
 - [ ] American Governement 101
