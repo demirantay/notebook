@@ -256,7 +256,7 @@ Try to specilize in a field such as these, just chose one or two. However, remem
 
 ### Packet #3
 
-- [ ] Level 0: Create a template holder and add your templates to it. Add more than the usual.
+- [x] Level 0: Create a template holder and add your templates to it. Add more than the usual.
 - [ ] Level 2: Do all of [these](https://simplestepscode.com/javascript-project-ideas/) if the link is dead [alternative link](https://dev.to/yaphi1/javascript-project-ideas-and-practical-uses)
 - [ ] Level 3: Make a CSS framework but instead of making it like bootstrap, make it more pluggable and replacable. (Use relative divs ("tak cikar tarzi ilerle"). 
 - [ ] Level 4: Clone a mediumly-complex package from npm or yarn
