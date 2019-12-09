@@ -1,5 +1,6 @@
 ### Cheatlist
 
+- Scrum  : [click here](./compsci/business/scrum-cheatsheet.md)
 - Basic Bash : [click here](./compsci/devops/unix-shell/basic-cheatsheet.md) 
 - Advanced Bash : [click here](./compsci/devops/unix-shell/advanced-cheatsheet.md)
 - Regex : [click here](./compsci/devops/regex/cheatsheet.md)
