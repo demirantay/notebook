@@ -60,11 +60,20 @@
 
 # `1.2` Manuals and Specifications
 
-### Specification
-
 ### Manuals
 
+- `MDN (Mozilla) JavaScript Reference` is a manual with examples and other information. It’s great to get in-depth information about individual language functions, methods etc.
+
+- `MSDN` – Microsoft manual with a lot of information, including JavaScript (often referred to as JScript). If one needs something specific to Internet Explorer, better go there
+
 ### Compatibility Tables
+
+- JavaScript is a developing language, new features get added regularly.
+
+  To see their support among browser-based and other engines, see:
+  
+  - http://caniuse.com – per-feature tables of support, e.g. to see which engines support modern cryptography functions: http://caniuse.com/#feat=cryptography.
+  - https://kangax.github.io/compat-table – a table with language features and engines that support those or don’t support.
 
 <br>
 <br>
@@ -75,6 +84,10 @@
 <br>
 
 # `1.3` Code Editors
+
+### IDE
+
+### LightWeight Editors
 
 
 <br>
