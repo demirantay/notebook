@@ -36,11 +36,6 @@
 <br>
 <br>
 
----
-
-<br>
-<br>
-
 # Code Structure
 
 - We recommend putting semicolons between statements even if they are separated by newlines. This rule is widely adopted by the community. Let’s note once again – it is possible to leave out semicolons most of the time. But it’s safer to use them. 
@@ -48,10 +43,6 @@
 <br>
 <br>
 
----
-
-<br>
-<br>
 
 # The modern mode, "use strict"
 
@@ -76,11 +67,6 @@
 
 <br>
 <Br>
-
----
-
-<br>
-<br>
 
 # Variables 
 
@@ -110,37 +96,25 @@
 <br>
 <br>
 
----
-
-<br>
-<br>
-
-# Data Types
-
-<br>
-<br>
-
----
-
-<br>
-<br>
-
 # Type Conversions
 
-<br>
-<br>
-
----
-
+- In javascript Most of the time, operators and functions automatically convert the values given to them to the right type. For example, alert automatically converts any value to a string to show it. Mathematical operations convert values to numbers. There are also cases when we need to explicitly convert a value to the expected type. 
+  ```js
+  console.log("12" + "15")  // strigns are converted to int
+  
+  let a = 15;
+  
+  String(a)  // converts it into a string
+  Boolean(a) // converts it into a boolean 
+  Number(a)  // converts it into a integer
+  ```
+  
 <br>
 <br>
 
 # Operators
 
-<br>
-<br>
-
----
+- The basic operators are the same in javascript such as `+`, `-`, `*`, `/`, `%` however there are more operators built in to the language that needs their notes taken.
 
 <br>
 <br>
@@ -150,17 +124,8 @@
 <br>
 <br>
 
----
-
-<br>
-<br>
 
 # Interaction: alert, prompt, confirm
-
-<br>
-<br>
-
----
 
 <br>
 <br>
@@ -170,27 +135,13 @@
 <br>
 <br>
 
----
-
-<br>
-<br>
-
 # Logical Operators
 
 <br>
 <br>
 
----
-
-<br>
-<br>
 
 # Loops
-
-<br>
-<br>
-
----
 
 <br>
 <br>
@@ -200,17 +151,7 @@
 <br>
 <br>
 
----
-
-<br>
-<br>
-
 # Functions
-
-<br>
-<br>
-
----
 
 <br>
 <br>
@@ -220,17 +161,7 @@
 <br>
 <br>
 
----
-
-<br>
-<br>
-
 # Arrow Functions
-
-<br>
-<br>
-
----
 
 <br>
 <br>
