@@ -75,27 +75,5 @@
   - http://caniuse.com – per-feature tables of support, e.g. to see which engines support modern cryptography functions: http://caniuse.com/#feat=cryptography.
   - https://kangax.github.io/compat-table – a table with language features and engines that support those or don’t support.
 
-<br>
-<br>
+- > To see errors and get a lot of other useful information about scripts, “developer tools” have been embedded in browsers.
 
----
-
-<br>
-<br>
-
-# `1.3` Code Editors
-
-### IDE
-
-### LightWeight Editors
-
-
-<br>
-<br>
-
----
-
-<br>
-<Br>
-
-# `1.4` Developer Console
