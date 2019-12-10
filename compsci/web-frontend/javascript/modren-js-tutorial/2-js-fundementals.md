@@ -109,23 +109,74 @@
   Number(a)  // converts it into a integer
   ```
   
-<br>
-<br>
-
-# Operators
-
-- The basic operators are the same in javascript such as `+`, `-`, `*`, `/`, `%` however there are more operators built in to the language that needs their notes taken.
+  Also if you see the first line above wehen strings are converted to int its not always the case. if there is one string and one integer they are converted to strings and it may cause you some un expected errors. That is why it is important to explicit your types in javascript if you are just starting out with the language.
+  ```js
+  console.log("12" + "15")  // prints 27
+  console.log("1" + 2)      // prints 12
+  console.log(1 + 4 + "2")  // prints 52 not 142
+  ```
+  And also note that these string concatenetion on type conversions coded above are specific for `+` operator. It does not work on other ones, such as:
+  ```js
+  console.log("2" - 1)  // prints 1
+  ```
 
 <br>
 <br>
 
 # Comparisons 
 
-<br>
-<br>
+- While comparing things with operators such as `==` , `>=` ... etc. Remember type conversions can be powerful tool and also it can shoot you in the leg. If you use the normal comparison operators, by default the langauge uses type conversions but if you want to strictly check if you are comparing two same types you can use these:
+  ```
+  ===
+  <==
+  >==
+  ```
+  Always use strict type comparisons if you are not using the specific type conversions
 
+<br>
+<br>
 
 # Interaction: alert, prompt, confirm
+
+- In this part of the tutorial we cover JavaScript language “as is”, without environment-specific tweaks.
+
+  But we’ll still be using the browser as our demo environment, so we should know at least a few of its user-interface functions. In this chapter, we’ll get familiar with the browser functions alert, prompt and confirm.
+  
+### alert
+
+- The syntax:
+  ```
+  alert(message);
+  ```
+  This shows a message and pauses script execution until the user presses “OK”.
+  
+  For example:
+  ```js
+  alert("Hello");
+  ```
+
+### prompt
+
+- The syntax:
+  ```
+  prompt(title, [default]);
+  ```
+  It shows a modal window with a text message, an input field for the visitor, and the buttons OK/Cancel.
+  ```js
+  let age = prompt('How old are you?', 100);
+  ```
+  Default value is optional but it is good practice to have it, even if it is an empty string '', for older browsers.
+
+### confirm 
+
+- The syntax:
+  ```
+  confirm(question);
+  ```
+  The function confirm shows a modal window with a question and two buttons: OK and Cancel. The result is true if OK is pressed and false otherwise.
+  ```js
+  let isBoss = confirm("Are you the boss?");
+  ```
 
 <br>
 <br>
