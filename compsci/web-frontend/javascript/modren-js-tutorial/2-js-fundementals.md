@@ -183,31 +183,128 @@
 
 # Conditional Operators
 
-<br>
-<br>
+- You can write conditional statements in javascript like this:
+  ```js
+  if (year < 2015) {
+    alert( 'Too early...' );
+  } else if (year > 2015) {
+    alert( 'Too late' );
+  } else {
+    alert( 'Exactly!' );
+  }
+  ```
+  
+- And also we can compress these conditionals into a single statement with `?` operators such as this. The syntax is:
+  ```
+  let result = condition ? value1 : value2;
+  ```
+  The condition is evaluated: if it’s truthy then value1 is returned, otherwise – value2.
+  ```js
+  let accessAllowed = (age > 18) ? alert("right") : alret("wrong");
+  ```
 
-# Logical Operators
-
 <br>
 <br>
-
 
 # Loops
+
+- You can write loops in javascript with the following syntax:
+
+  `while loops` --
+  ```js
+  let i = 0;
+  while (i < 3) { // shows 0, then 1, then 2
+    alert( i );
+    i++;
+  }
+  ```
+  
+  `do...while` -- 
+  ```js
+  let i = 0;
+  do {
+    alert( i );
+    i++;
+  } while (i < 3);
+  ```
+  
+  `for loops` --
+  ```js
+  for (let i = 0; i < 3; i++) { 
+    alert(i);
+  }
+  ```
+  
+- Javascript uses tha common `break`, `continue` loop control directives.
 
 <br>
 <br>
 
 # Switch statement
 
+- I am not going to note down siwtch because I do not use it that much but the javascript syntax is this:
+  ```js
+  let a = 2 + 2;
+
+  switch (a) {
+    case 3:
+      alert( 'Too small' );
+      break;
+    case 4:
+      alert( 'Exactly!' );
+      break;
+    case 5:
+      alert( 'Too large' );
+      break;
+    default:
+      alert( "I don't know such values" );
+  }
+  ```
+
 <br>
 <br>
 
 # Functions
 
+- The syntax of writing functions in javascript is:
+  ```js
+  function name(parameters) {
+    return ...
+  }
+  ```
+
+- Remember in javascript if an parameter is defined in the functions declaration and it is not provided during it's execution, javascript passes a `undefined` value to that parameter. It wont throw you an compile error. So it is good practice to set default values to your paramters to avoid them being undefined:
+  ```js
+  function name(pram="default_value) {...}
+  ```
+  
+  > Old editions of JavaScript did not support default parameters. So there are alternative ways to support them, that you can find mostly in the old scripts. For instance, an explicit check for being undefined:
+    ```js
+    function showMessage(text) {
+      if (text === undefined) {
+        text = 'no text given';
+      }
+
+      alert(text );
+    }
+    ```
+
 <br>
 <br>
 
 # Function Expressions 
+
+- There is another syntax for creating a function that is called a Function Expression. It passes anonymous functions to variables
+
+  It looks like this:
+  ```js
+  let sayHi = function() {
+    alert( "Hello" );
+  };
+  
+  sayHi()
+  ```
+
 
 <br>
 <br>
