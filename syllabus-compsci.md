@@ -259,11 +259,10 @@ Try to specilize in a field such as these, just chose one or two. However, remem
 - [x] Level 0: Create a template holder and add your templates to it. Add more than the usual.
 - [ ] Level 2: Do all of [these](https://simplestepscode.com/javascript-project-ideas/) if the link is dead [alternative link](https://dev.to/yaphi1/javascript-project-ideas-and-practical-uses)
 - [ ] Level 3: Make a CSS framework but instead of making it like bootstrap, make it more pluggable and replacable. (Use relative divs ("tak cikar tarzi ilerle"). 
-- [ ] Level 4: Clone a mediumly-complex package from npm or yarn
-- [ ] Level 5: Create all of [these with react](https://www.freecodecamp.org/news/every-time-you-build-a-to-do-list-app-a-puppy-dies-505b54637a5d/)
-- [ ] Level 6: Do all of [these](http://eugenkiss.github.io/7guis/tasks/) for practicing little bit of electron. No need to go too big.
-- [ ] Level 7: Do all of [these here](https://www.instamobile.io/react-native-tutorials/react-native-app-ideas-beginners/) to practice react native. Dont skip anything.
-- [ ] Level 8: Clone a mini React Clone
+- [ ] Level 4: Create all of [these with react](https://www.freecodecamp.org/news/every-time-you-build-a-to-do-list-app-a-puppy-dies-505b54637a5d/)
+- [ ] Level 5: Do all of [these](http://eugenkiss.github.io/7guis/tasks/) for practicing little bit of electron. No need to go too big.
+- [ ] Level 6: Do all of [these here](https://www.instamobile.io/react-native-tutorials/react-native-app-ideas-beginners/) to practice react native. Dont skip anything.
+- [ ] Level 7: Clone a mini React Clone -- pacakge it in npm, yarn
 
 > If you finish frontend or backend sections start `[Code Univeristy Guide](https://github.com/jwasham/coding-interview-university)` of jwsaham and try to getting ready for job applications (possibly in Canada) when their time of the month comes.
 
