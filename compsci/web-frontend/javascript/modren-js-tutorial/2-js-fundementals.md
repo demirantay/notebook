@@ -289,10 +289,7 @@
     }
     ```
 
-<br>
-<br>
-
-# Function Expressions 
+### Function Expressions 
 
 - There is another syntax for creating a function that is called a Function Expression. It passes anonymous functions to variables
 
@@ -305,13 +302,33 @@
   sayHi()
   ```
 
+- As a rule of thumb, when we need to declare a function, the first to consider is Function Declaration syntax. It gives more freedom in how to organize our code, because we can call such functions before they are declared.
 
-<br>
-<br>
+  But if a Function Declaration does not suit us for some reason, or we need a conditional declaration (we’ve just seen an example), then Function Expression should be used.
 
-# Arrow Functions
+### Arrow Functions
 
-<br>
-<br>
+- There’s another very simple and concise syntax for creating functions, that’s often better than Function Expressions. It’s called “arrow functions”, because it looks like this:
+  ```js
+  let func = (arg1, arg2, ...argN) => expression
+  ```
+  In other words, it’s the shorter version of:
+  ```js
+  let func = function(arg1, arg2, ...argN) {
+    return expression;
+  };
+  ```
+  Let’s see a concrete example:
+  ```js
+  let sum = (a, b) => a + b;
+  ```
+  
+- You can use arrow functions for more than one liners and use them as normal function declarations with this:
+  ```js
+  let sum = (a, b) => {  // the curly brace opens a multiline function
+    let result = a + b;
+    return result; // if we use curly braces, then we need an explicit "return"
+  };
+  ```
+  But why would you want to use this when you can use thetraditional one, right?
 
-# JavaScript Specials
