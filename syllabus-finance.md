@@ -63,5 +63,6 @@ The course syllabus is not in final shape at the moment I will edit as I go alon
 
 - [ ]  Practice on Real-time data: Build yourself applications with data science that updates its data in realtime and try to practice what you have learned.
 - [ ] Write trading scripts for fake data or game data such as wow actuion houses ... etc. where you can contact with real world people but do not lose real money.
+- [ ] Code an application to analyse the necessary markets that you want to invest in. e.g. you want to start a business it researches the market for competitiors their assets size, vision ... etc. make this private not public
+- [ ] Code a big application that has different features for different topics such as business analyse app for researhing market places for the product you want to create, an analysis application to determine which place is the best to invest in real estate makret ... etc. make it private
 - [ ] Start investing for real startgin from small amounts
-- [ ] not sure what to do next at this time
