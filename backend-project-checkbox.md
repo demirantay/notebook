@@ -1,0 +1,307 @@
+# Backend Project Checkboxing
+
+All of the projects are taken from [here](https://github.com/karan/Projects) -- Read their descriptions from there.
+
+<bR>
+<br>
+
+# Python
+
+- [ ] Find PI to the Nth Digit
+- [ ] Find e to the Nth Digit 
+- [ ] Fibonacci Sequence
+- [ ] Prime Factorization
+- [ ] Next Prime Number 
+- [ ] Find Cost of Tile to Cover W x H Floor
+- [ ] Mortgage Calculator 
+- [ ] Change Return Program
+- [ ] Binary to Decimal and Back Converter
+- [ ] Calculator
+- [ ] Unit Converter (temp, currency, volume, mass and more)
+- [ ] Alarm Clock
+- [ ] Distance Between Two Cities 
+- [ ] Credit Card Validator
+- [ ] Tax Calculator
+- [ ] Factorial Finder
+- [ ] Complex Number Algebra
+- [ ] Happy Numbers
+- [ ] Number Names 
+- [ ] Coin Flip Simulation 
+- [ ] Limit Calculator
+- [ ] Fast Exponentiation
+- [ ] Collatz Conjecture
+- [ ] Sorting
+- [ ] Closest pair problem
+- [ ] Sieve of Eratosthenes
+- [ ] Graph from links 
+- [ ] Eulerian Path 
+- [ ] Connected Graph 
+- [ ] Dijkstra’s Algorithm 
+- [ ] Minimum Spanning Tree 
+- [ ] Inverted index
+- [ ] Fizz Buzz
+- [ ] Reverse a String 
+- [ ] Pig Latin 
+- [ ] Count Vowels 
+- [ ] Check if Palindrome
+- [ ] Count Words in a String 
+- [ ] Text Editor
+- [ ] RSS Feed Creator 
+- [ ] Quote Tracker (market symbols etc)
+- [ ] Guestbook / Journal 
+- [ ] Vigenere / Vernam / Ceasar Ciphers 
+- [ ] Regex Query Tool 
+- [ ] FTP Program
+- [ ] Bandwidth Monitor
+- [ ] Port Scanner
+- [ ] Mail Checker (POP3 / IMAP)
+- [ ] Country from IP Lookup 
+- [ ] Whois Search Tool 
+- [ ] Site Checker with Time Scheduling 
+- [ ] Product Inventory Project
+- [ ] Airline / Hotel Reservation System 
+- [ ] Company Manager
+- [ ] Bank Account Manager
+- [ ] Patient / Doctor Scheduler 
+- [ ] Recipe Creator and Manager 
+- [ ] Image Gallery
+- [ ] Shape Area and Perimeter Classes
+- [ ] Flower Shop Ordering To Go
+- [ ] Family Tree Creator
+- [ ] Create A Progress Bar for Downloads
+- [ ] Bulk Thumbnail Creator 
+- [ ] Page Scraper 
+- [ ] Online White Board 
+- [ ] Get Atomic Time from Internet Clock 
+- [ ] Fetch Current Weather
+- [ ] Scheduled Auto Login and Action
+- [ ] E-Card Generator 
+- [ ] Content Management System 
+- [ ] Web Board (Forum)
+- [ ] CAPTCHA Maker 
+- [ ] Quiz Maker 
+- [ ] Sort Excel/CSV File Utility
+- [ ] Create Zip File Maker
+- [ ] PDF Generator 
+- [ ] Mp3 Tagger
+- [ ] Code Snippet Manager 
+- [ ] SQL Query Analyzer 
+- [ ] Remote SQL Tool 
+- [ ] Report Generator
+- [ ] Event Scheduler and Calendar 
+- [ ] Budget Tracker
+- [ ] TV Show Tracker
+- [ ] Travel Planner System
+- [ ] Slide Show
+- [ ] Stream Video from Online 
+- [ ] Mp3 Player 
+- [ ] Watermarking Application 
+- [ ] Turtle Graphics
+- [ ] GIF Creator
+- [ ] Caesar cipher
+
+<br>
+<br>
+
+---
+
+<br>
+<br>
+
+# Go 
+
+- [ ] Find PI to the Nth Digit
+- [ ] Find e to the Nth Digit 
+- [ ] Fibonacci Sequence
+- [ ] Prime Factorization
+- [ ] Next Prime Number 
+- [ ] Find Cost of Tile to Cover W x H Floor
+- [ ] Mortgage Calculator 
+- [ ] Change Return Program
+- [ ] Binary to Decimal and Back Converter
+- [ ] Calculator
+- [ ] Unit Converter (temp, currency, volume, mass and more)
+- [ ] Alarm Clock
+- [ ] Distance Between Two Cities 
+- [ ] Credit Card Validator
+- [ ] Tax Calculator
+- [ ] Factorial Finder
+- [ ] Complex Number Algebra
+- [ ] Happy Numbers
+- [ ] Number Names 
+- [ ] Coin Flip Simulation 
+- [ ] Limit Calculator
+- [ ] Fast Exponentiation
+- [ ] Collatz Conjecture
+- [ ] Sorting
+- [ ] Closest pair problem
+- [ ] Sieve of Eratosthenes
+- [ ] Graph from links 
+- [ ] Eulerian Path 
+- [ ] Connected Graph 
+- [ ] Dijkstra’s Algorithm 
+- [ ] Minimum Spanning Tree 
+- [ ] Inverted index
+- [ ] Fizz Buzz
+- [ ] Reverse a String 
+- [ ] Pig Latin 
+- [ ] Count Vowels 
+- [ ] Check if Palindrome
+- [ ] Count Words in a String 
+- [ ] Text Editor
+- [ ] RSS Feed Creator 
+- [ ] Quote Tracker (market symbols etc)
+- [ ] Guestbook / Journal 
+- [ ] Vigenere / Vernam / Ceasar Ciphers 
+- [ ] Regex Query Tool 
+- [ ] FTP Program
+- [ ] Bandwidth Monitor
+- [ ] Port Scanner
+- [ ] Mail Checker (POP3 / IMAP)
+- [ ] Country from IP Lookup 
+- [ ] Whois Search Tool 
+- [ ] Site Checker with Time Scheduling 
+- [ ] Product Inventory Project
+- [ ] Airline / Hotel Reservation System 
+- [ ] Company Manager
+- [ ] Bank Account Manager
+- [ ] Patient / Doctor Scheduler 
+- [ ] Recipe Creator and Manager 
+- [ ] Image Gallery
+- [ ] Shape Area and Perimeter Classes
+- [ ] Flower Shop Ordering To Go
+- [ ] Family Tree Creator
+- [ ] Create A Progress Bar for Downloads
+- [ ] Bulk Thumbnail Creator 
+- [ ] Page Scraper 
+- [ ] Online White Board 
+- [ ] Get Atomic Time from Internet Clock 
+- [ ] Fetch Current Weather
+- [ ] Scheduled Auto Login and Action
+- [ ] E-Card Generator 
+- [ ] Content Management System 
+- [ ] Web Board (Forum)
+- [ ] CAPTCHA Maker 
+- [ ] Quiz Maker 
+- [ ] Sort Excel/CSV File Utility
+- [ ] Create Zip File Maker
+- [ ] PDF Generator 
+- [ ] Mp3 Tagger
+- [ ] Code Snippet Manager 
+- [ ] SQL Query Analyzer 
+- [ ] Remote SQL Tool 
+- [ ] Report Generator
+- [ ] Event Scheduler and Calendar 
+- [ ] Budget Tracker
+- [ ] TV Show Tracker
+- [ ] Travel Planner System
+- [ ] Slide Show
+- [ ] Stream Video from Online 
+- [ ] Mp3 Player 
+- [ ] Watermarking Application 
+- [ ] Turtle Graphics
+- [ ] GIF Creator
+- [ ] Caesar cipher
+
+<br>
+<br>
+
+---
+
+<br>
+<br>
+
+# JavaScript
+
+- [ ] Find PI to the Nth Digit
+- [ ] Find e to the Nth Digit 
+- [ ] Fibonacci Sequence
+- [ ] Prime Factorization
+- [ ] Next Prime Number 
+- [ ] Find Cost of Tile to Cover W x H Floor
+- [ ] Mortgage Calculator 
+- [ ] Change Return Program
+- [ ] Binary to Decimal and Back Converter
+- [ ] Calculator
+- [ ] Unit Converter (temp, currency, volume, mass and more)
+- [ ] Alarm Clock
+- [ ] Distance Between Two Cities 
+- [ ] Credit Card Validator
+- [ ] Tax Calculator
+- [ ] Factorial Finder
+- [ ] Complex Number Algebra
+- [ ] Happy Numbers
+- [ ] Number Names 
+- [ ] Coin Flip Simulation 
+- [ ] Limit Calculator
+- [ ] Fast Exponentiation
+- [ ] Collatz Conjecture
+- [ ] Sorting
+- [ ] Closest pair problem
+- [ ] Sieve of Eratosthenes
+- [ ] Graph from links 
+- [ ] Eulerian Path 
+- [ ] Connected Graph 
+- [ ] Dijkstra’s Algorithm 
+- [ ] Minimum Spanning Tree 
+- [ ] Inverted index
+- [ ] Fizz Buzz
+- [ ] Reverse a String 
+- [ ] Pig Latin 
+- [ ] Count Vowels 
+- [ ] Check if Palindrome
+- [ ] Count Words in a String 
+- [ ] Text Editor
+- [ ] RSS Feed Creator 
+- [ ] Quote Tracker (market symbols etc)
+- [ ] Guestbook / Journal 
+- [ ] Vigenere / Vernam / Ceasar Ciphers 
+- [ ] Regex Query Tool 
+- [ ] FTP Program
+- [ ] Bandwidth Monitor
+- [ ] Port Scanner
+- [ ] Mail Checker (POP3 / IMAP)
+- [ ] Country from IP Lookup 
+- [ ] Whois Search Tool 
+- [ ] Site Checker with Time Scheduling 
+- [ ] Product Inventory Project
+- [ ] Airline / Hotel Reservation System 
+- [ ] Company Manager
+- [ ] Bank Account Manager
+- [ ] Patient / Doctor Scheduler 
+- [ ] Recipe Creator and Manager 
+- [ ] Image Gallery
+- [ ] Shape Area and Perimeter Classes
+- [ ] Flower Shop Ordering To Go
+- [ ] Family Tree Creator
+- [ ] Create A Progress Bar for Downloads
+- [ ] Bulk Thumbnail Creator 
+- [ ] Page Scraper 
+- [ ] Online White Board 
+- [ ] Get Atomic Time from Internet Clock 
+- [ ] Fetch Current Weather
+- [ ] Scheduled Auto Login and Action
+- [ ] E-Card Generator 
+- [ ] Content Management System 
+- [ ] Web Board (Forum)
+- [ ] CAPTCHA Maker 
+- [ ] Quiz Maker 
+- [ ] Sort Excel/CSV File Utility
+- [ ] Create Zip File Maker
+- [ ] PDF Generator 
+- [ ] Mp3 Tagger
+- [ ] Code Snippet Manager 
+- [ ] SQL Query Analyzer 
+- [ ] Remote SQL Tool 
+- [ ] Report Generator
+- [ ] Event Scheduler and Calendar 
+- [ ] Budget Tracker
+- [ ] TV Show Tracker
+- [ ] Travel Planner System
+- [ ] Slide Show
+- [ ] Stream Video from Online 
+- [ ] Mp3 Player 
+- [ ] Watermarking Application 
+- [ ] Turtle Graphics
+- [ ] GIF Creator
+- [ ] Caesar cipher
