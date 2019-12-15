@@ -12,8 +12,6 @@ The course syllabus is not in final shape at the moment I will edit as I go alon
 
 - [x] Invesment 101 
 - [ ] Ekonomi 101 
-- [ ] https://www.core-econ.org/ : THE ECONOMY
-- [ ] https://www.core-econ.org/ :ECONOMY, SOCIETY, AND PUBLIC POLICY
 - [ ] Psych 101 
 - [ ] Management 101 
 - [ ] Accounting 101 
@@ -31,8 +29,15 @@ The course syllabus is not in final shape at the moment I will edit as I go alon
 - [ ] A little history of Economics
 - [ ] Social Security 101
 - [ ] Statistics 101 
+- [ ] https://www.core-econ.org/ : THE ECONOMY
+- [ ] https://www.core-econ.org/ :ECONOMY, SOCIETY, AND PUBLIC POLICY
 - [ ] Benjamin Graham -- Smart Investor
-- [ ] Add more info ...
+- [ ] Start reading more serious texts about Management  ...
+- [ ] Start reading more serious texts about Accounting ...
+- [ ] Start reading more serious texts about Economics ...
+- [ ] Start reading more serious texts about Budgeting ...
+- [ ] Start reading more about Investing ...
+- ... add more classic-text/book info heavy books, no need for intro stuff anymore
 
 ### Packet 2: Feynman 
 
