@@ -32,9 +32,7 @@ The course syllabus is not in final shape at the moment I will edit as I go alon
 - [ ] Social Security 101
 - [ ] Statistics 101 
 - [ ] Benjamin Graham -- Smart Investor
-- [ ] Course: Khan Academy -- [Personal Finance](https://www.khanacademy.org/college-careers-more/personal-finance)
-- [ ] Course: Khan Academy -- [Finance and Capital Markets](https://www.khanacademy.org/economics-finance-domain/core-finance)
-- [ ] Course: Khan Academy -- Miro Macro Economics
+- [ ] Add more info ...
 
 ### Packet 2: Feynman 
 
