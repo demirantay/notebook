@@ -348,13 +348,13 @@ Try to specilize in a field such as these, just chose one or two. However, remem
 - [ ] Terminal -- (Sys Performance: nmon, iostat, sar, vmstat ...etc.)
 - [ ] Terminal -- (All other neccessary information: history, df ...etc)
 - [ ] Networking 
-- [ ] Cyber Security 
 - [ ] Web Servers -- (nginx, apache, tomcat ... etc)
 - [ ] Caching Servers
 - [ ] Load Balancer
 - [ ] Reverse Proxy
 - [ ] Forward Proxy
 - [ ] Firewall
+- [ ] Cyber Security 
 - [ ] Containers -- (Docker ...etc)
 - [ ] Configuration Management -- (Ansible)
 - [ ] Container Orchestration -- (Kubernetees)
@@ -374,13 +374,13 @@ Try to specilize in a field such as these, just chose one or two. However, remem
 - [ ] Feynman: Bash Scripting
 - [ ] Feynman: Tools - (text maniupation, process mointoring, network, sys performance)
 - [ ] Feynman: Networking
-- [ ] Feynman: Cyber Security
 - [ ] Feynman: Web Servers
 - [ ] Feynman: Caching Servers
 - [ ] Feynman: Load Balancer
 - [ ] Feynman: Reverse Proxy
 - [ ] Feynman: Forward Proxy
 - [ ] Feynman: Firewall
+- [ ] Feynman: Cyber Security
 - [ ] Feynman: Containers -- (Docker ...etc)
 - [ ] Feynman: Configuration Management -- (Ansible)
 - [ ] Feynman: Container Orchestration -- (Kubernetees)
@@ -393,8 +393,24 @@ Try to specilize in a field such as these, just chose one or two. However, remem
 
 ### Packet #3
 
-- [ ] Level 0: To be fair I am unsure about what to build in this. I will decide if i can come this far
-- [ ] Level 1: At this point I should have a job and start building my own idea
+- [ ] Level 0: Some projects about the Operating System
+- [ ] Level 1: Some project for the Linux enviorenment with Shell toools
+- [ ] Level 2: Create a mini HTTP or TOR
+- [ ] Level 3: Create a web server if you have it improve on it
+- [ ] Level 4: Secure your web server, try pentesting it, imrpove your exploits. Repeat
+- [ ] Level 5: Create a mini container tool like docker
+- [ ] Level 6: Create a mini config management tool like ansible
+- [ ] Level 7: Create a mini container orchestriation tool like kubernetees
+- [ ] Level 8: Create a mini Infustructure PRovisioning tool like terraform
+- [ ] Level 9: Build a mini Autmoated testing tool
+- [ ] Level 10: Create a mini infsutructure monitoring tool
+- [ ] Level 11: Create a mini application monitoring tool
+- [ ] Level 12: Create a mini log management tool
+- [ ] Level 13: Do a project with Cloud
+- [ ] Level 14 : At this point I should have a job and start building my own idea
+
+> If you finish frontend or backend sections start `[Code Univeristy Guide](https://github.com/jwasham/coding-interview-university)` of jwsaham and try to getting ready for job applications (possibly in Canada) when their time of the month comes.
+
 
 
 <br>
