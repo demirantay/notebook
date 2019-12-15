@@ -338,6 +338,9 @@ Try to specilize in a field such as these, just chose one or two. However, remem
 ### Packet #1
 
 - [ ] System Programming Languages -- (Python, C/C++, Go.. etc.)
+- [ ] Finish Algorithms section at the top
+- [ ] Finish Computer Architecture at the top
+- [ ] Finish Operating Systems at the top
 - [ ] OS Concepts -- (I/O, Memory Storage, Process Management, Sockets, File Systems ... etc.)
 - [ ] Unix/Linux Envioroment
 - [ ] Terminal -- (bash scripting)
@@ -393,6 +396,7 @@ Try to specilize in a field such as these, just chose one or two. However, remem
 
 ### Packet #3
 
+- [ ] Level 0: Karans projects with a Systems language c/c++, go, python ... etc.
 - [ ] Level 0: Some projects about the Operating System
 - [ ] Level 1: Some project for the Linux enviorenment with Shell toools
 - [ ] Level 2: Create a mini HTTP or TOR
