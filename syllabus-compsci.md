@@ -283,6 +283,7 @@ Try to specilize in a field such as these, just chose one or two. However, remem
 - [ ] NoSQL -- (MongoDB .. etc)
 - [ ] Caching -- (Redis .. etc)
 - [ ] REST API 
+- [ ] Finish the databases section at the top
 - [ ] Auth: OAuth
 - [ ] Auth: Basic Authentication
 - [ ] Auth: Token Authentication
@@ -295,6 +296,7 @@ Try to specilize in a field such as these, just chose one or two. However, remem
 - [ ] Web Sockets
 - [ ] GraphQL 
 - [ ] Graph Databases
+- [ ] Finish the theorotical section at the top. (compilers ..etc.)
 
 ### Packet #2 
 
@@ -350,6 +352,7 @@ Try to specilize in a field such as these, just chose one or two. However, remem
 - [ ] Terminal -- (Network: nmap, tcpdump, ping, traceroute, ip ...etc)
 - [ ] Terminal -- (Sys Performance: nmon, iostat, sar, vmstat ...etc.)
 - [ ] Terminal -- (All other neccessary information: history, df ...etc)
+- [ ] Finish Networking at the top
 - [ ] Networking 
 - [ ] Web Servers -- (nginx, apache, tomcat ... etc)
 - [ ] Caching Servers
