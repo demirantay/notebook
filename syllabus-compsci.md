@@ -86,11 +86,6 @@ Try to specilize in a field such as these, just chose one or two. However, remem
  
 ### Computer Architecture
   
-  - [ ] Learn about Transistors
-  - [ ] Learn about Gates
-  - [ ] Learn about Flip Flops
-  - [ ] Learn about Memory
-  - [ ] Than start Computerachitecture below
   - [ ] Read: Read [this tutorial](https://www.studytonight.com/computer-architecture/)
   - [ ] Book : [Hidden Language of Computers: CODE](ftp://ftp.borg.moe/yarr/Gentoomen%20Library/Programming/Misc/Charles%20Petzold%20-%20Code%20-%20The%20Hidden%20Language%20of%20Computer%20Hardware%20and%20Software.pdf)
   - [ ] Book : Computer Organization and Design (start over)
