@@ -7,3 +7,7 @@
   - [ ] Write your own basic webserver, hook it up to the internet, and host a basic website from it.
   - [ ] Create a basic database (something similar to sqlite)
   - [ ] Write your own operating system (or make a heavily customized one based on Linux or something)
+  
+  
+If you are out of ideas try this:
+  - https://github.com/karan/Projects
