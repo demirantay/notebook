@@ -101,6 +101,7 @@ Try to specilize in a field such as these, just chose one or two. However, remem
 ### Algorithms and Data Structures
  
   - [X] Read: The [This tutorial](https://www.studytonight.com/data-structures/time-complexity-of-algorithms)
+  - [ ] Book: [PSAD using Python](https://runestone.academy/runestone/books/published/pythonds/index.html)
   - [ ] Book: Grokking Algorithms: An illustrated guide for programmers and other curious people
   - [ ] Project: Impelement Algorithms and Data Structures in any language. [Do all of these here](https://github.com/trekhleb/javascript-algorithms) (You alread y started implementing them in a repo)
   - [ ] Project: Do algorithm visualizations
