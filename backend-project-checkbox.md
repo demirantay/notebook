@@ -7,9 +7,8 @@ All of the projects are taken from [here](https://github.com/karan/Projects) -- 
 
 # Python
 
-- [ ] Fibonacci Sequence
-- [ ] Prime Factorization
-- [ ] Next Prime Number 
+- [x] Fibonacci Sequence
+- [x] Prime Factorization
 - [ ] Find Cost of Tile to Cover W x H Floor
 - [ ] Mortgage Calculator 
 - [ ] Change Return Program
