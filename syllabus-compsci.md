@@ -274,7 +274,7 @@ Try to specilize in a field such as these, just chose one or two. However, remem
 ### Packet #1
 
 - [x] Programming Language -- (python, java, ruby .. etc)
-- [ ] Practice -- (the language you have learned above)
+- [x] Practice -- (the language you have learned above)
 - [ ] Package Manager -- (pip, npm .. etc)
 - [ ] Standarts & Best Practices -- (PEP8 .. etc)
 - [ ] Testing -- (unit, functional, integration)
