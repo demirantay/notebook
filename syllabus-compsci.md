@@ -264,7 +264,7 @@ Try to specilize in a field such as these, just chose one or two. However, remem
 - [ ] Level 6: Do all of [these here](https://www.instamobile.io/react-native-tutorials/react-native-app-ideas-beginners/) to practice react native. Dont skip anything.
 - [ ] Level 7: Clone a mini React Clone -- pacakge it in npm, yarn
 
-> If you finish frontend or backend sections start `[Code Univeristy Guide](https://github.com/jwasham/coding-interview-university)` of jwsaham and try to getting ready for job applications (possibly in Canada) when their time of the month comes.
+> If you finish frontend or backend sections start `[Code Univeristy Guide](https://github.com/jwasham/coding-interview-university)` of jwsaham and try to getting ready for job applications (possibly in Canada) when their time of the month comes. OR go for a algorithm online prep course like algoexpert.io , leetcode ...etc
 
 <br>
 <Br>
@@ -330,7 +330,7 @@ Try to specilize in a field such as these, just chose one or two. However, remem
 - [ ] Level 9: After learning all of the things above do a youtube clone too.
 - [ ] Optional: This is optional if you want to challenge yourself, clone google.com
 
-> If you finish frontend or backend sections start `[Code Univeristy Guide](https://github.com/jwasham/coding-interview-university)` of jwsaham and try to getting ready for job applications (possibly in Canada) when their time of the month comes.
+> If you finish frontend or backend sections start `[Code Univeristy Guide](https://github.com/jwasham/coding-interview-university)` of jwsaham and try to getting ready for job applications (possibly in Canada) when their time of the month comes.OR go for a algorithm online prep course like algoexpert.io , leetcode ...etc
 
 <br>
 <Br>
@@ -416,7 +416,7 @@ Try to specilize in a field such as these, just chose one or two. However, remem
 - [ ] Level 13: Do a project with Cloud
 - [ ] Level 14 : At this point I should have a job and start building my own idea
 
-> If you finish frontend or backend sections start `[Code Univeristy Guide](https://github.com/jwasham/coding-interview-university)` of jwsaham and try to getting ready for job applications (possibly in Canada) when their time of the month comes.
+> If you finish frontend or backend sections start `[Code Univeristy Guide](https://github.com/jwasham/coding-interview-university)` of jwsaham and try to getting ready for job applications (possibly in Canada) when their time of the month comes. OR go for a algorithm online prep course like algoexpert.io , leetcode ...etc
 
 
 
