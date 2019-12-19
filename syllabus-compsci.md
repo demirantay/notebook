@@ -319,7 +319,7 @@ Try to specilize in a field such as these, just chose one or two. However, remem
 - [ ] Level 6: Build a web framework on top of your web server
 - [ ] Level 7: Build a very basic todo app with your web framework
 - [ ] Level 8: Build the instagram clone built above but this time with your own framework and webserver
-- [ ] Level 9: After learning all of the things above do a youtube clone too.
+- [ ] Level 9: After learning all of the things above do a youtube clone too (it is good to figure out how to impelemtn billions data of videos & graphics .
 - [ ] Optional: This is optional if you want to challenge yourself, clone google.com
 
 > If you finish frontend or backend sections start `[Code Univeristy Guide](https://github.com/jwasham/coding-interview-university)` of jwsaham and try to getting ready for job applications (possibly in Canada) when their time of the month comes. ++ go for a algorithm online prep course like algoexpert.io (<- this one is really good) , leetcode ...etc
