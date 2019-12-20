@@ -21,6 +21,7 @@ The course syllabus is not in final shape at the moment I will edit as I go alon
 - [ ] Real Estatae Investing 101 
 - [ ] Stock Market 101 - Michele Cagan (adams 101)
 - [ ] Day Trading 101 
+- [ ] Vergi Sistemini Anlama Kilavuzu - Ozan Bingol
 - [ ] The Infographic Guide to Personal Finance 
 - [ ] Retirement 101
 - [ ] American Governement 101
