@@ -12,10 +12,9 @@ The course syllabus is not in final shape at the moment I will edit as I go alon
 
 - [x] Invesment 101 
 - [ ] Ekonomi 101 
-- [ ] Psych 101 
 - [ ] Management 101 
-- [ ] Accounting 101 
 - [ ] Negotiating 101 
+- [ ] Accounting 101 
 - [ ] Sales 101
 - [ ] Budgeting 101 
 - [ ] Real Estatae Investing 101 
@@ -30,6 +29,7 @@ The course syllabus is not in final shape at the moment I will edit as I go alon
 - [ ] A little history of Economics
 - [ ] Social Security 101
 - [ ] Statistics 101 
+- [ ] Psych 101 
 - [ ] https://www.core-econ.org/ : THE ECONOMY
 - [ ] https://www.core-econ.org/ :ECONOMY, SOCIETY, AND PUBLIC POLICY
 - [ ] Benjamin Graham -- Smart Investor
