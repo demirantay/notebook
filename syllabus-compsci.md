@@ -153,6 +153,7 @@ Try to specilize in a field such as these, just chose one or two. However, remem
 - [ ] Databases -- feynman it
 - [ ] Languages and Compilers -- feynman it
 - [ ] Distributed Systems -- feynman it
+- [ ] Re-iterate through feynman boxes above
 
 <br>
 <Br>
@@ -189,6 +190,7 @@ Try to specilize in a field such as these, just chose one or two. However, remem
 - [ ] Feynman: HTTP/HTTPS
 - [ ] Feynman: Design Patterns (SOLID, KISS, YAGNI)
 - [ ] Feynman: Devolopment Cycle Designs
+- [ ] Re-iterate through feynman boxes above
 
 ### Packet #3
 
@@ -247,6 +249,7 @@ Try to specilize in a field such as these, just chose one or two. However, remem
 - [ ] Feynman: Desktop Applications 
 - [ ] Feynman: Mobile Applications
 - [ ] Feynman: Web Assembly
+- [ ] Re-iterate through feynman boxes above
 
 ### Packet #3
 
@@ -309,6 +312,7 @@ Try to specilize in a field such as these, just chose one or two. However, remem
 - [ ] Feynman: Web Sockets
 - [ ] Feynman: GraphQL
 - [ ] Feynman: Graph Databases
+- [ ] Re-iterate through feynman boxes above
 
 ### Packet #3
 
@@ -388,6 +392,7 @@ Try to specilize in a field such as these, just chose one or two. However, remem
 - [ ] Feynman: Application Monitoring -- (New Relic, AppDynamics .. etc)
 - [ ] Feynman: Logs Management -- (ELK Stack, Graylog, Splunk .. etc)
 - [ ] Feynman: Cloud Providers -- AWS
+- [ ] Re-iterate through feynman boxes above
 
 ### Packet #3
 
