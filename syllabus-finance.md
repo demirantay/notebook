@@ -26,6 +26,7 @@ The course syllabus is not in final shape at the moment I will edit as I go alon
 - [ ] American Governement 101
 - [ ] U.S. History 101
 - [ ] World History 101
+- [ ] Jared Diamond - Tufek Mikrop Celik
 - [ ] A little history of Economics
 - [ ] Social Security 101
 - [ ] Statistics 101 
