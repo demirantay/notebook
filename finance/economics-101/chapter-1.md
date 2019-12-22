@@ -57,4 +57,29 @@
   
   “The assumptions economists make are subject to criticism and debate. Many critics believe that the field has a tendency to be too abstract and theoretical to have any real-world value. The failure of most economists to predict the most recent economic downturn seems to support the view that economics ignores human psychology at its own peril.”
 
+<bR>
+  
+# “THE EMERGENCE OF FREE TRADE AND THE IMPORTANCE OF COMPARATIVE ADVANTAGE”
+
+- “Which leads to a higher standard of living, dependence on others or complete self-sufficiency?”
+  
+  “The truth, however, is whether you are on your own or living at home, you are highly dependent on others for the food you eat, the clothes you wear, “and the roof over your head. In order for you to get what you need and want and enjoy a higher standard of living, you must trade with others.”
+
+- `The History of Trade in 60 seconds` -- “For as long as there have been people, there has been trade. At first, trade was a simple matter. For example, people in a family exchanged food with their neighbors. Over time, trade expanded as people were exposed to new goods from faraway places and developed a taste for them. As tribes became kingdoms and kingdoms became empires, trade grew in importance. This growth in trade led to the emergence of the influential merchant class. These merchants braved hardships in search of profit, and their activities helped to form the modern world. Although the scale of trade has grown incredibly throughout history, what has not changed is that trade always occurs between individuals.”
+
+- `Mercantalism` -- “One early theory of trade was mercantilism, which dominated seventeenth- and eighteenth-century European trade policy. Mercantilism is founded on the idea that a country, and therefore, individuals, are better off if the value of a country’s exports are greater than the value of its imports. Under mercantilism, the more gold a country amassed, the wealthier it became. As a result, countries competed to import cheap natural resources and then convert them into more expensive manufactured goods for export.”
+
+  “Mercantilism had an obvious flaw. If a country is always trying to export more than it imports and everyone else is playing the same game, then someone is going to lose. In order to maintain a country’s export advantage, governments enacted many laws and taxes that distorted the flow of goods without necessarily making the people better off. In the end, mercantilism created a win-lose condition that harmed more than it helped.”
+  
+- `Free Trade` -- “The insights of eighteenth-century Scottish thinker Adam Smith were influential in bringing an end to mercantilism. He and others at the time saw governments’ mercantilist policies as misguided and prone to influence by special interests. He argued in The Wealth of Nations that if a country specialized in what it produced best and freely traded those products, then society would be better off.”
+
+  “In his view, free trade led to greater wealth, even if it meant that sometimes you imported manufactured goods from people in other countries.One argument used in support of the idea of free trade is the theory of comparative advantage. Whereas Adam Smith had argued for a country to specialize in what it does best and then trade with others, another influential thinker, David Ricardo, argued that it is better for a country to specialize in what it produces at the lowest opportunity cost, and then trade for whatever else it needs. These two concepts are referred to as absolute advantage and comparative advantage”
+
+- `Absolute ADvantage` -- “An absolute advantage exists if you can produce more of a good or service than someone else, or if you can produce that good or service faster than someone else. An absolute advantage implies that you are more efficient, that is, able to produce more with the same amount of resources”
+
+- `Comparative Advantage` -- “A comparative advantage exists if you can produce a good at a lower opportunity cost than someone else. In other words, if you sacrifice less of one good or service to produce another good or service, then you have a comparative advantage.”
+
+- `Efficency and Comparative Advantage` -- “It is easy to overlook comparative advantage when determining who should produce what. Just because one person might be more efficient than another does not always mean that that person should be the one doing the task. Remember to always count the opportunity cost.”
+
+- `Comparative Advantage and Economics Change` -- “An example might help. Consider 100 typical American high school students and then consider 100 young people of the same age in Bangladesh. In which country is the opportunity cost of producing a T-shirt higher? If you look at the American students, you would have to agree that they have more opportunities than the Bangladeshi. When Americans specialize in T-shirts, more potential doctors, nurses, teachers, engineers, mechanics, firefighters, police officers, business managers, machinists, and social workers are sacrificed than in Bangladesh, where the majority of workers will most likely become subsistence farmers. The opportunity cost of producing T-shirts is much lower in Bangladesh than in America, and therefore Bangladesh has a comparative advantage in producing T-shirts. Even though the United States has the capacity to produce T-shirts more efficiently (absolute advantage), from an economic standpoint, it makes sense to trade pharmaceuticals, refined chemicals, capital equipment, and know-how for T-shirts.”
 
