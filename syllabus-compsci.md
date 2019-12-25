@@ -317,7 +317,7 @@ Try to specilize in a field such as these, just chose one or two. However, remem
 ### Packet #3
 
 - [ ] Level 2: Write a project like py-psql for NoSQL and Redis ... etc. all of the databases you use and create a easy to use command line interface for them.
-- [ ] Level 3: Write bots to create fake data about poeple and crete a virtual life of bots. They will buy things , spend money on cinema, date, making kids ... etc. and all of the data will be updated. And create a admin panel (god-panel) that views all of the data with different search engines, message brokers ... manipulating the data with Redis, NosqL ... etc. Implement every checkbox learned above
+- [ ] Level 3: Write bots to create fake data about poeple and crete a virtual life of bots. They will buy things , spend money on cinema, date, making kids ... etc. and all of the data will be updated. And create a admin panel (god-panel) that views all of the data with different search engines, message brokers ... manipulating the data with Redis, NosqL ... etc. Implement every checkbox learned above. And create panels for managing the mock-up data. One programmer panel, one business panel (miitating FX trade ... etc.)
 - [ ] Level 4: Create a very detailed Instagram clone with flask or django (already started just continue)
 - [ ] Level 5: Build a webserver
 - [ ] Level 6: Build a web framework on top of your web server
