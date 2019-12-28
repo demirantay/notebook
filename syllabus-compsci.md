@@ -88,10 +88,13 @@ Try to specilize in a field such as these, just chose one or two. However, remem
   
   - [ ] Read: Read [this tutorial](https://www.studytonight.com/computer-architecture/)
   - [ ] Book : [Hidden Language of Computers: CODE](ftp://ftp.borg.moe/yarr/Gentoomen%20Library/Programming/Misc/Charles%20Petzold%20-%20Code%20-%20The%20Hidden%20Language%20of%20Computer%20Hardware%20and%20Software.pdf)
+  - [ ] Book: [Digital Design and Computer Architecture 2nd Edition](https://www.amazon.com/Digital-Design-Computer-Architecture-Harris/dp/0123944244#customerReviews)
+  - [ ] Book: Essentials of Computer Architecture by Comer
   - [ ] Book : Computer Organization and Design (start over)
+  - [ ] Book: Computer Systems : A Programmers Perspective by Bryant and O’Hallaron
+  - [ ] Book: Computer Architecture: A Quantitative Approach
   - [ ] Project: Design and build a simple computer
   - [ ] Do the 8bit computer https://eater.net/8bit
-  - [ ] Do the vga:graphics https://eater.net/vga
   
 ### Algorithms and Data Structures
  
@@ -116,6 +119,7 @@ Try to specilize in a field such as these, just chose one or two. However, remem
 ### Computer Networking
 
    - [ ] Read: The [This tutorial](https://www.studytonight.com/computer-networks/)
+   - [ ] Book: [Computer Networks](https://www.amazon.com/gp/product/B006Y1BKGC/ref=dbs_a_def_rwt_hsch_vapi_taft_p1_i0)
    - [ ] Book : [Computer Networking: A Top-Down Approach](https://www.amazon.com/Computer-Networking-Top-Down-Approach-7th/dp/0133594149/?pldnSite=1) -- do the exersices
    - [ ] Exersices : [Wireshark](http://www-net.cs.umass.edu/wireshark-labs/)
    - [ ] Course : [Stanford MOOC](https://lagunita.stanford.edu/courses/Engineering/Networking-SP/SelfPaced/about)
