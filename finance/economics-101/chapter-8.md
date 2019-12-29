@@ -95,3 +95,70 @@ As the workforce and productivity grow, so does the economy’s capacity to prod
 
   Milton Friedman’s monetarists explain the business cycle as being caused by poor management of the money supply. Periods of overexpansion are produced by too much money, and periods of contraction are caused by too little money in circulation. Most other theories explain the business cycle as ultimately being caused by spending changes, but one referred to as the Real Business Cycle Theory focuses on changes in productivity as being the ultimate cause of the cycle.
 
+<br>
+
+# WHAT GDP DOESN’T TELL US
+
+- `gdp per capita` -- GDP per capita is the GDP divided by the population. As an indicator of overall well-being, it is subject to a major flaw. GDP per capita gives no indication as to how income is distributed among the population. The United States and Norway both have high GDPs per capita, but the key difference is that U.S. incomes are unequally distributed compared to Norway. High GDP per capita does not necessarily mean that there are not those in society living in relative poverty.
+
+- `gdp and evniroenment` -- Critics of GDP say that it does not take into account environmental degradation. Because GDP is focused on spending and output, it creates an incentive to pursue greater amounts of production in order for growth to continue. This growth can come at the cost of the environment. Deforestation, climate change, pollution, and other environmental ills are, according to critics of the measure, the logical outcome of this narrow- sighted focus on GDP. Others defend GDP, stating that it is because of the increase in real GDP that people are wealthy enough and have the time to care for the environment. Today, the countries with the highest real GDPs are often the very ones that are doing the most to address the issues that environmentally conscious citizens raise.
+Some countries are exploring measures called “green GDP” that take into account the environmental cost of economic growth.
+
+<br>
+
+# UNEMPLOYMENT DEFINED
+
+- Many economists have made it their life’s work to minimize the problem of unemployment, and policymakers are under political pressure to do so as well.
+
+  Persons sixteen years of age or older are considered unemployed if they have actively searched for work in the last four weeks, but are not currently employed. The employed are those who have worked at least one hour in the previous two weeks. People who meet neither criterion are not considered in the labor force, which is the number of employed persons plus the number of unemployed persons. The unemployment rate that you hear quoted in the news is not a percentage of the population, but a percentage of the labor force that is not currently employed.
+
+  There are many reasons for not participating in the labor force. Full-time students, retirees, stay-at- home parents, the disabled, and the institutionalized do not participate. Members of the military on active duty are not considered part of the labor force either. At any point in time there are people entering, exiting, and re-entering the labor force. Furthermore, people are forever getting hired, fired, and furloughed. They are also quitting, cutting back, and retiring. The labor force is in constant flux, which makes measuring unemployment a daunting task.
+  
+<br>
+<br>
+
+# UNEMPLOYMENT CLASSIFIED
+
+- Because of unemployment’s narrow definition, many people that you might consider unemployed or underemployed are not captured in the official unemployment statistic.
+  - Marginally attached workers are not considered in the official unemployment rate. These are people ready and available to work, who have conducted a job search within the past twelve months, but have not searched in the last four weeks.
+  - Some people have given up the job search in frustration. These “discouraged workers” are unemployed in the general sense, but because they do not meet the technical definition, the official unemployment rate does not reflect their numbers.
+
+- `Types of unemployment` -- Economists make qualitative distinctions in the reasons for various classifications of unemployment. Not all unemployment is the same. Some types are actually positive for the individual and the economy. Other types are bad for the individual but benefit society. Last, there is one type of unemployment that is both bad for the individual and is costly to society. The three types of unemployment are frictional, structural, and cyclical.
+
+- `government incevntives and frictional unemployment` -- Government incentives create variations in frictional unemployment rates between countries. Generous unemployment benefits give workers an incentive to spend more time searching for a job and thus increase the rate of frictional unemployment for the country.
+Compared to Europe, American unemployment benefits are less generous. As a result, Americans spend less time searching for jobs and the rate of frictional unemployment is relatively lower.
+
+- `frictional unemployment` -- Is 0% unemployment a good goal for society? It is most definitely not. A 0% unemployment goal ignores the presence of frictional unemployment. Frictional unemployment occurs when people voluntarily enter the labor force, or when they are between jobs for which they are qualified. It is frictional because the labor market does not automatically match up all available jobs with all available workers.
+Instead, a job search requires time for the right worker to find the right job. Both workers and society benefit when job applicants are matched to the appropriate job. You want mechanical engineers to get jobs in mechanical engineering, not pet grooming.
+
+- `structural unemployment` -- Structural unemployment occurs when job seekers’ skill sets are not in demand because of geography or obsolescence. As industries die out in certain regions of the country or relocate to other regions, the workers may not be able to move with the job. This leaves workers with a skill set that is no longer in demand. These workers must either retrain or accept a lower-paying job in an industry that requires less skill. . As innovation occurs, old technologies and industries are destroyed, which frees up the resources for the new technology and its industry.
+The invention of the personal computer was the death knell for the typewriter. As the new technology advanced, the old technology and its industry were destroyed
+  
+  As this was occurring, new jobs were being created in the new industry. The problem for workers is that their skill sets may not translate into the new industry.
+  
+- `cyclical unemployment` -- The most insidious type of unemployment is cyclical. Cyclical unemployment occurs because of contractions in the business cycle. It is not voluntary, nor is it the result of a skill-set mismatch. During periods of recession, the official unemployment rate increases as cyclical unemployment adds to the always-present frictional and structural rates of unemployment. The recession that began in 2007 saw the official unemployment rate increase from 5% to 10%. The additional increase is directly attributed to cyclical unemployment.
+
+  The real problem with cyclical unemployment is that it creates a feedback loop. As one group becomes cyclically unemployed, they cut back on spending, which leads to more cyclical unemployment. This feedback loop resulted in 25% unemployment during the Great Depression.
+  
+- `Full employment` -- When the economy is producing at its optimum capacity, cruising down the road at the speed limit, neither speeding nor driving too slowly, it is safe to assume that the economy is also at full employment. Full employment occurs when cyclical unemployment is not present in the economy. This economic nirvana is the goal that policymakers seek to maintain.
+
+- `The unemployment tax` -- High rates of unemployment also affect businesses, since unemployment benefits are largely provided through taxes on businesses. Additionally, state and local governments trying to raise revenue during periods of high unemployment often raise tax rates on
+
+<br>
+
+# WHY UNEMPLOYMENT IS BAD
+
+- Unemployment creates a measurable cost for the economy and individuals. The opportunity cost of unemployment is immense when considering the scale of the U.S. economy.
+  
+  When workers are unemployed, they are unable to produce output. According to the economist Arthur Okun, for every 1% that the official unemployment rate exceeds the natural rate of unemployment, there is a 2% gap between actual and potential real GDP. Given the GDP and unemployment figures from 2009, when actual output was $14 trillion and unemployment was 10%, and assuming a natural rate of 5%, actual output may have been $1 trillion to $2 trillion below its potential. By way of comparison, a $2 trillion output gap is like sacrificing the entire economic output of France.
+  
+- `PERSONAL AND SOCIAL COSTS OF UNEMPLOYMENT` - The costs to the individual are heavy as well. An extended period of unemployment can wipe out a family’s personal savings and leave them in debt. Unemployment disrupts the normal flow of life and if prolonged can possibly lead to health and psychological problems for affected individuals
+  
+  Prolonged, pervasive unemployment is directly linked to crime and civil unrest. Areas plagued with persistent high unemployment are also plagued with both violent and property crime
+  
+   Unemployment, it seems, creates the necessary condition for many of the world’s problems.
+
+- `Trends in unemployment` --  Globalization has shifted many low- skill jobs overseas, which leaves America’s unskilled workers with fewer opportunities.
+Demand for labor is driven by worker productivity. The more skills workers possess, the greater the demand for their labor. To stay competitive, future workers must realize that they are not just competing against their fellow Americans but against the rest of the world. The days when you could graduate from high school and get a good-paying job at the factory are gone, unless, of course, you live in China. To compete in the global job market, Americans must be willing to train, stay mobile, and constantly adjust to the changing needs of their employers
+
+<br>
