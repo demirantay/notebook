@@ -1,0 +1,3 @@
+# INFLATION DEFINED
+
+- Were you a little frustrated a few years back when gas prices suddenly rose? The increase in gas prices probably created some hardship as you altered your spending in order to accommodate its higher cost. Now imagine that not just gas prices, but the price of almost everything you buy, suddenly and unexpectedly increases. If you are on a fixed income, then there is only so much altering you can do to a budget before you realize that high prices are killing your finances. Inflation is a phenomenon that you need to understand if you want to comprehend how the economy works.
