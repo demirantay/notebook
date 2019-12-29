@@ -11,7 +11,7 @@ The course syllabus is not in final shape at the moment I will edit as I go alon
 ### Packet 1: Learning
 
 - [x] Invesment 101 
-- [ ] Ekonomi 101 
+- [x] Ekonomi 101 
 - [ ] Management 101 
 - [ ] Negotiating 101 
 - [ ] Accounting 101 
