@@ -103,9 +103,7 @@ Try to specilize in a field such as these, just chose one or two. However, remem
   - [ ] Book: Grokking Algorithms: An illustrated guide for programmers and other curious people
   - [ ] Book: [The Algorithm Design Manual](https://www.amazon.com/Algorithm-Design-Manual-Steven-Skiena/dp/1848000693/?pldnSite=1) There are [vidoes](http://www3.cs.stonybrook.edu/~algorith/video-lectures/) avilable too.
   - [ ] Project: Craete a cheatsheet
-  - [ ] Project: Impelement Algorithms and Data Structures in any language. [Do all of these here](https://github.com/trekhleb/javascript-algorithms) (You alread y started implementing them in a repo)
-  - [ ] Project: Do algorithm visualizations
-  
+  - [ ] Project: Impelement Algorithms and Data Structures in any language. [Do all of these here](https://github.com/trekhleb/javascript-algorithms) (You alread y started implementing them in a repo)  
  
 ### Operating Systems
 
