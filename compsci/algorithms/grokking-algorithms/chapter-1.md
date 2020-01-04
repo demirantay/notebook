@@ -88,4 +88,80 @@ has to verify that you have an account on the site. So, it needs to search for y
   
   This is a terrible algorithm! Opus should use a diferent one, right? But he can’t. his is one of the unsolved problems in computer science. The best we can do is come up with an approximate solution;
   
+- `Recap` -- 
+  - Binary search is a lot faster than simple search.
+  - O(log n) is faster than O(n), but it gets a lot faster once the list of items you’re searching through grows.
+  - Algorithm speed isn’t measured in seconds.
+  - Algorithm times are measured in terms of growth of an algorithm.
+  - Algorithm times are written in Big O notation.
   
+<Br>
+ 
+---
+
+<Br>
+  
+# Selection Sort
+  
+- In this chapter you learn about arrays and linked lists—two of the most basic data structures. They’re used absolutely everywhere. You already used arrays in chapter 1, and you’ll use them in almost every chapter in this book. Arrays are a crucial topic, so pay attention! But sometimes it’s better to use a linked list instead of an array. This chapter explains the pros and cons of both so you can decide which one is right for your algorithm.
+
+  You learn your irst sorting algorithm. A lot of algo- rithms only work if your data is sorted. Remember binary search? You can run binary search only on a sorted list of elements
+  
+### How memory works
+
+- Imagine you go to a show and need to check your things. A chest of drawers is available. Each drawer can hold one element. You want to store two things, so you ask for two drawers. You store your two things here. And you’re ready for the show! his is basically how your computer’s memory works. Your computer looks like a giant set of drawers, and each drawer has an address. 
+
+  fe0/feeb is the address of a slot in memory. Each time you want to store an item in memory, you ask the computer for some space, and it gives you an address where you can store your item. If you want to store multiple items, there are two basic ways to do so: arrays and lists
+  
+  There isn’t one right way to store items for every use case, so it’s important to know the diferences.
+  
+### Arrays and Linked Lists
+
+- adding new items to an array can be a big pain. If you’re out of space and need to move to a new spot in memory every time, adding a new item will be really slow. One easy ix is to “hold seats”: even if you have only 3 items in your task list, you can ask the computer for 10 slots, just in case. hen you can add 10 items to your task list without having to move. his is a good workaround, but you should be aware of a couple of downsides:
+
+  - You may not need the extra slots that you asked for, and then that memory will be wasted. You aren’t using it, but no one else can use it either.
+  - You may add more than 10 items to your task list and have to move anyway.
+  
+  So it’s a good workaround, but it’s not a perfect solution. Linked lists solve this problem of adding items.
+
+- `Linked Lists` -- With linked lists, your items can be anywhere in memory. Each item stores the address of the next item in the list. A bunch of random memory addresses are linked together. If linked lists are so much better at inserts, what are arrays good for?
+
+- `Arrays` -- Websites with top-10 lists use a scummy tactic to get more page views. Instead of showing you the list on one page, they put one item on each page and make you click Next to get to the next item in the list. For example, Top 10 Best TV Villains won’t show you the entire list on one page. Instead, you start at #10 (Newman), and you have to click Next on each page to reach #1 (Gustavo Fring). his technique gives the websites 10 whole pages on which to show you ads, but it’s boring to click Next 9 times to get to #1. It would be much better if the whole list was on one page and you could click each person’s name for more info.
+
+  Linked lists have a similar problem. Suppose you want to read the last item in a linked list. You can’t just read it, because you don’t know what address it’s at. Instead, you have to go to item #1 to get the address for item #2. hen you have to go to item #2 to get the address for item #3. And so on, until you get to the last item. Linked lists are great if you’re going to read all the items one at a time: you can read one item, follow the address to the next item, and so on. But if you’re going to keep jumping around, linked lists are terrible.
+  
+  Arrays are diferent. You know the address for every item in your array.
+  
+  Arrays are great if you want to read random elements, because you can look up any element in your array instantly. With a linked list, the elements aren’t next to each other,
+so you can’t instantly calculate the position of the ith element in memory
+
+- `Deletions` -- What if you want to delete an element? Again, lists are better, because you just need to change what the previous element points to. With arrays, everything needs to be moved up when you delete an element.
+
+  Which are used more: arrays or lists? Obviously, it depends on the use case. But arrays see a lot of use because they allow random access. here are two diferent types of access: random access and sequential access. Sequential access means reading the elements one by one, starting
+at the irst element. Linked lists can only do sequential access. If you want to read the 10th element of a linked list, you have to read the irst 9 elements and follow the links to the 10th element. Random access means you can jump directly to the 10th element. You’ll frequently hear me say that arrays are faster at reads. his is because they provide random access. A lot of use cases require random access, so arrays are used a lot. Arrays and lists are used to implement other data structures, too 
+
+### Selection Sort
+
+- Let’s put it all together to learn your second algorithm: selection sort. Suppose you have a bunch of music on your computer. For each artist, you have a play count. You want to sort this list from most to least played, so that you can rank your favorite artists. How can you do it?
+
+  One way is to go through the list and ind the most-played artist. Add that artist to a new list. Do it again to ind the next-most-played artist. Keep doing this, and you’ll end up with a sorted list.
+  
+  Let’s put on our computer science hats and see how long this will take to run. Remember that O(n) time means you touch every element in a list once. For example, running simple search over the list of artists means looking at each artist once.
+  
+  To ind the artist with the highest play count, you have to check each item in the list. his takes O(n) time, as you just saw
+  
+  Sorting algorithms are very useful. Now you can sort
+  - Names in a phone book
+  - Travel dates
+  - Emails (newest to oldest)
+  
+  Selection sort is a neat algorithm, but it’s not very fast. Quicksort is a faster sorting algorithm that only takes O(n log n) time.
+  
+- `Recap` -- 
+  - Your computer’s memory is like a giant set of drawers.
+  - When you want to store multiple elements, use an array or a list.
+  - With an array, all your elements are stored right next to each other.
+  - With a list, elements are strewn all over, and one element stores the address of the next one.
+  - Arrays allow fast reads.
+  - Linked lists allow fast inserts and deletes.
+  - All elements in the array should be the same type (all ints, all doubles, and so on).
