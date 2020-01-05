@@ -54,3 +54,45 @@ loop. While the pile isn’t empty, grab a box and look through it:
   - A stack has two operations: push and pop.
   - All function calls go onto the call stack.
   - The call stack can get very large, which takes up a lot of memory.
+  
+  <br>
+  <br>
+  
+  ---
+  
+  <br>
+  <br>
+  
+  # Quicksort
+  
+  - You learned all about recursion in the last chapter. his chapter focuses on using your new skill to solve problems. We’ll explore divide and conquer (D&C), a well-known recursive technique for solving problems. D&C gives you a new way to think about solving problems. D&C is another tool in your toolbox. When you get a new problem, you don’t have to be stumped. Instead, you can ask, “Can I solve this if I use divide and conquer?”
+
+  At the end of the chapter, you’ll learn your irst major D&C algorithm: quicksort. Quicksort is a sorting algorithm, and a much faster one than selection sort 
+  
+  D&C algorithms are recursive algorithms. To solve a problem using D&C, there are two steps:
+    - 1 - Figure out the base case. his should be the simplest possible case.
+    - 2 - Divide or decrease your problem until it becomes the base case.
+    
+ 
+  To recap, here’s how D&C works:
+    - 1 - Figure out a simple case as the base case.
+    - 2 - Figure out how to reduce your problem and get to the base case.
+    
+  ### Quicksort
+  
+  - Quicksort is a sorting algorithm. It’s much faster than selection sort and is frequently used in real life. For example, the C standard library has a function called qsort, which is its implementation of quicksort. Quicksort also uses D&C.
+  
+    Remember, you’re using D&C. So you want to break down this array until you’re at the base case. Here’s how quicksort works. First, pick an element from the array. his element is called the pivot.
+    
+    We’ll talk about how to pick a good pivot later. For now, let’s say the irst item in the array is the pivot. Now ind the elements smaller than the pivot and the elements larger than the pivot. his is called partitioning. Now you have
+    - A sub-array of all the numbers less than the pivot
+    - The pivot
+    - A sub-array of all the numbers greater than the pivot
+    
+   The two sub-arrays aren’t sorted. hey’re just partitioned. But if they
+were sorted, then sorting the whole array would be pretty easy.
+
+  If the sub-arrays are sorted, then you can combine the whole thing like this—left array + pivot + right array—and you get a sorted array.
+  
+### Big O Notation revisited
+
