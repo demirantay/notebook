@@ -96,3 +96,17 @@ were sorted, then sorting the whole array would be pretty easy.
   
 ### Big O Notation revisited
 
+- Quicksort is unique because its speed depends on the pivot you choose. Check out selection sort, which you learned in chapter 2. It’s O(n2). hat’s a pretty slow algorithm.
+  
+  There’s another sorting algorithm called merge sort, which is
+O(n log n). Much faster! Quicksort is a tricky case. In the worst case, quicksort takes O(n2) time. It’s as slow as selection sort! But that’s the worst case. In the average case, quicksort takes O(n log n) time. 
+  - What do worst case and average case mean here?
+  - If quicksort is O(n log n) on average, but merge sort is O(n log n) always, why not use merge sort? Isn’t it faster?
+
+- `merge sort vs quick sort` -- You usually ignore that constant, because if two algorithms have diferent Big O times, the constant doesn’t matter. Take binary search and simple search, for example. Suppose both algorithms had these constants.
+
+  You might say, “Wow! Simple search has a constant of 10 milliseconds, but binary search has a constant of 1 second. Simple search is way faster!” Now suppose you’re searching a list of 4 billion elements. Here are the times.
+  
+  As you can see, binary search is still way faster. hat constant didn’t make a diference at all. But sometimes the constant can make a diference. Quicksort versus merge sort is one example. Quicksort has a smaller constant than merge sort. So if they’re both O(n log n) time, quicksort is faster. And quicksort is faster in practice because it hits the average case way more oten than the worst case.
+  
+- `average case vs. worst case` -- 
