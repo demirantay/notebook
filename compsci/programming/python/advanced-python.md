@@ -1,28 +1,8 @@
-# Python Objects and Data Structrue Basics
-
-<br>
-
----
-
-<br>
-
-# Python Comparison Operators
-
-<br>
-
----
-
-<br>
-
-# Python Statemtns
-
-<br>
-
----
-
-<br>
-
 # Methods and Functions
+
+- Read this file in order to understand more about `lambda` and `mapping` functionality of python. The reason I am not noting it down is because I do not usually use it. 
+
+  But it is not hard to understand. Read this file if : https://github.com/Pierian-Data/Complete-Python-3-Bootcamp/blob/master/03-Methods%20and%20Functions/05-Lambda-Expressions-Map-and-Filter.ipynb
 
 <br>
 
