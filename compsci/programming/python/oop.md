@@ -142,7 +142,60 @@
 
 ### Polymorphism
 
+- We've learned that while functions can take in different arguments, methods belong to the objects they act on. In Python, polymorphism refers to the way in which different object classes can share the same method name, and those methods can be called from the same place even though a variety of different objects might be passed in.
+  ```python
+  class Dog:
+      def __init__(self, name):
+          self.name = name
 
+      def speak(self):
+          return self.name+' says Woof!'
+
+  class Cat:
+      def __init__(self, name):
+          self.name = name
+
+      def speak(self):
+          return self.name+' says Meow!' 
+
+  niko = Dog('Niko')
+  felix = Cat('Felix')
+
+  print(niko.speak())   # says woof
+  print(felix.speak())  # says meow
+  ```
+  Here we have a Dog class and a Cat class, and each has a .speak() method. When called, each object's .speak() method returns a result unique to the object.
+  
+### Special Methods
+
+- Classes in Python can implement certain operations with special method names. These methods are not actually called directly but by Python specific language syntax. For example let's create a Book class:
+  ```python
+  class Book:
+    def __init__(self, title, author, pages):
+        print("A book is created")
+        self.title = title
+        self.author = author
+        self.pages = pages
+
+    def __str__(self):
+        return "Title: %s, author: %s, pages: %s" %(self.title, self.author, self.pages)
+
+    def __len__(self):
+        return self.pages
+
+    def __del__(self):
+        print("A book is destroyed")
+  ```
+  And now you do not have to call these methods off the class with the `className.methodName()` statements you can simply do:
+  ```python
+  book = Book("Python Rocks!", "Jose Portilla", 159)
+  #Special Methods
+  print(book)       # uses __str__
+  print(len(book))  # uses __len__
+  del book          # uses __del__
+  ```
+  
+  The `__init__()`, `__str__()`, `__len__()` and `__del__()` methods these special methods are defined by their use of underscores. They allow us to use Python specific functions on objects created through our class. There are lots of other special methods check out the documentation for more information on all of them.
 
 
 <br>
@@ -156,3 +209,122 @@
 <Br>
   
 # Advanced Object Oriented Programming
+
+- In this section we'll dive deeper into
+  - Multiple Inheritance
+  - The self keyword
+  - Method Resolution Order (MRO)
+  - Python's built-in super() function
+  
+### Inheritance Revisited
+
+- Recall that with Inheritance, one or more derived classes can inherit attributes and methods from a base class. This reduces duplication, and means that any changes made to the base class will automatically translate to derived classes. As a review:
+  ```python
+  class Animal:
+      def __init__(self, name):    # Constructor of the class
+          self.name = name
+
+      def speak(self):              # Abstract method, defined by convention only
+          raise NotImplementedError("Subclass must implement abstract method")
+
+
+  class Dog(Animal):
+      def speak(self):
+          return self.name+' says Woof!'
+
+  class Cat(Animal):
+      def speak(self):
+          return self.name+' says Meow!'
+
+  fido = Dog('Fido')
+  isis = Cat('Isis')
+
+  print(fido.speak())
+  print(isis.speak())
+  ```
+  In this example, the derived classes did not need their own `__init__` methods because the base class __init__ gets called automatically. However, if you do define an `__init__ `in the derived class, this will override the base:
+  
+  Well this may seem inefficent. And most of the it is is inefficient - why inherit from Animal if we can't use its constructor? The answer is to call the Animal `__init__` inside our own `__init__` so that we can use multiple inhertincases when we need to.
+  
+### Multiple Inheritance
+
+- Sometimes it makes sense for a derived class to inherit qualities from two or more base classes. Python allows for this with multiple inheritance.
+  ```python
+  class Car:
+      def __init__(self,wheels=4):
+          self.wheels = wheels
+          # We'll say that all cars, no matter their engine, have four wheels by default.
+
+  class Gasoline(Car):
+      def __init__(self,engine='Gasoline',tank_cap=20):
+          Car.__init__(self)
+          self.engine = engine
+          self.tank_cap = tank_cap # represents fuel tank capacity in gallons
+          self.tank = 0
+
+      def refuel(self):
+          self.tank = self.tank_cap
+
+
+  class Electric(Car):
+      def __init__(self,engine='Electric',kWh_cap=60):
+          Car.__init__(self)
+          self.engine = engine
+          self.kWh_cap = kWh_cap # represents battery capacity in kilowatt-hours
+          self.kWh = 0
+
+      def recharge(self):
+          self.kWh = self.kWh_cap
+  ```
+  So what happens if we have an object that shares properties of both Gasolines and Electrics? We can create a derived class that inherits from both!
+  ```python
+  lass Hybrid(Gasoline, Electric):
+    def __init__(self,engine='Hybrid',tank_cap=11,kWh_cap=5):
+        Gasoline.__init__(self,engine,tank_cap)
+        Electric.__init__(self,engine,kWh_cap)
+        
+        
+  prius = Hybrid()
+  print(prius.tank)  # 0
+  print(prius.kWh)   # 0
+  ```
+  
+### Method Resolution Order (MRO)
+
+- Things get complicated when you have several base classes and levels of inheritance. This is resolved using Method Resolution Order - a formal plan that Python follows when running object methods.
+
+  To illustrate, if classes B and C each derive from A, and class D derives from both B and C, which class is "first in line" when a method is called on D? Consider the following:
+  ```python
+  class A:
+    num = 4
+    
+  class B(A):
+      pass
+
+  class C(A):
+      num = 5
+
+  class D(B,C):
+      pass
+  ```
+  Schematically, the relationship looks like this:
+  ```
+       A
+     num=4
+    /     \
+   /       \
+   B       C
+  pass   num=5
+   \       /
+    \     /
+       D
+      pass
+  ```
+  Here num is a class attribute belonging to all four classes. So what happens if we call `D.num`?
+  ```
+  D.num
+  ```
+  You would think that D.num would follow B up to A and return 4. Instead, Python obeys the first method in the chain that defines num. The order followed is `[D, B, C, A, object]` where object is Python's base object class.
+  
+  There is a built-in funciton of python to better mange Method resolution orders and it is called `super()` you can read the documentation about it if you would like to.
+
