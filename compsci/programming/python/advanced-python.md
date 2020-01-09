@@ -59,31 +59,59 @@
 
 <bR>
 
-# Object Oriented Programming
-
-<br>
-
----
-
-<br>
-
-# Modules and Packages
-
-<Br>
-
----
-
-<br>
-
 # Errors and Exception Handling
 
-<br>
+- In this lecture we will learn about Errors and Exception Handling in Python.
 
----
+- `try and except` --  The basic terminology and syntax used to handle errors in Python are the try and except statements. The code which can cause an exception to occur is put in the try block and the handling of the exception is then implemented in the except block of code. The syntax follows:
+  ```
+  try:
+     You do your operations here...
+     ...
+  except ExceptionI:
+     If there is ExceptionI, then execute this block.
+  except ExceptionII:
+     If there is ExceptionII, then execute this block.
+     ...
+  else:
+     If there is no exception then execute this block. 
+  ```
+  Lets look at a code example:
+  ```python
+  try:
+      f = open('testfile','w')
+      f.write('Test write this')
+  except IOError:
+      # This will only check for an IOError exception and then execute this print statement
+      print("Error: Could not find file or read data")
+  else:
+      print("Content written successfully")
+      f.close()
+  ```
+  We could have also just said except: if we weren't sure what exception would occur. For example:
+  ```python
+  try:
+      f = open('testfile','r')
+      f.write('Test write this')
+  except:
+      # This will check for any exception and then execute this print statement
+      print("Error: Could not find file or read data")
+  ```
+  Great! Now we don't actually need to memorize that list of exception types! Now what if we kept wanting to run code after the exception occurred? This is where finally comes in.
 
-<br>
+- `finally` -- The finally: block of code will always be run regardless if there was an exception in the try code block. For example:
+  ```python
+  def askint():
+      try:
+          val = int(input("Please enter an integer: "))
+      except:
+          print("Looks like you did not enter an integer!")
 
-# Built-in Functions
+      finally:
+          print("Finally, I executed!")
+      print(val)
+  ```
+
 
 <br>
 
@@ -107,14 +135,6 @@
 
 <br>
 
-# Advanced Python Modules
-
-<br>
-
----
-
-<br>
-
 # Advanced python objects and data structures
 
 <br>
@@ -122,14 +142,6 @@
 ---
 
 <br>
-
-# Advanced OOP
-
-<br>
-
----
-
-<bR>
 
 # Parallel Processing
 
