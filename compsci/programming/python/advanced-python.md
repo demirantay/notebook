@@ -121,6 +121,118 @@
 
 # Python Decorators
 
+- Decorators can be thought of as functions which modify the functionality of another function. They help to make your code shorter and more "Pythonic".
+
+  Before we dive into python decorators lets remember that we can grab and use functions object instead of calling the function. Remember everything in python are objects. 
+  ```python
+  def hello():
+    print("greetinhs")
+    
+  f = hello   # <-- this assings the 'hello' functions object to variable f (<function __main__.hello>)
+  ```
+
+### Functions within functions
+
+- Great! So we've seen how we can treat functions as objects, now let's see how we can define functions inside of other functions:
+  ```python
+  def hello(name='Jose'):
+      print('The hello() function has been executed')
+
+      def greet():
+          return '\t This is inside the greet() function'
+
+      def welcome():
+          return "\t This is inside the welcome() function"
+
+      print(greet())
+      print(welcome())
+      print("Now we are back inside the hello() function")
+  ```
+
+### Returning Functions
+
+- Now let's see what function is returned if we set x = hello(), note how the empty parentheses means that name has been defined as Jose.
+  ```python
+  def hello(name='Jose'):
+  
+      def greet():
+          return '\t This is inside the greet() function'
+
+      def welcome():
+          return "\t This is inside the welcome() function"
+
+      if name == 'Jose':
+          return greet
+      else:
+          return welcome
+  ```
+  In the if/else clause we are returning `greet` and `welcome`, not `greet()` and `welcome()`. We return their objects not functions output.
+  
+  This is because when you put a pair of parentheses after it, the function gets executed; whereas if you don’t put parentheses after it, then it can be passed around and can be assigned to other variables without executing it.
+
+### Functions as Arguments
+
+- Now let's see how we can pass functions as arguments into other functions:
+  ```python
+  def hello():
+      return 'Hi Jose!'
+
+  def other(func):
+      print('Other code would go here')
+      print(func())
+  ```
+  Great! Note how we can pass the functions as objects and then use them within other functions. Now we can get started with writing our first decorator:
+  
+### Creating a Decorator 
+
+- In the previous example we actually manually created a Decorator. Here we will modify it to make its use case clear:
+  ```python
+  def new_decorator(func):
+
+      def wrap_func():
+          print("Code would be here, before executing the func")
+
+          func()
+
+          print("Code here will execute after the func()")
+
+      return wrap_func
+
+  def func_needs_decorator():
+      print("This function is in need of a Decorator")
+  ```
+  Noew lets use the code above and see what is the output of the code:
+  ```python
+  func_needs_decorator()
+  func_needs_decorator = new_decorator(func_needs_decorator)
+  func_needs_decorator()
+  ```
+  The output would be :
+  ```
+  This function is in need of a Decorator
+  
+  Code would be here, before executing the func
+  This function is in need of a Decorator
+  Code here will execute after the func()
+  ```
+
+  So what just happened here? A decorator simply wrapped the function and modified its behavior. Now let's understand how we can rewrite this code using the @ symbol, which is what Python uses for Decorators:
+  ```python
+  @new_decorator
+  def func_needs_decorator():
+      print("This function is in need of a Decorator")
+  ```
+  after that iff we run it again:
+  ```python
+  func_needs_decorator()
+  ```
+  we will get the output below
+  ```
+  Code would be here, before executing the func
+  This function is in need of a Decorator
+  Code here will execute after the func()
+  ```
+
 <Br>
 
 ---
@@ -128,22 +240,4 @@
 <br>
 
 # Python Generators
-
-<br>
-
----
-
-<br>
-
-# Advanced python objects and data structures
-
-<br>
-
----
-
-<br>
-
-# Parallel Processing
-
-
 
