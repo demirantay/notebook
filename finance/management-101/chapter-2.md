@@ -1,0 +1,3 @@
+# Consistency Is the Key: Building Trust in the Workplace
+
+- In the workplace, it’s all about consistency. If you’re not consistent in your practices, employees won’t trust you—or each other. One way to make sure everyone is on the same page is to distribute documents that outline the company’s policies and guidelines. If your company doesn’t have such documents already, don’t just leap to your keyboard to begin writing your own policies. Talk with your superiors first. A written policy, even something you send out as an e-mail or a memo, represents your company. Its content can have legal ramifications. Many companies even have policies that outline the process for writing new or revising existing policies and procedures.
