@@ -26,4 +26,6 @@
   - A unique path traverses from the root to each node.
   - If each node in the tree has a maximum of two children, we say that the tree is a binary tree.
   
-###
+### where i left off
+
+- https://runestone.academy/runestone/books/published/pythonds/Trees/ListofListsRepresentation.html
