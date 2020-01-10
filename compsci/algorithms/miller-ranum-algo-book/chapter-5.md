@@ -85,3 +85,22 @@
   
 # Sorting 
 
+- Sorting is the process of placing elements from a collection in some kind of order. For example, a list of words could be sorted alphabetically or by length. A list of cities could be sorted by population, by area, or by zip code. There are many, many sorting algorithms that have been developed and analyzed. This suggests that sorting is an important area of study in computer science. Sorting a large number of items can take a substantial amount of computing resources. 
+
+  Like searching, the efficiency of a sorting algorithm is related to the number of items being processed. For small collections, a complex sorting method may be more trouble than it is worth. The overhead may be too high. On the other hand, for larger collections, we want to take advantage of as many improvements as possible. In this section we will discuss several sorting techniques and compare them with respect to their running time.
+  
+<br>
+<br>
+<br>
+
+# Summary
+
+- To sum up:
+  - A sequential search is 𝑂(𝑛) for ordered and unordered lists.
+  - A binary search of an ordered list is 𝑂(log𝑛) in the worst case.
+  - Hash tables can provide constant time searching.
+  - A bubble sort, a selection sort, and an insertion sort are 𝑂(𝑛2) algorithms.
+  - A shell sort improves on the insertion sort by sorting incremental sublists. It falls between 𝑂(𝑛) and 𝑂(𝑛2).
+  - A merge sort is 𝑂(𝑛log𝑛), but requires additional space for the merging process.
+  - A quick sort is 𝑂(𝑛log𝑛), but may degrade to 𝑂(𝑛2) if the split points are not near the middle of the list. It does not require additional space.
+
