@@ -79,6 +79,7 @@ Try to specilize in a field such as these, just chose one or two. However, remem
 
 ### Programming
 
+ - [ ] Book: Computer Science j. glenn brookshear
  - [X] Read: The [TutorialsOnPoint](https://www.tutorialspoint.com/computer_programming/computer_programming_environment.htm) for a overview. Note this to README of the folder
  - [X] Course : [Helsinki MOOC's](http://mooc.fi/courses/2013/programming-part-1/material.html) for the desired language.
  - [ ] Book : SICP (Structured Interpretion of Computer Programs)-*(shelved it for later it is hard)*
@@ -104,7 +105,7 @@ Try to specilize in a field such as these, just chose one or two. However, remem
   - [X] Book: Grokking Algorithms: An illustrated guide for programmers and other curious people
   - [ ] Book: [PSAD using Python](https://runestone.academy/runestone/books/published/pythonds/index.html)
   - [ ] Book: [The Algorithm Design Manual](https://www.amazon.com/Algorithm-Design-Manual-Steven-Skiena/dp/1848000693/?pldnSite=1) There are [vidoes](http://www3.cs.stonybrook.edu/~algorith/video-lectures/) avilable too.
-  - [ ] Project: Craete a cheatsheet
+  - [ ] Book: CSLR introduction to Algorithms
   - [ ] Project: Impelement Algorithms and Data Structures in any language. [Do all of these here](https://github.com/trekhleb/javascript-algorithms) (You alread y started implementing them in a repo)  
  
 ### Operating Systems
