@@ -109,6 +109,7 @@ Try to specilize in a field such as these, just chose one or two. However, remem
  
 ### Operating Systems
 
+  > Research books like you did for computer architecture. Through reddit, forums ... etc. Then start.
    - [ ] Read: The [This tutorial](https://www.studytonight.com/operating-system/)
    - [ ] Book : [Operating Systems: Three Easy Pieces](http://pages.cs.wisc.edu/~remzi/OSTEP/)
    - [ ] Course : [ops-class.org : hack the kernel](https://www.ops-class.org/) You can go with the book simotenously.
@@ -118,6 +119,8 @@ Try to specilize in a field such as these, just chose one or two. However, remem
    
 ### Computer Networking
 
+  > Research books like you did for computer architecture. Through reddit, forums ... etc. Then start.
+   - [ ] Course: Do [khan academy: networking](https://www.khanacademy.org/computing/ap-computer-science-principles/the-internet) for a refresher before diving in
    - [ ] Read: The [This tutorial](https://www.studytonight.com/computer-networks/)
    - [ ] Book: [Computer Networks](https://www.amazon.com/gp/product/B006Y1BKGC/ref=dbs_a_def_rwt_hsch_vapi_taft_p1_i0)
    - [ ] Book : [Computer Networking: A Top-Down Approach](https://www.amazon.com/Computer-Networking-Top-Down-Approach-7th/dp/0133594149/?pldnSite=1) -- do the exersices
@@ -128,6 +131,7 @@ Try to specilize in a field such as these, just chose one or two. However, remem
    
  ### Databases
 
+  > Research books like you did for computer architecture. Through reddit, forums ... etc. Then start.
    - [ ] Read: The [TutorialsOnPoint](https://www.tutorialspoint.com/dbms/index.htm) for a overview. Note this to README of the folder
    - [ ] Read: Do this [tutorial](https://www.studytonight.com/dbms/)
    - [ ] Course : [Berkley Course](https://archive.org/details/UCBerkeley_Course_Computer_Science_186)
@@ -138,12 +142,14 @@ Try to specilize in a field such as these, just chose one or two. However, remem
 
 ### Languages and Compilers
 
+  > Research books like you did for computer architecture. Through reddit, forums ... etc. Then start.
    - [ ] Read: The [TutorialsOnPoint](https://www.tutorialspoint.com/compiler_design/index.htm) for a overview. Note this to README of the folder
    - [ ] Course : [Stanford Course](https://lagunita.stanford.edu/courses/Engineering/Compilers/Fall2014/about) read the [dragon book](https://www.amazon.com/Compilers-Principles-Techniques-Tools-2nd/dp/0321486811?pldnSite=1) on the units of stanford do not read all the book.
    - [ ] Project : Create a basic compiler for a langauge and build a simple language.
    
 ### Distributed Systems
 
+  > Research books like you did for computer architecture. Through reddit, forums ... etc. Then start.
    - [ ] Book : [Distibuted Systems, 3rd edition](https://www.distributed-systems.net/index.php/books/distributed-systems-3rd-edition-2017/)
    - [ ] Project: Do something to implement the theory you have learned.
    
