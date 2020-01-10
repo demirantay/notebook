@@ -50,4 +50,33 @@
   # nature of the binary search. I'll come back.
   ```
   
-### Hashing
+<br>
+<br>
+<br>
+  
+  
+## Hashing
+
+- In previous sections we were able to make improvements in our search algorithms by taking advantage of information about where items are stored in the collection with respect to one another. For example, by knowing that a list was ordered, we could search in logarithmic time using a binary search. In this section we will attempt to go one step further by building a data structure that can be searched in 𝑂(1) time. This concept is referred to as hashing.
+
+  A hash table is a collection of items which are stored in such a way as to make it easy to find them later. Each position of the hash table, often called a slot, can hold an item and is named by an integer value starting at 0. For example, we will have a slot named 0, a slot named 1, a slot named 2, and so on. Initially, the hash table contains no items so every slot is empty. We can implement a hash table by using a list with each element initialized to the special Python value `None`
+  ```python
+  [None, None, None, None, None, None, None, None, None, None]
+  ```
+  The mapping between an item and the slot where that item belongs in the hash table is called the `hash function`. The hash function will take any item in the collection and return an integer in the range of slot names, between 0 and m-1. Every `hash function` has their own benfits and performance standarts some are better than the others.
+  
+  A good hash function is what makes a good hash table. Sometimes the hash function can assign, two or more items would need to be in the same slot. This is referred to as a collision (it may also be called a “clash”). Clearly, collisions create a problem for the hashing technique. We will discuss them in detail later.
+  
+### Hash Functions 
+
+- Given a collection of items, a hash function that maps each item into a unique slot is referred to as a perfect hash function. If we know the items and the collection will never change, then it is possible to construct a perfect hash function. Unfortunately, given an arbitrary collection of items, there is no systematic way to construct a perfect hash function. Luckily, we do not need the hash function to be perfect to still gain performance efficiency
+
+  One way to always have a perfect hash function is to increase the size of the hash table so that each possible value in the item range can be accommodated. This guarantees that each item will have a unique slot. Although this is practical for small numbers of items, it is not feasible when the number of possible items is large. For example, if the items were nine-digit Social Security numbers, this method would require almost one billion slots.
+  
+- Our goal is to create a hash function that minimizes the number of collisions, is easy to compute, and evenly distributes the items in the hash table.
+
+> I skipped hashing and hash functions in this book. I cannot follow the epxlanations of this book.
+
+---
+
+
