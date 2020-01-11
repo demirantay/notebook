@@ -166,3 +166,31 @@
 
 # Memory Unit
 
+- A Memory Unit is a collection of storage cells together with associated circuits needed to transfer information in and out of storage.
+
+- `word` -- The memory stores __binary__ information(1's and 0's) in groups of __bits__ called __words__. A word in memory is an entity of bits that move in and out of storage as a unit. A memory word is a group of 1's and 0's and may represent a number, an instruction code, one or more alphanumeric characters, or any other binary coded information.
+
+- `byte` -- A group of eight __bits__ is called a __byte__. Most computer memories use words whose number of bits is a multiple of 8. Thus a 16-bit word contains two bytes, and a 32-bit word is made up of 4 bytes.
+
+### Internal Structure of a Memory Unit
+
+- The internal structure of a memory unit is specified by the __number of words__ it contains and the __number of bits__ in each word. Special input lines called __address lines__ select one particular word. Each word in memory is assigned an identification number, called an __address__, staring from 0 and continuing with 1, 2, 3, up to 2k - 1 where k is the number of address lines. The selection of a specific word inside the memory is done by applying the k-bit binary address to the address lines.
+
+  Computer memories may range from 1024 words, requiring an address of 10 bits, to 232 words, requiring 32 address bits. It is customary to refer to the number of words(or bytes) in a memory with one of the letters:
+  - `K(Kilo)` is equal to 2^10
+  - `M(Mega)` is equal to 2^20
+  - `G(Giga)` is equal to 2^30
+
+- Two major types of memories are used in computer systems: `Random Access Memory(RAM)` and `Read Only Memory(ROM)`. These semiconductor memories are classified into `Random Access Memories(RAMs)` and `Sequential Access Memories(SAMs)` based on access time.
+
+  Memories constructed with shift registers, `Charged Coupled Devices(CCDs)`, or bubble memories are examples of `SAMs`
+
+  `RAMs` are categorized into ROMs, `Read Mostly Memories(RMMs)`, and `Read Write Memories(RWMs)`.
+  
+  `ROMs` are of two types: `Masked Programmed ROMs` and `User Programmed PROMs`.
+  
+  Two types of `RMMs` are `Erasable and Programmable(EPROM)` and `Electrically Erasable(EEPROM)`.
+  
+  `RWMs` are S`tatic RAM(SRAM)` and `Dynamic RAM(DRAM)`. Static RAMs have memory cells as common Flip-Flops. Dynamic RAMs have memory cells that must be refreshed, read and written periodically to avoid loss of memory cells.
+
+
