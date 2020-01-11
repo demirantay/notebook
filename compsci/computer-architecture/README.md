@@ -114,7 +114,55 @@
   
 # Basics of Digital Components
 
+- In this tutorial we will learn about the basics of Digital computers. We will cover Integrated Circuits, Digital Logic family, Encoder and Decoder etc.
+
 ### Integrated Circuit (IC)
 
+- Complex digital circuits are constructed with integrated circuits. IC is a small silicon semiconductor crystal, called a chip, containing the electronic components for the digital gates. The various gates are interconnected inside the chip to form the required circuit. The chip is mounted in a ceramic or plastic container and the connections are welded to the external pins to form an IC. The number of pins of IC vary from 14 to several thousand. Each pin is identified by a unique number printed on its body.
+
+- Categories of Integrated Circuits:
+  - `SSI(Small Scale Integration Device)` -- The number of gates is usually less than 10.
+  - `MSI(Medium Scale Integration Device)` -- It contains 10 to 200 gates in a single package.
+  - `LSI(Large Scale Integration Device)` -- It contains gates between 200 to few thousand in a single package.
+  - `VLSI(Very Large Scale Integration Device)` -- It contains thousands of gates within a single package
+  - `ULSI(Ultra Large Scale Integration Device)` -- It contains hundred of thousands of gates within a single package 
+
 ### Digital Logic Family
+
+- IC's are also classified by the specific circuit technology to which they belong. The basic circuit in each technology is `NAND`, `NOR`, `NOT` gates.
+
+  The earliest logic family was __Resistor-transistor__ logic which used a resistor as input and a transistor as switching device.
+  
+  __Diode-transistor__ logic is a direct ancestor of the Transistor-transistor logic, and used a diode for logic functions while a transistor for amplifying functions.
+  
+### Decoder
+
+- A decoder is a combinational circuit that converts binary information from n coded inputs to 2^n outputs. Commercial decoders include one or more enable (E) inputs to control the operation of circuit. The decoder is enabled when E is equal to 1 and disabled when E is equal to 0.
+  - Used in code converters.
+  - Used to implement Boolean functions.
+
+### Encoder
+
+- An encoder is a digital circuit that performs the inverse operation of a decoder. An encoder has 2^n input lines and n output lines. It converts octal input to binary digits.
+
+  Types:
+  - Priority encoders.
+  - Decimal to BCD encoder.
+  - Octal to binary encoder.
+  - Hexadecimal to binary encoder.
+  
+### Multiplexer
+
+- A multiplexer is a combinational circuit that receives binary information from one of the 2^n input lines and directs it to a single output line.
+ 
+
+<br>
+<br>
+
+---
+
+<br>
+<br>
+
+# Memory Unit
 
