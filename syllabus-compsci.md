@@ -187,9 +187,15 @@ Try to specilize in a field such as these, just chose one or two. However, remem
 - [ ] GitHub for public repos, GitLab for private
 - [ ] Licenses
 - [ ] Semantatic Versioning
-- [ ] HTTP/HTTPS
 - [ ] Design Patterns (SOLID, KISS, YAGNI) 
 - [ ] Devolopment Cycle Designs
+- [ ] Internet:
+  - [ ] How Does Internet Work
+  - [ ] What is HTTP/HTTPs
+  - [ ] Browsers How do they work
+  - [ ] DNS and how it works
+  - [ ] What is Domain name
+  - [ ] What is hosting
 
 ### Packet #2 
 
@@ -278,29 +284,53 @@ Try to specilize in a field such as these, just chose one or two. However, remem
 ### Packet #1
 
 - [x] Programming Language -- (python, java, ruby .. etc)
-- [x] Practice -- (the language you have learned above)
 - [ ] Package Manager -- (pip, npm .. etc)
 - [ ] Standarts & Best Practices -- (PEP8 .. etc)
-- [ ] Testing -- (unit, functional, integration)
 - [ ] Relational Databases -- (Mysql, Postgresql .. etc)
-- [x] Framework -- (django, flask, rails .. etc)
+- [x] Web Framework -- (django, flask, rails .. etc)
 - [ ] NoSQL -- (MongoDB .. etc)
 - [ ] Caching -- (Redis .. etc)
-- [ ] REST API 
-- [ ] Auth: OAuth
-- [ ] Auth: Basic Authentication
-- [ ] Auth: Token Authentication
-- [ ] Auth: JWT
-- [ ] Auth: OpenID
-- [ ] Message Brokers -- (RabbitMQ, Kafka)
+- [ ] Learn abot API's
+  - [ ] REST (Roy Fleedings Paper)
+  - [ ] JSON's API
+  - [ ] Auth: OAuth
+  - [ ] Auth: Basic Authentication
+  - [ ] Auth: Token Authentication
+  - [ ] Auth: JWT
+  - [ ] Auth: OpenID
+- [ ] Web Security:
+  - [ ]
+  - [ ]
+  - [ ]
+  - [ ] Hashign Algorithms (scrypt, bcrypt, SHA Family ... etc.
+- [ ] Testing:
+  - [ ] Integration testing
+  - [ ] Unit testing 
+  - [ ] Functional testing
+  - [ ] CI/CD
+- [ ] Design and Development Principles:
+  - [ ] SOLID 
+  - [ ] KISS
+  - [ ] YAGNI
+  - [ ] DRY
+- [ ] Architectural Patterns:
+  - [ ] Monolithic Apps
+  - [ ] Microservices
+  - [ ] SOA
+  - [ ] Serverless ... etc
 - [ ] Search Engine -- (ElasticSearch, solr .. etc)
+- [ ] Message Brokers -- (RabbitMQ, Kafka)
 - [ ] Docker
-- [ ] Web Servers -- (Apache, Nginx)
-- [ ] Web Sockets
 - [ ] GraphQL 
 - [ ] Graph Databases
-- [ ] Finish the databases section at the top
-- [ ] Finish the theorotical section at the top. (compilers ..etc.)
+- [ ] Web Sockets
+- [ ] Web Servers -- (Apache, Nginx)
+- [ ] Scalability:
+  - [ ] Migration Strategies
+  - [ ] Horizontal vs Vertical Scaling
+  - [ ] Understanding Diff
+  - [ ] Metrics logging ... etc.
+- [ ] Finish the theoretical part at the top.
 
 ### Packet #2 
 
