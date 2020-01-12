@@ -205,6 +205,7 @@ Try to specilize in a field such as these, just chose one or two. However, remem
 - [ ] Feynman: HTTP/HTTPS
 - [ ] Feynman: Design Patterns (SOLID, KISS, YAGNI)
 - [ ] Feynman: Devolopment Cycle Designs
+- [ ] Feynman: Internet
 - [ ] Re-iterate through feynman boxes above
 
 ### Packet #3
@@ -221,7 +222,12 @@ Try to specilize in a field such as these, just chose one or two. However, remem
 
 - [x] HTML -- (basics, semantic html, basic seo, accessibility .. etc)
 - [x] CSS -- (basics, layouts, media queries, css3, responsivness .. etc)
-- [ ] JavaScript -- (basics, DOM manipulation, API/AJAX, ES6+/modular js, read YDKJS for hoisting .. etc)
+- [ ] JavaScript:
+  - [ ] Syntax and Basic Constucts
+  - [ ] DOM manipulation
+  - [ ] Learn fetching API / AJAX (XHR)
+  - [ ] ES+6 modular javascript
+  - [ ] Dive deep into other stuff ...
 - [ ] Package Managers --  (npm or yarn)
 - [ ] CSS Pre-precessor -- (Sass .. etc)
 - [ ] CSS Frameworks -- (Bootstrap .. etc)
@@ -231,7 +237,11 @@ Try to specilize in a field such as these, just chose one or two. However, remem
 - [ ] Build: Task Runners -- (npm scripts .. etc)
 - [ ] Framework -- (React .. etc)
 - [ ] CSS in JS -- (styled components, CSS modules .. etc)
-- [ ] Testing -- (jest, enzyme or cypress) (learn unit, functional, integration)
+- [ ] Testing:
+  - [ ] Jest
+  - [ ] React Testing library
+  - [ ] Crypress
+  - [ ] Enzyme
 - [ ] Progressive Web App -- (Learn what they are)
 - [ ] PWA ^ API's -- (Storage, Web Sockets, Service Workers, Location, Notifications, Payments, Credentials)
 - [ ] PWA ^ Methods -- (PRPL Pattern, RAIL model, Performance Metrics, Using Light House, Using Dev Tools)
@@ -289,7 +299,16 @@ Try to specilize in a field such as these, just chose one or two. However, remem
 - [ ] Relational Databases -- (Mysql, Postgresql .. etc)
 - [x] Web Framework -- (django, flask, rails .. etc)
 - [ ] NoSQL -- (MongoDB .. etc)
+- [ ] More on databases:
+  - [ ] ORM's
+  - [ ] ACID
+  - [ ] Transactions
+  - [ ] N+1 Problem
+  - [ ] Database Normalization
+  - [ ] Indexes and how they work
 - [ ] Caching -- (Redis .. etc)
+  - [ ] CDN
+  - [ ] Server Side (Redis)
 - [ ] Learn abot API's
   - [ ] REST (Roy Fleedings Paper)
   - [ ] JSON's API
@@ -299,9 +318,11 @@ Try to specilize in a field such as these, just chose one or two. However, remem
   - [ ] Auth: JWT
   - [ ] Auth: OpenID
 - [ ] Web Security:
-  - [ ]
-  - [ ]
-  - [ ]
+  - [ ] HTTPS
+  - [ ] Content Security Policy
+  - [ ] CORS
+  - [ ] SSL/TLS
+  - [ ] OWASP Security Risks
   - [ ] Hashign Algorithms (scrypt, bcrypt, SHA Family ... etc.
 - [ ] Testing:
   - [ ] Integration testing
@@ -339,11 +360,11 @@ Try to specilize in a field such as these, just chose one or two. However, remem
 - [ ] Feynman: Standarts & Best Practices
 - [ ] Feynman: Backend Testing
 - [ ] Feynman: Relational Databases
-- [ ] Feynman: Framework
+- [ ] Feynman: Web Framework
 - [ ] Feynman: NoSQL
 - [ ] Feynman: Caching
-- [ ] Feynman: REST API
-- [ ] Feynman: Authentication, oauth, token, jwt .. etc
+- [ ] Feynman: API's
+- [ ] Feynman: Web Security
 - [ ] Feynman: Message Brokers
 - [ ] Feynman: Search Engines
 - [ ] Feynman: Docker
@@ -351,11 +372,12 @@ Try to specilize in a field such as these, just chose one or two. However, remem
 - [ ] Feynman: Web Sockets
 - [ ] Feynman: GraphQL
 - [ ] Feynman: Graph Databases
+- [ ] Feynman: Scalability
 - [ ] Re-iterate through feynman boxes above
 
 ### Packet #3
 
-- [ ] Level 2: Write a project like py-psql for NoSQL and Redis ... etc. all of the databases you use and create a easy to use command line interface for them.
+- [ ] Level 2: Write a project like py-psql for NoSQL and Redis, mysql, sqlite ... etc. all of the databases you use and create a easy to use command line interface for them.
 - [ ] Level 3: Write bots to create fake data about poeple and crete a virtual life of bots. They will buy things , spend money on cinema, date, making kids ... etc. and all of the data will be updated. And create a admin panel (god-panel) that views all of the data with different search engines, message brokers ... manipulating the data with Redis, NosqL ... etc. Implement every checkbox learned above. And create panels for managing the mock-up data. One programmer panel, one business panel (miitating FX trade ... etc.)
 - [ ] Level 4: Create a very detailed Instagram clone with flask or django (already started just continue)
 - [ ] Level 5: Build a webserver
@@ -374,6 +396,8 @@ Try to specilize in a field such as these, just chose one or two. However, remem
 ## DevOps
 
 ### Packet #1
+
+> Update it for 2020
 
 - [ ] System Programming Languages -- (Python, C/C++, Go.. etc.)
 - [ ] Finish Algorithms section at the top
