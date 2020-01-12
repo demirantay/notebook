@@ -91,21 +91,60 @@
   
 # Logic gates
 
+- Binary information is represented in digital computers by physical quantities called signals. Electrical signals such as voltages exist throughout the computer in either one of the two recognizable states. The two states represent a binary variable that can be equal to 1 or 0.
+
+  For example, a particular digital computer may employ a signal of 3 volts to represent binary 1 and 0.5 volt to represent binary 0. Now the input terminals of digital circuits will accept binary signals of only 3 and 0.5 volts to represent binary input and output corresponding to 1 and 0, respectively.
+  
+  So now we know, that at core level, computer communicates in the form of 0 and 1, which is nothing but low and high voltage signals.
+  
+  But how are different operations performed on these signals? That is done using different logic Gates.
+
 ### What are gates ?
+
+- Gates are blocks of hardware that produce graphic symbol and its operation can be described by means of an algebraic expression. The input-output relationship of the binary variables for each gate can be represented in tabular form by a truth-table.
+
+  The most basic logic gates are AND and inclusive OR with multiple inputs and NOT with a single input. And you can build other gates from combining different basic gates such as XOR ...etc.
+  
+  The various logical gates are:
+  - AND
+  - OR
+  - NOT
+  - NAND
+  - NOR
+  - XOR
+  - XNOR
 
 ### AND Gate
 
+- The AND gate produces the AND logic function, that is, the output is 1 if input A and input B are both equal to 1; otherwise the output is 0.
+
 ### OR Gate
+
+- The OR gate produces the inclusive-OR function; that is, the output is 1 if input A or input B or both inputs are 1; otherwise, the output is 0.
 
 ### NOT(Inverter) Gate
 
+- The inverter circuit inverts the logic sense of a binary signal. It produces the NOT, or complement, function. So if you input 1 it becomes 0 and vice versa
+
 ### NAND Gate
+
+- The NAND function is the complement of the AND function, as indicated by the graphic symbol, which consists of an AND graphic symbol followed by a small circle. So it is esentially (NOT-invert(AND))
 
 ### NOR Gate
 
+- The NOR gate is the complement of the OR gate and uses an OR graphic symbol followed by a small circle. So it is essentially (NOT-invert(OR))
+
 ### Exclusive-OR Gate
 
+- The exclusive-OR gate has a graphic symbol similar to the OR gate except for the additional curved line on the input side.
+
+  The output of the gate is 1 if any input is 1 but excludes the combination when both inputs are 1. It is similar to an odd function; that is, its output is 1 if an odd number of inputs are 1.
+
 ### Exclusive-NOR Gate
+
+-   The exclusive-NOR is the complement of the exclusive-OR, as indicated by the small circle in the graphic symbol.
+
+  The output of this gate is 1 only if both the inputs are equal to 1 or both inputs are equal to 0.
 
 <Br>
 <br>
