@@ -94,8 +94,6 @@ Try to specilize in a field such as these, just chose one or two. However, remem
   - [ ] Book : Computer Organization and Design (start over)
   - [ ] Book: Computer Systems : A Programmers Perspective by Bryant and O’Hallaron
   - [ ] Book: Computer Architecture: A Quantitative Approach
-  - [ ] Project: Design and build a simple computer
-  - [ ] Do the 8bit computer https://eater.net/8bit
   
 ### Algorithms and Data Structures
  
