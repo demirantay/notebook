@@ -192,3 +192,21 @@
 
 <br>
 <br>
+
+# Computer Architecture: Instruction Codes
+
+- While a Program, as we all know, is, A set of instructions that specify the operations, operands, and the sequence by which processing has to occur. An instruction code is a group of bits that tells the computer to perform a specific operation part.
+
+### Instruction Code: Operation Code
+
+- The operation code of an instruction is a group of bits that define operations such as add, subtract, multiply, shift and compliment. The number of bits required for the operation code depends upon the total number of operations available on the computer
+
+### Instruction Code: Register Part
+
+- The operation must be performed on the data stored in registers. An instruction code therefore specifies not only operations to be performed but also the registers where the operands(data) will be found as well as the registers where the result has to be stored.
+
+- `Stored Program Organisation` -- The simplest way to organize a computer is to have `Processor Register` and instruction code with two parts. The first part specifies the operation to be performed and second specifies an address. The memory address tells where the operand in memory will be found.
+
+- `Common Bus System` -- The basic computer has 8 registers, a memory unit and a control unit. Paths must be provided to transfer data from one register to another. An efficient method for transferring data in a system is to use a Common Bus System. The output of registers and memory are connected to the common bus.
+
+
