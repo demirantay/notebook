@@ -155,3 +155,40 @@
 <br> 
 
 # Registers 
+
+- Register is a very fast computer memory, used to store data/instruction in-execution. A Register is a group of flip-flops with each flip-flop capable of storing one bit of information. An n-bit register has a group of n flip-flops and is capable of storing binary information of n-bits.
+
+  A register consists of a group of flip-flops and gates. The flip-flops hold the binary information and gates control when and how new information is transferred into a register. Various types of registers are available commercially. The simplest register is one that consists of only flip-flops with no external gates.
+  
+### Loading the Registers
+
+- The transfer of new information into a register is referred to as loading the register. If all the bits of register are loaded simultaneously with a common clock pulse than the loading is said to be done in parallel.
+
+### Register Transfer Language
+
+- The symbolic notation used to describe the micro-operation transfers amongst registers is called `Register transfer language`.
+
+  The term `register transfer` means the availability of `hardware logic circuits` that can perform a stated micro-operation and transfer the result of the operation to the same or another register.
+  
+  The word `language` is borrowed from programmers who apply this term to programming languages. This programming language is a procedure for writing symbols to specify a given computational process
+  
+  Following are some commonly used registers:
+  - 1 - `Accumulator`: This is the most common register, used to store data taken out from the memory. 
+  - 2 - `General Purpose Registers`: This is used to store data intermediate results during program execution. It can be accessed via assembly programming.
+  - 3 - `Special Purpose Registers`: Users do not access these registers. These registers are for Computer system,
+    - `MAR`: Memory Address Register are those registers that holds the address for memory unit.
+    - `MBR`: Memory Buffer Register stores instruction and data received from the memory and sent from the memory.
+    - `PC`: Program Counter points to the next instruction to be executed.
+    - `IR`: Instruction Register holds the instruction to be executed.
+
+### Arithmetic Logical Unit
+
+- Instead of having individual registers performing the micro-operations, computer system provides a number of registers connected to a common unit called as Arithmetic Logical Unit (ALU). ALU is the main and one of the most important unit inisde CPU of computer. All the logical and mathematical operations of computer are performed here. The contents of specific register is placed in the in the input of ALU. ALU performs the given operation and then transfer it to the destination register.
+
+<br>
+<br>
+
+---
+
+<br>
+<br>
