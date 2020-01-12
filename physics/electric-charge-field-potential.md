@@ -1,9 +1,6 @@
 # Electric charge, field, and potential
 
-<br>
-<br>
-
----
+> These notes are taken from the khan academy
 
 <br>
 <br>
@@ -47,3 +44,9 @@
 <br>
 
 # Electric Field 
+
+### Electric Field Definition
+
+### Electric Field Direction
+
+### Magnitude of electric field created by a charge
