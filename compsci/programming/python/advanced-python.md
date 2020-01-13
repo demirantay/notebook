@@ -241,3 +241,8 @@
 
 # Python Generators
 
+- In this section of the course we will be learning the difference between iteration and generation in Python and how to construct our own Generators with the yield statement. Generators allow us to generate as we go along, instead of holding everything in memory.
+
+- I have never had to use this functionality of python at the moment that is why I am skipping this part for now until I become more familar with python generators. Here is where I left off:
+  - https://github.com/Pierian-Data/Complete-Python-3-Bootcamp/blob/master/11-Python%20Generators/01-Iterators%20and%20Generators.ipynb
+
