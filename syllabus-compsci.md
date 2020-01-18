@@ -222,12 +222,11 @@ Try to specilize in a field such as these, just chose one or two. However, remem
 
 - [x] HTML -- (basics, semantic html, basic seo, accessibility .. etc)
 - [x] CSS -- (basics, layouts, media queries, css3, responsivness .. etc)
-- [ ] JavaScript:
-  - [ ] Syntax and Basic Constucts
-  - [ ] DOM manipulation
-  - [ ] Learn fetching API / AJAX (XHR)
-  - [ ] ES+6 modular javascript
-  - [ ] Dive deep into other stuff ...
+- [ ] JavaScript: Syntax and Basic Constucts
+- [ ] Javascript: DOM manipulation
+- [ ] JavaSCript: Learn fetching API / AJAX (XHR)
+- [ ] JavaScript: ES+6 modular javascript
+- [ ] JavaScript: Dive deep into other stuff ...
 - [ ] Package Managers --  (npm or yarn)
 - [ ] CSS Pre-precessor -- (Sass .. etc)
 - [ ] CSS Frameworks -- (Bootstrap .. etc)
@@ -238,10 +237,10 @@ Try to specilize in a field such as these, just chose one or two. However, remem
 - [ ] Framework -- (React .. etc)
 - [ ] CSS in JS -- (styled components, CSS modules .. etc)
 - [ ] Testing:
-  - [ ] Jest
-  - [ ] React Testing library
-  - [ ] Crypress
-  - [ ] Enzyme
+- [ ] Testing Jest
+- [ ] Testing React Testing library
+- [ ] Testing Crypress
+- [ ] Testing Enzyme
 - [ ] Progressive Web App -- (Learn what they are)
 - [ ] PWA ^ API's -- (Storage, Web Sockets, Service Workers, Location, Notifications, Payments, Credentials)
 - [ ] PWA ^ Methods -- (PRPL Pattern, RAIL model, Performance Metrics, Using Light House, Using Dev Tools)
@@ -299,46 +298,40 @@ Try to specilize in a field such as these, just chose one or two. However, remem
 - [ ] Relational Databases -- (Mysql, Postgresql .. etc)
 - [x] Web Framework -- (django, flask, rails .. etc)
 - [ ] NoSQL -- (MongoDB .. etc)
-- [ ] More on databases:
-  - [ ] ORM's
-  - [ ] ACID
-  - [ ] Transactions
-  - [ ] N+1 Problem
-  - [ ] Database Normalization
-  - [ ] Indexes and how they work
+- [ ] More on databases: ORM's
+- [ ] More on databases: ACID
+- [ ] More on databases: Transactions
+- [ ] More on databases: N+1 Problem
+- [ ] More on databases: Data Normalization
+- [ ] More on databases: Indexes and how they work
 - [ ] Caching -- (Redis .. etc)
-  - [ ] CDN
-  - [ ] Server Side (Redis)
+- [ ] Cachgin: CDN
+- [ ] Caching: Server Side (Redis)
+- [ ] caching: Client side
 - [ ] Learn abot API's
-  - [ ] REST (Roy Fleedings Paper)
-  - [ ] JSON's API
-  - [ ] Auth: OAuth
-  - [ ] Auth: Basic Authentication
-  - [ ] Auth: Token Authentication
-  - [ ] Auth: JWT
-  - [ ] Auth: OpenID
-- [ ] Web Security:
-  - [ ] HTTPS
-  - [ ] Content Security Policy
-  - [ ] CORS
-  - [ ] SSL/TLS
-  - [ ] OWASP Security Risks
-  - [ ] Hashign Algorithms (scrypt, bcrypt, SHA Family ... etc.
-- [ ] Testing:
-  - [ ] Integration testing
-  - [ ] Unit testing 
-  - [ ] Functional testing
-  - [ ] CI/CD
-- [ ] Design and Development Principles:
-  - [ ] SOLID 
-  - [ ] KISS
-  - [ ] YAGNI
-  - [ ] DRY
+- [ ] API: REST (Roy Fleedings Paper)
+- [ ] API: JSON's API
+- [ ] API: Auth -- OAuth
+- [ ] API: Auth -- Basic Authentication
+- [ ] API Auth -- Token Authentication
+- [ ] API Auth -- JWT
+- [ ] API Auth -- OpenID
+- [ ] Web Security: HTTPS
+- [ ] Web Security: Content Security Policy
+- [ ] Web Security: CORS
+- [ ] Web Security: SSL/TLS
+- [ ] Web Security: OWASP Security Risks
+- [ ] Web security: Hashign Algorithms (scrypt, bcrypt, SHA Family ... etc.
+- [ ] Testing: Integration testing
+- [ ] Testing: Unit testing 
+- [ ] Testing: Functional testing
+- [ ] Testing: CI/CD
+- [ ] Design and Development Principles (SOLID, KISS, YAGNI, DRY)
 - [ ] Architectural Patterns:
-  - [ ] Monolithic Apps
-  - [ ] Microservices
-  - [ ] SOA
-  - [ ] Serverless ... etc
+- [ ] Architectural Patterns: Monolithic Apps
+- [ ] Architectural Patterns: Microservices
+- [ ] Architectural Patterns: SOA
+- [ ] Architectural Patterns: Serverless ... etc
 - [ ] Search Engine -- (ElasticSearch, solr .. etc)
 - [ ] Message Brokers -- (RabbitMQ, Kafka)
 - [ ] Docker
@@ -346,11 +339,10 @@ Try to specilize in a field such as these, just chose one or two. However, remem
 - [ ] Graph Databases
 - [ ] Web Sockets
 - [ ] Web Servers -- (Apache, Nginx)
-- [ ] Scalability:
-  - [ ] Migration Strategies
-  - [ ] Horizontal vs Vertical Scaling
-  - [ ] Understanding Diff
-  - [ ] Metrics logging ... etc.
+- [ ] Scalability: Migration Strategies
+- [ ] Scalability: Horizontal vs Vertical Scaling
+- [ ] Scalability: Understanding Diff
+- [ ] Scalability: Metrics logging ... etc.
 - [ ] Finish the theoretical part at the top.
 
 ### Packet #2 
