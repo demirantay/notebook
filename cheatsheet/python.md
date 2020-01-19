@@ -52,31 +52,22 @@ My cheatsheet on the python language
 
 ### Container Indexing
 
-### Boolean Logic 
-
-### Maths
-
-### Module Imports
-
-### Conditional Statements
-
-### Exeption on Errors
-
-### Conditional Loops
-
-### Iterative Loops 
-
-### Loop Control
-
-### Iniput, Display
+- There are vaarious ways to access(index) the variables in the list, Lets say that we have this array and we will use it to showcase the various ways to access a list:
+  ```python
+  arr = [1, 2, 3, 4, 5]
+  ```
+- `len(arr)` -- get you the item count or the length of the arrray (5)
+- `arr[0]` -- accesses the first element from the head (while using positive numbers index starts from 0)
+- `arr[-1]` --  accesess the first element from the tail (While using negative numbers index start from -1)
+- `arr[:3]` -- prints you [1, 2, 3]
+- `arr[:-1]` -- prints you [1, 2, 3, 4]
+- `arr[1:-1]` -- prints you [2, 3, 4]
+- `arr[::2]` -- prints you [1, 3, 5]
+> The main logic behind the slicing is this:  lst[start slice:end slice:step]
 
 ### Generic Operations on Containers
 
 ### Operations on List
-
-### Integer Sequence 
-
-### Function Definition
 
 ### Operations on Dictionaries
 
@@ -84,5 +75,4 @@ My cheatsheet on the python language
 
 ### Operations on Strings 
 
-### Files
 
