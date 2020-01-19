@@ -2,27 +2,6 @@
 
 My cheatsheet on the python language
 
-### Primitive Types
-
-- The base types in python are: `int`, `float`, `bool`, `str`, `bytes`
-  ```python
-  i = 100
-  f = 3.14
-  b = True
-  s = "hey"
-  ```
-  
-### Variable Assignments
-
-- There are various easy-to-use variable assignments:
-  ```python
-  a=b=c=0              # assignment to same value
-  y, z, r = 10, 3, 1   # multiple assignments
-  a, b = b, a          # values swap
-  a += 1               # fast increment (-, *, /)
-  del foo              # remove name foo
-  ```
-
 ### Container Types
 
 - __ordered sequences__, fast index access, repeatable values:
@@ -66,6 +45,11 @@ My cheatsheet on the python language
 > The main logic behind the slicing is this:  lst[start slice:end slice:step]
 
 ### Generic Operations on Containers
+
+- `len(c)` -- Returns you the count or the length of the container
+- `min(c)` -- returnss yout the smallest minimum item of the container
+- `max(c)` -- returns you the maximum biggest item of the container
+- `sum(c)` -- returns you the sum of all itmes in the container
 
 ### Operations on List
 
