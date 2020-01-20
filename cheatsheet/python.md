@@ -50,13 +50,66 @@ My cheatsheet on the python language
 - `min(c)` -- returnss yout the smallest minimum item of the container
 - `max(c)` -- returns you the maximum biggest item of the container
 - `sum(c)` -- returns you the sum of all itmes in the container
+- `sorted(c)` -- returns you a copy of the container in a sorted fashion
+- `enumarate(c)` --  iterator on (index, value)
+- `zip(c1, c2, ...)` -- iterator on tuples containing c^i items at same index
+- `all(c)` -- True if all c items evaluated to true, else False
+- `any(c)` -- True if at least one item of c evaluated true, else False
+> Note: For dictionaries and sets, these operations use keys. And you can find more on docs
 
 ### Operations on List
 
+- `lst.append(val)` -- add item at end
+- `lst.extend(seq)` -- add sequence of items at end
+- `lst.insert(idx,val)` -- insert item at index
+- `lst.remove(val)` -- remove first item with value val
+- `lst.pop([idx])` -- remove & return item at index idx (default last)
+- `lst.reverse()` -- reverses the list
+- `lst.sort()` -- sorts the list
+
+> There are a lot of methods on lists check them on docs
+
 ### Operations on Dictionaries
+
+- `clear()` -- 	Removes all Items
+- `copy()` -- Returns Shallow Copy of a Dictionary
+- `fromkeys()` -- creates dictionary from given sequence
+- `get()` -- Returns Value of The Key
+- `items()` -- returns view of dictionary's (key, value) pair
+- `keys()` -- Returns View Object of All Keys
+- `popitem()` -- 	Returns & Removes Element From Dictionary
+- `setdefault()` -- Inserts Key With a Value if Key is not Present
+- `pop()` -- removes and returns element having given key
+- `values()` -- returns view of all values in dictionary
+- `update()` -- Updates the Dictionary
+
+> There are a lot of methods on dictionaries check them on docs
 
 ### Operations on Sets 
 
+- `s.update(s2)` -- updates the set with anoter set given as a parameter
+- `s.add(key) ` -- adds a key to the set
+- `s.discard(key)` -- discardes a key from the set
+- `s.pop()` -- deletes the last set or you can give an index to it
+- `s.copy()` -- copies the set
+- `s.remove(key)` -- removes a key from the set in the given index
+- `s.clear()` -- deletes all the keys inside the set
+
+> There are a lot of methods for sets check them on docs
+
 ### Operations on Strings 
 
+- `capitalize()` -- Converts first character to Capital Letter
+- `center()` -- Pads string with specified character
+- `count()` --  returns occurrences of substring in string
+- `endswith()` -- Checks if String Ends with the Specified Suffix
+- `find()` -- Returns the index of first occurrence of substring
+- `format()` -- formats string into nicer output
+- `index()` -- Returns Index of Substring
+- `join()` -- Returns a Concatenated String
+- `lower()` -- returns lowercased string
+- `upper()` -- returns uppercased string
+- `swapcase()` -- swap uppercase characters to lowercase; vice versa
+- `strip()` -- Removes Both Leading and Trailing Characters
 
+> There are a lot of methods for strings check them on docs
