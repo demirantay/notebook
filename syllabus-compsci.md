@@ -293,10 +293,10 @@ Try to specilize in a field such as these, just chose one or two. However, remem
 ### Packet #1
 
 - [x] Programming Language -- (python, java, ruby .. etc)
-- [ ] Package Manager -- (pip, npm .. etc)
+- [x] Package Manager -- (pip, npm .. etc)
 - [ ] Standarts & Best Practices -- (PEP8 .. etc)
 - [ ] Relational Databases -- (Mysql, Postgresql .. etc)
-- [x] Web Framework -- (django, flask, rails .. etc)
+- [ ] Web Framework -- (django, flask, rails .. etc)
 - [ ] NoSQL -- (MongoDB .. etc)
 - [ ] More on databases: ORM's
 - [ ] More on databases: ACID
