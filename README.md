@@ -12,8 +12,8 @@
 
 #### Backend
 
-- python: ...
-- pip: ...
+- python: [click here](./cheatsheet/python.md)
+- pip: [click here](./cheatsheet/pip.md)
 
 #### DevOps
 
