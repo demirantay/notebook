@@ -156,7 +156,14 @@ condition
 - `TRIGGER_TYPE` -- 
   - __FOR EACH ROW__
   - __FOR EACH STATEMENT__
-
+- Create a trigger invoked before a new row is inserted into the person table:
+  ```
+  CREATE TRIGGER before_insert_person
+  BEFORE INSERT
+  ON person FOR EACH ROW
+  EXECUTE stored_procedure;
+  ```
+- `DROP TRIGGER trigger_name;` -- Delete a specific trigger
 
   
 
