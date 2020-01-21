@@ -14,6 +14,7 @@
 
 - python: [click here](./cheatsheet/python.md)
 - pip: [click here](./cheatsheet/pip.md)
+- pep8: [click here](./cheatsheet/pep8.py)
 
 #### DevOps
 
