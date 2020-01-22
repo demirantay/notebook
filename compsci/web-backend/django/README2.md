@@ -210,22 +210,122 @@
 
 # Caching
 
+- To cache something is to save the result of an expensive calculation, so that you don’t perform it the next time you need it. Following is a pseudo code that explains how caching works −
+	```
+	given a URL, try finding that page in the cache
+	
+	if the page is in the cache:
+   return the cached page
+	else:
+   generate the page
+   save the generated page in the cache (for next time)
+   return the generated page
+	```
+	Django comes with its own caching system that lets you save your dynamic pages, to avoid calculating them again when needed. The good point in Django Cache framework is that you can cache −
+		- The output of a specific view.
+		- A part of a template.
+		- Your entire site.
+		
+	To use cache in Django, first thing to do is to set up where the cache will stay. The cache framework offers different possibilities - cache can be saved in database, on file system or directly in memory. Setting is done in the settings.py file of your project.
+	
+### Setting Up Cache in Database
 
-<br>
-<br>
+- Just add the following in the project settings.py file −
+	```python
+	CACHES = {
+		 'default': {
+				'BACKEND': 'django.core.cache.backends.db.DatabaseCache',
+				'LOCATION': 'my_table_name',
+		 }
+	}
+	```
+	For this to work and to complete the setting, we need to create the cache table 'my_table_name'. For this, you need to do the following −
+	```
+	$ python manage.py createcachetable
+	```
 
-# Comments
+### Setting Up Cache in File System
 
+- Just add the following in the project settings.py file −
+	```python
+	CACHES = {
+		 'default': {
+				'BACKEND': 'django.core.cache.backends.filebased.FileBasedCache',
+				'LOCATION': '/var/tmp/django_cache',
+		 }
+	}
+	```
 
+### Setting Up Cache in Memory
+
+- I did not get this part on how to setup on memory: https://www.tutorialspoint.com/django/django_caching.htm
+
+### Caching a View
+
+- If you don’t want to cache the entire site you can cache a specific view. This is done by using the cache_page decorator that comes with Django. Let us say we want to cache the result of the viewArticles view −
+	```python
+	from django.views.decorators.cache import cache_page
+
+	@cache_page(60 * 15)
+	def viewArticles(request, year, month):
+		 text = "Displaying articles of : %s/%s"%(year, month)
+		 return HttpResponse(text)
+	```
+	- Caching a view can also directly be done in the url.py file. Then the following has the same result as the above. Just edit your myapp/url.py file and change the related mapped URL (above) to be −
+	```python
+	urlpatterns = patterns(
+	 'myapp.views',
+   cache_page(60 * 15)('viewArticles'), name = 'articles'),)
+	```
+
+### Caching a Template Fragment
+
+- You can also cache parts of a template, this is done by using the cache tag. Let's take our hello.html template −
+	```html
+	{% load cache %}
+	{% extends "main_template.html" %}
+	{% block title %}My Hello Page{% endblock %}
+	{% cache 500 content %}
+	{% block content %}
+
+	Hello World!!!<p>Today is {{today}}</p>
+	We are
+	{% if today.day == 1 %}
+
+	the first day of month.
+	{% elif today == 30 %}
+
+	the last day of month.
+	{% else %}
+
+	I don't know.
+	{%endif%}
+
+	<p>
+		 {% for day in days_of_week %}
+		 {{day}}
+	</p>
+
+	{% endfor %}
+	{% endblock %}
+	{% endcache %}
+	```
+	
 <br>
 <br>
 
 # RSS
 
+- I am skipping RSS Feeds for now since I am not that familiar with the logic behind the tech. Syntax can always be learned. Here is the page I skipped:
+	- https://www.tutorialspoint.com/django/django_rss.htm
+
 <br>
 <br>
 
 # AJAX
+
+- I am skipping Ajax for now since I do not use it on a daily basis at this point in time. Here is the page I skipped:
+	- https://www.tutorialspoint.com/django/django_ajax.htm
 
 
 
