@@ -98,64 +98,134 @@
 
 - It is generally useful for a web app to be able to upload files (profile picture, songs, pdf, words.....). Let's discuss how to upload files in this chapter.
 
-- You can use the PIL ajdnuse a `ImageField` on your forms and models. This note is too specific to go to a README file, So I will explain this in more depth and  add more notes to it in my note file about forms. Or you can use the official docs
+- You can use the PIL ajdnuse a `ImageField` on your forms and models. Now let's create a "Profile" model to save our uploaded profile. This is done in myapp/models.py −
+  ```python
+  class Profile(models.Model):
+   name = models.CharField(max_length = 50)
+   picture = models.ImageField(upload_to = 'pictures')
+  ```
+  As you can see for the model, the ImageField takes a compulsory argument: `upload_to`. This represents the place on the hard drive where your images will be saved. Note that the parameter will be added to the MEDIA_ROOT option defined in your settings.py file.
 
-<br>
 <br>
 <br>
 
 # Cookies Handling
 
-- I am not going to note about cookies at the moment ... Maybe later on a different file
+- Sometimes you might want to store some data on a per-site-visitor basis as per the requirements of your web application. Always keep in mind, that cookies are saved on the client side and depending on your client browser security level, setting cookies can at times work and at times might not.
 
-- I will work more on these in the django playground
+  Cookies are set thorugh `.set_cookie()` functionality, and it is called on the response and not on the request object:
+  ```python 
+  def login(request):
+   username = "not logged in"
+   
+   if request.method == "POST":
+      #Get the posted form
+      MyLoginForm = LoginForm(request.POST)
+   
+   if MyLoginForm.is_valid():
+      username = MyLoginForm.cleaned_data['username']
+   else:
+      MyLoginForm = LoginForm()
+   
+   response = render_to_response(request, 'loggedin.html', {"username" : username}, 
+      context_instance = RequestContext(request))
+   
+   response.set_cookie('last_connection', datetime.datetime.now())
+   response.set_cookie('username', datetime.datetime.now())
+	
+   return response
+  ```
 
 <br>
 <br>
 
 # Sessions
 
-- I am not going to note about sessions at the moment ... Maybe later on a different file
+- As discussed earlier, we can use client side cookies to store a lot of useful data for the web app. We have seen before that we can use client side cookies to store various data useful for our web app. This leads to lot of security holes depending on the importance of the data you want to save.
 
-- I will work more on these in the django playground
-
+  For security reasons, Django has a session framework for cookies handling. Sessions are used to abstract the receiving and sending of cookies, data is saved on server side (like in database), and the client side cookie just has a session ID for identification. Sessions are also useful to avoid cases where the user browser is set to ‘not accept’ cookies.
+  
+  In Django, enabling session is done in your project settings.py, by adding some lines to the MIDDLEWARE_CLASSES and the INSTALLED_APPS options:
+  ```python
+  # middle ware
+  'django.contrib.sessions.middleware.SessionMiddleware'
+  ```
+  and add this to installed_apps:
+  ```python
+  'django.contrib.sessions'
+  ```
+  By default, Django saves session information in database (django_session table or collection), but you can configure the engine to store information using other ways like: in `file` or in `cache`
+  
+  When session is enabled, every request (first argument of any view in Django) has a session (dict) attribute.
+  
+  Let's create a simple sample to see how to create and save sessions:
+  ```python
+  def login(request):
+   username = 'not logged in'
+   
+   if request.method == 'POST':
+      MyLoginForm = LoginForm(request.POST)
+      
+      if MyLoginForm.is_valid():
+         username = MyLoginForm.cleaned_data['username']
+         request.session['username'] = username
+      else:
+         MyLoginForm = LoginForm()
+			
+   return render(request, 'loggedin.html', {"username" : username}
+  ```
+  Then let us create formView view for the login form, where we won’t display the form if cookie is set −
+  ```python
+  def formView(request):
+   if request.session.has_key('username'):
+      username = request.session['username']
+      return render(request, 'loggedin.html', {"username" : username})
+   else:
+      return render(request, 'login.html', {})
+  ```
+  Now finally lets create a logout system. Let's create a simple logout view that erases our cookie.:
+  ```python
+  def logout(request):
+   try:
+      del request.session['username']
+   except:
+      pass
+   return HttpResponse("<strong>You are logged out.</strong>")
+  ```
+  or you can check the dictionary:
+  ```python
+  if "username" in request.session:
+    del request.session["username"]
+  ```
+  
+- We have seen how to store and access a session, but it's good to know that the session attribute of the request have some other useful actions like −
+  - `set_expiry (value)` − Sets the expiration time for the session.
+  - `get_expiry_age()` − Returns the number of seconds until this session expires.
+  - `get_expiry_date()` − Returns the date this session will expire.
+  - `clear_expired()` − Removes expired sessions from the session store.
+  - `get_expire_at_browser_close()` − Returns either True or False, depending on whether the user’s session cookies have expired when the user’s web browser is closed.
 
 <br>
 <br>
 
 # Caching
 
-- I am not going to note about sessions at the moment ... Maybe later on a different file
-
-- I will work more on these in the django playground
 
 <br>
 <br>
 
 # Comments
 
-- I am not going to note about sessions at the moment ... Maybe later on a different file
-
-- I will work more on these in the django playground
 
 <br>
 <br>
 
 # RSS
 
-- I am not going to note about sessions at the moment ... Maybe later on a different file
-
-- I will work more on these in the django playground
-
 <br>
 <br>
 
 # AJAX
-
-- I am not going to note about sessions at the moment ... Maybe later on a different file
-
-- I will work more on these in the django playground
-
 
 
 
