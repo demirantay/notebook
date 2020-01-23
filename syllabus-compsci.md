@@ -296,7 +296,7 @@ Try to specilize in a field such as these, just chose one or two. However, remem
 - [x] Package Manager -- (pip, npm .. etc)
 - [x] Standarts & Best Practices -- (PEP8 .. etc)
 - [x] Relational Databases -- (Mysql, Postgresql .. etc)
-- [ ] Web Framework -- (django, flask, rails .. etc)
+- [x] Web Framework -- (django, flask, rails .. etc)
 - [ ] NoSQL -- (MongoDB .. etc)
 - [ ] More on databases: ORM's
 - [ ] More on databases: ACID
