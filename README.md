@@ -16,6 +16,7 @@
 - pip: [click here](./cheatsheet/pip.md)
 - pep8: [click here](./cheatsheet/pep8.py)
 - postgresql: [click here](./cheatsheet/postgresql.md)
+- django: [click here](./cheatsheet/django.md)
 
 #### DevOps
 
