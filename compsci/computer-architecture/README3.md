@@ -81,11 +81,25 @@
 
 # Parallel Processing
 
+- Instead of processing each instruction sequentially, a parallel processing system provides concurrent data processing to increase the execution time. In this the system may have two or more ALU's and should be able to execute two or more instructions at the same time. The purpose of parallel processing is to speed up the computer processing capability and increase its throughput.
+
+- Parallel processing can be viewed from various levels of complexity. At the lowest level, we distinguish between parallel and serial operations by the type of registers used. At the higher level of complexity, parallel processing can be achieved by using multiple functional units that perform many operations simultaneously.
+
 ### Data Transfer Modes of a Computer System
 
-- `SISD` -- 
+- According to the data transfer mode, computer can be divided into 4 major groups:
+  - 1 - SISD
+  - 2 - SIMD
+  - 3 - MISD 
+  - 4 - MIMD
 
-...
+- `SISD -- (Single Instruction Stream, Single Data Stream))` -- It represents the organization of a single computer containing a control unit, processor unit and a memory unit. Instructions are executed sequentially. It can be achieved by pipelining or multiple functional units.
+
+- `SIMD (Single Instruction Stream, Multiple Data Stream)` -- It represents an organization that includes multiple processing units under the control of a common control unit. All processors receive the same instruction from control unit but operate on different parts of the data.
+
+- `MISD (Multiple Instruction Stream, Single Data Stream)` -- It consists of a single computer containing multiple processors connected with multiple control units and a common memory unit. It is capable of processing several instructions over single data stream simultaneously
+
+- `MIMD (Multiple Instruction Stream, Multiple Data Stream` -- It represents the organization which is capable of processing several programs at same time. It is the organization of a single computer containing multiple processors connected with multiple control units and a shared memory unit. 
 
 <br>
 <Br>
@@ -96,3 +110,40 @@
 <br>
 
 # Pipelining 
+
+- Pipelining is the process of accumulating instruction from the processor through a pipeline. It allows storing and executing instructions in an orderly process. It is also known as pipeline processing.
+
+  Pipelining is a technique where multiple instructions are overlapped during execution. Pipeline is divided into stages and these stages are connected with one another to form a pipe like structure. Instructions enter from one end and exit from another end.
+
+### Types of Pipeline
+
+- It is divided into 2 categories:
+  - 1 - Arithmetic Pipeline 
+  - 2 - Instruction Pipeline
+  
+- `Arithmetic Pipeline` -- Arithmetic pipelines are usually found in most of the computers. They are used for floating point operations, multiplication of fixed point numbers etc
+
+- `Instruction Pipieline` -- In this a stream of instructions can be executed by overlapping fetch, decode and execute phases of an instruction cycle. This type of technique is used to increase the throughput of the computer system.
+
+### Pipeline Conflicts
+
+- There are some factors that cause the pipeline to deviate its normal performance. Some of these factors are given below:
+  - 1 - Timing Variations
+  - 2 - Data Hazards
+  - 3 - Branching
+  - 4 - Interrupts
+  - 5 - Data Dependency
+  
+<br>
+<br>
+
+---
+
+<br>
+<br>
+
+# Vector(Array) Processing and Superscalar Processors
+
+> This is where I left off of this tutorial : 
+
+https://www.studytonight.com/computer-architecture/vector-and-superscalar
