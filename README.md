@@ -4,6 +4,7 @@
 
 - Scrum  : [click here](./compsci/business/scrum-cheatsheet.md)
 - Licenses: ...
+- Release Cycle: [click here](/cheatsheet/software-life-cycle.md)
 
 #### Frontend
 
