@@ -155,3 +155,135 @@
 <br>
 <Br>
 
+# Data Modelling in MongoDB
+
+- As explained in the earlier lessons, data in MongoDB is schema-less, which means there is no need of defining a structure for the data before insertion. Since, MongoDB is a document based database, any document within the same collection is not mandatory to have same set of fields or structure]
+
+  In general, the documents in a collection of MongoDB will always share the same data structure(recommended for best performance, not mandatory)
+  
+  The vital factor or challenge in modelling the data in a given database is load balancing and hence ensuring the performance aspect effectively. It is a mandate while modelling the data to consider the complete usage of data (CRUD operations) along with how the data will be inherited as well.
+  
+  There are 2 ways in which the relationships between the data can be established in MongoDB:
+    - `Reference Documents` 
+    - `Embeded Documents` 
+    
+### Reference Documents
+
+- This is one of the ways to implement the relationship between data stored in different collections. In this, a reference to the data in one collection will be used in connecting the data between the collections:
+  ```javascript
+  {
+    title: "Java in action",
+    author: "author1",
+    language: "English",
+    publisher: {
+               name: "My publications",
+               founded:1990,
+               location: "SF"
+              }
+  }
+
+  {
+    title: "Hibernate in action",
+    author: "author2",
+    language: "English",
+    publisher: {
+               name: "My publications",
+               founded:1990,
+               location: "SF"
+              }
+  }
+  ```
+  In the above example, the publisher data is repeated. In order to avoid this repetition, we can add references of the book to the publisher data instead of using entire data of publisher in every book entry, as shown below:
+  ```javascript
+  {
+    name: "My Publciations",
+    founded:1980,
+    location: "CA",
+    books: [111222333,444555666, ..]
+  }
+
+  {
+     _id:111222333,
+     title: "Java in action",
+     author: "author1",
+     language: "English"
+  }
+
+  {
+    _id:444555666,
+    title: "Hibernate in action",
+    author: "author2",
+    language: "English"
+  }
+  ```
+  This can be done the other way round as well, where in one can reference the `publisher id` in the books data, your choice.
+
+### Embeded Documents
+
+- In this, one collection will be embedded into another collection. Consider 2 collections student and address. Let us see how the `address` can be embedded into `student` collection. Below is an example embedding single address to student data.
+  ```javascript
+  {
+  _id:123,
+  name: "Student1"
+  }
+
+  {
+    _studentId:123,
+    street: "123 Street",
+    city: "Bangalore",
+    state: "KA"
+  }
+
+  {
+    _studentId:123,
+    street: "456 Street",
+    city: "Punjab",
+    state: "HR"
+  }
+  ```
+
+<br>
+<br>
+
+---
+
+<br>
+<br>
+
+# Data Types in MongoDB
+
+- MongoDB supports the below list of datatypes. Each datatype in MongoDB possess a unique number:
+  
+  | Datatype | Number | Description |
+  | -- | -- | -- |
+  | Double |	1	 | Used to stored floating point values |
+  | String |	2	 | Commonly used datatype and it is UTF-8 valid |
+  | Object |	3 |	Used for storing embedded objects |
+  | Array	| 4	| Used for storing embedded objects |
+  | Binary Data | 5 |	Used to store binary data |
+  | Undefined |	6	| Used to store undefined value |
+  | Object Id |	7 |	Used to store document's ID |
+  | Boolean |	9	| Used to store Boolean value |
+  | Date | 10 |	Used to store current date time in UNIX format. |
+  | Null | 11 |	Used to store null value |
+  | Regular Expression | 12 |	Used to store regex |
+  | Javascript | 13 |	Used to store JavaScript data without scope |
+  | Symbol | 14 |	Basically used to store string, but reserved for languages that use specific symbol |
+  | Javascript with scope |	15 | Used to store JavaScript data with scope |
+  | Integer	| 16 & 18 |	Used to store numerical value |
+  | Timestamp |	10 | Used to track when a document is modified. |
+  | Min/Max Key |	255/127 |	Used to compare value against lowest and highest BSON elements |
+  
+<br>
+<br>
+
+---
+
+<br>
+<br>
+
+
+  
+  
+  
+  
