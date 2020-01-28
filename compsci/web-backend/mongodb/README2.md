@@ -119,6 +119,9 @@
   ```js
   db.students.find({"regNo":"3014"})
   ```
+  
+- There are lots of ways to queery a document with filtering options such as "greater than", "less than", "AND", "OR": You can read them all in this neatly packaged one page tutorial:
+  - https://www.tutorialspoint.com/mongodb/mongodb_query_document.htm
 
 ### (UPDATE) Updating a document in a collection
 
