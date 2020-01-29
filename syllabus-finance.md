@@ -36,6 +36,7 @@ The course syllabus is not in final shape at the moment I will edit as I go alon
 - [ ] Benjamin Graham -- Smart Investor
 - [ ] Start reading more serious texts. Focus on Accounting and minor in Economics in your learning time. 
 - [ ] Do case studies of top-500 fortune and important tech companies. Know their histroy their challenges, departments organizational structure. Management layer ... etc.
+- [ ] Watch and Note every video you see on Y combinator youtube channel, website ... etc.
 
 ### Packet 2: Feynman 
 
