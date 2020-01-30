@@ -89,7 +89,15 @@
 
 ### (UPDATE) Updating Documents
 
+- ...
+
 ### (DELETE) Deleting Documents
+
+- foo
+
+  ```
+  db.collection.remove()
+  ```
 
 <br>
 <br>
