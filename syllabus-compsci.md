@@ -90,7 +90,7 @@ Try to specilize in a field such as these, just chose one or two. However, remem
   - [ ] Read: Read [this tutorial](https://www.studytonight.com/computer-architecture/)
   - [ ] Book : [Hidden Language of Computers: CODE](ftp://ftp.borg.moe/yarr/Gentoomen%20Library/Programming/Misc/Charles%20Petzold%20-%20Code%20-%20The%20Hidden%20Language%20of%20Computer%20Hardware%20and%20Software.pdf)
   - [ ] Book: The Elements of Computing Systems
-  - [ ] Book: [Digital Design and Computer Architecture 2nd Edition](https://www.amazon.com/Digital-Design-Computer-Architecture-Harris/dp/0123944244#customerReviews)
+  - [ ] Book: Digital Design and Computer Architecture 2nd Edition (hard - shelved it - may return to it or delete it)
   - [ ] Book: Essentials of Computer Architecture by Comer
   - [ ] Book : Computer Organization and Design (start over)
   - [ ] Book: Computer Systems : A Programmers Perspective by Bryant and O’Hallaron
