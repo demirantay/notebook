@@ -34,6 +34,8 @@ The course syllabus is not in final shape at the moment I will edit as I go alon
 - [ ] https://www.core-econ.org/ : THE ECONOMY
 - [ ] https://www.core-econ.org/ :ECONOMY, SOCIETY, AND PUBLIC POLICY
 - [ ] Benjamin Graham -- Smart Investor
+- [ ] Streetwise Business Plans: Create a Business Plan to Supercharge Your Profits!
+- [ ] Streetwise Incorporating Your Business: From Legal Issues to Tax Concerns, All You Need to Establish and Protect Your Business
 - [ ] Start reading more serious texts. Focus on Accounting and minor in Economics in your learning time. 
 - [ ] Do case studies of top-500 fortune and important tech companies. Know their histroy their challenges, departments organizational structure. Management layer ... etc.
 - [ ] Watch and Note every video you see on Y combinator youtube channel, website ... etc.
