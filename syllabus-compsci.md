@@ -299,7 +299,7 @@ Try to specilize in a field such as these, just chose one or two. However, remem
 - [x] Standarts & Best Practices -- (PEP8 .. etc)
 - [x] Relational Databases -- (Mysql, Postgresql .. etc)
 - [x] Web Framework -- (django, flask, rails .. etc)
-- [ ] NoSQL -- (MongoDB .. etc)
+- [x] NoSQL -- (MongoDB .. etc)
 - [ ] More on databases: ORM's
 - [ ] More on databases: ACID
 - [ ] More on databases: Transactions
