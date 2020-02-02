@@ -88,5 +88,47 @@ These numbers are a powerful reminder that you should observe and read gestures,
 
 # DEALING WITH AND USING BODY LANGUAGE
 
+- `mirroring your counteraprty` -- Here’s an effective way to build trust with the other party: Repeat her style of speaking, writing, emailing, texting, tone of voice, and posture. If done with skill (without seeming to mock her) your counterparty will feel understood, and you’ll have established a foundation for open communication.
+Don’t imitate, but try to use familiar and comfortable communication styles where it makes sense.
 
+
+- `who is bluffing` -- The best way to tell if someone is bluffing during a negotiation is to ask questions. If you recognize nonverbal cues (shiftiness, nervousness, suddenly disappeared eye contact) suggesting that your counterpart is bluffing, poke around a little. Ask her to back up her statements if you see that her body language is not quite consistent with what she is saying.
+
+- `silence can be golden: using interpereting silence` -- Twentieth-century French composer Claude Debussy summed up the power of silence beautifully: “Music is the silence between the notes.” Silence can change or alter a conversation dynamic in many subtle ways.
+Silence can be an important tool in keeping control of the discussion, or in giving others (or yourself) time to think. The presence of silence causes many of the more extroverted among us to become uncomfortable—someone must always be saying something, right? In such a scenario, the extrovert might “fill the hole” in the discussion by revealing more than he should.
+Silence is also a great way to give your counterparty a chance to voice something he’s been waiting for the right moment to say. After you’ve made your pitch, “go silent” to induce him to make his. He’ll appreciate that you’re not trying to monopolize the conversation
+
+  All that said, be careful not to use (or tolerate) too much silence—you might come off as passive- aggressive and thus untrustworthy. Other “talkers” might chime in and throw the meeting off course, or others might get the idea you’re not interested. As with all other tools, ploys, and tactics, use silence sparingly; don’t be obvious.
   
+<br>
+<br>
+
+# AVOIDING COMMON NEGOTIATING PITFALLS
+
+- Even the most experienced negotiators learn from every negotiation. Like a game of chess, every negotiation unfolds differently, and there are lessons, nuances, and style points to be learned. You’ll learn over time as you negotiate again and again, just as you honed your parenting techniques or leadership style after years of experience. Some of these corrections will happen “over-the-board” during every negotiation.
+
+<br>
+<br>
+
+# FAILING TO "SEE" THE WIN WIN
+
+- For many of us, nature often kicks in the drive to “win” as we approach most problems in life. We strive to come out on top, to come out ahead. At all costs, we want to avoid losing. These instincts are natural and healthy.
+However, in combination with our egos, this natural tendency can transform us into ugly and determined monsters pretty quickly.
+
+- `getting to yes avoiding the no` -- As we reviewed previously, a negotiation goes faster and smoother—gets to “yes” more quickly—if the other side gets some wins, too. When each party walks away with some of their objectives, musts, and wants satisfied, the whole engagement goes more smoothly. Nobody walks away from the table with hard feelings, jobs lost, or other sources of pain. A relationship is sustained that will enable and encourage future negotiations. Long-term wins are better than short-term wins in this mindset. The bottom line is simple: If you try too hard to make them a “loser,” you’ll eventually lose as well.
+
+<Br>
+<br>
+  
+# DON FORGET NEGOTIATIORS ARE PEOPLE TOO
+
+- Another common negotiating mistake is to fail to understand and keep in sight the human aspects of a negotiation. Your counterparty is a person (or people), too; and while the goals, process, and facts of the negotiation should take priority, you mustn’t forget the motives, emotions, nerves, efforts, personalities, organizational constraints, and other human factors of the negotiation.
+If you take the human factors into account and deal with them effectively, rather than handling them as unpleasant surprises or distractions, you’ll get to “yes” a lot sooner and with less friction and fewer hard feelings.
+
+- `yes some people are difficult` -- he trick to dealing with such difficult players is to keep the focus on the subject matter and not on the individuals themselves. Keep the end in mind and don’t let these personalities exhaust you. Try not to walk on eggshells or worry about the other person; stay focused on the negotiation while trying within reason to meet the counterparty’s tactical and emotional needs.
+
+  When you sense anger or aggression from another party, that emotion usually has nothing to do with you or the problem at hand; it’s likely a reflection of something else in his personal or professional life. Getting it out in the open—or at least showing concern—can help both of you in your effort to arrive at a win-win conclusion.
+  
+- `dealing with stonewalling` -- Sometimes a difficult person is one who uses a tough or challenging negotiating style. We’ve all seen it: A perfectly normal person with an otherwise accommodating or collaborative personality inexplicably becomes difficult to work with. This change may reflect a genuine difficulty in her life, or she may just be stonewalling.
+
+  There’s a difference: Stonewalling is a ploy, like passive-aggressive behavior, and it is purposely used to draw your attention away from the subject you’re discussing and/or to take control of the discussion in a quest to shift the balance of power. After several efforts to stonewall your proposals by asking irrelevant questions, changing the subject, or rejecting your offer outright, you might call her bluff by asking how serious she is about finishing the negotiation and getting to the win-win. Ask for a more detailed explanation of her opposition.
