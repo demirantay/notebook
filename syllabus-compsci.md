@@ -301,15 +301,14 @@ Try to specilize in a field such as these, just chose one or two. However, remem
 - [x] Web Framework -- (django, flask, rails .. etc)
 - [x] NoSQL -- (MongoDB .. etc)
 - [x] More on databases: ORM's
-- [ ] More on databases: ACID
-- [ ] More on databases: Transactions
+- [x] More on databases: ACID
+- [x] More on databases: Transactions
 - [ ] More on databases: N+1 Problem
 - [ ] More on databases: Data Normalization
 - [ ] More on databases: Indexes and how they work
-- [ ] Caching -- (Redis .. etc)
-- [ ] Cachgin: CDN
-- [ ] Caching: Server Side (Redis)
-- [ ] caching: Client side
+- [ ] Caching: Server Side -- (Redis .. etc)
+- [ ] Caching: CDN
+- [ ] Caching: Client side
 - [ ] Learn abot API's
 - [ ] API: REST (Roy Fleedings Paper)
 - [ ] API: JSON's API
