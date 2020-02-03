@@ -300,7 +300,7 @@ Try to specilize in a field such as these, just chose one or two. However, remem
 - [x] Relational Databases -- (Mysql, Postgresql .. etc)
 - [x] Web Framework -- (django, flask, rails .. etc)
 - [x] NoSQL -- (MongoDB .. etc)
-- [ ] More on databases: ORM's
+- [x] More on databases: ORM's
 - [ ] More on databases: ACID
 - [ ] More on databases: Transactions
 - [ ] More on databases: N+1 Problem
