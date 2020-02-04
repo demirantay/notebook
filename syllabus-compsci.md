@@ -286,6 +286,7 @@ Try to specilize in a field such as these, just chose one or two. However, remem
 - [ ] Level 5: Do all of [these](http://eugenkiss.github.io/7guis/tasks/) for practicing little bit of electron. No need to go too big.
 - [ ] Level 6: Do all of [these here](https://www.instamobile.io/react-native-tutorials/react-native-app-ideas-beginners/) to practice react native. Dont skip anything.
 - [ ] Level 7: Clone a mini React Clone -- pacakge it in npm, yarn
+- [ ] Level 8: Build a small version of every tech learned above. Remember first version of unix was under 4000 LoC. And this guy created [aws server](https://github.com/jubos/fake-s3) system in just 2k LoC. Build everythings logic in a small way.
 
 <br>
 <Br>
@@ -379,7 +380,8 @@ Try to specilize in a field such as these, just chose one or two. However, remem
 - [ ] Level 8: Build the instagram clone built above but this time with your own framework and webserver
 - [ ] Level 9: After learning all of the things above do a youtube clone too (it is good to figure out how to impelemtn billions data of videos & graphics .
 - [ ] Level 10: Clone a basic search engine like google or duckduckgo, it is a good problem to solve.
-- [ ] Final: Clone duolingo before building your own lingo app
+- [ ] Level 11: Clone duolingo before building your own lingo app
+- [ ] Level 12: Build a small version of every tech learned above. Remember first version of unix was under 4000 LoC. And this guy created [aws server](https://github.com/jubos/fake-s3) system in just 2k LoC. Build everythings logic in a small way.
 
 > If you finish frontend or backend sections start `[Code Univeristy Guide](https://github.com/jwasham/coding-interview-university)` of jwsaham and try to getting ready for job applications (possibly in Canada) when their time of the month comes. ++ go for a algorithm online prep course like algoexpert.io (<- this one is really good) , leetcode ...etc
 
@@ -468,7 +470,8 @@ Try to specilize in a field such as these, just chose one or two. However, remem
 - [ ] Level 11: Create a mini application monitoring tool
 - [ ] Level 12: Create a mini log management tool
 - [ ] Level 13: Do a project with Cloud
-- [ ] Level 14 : At this point I should have a job and start building my own idea
+- [ ] Level 14: Build a small version of every tech learned above. Remember first version of unix was under 4000 LoC. And this guy created [aws server](https://github.com/jubos/fake-s3) system in just 2k LoC. Build everythings logic in a small way.
+- [ ] Final : At this point I should have a job and start building my own idea
 
 > If you finish frontend or backend sections start `[Code Univeristy Guide](https://github.com/jwasham/coding-interview-university)` of jwsaham and try to getting ready for job applications (possibly in Canada) when their time of the month comes. OR go for a algorithm online prep course like algoexpert.io , leetcode ...etc
 
