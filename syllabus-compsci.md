@@ -308,8 +308,8 @@ Try to specilize in a field such as these, just chose one or two. However, remem
 - [ ] More on databases: Data Normalization
 - [ ] More on databases: Indexes and how they work
 - [ ] Caching: Server Side -- (Redis .. etc)
-- [ ] Caching: CDN
-- [ ] Caching: Client side
+- [x] Caching: CDN
+- [x] Caching: Client side
 - [ ] Learn abot API's
 - [ ] API: REST (Roy Fleedings Paper)
 - [ ] API: JSON's API
