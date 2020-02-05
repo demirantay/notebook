@@ -295,6 +295,7 @@ Try to specilize in a field such as these, just chose one or two. However, remem
 
 ### Packet #1
 
+- [x] Basic Html, Css, Javascript
 - [x] Programming Language -- (python, java, ruby .. etc)
 - [x] Package Manager -- (pip, npm .. etc)
 - [x] Standarts & Best Practices -- (PEP8 .. etc)
