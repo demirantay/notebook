@@ -75,6 +75,9 @@
   ```
   In the output of the above command /user/tutorialspoint/redis-2.8.13/src is the directory, where Redis server backupwill be installed.
   
+- For more info on the topic please start by reading this:
+  - https://www.tutorialspoint.com/redis/redis_backup.htm
+  
 <br>
 <br>
 <br>
