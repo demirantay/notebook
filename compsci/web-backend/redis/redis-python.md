@@ -2,6 +2,27 @@
 
 - I am not going to write too much about what `redis` is or how to use it on it's own command line interface becuase I have already done that in other files on this directory. Instead this file is more dedicated towards the use of `redis` with python.
 
+  But lets jump straight in with a small redis-cli and python-redis comparison before getting into the details of the python interface of redis. As you imageine redis stands for remote dictionary service and python already has a built in `dict` data type. Lets use it in this instance:
+  ```
+  127.0.0.1:6379> SET Bahamas Nassau
+  OK
+  127.0.0.1:6379> SET Croatia Zagreb
+  OK
+  127.0.0.1:6379> GET Croatia
+  "Zagreb"
+  127.0.0.1:6379> GET Japan
+  (nil)
+  ```
+  We created a database that maps the capitals to their countries. This is how you would write it in pure python:
+  ```python
+  >>> capitals = {}
+  >>> capitals["Bahamas"] = "Nassau"
+  >>> capitals["Croatia"] = "Zagreb"
+  >>> capitals.get("Croatia")
+  'Zagreb'
+  >>> capitals.get("Japan")  # None
+  ```
+  
 <br>
 <br>
 
@@ -20,17 +41,20 @@
   
 - First, like always lets start with a hello world :) 
   ```python
-  import redis
-  
-  r = redis.Redis()
-  
-  r.mset({"foo": "Hello world", "bar", 5})
-  
-  r.get("foo")  # gets b("hello world")
+  >>> import redis
+  >>> r = redis.Redis()
+  >>> r.mset({"Croatia": "Zagreb", "Bahamas": "Nassau"})
+  True
+  >>> r.get("Bahamas")
+  b'Nassau'
   ```
   Redis, used in Line 2, is the central class of the package and the workhorse by which you execute (almost) any Redis command. The TCP socket connection and reuse is done for you behind the scenes, and you call Redis commands using methods on the class instance r.
   
-  Also note that when you `get` a value from the set it returns a `bytestring` rather than a plain old string. If you want to do operations on your returned value don't forget to change the type.
+  Notice also that the type of the returned object, b'Nassau' in Line 6, is Python’s bytes type, not str. It is bytes rather than str that is the most common return type across redis-py, so you may need to call `r.get("Bahamas").decode("utf-8")` depending on what you want to actually do with the returned bytestring.
+  
+  Does the code above look familiar? The methods in almost all cases match the name of the Redis command that does the same thing. Here, you called r.mset() and r.get(), which correspond to MSET and GET in the native Redis API.
+  
+  This also means that HGETALL becomes r.hgetall(), PING becomes r.ping(), and so on. There are a few exceptions, but the rule holds for the large majority of commands.
   
   We built the Redis instance `r` above with no arguments, but it comes bundled with a number of parameters if you need them:
   ```python
@@ -65,10 +89,4 @@ TLDR just checkout the translations of redis commands to --> python-sytanxly wri
 <br>
 <br>
 
----
 
-<br>
-
-At the moment I do not know where to use Redis other than trivial to-do apps. Once I need to use it for real I will learn it fully and add more notes on it.
-
-For example serilazation, crypotgrahy, pipelining are very important topics that I want to touch in the future to reach the full potential of redis.
