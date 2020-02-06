@@ -1,6 +1,12 @@
 > Where I left of:
   - https://www.tutorialspoint.com/arduino/arduino_installation.htm
   - https://www.tutorialspoint.com/arduino/arduino_strings.htm
+  
+  ---
+  
+> Read These:
+  - https://realpython.com/micropython/#micropython-hardware
+  - https://realpython.com/arduino-python/
 
 # Ardunio 
 
