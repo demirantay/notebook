@@ -19,6 +19,7 @@
 - postgresql: [click here](./cheatsheet/postgresql.md)
 - django: [click here](./cheatsheet/django.md)
 - mongodb: [click here](./cheatsheet/mongodb.md)
+- redis: [click here](./cheatsheet/redis.md)
 
 #### DevOps
 
