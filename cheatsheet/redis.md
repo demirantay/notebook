@@ -22,6 +22,9 @@ All the commands you must know: (There may be new commands added to the tech. Vi
 - `APPEND key value` -- Append a value to a key
 - `BITCOUNT key [start end]` -- Count set bits in a string 
 - `BITFIELD key [`GET type offset]...` -- Perform arbitrary bitfield integer operations on strings
+- `BITOP operation destkey key [key ...]` -- Perform bitwise operations on strings
+- `BITPOS key bit [start] [end]` -- Find first bit set or clear in a string 
+- `DECR key` -- Decrement the integer value of a key by one
 
 ### Keys
 
