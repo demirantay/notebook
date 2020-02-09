@@ -8,7 +8,7 @@
 
   A web service is a function or method which we can call by sending an HTTP request to a URL, with arguments and the service   returns the result back as response.
   
-  The biggest advantage of the web services is that it is platform independent. For example an .net program can talk to a java program and a java program can talk to a python program through web services without any problem.
+  The biggest advantage of the web services is that it is platform independent. For example an .net program can talk to a java program and a java program can talk to a python program through web services without any problem. Therefore, a web service is a language independent way of communication
   
 - Now let us look at one of the most common use case where web services are being used extensively. Consider the figure below, suppose I have made a new cool application but I do not want to maintain the data of the users, who login to my application, but we want only authenticated users to use the application. So what should we do? One option is, we can use the web services exposed by some other third party application, to authenticate our incoming users. You must have seen this in many applications, in form of - Sign up using Facebook, Google or other third party apps. 
 
@@ -87,6 +87,25 @@
   - HTTP is connectionless.
   - HTTP is media independent, which means any type of data can be sent through the http.
   - HTTP is stateless, neither the server nor the client keeps a track of the last request.
+  
+  HTTP makes use of the Uniform Resource Identifier (URI) to identify any given resource and establish a connection. HTTP request and response, use a generic message format of RFC 822 for transferring the data. The generic message of any HTTP request and response, consists of the following four items:
+  - 1 - A start line
+  - 2 - Zero or more `Headers`
+  - 3 - Empty line indicating the end of the header fields
+  - 4 - and, Optional message `Body`.
+  
+  HTTP header holds the metadata and information about the HTTP method, while the body contains the data that we want to send to the server.
+  
+- HTTP Methods/Verbs:(The most important part of a request is the HTTP Method (verbs). These methods tells the server what to do with the data received in the request. ) --
+  - `GET` -- The GET method is used to get the information from the server. This is equivalent to the SELECT statement in SQL. There is no message body in the GET request as it is meant to only fetch the data from the server
+  - `POST` -- This is used to send the data to the server. This can be students information, some XML file or some JPG file. The message body contains the data. POST requests are generally used to create but it can be used to update the existing data as well.
+  - `PUT` -- This should be used when we have to replace/update/create the data, which is already present/not present on the server with the data that we pass in the message body.
+  - `DELETE` -- This should be used to delete the data on the server.
+  
+  You must notice that, with every method, we have mentioned should be used, as we can only advice to follow the standards. Just saying, but DELETE can be used to create a new entry, but we must follow the standards to avoid any confusion.
+  
+  > There are many more HTTP methods however I cannot note all of them down here. Read the docs.
+ 
 
 <br>
 <br>
@@ -113,9 +132,28 @@
     - 6 - It can be used to get all the courses enrolled by any particular student.
     - 7 - It can be used to get all the students who have enrolled for any particular course.
 
-
-- where i left of : https://www.studytonight.com/rest-web-service/designing-the-rest-api
-
+  Now lets put the DB diagram of the registration app: The basic entities are:
+    - Students Table: This is responsible for storing the data of all the students. Student ID will be the primary key.
+    - Courses: This table will have the information of all the courses taught in the school. Course ID will be the primary key.
+    - Registrations: This table will maintain the registration information of all the registrations. Student ID along with the Course ID will be the primary key for this table. and also their connnection.
+    
+- Now let's define the URI for our application's various services:
+  ```
+  /Myapp/students/
+  ```
+  This will give information about all the students.
+  ```
+  /Myapp/courses/ 
+  ```
+  This will give information about all the courses.
+  ```
+  /Myapp/registrations/
+  ```
+  This will give information about all the registrations data.
+  ```
+  /Myapp/students/1/registrations
+  ```
+  This will give information about the registration of student with roll no 1.
 
 <br>
 <br>
@@ -125,4 +163,46 @@
 <br>
 <br>
 
-# Using HTTP Methods 
+# Using HTTP Methods: CRUD Operations
+
+- Now we will see how to use the HTTP methods to perform the basic crud operations in the registration app. Suppose we want to `GET` the data of the student with student id 10. The resource URI for this operation will be `/myApp/students/10`.
+
+  Now how will the server identify that which request is for the GET operation and which request is for the DELETE operation for the same URI. The answer is, by checking the HTTP method parameter. When we talk about REST application, you do not name methods like, getStudents. You make a GET request for the /myApp/students/ URI. You will see what I am talking about in the future.
+  
+### Use Cases for our Registration Application
+
+- Getting the Student/Course Information:
+  ```
+  GET   /myApp/students/      // This will give the list of all the students in the system.
+  GET  /myApp/students/1     // This will give the student with the roll number 1.
+  ```
+  
+- Deleting the Student/Course Information:
+  ```
+  DELETE /myApp/students/1      // This will delete the student record with the roll number 1.
+  DELETE /myApp/couses/10      // This will delete the course with course id 10.
+  ```
+  
+- Updating the Student/Course Information:
+  ```
+  PUT /myApp/students/1   //This will update the student record with the roll number 1.
+  PUT /myApp/courses/10  //This will update the course record with course id 10.
+  ```
+  
+- Inserting the Student/Course Information:
+  ```
+  POST /myApp/students/      //This is correct
+  POST  /myApp/students/20    //This is incorrect because it should create something not update it
+  ```
+  
+<br>
+<br>
+
+---
+
+<br>
+<br>
+
+# REST API Response
+
+- As the REST API's response is consumed by some application and not the browser, so we don't have to worry about styling it to make it look good. In case of API response, it can be simple `XML` or `JSON` or any other media type.
