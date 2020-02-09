@@ -74,10 +74,46 @@ All the commands you must know: (There are a lot more commands to redis to [view
 
 - `ZADD key [NX|XX] [CH] [INCR] score member [score member ...]` -- add one or more members to a sorted set, or update its score if it already exists
 - `ZCARD key` -- get the number of members in a sorted set
+- `ZCOUNT key min max` -- count the members in a sorted set with scores within the given values
+- `ZINCRBY key increment member` -- increment the score of a member in a sorted set
+- `ZRANGE key start stop [WITHSCORES]` -- returns a subset of the sorted set
+- `ZRANK key member` -- determine the index of a member in a sorted set
+- `ZREM key member [member ...]` -- remove one or more members from a sorted set
+- `ZREMRANGEBYRANK key start stop` -- remove all members in a sorted set within the given indexes
+- `ZREMRANGEBYSCORE key min max` -- remove all members in a sorted set, by index, with scores ordered from high to low
+- `ZSCORE key member` -- get the score associated with the given mmeber in a sorted set
+- `ZRANGEBYSCORE key min max [WITHSCORES] [LIMIT offset count]` -- return a range of members in a sorted set, by score
 
 ### Hashes
 > Hashes are maps between string fields and string values, so they are the perfect data type to represent objects.
 
+- `HGET key field` -- get the value of a hash field
+- `HGETALL key` -- get all the fields and values in a hash
+- `HSET key field value` -- set the string value of a hash field
+- `HSETNX key field value` -- set the string value of a hash field, only if the field does not exists
+- `HMSET key field value [field value ...]` -- set multiple fields at once
+- `HINCRBY key field increment` -- increment value in hash by X
+- `HDEL key field [field ...]` -- delete one or more hash fields
+- `HEXISTS key field` -- determine if a hash field exists
+- `HKEYS key` -- get all the fields in a hash
+- `HLEN key` -- get all the fields in a hash
+- `HSTRLEN key field` -- get the length of the value of a hash field
+- `HVALS key` -- get all the values in a hash
+
 ### HyperLogLog
 > HyperLogLog uses randomization in order to provide an approximation of the number of unique elements in a set using just a constant, and small, amount of memory
 
+- `PFADD key element [element ...]` -- add the specified elements to the specified HyperLogLog
+- `PFCOUNT key [key ...]` -- return the approximated cardinality of the set(s) observed by the HyperLogLog at key's)
+- `PFMERGE destkey sourcekey [sourcekey ...]` -- merge N HyperLogLogs into a single one
+
+### Publication & Subscription
+
+- `PSUBSCRIBE pattern [pattern ...]` -- listen for messages published to channels matching the given patterns
+- `PUBSUB subcommand [argument [argument ...]]` -- inspect the state of the Pub/Sub subsystem
+- `PUBLISH channel message` -- post a message to a channel
+- `PUNSUBSCRIBE [pattern [pattern ...]]` -- stop listening for messages posted to channels matching the given patterns
+- `SUBSCRIBE channel [channel ...]` -- listen for messages published to the given channels
+- `UNSUBSCRIBE [channel [channel ...]]` -- stop listening for messages posted to the given channels
+
+> There are a lot more commands but the above ones are the most used ones in a common redis-use-case
