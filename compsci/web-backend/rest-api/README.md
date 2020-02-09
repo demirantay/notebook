@@ -205,4 +205,78 @@
 
 # REST API Response
 
-- As the REST API's response is consumed by some application and not the browser, so we don't have to worry about styling it to make it look good. In case of API response, it can be simple `XML` or `JSON` or any other media type.
+- As the REST API's response is consumed by some application and not the browser, so we don't have to worry about styling it to make it look good. In case of API response, it can be simple `XML` or `JSON` or any other media type. There is a Media-Type attribute in the header which can be used in such cases and the response can be sent accordingly. We will learn how to do this in coming tutorials but for now lets concentrate on the design aspects of the REST API.
+
+  If we talk about the Student record, in our Student-Courses Application, the response will be something like this, The Student class (Data Model/Object) will look something like this (using Java):
+  ```java
+  public class Student{
+      private int rollno;
+      private String firstName;
+      private String LastName;
+      private int age;
+      private String contactNumber;
+      ...
+  }
+  ```
+  The XML response will be something like this:
+  ```xml
+  <Student>
+      <rollno>10</rollno>
+      <firstName>Amit</firstName >
+      <lastName>Agarwal</lastName>
+      <age>25</age>
+  </Student>
+  ```
+  The JSON response will be something like this:
+  ```js
+  {
+      "rollno":"10",
+      "firstName":"Amit",
+      "lastName":"Agarwal",
+      "age":"25"
+      "contactNumber":"98877271127"
+  }
+  ```
+  
+  As we have already discussed that same REST API can return both XML or JSON as response message, depending upon the Media-Type attribute in the HTTP request.
+  
+  The question here is, how will the client know, what type of response to expect from the API. This is again managed by the response headers. There is a Content Type attribute in the headers which informs about the type of response body format.
+  
+### Response(Status) Codes
+
+- Till now, we have discussed about the situations where everything is good but this doesn't happen in the real world scenario . There can be many scenarios, like:
+  - The server on which you have deployed the Rest API is down.
+  - The client request is incorrect
+  - The resource which the client is requesting doesn't exist.
+  - Some error occured on the server side while processing the request.
+  
+  So the REST API must always return an appropriate status code to the client so that the client can know the actual issue and process accordingly.
+  
+- `1XX Codes`: Informational Codes
+  - These are the acknowledgement responses, used to pass on information. This status code is not used commonly.
+  - More on [1xx code statuses](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes#2xx_Success)
+
+- `2XX Codes`: Success Codes
+  - These are the success codes which means that the server has received the request from the client and processed it successfully.
+  - 200 OK: This informs the client about the successful response.
+  - 201 Created: This should be returned for POST requests, stating that the resource is created successfully on the server
+  - 202 Accepted: This informs the client that the request has been successfully received, but the processing is not yet finished.
+  - 204 No Content: This informs the client that the request has been successfully processed, but no content will be returned.
+  - More on [2xx code statuses](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes#2xx_Success)
+
+- `3XX Codes`: 
+  - These codes are generally used in case of URL Redirection.
+  - More on [3xx code statuses](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes#2xx_Success)
+
+- `4XX Codes`: 
+  - This class of status codes are returned if the client's request has error.
+  - 400 Bad Request: There is something wrong in the request from the client, hence the server cannot or will not process it.
+  - 401 Unauthorized: The client needs to authorize themselves to make this request.
+  - 403 Forbidden: This status code is used when the client request is correct but the server refuses to process the request. 
+  - 404 Not Found: The resource which the client is requesting for doesn't exist.
+  - More on [4xx code statuses](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes#2xx_Success)
+  
+- `5XX Codes`: Server error
+  - The 5XX status codes are when server fails to process the request and cannot send the correct response
+  - 500 Internal Server Error: This is a generic status code returned when an unexpected condition is encountered on the server, while processing the request.
+  - 503 Service Unavailable: When server is not available due to excessive load or may be down for maintainence,
