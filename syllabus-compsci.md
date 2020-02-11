@@ -302,12 +302,7 @@ Try to specilize in a field such as these, just chose one or two. However, remem
 - [x] Relational Databases -- (Mysql, Postgresql .. etc)
 - [x] Web Framework -- (django, flask, rails .. etc)
 - [x] NoSQL -- (MongoDB .. etc)
-- [x] More on databases: ORM's
-- [x] More on databases: ACID
-- [x] More on databases: Transactions
-- [ ] More on databases: N+1 Problem
-- [ ] More on databases: Data Normalization
-- [ ] More on databases: Indexes and how they work
+- [x] More on databases: ORM's, ACID, Transactions, N+1 Problem, Indexing, Data Normalization
 - [x] Testing: (Unit testing, Functional testing, Integration testing)
 - [x] Caching: (Server Side (redis), Client Side, CDN)
 - [ ] Learn abot API's
