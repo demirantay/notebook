@@ -308,33 +308,15 @@ Try to specilize in a field such as these, just chose one or two. However, remem
 - [ ] More on databases: N+1 Problem
 - [ ] More on databases: Data Normalization
 - [ ] More on databases: Indexes and how they work
-- [ ] Caching: Server Side -- (Redis .. etc)
-- [x] Caching: CDN
-- [x] Caching: Client side
+- [x] Testing: (Unit testing, Functional testing, Integration testing)
+- [x] Caching: (Server Side (redis), Client Side, CDN)
 - [ ] Learn abot API's
 - [ ] API: REST (Roy Fleedings Paper)
-- [ ] API: JSON's API
-- [ ] API: Auth -- OAuth
-- [ ] API: Auth -- Basic Authentication
-- [ ] API Auth -- Token Authentication
-- [ ] API Auth -- JWT
-- [ ] API Auth -- OpenID
-- [ ] Web Security: HTTPS
-- [ ] Web Security: Content Security Policy
-- [ ] Web Security: CORS
-- [ ] Web Security: SSL/TLS
-- [ ] Web Security: OWASP Security Risks
+- [ ] API: Auth -- (OAuth, Basic Authentication, Token Authentication, JWT, OpenID)
+- [ ] Web Security: HTTPS, CORS, SSL/TLS, OWASP Security Risks, Content Security Policy
 - [ ] Web security: Hashign Algorithms (scrypt, bcrypt, SHA Family ... etc.
-- [ ] Testing: Integration testing
-- [ ] Testing: Unit testing 
-- [ ] Testing: Functional testing
-- [ ] Testing: CI/CD
 - [ ] Design and Development Principles (SOLID, KISS, YAGNI, DRY)
-- [ ] Architectural Patterns:
-- [ ] Architectural Patterns: Monolithic Apps
-- [ ] Architectural Patterns: Microservices
-- [ ] Architectural Patterns: SOA
-- [ ] Architectural Patterns: Serverless ... etc
+- [ ] Architectural Patterns: Monolithic Apps, Microservices, Microservices, SOA, Serverless
 - [ ] Search Engine -- (ElasticSearch, solr .. etc)
 - [ ] Message Brokers -- (RabbitMQ, Kafka)
 - [ ] Docker
