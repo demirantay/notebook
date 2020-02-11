@@ -17,6 +17,7 @@
 - pip: [click here](./cheatsheet/pip.md)
 - pep8: [click here](./cheatsheet/pep8.py)
 - postgresql: [click here](./cheatsheet/postgresql.md)
+- unittest: [click here](./cheatsheet/unittest.md)
 - django: [click here](./cheatsheet/django.md)
 - mongodb: [click here](./cheatsheet/mongodb.md)
 - redis: [click here](./cheatsheet/redis.md)
