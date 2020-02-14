@@ -82,3 +82,75 @@
 <br>
 
 # IP & DNS: Scalable internet addressing 
+
+- In 1973, there were only 45 computers on the internet, located at 36 labs around the US. Nowadays, there are more than 4 billion devices connected to the internet, in a world with a population of 7.5 billion. When one computer sends a message to another computer, it needs to somehow identify that computer amongst the billions of other computers.
+
+  How is that possible? It's all thanks to IP and DNS, two protocols for addressing computers in a network.
+  
+### IP addresses (Internet Protocol)
+
+- The Internet Protocol (IP) describes how two computers can communicate with each other, and it's used by every computer on the internet. Each computer has an IP address, just like homes and companies have mail addresses. When a computer sends a message to another computer, it specifies the recipient's address and also makes sure to include its own address, so that the second computer can reply.
+
+  In the IP v4 protocol, IP addresses look like this: __74.125.20.113__
+  
+  Each IP address is split into 4 numbers, and each number can range from 0 to 255, We write those numbers in decimal, but to the computer, they're represented with bits, like so:
+  
+  01010101 01010101 01010101 01010101
+  
+  Overall, that's 2^{32}, that gives us: 4,294,967,2964,294,967,2964,possible IPv4 addresses. That's a lot! But remember, in the beginning, we said there are more than 4 billion devices connected to the internet? Well, we're reaching the limit of possible IP addresses. It's time for plan B.
+
+- `IP v6 addresses` -- Back when they invented the internet, they didn't anticipate how popular it'd become and they thought that 4 billion would be plenty. That's what led to the IPv6 protocol, a new addressing scheme. Here's an IPv6 address:
+  
+  2001:0db8:0000:0042:0000:8a2e:0370:7334
+  
+  Notice the letters in those numbers, like d and b in 0db8? Those are hexadecimal numbers, which means that the IPv6 address is much longer than it looks.
+
+- `Hierarchical addressing` -- Many addressing schemes are hierarchical, like phone numbers:
+
+  +1 (541) 754-3010
+  
+  We can break that into 4 parts: 1-Country code  2-Area code	 3-Local exchange	 4-Specific phone
+
+  IP addresses are also hierarchical. The first sequence of bits identifies the network, and the final bits identify the individual node in the network. Consider this IP address: `24.147.242.217` -- We can break that into 2 parts: -- `24.147` (Comcast network) `242.217` (My home network)
+  
+- `What's your IP address?` -- One way to find out your computer's IP address is by searching Google for "IP address". Google knows your IP address, since your computer sends a message to the Google computers as soon as it loads google.com.
+  
+  Your IP address might be different tomorrow than it is today. Each ISP has a range of addresses they can assign, and they might give you a different one of those addresses each time they see your computer pop up on the network. That's called a "dynamic" IP address.
+  
+  Computers that act as servers, like the computers that power Google.com, often have "static" IP addresses. That makes it easier for computers to quickly send search requests to the Google servers.
+
+### DNS systems (Domain name systems)
+
+- As we just learned, IP addresses are how computers identify other computers on the internet. IP addresses aren't particularly human-friendly, though. Who wants to memorize an address like 74.125.20.113? Or the even harder IP v6 addresses?
+
+  The domain name system (DNS) gives us humans an easy way to identify where we want to go on the internet. We simply type in a domain name like "www.wikipedia.org", and our computer connects us to the computers powering Wikipedia: A domain name is a human-friendly address for a website, something that's easy for us to remember and type in.
+  
+- Each domain name is made up of parts:
+  
+  `third-level-domain.second-level-domain.top-level-domain`
+  
+  There are a limited set of top level domains (TLDs), and many websites use the most common TLDs,".com", ".org", and ".edu".
+  
+  The second level domain is unique to the company or organization that registers it, like "wikipedia" or "khanacademy".
+  
+  The third level domain is also called a subdomain, because it's owned by the same group and that URL often directs you to a subset of the website, like "m.wikipedia.org" (mobile-optimized Wikipedia) or "es.khanacademy.org" (Spanish-language Khan Academy).
+  
+- `Domains <--> IP addresses` -- Behind the scenes, each domain name maps to an IP address. When we type a URL in the address bar of our browser, the computer has to figure out its IP address. The computer can't store a database of more than 300 million domain names locally, so it goes through a multi-step process to find out the IP address
+
+  __Step 1: Check the local cache__ If you've visited a website once, there's a fairly good chance you'll visit it again. That's why computers keep their own local cache of domain name to IP mappings. The cache stays small, because it kicks out domains you haven't visited in a while or domains that send down expiration dates.
+  
+  __Step 2: Ask the ISP cache__ Every ISP provides a domain name resolving service and keeps its own cache. Perhaps you haven't visited a particular website, but your neighbor just did, so the ISP can lookup the IP from their visit. If it's not in the ISP's cache, then it's off to the next step.
+  
+  __Step 3: Ask the name servers__ There are domain name servers scattered around the globe that are responsible for keeping track of a subset of the millions of domain names. The servers are ordered in a hierarchy: `Root name servers → TLD name servers → Host name servers.`
+  
+    The ISP starts by asking the root name servers: "hey, which name server knows about .org domains?" The root name server responds with the IP address of a TLD name server that tracks ".org" domains. Next, the ISP asks the TLD name server: "so, who knows about wikipedia domains?" The TLD name server responds with the IP address of a host name server that contains the "wikipedia" records. Finally, the ISP asks the host name server: "okay, so where's www.wikipedia.org?" The host name server responds with an exact IP address.
+    
+    The ISP sends the IP address back to the requesting computer, and now our computer can successfully connect with the computer powering that domain.
+    
+ ### DNS Spoofing 
+ 
+ - The domain name system is scalable, but it is not always secure. Cyber criminals figured out a way to exploit flaws in DNS name servers, in an attack known as DNS spoofing or DNS cache poisoning.
+ 
+  As we saw above, a domain resolver service must ask name servers when it doesn't already know the mapping of a domain to an IP. If a cyber criminal manages to take control of a name server or redirect requests to its own server, then it can reply with any IP address it wants: The IP address often redirects users to a page that will download computer viruses or ask for their secure information.
+  
+  There is good news, however: DNS spoofing can be prevented. The DNSSEC protocol extends the original DNS protocol and specifies the best way for DNS resolvers to authenticate the information sent to them. Upgrading old systems takes time, so it may be years or decades before all DNS systems are using DNSSEC.
