@@ -33,15 +33,45 @@
   
   As long as the two computers agree on the time period, then they can transfer information to each other, turning binary data into pulses and turning the pulses back to binary data.
   
-- `Bit rate` --
+- `Bit rate` -- Computer networks can send bits very fast. We measure that speed using the bit rate, the number of bits of data that are sent each second. The earliest internet connections were just 75 bps (bits per second). These days, connections are more often measured in Mbps (megabits per second).
 
-- `Bandwidth` --
+  A megabit is huge: 1 million bits! A 10 Mbps connection transfers data at 10 million bits per second. That's one bit every 100 nanoseconds (0.0000001 seconds).
 
-- `Latency` -- 
+  We also measure bit rate in smaller units like kilobits (1 thousand bits) or much bigger units like gigabits (1 billion bits) and even petabits (1 quadrillion bits).
+  
+  | unit | # | of its |
+  | ---- | -- | --- |
+  | kilobit | 1000 | 1 thousand |
+  | megabit | 1000^2 | 1 million |
+  | gigabit | 1000^3 | 1 billion |
+  | terabit | 1000^4 | 1 trillion |
+  | petabit | 1000^5 | 1 quadrillion | 
 
-- `Physical connections: Ethernet, Fiber, and WiFi` -- 
+- `Bandwidth` -- We use the term bandwidth to describe the maximum bit rate of a system. If a network connection has a bandwidth of 100 Mbps, that means it can't transfer more than 100 megabits per second. Fortunately, that's still a lot!
 
-- `Internet speed` -- 
+- `Latency` -- (also called the ping rate) Another way to measure the speed of a computer network is latency. You might guess what that means from the word itself: latency measures how late the bits arrive. To put it in more formal terms: latency is the time between the sending of a data message and the receiving of that message, measured in milliseconds.
+
+  My computer sends a message to the Google server. 30 milliseconds later, Google receives the message. 40 milliseconds later, my computer gets an acknowledgement from Google that it received the message. That's a total round-trip latency of 70ms. The latency depends on a number of physical factors: the type of connection from my computer to Google, the distance from my computer to the Google servers, and the congestion in the network (which may mean my request has to wait in line).
+  
+  There's a major limiting factor to latency: the speed of light. Nothing can move faster than light, not even our very important internet requests. The speed of light is 1 foot per nanosecond, which means a trip length of at least 30 ms from Los Angeles to Tokyo. We can't do much about the speed of light, but we can decrease latency by reducing congestion and improving our physical connections.
+
+- `Physical connections: Ethernet, Fiber, and WiFi` -- The internet is a series of computers connected to each other. But what does that physical connection look like? It depends on the needs of the connection and the size of the network.
+
+  __Ethernet cables__ are a common type of connection made up of twisted copper wires. Electricity pulses through them at a bit rate up to 400 Gbps. Ethernet cables are used in networks as small as LANs (local area networks) like a company's office or as large as WANs (wide area networks) like an entire country.
+
+  __Fiber optic cables__ send pulses of light instead of electricity, and they can send terabits per second. They connect computers across the oceans, so that we can quickly send data across the world. As they become less expensive, they're becoming increasingly common in city-wide networks as well
+  
+  __Wireless__ connections don't involve any wiring at all—at least at first. A wireless card in the computer turns binary data into radio waves and transmits them through the air. Those radio waves can't travel very far: 75-100 feet in a place like an office building that's filled with all sorts of obstacles, or up to 1000 feet in a wide open field. The waves are hopefully picked up by a wireless router, also called an access point, which converts them from radio waves back into binary data
+  
+  At any given time, our internet connection might be using a combination of those technologies. Maybe we're using WiFi to connect to our home router, our home router is using ethernet copper cables to connect to the metropolitan network, and those cables are hopping over fiber to communicate with overseas data centers.
+  
+  | Types | Sends | Distance | Bandwitdth | Issues | 
+  |--|--|--|--|--|
+  | Wireless | Radio | 100 ft | 1.3 Gbps | Slower in reality |
+  | Ethernet copper cables | Electricty | 330 ft | 1 Gbps | Can lose data | 
+  | Fiber optic cable | Light | 50 miles | 26 Tbps | Expensive |  
+
+- `Internet speed` -- Speed is a combination of bandwidth and latency. Computers split up messages into packets, and they can't send another message until the first packet is received. Even if a computer is on a connection with high bandwidth, its speed of sending and receiving messages will still be limited by the latency of the connection.
 
 <br>
 <br>
