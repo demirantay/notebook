@@ -22,4 +22,4 @@
   set a 1, set b 0, eval;
   set a 1, set b 1, eval;
   ```
-  See! we ran four tests for our Xor chip values 
+  See! we ran four tests for our Xor chip values . By the way dont worry about testing, the course proffessors have written the test scripts for us. Just build your script and test it with their perfect scripts.
