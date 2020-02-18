@@ -12,6 +12,8 @@
 
 - This is the skeleton of a test with unittest:
   ```python
+  import unittest
+  
   class TestXxx(unittest.TestCase):
 
       def setUp(self):
