@@ -79,4 +79,57 @@
 
 ### Computer Malware and Attacks
 
+- Cybercrime can target a single computer or a network of computers. Malware is any malicious software that's unknowingly installed onto a computer. The most dangerous malware are self-replicating viruses and worms.
+
+- `Malware` -- Malware can take many forms: A Trojan horse is a harmful program that masquerades as a legitimate program, and is often downloaded onto computers by unknowing users. Once the user runs the program, it can start inflicting its damage. 
+
+  A __virus__ is a program that hides within the source code of a legitimate program. A virus is self-replicating: it contains code that copies itself into other files on the system.
+
+  A __worm__ is also self-replicating, but it copies itself into entirely different computers within the network. It can travel along networked protocols like email, file sharing, or instant messaging. Many worms don't take any harmful action besides replicate themselves, but even those worms can disrupt a network by hogging bandwidth.
+  
+  Once malware gets onto a computer, it can cause damage in multiple ways:
+    - Spyware
+    - Adware
+    - Ransomware
+    - Cryptomining malware 
+    - etc .. 
+
+- `Botnets` -- A botnet is a collection of computers that are all infected by the same malware; all running the same "bot". The cyber criminal behind the botnet will often have the ability to remotely access the machines, and can use a botnet to launch a large-scale attack
+
+- `DDoS Attacks` -- A common use of botnets is to attack web servers with a Distributed Denial-of-Service (DDoS) attack. A web server is any computer that's responsible for responding to HTTP requests from users. Web servers are typically set up to handle an expected number of requests per minutes, and often struggle to handle much more than that. A DDoS attack can significantly slow down a website or bring it down entirely, which definitely distresses its users and can lose money for the company.
+
+- `Protection` -- Cyber criminals are constantly finding new ways to compromise systems. Fortunately, at the same time, security engineers are coming up with protection mechanisms. 
+
+  A security patch is an update to the code of an application or the entire operating system, and often fixes a bug that's been exploited by malware. Computers, including mobile phones and hardware devices, should always keep up to date with security patches to reduce the risk of malware.
+  
+  A firewall is a system that monitors incoming and outgoing network traffic to a computer or internal network, and determines what traffic to allow. Firewalls can do automated detection of suspicious traffic and can also be configured manually. Firewalls cannot identify and block all malware, but they are a useful line of defense for what they can identify.
+  
+  Antivirus software protects an individual computer by constantly scanning files and identifying malware. Once an antivirus program finds a piece of malware, it can guide the user through deleting or repairing the file to be safe again. 
+
 ### Phishing and Password Attacks 
+
+- These days, cyber criminals often find it easier to attack users than attack software, since there are so many users on the web that are not following best practices for security.
+
+- `Phishing attacks` -- In a phishing attack, a cyber criminal tricks a user into divulging their private information. A phishing attack typically starts with an email that claims to be from a legitimate website, like a banking website or online store:
+
+  The goal of the email is to obtain private data from the user, so it either asks the recipient to reply with personal information or it links to a website that looks remarkably like the original site:
+  
+  If the user is convinced and enters private details on the site, that data is now in the hands of the cyber criminal! If the user filled in login details, they can then use those credentials to log in to the real website, or if the user provided credit card details, they can use the credit card to make purchases anywhere.
+    
+  Ways to detect a phishing:
+    - Suspicious email address: Phishing emails will often come from addresses at domains that don't belong to the legitimate company.
+    - Urgency and scare tactics: Phishing emails use psychological manipulation to lower our guard and get us to respond quickly without thinking through the consequences.
+    - Suspicious URL: Phishing emails will usually link to a website with a URL that's very similar to the legitimate URL, or at least contains the company name somehow
+    - Non-secured HTTP connections: Any website that is asking you for sensitive information should be using HTTPS. Phishing websites don't always go through the extra effort to use HTTPS.
+    
+    There's a new type of phishing that's even more popular and dangerous: spear-phishing. That's where a phishing email targets users in a particular company, with the goal of gaining access to the company's data.
+
+- `Password attacks` -- These are the most common ways to discover a user's password:
+  - Guessing
+  - Brute-forcing, which is basically computer-assisted guessing at a much larger scale.
+  - Stuffing, where attackers find credentials for one service and try them on another service.
+  - Malware, especially keyloggers.
+  - Phishing scams, which we just discussed.
+  - etc.
+
+- `
