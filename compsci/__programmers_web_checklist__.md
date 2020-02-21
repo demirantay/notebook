@@ -33,6 +33,43 @@
 
 ## Security
 
+- It's a lot to digest but the [OWASP development guide](https://wiki.owasp.org/index.php/OWASP_Guide_Project) covers Web Site security from top to bottom.
+
+- Know about Injection especially [SQL injection](https://en.wikipedia.org/wiki/SQL_injection) and how to prevent it.
+
+- Never trust user input, nor anything else that comes in the request (which includes cookies and hidden form field values!).
+
+- Hash passwords using [salt](https://security.stackexchange.com/questions/21263/how-to-apply-a-pepper-correctly-to-bcrypt) and use different salts for your rows to prevent rainbow attacks. Use a slow hashing algorithm, such as bcrypt (time tested) or scrypt (even stronger, but newer) ([1](https://it.slashdot.org/comments.pl?sid=1987632&cid=35149842), [2](http://www.tarsnap.com/scrypt.html)), for storing passwords. ([How To Safely Store A Password](https://codahale.com/how-to-safely-store-a-password/)). T[he NIST also approves of PBKDF2 to hash passwords](https://security.stackexchange.com/questions/7689/clarification-needed-for-nists-whitepaper-recommendation-for-password-based-ke) ", and it's [FIPS approved in .NET](https://security.stackexchange.com/questions/2131/reference-implementation-of-c-password-hashing-and-verification/2136#2136) (more info here). Avoid using MD5 or SHA family directly.
+
+- [Don't try to come up with your own fancy authentication system](https://stackoverflow.com/questions/1581610/how-can-i-store-my-users-passwords-safely/1581919#1581919). It's such an easy thing to get wrong in subtle and untestable ways and you wouldn't even know it until after you're hacked.
+
+- Know the [rules for processing credit cards](https://www.pcisecuritystandards.org/). ([See this question as well](https://stackoverflow.com/questions/51094/payment-processors-what-do-i-need-to-know-if-i-want-to-accept-credit-cards-on))
+
+- Use [SSL](https://developer.mozilla.org/en-US/docs/Mozilla/Projects/NSS)/[TLS](https://developer.mozilla.org/en-US/docs/Mozilla/Projects/NSS)/[HTTPS](https://en.wikipedia.org/wiki/Session_hijacking#Prevention) for any sites where sensitive data is entered (like credentials, Personally Identifiable Information, credit card info). [Let's Encrypt](https://letsencrypt.org/) is a free certificate authority which can help.
+
+- [Prevent session hijacking](https://en.wikipedia.org/wiki/Session_hijacking#Prevention).
+
+- Avoid [cross site scripting](https://en.wikipedia.org/wiki/Cross-site_scripting) (XSS).
+
+- Avoid [cross site request forgeries](https://en.wikipedia.org/wiki/Cross-site_request_forgery) (CSRF).
+
+- Avoid [Clickjacking](https://en.wikipedia.org/wiki/Clickjacking).
+
+- Keep your system(s) up to date with the latest patches.
+
+- Make sure your database connection information is secured.
+
+- Keep yourself informed about the latest attack techniques and vulnerabilities affecting your platform.
+
+- Read The [Google Browser Security Handbook](https://code.google.com/archive/p/browsersec/).
+
+- Read The [Web Application Hacker's Handbook](https://www.amazon.com/dp/0470170778/).
+
+- Consider [The principle of least privilege](https://en.wikipedia.org/wiki/Principle_of_least_privilege). Try to run your app server as [non-root](https://security.stackexchange.com/questions/47576/do-simple-linux-servers-really-need-a-non-root-user-for-security-reasons). (tomcat example)
+
+- Put `rel="noopener noreferrer"` on all user-provided links with `target="_blank"` to prevent JavaScript on the destination page from redirecting your page to somewhere else, such as a fake login page. (phising)
+
+- Consider using a strict [Content Security Policy](https://csp.withgoogle.com/docs/index.html).
 
 <br>
 
