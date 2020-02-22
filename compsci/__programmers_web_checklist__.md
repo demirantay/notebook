@@ -83,19 +83,114 @@
 
 - Combine/concatenate multiple stylesheets or multiple script files to reduce the number of browser connections and improve gzip ability to compress duplications between files.
 
+- Take a look at the [Yahoo Exceptional Performance site](https://developer.yahoo.com/), lots of great guidelines, including improving front-end performance and their [YSlow tool](http://yslow.org/) (requires Firefox, Safari, Chrome or Opera). Also, [Google page speed](https://developers.google.com/speed/docs/insights/rules) (use with browser extension) is another tool for performance profiling, and it optimizes your images too.
+
+- Use [SVG image sprites](https://24ways.org/2014/an-overview-of-svg-sprite-creation-techniques/) for small related images like toolbars. SVG coloring is bit tricky. You can read about it [here](http://tympanus.net/codrops/2015/07/16/styling-svg-use-content-css/).
+
+- Busy web sites should consider [splitting components across domains](https://developer.yahoo.com/performance/rules.html#split). Specifically...
+
+- Static content (i.e. images, CSS, JavaScript, and generally content [that doesn't need access to cookies](https://stackoverflow.blog/2009/08/09/a-few-speed-improvements/)) should go in a separate domain that does not use cookies, because all cookies for a domain and its subdomains are sent with every request to the domain and its subdomains. One good option here is to use a Content Delivery Network (CDN), but consider the case where that CDN may fail by including alternative CDNs, or local copies that can be served instead.
+
+- Minimize the total number of HTTP requests required for a browser to render the page.
+
+- Choose a [template engine](http://garann.github.io/template-chooser/) and render/pre-compile it using task-runners like gulp or grunt
+
+- Make sure there’s a `favicon.ico` file in the root of the site, i.e. `/favicon.ico`. [Browsers will automatically request it](https://mathiasbynens.be/notes/rel-shortcut-icon), even if the icon isn’t mentioned in the HTML at all. If you don’t have a `/favicon.ico`, this will result in a lot of 404s, draining your server’s bandwidth.
+
 <br>
 
 ## SEO (Search Engine Optimization)
+
+- Use "search engine friendly" URLs, i.e. use `example.com/pages/45-article-title` instead of `example.com/index.php?page=45`
+
+- When using # for dynamic content change the # to #! and then on the server $_REQUEST["_escaped_fragment_"] is what googlebot uses instead of #!. In other words, ./#!page=1 becomes ./?_escaped_fragments_=page=1. Also, for users that may be using FF.b4 or Chromium, history.pushState({"foo":"bar"}, "About", "./?page=1"); Is a great command. So even though the address bar has changed the page does not reload. This allows you to use ? instead of #! to keep dynamic content and also tell the server when you email the link that we are after this page, and the AJAX does not need to make another extra request.
+
+- Don't use links that say "[click here](https://ux.stackexchange.com/questions/12100/why-shouldnt-we-use-words-such-as-here-and-this-in-textlinks)". You're wasting an SEO opportunity and it makes things harder for people with screen readers.
+
+- Have an [XML sitemap](https://www.sitemaps.org/index.html) preferably in the default location `/sitemap.xml`.
+
+- Use [`<link rel="canonical" ... />`](https://webmasters.googleblog.com/2009/02/specify-your-canonical.html) when you have multiple URLs that point to the same content, this issue can also be addressed from [Google Webmaster Tools](https://www.google.com/webmasters/#?modal_active=none).
+
+- Use [Google Webmaster Tools](https://www.google.com/webmasters/#?modal_active=none) and [Bing Webmaster Tools](https://www.bing.com/toolbox/webmaster).
+
+- Install [Google Analytics](https://marketingplatform.google.com/about/analytics/) right at the start (or an open source analysis tool like [Piwik](https://matomo.org/)).
+
+- Know how [robots.txt](https://en.wikipedia.org/wiki/Robots_exclusion_standard) and search engine spiders work.
+
+- Redirect requests (using `301 Moved Permanently`) asking for `www.example.com` to `example.com` (or the other way round) to prevent splitting the google ranking between both sites.
+
+- Know that there can be badly-behaved spiders out there.
+
+- If you have non-text content look into Google's sitemap extensions for video etc. There is some good information about this in [Tim Farley's answer](https://softwareengineering.stackexchange.com/questions/46716/what-technical-details-should-a-programmer-of-a-web-application-consider-before#167608).
 
 
 <br>
 
 ## Technology
 
+- Understand HTTP and things like GET, POST, sessions, cookies, and what it means to be "stateless".
+
+- Write your XHTML/HTML and CSS according to the [W3C specifications](https://www.w3.org/TR/) and make sure they [validate](http://validator.w3.org/). The goal here is to avoid browser quirks modes and as a bonus make it much easier to work with non-traditional browsers like screen readers and mobile devices.
+
+- Understand how JavaScript is processed in the browser.
+
+- Understand how JavaScript, style sheets, and other resources used by your page are loaded and consider their impact on perceived performance. It is now widely regarded as appropriate to move scripts to the bottom of your pages with exceptions typically being things like analytics apps or HTML5 shims.
+
+- Understand how the JavaScript sandbox works, especially if you intend to use iframes.
+
+- Be aware that JavaScript can and will be disabled, and that AJAX is therefore an extension, not a baseline. Even if most users leave it on now, remember that [NoScript](https://noscript.net/) is becoming more popular. Even though modern crawling bots support indexing JavaScript-generated content, consider using server-side rendering for other crawling bots or users who have disabled JavaScript.
+
+- Learn the difference between [301 and 302 redirects](https://www.bigoakinc.com/blog/when-to-use-a-301-vs-302-redirect/) (this is also an SEO issue).
+
+- Learn as much as you possibly can about your deployment platform.
+
+- Consider using a [Reset Style Sheet](https://stackoverflow.com/questions/11578819/css-reset-what-exactly-does-it-do) or [normalize.css](http://necolas.github.io/normalize.css/).
+
+- Consider JavaScript frameworks (such as jQuery, MooTools, Prototype, Dojo or YUI 3), which will hide a lot of the browser differences when using JavaScript for DOM manipulation.
+
+- Taking perceived performance and JS frameworks together, consider using a service such as the [Google Libraries API](https://developers.google.com/speed/libraries) to load frameworks so that a browser can use a copy of the framework it has already cached rather than downloading a duplicate copy from your site.
+
+- Don't reinvent the wheel. Before doing ANYTHING search for a component or example on how to do it. There is a 99% chance that someone has done it and released an OSS version of the code.
+
+- On the flipside of that, don't start with 20 libraries before you've even decided what your needs are. Particularly on the client-side web where it's almost always ultimately more important to keep things lightweight, fast, and flexible.
+
 <br>
 
 ## Bug fixing
 
+- Understand you'll spend 20% of your time coding and 80% of it maintaining, so code accordingly.
+
+- Set up a good error reporting solution.
+
+- Have a system for people to contact you with suggestions and criticisms
+
+- Document how the application works for future support staff and people performing maintenance.
+
+- Make frequent backups! (And make sure those backups are functional) Have a restore strategy, not just a backup strategy.
+
+- Use a version control system to store your files, such as Subversion, Mercurial or Git.
+
+- Don't forget to do your Acceptance Testing. Frameworks like Selenium can help. Especially if you fully automate your testing, perhaps by using a Continuous Integration tool, such as Jenkins.
+
+- Make sure you have sufficient logging in place using frameworks such as [log4j](https://logging.apache.org/log4j/2.x/), [log4net](http://logging.apache.org/log4net/) or [log4r](). If something goes wrong on your live site, you'll need a way of finding out what.
+
+- When logging make sure you capture both handled exceptions, and unhandled exceptions. Report/analyse the log output, as it'll show you where the key issues are in your site.
+
 <br>
 
 ## Other
+
+- Implement both server-side and client-side monitoring and analytics (one should be proactive rather than reactive).
+
+- Use services like UserVoice and Intercom (or any other similar tools) to constantly keep in touch with your users.
+
+- Follow [Vincent Driessen](https://nvie.com/about/)'s [Git branching model](https://nvie.com/posts/a-successful-git-branching-model/)
+
+
+----
+
+
+Lots of stuff omitted not necessarily because they're not useful answers, but because they're either too detailed, out of scope, or go a bit too far for someone looking to get an overview of the things they should know
+
+- Reference:
+  - https://softwareengineering.stackexchange.com/questions/46716/what-technical-details-should-a-programmer-of-a-web-application-consider-before
