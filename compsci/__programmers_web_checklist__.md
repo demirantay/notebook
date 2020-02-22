@@ -75,6 +75,14 @@
 
 ## Performance
 
+- Implement caching if necessary, understand and use [HTTP caching](https://www.mnot.net/cache_docs/) properly as well as [HTML5 Manifest](https://www.w3.org/TR/2011/WD-html5-20110525/offline.html).
+
+- Optimize images - don't use a 20 KB image for a repeating background.
+
+- Compress content for speed, see [brotli](https://www.smashingmagazine.com/2016/10/next-generation-server-compression-with-brotli/), [gzip/deflate](https://developer.yahoo.com/performance/rules.html?guccounter=1#gzip) (deflate is better).
+
+- Combine/concatenate multiple stylesheets or multiple script files to reduce the number of browser connections and improve gzip ability to compress duplications between files.
+
 <br>
 
 ## SEO (Search Engine Optimization)
