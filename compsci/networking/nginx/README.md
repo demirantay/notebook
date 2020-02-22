@@ -144,3 +144,32 @@
 
 # Serve Static Files 
 
+- Serving static files is the most basic task for a web server. Just drop in .txt, .html, .zip, or any other kind of file and the server will return them directly.
+
+  This configuration example will listen on port 777, can be viewed at http://localhost:7777/ and a directory listing will be provided. Also included is an example of setting separate controls on a subdirectory by turning off directory listing and designating specific index files only. It will also serve the /var/www/static-content/ directory on the url of /static/.
+  ```nginx
+  http {
+      server {
+          listen 0.0.0.0:7777;
+          root /path/to/public/directory;
+
+          location / {
+              # Directory listing (risky!)
+              autoindex on;
+          }
+
+          location /relative-to-root/dir {
+              autoindex off;
+              # Default to index.htm or index.html
+              index index.html, index.htm
+          }
+
+          location /static/ {
+              alias /var/www/static-content/;
+          }
+
+      }
+  }
+  ```
+  
+
