@@ -252,6 +252,7 @@ Try to specilize in a field such as these, just chose one or two. However, remem
 - [ ] Desktop Applications -- (Electron)
 - [ ] Mobile Applications -- (React Native)
 - [ ] Web Assembly
+- [ ] Learn About Design Tools: Figma (logo design ...etc.)
 
 ### Packet #2 
 
