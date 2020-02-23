@@ -284,6 +284,7 @@ Try to specilize in a field such as these, just chose one or two. However, remem
 - [ ] Level 2: Do all of [these](https://simplestepscode.com/javascript-project-ideas/) if the link is dead [alternative link](https://dev.to/yaphi1/javascript-project-ideas-and-practical-uses)
 - [ ] Level 3: Make a CSS framework but instead of making it like bootstrap, make it more pluggable and replacable. (Use relative divs ("tak cikar tarzi ilerle"). 
 - [ ] Level 4: Create all of [these with react](https://www.freecodecamp.org/news/every-time-you-build-a-to-do-list-app-a-puppy-dies-505b54637a5d/)
+- [ ] Level 4.5: Once you are done with small react examples. Do a big project [like this](https://github.com/oldboyxx/jira_clone)
 - [ ] Level 5: Do all of [these](http://eugenkiss.github.io/7guis/tasks/) for practicing little bit of electron. No need to go too big.
 - [ ] Level 6: Do all of [these here](https://www.instamobile.io/react-native-tutorials/react-native-app-ideas-beginners/) to practice react native. Dont skip anything.
 - [ ] Level 7: Clone a mini React Clone -- pacakge it in npm, yarn
