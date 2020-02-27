@@ -54,10 +54,51 @@
 
 # Garbage Collection
 
+- Memory management in JavaScript is performed automatically and invisibly to us. We create primitives, objects, functions… All that takes memory. The main concept of memory management in JavaScript is `reachability`.
+
+- There’s a base set of inherently reachable values, that cannot be deleted for obvious reasons.These values are called roots. For instance:
+  - Local variables and parameters of the current function.
+  - Variables and parameters for other functions on the current chain of nested calls.
+  - Global variables.
+  - (there are some other, internal ones as well)
+- Any other value is considered reachable if it’s reachable from a root by a reference or by a chain of references.
+
+  There’s a background process in the JavaScript engine that is called `garbage collector`. It monitors all objects and removes those that have become unreachable.
+  
+  > The basic garbage collection algorithm is called “mark-and-sweep”.
+  
+- The main things to know:
+  - Garbage collection is performed automatically. We cannot force or prevent it.
+  - Objects are retained in memory while they are reachable.
+  - Being referenced is not the same as being reachable (from a root): a pack of interlinked objects can become unreachable as a whole.
+  
+  Modern engines implement advanced algorithms of garbage collection.
+  
+  A general book “The Garbage Collection Handbook: The Art of Automatic Memory Management” (R. Jones et al) covers some of them.
+  
+  If you are familiar with low-level programming, the more detailed information about V8 garbage collector is in the article A tour of [V8: Garbage Collection.](http://jayconrod.com/posts/55/a-tour-of-v8-garbage-collection)
+  
+  In-depth knowledge of engines is good when you need low-level optimizations. It would be wise to plan that as the next step after you’re familiar with the language.
+  
 <br>
 <Br>
 
 # Symbol type
+
+- By specification, object property keys may be either of string type, or of symbol type. Not numbers, not booleans, only strings or symbols, these two types.
+
+- A “symbol” represents a unique identifier. A value of this type can be created using Symbol(): 
+  ```js
+  // id is a new symbol
+  let id = Symbol();
+  ```
+  Symbols are guaranteed to be unique. Even if we create many symbols with the same description, they are different values. The description is just a label that doesn’t affect anything. For instance, here are two symbols with the same description – they are not equal:
+  ```js
+  let id1 = Symbol("id");
+  let id2 = Symbol("id");
+
+  alert(id1 == id2); // false
+  ```
 
 <br>
 <br>
