@@ -87,9 +87,9 @@ Try to specilize in a field such as these, just chose one or two. However, remem
  
 ### Computer Architecture
   
-  - [ ] Read: Read [this tutorial](https://www.studytonight.com/computer-architecture/)
+  - [x] Read: Read [this tutorial](https://www.studytonight.com/computer-architecture/)
   - [ ] Book : [Hidden Language of Computers: CODE](ftp://ftp.borg.moe/yarr/Gentoomen%20Library/Programming/Misc/Charles%20Petzold%20-%20Code%20-%20The%20Hidden%20Language%20of%20Computer%20Hardware%20and%20Software.pdf)
-  - [ ] Book: The Elements of Computing Systems
+  - [ ] Book: The Elements of Computing Systems (left at https://www.youtube.com/watch?v=OZlvyGaRmQQ&list=PLrDd_kMiAuNmSb-CKWQqq9oBFN_KNMTaI&index=12 and at the end of chapter 01 projects.)
   - [ ] Book: Structured Computer Organization - Andrew S.
   > - [ ] Book: Digital Design and Computer Architecture 2nd Edition (hard - shelved it - may return to it or delete it)
   - [ ] Book: Essentials of Computer Architecture by Comer
