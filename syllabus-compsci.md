@@ -375,9 +375,6 @@ Try to specilize in a field such as these, just chose one or two. However, remem
 > Update it for 2020
 
 - [ ] System Programming Languages -- (Python, C/C++, Go.. etc.)
-- [ ] Finish Algorithms section at the top
-- [ ] Finish Computer Architecture at the top
-- [ ] Finish Operating Systems at the top
 - [ ] OS Concepts -- (I/O, Memory Storage, Process Management, Sockets, File Systems ... etc.)
 - [ ] Unix/Linux Envioroment
 - [ ] Terminal -- (bash scripting)
@@ -387,7 +384,6 @@ Try to specilize in a field such as these, just chose one or two. However, remem
 - [ ] Terminal -- (Network: nmap, tcpdump, ping, traceroute, ip ...etc)
 - [ ] Terminal -- (Sys Performance: nmon, iostat, sar, vmstat ...etc.)
 - [ ] Terminal -- (All other neccessary information: history, df ...etc)
-- [ ] Finish Networking at the top
 - [ ] Networking 
 - [ ] Web Servers -- (nginx, apache, tomcat ... etc)
 - [ ] Caching Servers
