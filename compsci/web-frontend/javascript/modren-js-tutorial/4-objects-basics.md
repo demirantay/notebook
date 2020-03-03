@@ -120,10 +120,28 @@
 
 # Object methods: "this"
 
+- I already know what `this`, `self`, ... etc. means in Objects in various languages. Javascript is no different __however__ there are some quirks in javascript that we need to note.
+
+- Arrow functions are special: they don’t have their “own” `this`. If we reference `this` from such a function, it’s taken from the outer “normal” function.
+
+- The main things to know:
+  - Functions that are stored in object properties are called “methods”.
+  - Methods allow objects to “act” like `object.doSomething()`.
+  - Methods can reference the object as `this`.
+  - The value of `this` is defined at run-time.
+  - When a function is declared, it may use `this`, but that `this` has no value until the function is called.
+  - A function can be copied between objects.
+  - When a function is called in the “method” syntax: `object.method()`, the value of `this` during the call is `object`.
+
 <br>
 <Br>
 
 # Object to primitive conversion
+
+- In the chapter Type Conversions we’ve seen the rules for numeric, string and boolean conversions of primitives. But we left a gap for objects. Now, as we know about methods and symbols it becomes possible to fill it.
+  - 1 - All objects are `true` in a boolean context. There are only numeric and string conversions.
+  - 2 - The numeric conversion happens when we subtract objects or apply mathematical functions. For instance,`Date` objects  can be subtracted, and the result of `date1 - date2` is the time difference between two dates.
+  - 3 - As for the string conversion – it usually happens when we output an object like `alert(obj)` and in similar contexts.
 
 <br>
 <br>
