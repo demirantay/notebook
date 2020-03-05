@@ -147,3 +147,24 @@
 <br>
 
 # Constructor, operator "new"
+
+- The regular `{...}` syntax allows to create one object. But often we need to create many similar objects, like multiple users or menu items and so on.
+
+  That can be done using constructor functions and the "`new`" operator.
+  
+- The basics are mostly same with every other language but in js we use functions to define our classes instead of the keyword "class":
+  ```js
+  function User(name) {
+    this.name = name;
+    this.isAdmin = false;
+  }
+
+  let user = new User("Jack");
+  ```
+  
+- To sum up:
+  - Constructor functions or, briefly, constructors, are regular functions, but there’s a common agreement to name them with capital letter first.
+  - Constructor functions should only be called using `new`. Such a call implies a creation of empty `this` at the start and returning the populated one at the end.
+  - We can use constructor functions to make multiple similar objects.
+  
+  > JavaScript provides constructor functions for many built-in language objects: like Date for dates, Set for sets and others that we plan to study.
