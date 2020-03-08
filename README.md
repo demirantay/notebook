@@ -11,7 +11,8 @@
 - Html: [click here](./cheatsheet/html.md)
 - Css: [click here](./cheatsheet/css.md)
 - Javascript: [click here](./cheatsheet/javascript.md)
-- Api/Ajax: ...
+- Api: ...
+- Npm: [click here](./cheatsheet/npm.md)
 
 #### Backend
 
