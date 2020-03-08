@@ -10,9 +10,11 @@
 
 - Html: [click here](./cheatsheet/html.md)
 - Css: [click here](./cheatsheet/css.md)
-- Javascript: [click here](./cheatsheet/javascript.md)
+- Javascript: Redo this on your own terms maybe checkout w3 and take the funcs you use most of the time
 - Api: ...
+- Dom: ...
 - Npm: [click here](./cheatsheet/npm.md)
+
 
 #### Backend
 
