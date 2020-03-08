@@ -70,12 +70,48 @@
 
 ### They are based on objects
 
+- Your code interacts with APIs using one or more JavaScript objects, which serve as containers for the data the API uses (contained in object properties), and the functionality the API makes available (contained in object methods).
+
+  Let's return to the example of the Web Audio API — this is a fairly complex API, which consists of a number of objects. The most obvious ones are:
+  - `AudioContext`, which represents an audio graph that can be used to manipulate audio playing inside the browser
+  - `MediaElementAudioSourceNode`, which represents an <audio> element containing sound you want to play
+  - `AudioDestinationNode`, which represents the destination of the audi
+
 ### They have recognizable entry points
+
+- When using an API, you should make sure you know where the entry point is for the API. In The Web Audio API, this is pretty simple — it is the `AudioContext` object, which needs to be used to do any audio manipulation whatsoever.
+
+  The Document Object Model (DOM) API also has a simple entry point — its features tend to be found hanging off the `Document `object, or an instance of an HTML element that you want to affect in some way.
+  
+  The Canvas API also relies on getting a context object to use to manipulate things, although in this case, it's a graphical context rather than an audio context. Its context object is created by getting a reference to the `<canvas>` element you want to draw on, and then calling its `HTMLCanvasElement.getContext()` method:
 
 ### They use events to handle changes in state
 
+- Not every api uses event but nearly all of them is handled through either js events or their own provided event objects. To provide another example, instances of the `XMLHttpRequest` object (each one represents an HTTP request to the server to retrieve a new resource of some kind) has a number of events available on them, for example, the `load` event is fired when a response has been successfully returned containing the requested resource, and it is now available.
+
+  The following code provides a simple example of how this would be used:
+  ```js
+  let requestURL = 'https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json';
+  let request = new XMLHttpRequest();
+  request.open('GET', requestURL);
+  request.responseType = 'json';
+  request.send();
+
+  request.onload = function() {
+    const superHeroes = request.response;
+    populateHeader(superHeroes);
+    showHeroes(superHeroes);
+  }
+  ```
+  The first five lines specify the location of the resource we want to fetch, create a new instance of a request object using the `XMLHttpRequest()` constructor, open an HTTP GET request to retrieve the specified resource, specify that the response should be sent in JSON format, then send the request.
+  
+  The `onload` handler function then specifies what we do with the response. We know the response will be successfully returned and available after the load event has fired (unless an error occurred)
+
 ### They have additional security mechanisms where appropriate
 
+- WebAPI features are subject to the same security considerations as JavaScript and other web technologies (for example same-origin policy), but they sometimes have additional security mechanisms in place. For example, some of the more modern WebAPIs will only work on pages served over HTTPS due to them transmitting potentially sensitive data (examples include Service Workers and Push).
+
+  In addition, some WebAPIs request permission to be enabled from the user once calls to them are made in your code. As an example, the Notifications API asks for permission using a pop-up dialogue box:
 
 ---
 
