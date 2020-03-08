@@ -38,22 +38,4 @@ a
     - `text node`
 
 <br>
-<br>
-
----
-
-<br>
-<br>
-
-# Active learning: Getting useful information from the Window object
-
-<br>
-<br>
-
----
-
-<br>
-<br>
-
-# Active learning: A dynamic shopping list
 
