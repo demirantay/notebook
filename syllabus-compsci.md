@@ -224,12 +224,12 @@ Try to specilize in a field such as these, just chose one or two. However, remem
 
 - [x] HTML -- (basics, semantic html, basic seo, accessibility .. etc)
 - [x] CSS -- (basics, layouts, media queries, css3, responsivness .. etc)
-- [ ] JavaScript: Syntax and Basic Constucts
+- [x] JavaScript: Syntax and Basic Constucts
 - [ ] Javascript: DOM manipulation
 - [ ] JavaSCript: Learn fetching API / AJAX (XHR)
 - [ ] JavaScript: ES+6 modular javascript
 - [ ] JavaScript: Dive deep into other stuff ...
-- [ ] Package Managers --  (npm or yarn)
+- [x] Package Managers --  (npm or yarn)
 - [ ] CSS Pre-precessor -- (Sass .. etc)
 - [ ] CSS Frameworks -- (Bootstrap .. etc)
 - [ ] CSS Architecture -- (BEM)
