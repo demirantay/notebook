@@ -230,7 +230,7 @@ Try to specilize in a field such as these, just chose one or two. However, remem
 - [ ] JavaScript: ES+6 modular javascript
 - [x] Package Managers --  (npm or yarn)
 - [ ] CSS Pre-precessor -- (Sass .. etc)
-- [ ] CSS Frameworks -- (Bootstrap .. etc)
+- [x] CSS Frameworks -- (Bootstrap .. etc)
 - [x] CSS Architecture -- (BEM)
 - [ ] Build: Linters & Formatters -- (Prettier, ESLint .. etc)
 - [ ] Build: Module Bundlers -- (webpack .. etc)
