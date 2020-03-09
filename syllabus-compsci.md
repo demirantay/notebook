@@ -232,7 +232,7 @@ Try to specilize in a field such as these, just chose one or two. However, remem
 - [x] Package Managers --  (npm or yarn)
 - [ ] CSS Pre-precessor -- (Sass .. etc)
 - [ ] CSS Frameworks -- (Bootstrap .. etc)
-- [ ] CSS Architecture -- (BEM)
+- [x] CSS Architecture -- (BEM)
 - [ ] Build: Linters & Formatters -- (Prettier, ESLint .. etc)
 - [ ] Build: Module Bundlers -- (webpack .. etc)
 - [ ] Build: Task Runners -- (npm scripts .. etc)
