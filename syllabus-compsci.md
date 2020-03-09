@@ -225,10 +225,9 @@ Try to specilize in a field such as these, just chose one or two. However, remem
 - [x] HTML -- (basics, semantic html, basic seo, accessibility .. etc)
 - [x] CSS -- (basics, layouts, media queries, css3, responsivness .. etc)
 - [x] JavaScript: Syntax and Basic Constucts
-- [ ] Javascript: DOM manipulation
+- [x] Javascript: DOM manipulation
 - [ ] JavaSCript: Learn fetching API / AJAX (XHR)
 - [ ] JavaScript: ES+6 modular javascript
-- [ ] JavaScript: Dive deep into other stuff ...
 - [x] Package Managers --  (npm or yarn)
 - [ ] CSS Pre-precessor -- (Sass .. etc)
 - [ ] CSS Frameworks -- (Bootstrap .. etc)
