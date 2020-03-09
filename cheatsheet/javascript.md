@@ -16,6 +16,7 @@ Just migrated it from Codepen.io to markdown. Credit goes to [David Conner](http
 | [Add/Remove/Toggle/Check Classes](#add-elements-to-the-dom-cont)| [Events](#events) | |
 | | [Timers](#timers) | |
 | | [Type Checking](#type-checking) | |
+| [DOM Event Types](#dom-event-types) | | |
 
 
 
@@ -132,6 +133,43 @@ firstHeading.classList.toggle('visible');
 
 // will return true if it has class of 'foo' or false if it does not
 firstHeading.classList.contains('foo');
+```
+
+### DOM Event Types
+
+```javascript
+// Most commonly used event types are the following, however you can find much 
+// more if you check the documentation:
+
+'click'   // When a button (usually a mouse button) is pressed and released on a single element.
+
+'keydown' // When the user first presses a key on the keyboard.
+
+'keyup'	  // When the user releases a key on the keyboard.
+
+'focus'   // When an element has received focus.
+
+'blur'	  // When an element loses focus.
+
+'submit'  // When the user submits a form.
+
+'load'    // When the page has finished loading.
+
+'resize'  // When the browser window has been resized.
+
+'scroll'  // When the user scrolls up or down on the page.
+```
+
+Syntax for the event listeners :
+
+```js
+element.addEventListener(event, function, useCapture);
+
+// The first parameter is the type of the event (like "click" or "mousedown" or any other HTML DOM Event.)
+
+// The second parameter is the function we want to call when the event occurs.
+
+// The third parameter is a boolean value specifying whether to use event bubbling or event capturing. This parameter is optional.
 ```
 
 #### Add/Remove Array Item
