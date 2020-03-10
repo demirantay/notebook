@@ -45,16 +45,9 @@
 
 # An approach for using third-party APIs
 
-- Below we'll take you through an exercise to show you how to use the NYTimes API, which also provides a more general set of steps to follow that you can use as an approach for working with new APIs. Because most of the new APIs are generated following the RESTFul methodolgy.
-
-### Find the documentation
-
-- When you want to use a third party API, it is essential to find out where the documentation is, so you can find out what features the API has, how you use them, etc
-
-### Get a developer key
-
-### Connect the API to your app
-
-### Requesting data from the API
-
-### Displaying the data
+- General steps to follow on third party modern apis:
+  - Find the documentation
+  - Get a developer key
+  - Connect the API to your app
+  - Requesting data from the API
+  - Displaying the data
