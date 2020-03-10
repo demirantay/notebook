@@ -14,6 +14,14 @@
     showHeroes(superHeroes);
   }
   ```
+  Also you can use Fetch API:
+  ```js
+  fetch(url).then(function(result) {
+    return result.json();
+  }).then(function(json) {
+    displayResults(json);
+  });
+  ```
   
 ---
 ---
