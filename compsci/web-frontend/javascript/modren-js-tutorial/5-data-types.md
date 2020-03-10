@@ -249,12 +249,81 @@ To sum up:
 
 # Destructuring assignment
 
+- The two most used data structures in JavaScript are Object and Array.
+
+  Objects allow us to create a single entity that stores data items by key, and arrays allow us to gather data items into an ordered collection.
+  
+  But when we pass those to a function, it may need not an object/array as a whole, but rather individual pieces.
+
+  Destructuring assignment is a special syntax that allows us to “unpack” arrays or objects into a bunch of variables, as sometimes that’s more convenient. Destructuring also works great with complex functions that have a lot of parameters, default values, and so on.
+  
+- To sum up:
+  - Destructuring assignment allows for instantly mapping an object or array onto many variables.
+  - The full object syntax:
+    ```js
+    let {prop : varName = default, ...rest} = object
+    ```
+    This means that property `prop` should go into the variable `varName` and, if no such property exists, then the `default` value should be used. Object properties that have no mapping are copied to the `rest` object.
+  - The full array syntax:
+    ```js
+    let [item1 = default, item2, ...rest] = array
+    ```
+    The first item goes to `item1`; the second goes into `item2`, all the rest makes the array `rest`.
+  - It’s possible to extract data from nested arrays/objects, for that the left side must have the same structure as the right one.
+
 <br>
 <br>
 
 # Date and time
 
+- Let’s meet a new built-in object: `Date`. It stores the date, time and provides methods for date/time management. 
+
+  For instance, we can use it to store creation/modification times, to measure time, or just to print out the current date.
+
+- To sum up:
+  - Date and time in JavaScript are represented with the Date object. We can’t create “only date” or “only time”: `Date` objects always carry both.
+  - Months are counted from zero (yes, January is a zero month).
+  - Days of week in `getDay()` are also counted from zero (that’s Sunday).
+  - `Date` auto-corrects itself when out-of-range components are set. Good for adding/subtracting days/months/hours.
+  - Dates can be subtracted, giving their difference in milliseconds. That’s because a `Date` becomes the timestamp when converted to a number.
+  - Use `Date.now()` to get the current timestamp fast.
+  - Note that unlike many other systems, timestamps in JavaScript are in milliseconds, not in seconds.
+
 <br>
 <br>
 
 # JSON methods, toJSON
+
+- Let’s say we have a complex object, and we’d like to convert it into a string, to send it over a network, or just to output it for logging purposes.
+
+  Naturally, such a string should include all important properties. We could implement the conversion like this:
+  ```js
+  let user = {
+    name: "John",
+    age: 30,
+
+    toString() {
+      return `{name: "${this.name}", age: ${this.age}}`;
+    }
+  };
+
+  alert(user); // {name: "John", age: 30}
+  ```
+  …But in the process of development, new properties are added, old properties are renamed and removed. Updating such `toString` every time can become a pain. We could try to loop over properties in it, but what if the object is complex and has nested objects in properties? We’d need to implement their conversion as well.
+
+  Luckily, there’s no need to write the code to handle all this. The task has been solved already.
+
+### JSON.stringify
+
+- The JSON (JavaScript Object Notation) is a general format to represent values and objects. It is described as in RFC 4627 standard. Initially it was made for JavaScript, but many other languages have libraries to handle it as well. So it’s easy to use JSON for data exchange when the client uses JavaScript and the server is written on Ruby/PHP/Java/Whatever.
+
+  JavaScript provides methods:
+  - `JSON.stringify` to convert objects into JSON.
+  - `JSON.parse` to convert JSON back into an object.
+  
+- To sum up:
+  - JSON is a data format that has its own independent standard and libraries for most programming languages.
+  - JSON supports plain objects, arrays, strings, numbers, booleans, and null.
+  - JavaScript provides methods `JSON.stringify` to serialize into JSON and `JSON.parse` to read from JSON.
+  - Both methods support transformer functions for smart reading/writing.
+  - If an object has `toJSON`, then it is called by `JSON.stringify`.
