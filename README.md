@@ -12,7 +12,7 @@
 - Css: [click here](./cheatsheet/css.md)
 - Javascript: [click here](./cheatsheet/javascript.md)
 - Dom: [click here](./cheatsheet/javascript.md)
-- Api: ...
+- Api: [click here](./cheatsheet/api.md)
 - Async: ...
 - Npm: [click here](./cheatsheet/npm.md)
 - Bem: [click here](./cheatsheet/bem.md)
