@@ -226,8 +226,9 @@ Try to specilize in a field such as these, just chose one or two. However, remem
 - [x] CSS -- (basics, layouts, media queries, css3, responsivness .. etc)
 - [x] JavaScript: Syntax and Basic Constucts
 - [x] Javascript: DOM manipulation
-- [ ] JavaSCript: Learn fetching API / AJAX (XHR)
+- [x] JavaSCript: Learn fetching API / AJAX (XHR)
 - [ ] JavaScript: ES+6 modular javascript
+- [ ] JavaScript: Advanced Stuff
 - [x] Package Managers --  (npm or yarn)
 - [ ] CSS Pre-precessor -- (Sass .. etc)
 - [x] CSS Frameworks -- (Bootstrap .. etc)
