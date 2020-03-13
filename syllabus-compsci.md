@@ -284,7 +284,7 @@ Try to specilize in a field such as these, just chose one or two. However, remem
 - [ ] Level 2: Do all of [these](https://simplestepscode.com/javascript-project-ideas/) if the link is dead [alternative link](https://dev.to/yaphi1/javascript-project-ideas-and-practical-uses)
 - [ ] Level 3: Make a CSS framework but instead of making it like bootstrap, make it more pluggable and replacable. (Use relative divs ("tak cikar tarzi ilerle"). 
 - [ ] Level 3.5: Do a big react project like this (REDDIT CLONE). ( you may choose reddit or something else) [like this](https://github.com/oldboyxx/jira_clone)
-- [ ] Level 4: Do another bid react project like the above one choose a different social media maybe youtube facebook .. et.c)
+- [ ] Level 4: Do another bid react project either jira or trello because they are perfect. They have everything in their app for you to learn from drag and rop to simple CRUD.
 - [ ] Level 5: Do all of [these](http://eugenkiss.github.io/7guis/tasks/) for practicing little bit of electron. No need to go too big.
 - [ ] Level 6: Do all of [these here](https://www.instamobile.io/react-native-tutorials/react-native-app-ideas-beginners/) to practice react native. Dont skip anything.
 - [ ] Level 7: Clone a mini React Clone -- pacakge it in npm, yarn
