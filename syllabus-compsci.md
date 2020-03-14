@@ -281,7 +281,7 @@ Try to specilize in a field such as these, just chose one or two. However, remem
 ### Packet #3
 
 - [x] Level 0: Create a template holder and add your templates to it. Add more than the usual.
-- [ ] Level 2: Do all of [these](https://simplestepscode.com/javascript-project-ideas/) if the link is dead [alternative link](https://dev.to/yaphi1/javascript-project-ideas-and-practical-uses)
+- [x] Level 2: Do all of [these](https://simplestepscode.com/javascript-project-ideas/) if the link is dead [alternative link](https://dev.to/yaphi1/javascript-project-ideas-and-practical-uses)
 - [ ] Level 3: Make a CSS framework but instead of making it like bootstrap, make it more pluggable and replacable. (Use relative divs ("tak cikar tarzi ilerle"). 
 - [ ] Level 3.5: Do a big react project like this (REDDIT CLONE). ( you may choose reddit or something else) [like this](https://github.com/oldboyxx/jira_clone)
 - [ ] Level 4: Do another bid react project either jira or trello because they are perfect. They have everything in their app for you to learn from drag and rop to simple CRUD.
