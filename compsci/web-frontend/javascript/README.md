@@ -27,3 +27,24 @@
 <br>
 
 # Syntax
+
+- JavaScript can be implemented using JavaScript statements that are placed within the `<script>... </script>` HTML tags in a web page.
+
+- It is good practice to include your js scripts at the end of your html file because in that way the scripts will make sure that the HTML content is loaded before they get executed. 
+
+- IF you do not want to write js on your html file you can simply include a `module.js` file in your html with adding the `src` attribute to the script element:
+  ```html
+  <script src="/path/to/your/file.js" type="text/javascript" language="javascript" ></script>
+  ```
+  
+<br>
+<br>
+
+---
+
+<br>
+<bR>
+  
+# Variables
+
+
