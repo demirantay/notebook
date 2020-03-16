@@ -287,8 +287,7 @@ Try to specilize in a field such as these, just chose one or two. However, remem
 - [ ] Level 4: Do another bid react project either jira or trello because they are perfect. They have everything in their app for you to learn from drag and rop to simple CRUD.
 - [ ] Level 5: Do all of [these](http://eugenkiss.github.io/7guis/tasks/) for practicing little bit of electron. No need to go too big.
 - [ ] Level 6: Do all of [these here](https://www.instamobile.io/react-native-tutorials/react-native-app-ideas-beginners/) to practice react native. Dont skip anything.
-- [ ] Level 7: Clone a mini React Clone -- pacakge it in npm, yarn
-- [ ] Level 8: Build a small version of every tech learned above. Remember first version of unix was under 4000 LoC. And this guy created [aws server](https://github.com/jubos/fake-s3) system in just 2k LoC. Build everythings logic in a small way.
+- [ ] Level 8: Build a small version of every tech learned above. Remember first version of unix was under 4000 LoC. And this guy created [aws server](https://github.com/jubos/fake-s3) system in just 2k LoC. Build everythings logic in a small way. Check your stars `ustack` for inspiration.
 
 <br>
 <Br>
