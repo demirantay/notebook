@@ -17,6 +17,7 @@
 - Npm: [click here](./cheatsheet/npm.md)
 - Bem: [click here](./cheatsheet/bem.md)
 - Bootstrap: [click here](./cheatsheet/bootstrap.md)
+- Sass: [click here](./cheatsheet/scss.md)
 
 
 #### Backend
