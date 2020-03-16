@@ -47,4 +47,29 @@
   
 # Variables
 
+- JavaScript allows you to work with four primitive data types −
+  - `Numbers`, eg. 123, 120.50 etc.
+  - `Strings` of text e.g. "This text string" etc.
+  - `Boolean` e.g. true or false.
+  - `null` or `undefined`
+  
+  > Note − JavaScript does not make a distinction between integer values and floating-point values. All numbers in JavaScript are represented as floating-point values.
+  
+- Instead of the old `var` use `let`:
+  ```js
+  let foo = 10;
+  let bar = "hello";
+  let baz = true;
+  ```
+
+<br>
+<br>
+
+---
+
+<br>
+<br>
+
+# If ... Else
+
 
