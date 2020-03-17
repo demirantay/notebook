@@ -200,6 +200,30 @@
 <br>
 <br>
 
+# Exception Handling
+
+- exception handling:
+  ```js
+  try {
+    alert("Value of variable a is : " + a );
+  }
+  catch ( e ) {
+    alert("Error: " + e.description );
+   }
+   finally {
+     alert("Finally block will always execute!" );
+   }
+  ```
+
+<br>
+<br>
+
+---
+
+<br>
+<br>
+
+
 # Cookies
 
 - You can store cookies using DOM 
@@ -339,3 +363,5 @@
 
 <br>
 <br>
+
+
