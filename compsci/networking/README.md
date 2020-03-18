@@ -1,9 +1,3 @@
----
-
-Note: Left at here: https://www.studytonight.com/computer-networks/network-topology-types
-
----
-
 # Networking 
 
 - Modern world scenario is ever changing. Data Communication and network have changed the way business and other daily affair works. Now, they highly rely on computer networks and internetwork.
@@ -114,15 +108,111 @@ Component:
 
 - Network Topology is the schematic description of a network arrangement, connecting various nodes(sender and receiver) through lines of connection. 
 
-
-**Note:** *I am just going to note about few of the topologies, there are many and if you visit this file you can see them with visual graphics: https://www.studytonight.com/computer-networks/network-topology-types* 
-
-
 ### BUS Topology
 
--
--
--
+- `features` --
+  - transmits data only in one direction.
+  - Every device is connected to a single cable
+
+- `Advantages` --
+  - Its cost effective.
+  - Cable required is least compared to other network topology.
+  - Used in small networks.
+  - Easy to expand joining two cables together.
+  
+- `Disadvantages` --
+  - Main busline cable fails then whole network fails.
+  - If network traffic is heavy or nodes are more the performance of the network decreases.
+  - Cable has a limited length.
+  - It is slower than the ring topology.
+
+### RING Topology
+
+- `Features` -- 
+  - A number of repeaters are used for Ring topology with large number of nodes, because if someone wants to send some data to the last node in the ring topology with 100 nodes, then the data will have to pass through 99 nodes to reach the 100th node. Hence to prevent data loss repeaters are used in the network.
+  - The transmission is unidirectional, but it can be made bidirectional by having 2 connections between each Network Node, it is called Dual Ring Topology.
+  - In Dual Ring Topology, two ring networks are formed, and data flow is in opposite direction in them. Also, if one ring fails, the second ring can act as a backup, to keep the network up.
+  - Data is transferred in a sequential manner that is bit by bit. Data transmitted, has to pass through each node of the network, till the destination node.
+
+- `Advantages` -- 
+  - Cheap to install and expand
+  - Transmitting network is not affected by high traffic or by adding more nodes
+
+- `Disadvantages` --
+  - Troubleshooting is difficult in ring topology.
+  - Adding or deleting the computers disturbs the network activity.
+  - Failure of one computer disturbs the whole network.
+
+### Star Topology
+
+- `Features` -- 
+  - Every node has its own dedicated connection to the hub.
+  - Hub acts as a repeater for data flow.
+
+- `Advantages` --
+  - Fast performance with few nodes and low network traffic.
+  - Hub can be upgraded easily.
+  - Easy to troubleshoot.
+  - Easy to setup and modify.
+  - Only that node is affected which has failed, rest of the nodes can work smoothly
+
+- `Disadvantages` --
+  - Cost of installation is high.
+  - Expensive to use.
+  - If the hub fails then the whole network is stopped because all the nodes depend on the hub.
+  - Performance is based on the hub that is it depends on its capacity
+
+### MESH Topology
+
+- `Features` --
+  - Fully connected.
+  - Robust
+  - Not flexible.
+
+- `Advantages` --
+  - Each connection can carry its own data load.
+  - It is robust.
+  - Fault is diagnosed easily.
+  - Provides security and privacy.
+
+- `Disadvantages` --
+  - Installation and configuration is difficult
+  - Cabling cost is more.
+  - Bulk wiring is required.
+  
+### TREE Topology
+
+- `Features` --
+  - Ideal if workstations are located in groups.
+  - Used in Wide Area Network.
+
+- `Advantages` --
+  - Extension of bus and star topologies.
+  - Expansion of nodes is possible and easy.
+  - Easily managed and maintained
+  - Error detection is easily done.
+
+- `Disadvantages` --
+  - Heavily cabled.
+  - Costly.
+  - If more nodes are added maintenance is difficult.
+  - Central hub fails, network fails.
+
+### HYBRID Topology
+
+- `Features` --
+  - It is a combination of two or more topologies
+  - Inherits the advantages and disadvantages of the topologies included
+
+- `Advantages` --
+  - Reliable as Error detecting and trouble shooting is easy.
+  - Effective
+  - Scalable as size can be increased easily.
+  - Flexible.
+
+- `Disadvantages` --
+  - Complex in design. 
+  - Costly
 
 <br>
 <br>
@@ -132,3 +222,30 @@ Component:
 <br>
 <br>
 
+# Transmission Nodes
+
+- Transmission mode refers to the mechanism of transferring of data between two devices connected over a network. It is also called `Communication Mode`. These modes direct the direction of flow of information. There are three types of transmission modes. They are:
+  - Simplex Mode
+  - Half duplex Mode
+  - Full duplex Mode
+
+### SIMPLEX Mode
+
+- In this type of transmission mode, data can be sent only in one direction i.e. communication is unidirectional. We cannot send a message back to the sender
+
+  Examples of simplex Mode are loudspeakers, television broadcasting, television and remote, keyboard and monitor etc.
+
+### HALF DUPLEX Mode
+
+### FULL DUPLEX Mode
+
+
+<Br>
+<br>
+ 
+---
+
+<br>
+<br>
+
+# Transmission Mediums
