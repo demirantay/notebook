@@ -237,8 +237,15 @@ Component:
 
 ### HALF DUPLEX Mode
 
+- Half-duplex data transmission means that data can be transmitted in both directions on a signal carrier, but not at the same time.
+
+  Example of half duplex is a walkie- talkie in which message is sent one at a time but messages are sent in both the directions.
+
 ### FULL DUPLEX Mode
 
+- In full duplex system we can send data in both the directions as it is bidirectional at the same time in other words, data can be sent in both directions simultaneously.
+
+  Example of Full Duplex is a Telephone Network in which there is communication between two persons by a telephone line, using which both can talk and listen at the same time.
 
 <Br>
 <br>
@@ -249,3 +256,119 @@ Component:
 <br>
 
 # Transmission Mediums
+
+- Data is represented by computers and other telecommunication devices using signals. Signals are transmitted in the form of electromagnetic energy from one device to another. Electromagnetic signals travel through vacuum, air or other transmission mediums to move from one point to another(from sender to receiver).
+
+  Electromagnetic energy (includes electrical and magnetic fields) consists of power, voice, visible light, radio waves, ultraviolet light, gamma rays etc.
+
+  Transmission medium is the means through which we send our data from one place to another. The first layer (physical layer) of Communication Networks OSI Seven layer model is dedicated to the transmission media
+
+- `Factors to be considered while selecting a Transmission Medium` --
+  - Transmission Rate
+  - Cost and Ease of Installation
+  - Resistance to Environmental Conditions
+  - Distances
+
+<br>
+<br>
+
+---
+
+<br>
+<br>
+
+# Bounded/Guided Transmission Media
+
+- A signal travelling along any of these media is directed and contained by the physical limits of the medium. Twisted-pair and coaxial cable use metallic (copper) conductors that accept and transport signals in the form of electric current. Optical fibre is a cable that accepts and transports signals in the form of light.
+
+### Twisted Pair Cable
+
+- This cable is the most commonly used and is cheaper than others. It is lightweight, cheap, can be installed easily, and they support many different types of network
+
+  Twisted Pair is of two types:
+  - `Unshielded Twisted Pair (UTP)`
+  - `Shielded Twisted Pair (STP)`
+  
+- `Unshielded Twisted Pair Cable` --
+  Advantages:
+  - Installation is easy
+  - Flexible
+  - Cheap
+  - It has high speed capacity,
+  - 100 meter limit
+  - Higher grades of UTP are used in LAN technologies like Ethernet.
+  
+  Disadvantages:
+  - Bandwidth is low when compared with Coaxial Cable
+  - Provides less protection from interference.
+  
+- `Shielded Twisted Pair Cable` --
+  Advantages:
+  - Easy to install
+  - Performance is adequate
+  - Can be used for Analog or Digital transmission
+  - Increases the signalling rate
+  - Higher capacity than unshielded twisted pair
+  - Eliminates crosstalk
+  
+  Disadvantages:
+  - Difficult to manufacture
+  - Heavy
+
+### Coaxial Cable
+
+- Coaxial is called by this name because it contains two conductors that are parallel to each other. Copper is used in this as centre conductor which can be a solid wire or a standard one. It is surrounded by PVC installation, a sheath which is encased in an outer conductor of metal foil, barid or both.
+
+- `Advantages of Coaxial Cable` --
+  - Bandwidth is high
+  - Used in long distance telephone lines.
+  - Transmits digital signals at a very high rate of 10Mbps.
+  - Much higher noise immunity
+  - Data transmission without distortion.
+  - The can span to longer distance at higher speeds as they have better shielding when compared to twisted pair cable
+
+- `Disadvantages of Coaxial Cable` --
+  - Single cable failure can fail the entire network.
+  - Difficult to install and expensive when compared with twisted pair.
+  - If the shield is imperfect, it can lead to grounded loop.
+
+- `Applications of Coaxial Cable` --
+  - Coaxial cable was widely used in analog telephone networks, where a single coaxial network could carry 10,000 voice signals.
+  - Cable TV networks also use coaxial cables. 
+  - In traditional Ethernet LANs. Because of it high bandwidth, and consequence high data rate, coaxial cable was chosen for digital transmission in early Ethernet LANs.
+
+### Fiber Optic Cable
+
+- A fibre-optic cable is made of glass or plastic and transmits signals in the form of light.
+
+- `Advantages of Fibre Optic Cable` --
+  - Higher bandwidth
+  - Less signal attenuation
+  - Immunity to electromagnetic interference
+  - Resistance to corrosive materials
+  - Light weight
+  - Greater immunity to tapping
+
+- `Disadvantages of Fibre Optic Cable` --
+  - Installation and maintenance
+  - Unidirectional light propagation
+  - High Cost
+
+- `Performance of Fibre Optic Cable` --
+  - Often found in backbone networks because its wide bandwidth is cost-effective.
+  - Some cable TV companies use a combination of optical fibre and coaxial cable thus creating a hybrid network.
+
+<br>
+<br>
+
+---
+
+<br>
+<br>
+
+# UnBounded/UnGuided Transmission Media 
+
+
+
+
+
