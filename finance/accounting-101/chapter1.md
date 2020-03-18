@@ -61,4 +61,30 @@ All of these small pieces of accounting data add up to the big picture of how yo
 
 # ACCOUNTING IS MORE THAN NUMBERS
 
+- When you think “accounting,” you probably picture a report filled with numbers. After all, that’s where accounting always starts. When you dig a little deeper, though, you’ll see that those numbers only set the foundation for what accounting really is: a way to analyze and make sense of an endless stream of information so that we can make well-informed decisions.
 
+  Accounting squirms its way into your personal life, too, and just like with businesses, it’s not just about spreadsheets and reports full of numbers. From clipping coupons to saving for a family vacation to stopping for a latte on the way to work, these numbers touch almost everything in your life, every day. There’s a more formal side to accounting in personal matters, too. You’ll see this side when you:
+  • Apply for student loans
+  • Put a percentage of your paycheck in a 401(k) plan
+  • Do your income taxes
+  • Create a family budget
+  
+- `STARTING A BUSINESS` -- If you have an entrepreneurial spirit, you’re not alone. According to the U.S. Small Business Administration, there are 28.8 million small businesses that help keep the American economy afloat—and, for all of these businesses, accounting is necessary from Day 1. It’s true! As soon as you begin to plan your business launch, accounting takes center stage
+
+  The framework for every small business startup is a thorough business plan, complete with an honest assessment of assets, a realistic view of expectations, and pro forma financial statements
+  
+  Once the business is up and running, you need to keep accounting at the forefront. Yes, the day-to-day responsibilities can result in overlooked bookkeeping tasks, but that work must be completed and kept current if the business has any chance of success. Without up-to-date accounting, you can’t plan properly for the future of your company, or analyze its wins and losses.
+  
+- `Top Ten Small Business Accounting Mistakes` -- Don’t fall into the same traps that have caused thousands of small businesses to fail. These traps include:
+  - 1. Not knowing your true cash balance: Due to things like automatic payments, outstanding checks, and bank charges, money that appears in your cash drawer and your checking account may already be spent.
+  - 2. Extending credit without checking credit: Until you collect some basic credit information about a customer, don’t make on-account sales, where your company extends credit (rather than getting paid immediately with cash or credit card) and bills the customer later. A sale isn’t much good if your company never gets paid
+  - 3. Mistaking profits for cash: When your company makes a lot of credit (or on-account) sales, your company can post big profits without seeing any cash. When you make a sale, it counts toward revenue and profits, even if your company hasn’t yet gotten paid by the customer. But you can’t pay your bills with profits; you can only pay them with cash
+  - 4. Paying bills too soon: If your vendors give you 30 days to pay them, take it. Unless you get a discount for paying early, paying your bills only when they’re due improves your company’s cash flow. Because cash is so precious to new and small business owners, having as much easily available cash as possible can help you stay solvent, especially when unexpected expenses come up.
+  - 5. Avoiding bookkeeping tasks: Not recording transactions regularly can leave you with a mountain of bookkeeping to deal with instead of a molehill. Plus, the time lag can act like a vacuum, where transaction records disappear and the transactions never are recorded.
+  - 6. Not hiring a payroll service: The minor cost of hiring out this task provides a huge benefit for your company. It can free up your time, and help your company avoid financial penalties from state and federal agencies that go along with late and incorrect payroll tax filings.
+  - 7. . Paying accidental dividends: Every time a corporation owner takes money out of his business, it counts as a dividend (an official distribution from the corporation to the shareholder; all corporation owners are called shareholders). That can lead to a bigger personal income tax bill, because dividends are included in taxable income.
+  - 8. Not keeping personal finances separate from business: Mixing up business and personal money can cause both bookkeeping and legal problems. On the bookkeeping side, paying personal expenses with business money causes a dividend or distribution, and that can confuse the accounting entries. On the legal side, mixing the two can take away the personal financial protection gained by incorporating or forming an LLC (both of which are designed to shield your personal money from business lawsuits).
+  - 9. Setting prices too low: If you don’t know your costs before you set product or service prices, you run the risk of losing money on every sale. A simple break-even analysis can help you set prices at a profitable level. For example, if you order fifty clocks to sell in your store, you need to take into account things like sales tax, delivery fees, and overhead expenses related to the clocks to come up with the real, break-even price.
+  - 10.  Turning over all the financial stuff to someone else: Without an intimate knowledge of your company’s finances, you can’t make successful decisions. Even if you don’t want to deal with the daily bookkeeping tasks, look at your financial statements every month so that you can plan for profits and prevent potential problems.
+  
+  
