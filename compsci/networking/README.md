@@ -368,7 +368,49 @@ Component:
 
 # UnBounded/UnGuided Transmission Media 
 
+- Unguided medium transport electromagnetic waves without using a physical conductor. This type of communication is often referred to as wireless communication. Signals are normally broadcast through free space and thus are available to anyone who has a device capable of receiving them.
 
+  We can divide wireless transmission into three broad groups:
+  - 1 - Radio waves
+  - 2 - Micro waves
+  - 3 - Infared Waves
 
+### Radio Waves
+
+- Electromagnetic waves ranging in frequencies between 3 KHz and 1 GHz are normally called radio waves.
+
+- Applications of Radio Waves:
+  - The omnidirectional characteristics of radio waves make them useful for multicasting in which there is one sender but many receivers.
+  - AM and FM radio, television, maritime radio, cordless phones, and paging are examples of multicasting
+  
+### Micro Waves
+
+- Electromagnetic waves having frequencies between 1 and 300 GHz are called micro waves.
+
+- Microwaves, due to their unidirectional properties, are very useful when unicast(one-to-one) communication is needed between the sender and the receiver. They are used in cellular phones, satellite networks and wireless LANs.
+
+- Advantages of Microwave Transmission:
+  - Used for long distance telephone communication
+  - Carries 1000's of voice channels at the same time
+  
+  Disadvantages of Microwave Transmission
+  - It is very costly
+  
+### Infrared Waves
+
+- Infrared waves, with frequencies from 300 GHz to 400 THz, can be used for short-range communication. Infrared waves, having high frequencies, cannot penetrate walls.
+
+- Applications of Infrared Waves:
+  - The Infrared Data Association(IrDA), an association for sponsoring the use of infrared waves, has established standards for using these signals for communication between devices such as keyboards, mouse, PCs and printers.
+ 
+<br>
+<br>
+
+---
+
+<br>
+<br>
+
+- part 2
 
 
