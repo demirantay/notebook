@@ -373,7 +373,7 @@ Try to specilize in a field such as these, just chose one or two. However, remem
 
 > Update it for 2020
 
-- [ ] System Programming Languages -- (Python, C/C++, Go.. etc.)
+- [x] System Programming Languages -- (Python, C/C++, Go.. etc.)
 - [ ] OS Concepts -- (I/O, Memory Storage, Process Management, Sockets, File Systems ... etc.)
 - [ ] Unix/Linux Envioroment
 - [ ] Terminal -- (bash scripting)
