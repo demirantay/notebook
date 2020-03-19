@@ -14,13 +14,13 @@ The course syllabus is not in final shape at the moment I will edit as I go alon
 - [x] Ekonomi 101 
 - [x] Management 101 
 - [x] Negotiating 101 
-- [ ] Accounting 101 
-- [ ] Sales 101
+- [x] Accounting 101 
+- [ ] Vergi Sistemini Anlama Kilavuzu - Ozan Bingol
 - [ ] Budgeting 101 
+- [ ] Sales 101
 - [ ] Real Estatae Investing 101 
 - [ ] Stock Market 101 - Michele Cagan (adams 101)
 - [ ] Day Trading 101 
-- [ ] Vergi Sistemini Anlama Kilavuzu - Ozan Bingol
 - [ ] The Infographic Guide to Personal Finance 
 - [ ] Retirement 101
 - [ ] American Governement 101
