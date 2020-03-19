@@ -360,7 +360,7 @@ Try to specilize in a field such as these, just chose one or two. However, remem
 - [ ] Level 9: After learning all of the things above do a youtube clone too (it is good to figure out how to impelemtn billions data of videos & graphics .
 - [ ] Level 10: Clone a basic search engine like google or duckduckgo, it is a good problem to solve.
 - [ ] Level 11: Clone duolingo before building your own lingo app
-- [ ] Level 12: Build a small version of every tech learned above. Remember first version of unix was under 4000 LoC. And this guy created [aws server](https://github.com/jubos/fake-s3) system in just 2k LoC. Build everythings logic in a small way.
+- [ ] Level 12: Build a small version of every tech learned above. Remember first version of unix was under 4000 LoC. And this guy created [aws server](https://github.com/jubos/fake-s3) system in just 2k LoC. Build everythings logic in a small way. Check your stars `ustack` for inspiration.
 
 > If you finish frontend or backend sections start `[Code Univeristy Guide](https://github.com/jwasham/coding-interview-university)` of jwsaham and try to getting ready for job applications (possibly in Canada) when their time of the month comes. ++ go for a algorithm online prep course like algoexpert.io (<- this one is really good) , leetcode ...etc
 
@@ -430,22 +430,8 @@ Try to specilize in a field such as these, just chose one or two. However, remem
 
 ### Packet #3
 
-- [ ] Level 0: Karans projects with a Systems language c/c++, go, python ... etc.
-- [ ] Level 0: Some projects about the Operating System
-- [ ] Level 1: Some project for the Linux enviorenment with Shell toools
-- [ ] Level 2: Create a mini HTTP or TOR
-- [ ] Level 3: Create a web server if you have it improve on it
-- [ ] Level 4: Secure your web server, try pentesting it, imrpove your exploits. Repeat
-- [ ] Level 5: Create a mini container tool like docker
-- [ ] Level 6: Create a mini config management tool like ansible
-- [ ] Level 7: Create a mini container orchestriation tool like kubernetees
-- [ ] Level 8: Create a mini Infustructure PRovisioning tool like terraform
-- [ ] Level 9: Build a mini Autmoated testing tool
-- [ ] Level 10: Create a mini infsutructure monitoring tool
-- [ ] Level 11: Create a mini application monitoring tool
-- [ ] Level 12: Create a mini log management tool
-- [ ] Level 13: Do a project with Cloud
-- [ ] Level 14: Build a small version of every tech learned above. Remember first version of unix was under 4000 LoC. And this guy created [aws server](https://github.com/jubos/fake-s3) system in just 2k LoC. Build everythings logic in a small way.
+- [ ] Level 1: Secure your web server, try pentesting it, imrpove your exploits. Repeat
+- [ ] Level 2: Build a small version of every tech learned above. Remember first version of unix was under 4000 LoC. And this guy created [aws server](https://github.com/jubos/fake-s3) system in just 2k LoC. Build everythings logic in a small way. Check your stars `ustack` for inspiration.
 - [ ] Final : At this point I should have a job and start building my own idea
 
 > If you finish frontend or backend sections start `[Code Univeristy Guide](https://github.com/jwasham/coding-interview-university)` of jwsaham and try to getting ready for job applications (possibly in Canada) when their time of the month comes. OR go for a algorithm online prep course like algoexpert.io , leetcode ...etc
