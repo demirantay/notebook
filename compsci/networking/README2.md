@@ -126,4 +126,68 @@
 <br>
 
 # Introduction to Reference Models
+
+- The most important reference models are:
+  - 1 - OSI reference model.
+  - 2 - TCP/IP reference model.
+  
+### Introduction to ISO-OSI Model
+
+- There are many users who use computer network and are located all over the world. To ensure national and worldwide data communication ISO (ISO stands for International Organization of Standardization.) developed this model. This is called a model for open system interconnection (OSI) and is normally called as OSI model.
+
+### Introduction to TCP/IP Reference Model
+
+- TCP/IP is transmission control protocol and internet protocol. Protocols are set of rules which govern every possible communication over the internet. These protocols describe the movement of data between the host computers or internet and offers simple naming and addressing schemes
+
+<br>
+<br>
+
+---
+
+<br>
+<br>
+
+# ISO/OSI Model
+
+- The ISO-OSI model is a seven layer architecture. It defines seven layers or levels in a complete communication system. They are:
+  - 1 - Application Layer
+  - 2 - Presentation Layer
+  - 3 - Session Layer
+  - 4 - Transport Layer
+  - 5 - Network Layer
+  - 6 - Datalink Layer
+  - 7 - Physical Layer
+  
+- The OSI reference model has 7 layers. The principles that were applied to arrive at the seven layers can be briefly summarized as follows:
+  - A layer should be created where a different abstraction is needed.
+  - Each layer should perform a well-defined function.
+  - The function of each layer should be chosen with an eye toward defining internationally standardized protocols.
+  - The layer boundaries should be chosen to minimize the information flow across the interfaces.
+
+- `OSI Model Layer 1: The Physical Layer` -- Physical Layer is the lowest layer of the OSI Model. It activates, maintains and deactivates the physical connection. It converts the digital/analog bits into electrical signal or optical signals.
+
+- `OSI Model Layer 2: Data Link Layer` -- Data link layer synchronizes the information which is to be transmitted over the physical layer. The main function of this layer is to make sure data transfer is error free from one node to another, over the physical layer.
+
+- `OSI Model Layer 3: The Network Layer` -- Network Layer routes the signal through different channels from one node to other. It acts as a network controller. It manages the Subnet traffic. It decides by which route data should take. It divides the outgoing messages into packets and assembles the incoming packets into messages for higher levels.
+
+- `OSI Model Layer 4: Transport Layer` -- Transport Layer decides if data transmission should be on parallel path or single path. Functions such as Multiplexing, Segmenting or Splitting on the data are done by this layer
+
+- `OSI Model Layer 5: The Session Layer` -- Session Layer manages and synchronize the conversation between two different applications.
+
+- `OSI Model Layer 6: The Presentation Layer` -- Presentation Layer takes care that the data is sent in such a way that the receiver will understand the information (data) and will be able to use the data. It perfroms Data compression, Data encryption, Data conversion etc.
+
+- `OSI Model Layer 7: Application Layer` -- Application Layer is the topmost layer. Transferring of files disturbing the results to the user is also done in this layer. Mail services, directory services, network resource etc are services provided by application layer.
+  
+
+<br>
+<br>
+
+---
+
+<br>
+<br>
+
+# OSI Model: Physical Layer
+
+  
   
