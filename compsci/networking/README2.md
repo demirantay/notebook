@@ -230,4 +230,63 @@
 <br>
 <br>
   
+# OSI Model: Network Layer
+
+- The network Layer controls the operation of the subnet. The main aim of this layer is to deliver packets from source to destination across multiple links (networks).
+
+  If two computers (system) are connected on the same link, then there is no need for a network layer. It routes the signal through different channels to the other end and acts as a network controller.
+
+### Functions of Network Layer
+
+- 1 - It translates logical network address into physical address. Concerned with circuit, message or packet switching.
+- 2 - Routers and gateways operate in the network layer. Mechanism is provided by Network Layer for routing the packets to final destination.
+- 3 - Connection services are provided including network layer flow control, network layer error control and packet sequence control.
+- 4 - Breaks larger packets into small packets.
+
+<br>
+<br>
+
+---
+
+<br>
+<br>
+
+# OSI Model: Transport Layer
+
+- The basic function of the Transport layer is to accept data from the layer above, split it up into smaller units, pass these data units to the Network layer, and ensure that all the pieces arrive correctly at the other end. Furthermore, all this must be done efficiently and in a way that isolates the upper layers from the inevitable changes in the hardware technology.
+
+### Functions of Transport Layer
+
+- `Service Point Addressing` -- Transport Layer header includes service point address which is port address
+- `Segmentation and Reassembling` -- A message is divided into segments; each segment contains sequence number, which enables this layer in reassembling the message. Message is reassembled correctly upon arrival at the destination and replaces packets which were lost in transmission.
+- `Connection Control` -- It includes 2 types:
+  - Connectionless Transport Layer : Each segment is considered as an independent packet and delivered to the transport layer at the destination machine.
+  - Connection Oriented Transport Layer : Before delivering packets, connection is made with transport layer at the destination machine.
+- `Flow Control` -- In this layer, flow control is performed end to end
+- `Error Control` -- Error Control is performed end to end in this layer to ensure that the complete message arrives at the receiving transport layer without any error.
+
+<br>
+<br>
+
+---
+
+<br>
+<br>
+
+# OSI Model: Session Layer
+
+- The Session Layer allows users on different machines to establish active communication sessions between them. It's main aim is to establish, maintain and synchronize the interaction between communicating systems. Session layer manages and synchronize the conversation between two different applications.
+
+### Functions of Session Layer
+
+- `Dialog Control` -- This layer allows two systems to start communication with each other in half-duplex or full-duplex.
+- `Token Management` -- This layer prevents two parties from attempting the same critical operation at the same time
+- `Synchronization` -- This layer allows a process to add checkpoints which are considered as synchronization points into stream of data. Example: If a system is sending a file of 800 pages, adding checkpoints after every 50 pages is recommended. This ensures that 50 page unit is successfully received and acknowledged. This is beneficial at the time of crash as if a crash happens at page number 110; there is no need to retransmit 1 to100 pages.
+
+<br>
+<Br>
   
+---
+
+<br>
+<br>
