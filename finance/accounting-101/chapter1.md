@@ -87,4 +87,143 @@ All of these small pieces of accounting data add up to the big picture of how yo
   - 9. Setting prices too low: If you don’t know your costs before you set product or service prices, you run the risk of losing money on every sale. A simple break-even analysis can help you set prices at a profitable level. For example, if you order fifty clocks to sell in your store, you need to take into account things like sales tax, delivery fees, and overhead expenses related to the clocks to come up with the real, break-even price.
   - 10.  Turning over all the financial stuff to someone else: Without an intimate knowledge of your company’s finances, you can’t make successful decisions. Even if you don’t want to deal with the daily bookkeeping tasks, look at your financial statements every month so that you can plan for profits and prevent potential problems.
   
+  <br>
+  <br>
   
+  # ANCIENT ACCOUNTING
+  
+  - Archaeologists and historians believe that accounting may have come even before writing. In fact, some believe that primitive writing itself was developed from using marks to keep track of goods stored in ancient warehouses, more than 5,000 years ago. And that makes sense, because from the earliest days of civilization, people engaged in trade
+  
+ - `Ancient Money Transfers` -- Bankers in ancient Greece kept account books detailing their clients’ “cash transfers” through other banks in the region. They also loaned money to citizens, and changed money for clients who had currencies from other lands
+ 
+ - `An Italian Friar Changes Everything` -- Back in the late fifteenth century, a charismatic Italian friar named Luca Pacioli forever changed the face of accounting, in ways that we still use today. Pacioli began tutoring merchants’ sons on mathematics when he was still a teenager. From there he joined the Franciscan order, becoming a friar. But it was his love and deep understanding of mathematics that led him to the first chair in mathematics at the prestigious University of Perugia in the subject.
+  
+  In the accounting world, Pacioli is still highly revered for his detailed description of double-entry accounting (where all parts of a transaction are recorded in a single accounting entry), a system that has stood through the centurie
+  
+<br>
+<br>
+
+# MODERN ACCOUNTING
+
+- Business, in terms of both commerce and trade, began to flourish as the Industrial Revolution spread throughout Europe, particularly in Great Britain. This combination prompted the need for more rigorous and advanced accounting systems and procedures.
+
+  Unlike the simple transactions of the past, new manufacturing and factory-based businesses called for more complex cost accounting (figuring out exactly how much it cost to make a product). Basic materials were now being transformed into completely different goods, and complete inventories were required every step of the way. Figuring out cost and profits became complicated, and the need for accurate tracking increased.
+  
+- `a war, a crash and a government response` -- The accounting profession was officially established in the United States in 1896, and the title of CPA (certified public accountant) was born Those early CPAs faced strict licensing requirements, including experience and examination, to ensure they could keep up with the increasing demand for financial information. That recognition came at the perfect time, because just thirteen years later, Congress passed the 16th Amendment, which allowed Uncle Sam to officially levy income taxes on all Americans.
+World War I
+At first, the tax was relatively low, more of a token payment. But then World War I struck, and the federal income tax became the centerpiece of the government’s revenue agenda. As the country became enmeshed in the war, rates climbed, and the graduated tax rates (where different income levels are subject to different tax rates) debuted, with the top-tier rate an astonishing 63 percent
+
+  According to the Tax History Project, income taxes made up about 16 percent of federal revenue in 1916. That portion spiked up as high as 58 percent between 1917 and 1920. Today, income taxes make up 46.2 percent of the total federal revenue each year.
+  
+<br>
+<br>
+
+# ACCOUNTING RULES
+
+- The world of accounting is governed by an abundance of rules, some broad in scope and others detailed down to the penny. Throughout history, different societal needs have given rise to new math and new methods that have been built haphazardly on what came before. As different cultures interacted and merged, their often contrasting rules could contradict each other, and so accountants and businesses called for clarification. Over time, accounting rules were systematically organized within countries, giving clear guidance to accounting, tax, and financial professionals.
+The first official rules for accounting in the United States came from the Securities and Exchange Commission, commonly called the SEC
+
+- `THE FINANCIAL ACCOUNTING STANDARDS BOARD` -- In 1973, the Financial Accounting Standards Board, or FASB (pronounced “fazz-bee”), was born. This private sector group (as opposed to government entity) sets the comprehensive standards, rules, and guidelines that drive the accounting industry. Of course, they do this within the framework of SEC regulations, but since not all companies are corporations, SEC rules don’t always apply.
+
+- `The governement has GASB` -- While private sector accountants are ruled by FASB, accountants working for the federal government are held to a different set of standards known as GASB (“gazz-bee”), where the G stands for Government
+
+  FASB guidance is designed to make sure investors (along with other financial report users) are given useful, transparent information that accurately represents the financial health of a company—not just the information a company’s management wants to share
+  
+- `financial scandals yield new regulations` -- After the WorldCom, Tyco, and Enron scandals of 2000–2002, the U.S. Congress created and passed the Sarbanes-Oxley Act (commonly known as SOX) in 2002. That legislation placed much stricter regulations on accounting firms and their consulting services as a way to better protect the investing public from fraudulent corporate financial activity through financial transparency, particularly ensuring that the accountants wouldn’t be in on the fraud (as was the case with Enron’s accounting firm, Arthur Andersen, which signed off on their fraudulent filings).
+
+  All of these very strict guidelines will help protect investors from “creative” accounting practices that appear to follow the basic rules of accounting, known as GAAP.
+  
+<br>
+<br>
+
+# GENERALLY ACCEPTED ACCOUNTING PRINCIPLES
+
+- In the United States, the current prevailing set of rules guiding financial reporting is known as GAAP (pronounced “gap”), which stands for Generally Accepted Accounting Principles. The main goal of GAAP is the creation of consistent financial statements year after year, giving investors a clearer picture of a company’s financial situation. All publicly traded companies must provide yearly audited financial statements prepared in accordance with GAAP.
+
+   Relevant means that numbers provide the information that a reasonable person would need to see in order to make a smart investment decision.
+   
+   Reliable means that the information can be verified as accurate by an independent third party
+   
+   Comparable means that this company’s financial statements contain the same information as others in the same industry.
+   
+   Consistent means that the numbers on the statements are calculated the same way, based on the same accounting estimates and principles used in prior years.
+   
+- `The basic principles` -- There are a lot of detailed rules and guidelines spelling out exactly how to account for financial transactions. However, when it comes to GAAP, there are ten important guiding principles that set the framework for virtually all things accounting:
+  - 1. Full disclosure, the most important principle, calls for anything—pending lawsuits, expected changes in law, incomplete transactions, and the like—that might have an impact on financial statements to be revealed and reported.
+  - 2. The economic entity assumption says that each company (or person, or government entity) has a distinct and unique identity, and must maintain its own separate accounting records.
+  - 3. The monetary unit assumption means that all transactions can be expressed in terms of money, and that the monetary unit selected (whether it’s the U.S. dollar or the Japanese yen) is stable and secure.
+  - 4. Revenue recognition requires that revenues must be counted when they’re earned, regardless of when actual money changes hands.
+  - 5. The matching principle states that expenses must be reported in the same period as the revenue they’re related to, again regardless of when money changes hands.
+  - 6. The going concern principle is based on the idea that, at least in regard to accounting for and the reporting of financial statement information, the economic entity will exist indefinitely.
+  - 7. The time period speaks to discrete time intervals (months, quarters, years, or fiscal years, for example) that must be spelled out on financial statements.
+  - 8. Cost principle requires that values reported on financial statements refer to historical cost, which is the actual amount paid rather than current market value or value adjusted for inflation. people who rely on the accuracy of the financial statements.
+  - 10. Conservatism calls for the financial statements to represent the most conservative numbers possible, and requires likely liabilities and expenses to be recorded right away (even if they may not occur) and revenues to be recognized only when they’re earned
+  
+- `change in accounting principles` --  change in accounting principle takes place when a company’s financial managers decide to switch the method hey’ve used in the past to calculate numbers on their financial statements. For example, changing the method used to value inventory would be a change in accounting principle. As long as the change is acceptable under GAAP or IFRS (International Financial Reporting Standards, a worldwide set of accounting guidelines), it is perfectly allowable, provided that the company properly discloses the impact of the change.
+
+- `mind the non GAAP` -- Sometimes, however, using GAAP doesn’t paint the truest picture of a company’s financial position or the performance of its core business, and in those circumstances, a company might record transactions using non-GAAP method
+
+- `different countries different principles` -- Historically, countries developed their own versions of acceptable accounting principles as their economies became more sophisticated, similar to GAAP in the United States. The differences in these national systems varied from nuanced to extreme. For example, the way pensions were treated under U.S. GAAP bears no resemblance to how they were accounted for in Asia or Europ
+
+  As global trade and finance increased, so did the need for international accounting standards. This need led to the creation of the independent International Accounting Standards Board, or IASB, in London in 2001. This global group is composed of fifteen members from nine countries, including the United States. IASB works together with its U.S. counterpart, FASB, to establish standardized financial reporting that crosses borders.
+  
+<br>
+<br>
+
+# TRACKING AND MEASURING SUCCESS
+
+- Whether you’re looking at your retirement plan, college savings, or business profits, it’s crucial for you to know what the numbers you see actually mean. For example, which is more important: revenues or profits? Do average annual returns really indicate what’s going on in your retirement account? Though the answers to these questions may seem simple and obvious, they’re not. Knowing the intricacies of the numbers that show up in annual reports and financial statements can better help you meet your goals.
+
+- `how to succeed in business` -- Underneath every business success story—from the tiniest home-based business to the largest Fortune 500 corporation—are numbers and reports and some math. Behind many business failures is a failure to work with and understand these numbers.
+
+  Accounting provides a comprehensive toolbox designed to help you build your business up from a solid foundation. Starting with a thorough business plan gives you a clear sense of direction, along with a map of potential landmines to avoid and measurable goals to reach.
+  
+  In the beginning, cash and sales will feel like the most important numbers to watch, but focusing only on those could leave your company vulnerable to failure. Yes, cash and sales are crucial, but so are costs, expenses, and liabilities; if those grow large enough, they can strangle the company’s cash, and even robust sales won’t be able to revive it.
+  
+   If something goes awry, you’ll know about it in time to make a course correction. You’ll be able to see where you’re spending too much, whether your prices need adjusting, which products are the moneymakers, and if your business will really be able to handle its current debt load.
+   
+- `follow the numbers to personal success` -- Just like with a business, achieving personal financial success—whatever that means to you—requires that you know exactly how much money you have, how much you owe, and how much you need to meet your goals. This knowledge forms the cornerstone of your plan 
+
+  Some of the most important things to do to get control of your finances include:
+  - • Creating a household budget so you can track where your money is really going. This will help make sure you don’t run out of money before the end of the month.
+  - • Knowing what you owe so you can take charge of paying down your debt before it balloons out of control. You don’t want to end up financially crippled by credit card debt, or the enormous interest charges that can come with it.
+  - • Building emergency savings to cover at least six months of living expenses. You can’t predict when an injury will keep you out of work, or a company will downsize, and unexpected occurrences like these can wreak havoc on your finances if you aren’t prepared
+  - • Beginning to fund your retirement today because time really is money. The earlier you start saving, the more your nest egg will grow—even if you stop adding money to it later on.
+  -  Setting up focused savings accounts to fund each of your goals (car, house, tropical beach vacation, and so on). Keeping these funds strictly separated and tracked helps ensure you’ll really meet each goal.
+  
+  Once the foundation of your money management plan is set up, you can spend some time looking at ways to maximize your money. For example, you can take steps to minimize your tax bill and keep more of your paycheck, or start investing some extra cash to earn more than you would from a typical savings account. At this point, whether you’re building your business or personal financial plan, you may want to call in an accountant to help you get on track.
+  
+<br>
+<br>
+
+# HOW ACCOUNTANTS CAN HELP YOU
+
+- An accountant can walk you through a business plan, help you secure financing, assist you in tracking and measuring your company’s profitability, and be your ally as you bridge the gap from startup to successful enterprise.
+
+  Accountants can also represent you if you’re ever called in to the IRS for personal or business reasons, just like you would be represented by a lawyer if you had to go to court. While you are allowed to face the IRS on your own, it’s a good idea to have a seasoned professional on your side, someone who knows the ins and outs of tax law
+
+- `more than just taxes` -- . Your accountant will be familiar with dozens of deductions and loopholes that you’ve never heard of, and can help you figure out which ones apply to your situation, saving you potentially hundreds—even thousands—of dollars in taxes.
+
+  But it’s important to realize that your accountant is a valuable financial resource who can do so much more than just tally up your taxes. The best accountants can help you dig deeper into your current financial situation, sort out thorny issues like excess debt and out-of-control budgets, 
+  
+- `taking care of business` --  When you’re just starting out in business, having a professional accountant on your team can make your life as an entrepreneur so much simpler When it comes to setting up your books, getting it right from the start is a mus
+
+- `Not Mixing Business and Personal` -- While you may be comfortable with the CPA who’s been doing your personal taxes, he may not be the best person to deal with your business taxes. The two types are very different, and someone well-versed in personal returns may not have a lot of experience in small business returns. That can lead to an unnecessarily high tax bill on your business income. It’s very important to make sure that whoever takes care of your business taxes knows the ins and outs of a business return.
+
+  Taxes are an integral part of business, and tax time is more frequent and more complicated for businesses. Whether you’re dealing with sales tax, payroll taxes, or income taxes, having an experienced professional deal with the paperwork will remove a huge headache-producer from your life.
+  
+  These are some other things that accountants can do for startup businesses:
+    - • Help you choose the best business structure (like corporation or limited liability company [LLC])
+    - • Introduce you to bankers
+    - • Set up your accounting system
+    - • Teach you how to use your accounting system
+    - • Show you different ways to keep initial costs down
+    - Help you get all the necessary tax ID numbers
+    
+   After your company has been around for a few months, you will have a better feel for the way your business flows. You’ll also know by then which things you like to do yourself, which things you feel you have to do yourself, and which things you cannot wait to pass off to somebody else. A lot of the time, what ends up falling into that last category will be the more routine bookkeeping and paperwork tasks.
+   
+   - Bookkeeping: Once you know how to do bookkeeping tasks, and what the results of the work should look like, you may be ready to stop doing them yourself. If so, then it’s the time to consider bringing in a bookkeeper, whether you put one on your regular payroll or just bring in an independent bookkeeper once a month. That bookkeeper could handle all the detailed data entry, freeing up your time for other projects.
+   
+   - Payroll: Payroll—even though software makes it easier than ever before—is another repetitive but critical job that many small business owners farm out. Many bookkeepers and accounting firms offer this service
+  
+
