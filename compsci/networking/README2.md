@@ -189,5 +189,45 @@
 
 # OSI Model: Physical Layer
 
+- Physical layer is the lowest layer of the OSI reference model. It is responsible for sending bits from one computer to another. This layer is not concerned with the meaning of the bits and deals with the setup of physical connection to the network and with transmission and reception of signals.
+
+### Functions of Physical Layer
+
+- Following are the various functions performed by the Physical layer of the OSI model:
+  - `Representation of Bits` --  It defines the type of encoding i.e. how 0's and 1's are changed to signal.
+  - `Data Rate` -- This layer defines the rate of transmission which is the number of bits per second.
+  - `Synchronization` -- It deals with the synchronization of the transmitter and receiver
+  - `Interface` -- The physical layer defines the transmission interface between devices and transmission medium.
+  - `Line Configuration` -- This layer connects devices with the medium: Point to Point configuration and Multipoint configuration
+  - `Topologies` -- Devices must be connected using the following topologies: Mesh, Star, Ring and Bus
+  - `Transmission Modes` -- Physical Layer defines the direction of transmission between two devices: Simplex, Half Duplex, Full Duplex.
+
+<br>
+<br>
+
+---
+
+<br>
+<br>
+
+# OSI Model: Data Link Layer
+
+- Data link layer performs the most reliable node to node delivery of data. The main task of the data link layer is to transform a raw transmission facility into a line that appears free of undetected transmission errors to the network layer. It accomplishes this task by having the sender break up the input data into `data frames`(typically a few hundred or few thousand bytes) and transmit the frames sequentially. If the service is reliable, the receiver confirms correct receipt of each frame by send back an `acknowledgement frame`.
+
+### Functions of Data Link Layer
+
+- `Framing` -- Frames are the streams of bits received from the network layer into manageable data units. This division of stream of bits is done by Data Link Layer.
+- `Physical Addressing` -- The Data Link layer adds a header to the frame in order to define physical address of the sender or receiver of the frame
+- `Flow Control` -- A flow control mechanism to avoid a fast transmitter from running a slow receiver by buffering the extra bit is provided by flow control
+- `Error Control` -- Error control is achieved by adding a trailer at the end of the frame. Duplication of frames are also prevented by using this mechanism
+- `Access Control` -- Protocols of this layer determine which of the devices has control over the link at any given time, when two or more devices are connected to the same link.
+
+<br>
+<br>
+
+---
+
+<br>
+<br>
   
   
