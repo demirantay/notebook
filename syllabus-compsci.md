@@ -120,7 +120,7 @@ Try to specilize in a field such as these, just chose one or two. However, remem
 
   > Research books like you did for computer architecture. Through reddit, forums ... etc. Then start.
    - [x] Course: Do [khan academy: networking](https://www.khanacademy.org/computing/ap-computer-science-principles/the-internet) for a refresher before diving in
-   - [ ] Read: The [This tutorial](https://www.studytonight.com/computer-networks/)
+   - [x] Read: The [This tutorial](https://www.studytonight.com/computer-networks/)
    - [ ] Book: [Computer Networks](https://www.amazon.com/gp/product/B006Y1BKGC/ref=dbs_a_def_rwt_hsch_vapi_taft_p1_i0)
    - [ ] Book : [Computer Networking: A Top-Down Approach](https://www.amazon.com/Computer-Networking-Top-Down-Approach-7th/dp/0133594149/?pldnSite=1) -- do the exersices
    - [ ] Exersices : [Wireshark](http://www-net.cs.umass.edu/wireshark-labs/)
