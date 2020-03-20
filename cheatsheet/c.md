@@ -1,5 +1,20 @@
 # C Language Cheatsheet
 
+## Organization
+
+- 1 - #include <>
+- 2 - #include ""
+- 3 - #defines
+- 4 - Data Types (e.g., structures)
+- 5 - Globals
+- 6 - Prototypes
+- 7 - Code
+
+> The main() function is either first or last. 
+
+> #includes and #defines in the middle of code are usually frowned upon.
+- [click here for C Style Guides](http://www.cs.umd.edu/~nelson/classes/resources/cstyleguide/)
+
 ## Compiling
 
 - `gcc foo.c` -- compiles foo.c into a.out run result with __./a.out__
