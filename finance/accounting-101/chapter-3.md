@@ -1,0 +1,3 @@
+# ANTI–MONEY LAUNDERING SPECIALISTS
+
+- Money from illegal enterprises fuels terrorist and criminal organizations around the world. Literally trillions of dollars of illegal trade takes place every year, and the kingpins have gotten very adept at concealing their money trails. While you may think that their biggest financial challenge is bringing in more cash, what actually causes them problems is transforming the dirty money from illegal activities into squeaky clean, perfectly legal funds. That process is called money laundering, and tracking that cash has opened up a whole new branch of accounting for people called Certified Anti–Money Laundering Specialists (CAMS).
