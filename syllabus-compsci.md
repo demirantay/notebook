@@ -315,7 +315,6 @@ Try to specilize in a field such as these, just chose one or two. However, remem
 - [ ] Architectural Patterns: Monolithic Apps, Microservices, Microservices, SOA, Serverless
 - [ ] Search Engine -- (ElasticSearch, solr .. etc)
 - [ ] Message Brokers -- (RabbitMQ, Kafka)
-- [ ] Docker
 - [ ] GraphQL 
 - [ ] Graph Databases
 
@@ -335,7 +334,6 @@ Try to specilize in a field such as these, just chose one or two. However, remem
 - [ ] Feynman: Search Engines
 - [ ] Feynman: GraphQL
 - [ ] Feynman: Graph Databases
-
 - [ ] Re-iterate through feynman boxes above
 
 ### Packet #3
