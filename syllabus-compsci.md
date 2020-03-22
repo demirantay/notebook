@@ -318,13 +318,6 @@ Try to specilize in a field such as these, just chose one or two. However, remem
 - [ ] Docker
 - [ ] GraphQL 
 - [ ] Graph Databases
-- [ ] Web Sockets
-- [ ] Web Servers -- (Apache, Nginx)
-- [ ] Scalability: Migration Strategies
-- [ ] Scalability: Horizontal vs Vertical Scaling
-- [ ] Scalability: Understanding Diff
-- [ ] Scalability: Metrics logging ... etc.
-- [ ] Finish the theoretical part at the top.
 
 ### Packet #2 
 
@@ -340,12 +333,9 @@ Try to specilize in a field such as these, just chose one or two. However, remem
 - [ ] Feynman: Web Security
 - [ ] Feynman: Message Brokers
 - [ ] Feynman: Search Engines
-- [ ] Feynman: Docker
-- [ ] Feynman: Web Servers
-- [ ] Feynman: Web Sockets
 - [ ] Feynman: GraphQL
 - [ ] Feynman: Graph Databases
-- [ ] Feynman: Scalability
+
 - [ ] Re-iterate through feynman boxes above
 
 ### Packet #3
@@ -383,7 +373,7 @@ Try to specilize in a field such as these, just chose one or two. However, remem
 - [ ] Terminal -- (Network: nmap, tcpdump, ping, traceroute, ip ...etc)
 - [ ] Terminal -- (Sys Performance: nmon, iostat, sar, vmstat ...etc.)
 - [ ] Terminal -- (All other neccessary information: history, df ...etc)
-- [ ] Networking 
+- [x] Networking 
 - [ ] Web Servers -- (nginx, apache, tomcat ... etc)
 - [ ] Caching Servers
 - [ ] Load Balancer
@@ -400,6 +390,10 @@ Try to specilize in a field such as these, just chose one or two. However, remem
 - [ ] Application Monitoring -- (New Relic, AppDynamics .. etc)
 - [ ] Logs Management -- (ELK Stack, Graylog, Splunk .. etc)
 - [ ] Cloud Providers -- AWS
+- [ ] Scalability: Migration Strategies
+- [ ] Scalability: Horizontal vs Vertical Scaling
+- [ ] Scalability: Understanding Diff
+- [ ] Scalability: Metrics logging ... etc.
 
 ### Packet #2 
 
@@ -426,6 +420,7 @@ Try to specilize in a field such as these, just chose one or two. However, remem
 - [ ] Feynman: Application Monitoring -- (New Relic, AppDynamics .. etc)
 - [ ] Feynman: Logs Management -- (ELK Stack, Graylog, Splunk .. etc)
 - [ ] Feynman: Cloud Providers -- AWS
+- [ ] Feynman: Scalability
 - [ ] Re-iterate through feynman boxes above
 
 ### Packet #3
