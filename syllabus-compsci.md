@@ -363,14 +363,14 @@ Try to specilize in a field such as these, just chose one or two. However, remem
 
 - [x] System Programming Languages -- (Python, C/C++, Go.. etc.)
 - [ ] OS Concepts -- (I/O, Memory Storage, Process Management, Sockets, File Systems ... etc.)
-- [ ] Unix/Linux Envioroment
-- [ ] Terminal -- (bash scripting)
-- [ ] Terminal -- (Vim/Nano/Emacs...etc.)
-- [ ] Terminal -- (Text Manipulation: awk, sed, grep, sort, cat ...etc)
-- [ ] Terminal -- (Process Monitoring: ps, top, htop, lsof ... etc.)
-- [ ] Terminal -- (Network: nmap, tcpdump, ping, traceroute, ip ...etc)
-- [ ] Terminal -- (Sys Performance: nmon, iostat, sar, vmstat ...etc.)
-- [ ] Terminal -- (All other neccessary information: history, df ...etc)
+- [x] Unix/Linux Envioroment
+- [x] Terminal -- (bash scripting)
+- [x] Terminal -- (Vim/Nano/Emacs...etc.)
+- [x] Terminal -- (Text Manipulation: awk, sed, grep, sort, cat ...etc)
+- [x] Terminal -- (Process Monitoring: ps, top, htop, lsof ... etc.)
+- [x] Terminal -- (Network: nmap, tcpdump, ping, traceroute, ip ...etc)
+- [x] Terminal -- (Sys Performance: nmon, iostat, sar, vmstat ...etc.)
+- [x] Terminal -- (All other neccessary information: history, df ...etc)
 - [x] Networking 
 - [ ] Web Servers -- (nginx, apache, tomcat ... etc)
 - [ ] Caching Servers
