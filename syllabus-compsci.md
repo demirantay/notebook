@@ -362,7 +362,7 @@ Try to specilize in a field such as these, just chose one or two. However, remem
 > Update it for 2020
 
 - [x] System Programming Languages -- (Python, C/C++, Go.. etc.)
-- [ ] OS Concepts -- (I/O, Memory Storage, Process Management, Sockets, File Systems ... etc.)
+- [x] OS Concepts -- (I/O, Memory Storage, Process Management, Sockets, File Systems ... etc.)
 - [x] Unix/Linux Envioroment
 - [x] Terminal -- (bash scripting)
 - [x] Terminal -- (Vim/Nano/Emacs...etc.)
@@ -394,6 +394,8 @@ Try to specilize in a field such as these, just chose one or two. However, remem
 - [ ] Scalability: Metrics logging ... etc.
 
 ### Packet #2 
+
+> I need to change the order from the easiest to hardest since understanding and building all of docker is easier than building a operating systems kernel shell .. etc.
 
 - [ ] Feynman: System Progrmaming Languages (python, c/c++, go)
 - [ ] Feynman: OS Concepts
