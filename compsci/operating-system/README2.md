@@ -143,14 +143,56 @@
 
 ### Static vs Dynamic Loading
 
+- The choice between Static or Dynamic Loading is to be made at the time of computer program being developed. If you have to load your program statically, then at the time of compilation, the complete programs will be compiled and linked without leaving any external program or module dependency  The linker combines the object program with other necessary object modules into an absolute program, which also includes logical addresses.
+
 ### Static vs Dynamic Linking
+
+- As explained above, when static linking is used, the linker combines all other modules needed by a program into a single executable program to avoid any runtime dependency.
 
 ### Swapping
 
+- Swapping is a mechanism in which a process can be swapped temporarily out of main memory (or move) to secondary storage (disk) and make that memory available to other processes. At some later time, the system swaps back the process from the secondary storage to main memory.
+
 ### Memory Allocation
+
+- Main memory usually has two partitions −
+  - `Low Memory` − Operating system resides in this memory.
+  - `High Memory` − User processes are held in high memory.
+  
+  Operating system uses the following memory allocation mechanism.
+  
+  `Single-partition allocation` -- In this type of allocation, relocation-register scheme is used to protect user processes from each other, and from changing operating-system code and data. Relocation register contains value of smallest physical address whereas limit register contains range of logical addresses. Each logical address must be less than the limit register.
+  
+  `Multiple-partition allocation` -- In this type of allocation, main memory is divided into a number of fixed-sized partitions where each partition should contain only one process. When a partition is free, a process is selected from the input queue and is loaded into the free partition.
 
 ### Fragmentation
 
+- As processes are loaded and removed from memory, the free memory space is broken into little pieces. It happens after sometimes that processes cannot be allocated to memory blocks considering their small size and memory blocks remains unused. This problem is known as Fragmentation.
+
 ### Paging
 
+- A computer can address more memory than the amount physically installed on the system. This extra memory is actually called virtual memory and it is a section of a hard that's set up to emulate the computer's RAM. Paging technique plays an important role in implementing virtual memory.
+
 ### Segmentation
+
+- Segmentation is a memory management technique in which each job is divided into several segments of different sizes, one for each module that contains pieces that perform related functions. Each segment is actually a different logical address space of the program.
+
+
+<bR>
+<br>
+  
+---
+
+<br>
+<br>
+
+# Virtual Memory
+
+- A computer can address more memory than the amount physically installed on the system. This extra memory is actually called virtual memory and it is a section of a hard disk that's set up to emulate the computer's RAM. 
+
+  The main visible advantage of this scheme is that programs can be larger than physical memory. Virtual memory serves two purposes. First, it allows us to extend the use of physical memory by using disk. Second, it allows us to have memory protection, because each virtual address is translated to a physical address.
+
+  Modern microprocessors intended for general-purpose use, a memory management unit, or MMU, is built into the hardware. The MMU's job is to translate virtual addresses into physical addresses
+  
+  Virtual memory is commonly implemented by `demand paging`. It can also be implemented in a `segmentation system`. `Demand segmentation` can also be used to provide virtual memory.
+
