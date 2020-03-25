@@ -57,10 +57,44 @@
 
 ### WSGI Application Object (Callable): wsgi.py
 
+- As mentioned above, web servers running on WSGI need an application object (i.e. your application’s). With most frameworks and applications, this consists of:
+  - A `wsgi.py` to contain and provide an application object (or callable) to be used by the server.
+
+  > You can choose any name instead of “wsgi.py”. However, these are the ones that are commonly used (e.g. by Django).
+  
+- Let’s continue with moving (copy/paste) the basic WSGI application code inside (which should be replaced with your own application’s callable for production):
+  ```python
+  def application(env, start_response):
+    start_response('200 OK', [('Content-Type', 'text/html')])
+    return ["Hello!"]
+  ```
+  Once we are done, this is how your main application deployment directory should look like:
+  ```
+  my_app              # Main Folder to Contain Everything Together
+  |
+  |=== my_app_venv  # V. Env. folder with the Python Int.
+  |=== app          # Your application module
+  |
+  |--- wsgi.py      # File containing application callable
+  |..
+  |.
+  ```
+
 ### Running the server
 
-### Configuring and Optimising Gunicorn
-
+- To start serving your application, you just need to execute:
+  ```
+  $ gunicorn [option] [option] .. [wsgi file]
+  ```
+  Run the following to start the server:
+  ```
+  $ gunicorn -b 0.0.0.0:8080 wsgi
+  ```
+  
 ### Configuring Nginx
 
-### Miscellaneous Tips and Suggestions
+- After learning about configuring and running Gunicorn, we now need to do the same with Nginx to talk with the Gunicorn server running the application. For this, we need to modify Nginx’s configuration file: `nginx.conf`
+
+  ... etc. 
+  
+  I stopped noting this down because to be honest this article does not give out a lot of information. ITs more related to wsgi rather than nginx.
