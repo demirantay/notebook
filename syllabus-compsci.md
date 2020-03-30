@@ -256,6 +256,7 @@ Try to specilize in a field such as these, just chose one or two. However, remem
 
 ### Packet #2 
 
+> Re strcture it from easier to harder
 - [ ] Feynman: HTML
 - [ ] Feynman: CSS
 - [ ] Feynman: JavaScript
@@ -320,13 +321,13 @@ Try to specilize in a field such as these, just chose one or two. However, remem
 
 ### Packet #2 
 
-- [ ] Feynman: Specific Programming Language (e.g. Python)
-- [ ] Feynman: Package Managaer
 - [ ] Feynman: Standarts & Best Practices
 - [ ] Feynman: Backend Testing
+- [ ] Feynman: Package Managaer
+- [ ] Feynman: Specific Programming Language (e.g. Python)
 - [ ] Feynman: Relational Databases
-- [ ] Feynman: Web Framework
 - [ ] Feynman: NoSQL
+- [ ] Feynman: Web Framework
 - [ ] Feynman: Caching
 - [ ] Feynman: API's
 - [ ] Feynman: Web Security
