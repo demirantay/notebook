@@ -325,6 +325,9 @@ Try to specilize in a field such as these, just chose one or two. However, remem
 - [ ] Feynman: Backend Testing
 - [ ] Feynman: Package Managaer
 - [ ] Feynman: Specific Programming Language (e.g. Python)
+- [ ] Feynman: HTML
+- [ ] Feynman: CSS
+- [ ] Feynman: JavaScript (not node, just vanilla)
 - [ ] Feynman: Relational Databases
 - [ ] Feynman: NoSQL
 - [ ] Feynman: Web Framework
@@ -398,20 +401,7 @@ Try to specilize in a field such as these, just chose one or two. However, remem
 
 > I need to change the order from the easiest to hardest since understanding and building all of docker is easier than building a operating systems kernel shell .. etc.
 
-- [ ] Feynman: System Progrmaming Languages (python, c/c++, go)
-- [ ] Feynman: OS Concepts
-- [ ] Feynman: Unix/Linux Envioronment
-- [ ] Feynman: Terminal Shell
-- [ ] Feynman: Bash Scripting
-- [ ] Feynman: Tools - (text maniupation, process mointoring, network, sys performance)
-- [ ] Feynman: Networking
-- [ ] Feynman: Web Servers
-- [ ] Feynman: Caching Servers
-- [ ] Feynman: Load Balancer
-- [ ] Feynman: Reverse Proxy
-- [ ] Feynman: Forward Proxy
-- [ ] Feynman: Firewall
-- [ ] Feynman: Cyber Security
+
 - [ ] Feynman: Containers -- (Docker ...etc)
 - [ ] Feynman: Configuration Management -- (Ansible)
 - [ ] Feynman: Container Orchestration -- (Kubernetees)
@@ -420,6 +410,20 @@ Try to specilize in a field such as these, just chose one or two. However, remem
 - [ ] Feynman: Infustructure Monitoring -- (Nagios, Icinga, Datadog ... etc)
 - [ ] Feynman: Application Monitoring -- (New Relic, AppDynamics .. etc)
 - [ ] Feynman: Logs Management -- (ELK Stack, Graylog, Splunk .. etc)
+- [ ] Feynman: System Progrmaming Languages (python, c/c++, go)
+- [ ] Feynman: OS Concepts
+- [ ] Feynman: Unix/Linux Envioronment
+- [ ] Feynman: Terminal Shell
+- [ ] Feynman: Bash Scripting
+- [ ] Feynman: CLI Tools - (text maniupation, process mointoring, network, sys performance)
+- [ ] Feynman: Networking
+- [ ] Feynman: Web Servers
+- [ ] Feynman: Caching Servers
+- [ ] Feynman: Load Balancer
+- [ ] Feynman: Reverse Proxy
+- [ ] Feynman: Forward Proxy
+- [ ] Feynman: Firewall
+- [ ] Feynman: Cyber Security
 - [ ] Feynman: Cloud Providers -- AWS
 - [ ] Feynman: Scalability
 - [ ] Re-iterate through feynman boxes above
