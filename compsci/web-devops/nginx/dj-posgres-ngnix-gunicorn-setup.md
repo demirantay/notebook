@@ -7,27 +7,18 @@
 <br>
 <br>
 
----
-
-<br>
-<br>
-
 # Pre-requisites and Goals
 
-<br>
-<br>
+- In order to complete this guide, you should have a fresh Ubuntu 16.04 server instance with a non-root user with sudo privileges configured.
 
----
+  We will be installing Django within a virtual environment. Installing Django into an environment specific to your project will allow your projects and their requirements to be handled separately.
+
+  Once we have our database and application up and running, we will install and configure the Gunicorn application server. This will serve as an interface to our application, translating client requests in HTTP to Python calls that our application can process. We will then set up Nginx in front of Gunicorn to take advantage of its high performance connection handling mechanisms and its easy-to-implement security features.
 
 <br>
 <br>
 
 # Install the packages from the Ubuntu Repositories
-
-<br>
-<br>
-
----
 
 <br>
 <br>
@@ -38,59 +29,34 @@
 <br>
 <br>
 
----
-
-<br>
-<br>
-
 # Create Python Virtual Environment
 
 <br>
 <Br>
-  
----
-
-<br>
-<br>
+ 
 
 # Create and Configure a New Django Project
 
 <br>
 <Br>
   
----
-
-<br>
-<br>
 
 # Create a Gunicorn systemd Service File
 
 <br>
 <Br>
-  
----
-
-<br>
-<br>
+ 
 
 # Check for the Gunicorn Socket File
 
 <br>
 <Br>
-  
----
-
-<br>
-<br>
+ 
 
 # Configure Nginx to Proxy Pass to Gunicorn
 
 <br>
 <br>
 
----
-
-<br>
-<br>
 
 # Troubleshooting Nginx and Gunicorn
