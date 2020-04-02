@@ -152,9 +152,35 @@
   
   We’ll then map out the working directory and specify the command to use to start the service. In this case, we’ll have to specify the full path to the Gunicorn executable, which is installed within our virtual environment. For example, we specified 3 worker processes in this case:
   ```
-  
-  ```
+  [Unit]
+  Description=gunicorn daemon
+  After=network.target
 
+  [Service]
+  User=sammy
+  Group=www-data
+  WorkingDirectory=/home/sammy/myproject
+  ExecStart=/home/sammy/myproject/venv/bin/gunicorn --access-logfile - --workers 3 --bind unix:/home/sammy/myproject/myproject.sock myproject.wsgi:application
+  ```
+  Finally, we’ll add an [Install] section. This will tell systemd what to link this service to if we enable it to start at boot. We want this service to start when the regular multi-user system is up and running:
+  ```
+  [Unit]
+  ...
+
+  [Service]
+  ...
+
+  [Install]
+  WantedBy=multi-user.target
+  ```
+  We can now start the Gunicorn service we created and enable it so that it starts at boot:
+  ```
+  sudo systemctl start gunicorn
+  sudo systemctl enable gunicorn
+  ```
+  > most of the commands that does not work are only avalibale to linux, you can find equievelent commands for them in different OSes
+  
+  
 
 <br>
 <Br>
@@ -162,14 +188,80 @@
 
 # Check for the Gunicorn Socket File
 
+- Next, check for the existence of the myproject.sock file within your project directory:
+  ```
+  ls /home/sammy/myproject
+  
+  # output
+  manage.py  myproject  venv  myproject.sock  static
+  ```
+  If the `systemctl status` command indicated that an error occurred or if you do not find the `myproject.sock` file in the directory, it’s an indication that Gunicorn was not able to start correctly. Check the Gunicorn process logs by typing:
+  ```
+  sudo journalctl -u gunicorn
+  ```
+  
+- If you make changes to the /etc/systemd/system/gunicorn.service file, reload the daemon to reread the service definition and restart the Gunicorn process by typing:
+  ```
+  sudo systemctl daemon-reload
+  sudo systemctl restart gunicorn
+  ```
+
 <br>
 <Br>
  
 
 # Configure Nginx to Proxy Pass to Gunicorn
 
+- Now that Gunicorn is set up, we need to configure Nginx to pass traffic to the process. Start by creating and opening a new server block in Nginx’s sites-available directory:
+  ```
+  sudo vim /etc/nginx/sites-available/myproject
+  ```
+  Inside, open up a new server block. We will start by specifying that this block should listen on the normal port 80 and that it should respond to our server’s domain name or IP address:
+  ```
+  server {
+    listen 80;
+      server_name server_domain_or_IP;
+  }
+  ```
+  Next, we will tell Nginx to ignore any problems with finding a favicon. We will also tell it where to find the static assets that we collected in our`~/myproject/static` directory. All of these files have a standard URI prefix of “/static”, so we can create a location block to match those requests:
+  ```
+  server {
+      listen 80;
+      server_name server_domain_or_IP;
+
+      location = /favicon.ico { access_log off; log_not_found off; }
+      location /static/ {
+          root /home/sammy/myproject;
+      }
+  }
+  ```
+  Finally, we’ll create a `location / {} `block to match all other requests. Inside of this location, we’ll include the standard `proxy_params` file included with the Nginx installation and then we will pass the traffic to the socket that our Gunicorn process created:
+  ```
+  server {
+      listen 80;
+      server_name server_domain_or_IP;
+
+      location = /favicon.ico { access_log off; log_not_found off; }
+      location /static/ {
+          root /home/sammy/myproject;
+      }
+
+      location / {
+          include proxy_params;
+          proxy_pass http://unix:/home/sammy/myproject/myproject.sock;
+      }
+  }
+  ```
+  Test your Nginx configuration for syntax errors by typing:
+  ```
+  sudo nginx -t
+  ```
+  
+  > After configuring Nginx, the next step should be securing traffic to the server using SSL/TLS. This is important because without it, all information, including passwords are sent over the network in plain text.
+
+  > If you have a domain name, the easiest way get an SSL certificate to secure your traffic is using Let’s Encrypt
+  
+
 <br>
 <br>
 
-
-# Troubleshooting Nginx and Gunicorn
