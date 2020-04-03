@@ -314,6 +314,54 @@ by specifying its path. This switch can be repeated indefinitely if you wish to 
  
  ### Controlling the Nginx Service
  
+ - At this stage, you should have successfully built and installed Nginx. The default location for the output files is /usr/local/nginx, so we will be basing future examples on this.
+ 
+- `Daemons and services` -- The next step is obviously to execute Nginx. However, before doing so, it's important to understand the nature of this application. There are two types of computer applications—those that require immediate user input, thus running on the foreground, and those that do not, thus running in the background. Nginx is of the latter type, often referred to as `daemon`.
+
+    When started from the command line, a daemon immediately returns the prompt, and in most cases, does not even bother outputting data to the terminal.
+    
+    Consequently, when starting Nginx you will not see any text appear on the screen and the prompt will return immediately. While this might seem startling, it is
+on the contrary a good sign. It means the daemon was started correctly and the configuration did not contain any errors.
+
+- `User and Group` -- It is of utmost importance to understand the process architecture of Nginx and particularly the user and groups its various processes run under. A very common source of troubles when setting up Nginx is invalid file access permissions—due to a user or group misconfiguration, you often end up getting 403 Forbidden HTTP
+
+  There are two levels of processes with possibly different permission sets:
+  - The Nginx master process, which should be started as root. In most Unix-like systems, processes started with the root account are allowed to open TCP sockets on any port, whereas other users can only open listening sockets on
+a port above 1024. If you do not start Nginx as root, standard ports such as
+80 or 443 will not be accessible
+  - The Nginx worker processes, which are automatically spawned by the master process under the account you specified in the configuration file with the user directive (detailed in Chapter 2, Basic Nginx Configuration). The configuration setting takes precedence over the configure switch you may have entered at compile time. If you did not specify any of those, the worker processes will be started as user nobody, and group nobody
+
+- `Nginx command-line switches` -- The Nginx binary accepts command-line arguments for performing various operations, among which is controlling the background processes. To get the full list of commands, you may invoke the help screen using the following commands:
+  ```
+  [alex@example.com ~]$ cd /usr/local/nginx/sbin
+  [alex@example.com sbin]$ ./nginx -h
+  ```
+  The next few sections will describe the purpose of these switches.
+
+- `Starting and stopping the daemon` -- You can start Nginx by running the Nginx binary without any switches. If the daemon is already running, a message will show up indicating that a socket is already listening on the specified port:
+  ```
+  [emerg]: bind() to 0.0.0.0:80 failed (98: Address already in use) [...]
+  [emerg]: still could not bind().
+  ```
+  Beyond this point, you may control the daemon by stopping it, restarting it, or simply reloading its configuration. Controlling is done by sending signals to the process using the `nginx -s` command:
+  - `nginx -s stop` -- Stops the daemon immediately (using the TERM signal)
+  - `nginx -s quit` -- Stops the daemon gracefully (using the QUIT signal)
+  - `nginx -s reopen` -- Reopens the log files
+  - `nginx -s reload` -- Reloads the configuration
+
+- `Testing the configuration` -- As you can imagine, this tiny bit of detail might become an important issue if you constantly tweak your configuration. In consequence, the following command will be useful to you in many occasions. It allows you to check the syntax, validity, and integrity of your configuration:
+  ```
+  [alex@example.com ~]$ /usr/local/nginx/sbin/nginx –t
+  ```
+  The –t switch stands for test configuration. Nginx will parse the configuration anew and let you know whether it is valid or not.
+  
+  Obviously, manipulating your configuration files while your server is in production is a dangerous thing to do and should be avoided at all costs. The best practice, in this case, is to place your new configuration into a separate temporary file and run the test on that file. 
+  ```
+  [alex@example.com sbin]$ ./nginx –t –c /home/alex/test.conf
+  ```
+
+- `Other Swtiches` --
+ 
  ### Adding Nginx as a system service
  
  <br>
