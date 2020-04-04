@@ -311,7 +311,25 @@ that the execution is delegated to only one core of your CPU. It is highly recom
 	
 - `OpenWebLoad` -- OpenWebLoad is a free open source application. It is available for both Linux and Windows platforms
 
-- `Upgrading Nginx gracefully` --
+	it will simply send as many requests as possible using a variable amount of connections and report to you every second. Its usage is simpler than the previous two utilities:
+	```
+	[alex@example ~]$ openload example.com/index.html 10
+	```
+	The first argument is the URL of the website you want to test. The second one is the amount of connections that should be opened.
+
+- `Upgrading Nginx gracefully` -- There are many situations where you need to replace the Nginx binary, for example, when you compile a new version and wish to put it in production or simply after having enabled new modules and rebuilt the application. What most administrators would do in this situation is stop the server, copy the new binary over the old
+one, and start Nginx again.
+
+	Fortunately, Nginx embeds a mechanism allowing you to switch binaries with uninterrupted uptime—zero percent request loss is guaranteed if you follow these steps carefully:
+	- 1 - Replace the old Nginx binary (by default, /usr/local/nginx/sbin/nginx) with the new one.
+	- 2 - Find the pid of the Nginx master process, for example, with ps x | grep nginx | grep master or by looking at the value found in the pid file.
+	- 3 - Send a USR2 (12) signal to the master process—kill –USR2 ***, replacing *** with the pid found in step 2. This will initiate the upgrade by renaming the old .pid file and running the new binary.
+	- 4 - Send a WINCH (28) signal to the old master process—kill –WINCH ***, replacing *** with the pid found in step 2. This will engage a graceful shutdown of the old worker processes.
+	- 5 - Make sure that all of the old worker processes are terminated, and then send a QUIT signal to the old master process—kill –QUIT ***, replacing *** with the pid found in step 2.
+	
+### Summary
+
+- This chapter provided a first approach of the configuration architecture by studying the syntax and the core module directives that have an impact on the overall server performance. 
  
  <br>
  <br>
@@ -321,42 +339,4 @@ that the execution is delegated to only one core of your CPU. It is highly recom
  <br>
  <br>
  
- # HTTP Configuration
- 
- ### HTTP Core Module
- 
- ### Module Directives
- 
- ### Module variables
- 
- ### The Location block
- 
- <br>
- <br>
- 
- ---
- 
- <br>
- <br>
- 
- # Module Configuration
- 
- ### Rewrite module
- 
- ### SSI module
- 
- ### Additional modules
- 
- <br>
- <br>
- 
- ---
- 
- <br>
- <br>
- 
- # PHP and Python with Nginx
- 
- ### Introduction to FastCGI
- 
- ### Python and Nginx
+ - [part 3](./README3.md)
