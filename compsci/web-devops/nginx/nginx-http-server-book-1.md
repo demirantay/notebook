@@ -360,10 +360,60 @@ a port above 1024. If you do not start Nginx as root, standard ports such as
   [alex@example.com sbin]$ ./nginx –t –c /home/alex/test.conf
   ```
 
-- `Other Swtiches` --
+- `Other Swtiches` -- Another switch that might come in handy in many situations is –V. Not only does it tell you the current Nginx build version, but more importantly it also reminds you about the arguments that you used during the configuration step—in other words, the command switches that you passed to the configure script before compilation.
+  ```
+  [alex@example.com sbin]$ ./nginx -V
+  nginx version: nginx/1.2.9
+  built by gcc 4.4.6 20120305 (Red Hat 4.4.6-4) (GCC)
+  TLS SNI support enabled
+  configure arguments: --with-http_ssl_module
+  ```
+  In this case, Nginx was configured with the --with-http_ssl_module switch only.
  
  ### Adding Nginx as a system service
  
+ - In this section, we will create a script that will transform the Nginx daemon into an actual system service. This will result in mainly two outcomes—the daemon will be controllable using standard commands, and more importantly, it will automatically be launched on system startup and stopped on system shutdown.
+ 
+ - `System V Scripts` -- Most Linux-based operating systems to date use a System-V style init daemon. In other words, their startup process is managed by a daemon called init, 
+
+ 	 This daemon functions on the principle of runlevels, which represent the state of the computer. Here is a table representing the various runlevels and their signification:
+  - `0` - System is halted
+  - `1` - Single-user mode (rescue mode)
+  - `2` - Multiuser mode, without NFS support
+  - `3` - Full multiuser mode
+  - `4` - Not used
+  - `5` - Graphical interface mode
+  - `6` - System reboot
+ 
+ 	You can manually initiate a runlevel transition: use the telinit 0 command to shut down your computer or telinit 6 to reboot it. For each runlevel transition, a set of services are executed. This is the key concept to understand here: when your computer is stopped, its runlevel is 0. When you turn it on, there will be a transition from runlevel 0 to the default computer startup runlevel
+ 
+ - `What is an init script` -- An init script, also known as service startup script or even sysv script, is a shell script respecting a certain standard. The script will control a daemon application by responding to commands such as start, stop, and others
+		```
+		[root@example.com ~]# service httpd start
+		```
+		Or if your system does not come with the service command:
+		```
+		[root@example.com ~]# /etc/init.d/httpd start
+  	```
+ 
+ - `Init script for debian based distrubutions` -- We will thus create a shell script for starting and stopping our Nginx daemon and also restarting and reloading it. The purpose here is not to discuss Linux shell script programming, so we will merely provide the source code of an existing init script,
+ 
+  First, create a file called nginx with the text editor of your choice, and save it in the `/etc/init.d/` directory (on some systems, `/etc/init.d/` is actually a symbolic link to /etc/rc.d/init.d/). In the file you just created, copy the following script carefully. Make sure that you change the paths to make them correspond to your actual setup.
+	
+  You will need root permissions to save the script into the init.d directory.
+ 
+ - `Installing the script` -- here is installing thescript
+ 		```
+		[root@example.com ~]# chmod +x /etc/init.d/nginx
+		```
+ 
+ ### Summary
+ 
+ - This chapter covered a number of critical steps. We first made sure that your system contained all required components for compiling Nginx. We then proceeded to select the proper version branch for your usage—will you be using the stable version or
+a more advanced yet potentially unstable one? After downloading the source and configuring the compilation process by enabling or disabling features and modules such as SSL, GeoIP, and more, we compiled the application and installed it on the system in the directory of your choice. We created an init script and modified the system boot sequence to schedule for the service to be started.
+
+   Your web server is functional, though it does not yet answer the most basic functionality—serving a website. The first step towards hosting a website will be to establish a configuration file. The next chapter will cover the basic configuration of Nginx 
+
  <br>
  <br>
  
