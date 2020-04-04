@@ -343,9 +343,6 @@ Try to specilize in a field such as these, just chose one or two. However, remem
 - [ ] Feynman: GraphQL
 - [ ] Feynman: Graph Databases
 - [ ] Feynman: Scalability
-
-
-
 - [ ] Re-iterate through feynman boxes above
 
 ### Packet #3
