@@ -318,6 +318,10 @@ Try to specilize in a field such as these, just chose one or two. However, remem
 - [ ] Message Brokers -- (RabbitMQ, Kafka)
 - [ ] GraphQL 
 - [ ] Graph Databases
+- [ ] Scalability: Migration Strategies
+- [ ] Scalability: Horizontal vs Vertical Scaling
+- [ ] Scalability: Understanding Diff
+- [ ] Scalability: Metrics logging ... etc.
 
 ### Packet #2 
 
@@ -338,6 +342,10 @@ Try to specilize in a field such as these, just chose one or two. However, remem
 - [ ] Feynman: Search Engines
 - [ ] Feynman: GraphQL
 - [ ] Feynman: Graph Databases
+- [ ] Feynman: Scalability
+
+
+
 - [ ] Re-iterate through feynman boxes above
 
 ### Packet #3
@@ -382,7 +390,6 @@ Try to specilize in a field such as these, just chose one or two. However, remem
 - [ ] Reverse Proxy
 - [ ] Forward Proxy
 - [ ] Firewall
-- [ ] Cyber Security 
 - [ ] Containers -- (Docker ...etc)
 - [ ] Configuration Management -- (Ansible)
 - [ ] Container Orchestration -- (Kubernetees)
@@ -392,10 +399,8 @@ Try to specilize in a field such as these, just chose one or two. However, remem
 - [ ] Application Monitoring -- (New Relic, AppDynamics .. etc)
 - [ ] Logs Management -- (ELK Stack, Graylog, Splunk .. etc)
 - [ ] Cloud Providers -- AWS
-- [ ] Scalability: Migration Strategies
-- [ ] Scalability: Horizontal vs Vertical Scaling
-- [ ] Scalability: Understanding Diff
-- [ ] Scalability: Metrics logging ... etc.
+- [ ] Cyber Cecurity
+
 
 ### Packet #2 
 
@@ -423,9 +428,9 @@ Try to specilize in a field such as these, just chose one or two. However, remem
 - [ ] Feynman: Reverse Proxy
 - [ ] Feynman: Forward Proxy
 - [ ] Feynman: Firewall
-- [ ] Feynman: Cyber Security
 - [ ] Feynman: Cloud Providers -- AWS
-- [ ] Feynman: Scalability
+- [ ] Feynman: Cyber Security
+
 - [ ] Re-iterate through feynman boxes above
 
 ### Packet #3
