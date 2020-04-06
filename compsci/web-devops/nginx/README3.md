@@ -131,7 +131,52 @@ the port number to the redirection URL.
 	```
 	
 - `alias` -- Context: location. Variables are accepted.
- 
+	
+	alias is a directive that you place in a location block only. It assigns a different path for Nginx to retrieve documents for a specific request
+	```
+	http {
+      server {
+          server_name localhost;
+          root /var/www/website.com/html;
+           location /admin/ {
+           alias /var/www/locked/;
+         }
+	} }
+	```
+	
+- `error_page` -- Context: http, server, location, if. Variables are accepted.
+
+	Allows you to affect URIs to HTTP response code and optionally to substitute the
+code with another.
+
+	Syntax:error_page code1 [code2...] [=replacement code] [=@block | URI]
+	```
+	error_page 404 /not_found.html;
+  error_page 500 501 502 503 504 /server_error.html;
+  error_page 403 http://website.com/;
+	```
+	
+- `if_modified_since` -- Context: http, server, location
+
+	Defines how Nginx handles the If-Modified-Since HTTP header. This header is mostly used by search engine spiders (such as Google web crawling bots). 
+	
+	Syntax:if_modified_since off | exact | before
+	
+	Default value: exact
+	
+- `index` -- Context: http, server, location. Variables are accepted.
+
+	Defines the default page that Nginx will serve if no filename is specified in the request
+	
+	Syntax:index file1 [file2...] [absolute_file];
+	
+	Default value: index.html
+	```
+	index index.php index.html index.htm;
+	```
+	
+- `recursive_error_pages` -- 
+
  ### Module variables
  
  ### The Location block
