@@ -41,7 +41,7 @@
 - Advanced Bash : [click here](./compsci/web-devops/unix-shell/advanced-cheatsheet.md)
 - Regex : [click here](./compsci/web-devops/regex/cheatsheet.md)
 - Vim : [click here](./compsci/web-devops/vim/cheatsheet.md)
-- Nginx Basic: ...
+- Nginx Basic: [click here](./cheatsheet/nginx-basic.md)
 - Nginx Advanced: ...
 
 #### Theory
