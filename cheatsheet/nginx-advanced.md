@@ -1,17 +1,21 @@
 # Advanced Nginx Cheatsheet
 
+- [OS Usages](#os-usages)
+- [Basic Commands](#basic-commands)
+- ...
+
 ### OS Usages
 
-`Ubuntu` -- Important locations:
- - Base config file: /etc/nginx/nginx.conf
- - Default config: /etc/nginx/sites-available/default
- - Logs will be in /var/log/nginx/
- - Custom configs will go in /etc/nginx/conf.d/ or /etc/nginx/sites-available and then symlinked to /etc/nginx/sites-enabled
- - Default webroot: /var/www/html
+- `Ubuntu` -- Important locations:
+  - Base config file: /etc/nginx/nginx.conf
+  - Default config: /etc/nginx/sites-available/default
+  - Logs will be in /var/log/nginx/
+  - Custom configs will go in /etc/nginx/conf.d/ or /etc/nginx/sites-available and then symlinked to /etc/nginx/sites-enabled
+  - Default webroot: /var/www/html
 	
 <br>
 	
-`Fedora` -- Important locations:
+- `Fedora` -- Important locations:
 	- Base config file: /etc/nginx/nginx.conf
 	- Directory for custom configs: /etc/nginx/conf.d/
 	- Logs directory: /var/log/nginx/
@@ -19,7 +23,7 @@
 	
 <br>
 
-`Mac` -- Important locations:
+- `Mac` -- Important locations:
 	- Default listen address: http://localhost:8080
 	- Default web root: /usr/local/var/www/
 	- Default config file: /usr/local/etc/nginx/nginx.conf
@@ -35,6 +39,11 @@
 - `$ nginx -s reopen` -- reopening the log files
 
 ### Setup
+
+
+### Basic Configuration
+
+### Advanced Confugration
 
 ### Module: Access
 
@@ -129,3 +138,7 @@
 ### Module: XSLT*
 
 ### Troubleshooting
+
+### Reverse Proxy
+
+### Load Balancing
