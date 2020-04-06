@@ -1,12 +1,14 @@
 #### do you reccomend gunicorn, FastCGI or uWSGI to make the connection between python and nginx ? and why it is your choice ?
 
-- `answer`:
+- `answer`: it's typically a choice between gunicorn and uwsgi
 
 <br>
 
 #### is a cgi (common gateway interface) is the same thing as an application server ?  I know that I will have a connection between my nginx process and django application and I will use the cgi to make a connection between them but what is the techonology that turns my django app into a application server ?
 
-- `answer`:
+- `answer`: "an application server" is just a general idea that just means that a tech is serving your applciation, the tech that serves the application can be anything, nginx, gunciron your own wsgi app ... etc. 
+
+  The 'normal' setup you see quite often is something like (client) -> (loadbalancer(s)) -> (web server(s)) -> (application server(s)).
 
 <br>
 
@@ -24,3 +26,7 @@
 
 
 #### how long does making an server architecture usually take ?
+
+- As with any setup it takes a bit to stabilize on a setup and then it usually lasts until things break or new features are needed. (or someone read a blog post about something hip and decides to redo it all)
+
+  oh okay dont change it unless you want to add features or if it breaks
