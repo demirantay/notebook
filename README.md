@@ -30,6 +30,8 @@
 - django: [click here](./cheatsheet/django.md)
 - mongodb: [click here](./cheatsheet/mongodb.md)
 - redis: [click here](./cheatsheet/redis.md)
+- bcrypt: ...
+- sha-family: ...
 
 #### DevOps
 
@@ -39,6 +41,8 @@
 - Advanced Bash : [click here](./compsci/web-devops/unix-shell/advanced-cheatsheet.md)
 - Regex : [click here](./compsci/web-devops/regex/cheatsheet.md)
 - Vim : [click here](./compsci/web-devops/vim/cheatsheet.md)
+- Nginx Basic: ...
+- Nginx Advanced: ...
 
 #### Theory
 
