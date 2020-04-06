@@ -11,7 +11,7 @@
 	
 <br>
 	
-- `Fedora` -- Important locations:
+`Fedora` -- Important locations:
 	- Base config file: /etc/nginx/nginx.conf
 	- Directory for custom configs: /etc/nginx/conf.d/
 	- Logs directory: /var/log/nginx/
@@ -19,7 +19,7 @@
 	
 <br>
 
-- `Mac` -- Important locations:
+`Mac` -- Important locations:
 	- Default listen address: http://localhost:8080
 	- Default web root: /usr/local/var/www/
 	- Default config file: /usr/local/etc/nginx/nginx.conf
