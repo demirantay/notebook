@@ -218,3 +218,59 @@
 
 # Public Key Encryption
 
+- Unlike symmetric key cryptography, we do not find historical use of public-key cryptography. It is a relatively new concept.
+
+	Symmetric cryptography was well suited for organizations such as governments, military, and big financial corporations were involved in the classified communication.
+	
+	With the spread of more unsecure computer networks in last few decades, a genuine need was felt to use cryptography at larger scale. The symmetric key was found to be non-practical due to challenges it faced for key management. This gave rise to the public key cryptosystems.
+	
+- The most important properties of public key encryption scheme are −
+	- Different keys are used for encryption and decryption. This is a property which set this scheme different than symmetric encryption scheme.
+	- Each receiver possesses a unique decryption key, generally referred to as his private key.
+	- Receiver needs to publish an encryption key, referred to as his public key.
+	- Some assurance of the authenticity of a public key is needed in this scheme to avoid spoofing by adversary as the receiver. Generally, this type of cryptosystem involves trusted third party which certifies that a particular public key belongs to a specific person or entity only. 
+	- Encryption algorithm is complex enough to prohibit attacker from deducing the plaintext from the ciphertext and the encryption (public) key.
+	- Though private and public keys are related mathematically, it is not be feasible to calculate the private key from the public key. In fact, intelligent part of any public-key cryptosystem is in designing a relationship between two keys.
+	
+	There are three types of Public Key Encryption schemes.
+	- RSA 
+	- ElGamal
+	- Elliptic Curve
+
+### RSA Cryptosystem
+
+- This cryptosystem is one the initial system. It remains most employed cryptosystem even today. Each person or a party who desires to participate in communication using encryption needs to generate a pair of keys, namely public key and private key. 
+
+	Once the key pair has been generated, the process of encryption and decryption are relatively straightforward and computationally easy.
+
+	Interestingly, RSA does not directly operate on strings of bits as in case of symmetric key encryption. It operates on numbers modulo n. Hence, it is necessary to represent the plaintext as a series of numbers less than n.
+	
+- `security analysis` -- The security of RSA depends on the strengths of two separate functions. The RSA cryptosystem is most popular public-key cryptosystem strength of which is based on the practical difficulty of factoring the very large numbers.
+	- __Encryption Function__ − It is considered as a one-way function of converting plaintext into ciphertext and it can be reversed only with the knowledge of private key d.
+	- __Key Generation__ − The difficulty of determining a private key from an RSA public key is equivalent to factoring the modulus n. An attacker thus cannot use knowledge of an RSA public key to determine an RSA private key unless he can factor n. It is also a one way function, going from p & q values to modulus n is easy but reverse is not possible.
+	
+	If either of these two functions are proved non one-way, then RSA will be broken
+
+### ElGamal Cryptosystem
+
+- ElGamal cryptosystem, called Elliptic Curve Variant, is based on the Discrete Logarithm Problem. It derives the strength from the assumption that the discrete logarithms cannot be found in practical time frame for a given number, while the inverse operation of the power can be computed efficiently.
+
+	The generation of an ElGamal key pair is comparatively simpler than the equivalent process for RSA. But the encryption and decryption are slightly more complex than RSA.
+	
+- `sec analysis`: In ElGamal system, each user has a private key x. and has three components of public key − prime modulus p, generator g, and public Y = gx mod p. The strength of the ElGamal is based on the difficulty of discrete logarithm problem.
+
+### RSA and ElGamal Schemes – A Comparison
+
+| RSA | ElGamal |
+|--|--|
+|It is more efficient for encryption.	| It is more efficient for decryption.|
+|It is less efficient for decryption.	| It is more efficient for decryption.|
+|For a particular security level, lengthy keys are required in RSA.| For the same level of security, very short keys are required.|
+|It is widely accepted and used.|	It is new and not very popular in market.|
+
+<br>
+<br>
+
+---
+
+[part 3](./README3.md)
