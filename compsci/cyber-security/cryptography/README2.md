@@ -143,13 +143,19 @@
 
 # Advanced Encryption Standart
 
+- The more popular and widely adopted symmetric encryption algorithm likely to be encountered nowadays is the Advanced Encryption Standard (AES). It is found at least six time faster than triple DES. A replacement for DES was needed as its key size was too small. With increasing computing power, it was considered vulnerable against exhaustive key search attack.
+
 ### Operation of AES
 
-### Encryption Process
+- AES is an iterative rather than Feistel cipher. It is based on ‘substitution–permutation network’. It comprises of a series of linked operations, some of which involve replacing inputs by specific outputs (substitutions) and others involve shuffling bits around (permutations).
 
-### Decryption Process
-
+	Unlike DES, the number of rounds in AES is variable and depends on the length of the key. AES uses 10 rounds for 128-bit keys, 12 rounds for 192-bit keys and 14 rounds for 256-bit keys. Each of these rounds uses a different 128-bit round key, which is calculated from the original AES key.	
+	
 ### AES Analysis
+
+- In present day cryptography, AES is widely adopted and supported in both hardware and software. Till date, no practical cryptanalytic attacks against AES has been discovered. Additionally, AES has built-in flexibility of key length, which allows a degree of ‘future-proofing’ against progress in the ability to perform exhaustive key searches.
+
+	However, just as for DES, the AES security is assured only if it is correctly implemented and good key management is employed.
 
 <br>
 <br>
@@ -158,4 +164,57 @@
 
 <br>
 <br>
+
+# Block Cipher Modes of Operation
+
+- In this chapter, we will discuss the different modes of operation of a block cipher. These are procedural rules for a generic block cipher. Interestingly, the different modes result in different properties being achieved which add to the security of the underlying block cipher.
+
+### Electronic Code Book (ECB) Mode
+
+- This mode is a most straightforward way of processing a series of sequentially listed message blocks.
+
+	operation:
+	- The user takes the first block of plaintext and encrypts it with the key to produce the first block of ciphertext.
+	- He then takes the second block of plaintext and follows the same process with same key and so on so forth.
+	
+	analysis:
+	- In reality, any application data usually have partial information which can be guessed. For example, the range of salary can be guessed. A ciphertext from ECB can allow an attacker to guess the plaintext by trial-and-error if the plaintext message is within predictable. hence the ECB mode should not be used in most applications.
+
+### Cipher Block Chaining (CBC) Mode
+
+- CBC mode of operation provides message dependence for generating ciphertext and makes the system non-deterministic.
+	
+	analysis:
+	- In CBC mode, the current plaintext block is added to the previous ciphertext block, and then the result is encrypted with the key. Decryption is thus the reverse process, which involves decrypting the current ciphertext and then adding the previous ciphertext block to the result.
+  - Advantage of CBC over ECB is that changing IV results in different ciphertext for identical message. On the drawback side, the error in transmission gets propagated to few further block during decryption due to chaining effect.
+	- It is worth mentioning that CBC mode forms the basis for a well-known data origin authentication mechanism. Thus, it has an advantage for those applications that require both symmetric encryption and data origin authentication.
+
+### Cipher Feedback (CFB) Mode
+
+- In this mode, each ciphertext block gets ‘fed back’ into the encryption process in order to encrypt the next plaintext block.
+
+	analysis:
+	- CFB mode differs significantly from ECB mode, the ciphertext corresponding to a given plaintext block depends not just on that plaintext block and the key, but also on the previous ciphertext block. In other words, the ciphertext block is dependent of message.
+
+### Output Feedback (OFB) Mode
+
+- It involves feeding the successive output blocks from the underlying block cipher back to it. These feedback blocks provide string of bits to feed the encryption algorithm which act as the key-stream generator as in case of CFB mode.
+
+	The key stream generated is XOR-ed with the plaintext blocks. The OFB mode requires an IV as the initial random n-bit input block. The IV need not be secret.
+
+### Counter (CTR) Mode
+
+- It can be considered as a counter-based version of CFB mode without the feedback. In this mode, both the sender and receiver need to access to a reliable counter, which computes a new shared value each time a ciphertext block is exchanged. This shared counter is not necessarily a secret value, but challenge is that both sides must keep the counter synchronized.
+
+	The serious disadvantage of CTR mode is that it requires a synchronous counter at sender and receiver. Loss of synchronization leads to incorrect recovery of plaintext.
+
+<br>
+<br>
+
+---
+
+<br>
+<br>
+
+# Public Key Encryption
 
