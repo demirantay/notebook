@@ -107,9 +107,35 @@
 
 # Cryptograhpy Digital Signatures
 
+- Digital signatures are the public-key primitives of message authentication. In the physical world, it is common to use handwritten signatures on handwritten or typed messages. They are used to bind signatory to the message.
+
+	Similarly, a digital signature is a technique that binds a person/entity to the digital data. This binding can be independently verified by receiver as well as any third party.
+	
+	Digital signature is a cryptographic value that is calculated from the data and a secret key known only by the signer.
+	
+	In real world, the receiver of message needs assurance that the message belongs to the sender and he should not be able to repudiate the origination of that message. This requirement is very crucial in business applications, since likelihood of a dispute over exchanged data is very high.
+
 ### Model of Digital Signature
 
+- The following points explain the entire process in detail −
+	- Each person adopting this scheme has a public-private key pair.
+	-  Generally, the key pairs used for encryption/decryption and signing/verifying are different. The private key used for signing is referred to as the signature key and the public key as the verification key.
+	- Signer feeds data to the hash function and generates hash of data.
+	- Hash value and signature key are then fed to the signature algorithm which produces the digital signature on given hash. Signature is appended to the data and then both are sent to the verifier.
+	- Verifier feeds the digital signature and the verification key into the verification algorithm. The verification algorithm gives some value as output.
+	- Verifier also runs same hash function on received data to generate hash value.
+	- For verification, this hash value and output of verification algorithm are compared. Based on the comparison result, verifier decides whether the digital signature is valid.
+	- Since digital signature is created by ‘private’ key of signer and no one else can have this key; the signer cannot repudiate signing the data in future.
+	
+	> signing a hash is more efficient than signing the entire data.
+
 ### Importance of Digital Signature
+
+- This makes it essential for users employing PKC for encryption to seek digital signatures along with encrypted data to be assured of message authentication and non-repudiation.
+
+	This can archived by combining digital signatures with encryption scheme. Let us briefly discuss how to achieve this requirement. There are two possibilities, sign-then-encrypt and encrypt-then-sign.
+	
+	However, the crypto system based on sign-then-encrypt can be exploited by receiver to spoof identity of sender and sent that data to third party. Hence, this method is not preferred. The process of encrypt-then-sign is more reliable and widely adopted. This is depicted in the following illustration −
 
 ### Encryption with Digital Signature
 
@@ -122,3 +148,79 @@
 <br>
 
 # Public Key Infsutrcutre
+
+- The most distinct feature of Public Key Infrastructure (PKI) is that it uses a pair of keys to achieve the underlying security service. The key pair comprises of private key and public key.
+
+	Since the public keys are in open domain, they are likely to be abused. It is, thus, necessary to establish and maintain some kind of trusted infrastructure to manage these keys.
+
+### Key Management
+
+- It goes without saying that the security of any cryptosystem depends upon how securely its keys are managed. Without secure procedures for the handling of cryptographic keys, the benefits of the use of strong cryptographic schemes are potentially lost.
+	
+	Cryptographic keys are nothing but special pieces of data. Key management refers to the secure administration of cryptographic keys.
+	
+	Key management deals with entire key lifecycle as depicted in the following illustration −
+	```
+	key generation -> key establishment -> key storage -> key usage -> key archival -> key destruction
+	```
+	There are two specific requirements of key management for public key cryptography.
+	- `Secrecy of private keys.` -- Throughout the key lifecycle, secret keys must remain secret from all parties
+	- `Assurance of public keys.` -- By default there are no assurances of whether a public key is correct, with whom it can be associated, or what it can be used for. Thus key management of public keys needs to focus much more explicitly on assurance of purpose of public keys.
+	
+### Public Key Infrastructure (PKI)
+
+- PKI provides assurance of public key. It provides the identification of public keys and their distribution. An anatomy of PKI comprises of the following components.
+	- Public Key Certificate, commonly referred to as ‘digital certifica
+	- Private Key tokens.
+	- Certification Authority.
+	- Registration Authority.
+	- Certificate Management System.
+
+### Digital Certificate
+
+- For analogy, a certificate can be considered as the ID card issued to the person Digital Certificates are not only issued to people but they can be issued to computers, software packages or anything else that need to prove the identity in the electronic world.
+
+	Anyone who needs the assurance about the public key and associated information of client, he carries out the signature validation process using CA’s (certifaction authority) public key. Successful validation assures that the public key given in the certificate belongs to the person whose details are given in the certificate.
+
+### Certifying Authority (CA)
+
+- As discussed above, the CA issues certificate to a client and assist other users to verify the certificate. The CA takes responsibility for identifying correctly the identity of the client asking for a certificate to be issued, and ensures that the information contained within the certificate is correct and digitally signs it.
+
+	The key functions of a CA are as follows −
+	- Generating key pairs 
+	- Issuing digital certificates 
+	- Publishing Certificates
+	- Verifying Certificates
+	- Revocation of Certificates
+	
+- There are four typical classes of certificate −
+	- Class 1 − These certificates can be easily acquired by supplying an email address.
+	- Class 2 − These certificates require additional personal information to be supplied.
+	- Class 3 − These certificates can only be purchased after checks have been made about the requestor’s identity.
+	- Class 4 − They may be used by governments and financial organizations needing very high levels of trust.
+	
+- `Registration Authority (RA)` -- CA may use a third-party Registration Authority (RA) to perform the necessary checks on the person or company requesting the certificate to confirm their identity.
+
+- `Certificate Management System (CMS)` -- It is the management system through which certificates are published, temporarily or permanently suspended, renewed, or revoked. 
+
+- `Private Key Tokens` -- While the public key of a client is stored on the certificate, the associated secret private key can be stored on the key owner’s computer. This method is generally not adopted. If an attacker gains access to the computer, he can easily gain access to private key.
+
+### Hierarchy of CA
+
+- With vast networks and requirements of global communications, it is practically not feasible to have only one trusted CA from whom all users obtain their certificates. Secondly, availability of only one CA may lead to difficulties if CA is compromised.
+
+	Certificate authority (CA) hierarchies are reflected in certificate chains. A certificate chain traces a path of certificates from a branch in the hierarchy to the root of the hierarchy.
+
+<br>
+<br>
+
+---
+
+<br>
+<br>
+
+# Future of Cryptography
+
+- `Elliptic Curve Cryptography (ECC)` --  has already been invented but its advantages and disadvantages are not yet fully understood. ECC allows to perform encryption and decryption in a drastically lesser time, thus allowing a higher amount of data to be passed with equal security. However, as other methods of encryption, ECC must also be tested and proven secure before it is accepted for governmental, commercial, and private use.
+
+- `Quantum computation` -- is the new phenomenon. While modern computers store data using a binary format called a "bit" in which a "1" or a "0" can be stored; a quantum computer stores data using a quantum superposition of multiple states. These multiple valued states are stored in "quantum bits" or "qubits". This allows the computation of numbers to be several orders of magnitude faster than traditional transistor processors.
