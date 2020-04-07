@@ -1,3 +1,8 @@
+Note: https://github.com/trimstray/nginx-admins-handbook
+
+Read this very carefully and note down all of the commands that you think will help with a table of contents. I will not note it down at this moment because I dont even know how to use it simply.
+
+
 # Advanced Nginx Cheatsheet
 
 - [OS Usages](#os-usages)
