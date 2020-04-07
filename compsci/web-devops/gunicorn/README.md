@@ -112,7 +112,7 @@
 - The configuration file should be a valid Python source file with a python extension (e.g. gunicorn.conf.py). It only needs to be readable from the file system. More specifically, it does not have to be on the module path (sys.path, PYTHONPATH). Any Python is valid. Just consider that this will be run every time you start Gunicorn (including when you signal Gunicorn to reload)
 
 	To set a parameter, just assign to it. There’s no special syntax. The values you provide will be used for the configuration values. For instance:
-	```
+	```python
 	import multiprocessing
 
 	bind = "127.0.0.1:8000"
@@ -129,22 +129,21 @@
 
 # Settings
 
-### Config File
+- This is an exhaustive list of settings for Gunicorn. Some settings are only able to be set from a configuration file. The setting name is what should be used in the configuration file. 
 
-### Debugging
+- Settings can be specified by using environment variable `GUNICORN_CMD_ARGS`. All available command line arguments can be used. For example, to specify the bind address and number of workers:
+	```
+	$ GUNICORN_CMD_ARGS="--bind=127.0.0.1 --workers=3" gunicorn app:app
+	```
 
-### Logging 
+- There are too many config settings you [can view the reference here](http://docs.gunicorn.org/en/latest/settings.html) it is fairly small for an application 
 
-### Process Naming
+<br>
+<br>
 
-### SSL
+---
 
-### Security
+<br>
+<br>
 
-### Server Hooks
-
-### Server Mechanics
-
-### Server Scoket 
-
-### Worker Process
+# Instrumentation
