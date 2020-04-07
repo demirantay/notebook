@@ -1,3 +1,0 @@
-# Nginx 
-
-- asda
