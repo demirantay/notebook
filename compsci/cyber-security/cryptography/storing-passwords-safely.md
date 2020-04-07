@@ -61,6 +61,8 @@
   - 4 - Server gets salt from the database and hash the newly typed password with the same algorithm and same salt
   - 5 - Server compares both encrypted strings if they are equal you are in.
   
+  > Dont forget you don't concatante: hash(password)+salt | you create a hash with : hash(password+salt) so salt gets hashed too, dont concatanete to the end of the hash.
+  
   The first option weakens when the attacker gets the fixed salt. He’s getting the key for all passwords then. There are a few ways for an attacker to know the salt. Brute force on his/her or somebody’s password is enough to get it.
   
   The second option is much safer, but if it’s random, we have to store it unencrypted along the hashed password in the database. Why? Because we will need it to regenerate the same algorithm we used for signing up while logging in. However still every password is different, so they have to be attacked separately.
