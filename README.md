@@ -42,7 +42,8 @@
 - Regex : [click here](./compsci/web-devops/regex/cheatsheet.md)
 - Vim : [click here](./compsci/web-devops/vim/cheatsheet.md)
 - Nginx Basic: [click here](./cheatsheet/nginx-basic.md)
-- Nginx Advanced: ...
+- Nginx Advanced: [click here](./cheatsheet/nginx-advanced.md)
+- Gunciron: ...
 
 #### Theory
 
