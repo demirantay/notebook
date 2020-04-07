@@ -433,30 +433,127 @@ extensions. It's actually a block accepting a particular syntax:
  
  - The HTTP Core module introduces a large set of variables that you can use within the value of directives. Be careful though, as only a handful of directives accept variables in the definition of their value.
  
- - `Request headers` --
+ - `Request headers` -- Nginx lets you access the client request headers under the form of variables
+ 	- `$http_host` -- Value of the Host HTTP header, a string indicating the hostname that the client is trying to reach.
+	- `$http_user_agent` -- Value of the User-Agent HTTP header, a string indicating the web browser of the client.
+	- `$http_referer` -- Value of the Referer HTTP header, a string indicating the URL of the previous page from which the client comes.
+	- `$http_via` -- Value of the Via HTTP header, which informs us about possible proxies used by the client.
+	- `$http_x_forwarded_for` -- Value of the X-Forwarded-For HTTP header, which shows the actual IP address of the client if the client is behind a proxy.
+	- `$http_cookie` -- Value of the Cookie HTTP header, which contains the cookie data sent by the client.
+	- `$http_...` -- Additional headers sent by the client can be retrieved using $http_ followed by the header name in lowercase and with dashes (-) replaced by underscores (_).
  
- - `Response headers` --
+ - `Response headers` -- In a similar fashion, you are allowed to access the HTTP headers of the response that was sent to the client. 
+ 	- `$sent_http_content_type` -- Value of the Content-Type HTTP header, indicating the MIME type of the resource being transmitted.
+	- `$sent_http_content_length` -- Value of the Content-Length HTTP header informing the client of the response body length.
+	- `$sent_http_location` -- Value of the Location HTTP header, which indicates that the location of the desired resource is different than the one specified in the original request.
+	- `$sent_http_last_modified` -- Value of the Last-Modified HTTP header corresponding to the modification date of the requested resource.
+	- `$sent_http_connection` -- Value of the Connection HTTP header, defining whether
+the connection will be kept alive or closed.
+	- `$sent_http_keep_alive` -- Value of the Keep-Alive HTTP header that defines the amount of time a connection will be kept alive.
+	- `$sent_http_transfer_encoding` -- Value of the Transfer-Encoding HTTP header, giving information about the response body encoding method (such as compress, gzip).
+	- `$sent_http_cache_control` -- Value of the Cache-Control HTTP header, telling us whether the client browser should cache the resource or not.
+	- `$sent_http_...` -- Additional headers sent to the client can be retrieved using $sent_http_ followed by the header name, in lowercase and with dashes (-) replaced by underscores (_).
  
- - `Nginx generated` --
- 
+ - `Nginx generated` -- Apart from the HTTP headers, Nginx provides a large amount of variables concerning the request, the way it was and will be handled,
+ 	- `$arg_XXX
+	- ... etc there are much more ... check the official docs
  
  ### The Location block
  
-  - `The = modifier` -- 
+ - Nginx allows you to define location blocks by specifying a pattern that will be matched against the requested document URI.
+ 	```
+	server {
+       server_name website.com;
+       location /admin/ {
+       # The configuration you place here only applies to
+       # http://website.com/admin/
+       }
+  }
+	```
+	Instead of a simple folder name, you can indeed insert complex patterns. The syntax of the location block is:
+	```
+	location [=|~|~*|^~|@] pattern { ... }
+	```
  
- - `No modifier` -- 
+  - `The = modifier` -- The requested document URI must match the specified pattern exactly. The pattern here is limited to a simple literal string; you cannot use a regular expression:
+	```
+	server {
+       server_name website.com;
+       location = /abcd {
+       [...]
+       }
+	}
+	```
+ 	- Applies to http://website.com/abcd (exact match)
+	- Applies to http://website.com/abcd?param1&param2 (regardless of query string arguments)
+	- Does not apply to http://website.com/abcd/ (trailing slash)
  
- - `The ~ modifier` --
+ - `No modifier` -- The requested document URI must begin with the specified pattern. You may not use regular expressions:
+ 	```
+	server {
+       server_name website.com;
+       location /abcd {
+       [...]
+       }
+ 	}
+	```
+	- Applies to http://website.com/abcd (exact match)
+	- Applies to http://website.com/abcd/ (trailing slash)
  
- - `The ~* modifier` --
+ - `The ~ modifier` -- The requested URI must be a case-sensitive match to the specified regular expression:
+ 	```
+	server {
+       server_name website.com;
+       location ~ ^/abcd$ {
+       [...]
+       }
+	}
+	```
+	The ^/abcd$ regular expression used in this example specifies that the pattern must begin (^) with /, be followed by abc, and finish ($) with d.
+	- Applies to http://website.com/abcd (exact match)
+	- Does not apply to http://website.com/abcd/ (trailing slash) due to the specified regular expression
  
- - `The @ modifier` --
+ - `The ~* modifier` -- 
+ 	```
+	server {
+       server_name website.com;
+       location ~* ^/abcd$ {
+       [...]
+       }
+	}
+	```
+	The regular expression used in the example is similar to the previous one.
+	- Applies to http://website.com/abcd (exact match)
+	- Applies to http://website.com/ABCD (case-insensitive)
+	- Does not apply to http://website.com/abcd/ (trailing slash) due to the specified regular expression
  
- - `Search order and priority` --
+ - `The @ modifier` -- Defines a named location block. These blocks cannot be accessed by the client, but only by internal requests generated by other directives, such as try_files or error_page.
+ 
+ - `Search order and priority` -- Since it's possible to define multiple location blocks with different patterns, you need to understand that when Nginx receives a request, it searches for the location block that best matches the requested URI:
+ 	- 1 - location blocks with the = modifier: If the specified string exactly matches the requested URI, Nginx retains the location block.
+	- 2 - location blocks with no modifier: If the specified string exactly matches the requested URI, Nginx retains the location block.
+	- 3 - location blocks with the ^~ modifier: If the specified string matches the beginning of the requested URI, Nginx retains the location block.
+	- 4 - location blocks with ~ or ~* modifier: If the regular expression matches the requested URI, Nginx retains the location block.
+	- 5 - location blocks with no modifier: If the specified string matches the beginning of the requested URI, Nginx retains the location block.
  
  - `case` -- 
- 
+ 	```
+	server {
+       server_name website.com;
+       location ^~ /doc {
+       [...] # requests beginning with "/doc"
+       }
+       location ~* ^/document$ {
+       [...] # requests exactly matching "/document"
+       }
+	}
+	```
+ 	Which block applies when a client visits http://website.com/document? The answer is the first block. The reason being that ^~ has priority over ~*. As a result, any request with a URI beginning with / doc will be affected to the first block, even if the request URI matches the regular expression defined in the second block.
+	
  ### Summary
+ 
+ - All along this chapter we studied key concepts of the Nginx HTTP configuration. First, we learned about creating virtual hosts by declaring server blocks. Then
+we discovered the directives and variables of the HTTP Core module that can be inserted within those blocks and eventually understood the mechanisms governing the location block.
  
  <br>
  <br>
