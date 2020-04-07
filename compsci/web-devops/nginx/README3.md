@@ -175,12 +175,289 @@ code with another.
 	index index.php index.html index.htm;
 	```
 	
-- `recursive_error_pages` -- 
+- `recursive_error_pages` -- Context: http, server, location
 
+	Sometimes an error page itself served by the error_page directive may trigger an error, in this case the error_page directive is used again (recursively). This directive enables or disables recursive error pages.
+	
+	Syntax: on or off
+	
+	Default value: off
+	
+- `try_files` -- Context: server, location. Variables are accepted.
+
+	Attempts to serve the specified files (arguments 1 to N-1), if none of these files exist, jumps to the respective named location block (last argument) or serves the specified URI.
+	```
+   location / {
+       try_files $uri $uri.html $uri.php $uri.xml @proxy;
+   }
+   # the following is a "named location block"
+   location @proxy {
+       proxy_pass 127.0.0.1:8080;
+   }
+	```
+	
+- `keepalive_timeout` -- Context: http, server, location
+	
+	This directive defines the amount of seconds the server will wait before closing a keep-alive connection. 
+	
+	Syntax:keepalive_timeout time1 [time2];
+	
+	Default value: 75;
+	```
+	keepalive_timeout 75;
+  keepalive_timeout 75 60;
+	```
+	
+- `keepalive_disable` -- Context: http, server, location
+
+	This option allows you to disable the keepalive functionality for the browser
+families of your choice.
+
+	Syntax:keepalive_disable browser1 browser2;
+	
+	Default value: msie6
+	
+- send_timeout` -- Context: http, server, location
+	
+	The amount of time after which Nginx closes an inactive connection. A connection
+becomes inactive the moment a client stops transmitting data. 
+
+	Syntax: Time value (in seconds)
+	
+	Default value: 60
+	
+- `client_body_in_file_only` -- Context: http, server, location
+
+	If this directive is enabled, the body of incoming HTTP requests will be stored into actual files on the disk (in other words, the content transmitted in POST requests). Files are stored as plain text documents.
+	
+	Syntax:client_body_in_file_only on | clean | off 
+	
+	Default value: off
+	
+- `client_body_in_single_buffer` -- Context: http, server, location
+
+	Defines whether or not Nginx should store the request body in a single buffer
+in memory. 
+
+	Syntax: on or off 
+	
+	Default value: off
+	
+- `client_body_buffer_size` -- Context: http, server, location
+
+	Specifies the size of the buffer holding the body of client requests. 
+	
+	Syntax: Size value
+	
+	Default value: 8k or 16k (2 memory pages) depending on your computer architecture
+	
+- `client_body_temp_path` -- Context: http, server, location
+
+	Allows you to define the path of the directory that will store the client request body files. An additional option lets you separate those files into a folder hierarchy over up to three levels.
+	
+	Syntax:client_body_temp_path path [level1] [level2] [level3]
+	
+- `client_body_timeout` -- Context: http, server, location
+
+	Defines the inactivity timeout while reading a client request body. A connection becomes inactive the moment the client stops transmitting data. If the delay is reached, Nginx returns a 408 Request timeout HTTP error.
+	
+	Syntax: Time value (in seconds) 
+	
+	Default value: 60
+	
+- `client_header_buffer_size` -- Context: http, server, location
+
+	This directive allows you to define the size of the buffer that Nginx allocates to request headers. Usually, 1k is enough.
+	
+	Syntax: Size value 
+	
+	Default value: 1k
+	
+- `client_header_timeout` -- Context: http, server, location
+
+	Defines the inactivity timeout while reading a client request header. A connection becomes inactive the moment the client stops transmitting data. If the delay is reached, Nginx returns a 408 Request timeout HTTP error.
+	
+	Syntax: Time value (in seconds)
+	
+	Default value: 60
+	
+- `client_max_body_size` -- Context: http, server, location
+
+	It is the maximum size of a client request body. If this size is exceeded, Nginx returns a 413 Request entity too large HTTP error
+	
+	Syntax: Size value 
+	
+	Default value: 1m
+	
+- `large_client_header_buffers` -- Context: http, server, location
+
+	Defines the amount and size of larger buffers to be used for storing client requests, in case the default buffer (client_header_buffer_size) was insufficient. Nginx returns the 414 Request URI too large error.
+	
+	Syntax:large_client_header_buffers amount size 
+	
+	Default value: 4*8 kilobytes
+
+- `lingering_time` -- Context: http, server, location
+
+	This directive applies to client requests with a request body. As soon as the amount of uploaded data exceeds max_client_body_size, Nginx immediately sends a 413 Request entity too large HTTP error response. However, most browsers continue uploading data regardless of that notification. This directive defines the amount of time Nginx should wait after sending this error response before closing the connection.
+	
+	Syntax: Numeric value (time) 
+	
+	Default value: 30 seconds
+	
+- `lingering_timeout` -- Context: http, server, location
+
+	This directive defines the amount of time that Nginx should wait between two read
+operations before closing the client connection. 
+
+	Syntax: Numeric value (time)
+
+	Default value: 5 seconds
+
+- `lingering_close` -- Context: http, server, location
+
+	Controls the way Nginx closes client connections. Set this to off to immediately close connections after all of the request data has been received.
+	
+	Syntax: on, off, or always 
+	
+	Default value: on
+
+- `ignore_invalid_headers` -- Context: http, server
+
+	If this directive is disabled, Nginx returns a 400 Bad Request HTTP error in case request headers are malformed.
+	
+	Syntax: on or off 
+	
+	Default value: on
+	
+- `chunked_transfer_encoding` --Context: http, server, location
+
+	Enables or disables chunked transfer encoding for HTTP 1.1 requests. 
+	
+	Syntax: on or off
+
+	Default value: on
+	
+- `max_ranges` --Context: http, server, location
+
+	Defines how many byte ranges Nginx will accept to serve when a client requests partial content from a file. If you do not specify a value, there is no limit. If you set this to 0, the byte range functionality is disabled.
+
+- `types` -- Context: http, server, location
+
+	This directive allows you to establish correlations between MIME types and file
+extensions. It's actually a block accepting a particular syntax:
+	```
+	types {
+     mimetype1  extension1;
+     mimetype2  extension2 [extension3...];
+     [...]
+	}
+	```
+	When Nginx serves a file, it checks the file extension in order to determine the MIME type. 
+	
+	Nginx includes a basic set of MIME types as a standalone file (mime.types) to be included with the include directive:
+	```
+	include mime.types;
+	```
+	
+	The default values, if the mime.types file is not included, are:
+	```
+	types {
+		text/html html;
+		image/gif gif;
+		image/jpeg jpg;
+	}
+	```
+	
+- `default_type` -- Context: http, server, location
+	
+	Defines the default MIME type. When Nginx serves a file, the file extension is matched against the known types declared within the types block in order to return the proper MIME type as value of the Content-Type HTTP response header. If the extension doesn't match any of the known MIME types, the value of the default_ type directive is used.
+
+	Syntax: MIME type 
+	
+	Default value: text/plain
+	
+- `types_hash_max_size` -- Context: http, server, location
+	
+	Defines the maximum size of an entry in the MIME types hash table. 
+	
+	Syntax: Numeric value.
+
+	Default value: 4 k or 8 k (1 line of CPU cache)
+	
+- `limit_except` -- Context: location
+
+	This directive allows you to prevent the use of all HTTP methods, except the ones that you explicitly allow. Within a location block, you may want to restrict the use of some HTTP methods, such as forbidding clients from sending POST requests.
+	```
+	location /admin/ {
+				 limit_except GET {
+					 allow 192.168.1.0/24;
+					 deny all; 
+	   }
+	}
+	```
+	The syntax is particular:
+	```
+	limit_except METHOD1 [METHOD2...] {
+     allow | deny | auth_basic | auth_basic_user_file | proxy_pass | perl; 
+	}
+	```
+	
+- > I am not going to note worn the rest of the directives because there are too many here are notable important ones that you will use daily:
+		- limit_rate
+		- limit_rate_after
+		- satisfy
+		- internal
+		- disable_symlinks
+		- directio
+		- directio_alignment
+		- open_file_cache
+		- open_file_cache_errors
+		- open_file_cache_min_uses
+		- open_file_cache_valid
+		- read_ahead
+		- log_not_found
+		- log_subrequest
+		- merge_slashes
+		- msie_padding
+		- msie_refresh
+		- resolver
+		- resolver_timeout
+		- server_tokens
+		- underscores_in_headers
+		- variables_hash_max_size
+		- variables_hash_bucket_size
+		- post_action
+	
  ### Module variables
+ 
+ - The HTTP Core module introduces a large set of variables that you can use within the value of directives. Be careful though, as only a handful of directives accept variables in the definition of their value.
+ 
+ - `Request headers` --
+ 
+ - `Response headers` --
+ 
+ - `Nginx generated` --
+ 
  
  ### The Location block
  
+  - `The = modifier` -- 
+ 
+ - `No modifier` -- 
+ 
+ - `The ~ modifier` --
+ 
+ - `The ~* modifier` --
+ 
+ - `The @ modifier` --
+ 
+ - `Search order and priority` --
+ 
+ - `case` -- 
+ 
+ ### Summary
+ 
  <br>
  <br>
  
@@ -189,24 +466,6 @@ code with another.
  <br>
  <br>
  
- # Module Configuration
+ [part 4](./README4.md)
  
- ### Rewrite module
- 
- ### SSI module
- 
- ### Additional modules
- 
- <br>
- <br>
- 
- ---
- 
- <br>
- <br>
- 
- # PHP and Python with Nginx
- 
- ### Introduction to FastCGI
- 
- ### Python and Nginx
+
