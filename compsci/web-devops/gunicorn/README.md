@@ -147,3 +147,131 @@
 <br>
 
 # Instrumentation
+
+- Gunicorn provides an optional instrumentation of the arbiter and workers using the statsD protocol over UDP. Thanks to the `gunicorn.instrument.statsd` module, Gunicorn becomes a statsD client. The use of UDP cleanly isolates Gunicorn from the receiving end of the statsD metrics so that instrumentation does not cause Gunicorn to be held up by a slow statsD consumer.
+
+- To use statsD, just tell Gunicorn where the statsD server is:
+	```
+	$ gunicorn --statsd-host=localhost:8125 --statsd-prefix=service.app ...
+	```
+	
+	I currently do not know about insturmentation so if you want more info you can start reading it here: http://docs.gunicorn.org/en/latest/instrumentation.html
+	
+<br>
+<br>
+
+---
+
+<br>
+<br>
+
+# Deploying Gunicorn
+
+- We strongly recommend to use Gunicorn behind a proxy server, such as nginx, ... etc.
+
+### Nginx Configuration
+
+- Although there are many HTTP proxies available, we strongly advise that you use Nginx. If you choose another proxy server you need to make sure that it buffers slow clients when you use default Gunicorn workers. Without this buffering Gunicorn will be easily susceptible to denial-of-service attacks.
+
+	An example configuration file for fast clients with Nginx:
+	
+	nginx.conf
+	```c
+	worker_processes 1;
+
+	user nobody nogroup;
+	# 'user nobody nobody;' for systems with 'nobody' as a group instead
+	error_log  /var/log/nginx/error.log warn;
+	pid /var/run/nginx.pid;
+
+	events {
+		worker_connections 1024; # increase if you have lots of clients
+		accept_mutex off; # set to 'on' if nginx worker_processes > 1
+		# 'use epoll;' to enable for Linux 2.6+
+		# 'use kqueue;' to enable for FreeBSD, OSX
+	}
+
+	http {
+		include mime.types;
+		# fallback in case we can't determine a type
+		default_type application/octet-stream;
+		access_log /var/log/nginx/access.log combined;
+		sendfile on;
+
+		upstream app_server {
+			# fail_timeout=0 means we always retry an upstream even if it failed
+			# to return a good HTTP response
+
+			# for UNIX domain socket setups
+			server unix:/tmp/gunicorn.sock fail_timeout=0;
+
+			# for a TCP configuration
+			# server 192.168.0.7:8000 fail_timeout=0;
+		}
+
+		server {
+			# if no Host match, close the connection to prevent host spoofing
+			listen 80 default_server;
+			return 444;
+		}
+
+		server {
+			# use 'listen 80 deferred;' for Linux
+			# use 'listen 80 accept_filter=httpready;' for FreeBSD
+			listen 80;
+			client_max_body_size 4G;
+
+			# set the correct host(s) for your site
+			server_name example.com www.example.com;
+
+			keepalive_timeout 5;
+
+			# path for static files
+			root /path/to/app/current/public;
+
+			location / {
+				# checks for static file, if not found proxy to app
+				try_files $uri @proxy_to_app;
+			}
+
+			location @proxy_to_app {
+				proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+				proxy_set_header X-Forwarded-Proto $scheme;
+				proxy_set_header Host $http_host;
+				# we don't want nginx trying to do something clever with
+				# redirects, we set the Host: header above already.
+				proxy_redirect off;
+				proxy_pass http://app_server;
+			}
+
+			error_page 500 502 503 504 /500.html;
+			location = /500.html {
+				root /path/to/app/current/public;
+			}
+		}
+	}
+	```
+	If you want to be able to handle streaming request/responses or other fancy features like Comet, Long polling, or Web sockets, you need to turn off the proxy buffering. When you do this you must run with one of the async worker classes.
+	
+	It is recommended to pass protocol information to Gunicorn. Many web frameworks use this information to generate URLs. Without this information, the application may mistakenly generate ‘http’ URLs in ‘https’ responses, leading to mixed content warnings or broken applications. To configure Nginx to pass an appropriate header, add a `proxy_set_header` directive to your `location` block:
+	```
+	...
+	proxy_set_header X-Forwarded-Proto $scheme;
+	...
+	```
+	If you are running Nginx on a different host than Gunicorn you need to tell Gunicorn to trust the `X-Forwarded-*` headers sent by Nginx. By default, Gunicorn will only trust these headers if the connection comes from localhost.
+	```
+	$ gunicorn -w 3 --forwarded-allow-ips="10.170.3.217,10.170.3.220" test:app
+	```
+	
+	> I did not understand it come back to it later ...
+
+<br>
+<br>
+
+---
+
+<br>
+<br>
+
+
