@@ -274,18 +274,9 @@
 <br>
 <br>
 
-# Signal Handling 
-
-
-<br>
-<br>
-
----
-
-<br>
-<br>
-
 # Custom Application
+
+- I didnt understand what is being teached here, revisit it once i understand more: http://docs.gunicorn.org/en/latest/custom.html
 
 <br>
 <br>
@@ -297,4 +288,71 @@
 
 # Design
 
+### Server Model
+
+- Gunicorn is based on the pre-fork worker model. This means that there is a central master process that manages a set of worker processes. The master never knows anything about individual clients. All requests and responses are handled completely by worker processes.
+
+- `Master` -- The master process is a simple loop that listens for various process signals and reacts accordingly. It manages the list of running workers by listening for signals like TTIN, TTOU, and CHLD. TTIN and TTOU tell the master to increase or decrease the number of running workers. CHLD indicates that a child process has terminated, in this case the master process automatically restarts the failed worker.
+
+- `Sync Workers` -- The most basic and the default worker type is a synchronous worker class that handles a single request at a time. This model is the simplest to reason about as any errors will affect at most a single request.
+	
+	`sync` worker does not support persistent connections - each connection is closed after response has been sent (even if you manually add `Keep-Alive` or `Connection: keep-alive` header in your application).
+
+- `Async Workers` -- The asynchronous workers available are based on Greenlets (via Eventlet and Gevent). Greenlets are an implementation of cooperative multi-threading for Pytho
+
+- `Tornado Workers` -- There’s also a Tornado worker class. It can be used to write applications using the Tornado framework. Although the Tornado workers are capable of serving a WSGI application, this is not a recommended configuration.
+
+- `AsyncIO Workers` -- The worker gthread is a threaded worker. It accepts connections in the main loop, accepted connections are added to the thread pool as a connection job. On keepalive connections are put back in the loop waiting for an event. If no event happen after the keep alive timeout, the connection is closed.
+
+### Choosing a Worker Type
+
+- The default synchronous workers assume that your application is resource-bound in terms of CPU and network bandwidth. Generally this means that your application shouldn’t do anything that takes an undefined amount of time
+
+	This resource bound assumption is why we require a buffering proxy in front of a default configuration Gunicorn. If you exposed synchronous workers to the internet, a DOS attack would be trivial by creating a load that trickles data to the servers. For the curious, Hey is an example of this type of load.
+
+### How Many Workers?
+
+- DO NOT scale the number of workers to the number of clients you expect to have. Gunicorn should only need 4-12 worker processes to handle hundreds or thousands of requests per second.
+
+	Gunicorn relies on the operating system to provide all of the load balancing when handling requests. Generally we recommend (2 x $num_cores) + 1 as the number of workers to start off with. While not overly scientific, the formula is based on the assumption that for a given core, one worker will be reading or writing from the socket while the other worker is processing a request.
+	
+	Obviously, your particular hardware and application are going to affect the optimal number of workers. Our recommendation is to start with the above guess and tune using TTIN and TTOU signals while the application is under load.
+	
+	Always remember, there is such a thing as too many workers. After a point your worker processes will start thrashing system resources decreasing the throughput of the entire system.
+	
+### How Many Threads?
+
+- Depending on the system, using multiple threads, multiple worker processes, or some mixture, may yield the best results.
+
+<br>
+
+# Signal Handling 
+
+- A brief description of the signals handled by Gunicorn. We also document the signals used internally by Gunicorn to communicate with the workers.
+
+### Master process
+
+- `QUIT`, `INT`: Quick shutdown
+- `TERM`: Graceful shutdown. Waits for workers to finish their current requests up to the graceful_timeout.
+- `HUP`: Reload the configuration, start the new worker processes with a new configuration and gracefully shutdown older workers. If the application is not preloaded (using the preload_app option), Gunicorn will also load the new version of it.
+- `TTIN`: Increment the number of processes by one
+- `TTOU`: Decrement the number of processes by one
+- `USR1`: Reopen the log files
+- `USR2`: Upgrade Gunicorn on the fly. A separate `TERM` signal should be used to kill the old master process. This signal can also be used to use the new versions of pre-loaded applications. See Upgrading to a new binary on the fly for more information.
+- `WINCH`: Gracefully shutdown the worker processes when Gunicorn is daemonized.
+
+### Worker process
+
+- Sending signals directly to the worker processes should not normally be needed. If the master process is running, any exited worker will be automatically respawned.
+- `QUIT`, `INT`: Quick shutdown
+- `TERM`: Graceful shutdown
+- `USR1`: Reopen the log files
+
+<br>
+<br>
+
+---
+
+<br>
+<br>
 
