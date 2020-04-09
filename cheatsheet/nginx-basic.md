@@ -47,6 +47,7 @@
 	- Default config file: /usr/local/etc/nginx/nginx.conf
 	- Add custom configs in: /usr/local/etc/nginx/servers/
 	- Logs will be in in: /usr/local/var/log/nginx/
+	- default and default-ssl to /usr/local/etc/nginx/sites-available
 	
 ### Basic Commands
 
