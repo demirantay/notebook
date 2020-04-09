@@ -1,0 +1,7 @@
+# Deploying nginx + django + python 3
+
+> Notes taken from: https://tutos.readthedocs.io/en/latest/source/ndg.html
+
+- We’ll deploy (that means making website available to the world) `django` project with server engine `nginx` using `gunicorn` for that. We’ll also use virtual environment of python and installation will be static - it will not depend on your system-wide python installation.
+
+  You do not need any special knowledge. But keep in mind that this is not guide how django, nginx or gunicorn work! This is about how it should be brought together to work.
