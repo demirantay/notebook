@@ -181,6 +181,14 @@ Try to specilize in a field such as these, just chose one or two. However, remem
 
 > From the specializations above I chose full-stack/dev-ops. So if you are reading this and dont like it, tough shit create your own syllabus. Each category (intro, frontend, backend, devops) is divided into 3 packets. First packet is learning the subjects. Second packet is for feynman-noting the subjects. Third one contains the practice projects.
 
+
+# Artifical Intelligence 
+
+- ...
+
+<br>
+<br>
+
 # Intro
 
 ### Packet #1
