@@ -184,7 +184,8 @@ Try to specilize in a field such as these, just chose one or two. However, remem
 
 # Artifical Intelligence 
 
-- ...
+- [ ] start here and build up the course: https://www.reddit.com/r/learnmachinelearning/comments/cxrpjz/a_clear_roadmap_for_mldl/
+- [ ] https://www.tutorialspoint.com/artificial_intelligence/index.htm 
 
 <br>
 <br>
