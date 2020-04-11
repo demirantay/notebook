@@ -148,14 +148,138 @@
 
 ### Directories
 
+- Nice example is with static files. There are e.g. some CSS styles for django administration page. These needs to be in special folder and we’ll tell nginx that when website asks for file `style.css`, it should looks into `~/test_project/foo/static/style.css`
+
+  But how to find all this static files? Right now they are sourced from django installation directory (probably something like `/test_project/venv/lib/python3.4/django/...`, `manage.py` has a special command for this, but first we need to tell him few details in `settings.py`.
+  
+  The most common configuration is to has a special directory for static files where you can edit them, past them etc. Then there will be static directory, where you won’t do any changes - this will be for `manage.py` command - it will collects them from your special directory, from django installation directory etc. In templates, when you want to use e.g. some static image on background, you use `{STATIC_URL}/static_images/mybgrnd.png`
+  
+  To do this we’ll add this to settings.py:
+  ```python
+  STATIC_URL = '/static/'
+  STATIC_ROOT = os.path.join(BASE_DIR, "static")
+  STATICFILES_DIRS = (os.path.join(BASE_DIR, "sfiles"), )
+  ```
+  all your static files used should now be placed inside `/test_project/foo/sfiles`. 
+
+  Now run `./manage.py collectstatic`. It should ask you if you really want to do that (and you want). Process will start and after it’s finish you’ll have collected all static files inside `static` folder. This you need to do every time you change something inside sfiles folder.
+  
+  Websites also usually has `media` folder, which is used for user files - for example images to blog posts. Usually we use `MEDIA_URL` for calling things from media dir in templates.
+  
+  Configuration should be same as with django testing server and you don’t need to do any special changes here. My looks like this:
+  ```python
+  MEDIA_ROOT = os.path.join(BASE_DIR, "media")
+  MEDIA_URL = '/media/'
+  ADMIN_MEDIA_PREFIX = '/media/admin/'
+  ```
+
 ### Templates
+
+- Tutorial in this part is not that clear: https://tutos.readthedocs.io/en/latest/source/ndg.html#templates
 
 ### SITE_ID
 
+- Tutorial in this part is not that clear: https://tutos.readthedocs.io/en/latest/source/ndg.html#site-id
+
 ### ALLOWED_HOSTS
+
+- You need to past all your domains here. If your domain is www.example.com and I guess example.com also, it should looks like this:
+  ```python
+  ALLOWED_HOSTS = ['example.com', 'www.example.com']
+  ```
 
 ### DEBUG
 
+- This directive should be set to False. But when you are configuring your server for first time, let True there. It helps you find out bugs on your site.
+
 ### nginx server configuration
 
-### Debugging
+- Last part is configuring nginx to make him listen on socket created by gunicorn. It’s not hard. After every change in configuration of nginx you need to restart it by running `nginx -s reload`.
+
+  Edit /etc/nginx/nginx.conf and paste this into __`http block`__:
+  ```
+  worker_processes  1;
+
+  error_log  /Library/Logs/nginx/error.log;
+
+  events {
+      worker_connections  1024;
+  }
+
+  http {
+      upstream test_server {
+          server unix:/test_project/run/gunicorn.sock fail_timeout=10s;
+      }
+      
+      # This is not neccessary - it's just commonly used
+      # it just redirects example.com -> www.example.com
+      # so it isn't treated as two separate websites
+      server {
+          listen 80;
+          server_name example.com;
+          return 301 $scheme://www.example.com$request_uri;
+      }
+
+      server {
+          listen   80;
+          server_name www.example.com;
+
+          client_max_body_size 4G;
+
+          access_log /var/www/test/logs/nginx-access.log;
+          error_log /var/www/test/logs/nginx-error.log warn;
+
+          location /static/ {
+              autoindex on;
+              alias   /test_project/foo/static/;
+          }
+
+          location /media/ {
+              autoindex on;
+              alias   /test_project/foo/media/;
+          }
+
+          location / {
+              proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+              proxy_set_header Host $http_host;
+              proxy_redirect off;
+
+              if (!-f $request_filename) {
+                  proxy_pass http://test_server;
+                  break;
+              }
+          }
+
+          #For favicon
+          location  /favicon.ico {
+              alias /var/www/test/test/static/img/favicon.ico;
+          }
+          #For robots.txt
+          location  /robots.txt {
+              alias /var/www/test/test/static/robots.txt ;
+          }
+          # Error pages
+          error_page 500 502 503 504 /500.html;
+          location = /500.html {
+              root /var/www/test/ourcase/static/;
+          }
+      }
+  }
+  ```
+  First, we tell nginx where is socket file (`gunicorn.sock`) from gunicorn.
+  
+  Then there is main body of server configuration: * logs are useful for catching bugs and errors - has multiple parameters, like how much should they bother you. Don’t forget to create log directory. * static and media block - these are extremely important - this is why we played all that games with collectstatics etc. It just tells nginx where it should looks when website asks for e.g. `/static/style.css/` or `/media/img/picture_of_my_cat.png`
+  
+  Block with all that proxy things is also important and is used for technical background around socket communication and redirecting. (reverse proxy the `/` server catches the request and redirects it to the upstream (which is just a block that holds your application servers ... etc. other servers)
+  
+  Favicon and robots.txt is not necessary, but all browsers and web crawlers are still searching for them. So if you don’t like errors in your logs, add create these two things. * Last block is telling nginx where it should looks for error pages when something doesn’t exists.
+  
+  Save and exit. Next great future of nginx is it’s ability of checking configuration. Type `nginx -t`
+  
+  Finally enable nginx to be ran after reboot:
+  ```
+  systemctl enable nginx
+  ```
+  
+  
+  
