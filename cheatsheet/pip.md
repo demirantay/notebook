@@ -8,8 +8,8 @@
 ### Virtual env
 
 - `virtualenv <name>` -- creates a virtual enviroenment with <name>
-- ` ` - activates the virtual envioronment 
-- ` ` - deactivates the virtual enviroenment
+- `source venv/bin/activate` - activates the virtual envioronment 
+- `deactivate` - deactivates the virtual enviroenment
 
 ### Listing
 
