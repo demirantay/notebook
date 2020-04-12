@@ -146,7 +146,7 @@ Try to specilize in a field such as these, just chose one or two. However, remem
    - [ ] Book: Cooper and Torczon. Engineering a compiler.
    - [ ] Book: Appel. Modern Compiler implementation in C/Java/ML.
    - [ ] Book: Robert Morgan. Building an Optimizing compiler.
-   - [ ] Book: The Dragon Book
+   - [ ] Book: The Dragon Book (only do it if you want to be advanced, optional)
    - [ ] Project : Create a basic compiler for a langauge and build a simple language.
    
 ### Distributed Systems
