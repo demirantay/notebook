@@ -141,9 +141,12 @@ Try to specilize in a field such as these, just chose one or two. However, remem
 
 ### Languages and Compilers
 
-  > Research books like you did for computer architecture. Through reddit, forums ... etc. Then start.
    - [ ] Read: The [TutorialsOnPoint](https://www.tutorialspoint.com/compiler_design/index.htm) for a overview. Note this to README of the folder
-   - [ ] Course : [Stanford Course](https://lagunita.stanford.edu/courses/Engineering/Compilers/Fall2014/about) read the [dragon book](https://www.amazon.com/Compilers-Principles-Techniques-Tools-2nd/dp/0321486811?pldnSite=1) on the units of stanford do not read all the book.
+   - [ ] Read: [compiler basics](http://www.cs.man.ac.uk/~pjj/farrell/compmain.html)
+   - [ ] Book: Cooper and Torczon. Engineering a compiler.
+   - [ ] Book: Appel. Modern Compiler implementation in C/Java/ML.
+   - [ ] Book: Robert Morgan. Building an Optimizing compiler.
+   - [ ] Book: The Dragon Book
    - [ ] Project : Create a basic compiler for a langauge and build a simple language.
    
 ### Distributed Systems
