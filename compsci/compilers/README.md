@@ -196,3 +196,15 @@
 
 The only problem left with the lexical analyzer is how to verify the validity of a regular expression used in specifying the patterns of keywords of a language. A well-accepted solution is to use finite automata for verification.
 
+<br>
+<br>
+
+---
+
+<br>
+<br>
+
+# Finite Automata
+
+### Finite Automata Construction
+
