@@ -394,12 +394,12 @@ Try to specilize in a field such as these, just chose one or two. However, remem
 - [x] Terminal -- (Sys Performance: nmon, iostat, sar, vmstat ...etc.)
 - [x] Terminal -- (All other neccessary information: history, df ...etc)
 - [x] Networking 
-- [ ] Web Servers -- (nginx, apache, tomcat ... etc)
-- [ ] Caching Servers
-- [ ] Load Balancer
-- [ ] Reverse Proxy
-- [ ] Forward Proxy
-- [ ] Firewall
+- [x] Web Servers -- (nginx, apache, tomcat ... etc)
+- [x] Caching Servers
+- [x] Load Balancer
+- [x] Reverse Proxy
+- [x] Forward Proxy
+- [x] Firewall
 - [ ] Containers -- (Docker ...etc)
 - [ ] Configuration Management -- (Ansible)
 - [ ] Container Orchestration -- (Kubernetees)
@@ -416,15 +416,6 @@ Try to specilize in a field such as these, just chose one or two. However, remem
 
 > I need to change the order from the easiest to hardest since understanding and building all of docker is easier than building a operating systems kernel shell .. etc.
 
-
-- [ ] Feynman: Containers -- (Docker ...etc)
-- [ ] Feynman: Configuration Management -- (Ansible)
-- [ ] Feynman: Container Orchestration -- (Kubernetees)
-- [ ] Feynman: Infustructure Provisioning -- (Terraform)
-- [ ] Feynman: CI/CD -- (Jenkins, Circle CI ...etc)
-- [ ] Feynman: Infustructure Monitoring -- (Nagios, Icinga, Datadog ... etc)
-- [ ] Feynman: Application Monitoring -- (New Relic, AppDynamics .. etc)
-- [ ] Feynman: Logs Management -- (ELK Stack, Graylog, Splunk .. etc)
 - [ ] Feynman: System Progrmaming Languages (python, c/c++, go)
 - [ ] Feynman: OS Concepts
 - [ ] Feynman: Unix/Linux Envioronment
@@ -438,6 +429,14 @@ Try to specilize in a field such as these, just chose one or two. However, remem
 - [ ] Feynman: Reverse Proxy
 - [ ] Feynman: Forward Proxy
 - [ ] Feynman: Firewall
+- [ ] Feynman: Containers -- (Docker ...etc)
+- [ ] Feynman: Configuration Management -- (Ansible)
+- [ ] Feynman: Container Orchestration -- (Kubernetees)
+- [ ] Feynman: Infustructure Provisioning -- (Terraform)
+- [ ] Feynman: CI/CD -- (Jenkins, Circle CI ...etc)
+- [ ] Feynman: Infustructure Monitoring -- (Nagios, Icinga, Datadog ... etc)
+- [ ] Feynman: Application Monitoring -- (New Relic, AppDynamics .. etc)
+- [ ] Feynman: Logs Management -- (ELK Stack, Graylog, Splunk .. etc)
 - [ ] Feynman: Cloud Providers -- AWS
 - [ ] Feynman: Cyber Security
 
