@@ -439,7 +439,6 @@ Try to specilize in a field such as these, just chose one or two. However, remem
 - [ ] Feynman: Logs Management -- (ELK Stack, Graylog, Splunk .. etc)
 - [ ] Feynman: Cloud Providers -- AWS
 - [ ] Feynman: Cyber Security
-
 - [ ] Re-iterate through feynman boxes above
 
 ### Packet #3
