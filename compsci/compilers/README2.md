@@ -182,13 +182,17 @@
   ```
   
 - `Implementation` -- A symbol table can be implemented in one of the following ways:
-  -
-  -
-  -
+  - Linear (sorted or unsorted) list
+  - Binary Search Tree
+  - Hash table
 
-### Operations
-
+- `operations` -- A symbol table, either linear or hash, should provide the following operations.
+  - `insert()` --  This operation is used to add information in the symbol table about unique names occurring in the source code. This information contains the value, state, scope, and type about the symbol.
+  - `lookup()` -- operation is used to search a name in the symbol table to determine, if the symbol exists in the table. if it is declared before it is being used. if the name is used in the scope. if the symbol is initialized. if the symbol declared multiple times.
+  
 ### Scope Management
+
+- A compiler maintains two types of symbol tables: a global symbol table which can be accessed by all the procedures and scope symbol tables that are created for each scope in the program.
 
 <Br>
 <br>
