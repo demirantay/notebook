@@ -4,7 +4,7 @@
 
   > IMPORTANT WARNING: If you are thinking of writing your own password hashing code, please don't!. It's too easy to screw up. No, that cryptography course you took in university doesn't make you exempt from this warning. This applies to everyone: DO NOT WRITE YOUR OWN CRYPTO! The problem of storing passwords has already been solved. Use either use either bcrypt, scrypt .. etc. and other libraries.
 
-### What is password hashing?
+## What is password hashing?
 
 - Lets see this:
   ```python
@@ -27,7 +27,7 @@
   
   It is easy to think that all you have to do is run the password through a cryptographic hash function and your users' passwords will be secure. This is far from the truth. There are many ways to recover passwords from plain hashes very quickly
 
-### How Hashes are Cracked
+## How Hashes are Cracked
 
 - `Dictionary and Brute Force Attacks` -- The simplest way to crack a hash is to try to guess the password, hashing each guess, and checking if the guess's hash equals the hash being cracked. If the hashes are equal, the guess is the password. The two most common ways of guessing passwords are __dictionary attacks__ and __brute-force attacks__.
 
@@ -43,7 +43,7 @@
 
 - `Rainbow Tables` -- Rainbow tables are a time-memory trade-off technique. They are like lookup tables, except that they sacrifice hash cracking speed to make the lookup tables smaller. Because they are smaller, the solutions to more hashes can be stored in the same amount of space, making them more effective
 
-### Adding Salt
+## Adding Salt
 
 - Here is the general idea how salting works:
   ```python
@@ -58,14 +58,14 @@
   
   The salt does not need to be secret. Just by randomizing the hashes, lookup tables, reverse lookup tables, and rainbow tables become ineffective. An attacker won't know in advance what the salt will be, so they can't pre-compute a lookup table or rainbow table. If each user's password is hashed with a different salt, the reverse lookup table attack won't work either.
 
-### The `WRONG` Way: Short Salt & Salt Reuse
+## The `WRONG` Way: Short Salt & Salt Reuse
 
-### The `WRONG` Way: Double Hashing & Wacky Hash Functions
+## The `WRONG` Way: Double Hashing & Wacky Hash Functions
 
-### Hash Collisions
+## Hash Collisions
 
-### The `RIGHT` Way: How to Hash Properly
+## The `RIGHT` Way: How to Hash Properly
 
-### Other Security Measures
+## Other Security Measures
 
-### Frequently Asked Questions
+## Frequently Asked Questions
