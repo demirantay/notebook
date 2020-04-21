@@ -121,7 +121,36 @@
 
 # Run-Time Environment
 
+- A program as a source code is merely a collection of text (code, statements etc.) and to make it alive, it requires actions to be performed on the target machine. A program needs memory resources to execute instructions. A program contains names for procedures, identifiers etc., that require mapping with the actual memory location at runtime.
 
+  By runtime, we mean a program in execution. Runtime environment is a state of the target machine, which may include software libraries, environment variables, etc., to provide services to the processes running in the system.
+  
+  Runtime support system is a package, mostly generated with the executable program itself and facilitates the process communication between the process and the runtime environment. It takes care of memory allocation and de-allocation while the program is being executed.
+  
+### Activation Trees
+
+- A program is a sequence of instructions combined into a number of procedures. Instructions in a procedure are executed sequentially. A procedure has a start and an end delimiter and everything inside it is called the body of the procedure. The procedure identifier and the sequence of finite instructions inside it make up the body of the procedure.
+
+  The execution of a procedure is called its activation. An activation record contains all the necessary information required to call a procedure.
+  - `Temporaries` --	Stores temporary and intermediate values of an expression.
+  - `Local Data` --	Stores local data of the called procedure.
+  - `Machine Status` --	Stores machine status such as Registers, Program Counter etc., before the procedure is called.
+  - `Control Link` --	Stores the address of activation record of the caller procedure.
+  - `Access Link` --	Stores the information of data which is outside the local scope.
+  - `Actual Parameters` --	Stores actual parameters, i.e., parameters which are used to send input to the called procedure.
+  - `Return Value` --	Stores return values.
+
+  Whenever a procedure is executed, its activation record is stored on the stack, also known as control stack.
+  
+### Storage Allocation
+
+- There are many ways that a runtime enviorement allocates the storage:
+
+- `Static Allocation` -- In this allocation scheme, the compilation data is bound to a fixed location in the memory and it does not change when the program executes
+
+- `Stack Allocation` -- Procedure calls and their activations are managed by means of stack memory allocation. It works in last-in-first-out (LIFO) method and this allocation strategy is very useful for recursive procedure calls.
+
+- `Heap Allocation` --  Variables local to a procedure are allocated and de-allocated only at runtime. Heap allocation is used to dynamically allocate memory to the variables and claim it back when the variables are no more required.
 
 <br>
 <br>
@@ -130,3 +159,19 @@
 
 <br>
 <Br>
+  
+# Symbol Table
+
+### Implementation
+
+### Operations
+
+### Scope Management
+
+<Br>
+<br>
+  
+---
+
+<br>
+<br>
