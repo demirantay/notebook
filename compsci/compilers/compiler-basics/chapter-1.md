@@ -197,3 +197,12 @@ Table of contents:
   
 - Here is the visual representation:
   <img src="imgs/figure-1.png" alt="visual-img" height="300px"/>
+  
+<br>
+<br>
+
+---
+
+<br>
+<br>
+
