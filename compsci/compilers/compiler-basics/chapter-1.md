@@ -219,6 +219,8 @@ Table of contents:
 <br>
 <br>
 
+> # I left noting and reading the paper after this part because it moves too fast without too much explanation for a introductiory paper. Plus the Pascal makes it hard to understand since I have never coded in it.
+
 
 
 
