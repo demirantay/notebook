@@ -206,3 +206,19 @@ Table of contents:
 <br>
 <br>
 
+# The Tokenizer 
+
+- The job of the tokenizer is to read tokens one at a time from the input stream and pass the tokens to the parser. 
+
+	Basically you will create a new tokenized file with the given input stream and the file will be formed with CNF or EBNF. This part of the paper does not explain it too well. check with your other notes.
+
+	There is an alternate way to handle context sensitive reserved words. The tokenizer can handle all identifiers simply as identifiers, but provide additional procedures to determine if an identifier is a globally reserved word or a context sensitive reserved word. Then when the parser reads an identifier it queries the tokenizer as to whether the identifier is one or the other. Which ever method is used, context sensitive reserved words mean more work for the parser. This is why it is preferred to make all reserved words global.
+	
+- I've already mentioned the program YACC, which converts a grammer to a parser. This is possible because the task of converting a grammer to parser code is very mechanical. It turns out that creating a tokenizer for a given language is also quite mechanical, and can be done by software. The classic program for doing this is called Lex. (This link is to an excellent tutorial on this program.) Lex and YACC were designed to work together, and are often used together to create compilers.
+	
+<br>
+<br>
+
+
+
+
