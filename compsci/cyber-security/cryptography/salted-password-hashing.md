@@ -60,6 +60,12 @@
 
 ## The `WRONG` Way: Short Salt & Salt Reuse
 
+- The most common salt implementation errors are reusing the same salt in multiple hashes, or using a salt that is too short.
+
+- `Salt Reuse` --
+
+- `Short Salt` -- 
+
 ## The `WRONG` Way: Double Hashing & Wacky Hash Functions
 
 ## Hash Collisions
