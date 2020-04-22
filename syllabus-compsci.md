@@ -448,6 +448,7 @@ Try to specilize in a field such as these, just chose one or two. However, remem
 
 - [ ] Level 1: Secure your web server, try pentesting it, imrpove your exploits. Repeat
 - [ ] Level 2: Build a small version of every tech learned above. Remember first version of unix was under 4000 LoC. And this guy created [aws server](https://github.com/jubos/fake-s3) system in just 2k LoC. Build everythings logic in a small way. Check your stars `ustack` for inspiration.
+- [ ] Level 3: Dont forget to do _Linnux From Scratch (LFS project)_
 - [ ] Final : At this point I should have a job and start building my own idea
 
 > If you finish frontend or backend sections start `[Code Univeristy Guide](https://github.com/jwasham/coding-interview-university)` of jwsaham and try to getting ready for job applications (possibly in Canada) when their time of the month comes. OR go for a algorithm online prep course like algoexpert.io , leetcode ...etc
