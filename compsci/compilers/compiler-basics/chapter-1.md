@@ -98,3 +98,80 @@ Table of contents:
 <br>
   
 # Chomsky Normal Form
+
+- Language theory owes a great deal to Noam Chomsky. In the 1950s Chomsky studied many spoken languages and attempted to develop a formal method of describing language. 
+
+  Chomsky Normal Form (CNF) uses a series of intermediate tokens to describe syntax rules. The left side of an expression in CNF shows a string with intermediate symbols, the right side shows how that string can be translated. The translation may contain terminal symbols, which are the tokens in the language's alphabet, or it may contain intermediate symbols, or it may contain a combination of the two. Traditionally terminals are shown with lower case letters and intermediate symbols are shown in upper case. A CNF grammar always starts with the intermediate symbol S.
+  
+  Lets see a usage of it:
+  ```
+  S -> aBa
+  B -> bb
+  ```
+  This example again shows a grammar that can only accept a single sentence. S is replaced by aBa, and `B` is replaced by `bb`, giving the sentence `abba`.
+  
+  The only way CNF can be used to define a grammar that can create sentences of arbitrary length is to allow a symbol to appear in its own expansion rules.
+  ```
+  S -> aBa
+  B -> bb | aaB
+  ```
+  Such a language is call recursive. Some sentences that can be generated with this grammar include abba, aaabba, aaaaabba, etc. The number of a's before the final bba is quite arbitrary.
+  
+- For a more complex example of CNF, we can look at the more or less standard definition of expression used by most computer languages.
+  ```
+  S -> EXPRESSION
+  EXPRESSION -> TERM | TERM + EXPRESSION | TERM - EXPRESSION
+  TERM -> FACTOR | FACTOR * EXPRESSION | FACTOR / EXPRESSION
+  FACTOR -> NUMBER | ( EXPRESSION )
+  NUMBER -> 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 0 | 
+            1 NUMBER | 2 NUMBER | 3 NUMBER | 4 NUMBER |
+            5 NUMBER | 6 NUMBER | 7 NUMBER | 8 NUMBER |
+            9 NUMBER | 0 NUMBER 
+  ```
+  This is a simple but a failry complex way of showing expressions with CNF form. You dont need to understand it fully at the moment. It is peaked (referenced) here for a simple look up since it is relevant.
+  
+<Br>
+<br>
+  
+---
+
+<br>
+<br>
+
+# Extended Backus Naur Form
+
+- A short time after Chomsky devised CNF, two researchers, Backus and Naur, independently developed a similar form for specifying language grammar. The Backus Naur form can specify some languages more compactly than CNF. Over the years other researchers have added symbols to Backus Naur Form, creating Extended Backus Naur Form (EBNF). Grammars specified in either CNF or EBNF can be converted directly into a compiler, however most compiler writers prefer to work with EBNF.
+
+  EBNF uses the symbol :== to specify the right and left sides of a rule. Terminal symbols are placed in single quotes.
+  ```
+  S :== 'a' B 'a'
+  B :== 'bb'
+  ```
+  The vertical bar is again used to represent a choice in expansion rules and just as in CNF, recursion is used to develop strings of arbitrary length. Two symbols added to EBNF that do not exist in CNF are the square brackets ([]) and curly braces ({}). The square brackets are used to denote zero or one occurrence of an expansion, and curly braces are used to denote an arbitrary, but at least one, number of expansions.
+  ```
+  S :== 'a' [B]
+  B :== {'a'}
+  ```
+  
+- The same concerns we had to consider with CNF follow for EBNF. A left recursive language is a left recursive language, no matter what grammar is used to specify it, and left recursive languages cannot be parsed by mechanical means. We must also worry about operator precedence no matter what grammar we use.
+
+  Even though EBNF is rather more confusing than CNF, we will tend to use it over CNF. First of all EBNF supports loops, so we can avoid some recursion, allowing for more efficient compilers. Also EBNF is more standard for compiler writers than CNF. When we look at translating EBNF into a parser it will become easier to understand how EBNF works.
+  
+<br>
+<br>
+
+---
+
+<br>
+<br>
+
+# Computer Languages
+
+- Computer languages are languages in the mathematical sense. They are made from tokens and they can be described with right recursive grammars using either EBNF or CNF. 
+
+  In addition to the alphabet, when reading a computer program we have to worry about delimiters. A delimiter separates two tokens. In most cases a blank space is a delimiter. Reserved symbols also act as delimiters. Any time a token is encountered that is not part of the language's alphabet, we have encountered a lexical error. This is different from a syntax error.
+  
+  One final aspect of computer languages is that they must be computable. The definition of computable in this case is that the language can be interpreted by a Turing machine. In order to interpret the language the Turing machine might translate it first to another language, but then the Turing machine must be able to translate it.
+  
+<Br>
+<Br>
