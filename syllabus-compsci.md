@@ -86,6 +86,8 @@ Try to specilize in a field such as these, just chose one or two. However, remem
  - [X] Book : [modern c book](https://www.scribd.com/doc/39933932/C-Programming-a-Modern-Approach-2nd-Edition-K-N-King)(Did not finish left at pg.292 )
  
 ### Computer Architecture
+
+> Remember this is more of a computer engineering topic and not software one. If you really want to learn this learn physics first because engineers applies physics and software engineers applies CS.
   
   - [x] Read: Read [this tutorial](https://www.studytonight.com/computer-architecture/)
   - [ ] Book : [Hidden Language of Computers: CODE](ftp://ftp.borg.moe/yarr/Gentoomen%20Library/Programming/Misc/Charles%20Petzold%20-%20Code%20-%20The%20Hidden%20Language%20of%20Computer%20Hardware%20and%20Software.pdf)
