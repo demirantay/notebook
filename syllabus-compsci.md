@@ -93,7 +93,7 @@ Try to specilize in a field such as these, just chose one or two. However, remem
   - [ ] Book : [Hidden Language of Computers: CODE](ftp://ftp.borg.moe/yarr/Gentoomen%20Library/Programming/Misc/Charles%20Petzold%20-%20Code%20-%20The%20Hidden%20Language%20of%20Computer%20Hardware%20and%20Software.pdf)
   - [ ] Book: The Elements of Computing Systems (left at https://www.youtube.com/watch?v=OZlvyGaRmQQ&list=PLrDd_kMiAuNmSb-CKWQqq9oBFN_KNMTaI&index=12 and at the end of chapter 01 projects.)
   - [ ] Book: Structured Computer Organization - Andrew S.
-  > - [ ] Book: Digital Design and Computer Architecture 2nd Edition (hard - shelved it - may return to it or delete it)
+  - [ ] Book: Digital Design and Computer Architecture 2nd Edition (hard - shelved it - may return to it or delete it)
   - [ ] Book: Essentials of Computer Architecture by Comer
   - [ ] Book : Computer Organization and Design (start over)
   - [ ] Book: Computer Systems : A Programmers Perspective by Bryant and O’Hallaron
@@ -120,15 +120,16 @@ Try to specilize in a field such as these, just chose one or two. However, remem
    
 ### Computer Networking
 
-  > Research books like you did for computer architecture. Through reddit, forums ... etc. Then start.
    - [x] Course: Do [khan academy: networking](https://www.khanacademy.org/computing/ap-computer-science-principles/the-internet) for a refresher before diving in
    - [x] Read: The [This tutorial](https://www.studytonight.com/computer-networks/)
-   - [ ] Book: [Computer Networks](https://www.amazon.com/gp/product/B006Y1BKGC/ref=dbs_a_def_rwt_hsch_vapi_taft_p1_i0)
-   - [ ] Book : [Computer Networking: A Top-Down Approach](https://www.amazon.com/Computer-Networking-Top-Down-Approach-7th/dp/0133594149/?pldnSite=1) -- do the exersices
-   - [ ] Exersices : [Wireshark](http://www-net.cs.umass.edu/wireshark-labs/)
-   - [ ] Course : [Stanford MOOC](https://lagunita.stanford.edu/courses/Engineering/Networking-SP/SelfPaced/about)
+   - [ ] Book: Computer Networks and Internets (Douglas E. Comer)
+   - [ ] Book: Computer Networks (Tanenbaum)
+   - [ ] Book: Computer Networking: A Top-Down Approach (kurose - ross) -- do the exersices
+   - [ ] Project : [Wireshark](http://www-net.cs.umass.edu/wireshark-labs/)
    - [ ] Project: Do the ben eaters How to create a internet [tutorial from here[(https://eater.net/inet)
-   - [ ] Project : Your own small internet,  build a server backup a server or etc. Try to use what you have learned. 
+   - [ ] Project : Build differnt types of servers, web, ftp ... etc.
+   - [ ] Project: Try to build your own internet. Understand how to connect to the WWW.
+   - [ ] Optional: Update more resources if you want to focus on networking.
    
  ### Databases
 
