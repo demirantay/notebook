@@ -401,6 +401,7 @@ Try to specilize in a field such as these, just chose one or two. However, remem
 - [x] Terminal -- (All other neccessary information: history, df ...etc)
 - [x] Networking 
 - [x] Web Servers -- (nginx, apache, tomcat ... etc)
+- [x[ CGI's -- (gunicorn, uWsgi .. etc.)
 - [x] Caching Servers
 - [x] Load Balancer
 - [x] Reverse Proxy
@@ -423,13 +424,12 @@ Try to specilize in a field such as these, just chose one or two. However, remem
 > I need to change the order from the easiest to hardest since understanding and building all of docker is easier than building a operating systems kernel shell .. etc.
 
 - [ ] Feynman: System Progrmaming Languages (python, c/c++, go)
-- [ ] Feynman: OS Concepts
 - [ ] Feynman: Unix/Linux Envioronment
 - [ ] Feynman: Terminal Shell
 - [ ] Feynman: Bash Scripting
 - [ ] Feynman: CLI Tools - (text maniupation, process mointoring, network, sys performance)
-- [ ] Feynman: Networking
 - [ ] Feynman: Web Servers
+- [ ] Feynman: CGIs
 - [ ] Feynman: Caching Servers
 - [ ] Feynman: Load Balancer
 - [ ] Feynman: Reverse Proxy
