@@ -46,6 +46,45 @@ Table of Contents:
   
 # Chapter 1: Introduction and Overview
 
+- __`Growth of Computer Networking`__ -- Computer networking has grown explosively. Since the 1970s, computer communication has changed from an esoteric research topic to an essential part of the infrastructure. Networking is used in every aspect of business, including advertising, production,
+shipping, planning, billing, and accounting. Consequently, most corporations have multiple networks. Schools, at all grade levels from elementary through post-graduate, are
+using computer networks to provide students and teachers with instantaneous access to
+online information. Federal, state, and local government offices use networks, as do
+military organizations. In short, computer networks are everywhere.
+
+  In addition, an entire industry emerged that develops networking technologies, products, and services. The importance of computer networking has produced
+a demand in all industries for people with more networking expertise
+
+- __`Why Networking Seems Complex`__ -- Computer networking can be especially confusing to a beginner because no single
+underlying theory exists that explains the relationship among all parts. Multiple organizations have created networking standards, but some standards are incompatible with
+others
+
+  The lack of consistency in the field has produced another challenge for beginners:
+instead of a uniform terminology for networking concepts, multiple groups each attempt
+to create their own terminology. Researchers cling to scientifically precise terminology.
+Corporate marketing groups often associate a product with a generic technical term or
+invent new terms merely to distinguish their products or services from those of competitors. Thus, technical terms are easily confused with the names of popular products
+
+- __`The Five Key Aspects of Networking`__ --To master the complexity in networking, it is important to gain a broad background that includes five key aspects of the subject:
+  - 1 - Network Applications And Network Programming
+  - 2 - Data Communications
+  - 3 - Packet Switching And Networking Technologies
+  - 4 - Internetworking With TCP/IP
+  - 5 - Additional Networking Concepts And Technologies
+  
+- __`Network Applications And Network Programming`__ -- The network services and facilities that users invoke are each provided by application software — an application program on one computer communicates across a network with an application program running on another computer. Network application
+services span a wide range that includes email, file transfer, web browsing, voice telephone calls, distributed databases, and audio and video teleconferencing
+
+  As we will see, it is possible to understand network applications, and even possible
+to write code that communicates over a network, without understanding the hardware
+and software technologies that are used to transfer data from one application to another.
+It may seem that once a programmer masters the interface, no further knowledge of networking is needed. However, network programming is analogous to conventional programming. Although a conventional programmer can create applications without understanding compilers, operating systems, or computer architecture, knowledge of the
+underlying systems can help a programmer create more reliable, correct, and efficient
+programs.
+
+- __`Data Comminucations`__ --
+
+- __`Packet Switching And Networking Technologies`__ --
 
 <br>
 <br>
