@@ -62,15 +62,56 @@
 
 - The most common salt implementation errors are reusing the same salt in multiple hashes, or using a salt that is too short.
 
-- `Salt Reuse` --
+- `Salt Reuse` -- A common mistake is to use the same salt in each hash. Either the salt is hard-coded into the program, or is generated randomly once. This is ineffective because if two users have the same password, they'll still have the same hash. An attacker can still use a reverse lookup table attack to run a dictionary attack on every hash at the same time. They just have to apply the salt to each password guess before they hash it. A new random salt must be generated each time a user creates an account or changes their password.
 
-- `Short Salt` -- 
+- `Short Salt` -- If the salt is too short, an attacker can build a lookup table for every possible salt. For example, if the salt is only three ASCII characters, there are only 95x95x95 = 857,375 possible salts. That may seem like a lot, but if each lookup table contains only 1MB of the most common passwords, collectively they will be only 837GB, which is not a lot considering 1000GB hard drives can be bought for under $100 today.
+
+  To make it impossible for an attacker to create a lookup table for every possible salt, the salt must be long. A good rule of thumb is to use a salt that is the same size as the output of the hash function. For example, the output of SHA256 is 256 bits (32 bytes), so the salt should be at least 32 random bytes.
 
 ## The `WRONG` Way: Double Hashing & Wacky Hash Functions
 
+- This section covers another common password hashing misconception: wacky combinations of hash algorithms. It's easy to get carried away and try to combine different hash functions, hoping that the result will be more secure. In practice, though, there is very little benefit to doing it. All it does is create interoperability problems, and can sometimes even make the hashes less secure. Never try to invent your own crypto, always use a standard that has been designed by experts
+  ```python
+  md5(sha1(password))  # <-- useless and actually worse
+  ```
+  Some may say wacky hashing is actually good but An attacker cannot attack a hash when he doesn't know the algorithm, but note Kerckhoffs's principle, that the attacker will usually have access to the source code (especially if it's free or open source software), and that given a few password-hash pairs from the target system, it is not difficult to reverse engineer the algorithm. It does take longer to compute wacky hash functions, but only by a small constant factor. It's better to use an iterated algorithm that's designed to be extremely hard to parallelize (these are discussed below). And, properly salting the hash solves the rainbow table problem.
+
 ## Hash Collisions
 
+- Because hash functions map arbitrary amounts of data to fixed-length strings, there must be some inputs that hash into the same string. Cryptographic hash functions are designed to make these collisions incredibly difficult to find. From time to time, cryptographers find "attacks" on hash functions that make finding collisions easier. A recent example is the MD5 hash function, for which collisions have actually been found.
+
+   However, finding collisions in even a weak hash function like MD5 requires a lot of dedicated computing power, so it is very unlikely that these collisions will happen "by accident" in practice. A password hashed using MD5 and salt is, for all practical purposes, just as secure as if it were hashed with SHA256 and salt. Nevertheless, it is a good idea to use a more secure hash function like SHA256, SHA512, RipeMD, or WHIRLPOOL if possible.
+
 ## The `RIGHT` Way: How to Hash Properly
+
+- This section describes exactly how passwords should be hashed. The first subsection covers the basics—everything that is absolutely necessary. The following subsections explain how the basics can be augmented to make the hashes even harder to crack.
+
+- `The Basics: Hashing with Salt` -- Salt should be generated using a Cryptographically Secure Pseudo-Random Number Generator (CSPRNG). CSPRNGs are very different than ordinary pseudo-random number generators, like the "C" language's rand() function. As the name suggests, CSPRNGs are designed to be cryptographically secure, meaning they provide a high level of randomness and are completely unpredictable.
+
+  The following table lists some CSPRNGs that exist for some popular programming platforms.
+  - `Python` -- os.urandom
+  - `C/C++ (Windows API)` -- CryptGenRandom
+  - `Java` -- java.security.SecureRandom
+  
+  The salt needs to be unique per-user per-password. Every time a user creates an account or changes their password, the password should be hashed using a new random salt. Never reuse a salt. The salt also needs to be long, so that there are many possible salts. The salt should be stored in the user account table alongside the hash.
+  
+  To Store a Password:
+  - 1 - Generate a long random salt using a CSPRNG.
+  - 2 - Prepend the salt to the password and hash it with a standard password hashing function like Argon2, bcrypt, scrypt, or PBKDF2.
+  - 3 - Save both the salt and the hashed+salted pwd in the user's database record.
+  
+  To Validate a Password:
+  - 1 - Retrieve the user's salt and hash from the database.
+  - 2 - Prepend the salt to the given password and hash it using the same hash function
+  - 3 - mpare the hash of the given password with the hash from the database. If they match, the password is correct. Otherwise, the password is incorrect.
+  
+  If you are writing a web application, you might wonder where to hash. Should the password be hashed in the user's browser with JavaScript, or should it be sent to the server "in the clear" and hashed there? Even if you are hashing the user's passwords in JavaScript, you still have to hash the hashes on the server ALWAYS ON THE SERVER.
+  
+  Don't get spooked you CAN salt and hash on the client too but it is much more of a hussle to do it than on the server. If you are going to do it you must have a good reason to do it. 
+
+- `Making Password Cracking Harder: Slow Hash Functions` -- 
+
+- `Impossible-to-crack Hashes: Keyed Hashes and Password Hashing Hardware` --
 
 ## Other Security Measures
 
