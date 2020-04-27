@@ -407,16 +407,16 @@ Try to specilize in a field such as these, just chose one or two. However, remem
 - [x] Reverse Proxy
 - [x] Forward Proxy
 - [x] Firewall
-- [ ] Containers -- (Docker ...etc)
-- [ ] Configuration Management -- (Ansible)
-- [ ] Container Orchestration -- (Kubernetees)
-- [ ] Infustructure Provisioning -- (Terraform)
-- [ ] CI/CD -- (Jenkins, Circle CI ...etc)
-- [ ] Infustructure Monitoring -- (Nagios, Icinga, Datadog ... etc)
-- [ ] Application Monitoring -- (New Relic, AppDynamics .. etc)
-- [ ] Logs Management -- (ELK Stack, Graylog, Splunk .. etc)
-- [ ] Cloud Providers -- AWS
-- [ ] Cyber Cecurity
+- [x] Containers -- (Docker ...etc)
+- [x] Configuration Management -- (Ansible)
+- [x] Container Orchestration -- (Kubernetees)
+- [x] Infustructure Provisioning -- (Terraform)
+- [x] CI/CD -- (Jenkins, Circle CI ...etc)
+- [x] Infustructure Monitoring -- (Nagios, Icinga, Datadog ... etc)
+- [x] Application Monitoring -- (New Relic, AppDynamics .. etc)
+- [x] Logs Management -- (ELK Stack, Graylog, Splunk .. etc)
+- [x] Cloud Providers -- AWS
+- [x] Cyber Cecurity
 
 
 ### Packet #2 
