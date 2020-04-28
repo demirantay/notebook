@@ -26,7 +26,7 @@ Table of Contents:
 
   Keywords: Compiler, Interpreter, Automatic Translation
 
-### Introduction
+## Introduction
 
 - computer applications rely on software computer programs
 that build virtual tools on top of the low-level abstractions provided by the
@@ -72,7 +72,7 @@ engineering that is hard to obtain with smaller, less intricate systems.
 - `The Fundamental Principles of Compilation` -- there are two fundamental principles that a compiler writer must
 keep in mind at all times. The first principle is inviolable: _The compiler must preserve the meaning of the program being compiled._  The second principle that a compiler must observe is practical: _The compiler must improve the input program in some discernible way_ Lets give a n example to the second rule: A source-to-source translator for c must produce code that is, in some measure, better than the input program; if it is not, why would anyone invoke it? (it basically means optimize the shit out of your input language without damaging the logic of it so that people will use your fast compiler.
 
-### Compiler Structure
+## Compiler Structure
 
 - As we said erlier the structure looks like this:
   ```
@@ -104,7 +104,7 @@ structure, termed a three-phase compiler
   The optimizer is an ir-to-ir transformer that tries to improve the ir program
 in some way
 
-### Overview of Translation
+## Overview of Translation
 
 - To translate code written in a programming language into code suitable for
 execution on some target machine, a compiler runs through many steps.
@@ -183,7 +183,7 @@ optimizing compiler." Over the years, this notation has undergone many
 changes. The version used in this book is described in detail in Appendix A.
 Think of ILOC as the assembly language for a simple RISC machine
 
-### Summary and Perspective
+## Summary and Perspective
 
 - Compiler construction is a complex task. A good compiler combines ideas
 from formal language theory, from the study of algorithms, from artificial
