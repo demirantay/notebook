@@ -163,9 +163,20 @@ next section formalizes that relationship.
 
 ## From Regular Expression to Scanner
 
-- `Nondeterministic Finite Automata` --
+- The goal of our work with finite automata is to automate the derivation
+of executable scanners from a collection of res. This section develops the
+constructions that transform an re into an fa that is suitable for direct implementation and an algorithm that derives an re for the language accepted by
+an fa. To present these constructions, we must distinguish between deterministic
+fas, or dfas, and nondeterministic fas, or nfas
 
-- `Equivalence of NFAs and DFAs` -- 
+- `Nondeterministic Finite Automata` -- Recall from the definition of an re that we designated the empty string, , as
+an re. None of the fas that we built by hand included ∈, but some of the res
+did. What role does ∈ play in an fa? We can use transitions on ∈ to combine
+fas and form fas for more complex res.
+
+- `Equivalence of NFAs and DFAs` -- nfas and dfas are equivalent in their expressive power. Any dfa is a special
+case of an nfa. Thus, an nfa is at least as powerful as a dfa. Any nfa
+can be simulated by a dfa—
 
 - `Regular Expression to NFA:Thompson’s Construction` --
 
@@ -193,10 +204,4 @@ next section formalizes that relationship.
 
 <br>
 <Br>
-
----
-
-<br>
-<br>
-
 
