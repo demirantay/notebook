@@ -109,10 +109,46 @@
   
   Don't get spooked you CAN salt and hash on the client too but it is much more of a hussle to do it than on the server. If you are going to do it you must have a good reason to do it. 
 
-- `Making Password Cracking Harder: Slow Hash Functions` -- 
+- `Making Password Cracking Harder: Slow Hash Functions` -- Salt ensures that attackers can't use specialized attacks like lookup tables and rainbow tables to crack large collections of hashes quickly, but it doesn't prevent them from running dictionary or brute-force attacks on each hash individually. High-end graphics cards (GPUs) and custom hardware can compute billions of hashes per second, so these attacks are still very effective. To make these attacks less effective, we can use a technique known as key stretching.
 
-- `Impossible-to-crack Hashes: Keyed Hashes and Password Hashing Hardware` --
+  The idea is to make the hash function very slow, so that even with a fast GPU or custom hardware, dictionary and brute-force attacks are too slow to be worthwhil Key stretching is implemented using a special type of CPU-intensive hash function. Don't try to invent your own–simply Use a standard algorithm like PBKDF2 or bcrypt.
+  
+  If you use a key stretching hash in a web application, be aware that you will need extra computational resources to process large volumes of authentication requests, and that key stretching may make it easier to run a Denial of Service (DoS) attack on your website. I still recommend using key stretching, but with a lower iteration count. You should calculate the iteration count based on your computational resources and the expected maximum authentication request rate. The denial of service threat can be eliminated by making the user solve a CAPTCHA every time they log in.
+  
+  If you are worried about the computational burden, but still want to use key stretching in a web application, consider running the key stretching algorithm in the user's browser with JavaScript.
+
+- `Impossible-to-crack Hashes: Keyed Hashes and Password Hashing Hardware` -- As long as an attacker can use a hash to check whether a password guess is right or wrong, they can run a dictionary or brute-force attack on the hash. The next step is to add a secret key to the hash so that only someone who knows the key can use the hash to validate a password. This can be accomplished two ways. Either the hash can be encrypted using a cipher like AES, or the secret key can be included in the hash using a keyed hash algorithm like HMAC.
+
+  I highly recommend this approach for any large scale (more than 100,000 users) service. I consider it necessary for any service hosting more than 1,000,000 user accounts. Don't hard-code a key into the source code, generate it randomly when the application is installed
 
 ## Other Security Measures
 
+- Even experienced developers must be educated in security in order to write secure applications. A great resource for learning about web application vulnerabilities is [The Open Web Application Security Project (OWASP)](https://owasp.org/index.php/Main_Page). A good introduction is the [OWASP Top Ten Vulnerability List](https://owasp.org/www-pdf-archive/OWASP_Top_10-2017_(en).pdf.pdf). Unless you understand all the vulnerabilities on the list, do not attempt to write a web application that deals with sensitive data.
+
+  Having a third party "penetration test" your application is a good idea. It is also important to monitor your website to detect a breach if one does occur. I recommend hiring at least one person whose full time job is detecting and responding to security breaches.
+
 ## Frequently Asked Questions
+
+- __`What hash algorithm should I use?`__ -- 
+  - DO use: Well-designed key stretching algorithms such as PBKDF2, bcrypt, and scrypt.
+  - DO NOT use: Fast cryptographic hash functions such as MD5, SHA1, SHA256, SHA512, RipeMD, WHIRLPOOL, SHA3, etc. Any algorithm that you designed yourself. Only use technology that is in the public domain and has been well-tested by experienced cryptographers.
+  
+- __`How should I allow users to reset their password when they forget it?`__ -- It is my personal opinion that all password reset mechanisms in widespread use today are insecure. If you have high security requirements, such as an encryption service would, do not let the user reset their password.
+
+  Most websites use an email loop to authenticate users who have forgotten their password. To do this, generate a random single-use token that is strongly tied to the account. Include it in a password reset link sent to the user's email address. When the user clicks a password reset link containing a valid token, prompt them for a new password. Be sure that the token is strongly tied to the user account so that an attacker can't use a token sent to his own email address to reset a different user's password.
+
+  The token must be set to expire in 15 minutes or after it is used
+
+  Attackers will be able to modify the tokens, so don't store the user account information or timeout information in them. They should be an unpredictable random binary blob used only to identify a record in a database table. Never send the user a new password over email. Remember to pick a new random salt when the user resets their password
+  
+- __`What should I do if my user account database gets leaked/hacked?`__ -- Your first priority is to determine how the system was compromised and patch the vulnerability the attacker used to get in. If you do not have experience responding to breaches, I highly recommend hiring a third-party security firm.
+
+  It may be tempting to cover up the breach and hope nobody notices. However, trying to cover up a breach makes you look worse, because you're putting your users at further risk by not informing them that their passwords and other personal information may be compromised. You must inform your users as soon as possible—even if you don't yet fully understand what happened. Put a notice on the front page of your website that links to a page with more detailed information, and send a notice to each user by email if possible.
+  
+  Explain to your users exactly how their passwords were protected—hopefully hashed with salt—and that even though they were protected with a salted hash, a malicious hacker can still run dictionary and brute force attacks on the hashes. Malicious hackers will use any passwords they find to try to login to a user's account on a different website, hoping they used the same password on both websites. Inform your users of this risk and recommend that they change their password on any website or service where they used a similar password.
+  
+  It is likely, even with salted slow hashes, that an attacker will be able to crack some of the weak passwords very quickly. To reduce the attacker's window of opportunity to use these passwords, you should require, in addition to the current password, an email loop for authentication until the user has changed their password. See the previous question, "How should I allow users to reset their password when they forget it?" for tips on implementing email loop authentication.
+
+  Also tell your users what kind of personal information was stored on the website. If your database includes credit card numbers, you should instruct your users to look over their recent and future bills closely and cancel their credit card.
+  
+- __`What should my password policy be? Should I enforce strong passwords?`__ -- You usually should. But be prepared to lose customers since it is a daunting task. If it is extremly sensetive app reset the passwords always in a timely manner.
