@@ -110,13 +110,14 @@ Try to specilize in a field such as these, just chose one or two. However, remem
  
 ### Operating Systems
 
-  > Research books like you did for computer architecture. Through reddit, forums ... etc. Then start.
+   - [ ] Book: The xv6 book](https://pdos.csail.mit.edu/6.828/2017/xv6/book-rev10.pdf)
    - [ ] Read: The [This tutorial](https://www.studytonight.com/operating-system/)
-   - [ ] Book : [Operating Systems: Three Easy Pieces](http://pages.cs.wisc.edu/~remzi/OSTEP/)
-   - [ ] Course : [ops-class.org : hack the kernel](https://www.ops-class.org/) You can go with the book simotenously.
-   - [ ] Tutorial: [little OS tutorial](https://littleosbook.github.io/)
+   - [ ] Book: [Operating Systems: Three Easy Pieces](http://pages.cs.wisc.edu/~remzi/OSTEP/)
    - [ ] Book : Modern Operating Systems Book by Andrew S. Tanenbaum
+   - [ ] Guide: Follow [osdev.wiki](https://wiki.osdev.org/Main_Page)
+   - [ ] Tutorial: [little OS tutorial](https://littleosbook.github.io/)
    - [ ] Project : Code a small Operating System
+   - [ ] Optional: Focus on more textbooks and projects if you want to.
    
 ### Computer Networking
 
