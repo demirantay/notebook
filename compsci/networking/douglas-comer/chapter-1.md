@@ -192,6 +192,43 @@ network as a whole instead of individual parts.
 
 # Chapter 2: Internet Trends
 
+- __`Introduction`__ -- This chapter considers how data networking and the Internet have changed since
+their inception. The chapter begins with a brief history of the Internet that highlights
+some of the early motivations. It describes a shift in emphasis from sharing centralized
+facilities to fully distributed information systems.
+
+- __`Resource Sharing`__ -- Early computer networks were designed when computers were large and expensive,
+and the main motivation was resource sharing. In the 1960s, the Advanced Research Projects Agency (ARPA†), an agency of the
+U.S. Department of Defense, was especially interested in finding ways to share
+resources.
+
+- __`Growth Of The Internet,`__ -- In less than 30 years, the Internet has grown from an early research prototype connecting a handful of sites to a global communication system that extends to all countries
+of the world
+
+- __`From Resource Sharing To Communication`__ -- As it grew, the Internet changed in two significant ways. First, communication
+speeds increased dramatically — a backbone link in the Internet can carry 100,000
+times as many bits per second as a backbone link in the original Internet. Second, new
+applications arose that appealed to a broad cross-section of society. The second point is
+obvious — the Internet is no longer dominated by scientists and engineers, scientific applications, or access to computational resources.
+
+  The availability of high-speed computation and communication technologies shifted the focus of the Internet from resource sharing to
+general-purpose communication
+
+- __`From Text To Multimedia`__ -- As the figure indicates, Internet communication initially involved textual data. In
+particular, email messages were limited to text displayed in fixed-width font. By the 1990s, computers had color screens capable of displaying graphics, and applications
+arose that allowed users to transfer images easily. By the late 1990s, users began sending video clips, and full-motion videos became feasible
+
+  We use the term multimedia to characterize data that contains a combination of
+text, graphics, audio, and video. Much of the content available on the Internet now consists of multimedia documents
+
+- __`Recent Trends`__ -- One of the most interesting aspects of the Internet arises from the way that Internet
+applications change even though the underlying technology essentially remains the
+same. For example see the new areas that are arising but the underlying tech is still the same.
+  - High-quality teleconferencing -> Business-to-business communication 
+  - Navigation systems -> Military, shipping industry, consumers
+  - Sensor networks -> Environment, security, fleet tracking
+  - Social networking -> Consumers, volunteer organizations
+
 <br>
 <br>
 
