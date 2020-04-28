@@ -11,7 +11,7 @@ automatically.
 
   Keywords: Scanner, Finite Automaton, Regular Expression, Fixed Point
 
-### Introduction
+## Introduction
 
 - Scanning is the first stage of a three-part process that the compiler uses
 to understand the input program. The scanner, or lexical analyzer, reads a
@@ -40,7 +40,7 @@ terminate a word.
   In a typical programming language, some words, called keywords or res- erved words, match the rule for an identifier but have special meanings. Both `while` and `static` are keywords in both C and Java. Keywords (and punctuation marks) form their own syntactic categories . To recognize keywords, the scanner can either use dictionary
 lookup or encode the keywords directly into its microsyntax rules.
 
-### Recognizing Words
+## Recognizing Words
 
 - The simplest explanation of an algorithm to recognize words is often a
 character-by-character formulation. The structure of the code can provide
@@ -68,17 +68,128 @@ as a transition to an error state
 - `A Formalism for Recognizers` -- Transition diagrams serve as abstractions of the code that would be required
 to implement them. They can also be viewed as formal mathematical obj- ects, called finite automata, that specify recognizers. Formally, a finite
 
-- `Recognizing More Complex Words` -- 
+- `Section Review` --A character-by-character approach to scanning leads to algorithmic clarity. We can represent character-by-character scanners with a transition
+diagram; that diagram, in turn, corresponds to a finite automaton. Small
+sets of words are easily encoded in acyclic transition diagrams. Infinite
+sets, such as the set of integers or the set of identifiers in an Algol-like
+language, require cyclic transition diagrams.
 
-### Regular Expressions
+## Regular Expressions
 
-### From Regular Expression to Scanner
+- The set of words accepted by a finite automaton, F, forms a language,
+denoted L(F). The transition diagram of the fa specifies, in precise detail,
+that language. It is not, however, a specification that humans find intuitive.
+For any fa, we can also describe its language using a notation called a `regular expression (re)`. The language described by an re is called a `regular
+language`.
 
-### Implementing Scanners
+  To make this discussion concrete, consider some examples that occur in most
+programming languages. Punctuation marks, such as colons, semicolons,
+commas, and various brackets, can be represented by their character representations. Their res have the same “spelling” as the punctuation marks
+themselves. Thus, the following res might occur in the lexical specification
+for a programming language:
+  ```
+  : ; ? => ( ) { } [ ]
+  ```
+  Similarly, keywords have simple res.
+  ```
+  if while this integer instanceof
+  ```
+  So actually you can construct regular expression language by any symbols you just need to understand the logic behind it.
 
-### Advanced Topics
+- `Formalizing the Notation` -- To work with regular expressions in a rigorous way, we must define them
+more formally. An re describes a set of strings over the characters contained
+in some alphabet, 6, augmented with a character ∈ that represents the empty
+string. We call the set of strings a language. For a given re, r, we denote
+the language that it specifies as L(r). An re is built up from three basic
+operations:
+  - 1 - `Alternation` -- The alternation, or union, of two sets of strings, R and S,
+denoted R | S, is {x | x ∈ R or x ∈ S}.
+  - 2 - `Concatenation` -- The concatenation oftwo sets R and S, denoted R S,
+contains all strings formed by prepending an element of R onto one
+from S, or {x y | x ∈ R and y ∈ S}.
+  - 3 - `Closure` -- The Kleene closure of a set R, denoted R∗. This is
+just the union of the concatenations of R with itself, zero or more times
 
-### Chapter Summary and Perspective
+- `REGULAR EXPRESSIONS IN VIRTUAL LIFE` --  Regular expressions are used in many applications to specify patterns in
+character strings. Some of the early work on translating REs into code was
+done to provide a flexible way of specifying strings in the "find" command
+of a text editor. From that early genesis, the notation has crept into many
+different applications
+
+  Unix and other operating systems use the asterisk as a wildcard to match
+substrings against file names. Here, `∗` is a shorthand for the RE `∈∗`
+, specifying zero or more characters drawn from the entire alphabet of legal
+characters. (Since few keyboards have a `∈` key, the shorthand has stayed
+with us.) Many systems use `?` as a wildcard that matches a single character
+
+  The `grep` family of tools, and their kin in non-Unix systems, implement
+regular expression pattern matching. (In fact, grep is an acronym for global
+regular-expression pattern match and print.)
+
+  Regular expressions have found widespread use because they are easily
+written and easily understood. They are one of the techniques of choice
+when a program must recognize a fixed vocabulary
+  - `r | s` -- is an re denoting the union, or alternation, of L(r) and L(s)
+  - `rs` --is an re denoting the concatenation of L(r) and L(s)
+  - `r∗` --is an re denoting the Kleene closure of L(r)
+  
+  To eliminate any ambiguity, parentheses have highest precedence, followed
+by closure, concatenation, and alternation, in that order
+
+- The goal of this chapter is to show how we can use formal techniques to
+automate the construction of high-quality scanners and how we can encode
+the microsyntax of programming languages into that formalism. 
+
+- `Closure Properties of REs` -- Regular expressions and the languages that they generate have been the sub-ject of extensive study. They have many interesting and useful properties.
+Some of these properties play a critical role in the constructions that build
+recognizers from res.
+
+  Regular expressions are closed under many operations—that is, if we apply
+the operation to an re or a collection of res, the result is an re. Obvious
+examples are concatenation, union, and closure. These closure properties play a critical role in the use of res to build scanners
+
+  Closure under union implies that any finite language is a regular language.
+We can construct an re for any finite collection of words by listing them
+in a large alternation.
+
+- `Section Review` -- Regular expressions are a concise and powerful notation for specifying
+the microsyntax of programming languages. REs build on three basic
+operations over finite alphabets: alternation, concatenation, and Kleene
+closure. Other convenient operators, such as finite closures, positive
+closure, and complement, derive from the three basic operations. Regular
+expressions and finite automata are related; any RE can be realized in an
+FA and the language accepted by any FA can be described with RE. The
+next section formalizes that relationship.
+
+## From Regular Expression to Scanner
+
+- `Nondeterministic Finite Automata` --
+
+- `Equivalence of NFAs and DFAs` -- 
+
+- `Regular Expression to NFA:Thompson’s Construction` --
+
+- `NFA to DFA: The Subset Construction` --
+
+- `From Q to D` --
+
+- `Example` --
+
+- `Fixed-Point Computations` -- 
+
+- `Computing ∈-closure Offline` --
+
+- `DFA to Minimal DFA: Hopcroft’s Algorithm` --
+
+- `Examples` --
+
+- `Using a DFA as a Recognizer` --
+
+## Implementing Scanners
+
+## Advanced Topics
+
+## Chapter Summary and Perspective
 
 <br>
 <Br>
@@ -88,261 +199,4 @@ to implement them. They can also be viewed as formal mathematical obj- ects, cal
 <br>
 <br>
 
-# CHAPTER 3: Parsers
 
-### Introduction
-
-### Expressing Syntax
-
-### Top-Down Parsing
-
-### Bottom-Up Parsing
-
-### Practical Issues
-
-### Advanced Topics
-
-### Summary and Perspective
-
-<br>
-<br>
-
----
-
-<br>
-<br>
-
-# CHAPTER 4: Context-Sensitive Analysis
-
-### Introduction
-
-### An Introduction to Type Systems
-
-### The Attribute-Grammar Framework
-
-### Ad Hoc Syntax-Directed Translation
-
-### Advanced Topics
-
-### Summary and Perspective
-
-<br>
-<br>
-
----
-
-<br>
-<br>
-
-# CHAPTER 5: Intermediate Representations
-
-### Introduction
-
-### Graphical IRs 
-
-### Linear IRs
-
-### Mapping Values to Names
-
-### Symbol Tables
-
-### Summary and Perspective
-
-<Br>
-<br>
-
----
-
-<br>
-<br>
-
-# CHAPTER 6: The Procedure Abstraction
-
-### Introduction
-
-### Procedure Calls
-
-### Name Spaces
-
-### Communicating Values Between Procedures
-
-### Standardized Linkages
-
-### Advanced Topics 
-
-### Summary and Perspective
-
-<br>
-<br>
-
----
-
-<br>
-<Br>
-
-# CHAPTER 7: Code Shape
-
-### Introduction
-
-### Assigning Storage Locations
-
-### Arithmetic Operators
-
-### Boolean and Relational Operators
-
-### Storing and Accessing Arrays
-
-### Character Strings 
-
-### Structure References
-
-### Control-Flow Constructs
-
-### Procedure Calls
-
-### Summary and Perspective
-
-<br>
-<br>
-
----
-
-<Br>
-<br>
-
-# CHAPTER 8: Introduction to Optimization
-
-### Introduction
-
-### Background
-
-### Scope of Optimization
-
-### Local Optimization
-
-### Regional Optimization
-
-### Global Optimization
-
-### Interprocedural Optimization
-
-### Summary and Perspective
-
-<br>
-<br>
-
----
-
-<br>
-<br>
-
-# CHAPTER 9: Data-Flow Analysis
-
-### Introduction
-
-### Iterative Data-Flow Analysis
-
-### Static Single-Assignment Form
-
-### Interprocedural Analysis 
-
-### Advanced Topics 
-
-### Summary and Perspective
-
-<Br>
-<br>
-
----
-
-<br>
-<br>
-
-# CHAPTER 10: Scalar Optimizations
-
-### Introduction
-
-### Eliminating Useless and Unreachable Code
-
-### Code Motion
-
-### Specialization 
-
-### Redundancy Elimination
-
-### Enabling Other Transformations .
-
-### Advanced Topics
-
-### Summary and Perspective 
-
-<br>
-<Br>
-
----
-
-<br>
-<br>
-
-# CHAPTER 11: Instruction Selection 
-
-### Introduction
-
-### Code Generation
-
-### Extending the Simple Treewalk Scheme
-
-### Instruction Selection via Tree-Pattern Matching 
-
-### Instruction Selection via Peephole Optimization 
-
-### Advanced Topics
-
-### Summary and Perspective
-
-<br>
-<br>
-
----
-
-<br>
-<br>
-
-# CHAPTER 12: Instruction Scheduling
-
-### Introduction
-
-### The Instruction-Scheduling Problem
-
-### Local List Scheduling
-
-### Regional Scheduling 
-
-### Advanced Topics
-
-### Summary and Perspective
-
-<br>
-<Br>
-
----
-
-<br>
-<br>
-
-# CHAPTER 13: Register Allocation.
-
-### Introduction
-
-### Background Issues
-
-### Local Register Allocation and Assignment
-
-### Global Register Allocation and Assignment 
-
-### Advanced Topics 
-
-### Summary and Perspective
-
-<br>
-<br>
