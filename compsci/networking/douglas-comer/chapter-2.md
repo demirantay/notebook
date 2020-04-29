@@ -176,15 +176,41 @@ the form:
     ```
     where socket is the descriptor for a socket being closed.
 
-- __`The Connection Function Used Only By A Client`__ --
+- __`The Connection Function Used Only By A Client`__ -- Clients call connect to establish a connection with a specific server. The form is:
+  ```
+  connect(socket, saddress, saddresslen)
+  ```
+  Argument socket is the descriptor of a socket to use for the connection. Argument saddress is a sockaddr structure that specifies the server’s address and protocol port
+number‡, and argument saddresslen specifies the length of the server address measured
+in bytes
 
 - __`Socket Functions Used Only By A Server`__ --
+
+  - When created, a socket contains no information about the local or remote address
+and protocol port number. A server calls bind to supply a protocol port number at
+which the server will wait for contact. Bind takes three arguments:
+    ```
+    bind(socket, localaddr, addrlen)
+    ```
+    Argument socket is the descriptor of a socket to use. Argument localaddr is a structure
+that specifies the local address to be assigned to the socket, and argument addrlen is an
+integer that specifies the length of the address.
 
 - __`Socket Functions Used With The Message Paradigm`__ --
 
 - __`Other Socket Functions`__ --
 
 - __`Sockets, Threads, And Inheritance`__ --
+
+<br>
+<br>
+
+---
+
+<br>
+<br>
+
+# Chapter 4: Traditional Internet Applications
 
 <br>
 <br>
