@@ -178,7 +178,7 @@ fas and form fas for more complex res.
 case of an nfa. Thus, an nfa is at least as powerful as a dfa. Any nfa
 can be simulated by a dfa—
 
-- `Regular Expression to NFA:Thompson’s Construction` --
+- `Regular Expression to NFA:Thompson’s Construction` -- left it at this header (http://www.r-5.org/files/books/computers/compilers/writing/Keith_Cooper_Linda_Torczon-Engineering_a_Compiler-EN.pdf)
 
 - `NFA to DFA: The Subset Construction` --
 
