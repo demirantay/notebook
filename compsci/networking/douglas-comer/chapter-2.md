@@ -97,15 +97,84 @@ Known as a peer-to-peer (p2p) architecture, the scheme avoids placing data on a 
 server. Conceptually, data is distributed equally among a set of N servers, and each
 client request is sent to the appropriate server.
 
-- __`Network Programming And The Socket API`__ -- 
+- __`Network Programming And The Socket API`__ -- The interface an application uses to specify communication is known as an Application Program Interface (API). The socket API is a de facto standard for Internet communication
 
-- __`Sockets, Descriptors, And Network I/O`__ --
+- __`Sockets, Descriptors, And Network I/O`__ -- When an application creates a socket, the operating system returns a
+small integer descriptor that the application uses to reference the
+socket.
 
-- __`Parameters And The Socket API`__ --
+- __`Parameters And The Socket API`__ -- Socket programming differs from conventional I/O because an application must
+specify many details, such as the address of a remote computer, the protocol port
+number, and whether the application will act as a client or as a server To avoid having a single socket function with many parameters,
+designers of the socket API chose to define many functions. In essence, an application
+creates a socket, and then invokes functions to specify details. The advantage of the
+socket approach is that most functions have three or fewer parameters
+
+  |Name|Used By|Meaning|
+  |--|--|--|
+  |accept| server|Accept an incoming connection|
+  |bind| server| Specify IP address and protocol port|
+  |close| either| Terminate communication|
+  |connect| client| Connect to a remote application|
+  |getpeername |server| Obtain client’s IP address |
+  |getsockopt| server| Obtain current options for a socket|
+  |listen| server| Prepare socket for use by a server|
+  |recv |either| Receive incoming data or message|
+  |recvmsg| either| Receive data (message paradigm)|
+  |recvfrom| either| Receive a message and sender’s addr.|
+  |send (write)| either| Send outgoing data or message|
+  |sendmsg |either| Send an outgoing message|
+  |sendto| either| Send a message (variant of sendmsg)|
+  |setsockopt| either| Change socket options|
+  |shutdown| either| Terminate a connection|
+  |socket |either| Create a socket for use by above|
+
+- __`Socket Calls In A Client And Server`__ --
+  
+  Client Side:
+  ```
+  socket -> connect -> send -> recieve -> close
+  ```
+  Server Side:
+  ```
+  socket -> bind -> listen -> accept --> recv --> send --> close
+  ```
 
 - __`Socket Calls In A Client And Server`__ --
 
-- __`Socket Calls In A Client And Server`__ --
+  - The socket function creates a socket and returns an integer descriptor:
+    ```
+    descriptor = socket(protofamily, type, protocol)
+    ```
+    Argument protofamily specifies the protocol family to be used with the socket. The
+  identifier PF_INET specifies the TCP/IP protocol suite used in the Internet. Argument
+  type specifies the type of communication the socket will use: stream transfer is specified
+  with the value SOCK_STREAM, and connectionless message transfer is specified with
+  the value SOCK_DGRAM
+
+  - Both clients and servers use the send function to transmit data. Typically, a client
+sends a request, and a server sends a response.
+    ```
+    send(socket, data, length, flags)
+    ```
+    Argument socket is the descriptor of a socket to use, argument data is the address in
+memory of the data to send, argument length is an integer that specifies the number of
+bytes of data, and argument flags contains bits that request special options
+
+  - A client and a server each use recv to obtain data that has been sent by the other.
+The function has the form
+    ```
+    recv(socket, buffer, length, flags)
+    ```
+    Argument socket is the descriptor of a socket from which data is to be received. Argument buffer specifies the address in memory in which the incoming message should be
+placed, and argument length specifies the size of the buffer. Finally, argument flags allows the caller to control detai
+
+  - The close function tells the operating system to terminate use of a socket†. It has
+the form:
+    ```
+    close(socket)
+    ```
+    where socket is the descriptor for a socket being closed.
 
 - __`The Connection Function Used Only By A Client`__ --
 
@@ -125,294 +194,4 @@ client request is sent to the appropriate server.
 <br>
 <br>
 
-# Chapter 4: Traditional Internet Applications
-
-<br>
-<br>
-
----
-
-<br>
-<br>
-
-# Chapter 5: Overview of Data Communications
-
-<br>
-<br>
-
----
-
-<br>
-<br>
-
-# Chapter 6: Information Sources and Signals
-
-<br>
-<br>
-
----
-
-<br>
-<br>
-
-
-# Chapter 7: Transmission Media
-
-<br>
-<br>
-
----
-
-<br>
-<br>
-
-# Chapter 8: Reliablity and Channel Coding
-
-<br>
-<br>
-
----
-
-<br>
-<br>
-
-# Chapter 9: Transmission Modes
-
-<br>
-<br>
-
----
-
-<br>
-<br>
-
-# Chapter 10: Modulation and Modems
-
-<br>
-<br>
-
----
-
-<br>
-<br>
-
-# Chapter 11: Multiplexing and Demultiplexing (Channelzation)
-
-<br>
-<br>
-
----
-
-<br>
-<br>
-
-# Chapter 12: Access and Interconnection Techonologies
-
-<br>
-<br>
-
----
-
-<br>
-<br>
-
-# Chapter 13: Local Area Netowkrs:Packets, Frames and Topologies
-
-<br>
-<br>
-
----
-
-<br>
-<br>
-
-# Chapter 14: The IEEE MAC Sub-Layer 
-
-<br>
-<br>
-
----
-
-<br>
-<br>
-
-# Chapter 15: Wired LAN Techonology (Ethernet And 802.3)
-
-<br>
-<br>
-
----
-
-<br>
-<br>
-
-# Chapter 16: Wireless Networking Technologies
-
-<br>
-<br>
-
----
-
-<br>
-<br>
-
-# Chapter 17: LAN Extensions: Fiber Modems, Repeaters, Bridges and Switches
-
-<br>
-<br>
-
----
-
-<br>
-<br>
-
-# Chapter 18: WAN Technologies and Dynamic Routing
-
-<br>
-<br>
-
----
-
-<br>
-<br>
-
-# Chapter 19: Networking Technologies Past and Present
-
-<br>
-<br>
-
----
-
-<br>
-<br>
-
-# Chapter 20: Internetworking: Concepts Architecture and Protocols
-
-<br>
-<br>
-
----
-
-<br>
-<br>
-
-# Chapter 21: IP:Internet Adressing
-
-<br>
-<br>
-
----
-
-<br>
-<br>
-
-# Chapter 22: Datagram Forwarding
-
-<br>
-<br>
-
----
-
-<br>
-<br>
-
-# Chapter 23: Support Protocols and Technologies
-
-<br>
-<br>
-
----
-
-<br>
-<br>
-
-# Chapter 24: The Future IP (IPv6)
-
-<br>
-<br>
-
----
-
-<br>
-<br>
-
-# Chapter 25: UDP: Datagram Transport Service
-
-<br>
-<br>
-
----
-
-<br>
-<br>
-
-# Chapter 26: TCP: Reliable Transport Service
-
-<br>
-<br>
-
----
-
-<br>
-<br>
-
-# Chapter 27: Internet Routing and Routing Protocols
-
-<br>
-<br>
-
----
-
-<br>
-<br>
-
-# Chapter 28: Network Performance (QoS and DiffServ)
-
-<br>
-<br>
-
----
-
-<br>
-<br>
-
-# Chapter 29: Multimedia and IP Telephony (VoIP)
-
-<br>
-<br>
-
----
-
-<br>
-<br>
-
-# Chapter 30: Network Security
-
-<br>
-<br>
-
----
-
-<br>
-<br>
-
-# Chapter 31: Network Management (SNMP)
-
-<br>
-<br>
-
----
-
-<br>
-<br>
-
-# Chapter 32: Trends in Networking Technologies and Uses
-
-<br>
-<br>
-
----
-
-<br>
-<br>
 
