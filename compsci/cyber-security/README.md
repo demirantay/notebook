@@ -12,3 +12,8 @@
 - 10 - https://www.wikizeroo.org/index.php?q=aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvSW5mb3JtYXRpb25fc2VjdXJpdHk
 - 11 - https://www.studytonight.com/computer-networks/
 - 12 - Networking
+
+
+# for crpyto
+
+read this : https://www.crypto101.io/
