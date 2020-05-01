@@ -1,3 +1,66 @@
+# Chapter 4: Traditional Internet Applications
+
+- __`Introduction`__ -- 
+
+- __`Application-Layer Protocols`__ --
+
+- __`Representation And Transfer`__ --
+
+- __`Web Protocols`__ --
+
+- __`Document Representation With HTML`__ --
+
+- __`Uniform Resource Locators And Hyperlinks`__ --
+
+- __`Web Document Transfer With HTTP`__ --
+
+- __`Caching In Browsers`__ --
+
+- __`Browser Architecture`__ --
+
+- __`File Transfer Protocol (FTP)`__ --
+
+- __`FTP Communication Paradigm`__ --
+
+- __`Electronic Mail`__ --
+
+- __`The Simple Mail Transfer Protocol (SMTP)`__ --
+
+- __`ISPs, Mail Servers, And Mail Access`__ --
+
+- __`Mail Access Protocols (POP, IMAP)`__ --
+
+- __`Email Representation Standards (RFC2822, MIME)`__ --
+
+- __`Domain Name System (DNS)`__ --
+
+- __`Domain Names That Begin With www`__ --
+
+- __`The DNS Hierarchy And Server Model`__ --
+
+- __`Name Resolution`__ --
+
+- __`Caching In DNS Servers`__ --
+
+- __`Types Of DNS Entries`__ --
+
+- __`Aliases And CNAME Resource Records`__ --
+
+- __`Abbreviations And The DNS`__ --
+
+- __`Internationalized Domain Names`__ --
+
+- __`Extensible Representations (XML)`__ --
+
+<br>
+<br>
+
+---
+
+<br>
+<br>
+
+
 # Chapter 5: Overview of Data Communications
 
 <br>
