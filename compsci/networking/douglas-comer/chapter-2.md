@@ -196,11 +196,73 @@ which the server will wait for contact. Bind takes three arguments:
 that specifies the local address to be assigned to the socket, and argument addrlen is an
 integer that specifies the length of the address.
 
-- __`Socket Functions Used With The Message Paradigm`__ --
+  - After using bind to specify a protocol port, a server calls listen to place the socket
+in passive mode, which makes the socket ready to wait for contact from clients. Listen
+takes two arguments:
+    ```
+    listen(socket, queuesize)
+    ```
+    Argument socket is the descriptor of a socket, and argument queuesize specifies a length
+for the socket’s request queue.
 
-- __`Other Socket Functions`__ --
+  - A server calls accept to establish a connection with a client. If a request is present
+in the queue, accept returns immediately; if no requests have arrived, the system blocks
+the server until a client initiates a request
+    ```
+    newsock = accept(socket, caddress, caddresslen)
+    ```
+    Argument socket is the descriptor of a socket the server has created and bound to a
+specific protocol port. Argument caddress is the address of a structure of type
+sockaddr, and caddresslen is a pointer to an integer
 
-- __`Sockets, Threads, And Inheritance`__ --
+- __`Socket Functions Used With The Message Paradigm`__ -- The socket functions used to send and receive messages are more complicated than
+those used with the stream paradigm because many options are available. For example,
+a sender can choose whether to store the recipient’s address in the socket and merely
+send data or to specify the recipient’s address each time a message is transmitted.
+
+  - Functions sendto and sendmsg allow a client or server to send a message using an
+unconnected socket; both require the caller to specify a destination. Sendto uses
+separate arguments for the message and destination address
+    ```
+    sendto(socket, data, length, flags, destaddress, addresslen)
+    ```
+    The first four arguments correspond to the four arguments of the send function; the final
+two specify the address of a destination and the length of that address. Argument destaddress corresponds to a sockaddr structure
+
+  - The sendmsg function performs the same operation as sendto, but abbreviates the
+arguments by defining a structure. The shorter argument list can make programs that
+use sendmsg easier to read:
+    ```
+    sendmsg(socket, msgstruct, flags)
+    ```
+    Argument msgstruct is a structure that contains information about the destination address, the length of the address, the message to be sent, and the length of the message ... etc.
+    
+  - Function recvfrom has
+arguments that specify a location for the next incoming message and the address of the
+sender:
+    ```
+    recvfrom(socket, buffer, length, flags, sndraddr, saddrlen)
+    ```
+    The first four arguments correspond to the arguments of recv; the two additional arguments, sndraddr and saddrlen, are used to record the sender’s Internet address. Argument sndraddr is a pointer to a sockaddr structure into which the system writes the
+sender’s address, and argument saddrlen is a pointer to an integer that the system uses
+to record the length of the address.
+
+  - Function recvmsg, which is the counterpart of sendmsg, operates like recvfrom, but
+requires fewer arguments. It has the form
+    ```
+    recvmsg(socket, msgstruct, flags)
+    ```
+
+- __`Other Socket Functions`__ -- The socket API contains a variety of support functions. For example, after a server
+accepts an incoming connection request, the server can call getpeername to obtain the
+address of the remote client that initiated the connection ... etc. There are alot of other socket functions that are not covered in this tiny note file.
+
+- __`Sockets, Threads, And Inheritance`__ -- The socket API works well with concurrent servers. Although the details depend
+on the underlying operating system, implementations of the socket API adhere to the
+following inheritance principle:
+  
+  Each new thread that is created inherits a copy of all open sockets
+from the thread that created it.
 
 <br>
 <br>
@@ -210,14 +272,5 @@ integer that specifies the length of the address.
 <br>
 <br>
 
-# Chapter 4: Traditional Internet Applications
-
-<br>
-<br>
-
----
-
-<br>
-<br>
 
 
