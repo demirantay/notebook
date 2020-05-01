@@ -148,6 +148,8 @@
 
 ### Directories
 
+-  https://www.youtube.com/watch?v=eEZYDDaDeCs&t=1790    watch this for static files it is easy as fuck
+
 - Nice example is with static files. There are e.g. some CSS styles for django administration page. These needs to be in special folder and we’ll tell nginx that when website asks for file `style.css`, it should looks into `~/test_project/foo/static/style.css`
 
   But how to find all this static files? Right now they are sourced from django installation directory (probably something like `/test_project/venv/lib/python3.4/django/...`, `manage.py` has a special command for this, but first we need to tell him few details in `settings.py`.
