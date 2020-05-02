@@ -1,16 +1,50 @@
 # Chapter 4: Traditional Internet Applications
 
-- __`Introduction`__ -- 
+- __`Introduction`__ -- The previous chapter introduces the topics of Internet applications and network
+programming. The chapter explains that Internet services are defined by application
+programs, and characterizes the client-server model that such programs use to interact.
+The chapter also covers the socket API
 
-- __`Application-Layer Protocols`__ --
+- __`Application-Layer Protocols`__ -- Whenever a programmer creates two applications that communicate over a network, the programmer specifies details, such as:
+  - The syntax and semantics of messages that can be exchanged
+  - Whether the client or server initiates interaction
+  - Actions to be taken if an error arises
+  - How the two sides know when to terminate communication
+  
+  In specifying details of communication, a programmer defines an application-layer protocol. There are two broad types of application-layer protocols that depend on the intended use:
+  - Private communication. A programmer creates a pair of applications that communicate over the Internet with the intention that the
+pair is for private use. In most cases, the interaction between the
+two applications is straightforward, which means a programmer
+may choose to write code without writing a formal protocol specification.
+  - Standardized service. An Internet service is defined with the expectation that many programmers will create server software to
+offer the service or client software to access the service. In such
+cases, the application-layer protocol must be documented independent of any implementation, and the specification must be precise
+and unambiguous so that all clients and servers can interoperate
+correctly.
+  
+- __`Representation And Transfer`__ -- Application-layer protocols specify two aspects of interaction: representation and
+transfer. For a basic service, a single protocol standard can specify both aspects; more complex services use separate protocol standards to specify each aspect.
 
-- __`Representation And Transfer`__ --
+- __`Web Protocols`__ -- The World Wide Web is one of the most widely used services in the Internet. Because the Web is complex, many protocol standards have been devised to specify various aspects and details. Such as HTML, URL, HTTPS
 
-- __`Web Protocols`__ --
+- __`Document Representation With HTML`__ -- HyperText Markup Language is a representation standard for web
+pages. To permit a page to be displayed on an arbitrary device,
+HTML gives general guidelines for display and allows a browser to
+choose details.
 
-- __`Document Representation With HTML`__ --
-
-- __`Uniform Resource Locators And Hyperlinks`__ --
+- __`Uniform Resource Locators And Hyperlinks`__ -- The Web uses a syntactic form known as a Uniform Resource Locator (URL) tospecify a web page. The general form of a URL is:
+  ```
+  protocol:// computer_name:port/ document_name%parameters
+  ```
+  where protocol is the name of the protocol used to access the document,
+computer_name is the domain name of the computer on which the document resides,
+:port is an optional protocol port number at which the server is listening,
+document_name is the optional name of the document on the specified computer, and
+%parameters give optional parameters for the page.
+For example, the URL
+  ```
+  https://netbook.cs.purdue.edu/toc/toc01.htm
+  ```
 
 - __`Web Document Transfer With HTTP`__ --
 
