@@ -46,17 +46,74 @@ For example, the URL
   https://netbook.cs.purdue.edu/toc/toc01.htm
   ```
 
-- __`Web Document Transfer With HTTP`__ --
+- __`Web Document Transfer With HTTP`__ -- The HyperText Transfer Protocol (HTTP) is the primary transfer protocol that a
+browser uses to interact with a web server
+  - `GET` -- Requests a document; server responds by sending status
+information followed by a copy of the document
+  - `HEAD` -- Requests status information; server responds by sending
+status information, but does not send a copy of the document
+  - `POST` -- Sends data to a server; the server appends the data to a
+specified item (e.g., a message is appended to a list)
+  - `PUT` -- Sends data to a server; the server uses the data to completely
+replace the specified item (i.e., overwrites the previous data)
 
-- __`Caching In Browsers`__ --
+  The most common form of interaction begins when a browser requests a page from
+the server. The browser sends a GET request over the connection, and the server
+responds by sending a header, a blank line, and the requested document.
 
-- __`Browser Architecture`__ --
+  When using HTTP, a browser sends version information which allows
+a server to choose the highest version of the protocol that they both
+understand.
 
-- __`File Transfer Protocol (FTP)`__ --
+  The first line of a response header contains a status code that tells the browser
+whether the server handled the request. Status code represent the status of the state such as 200s (OK) 300s (Redirect) 400s (Client Error) 500s (Server Error)
 
-- __`FTP Communication Paradigm`__ --
+- __`Caching In Browsers`__ -- Caching provides an important optimization for web access because users tend to
+visit the same web sites repeatedly. Much of the content at a given site consists of
+large images that use the Graphics Image Format (GIF) or Joint Picture Encoding
+Group (JPEG) standards. Such images often contain backgrounds or banners that do
+not change frequently. The key idea is:
 
-- __`Electronic Mail`__ --
+  A browser can reduce download times significantly by saving a copy
+of each image in a cache on the user’s disk and using the cached
+copy.
+
+- __`Browser Architecture`__ -- Because it provides general services and supports a graphical interface, a browser
+is complex. Of course, a browser must understand HTTP, but a browser also provides
+support for other protocols. In particular, because a URL can specify a protocol, a
+browser must contain client code for each of the protocols used. For each service, the
+browser must know how to interact with a server and how to interpret responses. For
+example, a browser must know how to access the FTP service discussed in the next section.
+
+- __`File Transfer Protocol (FTP)`__ -- A file is the fundamental storage abstraction. Because a file can hold an arbitrary
+object (e.g., a document, spreadsheet, computer program, graphic image, or data), a facility that sends a copy of a file from one computer to another provides a powerful
+mechanism for the exchange of data. We use the term file transfer for such a service. The most widely-deployed file transfer service in the Internet uses the File
+Transfer Protocol (FTP). 
+
+- __`FTP Communication Paradigm`__ -- One of the most interesting aspects of FTP arises from the way a client and server
+interact. Overall, the approach seems straightforward: a client establishes a connection
+to an FTP server and sends a series of requests to which the server responds. Unlike
+HTTP, an FTP server does not send responses over the same connection on which the
+client sends requests. Instead, the original connection the client creates, called a control
+connection, is reserved for commands Each time the server needs to download or
+upload a file, the server opens a new connection. To distinguish them from the control
+connection, the connections used to transfer files are called data connections
+
+- __`Electronic Mail`__ -- Although services such as instant messaging have become popular, email remains
+one of the most widely used Internet applications s, even early email software was divided into two conceptually separate pieces:
+  - An email interface application
+  - A mail transfer program
+  
+  A user invokes the email interface application directly. The interface provides
+mechanisms that allow a user to compose and edit outgoing messages as well as read
+and process incoming email. The email interface application does not act as a client or
+server, and does not transfer messages to other users. Instead, the interface application
+reads messages from the user’s mailbox (i.e., a file on the user’s computer) and deposits
+outgoing messages in an outgoing mail queue (typically a folder on the user’s disk).
+Separate programs known as a mail transfer program and a mail server handle transfer.
+The mail transfer program acts as a client to send a message to the mail server on the
+destination computer; the mail server accepts incoming messages and deposits each in
+the appropriate user’s mailbox
 
 - __`The Simple Mail Transfer Protocol (SMTP)`__ --
 
