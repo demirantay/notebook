@@ -115,15 +115,59 @@ The mail transfer program acts as a client to send a message to the mail server 
 destination computer; the mail server accepts incoming messages and deposits each in
 the appropriate user’s mailbox
 
-- __`The Simple Mail Transfer Protocol (SMTP)`__ --
+- __`The Simple Mail Transfer Protocol (SMTP)`__ -- The Simple Mail Transfer Protocol (SMTP) is the standard protocol that a mail transfer program uses to transfer a mail message across the Internet to a server.
 
-- __`ISPs, Mail Servers, And Mail Access`__ --
+  The most unexpected aspect of SMTP arises from its restriction to textual content.
+A later section explains the MIME standard that allows email to include attachments
+such as graphic images or binary files, but the underlying SMTP mechanism is restricted to text.
 
-- __`Mail Access Protocols (POP, IMAP)`__ --
+- __`ISPs, Mail Servers, And Mail Access`__ -- As the Internet expanded to include consumers, a new paradigm arose for email. Because most users leave their computer running continuously and do not know how to
+configure and manage an email server, ISPs began offering email services. In essence,
+an ISP runs an email server and provides a mailbox for each subscriber. Email access follows one of two forms:
+  - A special-purpose email interface application
+  - A web browser that accesses an email web page
+  
+   The chief advantage
+of using a web page for email arises from the ability to read email from any computer
+— a user does not need to run a special mail interface application
 
-- __`Email Representation Standards (RFC2822, MIME)`__ --
+- __`Mail Access Protocols (POP, IMAP)`__ -- A variety of mechanisms have been proposed for email access. Some ISPs provide
+free email access software to their subscribers. In addition, two standard email access
+protocols have been created. 
+  - `POP3` -- Post Office Protocol version 3
+  - `IMAP` -- Internet Mail Access Protocol
 
-- __`Domain Name System (DNS)`__ --
+  Although they offer the same basic services, the two protocols differ in many details. In particular, each provides its own authentication mechanism that a user follows
+to identify themselves
+
+- __`Email Representation Standards (RFC2822, MIME)`__ -- Two important email representation standards exist:
+  - RFC2822 Mail Message Format
+  - Multi-purpose Internet Mail Extensions (MIME)
+  
+  Multi-purpose Internet Mail Extensions (MIME). Recall that SMTP only supports
+text messages. The MIME standard extends the functionality of email to allow the
+transfer of non-text data in a message. MIME specifies how a binary file can be encoded into printable characters, included in a message, and decoded by the receiver.
+
+  The MIME standard inserts extra header lines to allow non-text attachments to be sent within an email message. An attachment is encoded as printable letters, and a separator line appears before each
+attachment.
+
+- __`Domain Name System (DNS)`__ -- The Domain Name System (DNS) provides a service that maps human-readable
+symbolic names to computer addresses. Browsers, mail software, and most other Internet applications use the DNS. The system provides an interesting example of clientserver interaction because the mapping is not performed by a single server
+
+  For example, a computer in the Computer Science Department at Purdue University has the domain name:  - 
+  - `mordred.cs.purdue.edu`
+  and a computer at Cisco, Incorporated has the domain name:
+  - `anakin.cisco.com`
+  Domain names are hierarchical, with the most significant part of the name on the
+right. The left-most segment of a name (mordred and anakin in the examples) is the
+name of an individual computer. Other segments in a domain name identify the group
+that owns the name. For example, the segment purdue gives the name of a university,
+and cisco gives the name of a company. DNS does not specify the number of segments
+in a name. Instead, each organization can choose how many segments to use for computers inside the organization and what the segments represent
+
+  An organization applies for a name under one of the existing top-level domains.
+For example, most U.S. corporations choose to register under the com domain Once the name has been assigned another organization named Foobar can apply for
+foobar.biz or foobar.org, but not foobar.com.
 
 - __`Domain Names That Begin With www`__ --
 
