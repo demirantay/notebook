@@ -169,13 +169,45 @@ in a name. Instead, each organization can choose how many segments to use for co
 For example, most U.S. corporations choose to register under the com domain Once the name has been assigned another organization named Foobar can apply for
 foobar.biz or foobar.org, but not foobar.com.
 
-- __`Domain Names That Begin With www`__ --
+- __`Domain Names That Begin With www`__ -- Many organizations assign domain names that reflect the service a computer provides. For example, a computer that runs a server for the File Transfer Protocol might
+be named:
+  ```
+  ftp.foobar.com
+  ```
+  Similarly, a computer that runs a web server, might be named:
+  ```
+  www.foobar.com
+  ```
+  Such names are mnemonic, but are not required. In particular, the use of www to
+name computers that run a web server is merely a convention — an arbitrary computer
+can run a web server, even if the computer’s domain name does not contain www.
+Furthermore, a computer that has a domain name beginning with www is not required to
+run a web server is merely a convention to help humans.
 
-- __`The DNS Hierarchy And Server Model`__ --
+- __`The DNS Hierarchy And Server Model`__ -- One of the main features of the Domain Name System is autonomy — the system
+is designed to allow each organization to assign names to computers or to change those
+names without informing a central authority. To achieve autonomy, each organization
+is permitted to operate DNS servers for its part of the hierarchy. Thus, Purdue University operates a server for names ending in purdue.edu, and IBM Corporation operates a
+server for names ending in ibm.com.
 
-- __`Name Resolution`__ --
+  For example, a small
+organization that only has a few computers can contract with an ISP to run a DNS
+server. A large organization that runs its own server can choose to place all names for
+the organization in a single physical server, or can choose to divide its names among
+multiple server
 
-- __`Caching In DNS Servers`__ --
+- __`Name Resolution`__ -- The translation of a domain name into an address is called name resolution, and
+the name is said to be resolved to an address. Software to perform the translation is
+known as a name resolver (or simply resolver). In the socket API, for example, the
+resolver is invoked by calling function gethostbyname. The resolver becomes a client,
+contacts a DNS server, and returns an answer to the caller
+
+- __`Caching In DNS Servers`__ -- The locality of reference principle that forms the basis for caching applies to the
+Domain Name System in two ways:
+  - Spatial: A user tends to look up the names of local computers more
+often than the names of remote computers
+  - Temporal: A user tends to look up the same set of domain names
+repeatedly
 
 - __`Types Of DNS Entries`__ --
 
