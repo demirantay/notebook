@@ -209,15 +209,54 @@ often than the names of remote computers
   - Temporal: A user tends to look up the same set of domain names
 repeatedly
 
-- __`Types Of DNS Entries`__ --
+- __`Types Of DNS Entries`__ -- Each entry in a DNS database consists of three items: a domain name, a record
+type, and a value. The record type specifies how the value is to be interpreted (e.g., that
+the value is an IP address). More important, a query sent to a DNS server specifies
+both a domain name and a type; the server only returns a binding that matches the type
+of the query The principal type maps a domain name to an IP address.
 
-- __`Aliases And CNAME Resource Records`__ --
+- __`Aliases And CNAME Resource Records`__ -- The DNS offers a CNAME type that is analogous to a symbolic link in a file system — the entry provides an alias for another DNS entry. To understand how aliases
+can be useful, suppose Foobar Corporation has two computers named
+hobbes.foobar.com and calvin.foobar.com. Further suppose that Foobar decides to
+run a web server on computer hobbes, and wants to follow the convention of using the
+name www for the computer that runs the organization’s web server. Although the organization could choose to rename computer hobbes, a much easier solution exists: the
+organization can create a CNAME entry for www.foobar.com that points to hobbes.
 
-- __`Abbreviations And The DNS`__ --
+- __`Internationalized Domain Names`__ -- Because it uses the ASCII character set, the DNS cannot store names in alphabets
+that are not represented in ASCII. In particular, languages such as Russian, Greek,
+Chinese, and Japanese each contain characters for which no ASCII representation exists.
+Many European languages use diacritical marks that cannot be represented in ASCII.
+For years, the IETF debated modifications and extensions of the DNS to accommodate international domain names. After considering many proposals, the IETF chose an
+approach known as Internationalizing Domain Names in Applications (IDNA). Instead
+of modifying the underlying DNS, IDNA uses ASCII to store all names. That is, when
+given a domain name that contains a non-ASCII character, IDNA translates the name
+into a sequence of ASCII characters, and stores the result in the DNS.
 
-- __`Internationalized Domain Names`__ --
+- __`Extensible Representations (XML)`__ -- The traditional application protocols covered in this chapter each employ a fixed
+representation. That is, the application protocol specifies an exact set of messages that
+a client and server can exchange as well as the exact form of data that accompanies the
+message.
 
-- __`Extensible Representations (XML)`__ --
+  The alternative to a fixed representation is an extensible system that allows a
+sender to specify the format of data. One standard for extensible representation has become widely accepted: the Extensible Markup Language (XML). XML resembles
+HTML in the sense that both languages embed tags into a text document
+
+  Instead, XML describes the structure of data and provides names for each
+field. Tags in XML are well-balanced — each occurrence of a tag <X> must be followed by an occurrence of </X>. Furthermore, because XML does not assign any
+meaning to tags, tag names can be created as needed. In particular, tag names can be
+selected to make data easy to parse or access. For example, if two companies agree to
+exchange corporate telephone directories, they can define an XML format that has data
+items such as an employee’s name, phone number, and office
+  ```xml
+  <ADDRESS>
+    <NAME>
+      <FIRST> John </FIRST>
+      <LAST> Public </LAST>
+    </NAME>
+    <OFFICE> Room 320 </OFFICE>
+    <PHONE> 765-555-1234 </PHONE>
+  </ADDRESS>
+  ```
 
 <br>
 <br>
@@ -230,46 +269,42 @@ repeatedly
 
 # Chapter 5: Overview of Data Communications
 
-<br>
-<br>
+- __`Introduction`__ -- The first part of the text discusses network programming and reviews Internet applications. The chapter on socket programming explains the API that operating systems
+provide to application software, and shows that a programmer can create applications
+that use the Internet without understanding the underlying mechanisms. In the
+remainder of the text, we will learn about the complex protocols and technologies that
+support communication, and see that understanding the complexity can help programmers write better code.
 
----
+  This part of the text explores the transmission of information across physical
+media, such as wires, optical fibers, and radio waves More important, data communications tells us what transfers are theoretically possible
+as well as how the reality of the physical world limits practical transmission systems
 
-<br>
-<br>
+- __`The Essence Of Data Communications`__ -- Because it involves the transmission of information over physical media, data communications touches on physics. The subject draws on ideas about electric current,
+light, and other forms of electro-magnetic radiation. Because information is digitized
+and digital data is transmitted, data communications uses mathematics and includes
+various forms of analysis. Finally, because the ultimate goal is to develop practical
+ways to design and build transmission systems, data communications focuses on
+developing techniques that electrical engineers can use. (so basically electrical engineering, physics, mathematics)
 
-# Chapter 6: Information Sources and Signals
-
-<br>
-<br>
-
----
-
-<br>
-<br>
-
-
-# Chapter 7: Transmission Media
-
-<br>
-<br>
-
----
-
-<br>
-<br>
-
-# Chapter 8: Reliablity and Channel Coding
-
-<br>
-<br>
-
----
-
-<br>
-<br>
-
-# Chapter 9: Transmission Modes
+- __` The Subtopics Of Data Communications`__ -- To simplify understanding, engineers have devised a conceptual framework for
+data communications systems. The framework divides the entire subject into a set of
+subtopics.The following paragraphs explain the subtopics. Successive chapters each examine one of the conceptual subtopics:
+  - `Information Sources`. The source of information can be either analog or digital. Important concepts include characteristics of signals,
+such as amplitude, frequency, and phase, and classification as either periodic or aperiodic.
+  - `Source Encoder and Decoder`. Once information has been digitized, digital representations can be transformed and converted.
+  - `Encryptor and Decryptor`. To protect information and keep it
+private, the information can be encrypted (i.e., scrambled) before
+transmission and decrypted upon reception.
+  - `Channel Encoder and Decoder`. Channel coding is used to detect
+and correct transmission errors. Important topics include methods
+to detect and limit errors, and practical techniques like parity
+checking, checksums ... etc.
+  - `Multiplexor and Demultiplexor`. Multiplexing refers to the way information from multiple sources is combined for transmission across a shared medium
+  - `Modulator and Demodulator`. Modulation refers to the way electromagnetic radiation is used to send information. Concepts include both analog and digital modulation schemes
+  - `Physical Channel and Transmission`. The subtopic includes
+transmission media and transmission modes. Important concepts
+include bandwidth, electrical noise and interference, and channel
+capacity,
 
 <br>
 <br>
@@ -279,232 +314,4 @@ repeatedly
 <br>
 <br>
 
-# Chapter 10: Modulation and Modems
 
-<br>
-<br>
-
----
-
-<br>
-<br>
-
-# Chapter 11: Multiplexing and Demultiplexing (Channelzation)
-
-<br>
-<br>
-
----
-
-<br>
-<br>
-
-# Chapter 12: Access and Interconnection Techonologies
-
-<br>
-<br>
-
----
-
-<br>
-<br>
-
-# Chapter 13: Local Area Netowkrs:Packets, Frames and Topologies
-
-<br>
-<br>
-
----
-
-<br>
-<br>
-
-# Chapter 14: The IEEE MAC Sub-Layer 
-
-<br>
-<br>
-
----
-
-<br>
-<br>
-
-# Chapter 15: Wired LAN Techonology (Ethernet And 802.3)
-
-<br>
-<br>
-
----
-
-<br>
-<br>
-
-# Chapter 16: Wireless Networking Technologies
-
-<br>
-<br>
-
----
-
-<br>
-<br>
-
-# Chapter 17: LAN Extensions: Fiber Modems, Repeaters, Bridges and Switches
-
-<br>
-<br>
-
----
-
-<br>
-<br>
-
-# Chapter 18: WAN Technologies and Dynamic Routing
-
-<br>
-<br>
-
----
-
-<br>
-<br>
-
-# Chapter 19: Networking Technologies Past and Present
-
-<br>
-<br>
-
----
-
-<br>
-<br>
-
-# Chapter 20: Internetworking: Concepts Architecture and Protocols
-
-<br>
-<br>
-
----
-
-<br>
-<br>
-
-# Chapter 21: IP:Internet Adressing
-
-<br>
-<br>
-
----
-
-<br>
-<br>
-
-# Chapter 22: Datagram Forwarding
-
-<br>
-<br>
-
----
-
-<br>
-<br>
-
-# Chapter 23: Support Protocols and Technologies
-
-<br>
-<br>
-
----
-
-<br>
-<br>
-
-# Chapter 24: The Future IP (IPv6)
-
-<br>
-<br>
-
----
-
-<br>
-<br>
-
-# Chapter 25: UDP: Datagram Transport Service
-
-<br>
-<br>
-
----
-
-<br>
-<br>
-
-# Chapter 26: TCP: Reliable Transport Service
-
-<br>
-<br>
-
----
-
-<br>
-<br>
-
-# Chapter 27: Internet Routing and Routing Protocols
-
-<br>
-<br>
-
----
-
-<br>
-<br>
-
-# Chapter 28: Network Performance (QoS and DiffServ)
-
-<br>
-<br>
-
----
-
-<br>
-<br>
-
-# Chapter 29: Multimedia and IP Telephony (VoIP)
-
-<br>
-<br>
-
----
-
-<br>
-<br>
-
-# Chapter 30: Network Security
-
-<br>
-<br>
-
----
-
-<br>
-<br>
-
-# Chapter 31: Network Management (SNMP)
-
-<br>
-<br>
-
----
-
-<br>
-<br>
-
-# Chapter 32: Trends in Networking Technologies and Uses
-
-<br>
-<br>
-
----
-
-<br>
-<br>
