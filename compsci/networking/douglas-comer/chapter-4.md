@@ -146,11 +146,22 @@ the effect of an error — if any item in the sequence is lost or damaged, all s
 values will be misinterpreted. Thus, communication systems that expect data values to
 be lost or changed during transmission usually use pulse code modulation (PCM).
 
-- __`The Nyquist Theorem And Sampling Rate`__ --
+- __`The Nyquist Theorem And Sampling Rate`__ -- Whether pulse code or delta modulation is used, the analog signal must be sampled. How frequently should an analog signal be sampled? A mathematician named Nyquist discovered the answer to the question of how
+much sampling is required
+  ```
+  sampling rate = 2 × f max
+  ```
+  where f max is the highest frequency in the composite signal. so bsically  sample a
+signal at least twice as fast as the highest frequency that must be preserved.
 
-- __`Nyquist Theorem And Telephone System Transmission`__ --
+- __`Encoding And Data Compression`__ -- We use the term data compression to refer to a technique that reduces the number
+of bits required to represent data. Data compression is especially relevant to a communication system because reducing the number of bits used to represent data reduces the
+time required for transmission. That is, a communication system can be optimized by
+compressing data before transmission. 
 
-- __`Encoding And Data Compression`__ --
+  Compression is lossy or lossless. Lossy compression is most appropriate for images, audio, or video that will be viewed by humans because loss can be controlled to
+keep changes below the threshold of human perception. Lossless compression is most
+appropriate for documents or data that must be preserved exactlyWe will see this in later chapters. But it is good to mention it here.
 
 <br>
 <br>
@@ -162,6 +173,50 @@ be lost or changed during transmission usually use pulse code modulation (PCM).
 
 
 # Chapter 7: Transmission Media
+
+- __`Introduction`__ --
+
+- __`Guided And Unguided Transmission`__ --
+
+- __`A Taxonomy By Forms Of Energy`__ --
+
+- __`Background Radiation And Electrical Noise`__ --
+
+- __`Twisted Pair Copper Wiring`__ --
+
+- __`Shielding: Coaxial Cable And Shielded Twisted Pair`__ --
+
+- __`Categories Of Twisted Pair Cable`__ --
+
+- __`Media Using Light Energy And Optical Fibers`__ --
+
+- __`Types Of Fiber And Light Transmission`__ --
+
+- __`Optical Fiber Compared To Copper Wiring`__ --
+
+- __`InfraRed Communication Technologies`__ --
+
+- __`Point-To-Point Laser Communication`__ --
+
+- __`Electromagnetic (Radio) Communication`__ --
+
+- __`Signal Propagation`__ --
+
+- __`Types Of Satellites`__ --
+
+- __`GEO Communication Satellites`__ --
+
+- __`GEO Coverage Of The Earth`__ --
+
+- __`Low Earth Orbit (LEO) Satellites And Clusters`__ --
+
+- __`Tradeoffs Among Media Types`__ --
+
+- __`Measuring Transmission Media`__ --
+
+- __`The Effect Of Noise On Communication`__ --
+
+- __`The Significance Of Channel Capacity,`__ --
 
 <br>
 <br>
