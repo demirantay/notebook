@@ -33,6 +33,8 @@
   
   
 ## Library Overview
+
+- Passlib’s contents can be roughly grouped into four categories: password hashes, password contexts, two-factor authentication, and other utility functions.
   
 ## New Application Quickstart Guide
   
