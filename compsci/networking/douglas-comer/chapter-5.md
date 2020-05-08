@@ -83,11 +83,11 @@ message to be arbitrarily long, and computes a checksum over the entire message
   To compute a checksum, a sender adds the numeric values of the 16-bit integers,
 and transmits the result. To validate the message, a receiver performs the same computation.
 
-- __`Cyclic Redundancy Codes (CRCs)`__ --
-
-- __`An Efficient Hardware Implementation Of CRC`__ --
-
-- __`Automatic Repeat reQuest (ARQ) Mechanisms`__ --
+- __`Automatic Repeat reQuest (ARQ) Mechanisms`__ -- Recall that an ARQ approach to error correct requires a sender and receiver to
+communicate metainformation. That is, whenever one side sends a message to another,
+the receiving side sends a short acknowledgement message back. For example, if A
+sends a message to B, B sends an acknowledgement back to A. Once it receives an acknowledgement, A knows that the message arrived correctly. If no acknowledgement is
+received after T time units, A assumes the message was lost and retransmits a copy
 
 <br>
 <br>
@@ -98,6 +98,44 @@ and transmits the result. To validate the message, a receiver performs the same 
 <br>
 
 # Chapter 9: Transmission Modes
+
+- __`Introduction`__ --  This chapter continues the discussion by focusing on the ways data is
+transmitted. The chapter introduces common terminology, explains the advantages and
+disadvantages of parallelism, and discusses the important concepts of synchronous and
+asynchronous communication
+
+- __`A Taxonomy Of Transmission Modes`__ -- We use the term transmission mode to refer to the manner in which data is sent
+over the underlying medium. Transmission modes can be divided into two fundamental
+categories:
+  - Serial — one bit is sent at a time (sync, async)
+  - Parallel — multiple bits are sent at the same time
+
+- __`Parallel Transmission`__ -- The term parallel transmission refers to a transmission mechanism that transfers
+multiple data bits at the same time over separate media. In general, parallel transmission is used with a wired medium that uses multiple, independent wires. 
+
+  A parallel mode of transmission has two chief advantages:
+  - High speed. 
+  - Match to underlying hardware (underlying hardware, circuits are parallel too)
+
+- __`Serial Transmission`__ -- 
+
+- __`Transmission Order: Bits And Bytes`__ -- 
+
+- __`Timing Of Serial Transmission`__ -- 
+
+- __`Asynchronous Transmission`__ -- 
+
+- __`RS-232 Asynchronous Character Transmission`__ -- 
+
+- __`Synchronous Transmission`__ -- 
+
+- __`Bytes, Blocks, And Frames`__ -- 
+
+- __`Isochronous Transmission`__ -- 
+
+- __`Simplex, Half-Duplex, and Full-Duplex Transmission`__ -- 
+
+- __`DCE and DTE Equipment`__ -- 
 
 <br>
 <br>
