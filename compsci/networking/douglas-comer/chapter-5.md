@@ -117,25 +117,77 @@ multiple data bits at the same time over separate media. In general, parallel tr
   - High speed. 
   - Match to underlying hardware (underlying hardware, circuits are parallel too)
 
-- __`Serial Transmission`__ -- 
+- __`Serial Transmission`__ -- The alternative to parallel transmission, known as serial transmission, sends one
+bit at a time. With the emphasis on speed, it may seem that anyone designing a data
+communications system would choose parallel transmission. However, most communication systems use serial mode. There are two main reasons. First, serial networks can
+be extended over long distances at much less cost because fewer physical wires are
+needed and intermediate electronic components are less expensive. Second, using only
+one physical wire means that there is never a timing problem caused by one wire being
+slightly longer than another (a difference of millimeters can be significant in a highspeed communication system).
 
-- __`Transmission Order: Bits And Bytes`__ -- 
+- __`Transmission Order: Bits And Bytes`__ -- The serial transmission mode introduces an interesting question: when sending bits,
+which bit should be sent across the medium first? For example, consider an integer.
+Should a sender transmit the Most Significant Bit (MSB) or the Least Significant Bit
+(LSB) first?
 
-- __`Timing Of Serial Transmission`__ -- 
+  Engineers use the term little-endian to describe a system that sends the LSB first,
+and the term big-endian to describe a system that sends the MSB first. Either form can
+be used, but the sender and receiver must agree.
 
-- __`Asynchronous Transmission`__ -- 
+- __`Timing Of Serial Transmission`__ -- Serial transmission mechanisms can be divided into three broad categories, depending on how transmissions are spaced in time
+  - Asynchronous transmission can occur at any time, with an arbitrary
+delay between the transmission of two data items
+  - Synchronous transmission occurs continuously with no gap
+between the transmission of two data items.
+  - Isochronous transmission occurs at regular intervals with a fixed
+gap between the transmission of two data items
+  
+- __`Asynchronous Transmission`__ -- Because it permits a sender to remain idle an arbitrarily long time
+between transmissions, an asynchronous transmission mechanism
+sends extra information before each transmission that allows a receiver to synchronize with the signal. The additional signal usually states if the transmission started or finished.
 
-- __`RS-232 Asynchronous Character Transmission`__ -- 
+- __`RS-232 Asynchronous Character Transmission`__ -- The RS-232 standard used for asynchronous, serial communication
+over short distances precedes each character with a start bit, sends
+each bit of the character, and follows each character with an idle
+period at least one bit long (stop bit).
 
-- __`Synchronous Transmission`__ -- 
+- __`Synchronous Transmission`__ -- The chief alternative to asynchronous transmission is known as synchronous
+transmission. At the lowest level, a synchronous mechanism transmits bits of data continually, with no idle time between bits. The chief advantage of a synchronous mechanism arises because the sender and receiver constantly remain synchronized, which means less synchronization overhead.
 
-- __`Bytes, Blocks, And Frames`__ -- 
+- __`Bytes, Blocks, And Frames`__ -- Although the underlying mechanism transmits bits continuously, the
+use of an idle sequence and framing permits a synchronous transmission mechanism to provide a byte-oriented interface and to allow idle
+gaps between blocks of data.
 
-- __`Isochronous Transmission`__ -- 
+- __`Isochronous Transmission`__ -- The third type of serial transmission system does not provide a new underlying
+mechanism. Instead, it can be viewed as an important way to use synchronous
+transmission. Known as isochronous transmission†, the system is designed to provide
+steady bit flow for multimedia applications that contain voice or video. Delivering such
+data at a steady rate is essential because variations in delay, which are known as jitter,
+can disrupt reception (i.e., cause pops or clicks in audio or make video freeze for a short
+time).
 
-- __`Simplex, Half-Duplex, and Full-Duplex Transmission`__ -- 
+- __`Simplex, Half-Duplex, and Full-Duplex Transmission`__ -- A communications channel is classified as one of three types, depending on the
+direction of transfer:
+  - Simplex
+  - Full-Duplex
+  - Half-Duplex
+  
+  Simplex. A simplex mechanism is the easiest to understand. As the name implies,
+a simplex mechanism can only transfer data in a single direction
 
-- __`DCE and DTE Equipment`__ -- 
+  Full-Duplex. A full-duplex mechanism is also straightforward: the underlying system allows transmission in two directions simultaneously. Typically a full-duplex
+mechanism consists of two simplex mechanisms, one carrying information in each direction
+
+  Half-Duplex. A half-duplex mechanism involves a shared transmission medium.
+The shared medium can be used for communication in each direction, but the communication cannot proceed simultaneously
+
+- __`DCE and DTE Equipment`__ -- The terms Data Communications Equipment (DCE) and Data Terminal Equipment
+(DTE) were originally created by AT&T to distinguish between the communications
+equipment owned by the phone company and the terminal equipment owned by a subscriber
+
+  The terminology persists: if a business leases a data circuit from a phone company,
+the phone company installs DCE equipment at the business, and the business purchases
+DTE equipment that attaches to the phone company’s equipment.
 
 <br>
 <br>
