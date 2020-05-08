@@ -199,6 +199,80 @@ DTE equipment that attaches to the phone company’s equipment.
 
 # Chapter 10: Modulation and Modems
 
+- __`Introduction`__ -- This chapter continues the discussion of data communications by focusing on the
+use of high-frequency signals to carry information. The chapter discusses how information is used to change a high-frequency electromagnetic wave, explains why the technique is important, and describes how analog and digital inputs are used.
+
+- __`Carriers, Frequency, And Propagation`__ -- Many long-distance communication systems use a continuously oscillating electromagnetic wave called a carrier. The system makes small changes to the carrier that
+represent information being sent. To understand why carriers are important, recall from
+Chapter 7 that the frequency of electromagnetic energy determines how the energy
+propagates. One motivation for the use of carriers arises from the desire to select a frequency that will propagate well, independent of the rate that data is being sent. 
+
+- __`Analog Modulation Schemes`__ -- We use the term modulation to refer to changes made in a carrier according to the
+information being sent.
+
+  In essence, a sender must change one of the fundamental characteristics of the wave.
+Thus, there are three primary techniques that modulate an electromagnetic carrier according to a signal:
+  - Amplitude modulation
+  - Frequency modulation
+  - Phase shift modulation
+
+- __`Amplitude Modulation`__ -- A technique known as amplitude modulation varies the amplitude of a carrier in
+proportion to the information being sent The carrier continues oscillating at a fixed frequency, but the amplitude of the wave varies.
+
+  Amplitude modulation is easy to understand because only the amplitude (i.e., magnitude) of the sine wave is modified.
+
+- __`Frequency Modulation`__ -- An alternative to amplitude modulation is known as frequency modulation. When
+frequency modulation is employed, the amplitude of the carrier remains fixed, but the
+frequency changes according to the signal: when the signal is stronger, the carrier frequency increases slightly, and when the signal is weaker, the carrier frequency decreases
+slightly.
+
+- __`Phase Shift Modulation`__ -- The third property of a sine wave is its phase, the offset from a reference time at
+which the sine wave begins. It is possible to use changes in phase to represent a signal.
+We use the term phase shift to characterize such changes. Although modulating phase is possible in theory, the technique is seldom used
+with an analog signal. 
+
+- __`Modulation, Digital Input, And Shift Keying`__ -- The description of modulation above shows how an analog information signal is
+used to modulate a carrier. The question arises, “how can digital input be used?” The
+answer lies in straightforward modifications of the modulation schemes described
+above: instead of modulation that is proportional to a continuous signal, digital schemes
+use discrete values. Furthermore, to distinguish between analog and digital modulation,
+we use the term shift keying rather than modulation
+
+- __`Phase Shift And A Constellation Diagram`__ --  The chief advantage of mechanisms like phase shift keying arises from
+the ability to represent more than one data bit at a given change. A
+constellation diagram shows the assignment of data bits to phase
+changes.
+
+  Although many variations of phase shift keying exist, noise and distortion limit the ability of practical systems to distinguish among arbitrarily small differences in phase changes
+
+- __`Modem Hardware For Modulation And Demodulation`__ -- A hardware mechanism that accepts a sequence of data bits and applies modulation
+to a carrier wave according to the bits is called a modulator; a hardware mechanism that
+accepts a modulated carrier wave and recreates the sequence of data bits that was used
+to modulate the carrier is called a demodulator.
+
+  Thus, transmission of data requires a
+modulator at one end of the transmission medium and a demodulator at the other. In
+practice, most communication systems are full duplex communication, which means
+each location needs both a modulator, which is used to send data, and a demodulator,
+which is used to receive data. To keep cost low and make the pair of devices easy to
+install and operate, manufacturers combine modulation and demodulation mechanisms
+into a single device called a modem
+
+- __`Optical And Radio Frequency Modems`__ -- In addition to dedicated wires, modems are also used with other media, including
+RF transmission and optical fibers. For example, a pair of Radio Frequency (RF)
+modems can be used to send data via radio, and a pair of optical modems can be used to
+send data across a pair of optical fibers. Although such modems use entirely different
+media than modems that operate over dedicated wires, the principle remains the same:
+at the sending end, a modem modulates a carrier; at the receiving end, data is extracted
+from the modulated carrier.
+
+- __`Dialup Modems`__ -- 
+
+- __`QAM Applied To Dialup`__ -- 
+
+- __`V.32 and V.32bis Dialup Modems`__ -- 
+ 
+
 <br>
 <br>
 
