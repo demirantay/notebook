@@ -107,6 +107,8 @@ Try to specilize in a field such as these, just chose one or two. However, remem
   - [ ] Book: [The Algorithm Design Manual](https://www.amazon.com/Algorithm-Design-Manual-Steven-Skiena/dp/1848000693/?pldnSite=1) There are [vidoes](http://www3.cs.stonybrook.edu/~algorith/video-lectures/) avilable too.
   - [ ] Book: CSLR introduction to Algorithms
   - [ ] Project: Impelement Algorithms and Data Structures in any language. [Do all of these here](https://github.com/trekhleb/javascript-algorithms) (You alread y started implementing them in a repo)  
+  - [ ] Project: Do algorithm Visualizations
+  - [ ] Optional: Do more books and projects if you want to focus on this subject.
  
 ### Operating Systems
 
@@ -117,7 +119,7 @@ Try to specilize in a field such as these, just chose one or two. However, remem
    - [ ] Guide: Follow [osdev.wiki](https://wiki.osdev.org/Main_Page)
    - [ ] Tutorial: [little OS tutorial](https://littleosbook.github.io/)
    - [ ] Project : Code a small Operating System
-   - [ ] Optional: Focus on more textbooks and projects if you want to.
+     - [ ] Optional: Do more books and projects if you want to focus on this subject.
    
 ### Computer Networking
 
@@ -130,7 +132,7 @@ Try to specilize in a field such as these, just chose one or two. However, remem
    - [ ] Project: Do the ben eaters How to create a internet [tutorial from here[(https://eater.net/inet)
    - [ ] Project : Build differnt types of servers, web, ftp ... etc.
    - [ ] Project: Try to build your own internet. Understand how to connect to the WWW.
-   - [ ] Optional: Update more resources if you want to focus on networking.
+    - [ ] Optional: Do more books and projects if you want to focus on this subject.
    
  ### Databases
 
@@ -142,6 +144,7 @@ Try to specilize in a field such as these, just chose one or two. However, remem
    - [ ] Book : [Red Book](http://www.redbook.io/) -- your next stop after berkley course
    - [ ] Course : [Stanford Course](https://lagunita.stanford.edu/courses/DB/2014/SelfPaced/about) -- Take all mini courses
    - [ ] Project idea: Write a simple database to understand and practice what you have learned
+   - [ ] Optional: Do more books and projects if you want to focus on this subject.
 
 ### Languages and Compilers
 
@@ -153,9 +156,7 @@ Try to specilize in a field such as these, just chose one or two. However, remem
    - [ ] Book: Appel. Modern Compiler implementation in C/Java/ML.
    - [ ] Project : Create a basic compiler for your own language-to-assembly.
    - [ ] Project : Build a interpreter and a interpereted language like python.
-   - [ ] Optional: Book: Robert Morgan. Building an Optimizing compiler.
-   - [ ] Optional: Book: The Dragon Book (only do it if you want to be advanced, optional)
-   - [ ] Optional: Project : Build and maintain a optimized compiler.
+   - [ ] Optional: Do more books and projects if you want to focus on this subject.
    
    
 ### Distributed Systems
@@ -163,19 +164,20 @@ Try to specilize in a field such as these, just chose one or two. However, remem
   > Research books like you did for computer architecture. Through reddit, forums ... etc. Then start.
    - [ ] Book : [Distibuted Systems, 3rd edition](https://www.distributed-systems.net/index.php/books/distributed-systems-3rd-edition-2017/)
    - [ ] Project: Do something to implement the theory you have learned.
+   - [ ] Optional: Do more books and projects if you want to focus on this subject.
    
 ## Final: Feynman Notes
 
 > Note: Taking Feynman styled notes are extremly hard. Remember it is not just an overview I will need to break down all of the subjects into smaller pieces and than explain them in a feynman note. Than piece them all together in a final feynman note container.
 
-- [ ] Programming -- feynman it
-- [ ] Computer Architecture -- feynman it
-- [ ] Algorithms and Data Strcutures -- feynman it
-- [ ] Operating Systems -- feynman it
-- [ ] Computer Networking -- feynman it
-- [ ] Databases -- feynman it
-- [ ] Languages and Compilers -- feynman it
-- [ ] Distributed Systems -- feynman it
+- [ ] Programming 
+- [ ] Computer Architecture 
+- [ ] Algorithms and Data Strcutures
+- [ ] Operating Systems 
+- [ ] Computer Networking 
+- [ ] Databases 
+- [ ] Languages and Compilers 
+- [ ] Distributed Systems 
 - [ ] Re-iterate through feynman boxes above
 
 <br>
