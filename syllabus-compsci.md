@@ -189,19 +189,6 @@ Try to specilize in a field such as these, just chose one or two. However, remem
 <br>
 <br>
 
-# Practical
-
-> From the specializations above I chose full-stack/dev-ops. So if you are reading this and dont like it, tough shit create your own syllabus. Each category (intro, frontend, backend, devops) is divided into 3 packets. First packet is learning the subjects. Second packet is for feynman-noting the subjects. Third one contains the practice projects.
-
-
-# Artifical Intelligence 
-
-- [ ] start here and build up the course: https://www.reddit.com/r/learnmachinelearning/comments/cxrpjz/a_clear_roadmap_for_mldl/
-- [ ] https://www.tutorialspoint.com/artificial_intelligence/index.htm 
-
-<br>
-<br>
-
 # Intro
 
 ### Packet #1
@@ -380,7 +367,7 @@ Try to specilize in a field such as these, just chose one or two. However, remem
 - [ ] Level 11: Clone duolingo before building your own lingo app
 - [ ] Level 12: Build a small version of every tech learned above. Remember first version of unix was under 4000 LoC. And this guy created [aws server](https://github.com/jubos/fake-s3) system in just 2k LoC. Build everythings logic in a small way. Check your stars `ustack` for inspiration.
 
-> If you finish frontend or backend sections start `[Code Univeristy Guide](https://github.com/jwasham/coding-interview-university)` of jwsaham and try to getting ready for job applications (possibly in Canada) when their time of the month comes. ++ go for a algorithm online prep course like algoexpert.io (<- this one is really good) , leetcode ...etc
+> After this point start focusing on your own product, you can try trial products such as hobio before commiting to something big.
 
 <br>
 <Br>
@@ -456,8 +443,7 @@ Try to specilize in a field such as these, just chose one or two. However, remem
 - [ ] Level 3: Dont forget to do _Linnux From Scratch (LFS project)_
 - [ ] Final : At this point I should have a job and start building my own idea
 
-> If you finish frontend or backend sections start `[Code Univeristy Guide](https://github.com/jwasham/coding-interview-university)` of jwsaham and try to getting ready for job applications (possibly in Canada) when their time of the month comes. OR go for a algorithm online prep course like algoexpert.io , leetcode ...etc
-
+> After this point start focusing on your own product, you can try trial products such as hobio before commiting to something big.
 
 
 <br>
