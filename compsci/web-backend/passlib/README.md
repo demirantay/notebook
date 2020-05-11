@@ -208,5 +208,85 @@
 <br>
   
 # CryptContext Tutorial
+
+- The passlib.context module contains one main class: `passlib.context.CryptContext`. This class is designed to take care of many of the more frequent coding patterns which occur in applications that need to handle multiple password hashes at once:
+  - identifying the algorithm used by a hash, and then verify a password.
+  - configure the default algorithm, load in support for new algorithms, deprecate old ones, set defaults for time-cost parameters, etc.
+  - migrate hashes / re-hash passwords when an algorithm has been deprecated.
+  - load said configuration from a sysadmin configurable file.
+
+- `Basic Usage` -- At its base, the __CryptContext__ class is just a collection of PasswordHash objects, imported by name from the _passlib.hash_ module. The following snippet creates a new context object which supports three hash algorithm:
+  ```python
+  >>> from passlib.context import CryptContext
+  >>> myctx = CryptContext(schemes=["sha256_crypt", "md5_crypt", "des_crypt"])
+  ```
+  This new object exposes a very similar set of methods to the PasswordHash interface, and hashing and verifying passwords is equally as straightforward: 
+  ```python
+  >>> # this loads first algorithm in the schemes list (sha256_crypt),
+  >>> # generates a new salt, and hashes the password:
+  >>> hash1 = myctx.hash("joshua")
+  >>> hash1
+  '$5$rounds=80000$HFEGd1wnFknpibRl$VZqjyYcTenv7CtOf986hxuE0pRaGXnuLXyfb7m9xL69'
+  
+  >>> # when verifying a password, the algorithm is identified automatically:
+  >>> myctx.verify("gtnw", hash1)
+  False
+  >>> myctx.verify("joshua", hash1)
+  True
+  ```
+  > (If not told otherwise, the context object will use the first algorithm listed in schemes when creating new hashes. This default can be changed by using the default keyword)
+  
+- `Using Default Settings` -- The next feature of the CryptContext class is that it can store various customized settings for the different algorithms, instead of hardcoding them into each hash() call. See the offficial docs which is very small: https://passlib.readthedocs.io/en/stable/narr/context-tutorial.html#using-default-settings
+
+- `Loading & Saving a CryptContext` -- The previous example built up a CryptContext instance in two stages, first by calling the constructor, and then the update() method to make some additional changes. The same configuration could of course be done in one step:
+  ```python
+  >>> from passlib.context import CryptContext
+  >>> myctx = CryptContext(schemes=["sha256_crypt", "ldap_salted_md5"],
+  ...                      sha256_crypt__default_rounds=91234,
+  ...                      ldap_salted_md5__salt_size=16)
+  ```
+
+- `Deprecation & Hash Migration` -- The final and possibly most useful feature of the CryptContext class is that it can take care of deprecating and migrating existing hashes, re-hashing them using the current default algorithm and settings. All that is required is that a few settings be added to the configuration, and that the application call one extra method whenever a user logs in.
+
+  - __Deprecating Algorithms__ -- The first setting that enables the hash migration features is the _deprecated_ setting. This should be a list algorithms which are no longer desirable to have around, but are included in _schemes_ to provide legacy support. For example:
+    ```python
+    >>> myctx = CryptContext(schemes=["sha256_crypt", "md5_crypt", "des_crypt"],
+                             deprecated=["md5_crypt", "des_crypt"])
+    ```
+    All of the basic methods of this object will behave normally, but after an application has verified the user entered the correct password, it can check to see if the hash has been deprecated using the _needs_update()_ method:
+    ```python
+    >>> #if the user's password was stored as md5_crypt hash,
+    >>> # need_update will indicate that it is deprecated,
+    >>> # and that the original password needs to be re-hashed...
+
+    >>> hash = '$1$fmWm78VW$uWjT69xZNMHWyEQjq852d1'
+    >>> myctx.needs_update(hash)
+    True
+    ```
+  
+  - __Integrating Hash Migration__ -- To summarize the process described in the previous section, all the actions an application would usually need to perform can be combined into the following bit of skeleton code:
+    ```python
+    hash = get_hash_from_user(user)
+    if pass_ctx.verify(password, hash):
+        if pass_ctx.needs_update(hash):
+            new_hash = pass_ctx.hash(password)
+            replace_user_hash(user, new_hash)
+        do_successful_things()
+    else:
+        reject_user_login()
+    ```
+    > Since this is a very common pattern, the CryptContext object provides a shortcut: the verify_and_update() method,
+  
+  - __Settings Rounds Limitations__ -- In addition to deprecating entire algorithms, the deprecations system also allows you to place limits on algorithms that support the variable time-cost parameter `rounds`:
+    
+    As an example, take a typical system containing a number of user passwords, all stored using sha256_crypt. As computers get faster, the minimum number of rounds that should be used gets larger, yet the existing passwords will remain in the system hashed using their original value. To solve this, the CryptContext object lets you place minimum bounds on what rounds values are allowed
+    
+    I couldn't focus so much on this part re-read: https://passlib.readthedocs.io/en/stable/narr/context-tutorial.html#settings-rounds-limitations
+
+<br>
+
+---
+
+<br>
   
 # TOTP Tutorial
