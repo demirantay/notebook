@@ -290,3 +290,5 @@
 <br>
   
 # TOTP Tutorial
+
+- TOTP libaray is about two factor authentication, ssl, ... etc. I know what they are but i am not familiar with the technique so I will comeback and edit this section later on. But you can read the tutorial here: https://passlib.readthedocs.io/en/stable/narr/totp-tutorial.html
