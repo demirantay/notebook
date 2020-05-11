@@ -197,28 +197,10 @@ Try to specilize in a field such as these, just chose one or two. However, remem
 
 - [ ] Git - Version Control
 - [ ] GitHub for public repos, GitLab for private
-- [ ] Licenses
-- [ ] Semantatic Versioning
-- [ ] Design Patterns (SOLID, KISS, YAGNI) 
-- [ ] Devolopment Cycle Designs
-- [ ] Internet:
-  - [ ] How Does Internet Work
-  - [ ] What is HTTP/HTTPs
-  - [ ] Browsers How do they work
-  - [ ] DNS and how it works
-  - [ ] What is Domain name
-  - [ ] What is hosting
 
 ### Packet #2 
 
 - [ ] Feynman: Git and Githubs Usage
-- [ ] Feynman: Licenses
-- [ ] Feynman: Semantic Versioning
-- [ ] Feynman: HTTP/HTTPS
-- [ ] Feynman: Design Patterns (SOLID, KISS, YAGNI)
-- [ ] Feynman: Devolopment Cycle Designs
-- [ ] Feynman: Internet
-- [ ] Re-iterate through feynman boxes above
 
 ### Packet #3
 
@@ -320,7 +302,7 @@ Try to specilize in a field such as these, just chose one or two. However, remem
 - [ ] Learn abot API's
 - [ ] API: REST (Roy Fleedings Paper)
 - [ ] API: Auth -- (OAuth, Basic Authentication, Token Authentication, JWT, OpenID)
-- [ ] Web Security: HTTPS, CORS, SSL/TLS, OWASP Security Risks, Content Security Policy
+- [x] Web Security: HTTPS, CORS, SSL/TLS, OWASP Security Risks, Content Security Policy
 - [x] Web security: Hashign Algorithms (scrypt, bcrypt, SHA Family ... etc.
 - [x] Design and Development Principles (SOLID, KISS, YAGNI, DRY)
 - [ ] Architectural Patterns: Monolithic Apps, Microservices, Microservices, SOA, Serverless
@@ -392,7 +374,7 @@ Try to specilize in a field such as these, just chose one or two. However, remem
 - [x] Terminal -- (All other neccessary information: history, df ...etc)
 - [x] Networking 
 - [x] Web Servers -- (nginx, apache, tomcat ... etc)
-- [x[ CGI's -- (gunicorn, uWsgi .. etc.)
+- [x] CGI's -- (gunicorn, uWsgi .. etc.)
 - [x] Caching Servers
 - [x] Load Balancer
 - [x] Reverse Proxy
