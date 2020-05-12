@@ -305,7 +305,7 @@ Try to specilize in a field such as these, just chose one or two. However, remem
 - [x] Web Security: HTTPS, CORS, SSL/TLS, OWASP Security Risks, Content Security Policy
 - [x] Web security: Hashign Algorithms (scrypt, bcrypt, SHA Family ... etc.
 - [x] Design and Development Principles (SOLID, KISS, YAGNI, DRY)
-- [ ] Architectural Patterns: Monolithic Apps, Microservices, Microservices, SOA, Serverless
+- [x] Architectural Patterns: Monolithic Apps, Microservices, Microservices, SOA, Serverless
 - [ ] Search Engine -- (ElasticSearch, solr .. etc)
 - [ ] Message Brokers -- (RabbitMQ, Kafka)
 - [ ] GraphQL 
@@ -317,10 +317,10 @@ Try to specilize in a field such as these, just chose one or two. However, remem
 
 ### Packet #2 
 
+- [ ] Feynman: Specific Programming Language (e.g. Python)
 - [ ] Feynman: Standarts & Best Practices
 - [ ] Feynman: Backend Testing
 - [ ] Feynman: Package Managaer
-- [ ] Feynman: Specific Programming Language (e.g. Python)
 - [ ] Feynman: HTML
 - [ ] Feynman: CSS
 - [ ] Feynman: JavaScript (not node, just vanilla)
