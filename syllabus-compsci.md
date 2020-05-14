@@ -339,13 +339,13 @@ Try to specilize in a field such as these, just chose one or two. However, remem
 
 ### Packet #3
 
-- [ ] Level 2: Write a project like py-psql for NoSQL and Redis, mysql, sqlite ... etc. all of the databases you use and create a easy to use command line interface for them.
-- [ ] Level 3: Write bots to create fake data about poeple and crete a virtual life of bots. They will buy things , spend money on cinema, date, making kids ... etc. and all of the data will be updated. And create a admin panel (god-panel) that views all of the data with different search engines, message brokers ... manipulating the data with Redis, NosqL ... etc. Implement every checkbox learned above. And create panels for managing the mock-up data. One programmer panel, one business panel (miitating FX trade ... etc.)
-- [ ] Level 4: Build a small version of every tech learned above. Remember first version of unix was under 4000 LoC. And this guy created [aws server](https://github.com/jubos/fake-s3) system in just 2k LoC. Build everythings logic in a small way. Check your stars `ustack` for inspiration.
+- [ ] Level 3: Create a fake simulation of social media with bots. You will build a REST API and use it for the bots.
+- [ ] Level 4: While feynmaning, build a small version of every tech learned above. 
+  > Remember first version of unix was under 4000 LoC. And this guy created [aws server](https://github.com/jubos/fake-s3) system in just 2k LoC. Build everythings logic in a small way. Check your stars `ustack` for inspiration.
 - [ ] Level 4: Create a very detailed Instagram clone with flask or django (already started just continue)
-- [ ] Level 5: After learning all of the things above do a youtube clone too (it is good to figure out how to impelemtn billions data of videos & graphics .
+- [ ] Level 5: Youtube clone too (it is good problem to solve how to impelemtn billions data of videos & graphics .
 - [ ] Level 6: Clone a basic search engine like google or duckduckgo, it is a good problem to solve.
-- [ ] Level 7: Clone duolingo before building your own lingo app
+- [ ] Level 7: Clone a mini core duolingo before building your own lingo app
 
 > After this point start focusing on your own product, you can try trial products such as hobio before commiting to something big.
 
