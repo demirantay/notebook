@@ -227,6 +227,51 @@ only use SONET to define framing and encoding on a leased circuit.
 
 # Chapter 13: Local Area Networks:Packets, Frames and Topologies
 
+- __`Introduction`__ -- The first part of the text covers Internet applications and network programming.
+The second part explores topics in data communications. Each chapter covers a fundamental concept, such as multiplexing, that forms the basis for all of computer networking
+
+  This chapter begins the part of the text that examines packet switching and computer network technologies. After a brief overview, the chapter explains the IEEE standards model, and concentrates on the concepts of hardware addressing and frame identification
+
+- __`Circuit Switching`__ -- The term circuit switching refers to a communication mechanism that establishes a
+path between a sender and receiver with guaranteed isolation from paths used by other
+pairs of senders and receivers. Circuit switching is usually associated with telephone
+technology because a telephone system provides a dedicated connection between two
+telephones
+
+  Circuit switching provides the illusion of an isolated physical path
+between a pair of communicating entities; a path is created when
+needed, and discontinued after use.
+
+- __`Packet Switching`__ -- The main alternative to circuit switching, packet switching, forms the basis for the
+Internet. A packet switching system uses statistical multiplexing in which communication from multiple sources competes for the use of shared media.
+
+  The chief difference between packet switching and other forms of statistical multiplexing arises because a packet switching system requires a sender to divide each message into blocks of data that are known as packets. The size of a packet varies
+  
+  Packet switching, which forms the basis of the Internet, is a form of
+statistical multiplexing that permits many-to-many communication. A
+sender must divide a message into a set of packets; after transmitting
+a packet, a sender allows other senders to transmit before transmitting a successive packet
+
+- __`Local And Wide Area Packet Networks`__ -- 
+
+- __`Standards For Packet Format And Identification`__ -- 
+
+- __`IEEE 802 Model And Standards`__ -- 
+
+- __`Point-To-Point And Multi-Access Networks`__ -- 
+
+- __`LAN Topologies`__ -- 
+
+- __`Packet Identification, Demultiplexing, MAC Addresses`__ -- 
+
+- __`Unicast, Broadcast, And Multicast Addresses`__ -- 
+
+- __`Broadcast, Multicast, And Efficient Multi-Point Delivery`__ -- 
+
+- __`Frames And Framing`__ -- 
+
+- __`Byte And Bit Stuffing`__ -- 
+
 <br>
 <br>
 
