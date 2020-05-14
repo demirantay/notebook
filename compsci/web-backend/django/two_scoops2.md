@@ -6,54 +6,171 @@
 
 # Queries and the Database Layer
 
-- Most of the queries we write are simple. Django’s Object-Relational Model or ORM provides a great productivity shortcut: not only generating decent SQL queries for common use cases, but providing model access/update functionality that comes complete with validation and security. It allows us to trivially write code that works with different database engines
 
-- The Django ORM, like any ORM, converts data from different types into objects that we can use
-  pretty consistently across supported databases. Then it provides a set of methods for interacting with
-  those objects. For the most part, Django’s does a pretty good job at what it’s designed to do. However,
-  it does have quirks, and understanding those quirks is part of learning how to use Django. Let’s go
-  over some of them, shall we?
+
+<br>
+<br>
+<br>
+
+# Function- And Class-Based Views
+
+
+<br>
+<Br>
+<Br>
   
-### Use get_object_or_404() for Single Objects
-
-- In views such as detail pages where you want to retrieve a single object and do something with it, use get_object_or_404() instead of get()
-
-- **Warning** : get_object_or_404() Is for Views Only, Only use it in views. Don’t use it in helper functions, forms, model methods or anything that is not a view or directly view related
+# Best Practices for Function-Based Views
 
 
-### Avoid Long Single Line Queries
-
-- It is always unpleasant to work with code that exeecds the 79 char line right. Instead of writigin our long queries in a single line we can chain our querie like it is in javascript. See the example:
-  ```python
-  query = (ModelName
-              .objects
-              .filter(
-                 ...
-               )
-              .exclude(status="foo")
-           )
-  ```
-  The downside to this approach is that debugging isn’t as easy as using the lazy evaluation method of writing a query
-
-- Dont drop raw SQL until it is necessary, Whenever we write raw SQL we lose elements of security and reusability. Also, in the rare event that the data has to be migrated from one database to another, any database-specific features that you use in your SQL queries will complicate the migration.
-
----
-
-- ***I did not really read this chapter very much ... I was bored, self note: come back to this in the future***
+<Br>
+<Br>
+<Br>
+  
+# Best Practices for Class-Based Views
 
 
-# 103
+<Br>
+<Br>
+<Br>
+  
+# Common Patterns for Forms
 
+<Br>
+<Br>
+<Br>
+  
+# Form Fundamentals
 
+<Br>
+<Br>
+<Br>
+  
+# Templates: Best Practices
 
+<Br>
+<Br>
+<Br>
+  
+# Template Tags and Filters
 
+<Br>
+<Br>
+<Br>
+  
+# Django Templates and Jinja2
 
+<Br>
+<Br>
+<Br>
+  
+# Building REST APIs With Django REST Framework
 
+<Br>
+<Br>
+<Br>
+  
+# Consuming REST APIs
 
+<Br>
+<Br>
+<Br>
+  
+# Tradeoffs of Replacing Core Components
 
+<Br>
+<Br>
+<Br>
+  
+# Working With the Django Admin
 
+<Br>
+<Br>
+<Br>
+  
+# Dealing With the User Model
 
+<Br>
+<Br>
+<Br>
+  
+# Django’s Secret Sauce: Third-Party Packages 
 
+<Br>
+<Br>
+<Br>
+  
+# Testing Stinks and Is a Waste of Money!
 
+<Br>
+<Br>
+<Br>
+  
+# Documentation: Be Obsessed 
+
+<br>
+<br>
+<br>
+
+# Finding and Reducing Bottlenecks 
+
+<br>
+<br>
+<Br>
+  
+# Asynchronous Task Queues
+
+<br>
+<br>
+<Br>
+  
+# Security Best Practices
+
+<br>
+<br>
+<Br>
+  
+# Logging: What’s It For, Anyway?
+
+<br>
+<br>
+<Br>
+  
+# Signals: Use Cases and Avoidance Techniques
+
+<br>
+<br>
+<Br>
+  
+# What About Those Random Utilities? 
+
+<br>
+<br>
+<Br>
+   
+# Deployment: Platforms as a Service
+
+<br>
+<br>
+<Br>
+  
+# Deploying Django Projects
+
+<br>
+<br>
+<Br>
+  
+# Continuous Integration
+
+<br>
+<br>
+<Br>
+  
+# The Art of Debugging
+
+<br>
+<br>
+<Br>
+  
+# Where and How to Ask Django Questions
 
 
