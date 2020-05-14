@@ -71,19 +71,79 @@ specific version of CDM used in cell phones is known as Code Division Multi-Acce
 
 # Chapter 12: Access and Interconnection Techonologies
 
-- __`Introduction`__ --
+- __`Introduction`__ -- This chapter concludes the discussion of data communications by examining two
+facilities used in the Internet. First, the chapter discusses access technologies, such as
+dialup, DSL, and cable modems, that are used to connect individual residences and
+businesses to the Internet. Second, the chapter considers high-capacity digital circuits
+used in the core of the Internet. The chapter expands the discussion of the telephone
+system multiplexing hierarchy, and gives examples of circuits that common carriers
+offer to businesses and Internet Service Providers
 
-- __`Internet Access Technology: Upstream And Downstream`__ --
+- __`Internet Access Technology: Upstream And Downstream`__ -- Internet access technology refers to a data communications system that connects an
+Internet subscriber (typically a private residence or business) to an Internet Service Provider (ISP), such as a telephone company or cable company.
 
-- __`Narrowband And Broadband Access Technologies`__ --
+  Because a typical residential subscriber receives much more information than the subscriber sends, Internet access technologies are
+designed to transfer more data in one direction than the other
 
-- __`The Local Loop And ISDN`__ --
+  The networking industry uses the term downstream to refer to data traveling from a
+service provider in the Internet to a subscriber, and upstream to refer to data traveling
+from a subscriber to a service provider.
 
-- __`Digital Subscriber Line (DSL) Technologies`__ --
+- __`Narrowband And Broadband Access Technologies`__ -- A variety of technologies are used to provide Internet access. They can be divided
+into two broad categories based on the data rate they provide:
+  - Narrowband
+  - Broadband
+  
+  __Narrowband Technologies__ -- Narrowband generally refers to technologies that deliver data at up to 128 Kbps.
+For example, the maximum data rate that can be achieved over a dialup connection with
+the most sophisticated modem technology and the least noisy phone lines is 56 Kbps.
+  - Dialup telephone connections
+  - Leased circuit using modems
+  
+  __Broadband Technologies__ -- The term broadband generally refers to technologies that offer high data rates, but
+the exact boundary between broadband and narrowband is blurry. Many professionals
+suggest that broadband technologies deliver more than 1 Mbps. However, providers
+such as telephone companies use the term broadband when they advertise a service that
+offers a higher rate than dialup. Thus, phone companies sometimes claim that ISDN
+service, which provides 128 Kbps, is broadband
+  - DSL technologies
+  - Wireless access technologies
+  - Cable modem technologies
 
-- __`Local Loop Characteristics And Adaptation`__ --
+- __`The Local Loop And ISDN`__ -- The term local subscriber line or local loop describes the physical connection
+between a telephone company Central Office (CO) and a subscriber’s location.
 
-- __`The Data Rate Of ADSL`__ --
+  As data networking became important, telephone companies explored ways to use
+the local loop to provide higher-speed data communication. One of the first phone
+company efforts to provide large-scale digital services to subscribers is offered under
+the name Integrated Services Digital Network (ISDN).
+
+- __`Digital Subscriber Line (DSL) Technologies`__ -- Digital Subscriber Line (DSL) is one of the main technologies used to provide
+high-speed data communication services over a local loop. Because the names differ only in the first word, the set is collectively referred to
+by the acronym xDSL.
+  - ADSL - Asymmetric DSL - Residential customers
+  - ADSL2 - Asymmetric DSL version 2 - Approximately three times faster
+  - SDSL - Symmetric DSL - Businesses that export data
+  - HDSL - High bit rate DSL - Businesses up to 3 miles away
+  - VDSL - Very-high bit rate DSL - Proposed version for 52-Mbps
+  
+  ADSL is the most widely deployed variant, and the one that most residential customers use Because it uses frequency division multiplexing, ADSL and traditional
+analog phone service (POTS) can use the same wires simultaneously
+
+- __`Local Loop Characteristics And Adaptation`__ -- ADSL technology is complex because no two local loops have identical electrical
+characteristics. Instead, the ability to carry signals depends on the distance, the diameter of the wiring used, and the level of electrical interference.  the ADSL designers could not pick a particular set of carrier frequencies or modulation techniques that would work well in all local loops. Because ADSL gets effected by the local radio tower signals ...etc.
+
+  Because the electrical characteristics of local loops vary, ADSL uses
+an adaptive technology in which a pair of modems probe many frequencies on the line between them, and select frequencies and modulation techniques that yield optimal results on that line.
+
+- __`The Data Rate Of ADSL`__ -- How fast can ADSL operate? ADSL can achieve a downstream rate of 8.448
+Mbps on short local loops, and an upstream rate of 640 Kbps. Because the mandatory
+network control channel requires 64 Kbps, the effective upstream rate for user data is
+576 Kbps. Under the best conditions, ADSL2 can download at close to 20 Mbps.
+
+  It is important to understand that the ADSL data rate only applies to the local loop
+connection between a subscriber and the telephone Central Office. Many other factors
+affect the overall data rates that a user experiences
 
 - __`ADSL Installation And Splitters`__ --
 
