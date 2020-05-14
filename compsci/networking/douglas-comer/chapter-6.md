@@ -145,37 +145,77 @@ network control channel requires 64 Kbps, the effective upstream rate for user d
 connection between a subscriber and the telephone Central Office. Many other factors
 affect the overall data rates that a user experiences
 
-- __`ADSL Installation And Splitters`__ --
+- __`ADSL Installation And Splitters`__ -- Although traditional analog phones operate at frequencies below 4 KHz, lifting a
+receiver can generate noise that interferes with DSL signals. To provide complete isolation, ADSL uses an FDM device known as a splitter that divides the bandwidth by
+passing low frequencies to one output and high frequencies to another. Interestingly, a
+splitter is passive, which means that it does not require power. A splitter is usually installed at the location where the local loop enters a residence or business
 
-- __`Cable Modem Technologies`__ --
+- __`Cable Modem Technologies`__ -- Although technologies like ADSL provide data rates that are much higher than originally thought possible, telephone local loop wiring has inherent limitations. The chief
+problem lies in the electrical characteristics of twisted pair wiring. As demand for higher bit rates increased, alternative wiring
+schemes have become important.
 
-- __`The Data Rate Of Cable Modems`__ --
+  An alternative access technology that stands out as particularly attractive uses the
+wiring already in place for cable television†. The medium used in cable systems is
+coaxial cable, which has high bandwidth and is less susceptible to electromagnetic interference than twisted pair
 
-- __`Cable Modem Installation`__ --
+- __`The Data Rate Of Cable Modems`__ -- How fast can a cable modem operate? In theory, a cable system can support data
+rates of 52 Mbps downstream and 512 Kbps upstream. In practice, the rate can be
+much less
 
-- __`Hybrid Fiber Coax`__ --
+- __`Cable Modem Installation`__ -- Because cable systems use frequency division multiplexing, a cable
+modem can be attached directly to existing cable wiring without the
+need for a splitter.
 
-- __`Access Technologies That Employ Optical Fiber`__ --
+- __`Hybrid Fiber Coax`__ -- One of the most promising ideas for technologies that provide high-speed data
+communications is known by the general name of Hybrid Fiber Coax (HFC). The cable industry uses the term trunk to refer to the high-capacity connections between
+the cable office and each neighborhood area, and the term feeder circuit to refer to the
+connection to an individual subscriber.
 
-- __`Head-End And Tail-End Modem Terminology`__ --
+- __`Access Technologies That Employ Optical Fiber`__ -- Cable companies have proposed a variety of technologies that either employ optical fiber in a hybrid system or deploy optical fiber all the way to each subscriber.
+  - FTTC Fiber To The Curb
+  - FTTB Fiber To The Building
+  - FTTH Fiber To The Home
+  - FTTP Fiber To The Premises
 
-- __`Wireless Access Technologies`__ --
+- __`Head-End And Tail-End Modem Terminology`__ -- An access technology requires a pair of modems, with one at the subscriber’s site
+and one at the provider’s site. The industry uses the term head-end modem to refer to a
+modem used at the central office, and the term tail-end modem to refer to a modem
+used at the subscriber’s location.
 
-- __`High-Capacity Connections At The Internet Core`__ --
+- __`Wireless Access Technologies`__ -- Although technologies such as ADSL or HFC can deliver digital services to most
+subscribers, they do not handle all circumstances. The primary problems arise in rural
+areas. For example, imagine a farm or remote village many miles from the nearest city.
+The twisted pair wiring used to deliver telephone service to such locations exceeds the
+maximum distance for technologies like ADSL.
 
-- __`Circuit Termination, DSU / CSU, and NIU`__ --
+  To handle special cases, a variety of wireless access technologies have been explored. 3g, 4g, satellite
 
-- __`Telephone Standards For Digital Circuits`__ --
+- __`High-Capacity Connections At The Internet Core`__ -- Digital circuits leased from common carriers form the fundamental
+building blocks for long-distance data communications. The cost
+depends on the circuit capacity and distance.
 
-- __`DS Terminology And Data Rates`__ --
+- __`Circuit Termination, DSU / CSU, and NIU`__ -- A digital circuit needs a device known as a DSU/CSU at each end.
+The DSU/CSU translates between the digital representation used by
+phone companies and the digital representation used by the computer
+industry.
 
-- __`Highest Capacity Circuits (STS Standards)`__ --
+- __`DS Terminology And Data Rates`__ -- telephone companies use a multiplexing hierarchy
+that combines multiple voice calls into a single digital circuit. Thus, the data rates of T
+standards have been chosen so they can each handle a multiple of voice calls. The important thing to note is that the capacity of circuits does not increase linearly with their
+numbers
 
-- __`Optical Carrier Standards`__ --
+- __`Highest Capacity Circuits (STS Standards)`__ -- Telephone companies use the term trunk to denote a high-capacity circuit, and have
+created a series of standards for digital trunk circuits. Known as the Synchronous
+Transport Signal (STS) standards, they specify the details of high-speed connections.
 
-- __`The C Suffix`__ --
+- __`Optical Carrier Standards`__ -- In addition to STS standards, the phone company defines an equivalent set of Optical Carrier (OC) standards To be precise, one should observe a distinction between the
+STS and OC terminology: the STS standards refer to the electrical signals used in the
+digital circuit interface (i.e., over copper), while the OC standards refer to the optical
+signals that propagate across the fiber. As with other network terminology, few professionals make the distinction
 
-- __`Synchronous Optical NETwork (SONET)`__ --
+- __`Synchronous Optical NETwork (SONET)`__ -- Although the SONET standard defines a technology that can be used
+to build a high-capacity ring network with multiple data circuits multiplexed across the fibers that constitute the ring, most data networks
+only use SONET to define framing and encoding on a leased circuit.
 
 <br>
 <br>
