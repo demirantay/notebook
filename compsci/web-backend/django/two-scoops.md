@@ -1,9 +1,7 @@
 # Two Scoops of Django
 
-- These are my notes from the book: Two Scoops of Django written by Daniel and Audrey Roy Greenfeld
+> These are my notes from the book: Two Scoops of Django written by Daniel and Audrey Roy Greenfeld
 
-<br>
-<br>
 
 # Introduction
 
@@ -24,7 +22,6 @@ to function.
 growing in popularity amongst many senior and core Django developers. It is a methodology for
 building deployable, scalable applications worth reading and understanding. See this later: https://12factor.net/
 
-<br>
 <br>
 <br>
 
@@ -347,7 +344,6 @@ managers to this module
 
 	I will return to this chapter of the book
 
-<br>
 <br>
 <br>
 <br>
