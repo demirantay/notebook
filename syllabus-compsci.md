@@ -347,7 +347,7 @@ Try to specilize in a field such as these, just chose one or two. However, remem
 - [ ] Level 6: Clone a basic search engine like google or duckduckgo, it is a good problem to solve.
 - [ ] Level 7: Clone a mini core duolingo before building your own lingo app
 
-> After this point start focusing on your own product, you can try trial products such as hobio before commiting to something big.
+> After this point start focusing on your own product, you can try trial products such as hobio before commiting to something big.  Watch and read all of Y combinators lessons.
 
 <br>
 <Br>
@@ -423,7 +423,7 @@ Try to specilize in a field such as these, just chose one or two. However, remem
 - [ ] Level 3: Dont forget to do _Linnux From Scratch (LFS project)_
 - [ ] Final : At this point I should have a job and start building my own idea
 
-> After this point start focusing on your own product, you can try trial products such as hobio before commiting to something big.
+> After this point start focusing on your own product, you can try trial products such as hobio before commiting to something big. Watch and read all of Y combinators lessons.
 
 
 <br>
