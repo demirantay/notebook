@@ -252,25 +252,86 @@ statistical multiplexing that permits many-to-many communication. A
 sender must divide a message into a set of packets; after transmitting
 a packet, a sender allows other senders to transmit before transmitting a successive packet
 
-- __`Local And Wide Area Packet Networks`__ -- 
+- __`Local And Wide Area Packet Networks`__ -- Packet switching technologies are commonly classified according to the distance
+they span
+  - LAN -- Local Area Network -- Least expensive; spans a single
+room or a single building
+  - MAN -- Metropolitan Area -- Network Medium expense; spans a major
+city or a metroplex
+  - WAN -- Wide Area Network -- Most expensive; spans sites in
+multiple cities
 
-- __`Standards For Packet Format And Identification`__ -- 
+  > In practice, few MAN technologies have been created, and MAN networks have
+not been commercially successful. Consequently, networking professionals tend to
+group MAN technologies into the WAN category, and use only the terms LAN and
+WAN.
 
-- __`IEEE 802 Model And Standards`__ -- 
+- __`Standards For Packet Format And Identification`__ -- Because packet switching systems rely on sharing, each packet sent across such a
+network must contain the identification of the intended recipient. Furthermore, to insure
+that no ambiguity arises, all senders must agree on the exact details of how to identify a
+recipient and where to place the identification in a packet. The most widely used set of standards for LANs has been created by the Institute for Electrical and Electronic Engineers (IEEE).
 
-- __`Point-To-Point And Multi-Access Networks`__ -- 
+- __`Point-To-Point And Multi-Access Networks`__ -- Recall that the term point-to-point refers to a communication mechanism that connects exactly two communicating entities. LAN technologies allow multiple computers
+to share a medium in such a way that any computer on the LAN can communicate with
+any other. To describe such arrangements, we use the term multi-access and say that a
+LAN is a multi-access network.
 
-- __`LAN Topologies`__ -- 
+- __`LAN Topologies`__ -- Because many LAN technologies have been invented, it is important to know how
+specific technologies are similar and how they differ. To help understand similarities,
+each network is classified into a category according to its topology or general shape.
+  - Bus
+  - Ring
+  - Star
+  - Mesh
+  
+  __Bus__ -- A network that uses a bus topology usually consists of a single cable to which
+computers attach†. Any computer attached to a bus can send a signal down the cable,
+and all computers receive the signal. Because all computers attach directly to the cable,
+any computer can send data to any other computer
 
-- __`Packet Identification, Demultiplexing, MAC Addresses`__ -- 
+  __Ring__ -- A network that uses a ring topology arranges for computers to be connected in a
+closed loop — a cable connects the first computer to a second computer, another cable
+connects the second computer to a third, and so on, until a cable connects the final computer back to the first Its a circle.
+  
+  __Star__ -- A network uses a star topology when all computers attach to a central point.  the center of a star network is often called a hub. A typical hub consists of an electronic device that accepts
+data from a sending computer and delivers it to the appropriate destination
+  
+  __Mesh__ -- A network that uses a mesh topology provides a direct connection between each
+pair of computers. The chief disadvantage of a mesh arises from the cost
 
-- __`Unicast, Broadcast, And Multicast Addresses`__ -- 
+  Networks are classified into broad categories according to their general shape. Although a mesh topology is possible, the primary topologies used with LANs are star, ring, and bus; each has advantages and
+disadvantages. and they are usually included together inside a network.
 
-- __`Broadcast, Multicast, And Efficient Multi-Point Delivery`__ -- 
+- __`Packet Identification, Demultiplexing, MAC Addresses`__ -- In addition to standards that specify the details of various LAN technologies, IEEE
+has created a standard for addressing. To understand addressing, consider packets
+traversing a shared medium  In the simplest case, each packet that travels across the shared medium is intended for a specific recipient, and only the
+intended recipient should process the packet. In packet switching systems, demultiplexing uses an identifier known as an address. Each computer is assigned a unique address, and each packet contains the address of the intended recipient.
 
-- __`Frames And Framing`__ -- 
+   IEEE uses the
+term Media Access Control address (MAC address).
 
-- __`Byte And Bit Stuffing`__ -- 
+- __`Unicast, Broadcast, And Multicast Addresses`__ --  The IEEE addressing scheme supports three types of addresses that correspond to
+three types of packet delivery.
+  - __unicast__ -- Uniquely identifies a single computer, and specifies that only the identified computer should receive a
+copy of the packet
+  - __broadcast__ -- Corresponds to all computers, and specifies that each computer on the network should receive a
+copy of the packet
+  - __multicast__ -- Identifies a subset of the computers on a given network, and specifies that each computer in the
+subset should receive a copy of the packet
+
+- __`Frames And Framing`__ -- In a more general sense, we use the term framing to refer to the structure added to a sequence of bits or bytes that allows a sender and receiver to agree on
+the exact format of the message. In a packet-switched network, each frame corresponds
+to a packet. A frame consists of two conceptual parts:
+  - Header that contains metadata, such as an address
+  - Payload that contains the data being sent
+
+- __`Byte And Bit Stuffing`__ --  . For a network that transmits characters,
+a frame can be formed by using one byte value to indicate the beginning of the frame
+and another to indicate the end of the frame.
+Byte (bit) stuffing techniques permit bytes (sequences of bits) to be reserved for
+use in marking the start and end of a frame. To insure that a payload does not contain
+reserved bytes (bit strings), a sender replaces occurrences of reserved values before
+transmission, and a receiver reverses the change to obtain the original data.
 
 <br>
 <br>
@@ -290,182 +351,3 @@ a packet, a sender allows other senders to transmit before transmitting a succes
 <br>
 <br>
 
-# Chapter 15: Wired LAN Techonology (Ethernet And 802.3)
-
-<br>
-<br>
-
----
-
-<br>
-<br>
-
-# Chapter 16: Wireless Networking Technologies
-
-<br>
-<br>
-
----
-
-<br>
-<br>
-
-# Chapter 17: LAN Extensions: Fiber Modems, Repeaters, Bridges and Switches
-
-<br>
-<br>
-
----
-
-<br>
-<br>
-
-# Chapter 18: WAN Technologies and Dynamic Routing
-
-<br>
-<br>
-
----
-
-<br>
-<br>
-
-# Chapter 19: Networking Technologies Past and Present
-
-<br>
-<br>
-
----
-
-<br>
-<br>
-
-# Chapter 20: Internetworking: Concepts Architecture and Protocols
-
-<br>
-<br>
-
----
-
-<br>
-<br>
-
-# Chapter 21: IP:Internet Adressing
-
-<br>
-<br>
-
----
-
-<br>
-<br>
-
-# Chapter 22: Datagram Forwarding
-
-<br>
-<br>
-
----
-
-<br>
-<br>
-
-# Chapter 23: Support Protocols and Technologies
-
-<br>
-<br>
-
----
-
-<br>
-<br>
-
-# Chapter 24: The Future IP (IPv6)
-
-<br>
-<br>
-
----
-
-<br>
-<br>
-
-# Chapter 25: UDP: Datagram Transport Service
-
-<br>
-<br>
-
----
-
-<br>
-<br>
-
-# Chapter 26: TCP: Reliable Transport Service
-
-<br>
-<br>
-
----
-
-<br>
-<br>
-
-# Chapter 27: Internet Routing and Routing Protocols
-
-<br>
-<br>
-
----
-
-<br>
-<br>
-
-# Chapter 28: Network Performance (QoS and DiffServ)
-
-<br>
-<br>
-
----
-
-<br>
-<br>
-
-# Chapter 29: Multimedia and IP Telephony (VoIP)
-
-<br>
-<br>
-
----
-
-<br>
-<br>
-
-# Chapter 30: Network Security
-
-<br>
-<br>
-
----
-
-<br>
-<br>
-
-# Chapter 31: Network Management (SNMP)
-
-<br>
-<br>
-
----
-
-<br>
-<br>
-
-# Chapter 32: Trends in Networking Technologies and Uses
-
-<br>
-<br>
-
----
-
-<br>
-<br>
