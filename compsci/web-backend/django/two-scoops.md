@@ -2,6 +2,42 @@
 
 > These are my notes from the book: Two Scoops of Django written by Daniel and Audrey Roy Greenfeld
 
+Table of Contents:
+- [Introduction]()
+- [Coding Style ]()
+- [The Optimal Django Environment Setup]()
+- [How to Lay Out Django Projects ]()
+- [Fundamentals of Django App Design]()
+- [Settings and Requirements Files]()
+- [Model Best Practices ]()
+- [Queries and the Database Layer]()
+- [Function- And Class-Based Views]()
+- [Best Practices for Function-Based Views]()
+- [Best Practices for Class-Based Views]()
+- [Common Patterns for Forms]()
+- [Form Fundamentals]()
+- [Templates: Best Practices ]()
+- [Template Tags and Filters]()
+- [Django Templates and Jinja2]()
+- [Building REST APIs With Django REST Framework]()
+- [Consuming REST APIs ]()
+- [Tradeoffs of Replacing Core Components ]()
+- [Working With the Django Admin]()
+- [Dealing With the User Model ]()
+- [Django’s Secret Sauce: Third-Party Packages]()
+- [Testing Stinks and Is a Waste of Money!]()
+- [Documentation: Be Obsessed ]()
+- [Finding and Reducing Bottlenecks]()
+- [Asynchronous Task Queues]()
+- [Security Best Practices]()
+- [Logging: What’s It For, Anyway?]()
+- [Signals: Use Cases and Avoidance Techniques ]()
+- [What About Those Random Utilities?]()
+- [Deployment: Platforms as a Service]()
+- [Deploying Django Projects]()
+- [Continuous Integration]()
+- [The Art of Debugging]()
+- [Where and How to Ask Django Questions]()
 
 # Introduction
 
