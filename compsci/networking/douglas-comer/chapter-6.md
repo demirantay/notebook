@@ -343,10 +343,39 @@ transmission, and a receiver reverses the change to obtain the original data.
 
 # Chapter 14: The IEEE MAC Sub-Layer 
 
-<br>
-<br>
+- __`Introduction`__ -- This chapter continues the discussion by examining the IEEE’s MAC sublayer.
+The chapter explains multi-access protocols, and considers both static and dynamic
+channel allocation
 
----
+- __`A Taxonomy Of Mechanisms For Multi-Access`__ -- How do multiple, independent computers coordinate access to a shared medium?
+There are three broad approaches: they can use a modified form of a multiplexing technique, they can engage in a distributed algorithm for controlled access, or they can use a
+random access strategy
+
+- __`Static And Dynamic Channel Allocation`__ -- We use the term channelization to refer to a mapping between a given communication and a channel in the underlying transmission system.  For example, consider a frequency division multiplexing (FDM) mechanism. Most FDM systems assign each pair
+of communicating entities a unique carrier frequency. That is, each pair is assigned a
+unique channel. Furthermore, the mapping between a pair of entities and a carrier frequency does not change. In such situations, we describe the mapping between communicating entities and a channel as "1-to-1" and "static"
+
+  Static channel allocation suffices when the set of communicating entities is known in advance and does not change; most networks require
+a form of dynamic channel allocation.
+
+- __`Channelization Protocols`__ -- Channelization protocols extend the multiplexing techniques covered in Chapter
+11:
+  - FDMA -- Frequency Division Multi-Access
+  - TDMA -- Time Division Multi-Access
+  - CDMA -- Code Division Multi-Access
+
+- __`Controlled Access Protocols`__ -- Controlled access protocols provide a distributed version of statistical multiplexing.
+  - __Polling__ -- Centralized controller repeatedly polls stations
+and allows each to transmit one packet
+  - __Reservation__ -- Stations submit a request for the next round of
+data transmission
+  - __Token Passing__ -- Stations circulate a token; each time it receives
+the token, a station transmits one packet
+
+- __`Random Access Protocols`__ -- Many networks, especially LANs, do not employ a controlled access mechanism.
+Instead, a set of computers attached to a shared medium attempt to access the medium
+without coordination. The term random is used because access only occurs when a
+given station has a packet to send and randomization is employed to prevent all computers on a LAN from attempting to use the medium at the same time
 
 <br>
 <br>
