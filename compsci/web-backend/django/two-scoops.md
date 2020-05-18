@@ -374,12 +374,40 @@ managers to this module
 
 - **Warning**: Enviornment variables do not work with apache
 
----
+- Basic idea is that you use env variables for your SECRET KEYS:
+	```python
+	import os
+	
+	def get_env_variable(var_name):
+		"""Get the environment variable or return exception."""
+		try:
+			return os.environ[var_name]
+		except KeyError:
+			error_msg = 'Set the {} environment variable'.format(var_name)
+			return error_msg
+	```
+	Then, in any of your settings files, you can load secret keys from environment variables as follows:
+	```python
+	SOME_SECRET_KEY = get_env_variable('SOME_SECRET_KEY')
+	```
 
-- *I am skipping this part of the books since I am not really good with bash scripting at this point ...*
+###  Handling File Paths in Settings
 
-	I will return to this chapter of the book
+- We humbly beseech the reader to never hardcode file paths in Django settings files. This is really bad:
+	```python
+	# DON’T DO THIS! Hardcoded to just one user's preferences
+	MEDIA_ROOT = '/Users/pydanny/twoscoops_project/media'
+	```
+	The above code, called a fixed path,
+is bad because as far as you know, pydanny (Daniel Roy Greenfeld) is the only person who has set
+up their computer to match this path structure. Anyone else trying to use this example will see their
+project break
 
+	To fix the path issue, we dynamically set a project root variable intuitively named BASE_DIR at the
+top of the base settings module
+
+- > Remember, everything except for passwords and API keys ought to be tracked in version control.
+	
 <br>
 <br>
 <br>
@@ -437,34 +465,30 @@ version control is just like not including settings files in VCS: You might be a
 but should you switch machines or bring someone else into the project, then everything will
 break.
 
-## Django Model Design
+### Django Model Design
 
 - One of the most difficult topics that receives the least amount of attention is how to design good Django models. How do you design for performance without optimizing prematurely? Let’s explore some strategies
 here.
 
-- **Start Normalized**:
-	- We suggest that readers of this book need to be familiar with `database normalization.` If you are
+- `Start Normalized`: -- We suggest that readers of this book need to be familiar with `database normalization.` If you are
 unfamiliar with database normalization, make it your responsibility to gain an understanding, as
 working with models in Django effectively requires a working knowledge of this
 
 		When you’re designing your Django models, always start off normalized. Take the time to make sure
 that no model should contain data already stored in another model.
 
-- **Cache Before Denormalizing**:
-	-  Often, setting up caching in the right places can save you the trouble of denormalizing your models
+- `Cache Before Denormalizing`: Often, setting up caching in the right places can save you the trouble of denormalizing your models
 
-- **Denormalize Only if Absolutely Needed**:
-	- It can be tempting, especially for those new to the concepts of data normalization, to denormalize prematurely. Don’t do it! Denormalization may seem like a panacea for what causes problems in a project. However it’s a tricky process that risks adding complexity to your project and dramatically raises the risk of losing data. Please, please, please explore caching before denormalization.
+- `Denormalize Only if Absolutely Needed` -- It can be tempting, especially for those new to the concepts of data normalization, to denormalize prematurely. Don’t do it! Denormalization may seem like a panacea for what causes problems in a project. However it’s a tricky process that risks adding complexity to your project and dramatically raises the risk of losing data. Please, please, please explore caching before denormalization.
 
-### Try to Avoid Using Generic Relations
-
-- In general we advocate against generic relations and use of models.field.GenericForeignKey.
-They are usually more trouble than they are worth. Using them is often a sign that troublesome
+- `Try to Avoid Using Generic Relations` -- In general we advocate against generic relations and use of models.field.GenericForeignKey. They are usually more trouble than they are worth. Using them is often a sign that troublesome
 shortcuts are being taken, that the wrong solution is being explored.
 
-### Fat Models
+### The Model _meta API
 
-... skipped it for now -- return to it later on
+### Model Managers
+
+### Understanding Fat Models
 
 
-- **Tip:**
+
