@@ -70,6 +70,112 @@ cannot be plugged in incorrectly, and once inserted, the connectors do not fall 
 
 # Chapter 16: Wireless Networking Technologies
 
+-- __`Introduction`__ -- This chapter describes wireless technologies. The chapter explains that a myriad of
+wireless technologies have been proposed, that wireless communication is used across a
+wide range of distances, and that many commercial systems exist
+
+-- __`A Taxonomy Of Wireless Networks`__ -- Wireless communication applies across a wide range of network types and sizes.
+Part of the motivation for variety arises from government regulations that make specific
+ranges of the electromagnetic spectrum available for communication
+
+-- __`Personal Area Networks (PANs)`__ -- In addition to the three network types described in Chapter 13 (LANs, MANs, and
+WANs), wireless networking includes Personal Area Networks (PANs). A PAN technology provides communication over a short distance, and is intended for use with devices that are owned and operated by a single user. For example, a PAN can provide
+communication between a wireless headset and a cell phone. PAN technologies are
+also used between a computer and a nearby wireless mouse or keyboard.
+
+  PAN technologies can be grouped into three broad categories.
+  - Bluetooth 
+  - InfraRed
+  - ISM wireless
+
+-- __`ISM Wireless Bands Used By LANs And PANs`__ -- Governments have reserved three areas of the electromagnetic spectrum for use by
+Industrial, Scientific, and Medical groups. Known as ISM wireless, the frequencies are
+not licensed to specific carriers, are broadly available for products, and are used for
+LANs and PANs
+
+-- __`Wireless LAN Technologies And Wi-Fi`__ -- In 1999, a group of vendors who build wireless equipment
+formed the Wi-Fi Alliance, a non-profit organization that tests and certifies wireless
+equipment using the 802.11 standards. Because the alliance has received extensive
+marketing, most consumers associate wireless LANs with the term Wi-Fi
+
+-- __`Spread Spectrum Techniques`__ -- Spread spectrum techniques can help wireless LANs function in noisy
+environments
+
+-- __`Other Wireless LAN Standards`__ -- Many variants of 802.11 have been created or proposed; each offers
+some advantage.
+
+-- __`Wireless LAN Architecture`__ -- The three building blocks of a wireless LAN are: access points, which are informally called base stations, an interconnection mechanism, such as a switch or router
+used to connect access points, and a set of wireless hosts, also called wireless nodes or
+wireless stations. In principle, two types of wireless LANs are possible:
+  - Ad hoc — wireless hosts communicate among themselves without
+a base station
+  - Infrastructure — a wireless host only communicates with an access
+point, and the access point relays all packets
+
+  In practice few ad hoc networks exist. Instead, an organization or service provider
+deploys a set of access points, and each wireless host communicates through one of the
+access points
+
+-- __`Overlap, Association, And 802.11 Frame Format`__ -- In practice, many details complicate an infrastructure architecture. On one hand, if
+a pair of access points are too far apart, a dead zone will exist between them (i.e., a
+physical location with no wireless connectivity). On the other hand, if a pair of access
+points is too close together, an overlap will exist in which a wireless host can reach
+both access points.
+
+-- __`Coordination Among Access Points`__ -- Two basic approaches exist: complex access points coordinate to insure smooth handoff or lower cost access points operate independently and rely on wireless computers to change their association from
+one access point to another.
+
+-- __`Contention And Contention-Free Access`__ -- The CSMA/CA technique used in Wi-Fi networks includes timing
+parameters that specify how long a station waits before sending an initial packet and how long a station waits before sending a reply.
+
+-- __`Wireless MAN Technology and WiMax`__ -- In general, MAN technologies have not been commercially successful. One wireless MAN technology stands out as having the potential for success. The technology is
+standardized by IEEE under the category 802.16. A group of companies coined the
+term WiMAX, which is interpreted to mean World-wide Interoperability for Microwave
+Access, and formed the WiMAX Forum to promote use of the technology
+
+  WiMAX is a wireless LAN technology that can be used for backhaul,
+fixed, or mobile access; deployments for access do not require a clear
+line-of-sight.
+
+-- __`PAN Technologies And Standards`__ -- PAN Technologies And Standards
+  - Wireless replacement for cables (e.g., headphones or mouse)
+  - Uses 2.4 GHz frequency band
+  - Short distance (up to 5 meters, with variations that extend
+the range to 10 or 50 meters)
+  - Device is master or slave
+  - Master grants permission to slave
+  - Data rate is up to 721 Kbps
+  
+-- __`Other Short-Distance Communication Technologies`__ -- InfraRED. InfraRED technology is often used in remote controls, and may be used
+as a cable replacement (e.g., for a wireless mouse).
+
+-- __`Wireless WAN Technologies`__ -- Wireless WAN technologies can be divided into two categories:
+  - Cellular communication systems
+  - Cellular communication systems
+
+-- __`Generations Of Cellular Technologies`__ -- The telecommunications industry divides cellular technologies into four generations that are labeled 1G, 2G, 3G, and 4G, with intermediate versions labeled 2.5G and
+3.5G. The generations can be characterized as follows:
+  - 1G. The first generation began in the latter 1970s, and extended
+through the 1980s.
+  - 2G and 2.5G. The second generation began in the early 1990s and
+continues to be used. The main distinction between 1G and 2G
+arises because 2G uses digital signals to carry voice.
+  - 3G and 3.5G. The third generation began in the 2000s, and focuses
+on the addition of higher-speed data services. A 3G system offers
+download rates of 400 Kbps to 2 Mbps, and is intended to support
+applications such as web browsing and photo sharing. 
+  - 4G. The fourth generation began around 2008, and focuses on support for real-time multimedia, such as a television program or
+high-speed video download.
+
+-- __`Software Radio And The Future Of Wireless`__ -- The wide variety of wireless technologies described in the chapter each use
+special-purpose radio hardware. The antenna, transmitter, and receiver in a given device are designed to operate on predetermined frequencies using specific forms of modulation and multiplexing. A cell phone that can use GSM, Wi-Fi, and CDMA networks
+must have three completely separate radio systems, and must choose among them. 
+
+  Emerging wireless systems use software programmable radios that allow software
+to control all aspects of radio transmission. Programmable radios are expensive, and are
+currently available for military and special uses. But in the future we will see their use in everyday life.
+
+
 <br>
 <br>
 
@@ -79,6 +185,38 @@ cannot be plugged in incorrectly, and once inserted, the connectors do not fall 
 <br>
 
 # Chapter 17: LAN Extensions: Fiber Modems, Repeaters, Bridges and Switches
+
+- __`Introduction`__ -- This chapter discusses two important concepts: mechanisms that can extend a LAN
+across a longer distance and LAN switching. The chapter introduces repeaters, bridges,
+and the spanning tree algorithm used to prevent forwarding loops
+
+- __`Distance Limitation And LAN Design`__ -- A maximum length specification is a fundamental part of LAN technology; LAN hardware will not work correctly over wires that exceed
+the bound.
+
+- __`Fiber Modem Extensions`__ -- Engineers have developed a variety of ways to extend LAN connectivity. As a
+general rule, extension mechanisms do not increase the strength of signals, nor do they
+merely extend cables. Instead, most extension mechanisms use standard interface
+hardware, and insert additional hardware components that can relay signals across
+longer distances
+
+  A pair of fiber modems and optical fibers can be used to provide a
+connection between a computer and a remote LAN such as an Ethernet.
+
+- __`Repeaters`__ --
+
+- __`Bridges And Bridging`__ --
+
+- __`Learning Bridges And Frame Filtering`__ --
+
+- __`Why Bridging Works Well`__ --
+
+- __`Distributed Spanning Tree`__ --
+
+- __`Switching And Layer 2 Switches`__ --
+
+- __` VLAN Switches`__ --
+
+- __`Bridging Used With Other Devices`__ --
 
 <br>
 <br>
