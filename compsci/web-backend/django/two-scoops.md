@@ -486,7 +486,24 @@ shortcuts are being taken, that the wrong solution is being explored.
 
 ### The Model _meta API
 
+- For most projects you shouldn’t need _meta. The main uses for it are when you need to:
+	- Get a list of a model’s fields
+	- Get the class of a particular field for a model (or its inheritance chain or other info derived
+from such).
+	- Ensure that how you get this information remains constant across future Django versions.
+
+  Examples of these sorts of situations:
+	- Building a Django model introspection tool.
+	- Building your own custom specialized Django form library.
+	- Etc.
+
 ### Model Managers
+
+- Every time we use the Django ORM to query a model, we are using an interface called a `model manager` to interact with the database. Model managers are said to act on the full set of all possible
+instances of this model class (all the data in the table) to restrict the ones you want to work with.
+Django provides a default model manager for each model class, but we can define our own.
+
+- On the surface, replacing the default model manager seems like the obvious thing to do. Unfortunately, our experiences in real project development makes us very careful when we use this method
 
 ### Understanding Fat Models
 
