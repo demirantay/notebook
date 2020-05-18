@@ -60,15 +60,74 @@
 
 # A Map of the Territory
 
+- First, let me establish a shorthand. Much of this book is about a language’s implementation, which is distinct from the language itself in some sort of Platonic ideal form. 
+
 ### The Parts of a Language
+
+-  Not every language takes the exact same path—some take a shortcut or two—but otherwise they are reassuringly similar from Rear Admiral Grace Hopper’s first COBOL compiler all the way to some hot new transpile-to-JavaScript language whose “documentation” consists entirely of a single poorly-edited README in a Git repository somewhere.
+
+- `Scanning` -- The first step is scanning, also known as lexing, or (if you’re trying to impress someone) lexical analysis. They all mean pretty much the same thing. A scanner (or “lexer”) takes in the linear stream of characters and chunks them together into a series of something more akin to “words”. In programming languages, each of these words is called a token.
+
+  Some characters in a source file don’t actually mean anything. Whitespace is often insignificant and comments, by definition, are ignored by the language. The scanner usually discards these, leaving a clean sequence of meaningful tokens. 
+
+- `Parsing` -- The next step is parsing. This is where our syntax gets a grammar—the ability to compose larger expressions and statements out of smaller parts.
+
+  A parser takes the flat sequence of tokens and builds a tree structure that mirrors the nested nature of the grammar. These trees have a couple of different names—“parse tree” or “abstract syntax tree”
+
+- `Static Analysis` -- The first two stages are pretty similar across all implementations. Now, the individual characteristics of each language start coming into play. At this point, we know the syntactic structure of the code—things like operator precedence and expression nesting—but we don’t know much more than that.
+
+  The first bit of analysis that most languages do is called binding or resolution. For each identifier we find out where that name is defined and wire the two together. This is where scope comes into play
+  
+  Everything up to this point is considered the front end of the implementation. You might guess everything after this is the back end, but no. Back in the days of yore when “front end” and “back end” were coined, compilers were much simpler. Later researchers invented new phases to stuff between the two halves. Rather than discard the old terms, William Wulf and company lumped them into the charming but spatially paradoxical name “middle end”.
+
+- `Intermediate Representation` -- You can think of the compiler as a pipeline where each stage’s job is to organize the code in a way that makes the next stage simpler to implement. The front end of the pipeline is specific to the source language the user is programming in. The back end is concerned with the final architecture that the code will run on.
+
+  In the middle, the code may be stored in some intermediate representation (or “IR”) the IR acts as an interface between these two languages. This lets you support multiple source languages and target platforms with less effort
+
+- `Optimization` -- Once we understand what the user’s program means, we are free to swap it out with a different program that has the same semantics but implements them more efficiently—we can optimize it. Optimization is a huge part of the programming language business. Many language hackers spend their entire careers here, squeezing every drop of performance they can out of their compilers to get their benchmarks a fraction of a percent faster. 
+
+- `Code Generation` -- We have applied all of the optimizations we can think of to the user’s program. The last step is converting it to a form the machine can actually run. In other words generating code, where “code” refers to the kind of primitive assembly-like instructions a CPU runs and not the kind of “source code” a human might want to read.
+
+  We have a decision to make. Do we generate instructions for a real CPU or a virtual one? If we generate real machine code, we get an executable that the OS can load directly onto the chip. Native code is lightning fast, but generating it is a lot of work. Today’s architectures have piles of instructions, complex pipelines Speaking the chip’s language also means your compiler is tied to a specific architecture. If your compiler targets x86 machine code, it’s not going to run on an ARM device
+  
+  To get around that, hackers like Martin Richards and Niklaus Wirth, of BCPL and Pascal fame, respectively, made their compilers produce virtual machine code. Instead of instructions for some real chip, they produced code for a hypothetical, idealized machine. Wirth called this “p-code” for “portable”, but today, we generally call it __bytecode__
+
+- `Virtual Machine` -- If your compiler produces bytecode, your work isn’t over once that’s done. Since there is no chip that speaks that bytecode, it’s your job to translate. Again, you have two options. You can write a little mini-compiler for each target architecture that converts the bytecode to native code for that machine. You still have to do work for each chip you support, but this last stage is pretty simple and you get to reuse the rest of the compiler pipeline across all of the machines you support. You’re basically using your bytecode as an intermediate representation.
+
+  Or you can write a virtual machine (VM), a program that emulates a hypothetical chip supporting your virtual architecture at runtime. Running bytecode in a VM is slower than translating it to native code ahead of time because every instruction must be simulated at runtime each time it executes. In return, you get simplicity and portability. Implement your VM in, say, C, and you can run your language on any platform that has a C compiler.
+
+- `Runtime` -- We have finally hammered the user’s program into a form that we can execute. The last step is running it. If we compiled it to machine code, we simply tell the operating system to load the executable and off it goes. If we compiled it to bytecode, we need to start up the VM and load the program into that.
 
 ### Shortcuts and Alternate Routes
 
+- That’s the long path covering every possible phase you might implement. Many languages do walk the entire route, but there are a few shortcuts and alternate paths.
+
+- `Single-pass compilers` -- Some simple compilers interleave parsing, analysis, and code generation so that they produce output code directly in the parser, without ever allocating any syntax trees or other IRs.  You have no intermediate data structures to store global information about the program, and you don’t revisit any previously parsed part of the code
+
+  Pascal and C were designed around this limitation. At the time, memory was so precious that a compiler might not even be able to hold an entire source file in memory, much less the whole program.
+
+- `Tree-walk interpreters` -- Some programming languages begin executing code right after parsing it to an AST (with maybe a bit of static analysis applied).  This style of interpretation is common for student projects and little languages, but is not widely used for general-purpose languages since it tends to be slow. Some people use “interpreter” to mean only these kinds of implementations, but others define that word more generally, so I’ll use the inarguably explicit “tree-walk interpreter”
+
+- `Transpilers` -- We write a front end for our language. Then, in the back end, instead of doing all the work to lower the semantics to some primitive target language, we produce a string of valid source code for some other language that’s about as high level as ours.
+
+  They used to call this a “source-to-source compiler” or a “transcompiler”. After the rise of languages that compile to JavaScript in order to run in the browser, they’ve affected the hipster sobriquet “transpiler”. While the first transcompiler translated one assembly language to another, today, almost all transpilers work on higher-level languages.
+  
+   C compilers were available everywhere UNIX was and produced efficient code, so targeting C was a good way to get your language running on a lot of architectures.
+   
+   Web browsers are the “machines” of today, and their “machine code” is JavaScript, so these days it seems almost every language out there has a compiler that targets JS
+
+- `Just-in-time compilation` -- This last one is less of a shortcut and more a challenging scramble best reserved for experts. The fastest way to execute code is by compiling it to machine code, but you might not know what architecture your end user’s machine supports. What to do?
+
+  You can do the same thing the HotSpot JVM, Microsoft’s CLR and most JavaScript interpreters do. On the end user’s machine, when the program is loaded—either from source in the case of JS, or platform-independent bytecode for the JVM and CLR—you compile it to native for the architecture their computer supports. Naturally enough, this is called just-in-time compilation. Most hackers just say “JIT”
+
 ### Compilers and Interpreters
 
-### Our Journey
+- “What’s the difference between a compiler and an interpreter?”
 
-
+  __Compiling__ -- is an implementation technique that involves translating a source language to some other—usually lower-level—form. When you generate bytecode or machine code, you are compiling. When you transpile to another high-level language you are compiling too. When we say a language implementation “is a compiler”, we mean it translates source code to some other form but doesn’t execute it. The user has to take the resulting output and run it themselves.
+  
+  __Interpereter__ -- Conversely, when we say an implementation “is an interpreter”, we mean it takes in source code and executes it immediately. It runs programs “from source”. The user does not have to run it themselves.
+  
 <bR>
 
 ---
