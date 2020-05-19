@@ -202,21 +202,58 @@ longer distances
   A pair of fiber modems and optical fibers can be used to provide a
 connection between a computer and a remote LAN such as an Ethernet.
 
-- __`Repeaters`__ --
+- __`Repeaters`__ -- A repeater is an analog device used to propagate LAN signals over long distances.
+A repeater does not understand packets or signal coding. Instead, it merely amplifies
+the signal received, and transmits the amplified version as output
 
-- __`Bridges And Bridging`__ --
+- __`Bridges And Bridging`__ -- A bridge is a mechanism that connects two LAN segments (e.g., two hubs) and
+transfers packets between them. The bridge listens in promiscuous mode on each segment (i.e., receives all packets sent on the segment). When it receives an intact frame
+from one segment, the bridge forwards a copy of the frame to the other segment. Thus,
+two LAN segments connected by a bridge appear to behave like a single LAN
 
-- __`Learning Bridges And Frame Filtering`__ --
+- __`Learning Bridges And Frame Filtering`__ -- Bridges do not blindly forward a copy of each frame from one LAN to another.
+Instead, a bridge uses MAC addresses to perform filtering. That is, a bridge examines
+the destination address in a frame, and does not forward the frame onto the other LAN
+segment unless necessary
 
-- __`Why Bridging Works Well`__ --
+  An adaptive bridge uses the source MAC address in a packet to
+record the location of the sender, and uses the destination MAC address to determine whether to forward the frame
 
-- __`Distributed Spanning Tree`__ --
+- __`Why Bridging Works Well`__ -- It is important to know that once a bridge learns the locations of all computers, a
+bridged network can exhibit higher overall performance than a single LAN.
 
-- __`Switching And Layer 2 Switches`__ --
+  Because a bridge permits simultaneous activity on attached segments,
+a pair of computers on one segment can communicate at the same
+time as a pair computers on another segment.
 
-- __` VLAN Switches`__ --
+  DSL and cable modems also use the concept of
+bridging — the modem operates as a bridge between a local network on a subscriber’s
+premise and a network at an ISP.
 
-- __`Bridging Used With Other Devices`__ --
+- __`Switching And Layer 2 Switches`__ -- The concept of bridging helps explain a mechanism that forms the basis of modern
+Ethernets: switching. An Ethernet switch, sometimes called a Layer 2 switch is an electronic device that resembles a hub. Like a hub, a switch provides multiple ports that
+each attach to a single computer, and a switch allows computers to send frames to one another. The difference between a hub and a switch arises from the way the devices
+operate: a hub operates as an analog device that forwards signals among computers,
+while a switch is a digital device that forwards packets
+
+  Physically, switches are available in many sizes. The smallest consist of an inexpensive, stand-alone device that provides four connections, which are sufficient to interconnect a computer, printer, and two other devices such as a scanner. Businesses use
+the largest switches to connect tens of thousands of computers and other devices
+throughout the company
+
+- __` VLAN Switches`__ -- Switches have been extended by adding virtualization, and the result is known as a
+Virtual Local Area Network switch (VLAN switch). The concept is straightforward: allow a manager to configure a single switch to emulate multiple, independent switches.
+That is, a manager specifies a set of ports on the switch and designates them to be on
+virtual LAN 1, designates another set of ports to be on virtual LAN 2, and so on. When
+a computer on virtual LAN 2 broadcasts a packet, only those computers on the same
+virtual LAN receive a copy (i.e., once configured, a VLAN switch makes it appear that
+there are multiple switches).
+
+- __`Bridging Used With Other Devices`__ -- Although our description characterizes a bridge as a stand-alone device, bridging is
+a fundamental concept that has been incorporated into many devices. For example, a
+DSL or cable modem provides a form of bridging: the modem provides an Ethernet
+connection at a subscriber’s residence, and transfers Ethernet packets between the
+subscriber’s location and the provider’s network. Some wireless technologies also use a
+form of bridging to transfer frames from a mobile device to a provider’s network
 
 <br>
 <br>
@@ -228,75 +265,65 @@ connection between a computer and a remote LAN such as an Ethernet.
 
 # Chapter 18: WAN Technologies and Dynamic Routing
 
-<br>
-<br>
+- __`Introduction`__ -- This chapter
+considers the structure of a network that spans an arbitrarily large area. The chapter
+describes the basic components used to build a packet switching system, and explains
+the fundamental concept of routing. The chapter presents the two basic routing algorithms, and explains the advantages of each
 
----
+- __`Large Spans And Wide Area Networks`__ -- Consider a company that uses a satellite bridge to connect LANs at two sites.
+Should the network be classified as a WAN or as an extended LAN? Does the answer
+change if the company only has a PC and a printer at each site? Yes, it does. The key
+issue that separates WAN technologies from LAN technologies is scalability — a WAN
+must be able to grow as needed to connect many sites spread across large geographic
+distances, with many computers at each site. For example, a WAN should be able to
+connect all the computers in a large corporation that has offices or factories at dozens of
+locations spread across thousands of square miles. Furthermore, a technology is not
+classified as a WAN unless it can deliver reasonable performance for a large scale network
 
-<br>
-<br>
+- __`Traditional WAN Architecture`__ -- Traditional WAN technologies were developed before Local Area Networks emerged, before personal computers were available, and before the Internet had been created
 
-# Chapter 19: Networking Technologies Past and Present
+  Without LAN technologies available, WAN designers chose to create a specialpurpose hardware device that could be placed at each site. Known as a packet switch,
+the device provides local connections for computers at the site as well as connections
+for data circuits that lead to other sites.
 
-<br>
-<br>
+  Since the advent of LAN technology, most WANs separate a packet switch into
+two parts: a Layer 2 switch that connects local computers and a router that connects to
+other site
 
----
+- __`Forming A WAN`__ -- Conceptually, a WAN can be formed by interconnecting a set of sites. The exact
+details of the interconnections depend on the data rate needed, the distance spanned, and
+the delay that can be tolerated
 
-<br>
-<br>
+  A traditional WAN is formed by interconnecting packet switches; a
+packet switch at each site connects to computers. The topology and
+capacity of connections are chosen to accommodate expected traffic
+and need for redundancy.
 
-# Chapter 20: Internetworking: Concepts Architecture and Protocols
+- __`Store And Forward Paradigm`__ -- The goal of a WAN is to allow as many computers as possible to send packets
+simultaneously. The fundamental paradigm used to achieve simultaneous transmission
+is known as store and forward
 
-<br>
-<br>
+  Wide area packet switching systems use the store-and-forward technique in which packets arriving at a packet switch are placed in a
+queue until the packet switch can forward them on toward their destination. The technique allows a packet switch to buffer a short burst
+of packets that arrive simultaneously.
 
----
+- __`Addressing In A WAN`__ --
 
-<br>
-<br>
+- __`Next-Hop Forwarding`__ --
 
-# Chapter 21: IP:Internet Adressing
+- __`Source Independence`__ --
 
-<br>
-<br>
+- __`Dynamic Routing Updates In A WAN`__ --
 
----
+- __`Default Routes`__ --
 
-<br>
-<br>
+- __`Forwarding Table Computation`__ --
 
-# Chapter 22: Datagram Forwarding
+- __`Distributed Route Computation`__ --
 
-<br>
-<br>
+- __`Shortest Path Computation In A Graph`__ --
 
----
-
-<br>
-<br>
-
-# Chapter 23: Support Protocols and Technologies
-
-<br>
-<br>
-
----
-
-<br>
-<br>
-
-# Chapter 24: The Future IP (IPv6)
-
-<br>
-<br>
-
----
-
-<br>
-<br>
-
-# Chapter 25: UDP: Datagram Transport Service
+- __`Routing Problems`__ --
 
 <br>
 <br>
@@ -306,72 +333,3 @@ connection between a computer and a remote LAN such as an Ethernet.
 <br>
 <br>
 
-# Chapter 26: TCP: Reliable Transport Service
-
-<br>
-<br>
-
----
-
-<br>
-<br>
-
-# Chapter 27: Internet Routing and Routing Protocols
-
-<br>
-<br>
-
----
-
-<br>
-<br>
-
-# Chapter 28: Network Performance (QoS and DiffServ)
-
-<br>
-<br>
-
----
-
-<br>
-<br>
-
-# Chapter 29: Multimedia and IP Telephony (VoIP)
-
-<br>
-<br>
-
----
-
-<br>
-<br>
-
-# Chapter 30: Network Security
-
-<br>
-<br>
-
----
-
-<br>
-<br>
-
-# Chapter 31: Network Management (SNMP)
-
-<br>
-<br>
-
----
-
-<br>
-<br>
-
-# Chapter 32: Trends in Networking Technologies and Uses
-
-<br>
-<br>
-
----
-
-<br>
-<br>
