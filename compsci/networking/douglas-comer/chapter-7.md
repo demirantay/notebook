@@ -307,23 +307,61 @@ is known as store and forward
 queue until the packet switch can forward them on toward their destination. The technique allows a packet switch to buffer a short burst
 of packets that arrive simultaneously.
 
-- __`Addressing In A WAN`__ --
+- __`Addressing In A WAN`__ -- From the view of an attached computer, a traditional WAN network operates similar to a LAN. Each WAN technology defines the exact frame format a computer uses
+when sending and receiving data. Furthermore, each computer connected to a WAN is
+assigned an address. When sending a frame to another computer, the sender must supply the destination address.
 
-- __`Next-Hop Forwarding`__ --
+  Although details vary, WANs addresses follow a key concept that is used in the Internet: hierarchical addressing. Conceptually, hierarchical addressing divides each address into two parts: `(site, computer at the site)` 
+  
+- __`Next-Hop Forwarding`__ -- The importance of hierarchical addressing becomes clear when one considers packet processing. When a packet arrives, a packet switch must choose an outgoing path
+over which to forward the packet
 
-- __`Source Independence`__ --
+  The important idea is that a packet switch does not need to keep complete information about how to reach all possible computers, nor does a switch need to compute the
+entire route a packet will follow through the network. Instead, a switch bases forwarding on packet switch IDs, which means that a switch only needs to know which outgoing link to use to reach a given switch.
 
-- __`Dynamic Routing Updates In A WAN`__ --
+  We say that a switch only needs to compute the next hop for a packet. The process
+is called next-hop forwarding, and is analogous to the way airlines list flights.
 
-- __`Default Routes`__ --
+  Only the first part of a destination address is used when forwarding a
+packet across a WAN. Once the packet reaches the switch to which
+the destination computer attaches, the second part of the address is
+used to forward the packet to the correct local computer.
 
-- __`Forwarding Table Computation`__ --
+- __`Source Independence`__ -- Note that next-hop forwarding does not depend on the packet’s original source or
+on the path the packet has taken before it arrives at a particular packet switch. Instead,
+the next hop to which a packet is sent depends only on the packet’s destination. The
+concept, which is known as source independence, is a fundamental idea in networking,
 
-- __`Distributed Route Computation`__ --
+- __`Dynamic Routing Updates In A WAN`__ -- For a WAN to operate correctly, each switch must have a forwarding table, and
+must forward packets. Furthermore, values in the forwarding table must guarantee the
+following:
+  - Universal communication. The forwarding table in each switch
+must contain a valid next-hop route for each possible destination
+address
+  - Optimal routes. In a switch, the next-hop value in the forwarding
+table for a given destination must point to the shortest path to the
+destination.
 
-- __`Shortest Path Computation In A Graph`__ --
+  Network failures further complicate forwarding. For example, if two paths exist to
+a given destination and one of the paths becomes unavailable because hardware fails
+(e.g., a circuit is disconnected), forwarding should be changed to avoid the unavailable
+path. Thus, a manager cannot merely configure a forwarding table to contain static
+values that do not change. Instead, software running on the packet switches continually
+tests for failures, and reconfigures the forwarding tables automatically. We use the term
+routing software to describe software that automatically reconfigures forwarding tables.
 
-- __`Routing Problems`__ --
+- __`Shortest Path Computation In A Graph`__ -- These are a traveling salesman problems so greedy algorithms are needed for optimal solutions in graph algorithms such as djikstras algoriyhm ... etc.
+
+  Because it uses weights on links when computing shortest paths,
+Dijkstra’s algorithm can be used with measures other than geographic
+distance.
+
+- __`Routing Problems`__ -- Most practical routing mechanisms contain constraints and hueristics to prevent
+problems like routing loops. For example, DVR schemes employ split horizon, which
+specifies that a switch does not send information back to its origin. Furthermore, most
+practical routing systems introduce hysteresis that prevents the software from making
+many changes in a short time. However, in a large network where many links fail and
+recover frequently, routing problems can occur.
 
 <br>
 <br>
