@@ -119,7 +119,7 @@ Try to specilize in a field such as these, just chose one or two. However, remem
    - [ ] Guide: Follow [osdev.wiki](https://wiki.osdev.org/Main_Page)
    - [ ] Tutorial: [little OS tutorial](https://littleosbook.github.io/)
    - [ ] Project : Code a small Operating System
-     - [ ] Optional: Do more books and projects if you want to focus on this subject.
+   - [ ] Optional: Do more books and projects if you want to focus on this subject.
    
 ### Computer Networking
 
@@ -132,7 +132,7 @@ Try to specilize in a field such as these, just chose one or two. However, remem
    - [ ] Project: Do the ben eaters How to create a internet [tutorial from here[(https://eater.net/inet)
    - [ ] Project : Build differnt types of servers, web, ftp ... etc.
    - [ ] Project: Try to build your own internet. Understand how to connect to the WWW.
-    - [ ] Optional: Do more books and projects if you want to focus on this subject.
+   - [ ] Optional: Do more books and projects if you want to focus on this subject.
    
  ### Databases
 
@@ -159,12 +159,13 @@ Try to specilize in a field such as these, just chose one or two. However, remem
    - [ ] Optional: Do more books and projects if you want to focus on this subject.
    
    
-### Distributed Systems
+### Computer Graphics
 
-  > Research books like you did for computer architecture. Through reddit, forums ... etc. Then start.
-   - [ ] Book : [Distibuted Systems, 3rd edition](https://www.distributed-systems.net/index.php/books/distributed-systems-3rd-edition-2017/)
-   - [ ] Project: Do something to implement the theory you have learned.
-   - [ ] Optional: Do more books and projects if you want to focus on this subject.
+- [ ] Add something small dont go overboard with this
+
+### Artifical Intelligence
+
+- [ ] Add on later on do go overboard as computer networking but dont go as little as computer graphics
    
 ## Final: Feynman Notes
 
@@ -177,8 +178,8 @@ Try to specilize in a field such as these, just chose one or two. However, remem
 - [ ] Computer Networking 
 - [ ] Databases 
 - [ ] Languages and Compilers 
-- [ ] Distributed Systems 
-- [ ] Re-iterate through feynman boxes above
+- [ ] Graphics
+- [ ] Artifical Intelligence
 
 <br>
 <Br>
@@ -306,17 +307,18 @@ Try to specilize in a field such as these, just chose one or two. However, remem
 - [x] Web security: Hashign Algorithms (scrypt, bcrypt, SHA Family ... etc.
 - [x] Design and Development Principles (SOLID, KISS, YAGNI, DRY)
 - [x] Architectural Patterns: Monolithic Apps, Microservices, Microservices, SOA, Serverless
-- [ ] Search Engine -- (ElasticSearch, solr .. etc)
-- [ ] Message Brokers -- (RabbitMQ, Kafka)
-- [ ] GraphQL 
-- [ ] Graph Databases
-- [ ] Scalability: Migration Strategies
-- [ ] Scalability: Horizontal vs Vertical Scaling
-- [ ] Scalability: Understanding Diff
-- [ ] Scalability: Metrics logging ... etc.
+- [x] Search Engine -- (ElasticSearch, solr .. etc)
+- [x] Message Brokers -- (RabbitMQ, Kafka)
+- [x] GraphQL 
+- [x] Graph Databases
+- [x] Scalability: Migration Strategies
+- [x] Scalability: Horizontal vs Vertical Scaling
+- [x] Scalability: Understanding Diff
+- [x] Scalability: Metrics logging ... etc.
 
 ### Packet #2 
 
+- [ ] Project: Finish Compilers at the top.
 - [ ] Feynman: Specific Programming Language (e.g. Python)
 - [ ] Feynman: Standarts & Best Practices
 - [ ] Feynman: Backend Testing
@@ -324,8 +326,10 @@ Try to specilize in a field such as these, just chose one or two. However, remem
 - [ ] Feynman: HTML
 - [ ] Feynman: CSS
 - [ ] Feynman: JavaScript (not node, just vanilla)
+- [ ] Project: Finish Databases at the top.
 - [ ] Feynman: Relational Databases
 - [ ] Feynman: NoSQL
+- [ ] Project: Networking at the top.
 - [ ] Feynman: Web Framework
 - [ ] Feynman: Caching
 - [ ] Feynman: API's
@@ -392,11 +396,14 @@ Try to specilize in a field such as these, just chose one or two. However, remem
 
 > I need to change the order from the easiest to hardest since understanding and building all of docker is easier than building a operating systems kernel shell .. etc.
 
+- [ ] Project: Finish the Compilers at the top.
 - [ ] Feynman: System Progrmaming Languages (python, c/c++, go)
+- [ ] Project: Finish the Operating Systems at the top.
 - [ ] Feynman: Unix/Linux Envioronment
 - [ ] Feynman: Terminal Shell
 - [ ] Feynman: Bash Scripting
 - [ ] Feynman: CLI Tools - (text maniupation, process mointoring, network, sys performance)
+- [ ] Project: Finish the Networking at the top.
 - [ ] Feynman: Web Servers
 - [ ] Feynman: CGIs
 - [ ] Feynman: Caching Servers
