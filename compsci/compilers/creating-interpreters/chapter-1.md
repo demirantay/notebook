@@ -51,12 +51,13 @@
   
   Our Java implementation was focused on being correct. Now that we have that down, we’ll turn to also being fast.
 
-
-<bR>
+<br>
+<br>
 
 ---
 
-<Br>
+<br>
+<br>
 
 # A Map of the Territory
 
@@ -128,253 +129,413 @@
   
   __Interpereter__ -- Conversely, when we say an implementation “is an interpreter”, we mean it takes in source code and executes it immediately. It runs programs “from source”. The user does not have to run it themselves.
   
-<bR>
+<br>
+<br>
 
 ---
 
-<Br>
+<br>
+<br>
 
 # The Lox Language
 
+- It seems cruel to have you immediately start grinding out code for the interpreter without at least a glimpse of what we’re going to end up with.
 
-<bR>
+### Hello, Lox
+
+- Here’s your very first taste of Lox:
+  ```lox
+  // Your first Lox program!
+  print "Hello, world!";
+  ```
+  As that // line comment and the trailing semicolon imply, Lox’s syntax is a member of the C family. (There are no parentheses around the string because print is a built-in statement, and not a library function.)
+
+### A High-Level Language
+
+- When I think of languages that are small but useful, what comes to mind are high-level “scripting” languages like JavaScript, Scheme, and Lua. Of those three, Lox looks most like JavaScript, mainly because most C-syntax languages do. As we’ll learn later, Lox’s approach to scoping hews closely to Scheme. The C flavor of Lox we’ll build in Part III is heavily indebted to Lua’s clean, efficient implementation.
+
+- `Dynamic typing` -- Lox is dynamically typed. Variables can store values of any type, and a single variable can even store values of different types at different times.
+
+  There are plenty of reasons to like static types, but they don’t outweigh the pragmatic reasons to pick dynamic types for Lox. A static type system is a ton of work to learn and implement. Skipping it gives you a simpler language and a shorter book.
+
+- `Automatic memory management` -- There are two main techniques for managing memory: reference counting and tracing garbage collection (usually just called “garbage collection” or “GC”). Ref counters are much simpler to implement—I think that’s why Perl, PHP, and Python all started out using them. But, over time, the limitations of ref counting become too troublesome. All of those languages eventually ended up adding a full tracing GC or at least enough of one to clean up object cycles.
+
+### Data Types
+
+- There are only a few primitive data types in Lox:
+  - Booleans 
+    ```
+    true;
+    false;
+    ```
+    
+  - Numbers -- Full-featured languages have lots of syntax for numbers—hexadecimal, scientific notation, octal, all sorts of fun stuff. We’ll settle for basic integer and decimal literals:
+    ```
+    1234;  // An integer.
+    12.34; // A decimal number.
+    ```
+    
+  - Strings –
+    ```
+    "I am a string";
+    "";    // The empty string.
+    ```
+    
+  - Nil – There’s one last built-in value who’s never invited to the party but always seems to show up. It represents “no value”. It’s called “null” in many other languages
+
+### Expressions
+
+- `Arithmetic` -- These are how arithmetic expressions happen in lox:
+  ```
+  add + me;
+  subtract - me;
+  multiply * me;
+  divide / me;
+  ```
+  One arithmetic operator is actually both an infix and a prefix one. The - operator can also be used to negate a number:
+  ```
+  -negateMe;
+  ```
+
+- `Comparison and equality` -- these will be the comparison operators in lox:
+  ```
+  less < than;
+  lessThan <= orEqual;
+  greater > than;
+  greaterThan >= orEqual;
+  ```
+  or:
+  ```
+  1 == 2;          // false.
+  "cat" != "dog";  // true.
+  123 == "123";    // false.
+  ```
+
+- `Logical operators` -- These wil be the logical operators of the language:
+  ```
+  !true;  // false.
+  !false; // true.
+  
+  true and false; // false.
+  true and true;  // true.
+  
+  false or false; // false.
+  true or false;  // true.
+  ```
+
+- `Precedence and grouping` -- All of these operators have the same precedence and associativity that you’d expect coming from C. (When we get to parsing, we’ll get way more precise about that.) In cases where the precedence isn’t what you want, you can use () to group stuff:
+  ```
+  var average = (min + max) / 2;
+  ```
+
+### Statements
+
+### Variables
+
+### Control Flow
+
+### Functions
+
+### Classes
+
+### The Standard Library
+
+
+<br>
+<br>
 
 ---
 
-<Br>
+<br>
+<br>
 
 # A Tree-Walk Interpreter
 
 
-<bR>
+<br>
+<br>
 
 ---
 
-<Br>
+<br>
+<br>
 
 # Scanning
 
 
-<bR>
+<br>
+<br>
 
 ---
 
-<Br>
+<br>
+<br>
 
 # Representing Code 
 
 
-<bR>
+<br>
+<br>
 
 ---
 
-<Br>
+<br>
+<br>
 
 # Parsing Expressions
 
 
-<bR>
+<br>
+<br>
 
 ---
 
-<Br>
+<br>
+<br>
 
 # Evaluating Expressions
 
 
-<bR>
+<br>
+<br>
 
 ---
 
-<Br>
+<br>
+<br>
 
 # Statements and State
 
 
-<bR>
+<br>
+<br>
 
 ---
 
-<Br>
+<br>
+<br>
 
 # Control Flow
 
 
-<bR>
+<br>
+<br>
 
 ---
 
-<Br>
+<br>
+<br>
 
 # Functions
 
 
-<bR>
+<br>
+<br>
 
 ---
 
-<Br>
+<br>
+<br>
 
 # Resolving and Binding
 
 
-<bR>
+<br>
+<br>
 
 ---
 
-<Br>
+<br>
+<br>
 
 # Classes
 
 
-<bR>
+<br>
+<br>
 
 ---
 
-<Br>
+<br>
+<br>
 
 # Inheritance
 
-<bR>
+<br>
+<br>
 
 ---
 
-<Br>
+<br>
+<br>
 
 # A Bytecode Virtual Machine
 
-<bR>
+<br>
+<br>
 
 ---
 
-<Br>
+<br>
+<br>
 
 # Chunks of Bytecode
 
-<bR>
+<br>
+<br>
 
 ---
 
-<Br>
+<br>
+<br>
 
 # A Virtual Machine
 
-<bR>
+<br>
+<br>
 
 ---
 
-<Br>
+<br>
+<br>
 
 # Scanning on Demand
 
-<bR>
+<br>
+<br>
 
 ---
 
-<Br>
+<br>
+<br>
 
 # Compiling Expressions
 
-<bR>
+<br>
+<br>
 
 ---
 
-<Br>
+<br>
+<br>
 
 # Types of Values
 
-<bR>
+<br>
+<br>
 
 ---
 
-<Br>
+<br>
+<br>
 
 # Strings
 
-<bR>
+<br>
+<br>
 
 ---
 
-<Br>
+<br>
+<br>
 
 # Hash Tables
 
-<bR>
+<br>
+<br>
 
 ---
 
-<Br>
+<br>
+<br>
 
 # Global Variables
 
-<bR>
+<br>
+<br>
 
 ---
 
-<Br>
+<br>
+<br>
 
 # Local Variables
 
-<bR>
+<br>
+<br>
 
 ---
 
-<Br>
+<br>
+<br>
 
 # Jumping Back and Forth
 
-<bR>
+<br>
+<br>
 
 ---
 
-<Br>
+<br>
+<br>
 
 # Calls and Functions
 
-<bR>
+<br>
+<br>
 
 ---
 
-<Br>
+<br>
+<br>
 
 # Closures
 
-<bR>
+<br>
+<br>
 
 ---
 
-<Br>
+<br>
+<br>
 
 # Garbage Collection
 
-<bR>
+<br>
+<br>
 
 ---
 
-<Br>
+<br>
+<br>
 
 # Classes and Instances
 
-<bR>
+<br>
+<br>
 
 ---
 
-<Br>
+<br>
+<br>
 
 # Methods and Initializers
 
-<bR>
+<br>
+<br>
 
 ---
 
-<Br>
+<br>
+<br>
 
 # Superclasses
 
-<bR>
+<br>
+<br>
 
 ---
 
-<Br>
-
+<br>
+<br>
 # Optimization
