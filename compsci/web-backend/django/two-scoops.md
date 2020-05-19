@@ -507,5 +507,25 @@ Django provides a default model manager for each model class, but we can define 
 
 ### Understanding Fat Models
 
+- The concept of fat models is that rather than putting data-related code in views and templates,
+instead we encapsulate the logic in model methods, classmethods, properties, even manager methods.
+That way, any view or task can use the same logic. For example, if we have a model that represents
+Ice Cream reviews we might attach to it the following methods:
+	- Review.create_review(cls, user, rating, title, description)-- A classmethod for creating reviews.
+	-  review.product_average -- A review instance property that returns the reviewed project’s
+average rating
+	- review.found_useful(self, user, yes) --  A method that sets whether or not readers
+found the review useful or not.
 
+	As can be inferred from this list, fat models are a great way to improve reuse of code across a project. But do not go over board with models. 
+	
+	The problem with putting all logic into models is it can cause models to explode in size of code,
+becoming what is called a ‘god object’. This anti-pattern results in model classes that are hundreds,
+thousands, even tens of thousands of lines of code. Because of their size and complexity, god objects
+are hard to understand, hence hard to test and maintain.
 
+	If a models starts to become unwieldy in size, we begin isolating code that is prime for reuse across other models, or whose complexity requires better management. . The methods, classmethods, and properties
+are kept, but the logic they contain is moved into Model Behaviors or Stateless Helper Functions.
+
+- `Stateless Helper Functions` -- By moving logic out of models and into utility functions, it becomes more isolated. This isolation
+makes it easier to write tests for the logic.
