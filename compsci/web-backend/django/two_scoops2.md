@@ -6,19 +6,111 @@
 
 # Queries and the Database Layer
 
+- The Django ORM, like any ORM, converts data from different types into objects that we can use
+pretty consistently across supported databases. Then it provides a set of methods for interacting with
+those objects. For the most part, Django’s does a pretty good job at what it’s designed to do. However,
+it does have quirks, and understanding those quirks is part of learning how to use Django
+
 ### Use get_object_or_404() for Single Objects 
+
+- In views such as detail pages where you want to retrieve a single object and do something with it, use
+`get_object_or_404()` instead of `get()`
+
+ Only use it in views. Don’t use it in helper functions, forms, model methods or anything that is not a view
+or directly view related. Dont use it anywhere else than __views__
  
 ### Be Careful With Queries That Might Throw Exceptions
 
+- When you’re getting a single Django model instance with the get_object_or_404() shortcut,
+you don’t need to wrap it in a try-except block. That’s because get_object_or_404() already does
+that for you
+
+ But for most of the part you will need to use try..except... blocks. So use `ObjectDoesNotExist` package from `from django.core.exceptions import ObjectDoesNotExist`
+ 
+- If it’s possible that your query may return more than one object, check for a MultipleObjectsReturned exception.
+  ```python
+  try:
+   ...
+  except ObjectDoesNotExist:
+   ...
+  except MultipleObjectsReturned:
+   ...
+  ```
+
 ### Use Lazy Evaluation to Make Queries Legible 
+
+- By lazy evaluation, we mean that the Django ORM doesn’t make the SQL calls until the data is
+actually needed. We can chain ORM methods and functions as much as we want, and until we try
+to loop through the result, Django doesn’t touch the database. Instead of being forced to chain many
+methods and advanced database features on a single line, we can break them up over as many lines
+as needed. This increases readability, which improves the ease of maintenance
+  ```python
+  # instead of one big query like this
+  return Promo.objects.active().filter(Q(name__startswith=name)|Q(description__icontains=name)
+  
+  # we can break it up:
+  results = Promo.objects.active()
+  results = results.filter(
+              Q(name__startswith=name) |
+              Q(description__icontains=name) 
+  return results
+  ```
+  
+- This technique borrows from the Pandas and JavaScript communities. Instead of using lazy evaluation, it’s possible to chain queries thus:
+  ```python
+  qs = (Promo
+         .objects
+         .active()
+         .filter(
+         Q(name__startswith=name) |
+         Q(description__icontains=name)
+         )
+         .exclude(status='melted')
+         .select_related('flavors')
+         )
+  return qs
+  ```
+  The downside to this approach is that debugging isn’t as easy as using the lazy evaluation method of
+writing a query.
 
 ### Lean on Advanced Query Tools
 
+- Django’s ORM is easy to learn, intuitive, and covers many use cases. Yet there are a number of things
+it does not do well. What happens then is after the queryset is returned we begin processing more
+and more data in Python
+
+ Instead of managing data with Python, we always try to use Django’s advanced query tools to do the
+lifting. In doing so we not only benefit from increased performance
+
+ Use functions such as `filter()` -- `customers = Customer.objects.filter(scoops_ordered__gt=F('store_visits'))` Do not try to edit the returned queryset with your won python code.
+
 ### Don’t Drop Down to Raw SQL Until It’s Necessary
 
-### Add Indexes as Needed
+- Whenever we write raw SQL we lose elements of security and reusability. This does’t just apply to
+internal project code, but also to the rest of the Django world. Specifically, if you ever release one
+of your Django apps as a third-party package, using raw SQL will decrease the portability of the
+work.
 
 ### Transactions
+
+- The default behavior of the ORM is to autocommit every query when it is called. In the case of
+data modification, this means that every time a .create() or .update() is called, it immediately
+modifies data in the SQL database. The advantage of this is that it makes it easier for beginning
+developers to understand the ORM. The disadvantage is that if a view (or some other operation)
+requires two or more database modifications to occur, if one modification succeeds and the other
+fails, the database is at risk of corruption
+
+ The way to resolve the risk of database corruption is through the use of database transactions. A
+database transaction is where two or more database updates are contained in a single unit of work. If
+a single update fails, all the updates in the transaction are rolled back. To make this work, a database
+transaction, by definition, must be atomic, consistent, isolated and durable. Database practitioners
+often refer to these properties of database transactions using the acronym ACID.
+
+- When it comes to transactions, here are some good guidelines to live by:
+ - Database operations that do not modify the database should not be wrapped in transactions.
+ - Database operations that modify the database should be wrapped in a transaction.
+ - Special cases including database modifications that require database reads and performance
+considerations can affect the previous two guidelines
 
 <br>
 <br>
