@@ -235,6 +235,123 @@ be set on a view and stick with it.
 <Br>
 <Br>
 <Br>
+ 
+# Best Practices for Class-Based Views
+
+- Django provides a standard way to write class-based views (CBVs). In fact, as we mentioned in
+previous chapters, a Django view is just a callable that accepts a request object and returns a response
+
+### Guidelines When Working With CBVs
+
+- Less view code is better
+- Never repeat code in views.
+- Views should handle presentation logic. Try to keep business logic in models when possible,
+or in forms if you must
+- Keep your views simple
+- Keep your mixins simpler
+
+### Using Mixins With CBVs
+
+- In programming, a mixin is a class that provides functionality to be inherited, but isn’t meant for
+instantiation on its own. In programming languages with multiple inheritance, mixins can be used
+to add enhanced functionality and behavior to classes. We can use the power of mixins to compose our own view classes for our Django apps.
+
+ When using mixins to compose our own view classes, we recommend these rules of inheritance
+provided by Kenneth Love
+ - 1 - The base view classes provided by Django always go to the right.
+ - 2 - Mixins go to the left of the base view.
+ - 3 - Mixins should inherit from Python’s built-in object type. Keep your inheritance chain simple!
+ 
+ Example of the rules in action:
+ ```python
+ from django.views.generic import TemplateView
+
+ class FreshFruitMixin:
+    def get_context_data(self, **kwargs):
+       context = super(FreshFruitMixin, self).get_context_data(**kwargs)
+       context["has_fresh_fruit"] = True
+       return context
+       
+ class FruityFlavorView(FreshFruitMixin, TemplateView):
+    template_name = "fruity_flavor.html"
+ ```
+
+### General Tips for Django CBVs
+
+- > Note from Djangos Creation Jacob Kaplan: The School of “Avoid them unless you’re actually subclassing views”
+Jacob Kaplan-Moss says, “My general advice is to start with function views since they’re
+easier to read and understand, and only use CBVs where you need them. Where do you
+need them? Any place where you need a fair chunk of code to be reused among multiple
+views.”
+
+> I skipped most part of this section because I prefer to use Function Based Views
+
+<Br>
+<Br>
+<Br>
+  
+# Common Patterns for Forms
+
+> I skipped most part of this chapter since I haven't quite figured out how to use django's form. and this chapter mostly talks about forms best practices rather than how to use them.
+
+- Django forms are powerful, flexible, extensible, and robust. For this reason, the Django admin and
+CBVs use them extensively. In fact, all the major Django API frameworks use ModelForms or a
+similar implementation as part of their validation.
+
+  This chapter goes explicitly into one of the best parts of Django: forms, models, and CBVs working
+in concert. This chapter covers five common form patterns that should be in every Django developer’s
+toolbox.
+
+### Pattern 1: Simple ModelForm With Default Validators
+
+- If you recall, using ModelForms with CBVs to implement add/edit forms can be done in just a few
+lines of code:
+  ```python
+  from django.contrib.auth.mixins import LoginRequiredMixin
+  from django.views.generic import CreateView, UpdateView
+  
+  from .models import Flavor
+  
+  class FlavorCreateView(LoginRequiredMixin, CreateView):
+      model = Flavor
+      fields = ['title', 'slug', 'scoops_remaining']
+  
+  class FlavorUpdateView(LoginRequiredMixin, UpdateView):
+      model = Flavor
+      fields = ['title', 'slug', 'scoops_remaining']
+  ```
+  Yes, Django gives us a lot of great defaults for data validation, but in practice, the defaults are never
+enough So it is not used very much
+
+<Br>
+<Br>
+<Br>
+  
+# Form Fundamentals
+
+### Validate All Incoming Data With Django Forms
+
+### Use the POST Method in HTML Forms
+
+### Always Use CSRF Protection With HTTP Forms That Modify Data
+
+### Understand How to Add Django Form Instance Attributes
+
+### Know How Form Validation Works
+
+### Add Errors to Forms With Form.add_error()
+
+### Fields Without Pre-Made Widgets
+
+### Customizing Widgets
+
+### Additional Resources
+
+
+<Br>
+<Br>
+<Br>
+  
   
 
 
