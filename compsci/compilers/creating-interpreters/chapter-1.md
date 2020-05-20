@@ -228,28 +228,114 @@
   var average = (min + max) / 2;
   ```
 
-### Statements
-
 ### Variables
+
+- You declare variables using var statements. If you omit the initializer, the variable’s value defaults to nil:
+  ```
+  var imAVariable = "here is my value";
+  var iAmNil;
+  ```
 
 ### Control Flow
 
+- The control flow will look like this:
+  ```
+  if (condition) {
+    print "yes";
+  } else {
+    print "no";
+  }
+  ```
+
+- The `while` loop will look like this:
+  ```
+  var a = 1;
+  while (a < 10) {
+    print a;
+    a = a + 1;
+  }
+  ```
+  
+- Finally, we have for loops:
+  ```
+  for (var a = 1; a < 10; a = a + 1) {
+    print a;
+  }
+  ```
+
 ### Functions
+
+- A function call expression looks the same as it does in C, but the definition of the function looks a bit different:
+  ```
+  fun printSum(a, b) {
+    print a + b;
+    return a;
+  }
+  
+  sum(1, 3);
+  ```
 
 ### Classes
 
+- `Why might any language want to be object oriented?` -- It is true that the “all inheritance all the time” binge of the 90s produced some monstrous class hierarchies, but object-oriented programming is still pretty rad. Billions of lines of successful code have been written in OOP languages, shipping millions of apps to happy users. Likely a majority of working programmers today are using an object-oriented language. They can’t all be that wrong.
+
+- `Why is Lox object oriented?` -- I could claim objects are groovy but still out of scope for the book. Most programming language books, especially ones that try to implement a whole language, leave objects out. To me, that means the topic isn’t well covered. With such a widespread paradigm, that omission makes me sad.
+
+- `Classes or prototypes?` -- When it comes to objects, there are actually two approaches to them, classes and prototypes. Classes came first, and are more common thanks to C++, Java, C#, and friends. Prototypes were a virtually forgotten offshoot until JavaScript accidentally took over the world.
+
+  In a class-based language, there are two core concepts: instances and classes. Instances store the state for each object and have a reference to the instance’s class. Classes contain the methods and inheritance chain.
+  
+  Prototype-based languages merge these two concepts. There are only objects—no classes—and each individual object may contain state and methods. Objects can directly inherit from each other This means prototypal languages are more fundamental in some way than classes. They are really neat to implement because they’re so simple.
+  
+   So, for Lox, we’ll save our users the trouble and bake classes right in. Because even the though prototypes are simpler the users use them to implement classes in the long run:) because classes are very natural to human comprehension.
+
+- `Classes in Lox` -- This is how we will define classes:
+  ```lox
+  class Breakfast {
+    init(meat, bread) {
+      this.meat = meat;
+      this.bread = bread;
+    }
+  
+    cook() {
+      print "Eggs a-fryin'!";
+    }
+
+    serve(who) {
+      print "Enjoy your breakfast, " + this.meat;
+    }
+  }
+  ```
+  Next, we need a way to create instances. We could add some sort of new keyword, but to keep things simple, in Lox the class itself is a factory function for instances
+  ```
+  var breakfast = Breakfast();
+  print breakfast; // "Breakfast instance".
+  ```
+
+- `Inheritance` --  Lox supports single inheritance. When you declare a class, you can specify a class that it inherits from using `<`:
+  ```
+  class Brunch < Breakfast {
+    drink() {
+      print "How about a Bloody Mary?";
+    }
+  }
+  ```
+  and as usual you cans use the parent objects methods too:
+  ```
+  var benedict = Brunch("ham", "English muffin");
+  benedict.serve("Noble Reader");
+  ```
+  Because we don’t implement classes until well after we start working with the built-in types, that would have been hard. So values of primitive types aren’t real objects in the sense of being instances of classes. They don’t have methods or properties. If I were trying to make Lox a real language for real users, I would fix that.
+
 ### The Standard Library
 
+- We’re almost done. That’s the whole language, so all that’s left is the “core” or “standard” library—the set of functionality that is implemented directly in the interpreter and that all user-defined behavior is built on top of.
 
-<br>
-<br>
-
----
-
-<br>
-<br>
-
-# A Tree-Walk Interpreter
+  This is the saddest part of Lox. Its standard library goes beyond minimalism and veers close to outright nihilism. For the sample code in the book, we only need to demonstrate that code is running and doing what it’s supposed to do. For that, we already have the built-in `print` statement. 
+  
+   we need to track time, so we’ll define one built-in function `clock()` that returns the number of seconds since the application started.
+   
+   If you wanted to turn Lox into an actual useful language, the very first thing you should do is flesh this out. String manipulation, trigonometric functions, file I/O, networking, heck, even reading input from the user would help
 
 
 <br>
@@ -260,282 +346,4 @@
 <br>
 <br>
 
-# Scanning
 
-
-<br>
-<br>
-
----
-
-<br>
-<br>
-
-# Representing Code 
-
-
-<br>
-<br>
-
----
-
-<br>
-<br>
-
-# Parsing Expressions
-
-
-<br>
-<br>
-
----
-
-<br>
-<br>
-
-# Evaluating Expressions
-
-
-<br>
-<br>
-
----
-
-<br>
-<br>
-
-# Statements and State
-
-
-<br>
-<br>
-
----
-
-<br>
-<br>
-
-# Control Flow
-
-
-<br>
-<br>
-
----
-
-<br>
-<br>
-
-# Functions
-
-
-<br>
-<br>
-
----
-
-<br>
-<br>
-
-# Resolving and Binding
-
-
-<br>
-<br>
-
----
-
-<br>
-<br>
-
-# Classes
-
-
-<br>
-<br>
-
----
-
-<br>
-<br>
-
-# Inheritance
-
-<br>
-<br>
-
----
-
-<br>
-<br>
-
-# A Bytecode Virtual Machine
-
-<br>
-<br>
-
----
-
-<br>
-<br>
-
-# Chunks of Bytecode
-
-<br>
-<br>
-
----
-
-<br>
-<br>
-
-# A Virtual Machine
-
-<br>
-<br>
-
----
-
-<br>
-<br>
-
-# Scanning on Demand
-
-<br>
-<br>
-
----
-
-<br>
-<br>
-
-# Compiling Expressions
-
-<br>
-<br>
-
----
-
-<br>
-<br>
-
-# Types of Values
-
-<br>
-<br>
-
----
-
-<br>
-<br>
-
-# Strings
-
-<br>
-<br>
-
----
-
-<br>
-<br>
-
-# Hash Tables
-
-<br>
-<br>
-
----
-
-<br>
-<br>
-
-# Global Variables
-
-<br>
-<br>
-
----
-
-<br>
-<br>
-
-# Local Variables
-
-<br>
-<br>
-
----
-
-<br>
-<br>
-
-# Jumping Back and Forth
-
-<br>
-<br>
-
----
-
-<br>
-<br>
-
-# Calls and Functions
-
-<br>
-<br>
-
----
-
-<br>
-<br>
-
-# Closures
-
-<br>
-<br>
-
----
-
-<br>
-<br>
-
-# Garbage Collection
-
-<br>
-<br>
-
----
-
-<br>
-<br>
-
-# Classes and Instances
-
-<br>
-<br>
-
----
-
-<br>
-<br>
-
-# Methods and Initializers
-
-<br>
-<br>
-
----
-
-<br>
-<br>
-
-# Superclasses
-
-<br>
-<br>
-
----
-
-<br>
-<br>
-# Optimization
