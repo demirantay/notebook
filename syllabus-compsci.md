@@ -150,7 +150,7 @@ Try to specilize in a field such as these, just chose one or two. However, remem
 
    - [x] Read: The [TutorialsOnPoint](https://www.tutorialspoint.com/compiler_design/index.htm) for a overview. Note this to README of the folder
    - [x] Read: [compiler basics](http://www.cs.man.ac.uk/~pjj/farrell/compmain.html)
-   - [ ] Book: [Crafting Interpreters](https://craftinginterpreters.com/)
+   - [ ] Book: [build your own lisp](http://www.buildyourownlisp.com)
    - [ ] Book: Cooper and Torczon. Engineering a compiler.
    - [ ] Project: Before starting [read this tutorial](https://github.com/DoctorWkt/acwj)
    - [ ] Book: Appel. Modern Compiler implementation in C/Java/ML.
