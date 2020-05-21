@@ -1,8 +1,38 @@
 # Templates: Best Practices
 
+- One of Django’s early design decisions was to limit the functionality of the template language. This
+heavily constrains what can be done with Django templates, which we often think is a very good
+thing since it forces us to keep business logic in the Python side of things.
+
 ### Keep Templates Mostly in templates/ 
 
+- In our projects, we keep the majority of our templates in the main ‘templates/’ directory. We put
+subdirectories in ‘templates/’ to correspond to each of our apps, as shown here:
+  ```
+  templates/
+  ├── base.html
+  ├── ... (other sitewide templates in here)
+  ├── freezers/
+  │   ├── ("freezers" app templates in here)
+  ```
+
 ### Template Architecture Patterns
+
+- `3-Tier Template Architecture Example` -- With a 3-tier template architecture:
+  ```
+  templates/
+      base.html
+      dashboard.html # extends base.html
+      profiles/
+          base_profiles.html # extends base.html
+          profile_detail.html # extends base_profiles.html
+          profile_form.html # extends base_profiles.html
+  ```
+  The 3-tier architecture is best for websites where each section requires a distinctive layout.
+  
+  Complex template hierarchies make it exceedingly difficult to debug, modify, and extend HTML
+pages and tie in CSS styles. When template block layouts become unnecessarily nested, you end up
+digging through file after file just to change, say, the width of a box
 
 ### Limit Processing in Templates
 
