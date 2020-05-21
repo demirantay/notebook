@@ -329,23 +329,60 @@ enough So it is not used very much
   
 # Form Fundamentals
 
-### Validate All Incoming Data With Django Forms
+- Django’s forms are really powerful, and knowing how to use them anytime data is coming from
+outside your application is part of keeping your data clean. The most important thing to remember about Django forms is they should be used to validate all
+incoming data.
+
+- `Validate All Incoming Data With Django Forms` -- What’s really nice about this practice is that rather than cooking up our own validation system for incoming data, we’re using the well-proven data testing framework built into Django
 
 ### Use the POST Method in HTML Forms
 
+- Every HTML form that alters data must submit its data via the POST method (not any other http method like GET, PUT):
+  ```html
+  <form action="{% url 'flavor_add' %}" method="POST">
+  ```
+  The only exception you’ll ever see to using POST in forms is with search forms, which typically
+submit queries that don’t result in any alteration of data. Search forms that are idempotent should
+use the GET method.
+
 ### Always Use CSRF Protection With HTTP Forms That Modify Data
 
-### Understand How to Add Django Form Instance Attributes
+- Django comes with cross-site request forgery protection (CSRF) built in, and usage of it is introduced
+in Part 4 of the Django introductory tutorial. It’s easy to use, and Django even throws a friendly warning during development when you forget to use it. This is a critical security issue
+
+  If you are writing an API from scratch that accepts data changes, it’s a good idea to become familiar
+with Django’s CSRF documentation
+
+- You should use Django’s CSRF protection even when posting data via AJAX. Do not make your
+AJAX views CSRF-exempt.
 
 ### Know How Form Validation Works
 
-### Add Errors to Forms With Form.add_error()
+- Form validation is one of those areas of Django where knowing the inner workings will drastically
+improve your code. Let’s take a moment to dig into form validation and cover some of the key points
+
+  When you call `form.is_valid()`, a lot of things happen behind the scenes. The following things
+occur according to this workflow:
+  - 1 - If the form has bound data, form.is_valid() calls the form.full_clean() method.
+  - 2 - form.full_clean() iterates through the form fields and each field validates itself:
+  - 3 - form.full_clean() executes the form.clean() method.
+  - 4 - If it’s a ModelForm instance, form._post_clean().
 
 ### Fields Without Pre-Made Widgets
 
+- Two of the new django.contrib.postgres fields, ArrayField and HStoreField, don’t work
+well with existing Django HTML fields. They don’t come with corresponding widgets at all. Nevertheless, you should still be using forms with these fields.
+
 ### Customizing Widgets
 
-### Additional Resources
+- One of our favorite features about Django 1.11 is trivial it is to override the HTML of Django
+widgets or even create custom widgets. This is a monumental change, a far cry from the days when
+most of us would do everything in our power to avoid these kinds of customizations. Here’s our
+general advice:
+  - As always, keep it simple! Stay focused on presentation, nothing more
+  - No widgets should ever change data. They are meant purely for display.
+  - Follow the Django pattern and put all custom widgets into modules called widgets.py
+
 
 
 <Br>
