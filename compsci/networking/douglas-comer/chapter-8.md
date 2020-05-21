@@ -97,29 +97,86 @@ systems
 
 # Chapter 20: Internetworking: Concepts Architecture and Protocols
 
-- __`Introduction`__ -- 
+- __`Introduction`__ -- This chapter begins an examination of another fundamental idea in computer
+communication — an internetworking technology that can be used to connect multiple
+physical networks into a large, uniform communication system. The chapter discusses
+the motivation for internetworking, introduces the hardware components used, describes
+the architecture in which the components are connected, and discusses the significance
+of the concept.
 
-- __`The Motivation For Internetworking`__ -- 
+- __`The Motivation For Internetworking`__ -- No single networking technology is best for all needs. Weather it is WAN, LAN, PAN ... etc. A large organization with diverse networking requirements needs multiple physical
+networks.
 
-- __`The Concept Of Universal Service`__ -- 
+- __`The Concept Of Universal Service`__ -- The chief problem with multiple networks should be obvious: a computer attached
+to a given network can only communicate with other computers attached to the same
+network. Users are neither satisfied nor productive when they must use a separate computer
+for each network. Consequently, most modern computer communication systems allow
+communication between any two computers analogous to the way a telephone system
+provides communication between any two telephones. Known as universal service, the
+concept is a fundamental part of networking
 
-- __`Universal Service In A Heterogeneous World`__ -- 
+- __`Universal Service In A Heterogeneous World`__ -- Does universal service mean that everyone needs to adopt a single network technology, or is it possible to have universal service across multiple networks that use multiple technologies? Incompatibilities make it impossible to form a large network merely
+by interconnecting the wires among networks. Thus, a frame created for
+one network technology cannot be transmitted on a network that uses a different technology
 
-- __`Internetworking`__ -- 
+- __`Internetworking`__ -- Despite the incompatibilities among network technologies, researchers have devised a scheme that provides universal service among heterogeneous networks. Called
+internetworking, the scheme uses both hardware and software. Additional hardware
+systems are used to interconnect a set of physical networks The resulting system of connected physical
+networks is known as an internetwork or internet. 
 
-- __`Physical Network Connection With Routers`__ -- 
+- __`Physical Network Connection With Routers`__ -- The basic hardware component used to connect heterogeneous networks is a
+router. Physically, a router is an independent hardware system dedicated to the task of
+interconnecting networks. Like a bridge, a router contains a processor and memory as
+well as a separate I/O interface for each network to which it connects.
 
-- __`Internet Architecture`__ -- 
+   A router can connect two LANs, a LAN
+and a WAN, or two WANs. Furthermore, when a router connects two networks in the
+same general category, the networks do not need to use the same technology. For example, a router can connect an Ethernet to a Wi-Fi network
 
-- __`Achieving Universal Service`__ -- 
+- __`Internet Architecture`__ -- An internet consists of a set of networks interconnected by routers.
+The internet scheme allows each organization to choose the number
+and type of networks, the number of routers to use to interconnect
+them, and the exact interconnection topology.
 
-- __`A Virtual Network`__ -- 
+- __`Achieving Universal Service`__ -- The goal of internetworking is universal service across heterogeneous networks.
+To provide universal service among all computers on an internet, routers must agree to
+forward information from a source on one network to a specified destination on another.
+The task is complex because frame formats and addressing schemes used by the underlying networks can differ. As a result, protocol software is needed on computers and
+routers to make universal service possible.
 
-- __`Protocols For Internetworking`__ -- 
+- __`A Virtual Network`__ -- In general, Internet software provides the appearance of a single, seamless communication system to which many computers attach. The system offers universal service: each computer is assigned an address, and any computer can send a packet to any
+other computer. Furthermore, Internet protocol software hides the details of physical
+network connections, physical addresses, and routing information — neither users nor
+application programs are aware of the underlying physical networks or the routers that
+connect them. We say that an internet is a virtual network system because the communication
+system is an abstraction
 
-- __`Review Of TCP/IP Layering`__ -- 
+- __`Protocols For Internetworking`__ -- Although several protocols have been proposed for use with internets, one suite
+stands out as the most widely used. The suite is formally known as the TCP/IP Internet
+Protocols; most networking professionals simply refer to the suite as TCP/IP
 
-- __`Host Computers, Routers, And Protocol Layers`__ -- 
+- __`Review Of TCP/IP Layering`__ -- Recall from Chapter 1 that the Internet protocols use a five-layer reference model
+  - layer 5 - Application
+  - layer 4 - Transport
+  - layer 3 - Internet
+  - layer 2 - Network Interface
+  - layer 1 - Physical
+  
+  We have already explored three of the layers. Chapters in part 1 of the text consider applications; chapters in parts 2 and 3 of the text discuss layer 1 and layer 2 protocols. Chapters in this part of the text consider the two remaining layers in detail:
+  
+  __layer 3__ -- Layer 3 (IP) specifies the format of packets sent across the Internet as well as the
+mechanisms used to forward packets from a computer through one or more routers to a
+final destination.
+  
+  __layer 4__ -- Layer 4 (TCP) specifies the messages and procedures that are used to insure reliable transfer
+
+- __`Host Computers, Routers, And Protocol Layers`__ -- We use the term host computer to refer to a computer that connects to the Internet
+and runs applications. A host can be as small as a cell phone or as large as a mainframe. TCP/IP protocols make it possible for any pair of hosts to communicate, despite
+hardware differences.
+
+  Both hosts and routers need TCP/IP protocol software. However, routers do not
+use protocols from all layers. In particular, a router does not need layer 5 protocols for
+applications like file transfer because routers do not run conventional applications
 
 <br>
 <br>
@@ -130,6 +187,93 @@ systems
 <br>
 
 # Chapter 21: IP:Internet Adressing
+
+- __`Introduction`__ -- This chapter begins a description of protocol
+software that makes the Internet appear to be a single, seamless communication system.
+The chapter introduces the addressing scheme used by the Internet Protocol (IPv4), and
+discusses the use of address masks for classless and subnet addressing
+
+- __`Addresses For The Virtual Internet`__ -- Recall from Chapter 20 that the goal of internetworking is to provide a seamless
+communication system. To achieve the goal, protocol software must hide the details of
+physical networks and offer the illusion of a single, large network  The chief difference between the Internet and a physical network is that the Internet is an abstraction imagined by its designers Thus, the designers chose addresses, packet formats, and
+delivery techniques independent of the details of the underlying hardware.
+
+  Addressing is a critical component of the Internet abstraction. To give the appearance of a single network, all host computers must use a uniform addressing scheme, and
+each address must be unique. Although each computer has a MAC address, such ad- dresses do not suffice because the Internet can include multiple network technologies
+and each technology defines its own MAC addresses.
+
+  To guarantee uniform addressing, IP defines an addressing scheme that is independent of the underlying MAC addresses. IP addresses are used as destinations in the Internet analogous to the way MAC addresses are used as destinations on a LAN
+  
+  To provide uniform addressing in the Internet, IP defines an abstract
+addressing scheme that assigns each host a unique protocol address;
+applications use IP addresses to communicate.
+
+- __`The IP Addressing Scheme`__ -- An Internet address (IP address) is a unique 32-bit binary number assigned to a host and used for all communication with the host.
+
+- __`The IP Address Hierarchy`__ -- Analogous to the hierarchical addressing using with WANs, each 32-bit IP address
+is divided into two parts: a prefix and a suffix. Instead of identifying a packet switch,
+an IP prefix identifies the physical network to which the host is attached. An IP suffix
+identifies a specific computer on the network. That is, each physical network in the Internet is assigned a unique network number
+
+  The important point is that the IP address scheme guarantees two properties:
+  - Each computer is assigned a unique address (i.e., a single address
+is never assigned to more than one computer).
+  - Although network number assignments must be coordinated globally, suffixes can be assigned locally without global coordination.
+  
+- __`Original Classes Of IP Addresses`__ -- The original IP addressing scheme divided addresses into classes.
+Class D addresses are still used for multicasting, but multicasting
+does not work globally
+
+- __`Dotted Decimal Notation`__ -- Although IP addresses are 32-bit numbers, users do not enter or read the values in
+binary. Instead, when interacting with a user, software uses a notation that is more convenient for humans to understand. Called dotted decimal notation, the form expresses
+each 8-bit section of a 32-bit number as a decimal value and uses periods to separate the
+sections
+  ```
+  10000001 00110100 00000110 00000000  --> 129 . 52 . 6 . 0
+  11000000 00000101 00110000 00000011  --> 192 . 5 . 48 . 3
+  ```
+  
+- __`Authority For Addresses`__ -- Each prefix assigned to an individual network in the Internet must be unique.
+Therefore a central organization, the Internet Corporation for Assigned Names and
+Numbers (ICANN), has been established to handle address assignment and adjudicate
+disputes. ICANN does not assign individual prefixes. Instead, ICANN authorizes a set
+of registrars to do so. Registrars make blocks of addresses available to ISPs, which
+provide addresses to subscribers. Thus, to obtain a prefix, a corporation usually contacts an ISP
+
+- __`Subnet And Classless Addressing`__ --  As the Internet grew, the original classful addressing scheme became a limitation. Two new mechanisms were invented to overcome the limitation:
+  - Subnet addressing
+  - Classless addressing
+
+- __`Address Masks`__ -- I didn't get this part too much it is not hard i am just fucking tired.
+
+- __`Special IP Addresses`__ -- In addition to assigning an address to each computer, it is convenient to have addresses that can be used to denote networks or sets of computers. IP defines a set of
+special address forms that are reserved. That is, special addresses are never assigned to
+hosts.
+
+- __`Summary Of Special IP Addresses`__ -- 
+
+  | prefix | suffix | type of address | purpose | 
+  | --| --| --| --|
+  | all-0s | all-0s |this computer| used during bootstrap|
+  |network| all-0s| network| identifies a network|
+  |network |all-1s |directed broadcast| broadcast on specified net|
+  |all-1s| all-1s| limited broadcast| broadcast on local net|
+  |127 / 8| any| loopback testing|
+  
+  We said that special addresses are reserved and should never be assigned to host
+computers. Furthermore, each special address is restricted to certain uses
+
+- __`The Berkeley Broadcast Address Form`__ -- The University of California at Berkeley developed and distributed an early implementation of TCP/IP protocols as part of BSD UNIX†. The BSD implementation contained a nonstandard feature that has affected many subsequent implementations. Instead of using a host suffix of all ones to represent a directed broadcast address, the
+Berkeley implementation uses a host suffix that contains all zeroes (i.e., identical to the
+network address). The address form is known informally as Berkeley broadcast. Unfortunately, many computer manufacturers derived their early TCP/IP software
+from the Berkeley implementation, and a few sites still use Berkeley broadcast.
+
+- __`Routers And The IP Addressing Principle`__ -- In addition to assigning an Internet address to each host, the Internet Protocol
+specifies that routers should be assigned IP addresses as well. In fact, each router is assigned two or more IP addresses, one for each network to which the router attaches
+
+- __`Multi-Homed Hosts`__ -- Can a host connect to multiple networks? Yes. A host computer with multiple
+network connections is said to be multi-homed. Multi-homing is sometimes used to increase reliability — if one network fails, the host can still reach the Internet through the
+second connection
 
 <br>
 <br>
