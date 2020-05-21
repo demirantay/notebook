@@ -338,6 +338,8 @@
    If you wanted to turn Lox into an actual useful language, the very first thing you should do is flesh this out. String manipulation, trigonometric functions, file I/O, networking, heck, even reading input from the user would help
 
 
+- __`I STOPPED NOTENIG DOWN THIS BECUASE THE NOTE FILE NOTES TOO MUCH ABOUT CODE, SO THERE IS NO POINT TO RE-WRITE THE CODE SNIPPETS, I WILL JSUT READ IT FROM THE SITE`__
+
 <br>
 <br>
 
@@ -345,5 +347,6 @@
 
 <br>
 <br>
+
 
 
