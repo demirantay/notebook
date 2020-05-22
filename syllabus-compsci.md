@@ -138,12 +138,17 @@ Try to specilize in a field such as these, just chose one or two. However, remem
 
   > Research books like you did for computer architecture. Through reddit, forums ... etc. Then start.
    - [ ] Read: The [TutorialsOnPoint](https://www.tutorialspoint.com/dbms/index.htm) for a overview. Note this to README of the folder
-   - [ ] Read: Do this [tutorial](https://www.studytonight.com/dbms/)
-   - [ ] Course : [Berkley Course](https://archive.org/details/UCBerkeley_Course_Computer_Science_186)
+   - [ ] Book: Fundamentals of Database Systems Book by Ramez Elmasri
+   - [ ] Book: Database System Concepts Textbook by Avi Silberschatz,
+   - [ ] Book: Designing Data-Intensive Applications: The Big Ideas Behind Reliable, Scalable, and Maintainable Systems
+   - [ ] Book: Database Internals: A Deep Dive into How Distributed Data Systems Work
+   - [ ] Book: Database Management Systems, 3rd Edition 3rd Edition
    - [ ] Paper : [Database Architecture](http://db.cs.berkeley.edu/papers/fntdb07-architecture.pdf)
-   - [ ] Book : [Red Book](http://www.redbook.io/) -- your next stop after berkley course
-   - [ ] Course : [Stanford Course](https://lagunita.stanford.edu/courses/DB/2014/SelfPaced/about) -- Take all mini courses
-   - [ ] Project idea: Write a simple database to understand and practice what you have learned
+   - [ ] Book : [Red Book](http://www.redbook.io/)
+   - [ ] Project idea: Flat Database and a Hirerchial Database
+   - [ ] Project: Relational Database
+   - [ ] Project: NoSQL Database
+   - [ ] Project: Graph Database
    - [ ] Optional: Do more books and projects if you want to focus on this subject.
 
 ### Languages and Compilers
@@ -158,14 +163,21 @@ Try to specilize in a field such as these, just chose one or two. However, remem
    - [ ] Project : Build a interpreter and a interpereted language like python.
    - [ ] Optional: Do more books and projects if you want to focus on this subject.
    
-   
 ### Computer Graphics
 
-- [ ] Add something small dont go overboard with this
+- [ ] Book: Computer Graphics: Principles and Practice
+- [ ] Book: Real-Time Rendering -- Latest Edition (4)
+- [ ] Read: Get practical knowledge in [this tutorial](https://learnopengl.com/)
+- [ ] Project: Render your dream house (make it realistic)
+- [ ] Optional: Do more books and projects if you want to focus on graphics.
 
 ### Artifical Intelligence
 
-- [ ] Add on later on do go overboard as computer networking but dont go as little as computer graphics
+- [ ] Book: Hands-On Machine Learning with Scikit-Learn and TensorFlow
+- [ ] Book:  AI: A Modern Approach by Stuart Russell and Peter Norvig.
+- [ ] Book: Deep Learning by Ian Goodfellow and Yoshua Bengio.
+- [ ] Project: Do something cool and big with artifical intelligence like a smart bot
+- [ ] Optional: Do more books and projects if you want to focus on AI/ML
    
 ## Final: Feynman Notes
 
