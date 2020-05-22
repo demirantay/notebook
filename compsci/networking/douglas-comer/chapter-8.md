@@ -285,6 +285,124 @@ second connection
 
 # Chapter 22: Datagram Forwarding
 
+- __`Introduction`__ -- This chapter discusses the fundamental communication service in the Internet. It
+describes the format of packets that are sent across the Internet, and discusses the key
+concepts of datagram encapsulation, forwarding, and fragmentation and reassembly
+
+- __`Connectionless Service`__ -- The goal of internetworking is to provide a packet communication system that allows a program running on one computer to send data to a program running on another
+computer
+
+  One of the fundamental questions that must be considered when designing an internet concerns the services that will be offered. In particular, designers must decide
+whether to offer a connection-oriented service, a connectionless service, or both
+
+  TCP/IP designers chose to include protocols for both connectionless and
+connection-oriented service. They chose to make the fundamental delivery service connectionless, and to add a reliable connection-oriented service that uses the underlying
+connectionless service.
+
+- __`Virtual Packets`__ -- Connectionless service is a straightforward extension of packet switching — the
+service allows a sender to transmit individual packets of data across the Internet. Each
+packet travels independently, and contains information that identifies the intended recipient
+
+  How does a packet pass across the Internet? In general, the answer is that routers
+handle most of the forwarding. A host creates a packet, places the destination address
+in the packet header, and then sends the packet to a nearby router. When a router receives a packet, the router uses the destination address to select the next router on the
+path to the destination, and then forwards the packet. Eventually, the packet reaches a
+router that can deliver the packet to its final destination
+
+  Because it includes incompatible networks, the Internet cannot adopt
+a particular hardware packet format. To accommodate heterogeneity,
+the Internet Protocol defines a hardware-independent packet format.
+
+- __`The IP Datagram`__ -- TCP/IP protocols use the name IP datagram to refer to an Internet packet.
+Surprisingly, an IP datagram has the same general format as a hardware frame: the datagram begins with a header followed by a data (or payload) area
+
+  The size of a datagram is determined by the application that sends
+data. Allowing the size of datagrams to vary makes IP adaptable to a
+variety of applications.
+
+- __`The IP Datagram Header Format`__ -- What does a datagram header contain? Similar to a frame header, a datagram
+header contains information used to forward the datagram. In particular, the header
+contains the address of the source (the original sender), the address of the destination
+(the ultimate recipient), and a field that specifies the type of data being carried in the
+payload area. Each address in the header is an IP address MAC addresses for the
+sender and recipient do not appear in the datagram.
+Each field in an IP datagram header has a fixed size, which makes header processing efficient. 
+
+- __`Forwarding An IP Datagram`__ -- We said that a datagram traverses the Internet by following a path from its initial
+source through routers to the final destination. The Internet uses next-hop forwarding.
+
+  To make the selection of a next hop efficient, an IP router uses a forwarding table.
+A forwarding table is initialized when the router boots, and must be updated if the topology changes or hardware fails. Conceptually, the forwarding table contains a set of entries that each specify a destination and the next hop used to reach that destination
+
+  The important point to note is the forwarding table size, which is crucial in the global Internet: Because each destination in a forwarding table corresponds to a network, the number of entries in a forwarding table is proportional to
+the number of networks in the Internet, not the number of hosts.
+
+- __`Network Prefix Extraction And Datagram Forwarding`__ -- The process of using a forwarding table to select a next hop for a given datagram
+is called forwarding
+
+- __`Longest Prefix Match`__ -- In practice, Internet forwarding tables can
+be extremely large, and the forwarding algorithm is complex. For example, analogous
+to WAN forwarding described in Chapter 18, Internet forwarding tables can contain a
+default entry that provides a path for all destinations that are not explicitly listed. In addition, Internet forwarding allows a manager to specify a host-specific route that directs
+traffic destined to a specific host along a different path than traffic for other hosts on the
+same network
+
+- __`Destination Address And Next-Hop Address`__ -- What is the relationship between the destination address in a datagram header and
+the address of the next hop to which the datagram is forwarded? The DESTINATION
+IP ADDRESS field in a datagram contains the address of the ultimate destination; it
+does not change as the datagram passes through the Internet
+
+  The destination address in a datagram header always refers to the ultimate destination; at each point, a next hop is computed, but the next
+hop address does not appear in the datagram header.
+
+- __`Best-Effort Delivery`__ -- In addition to defining the format of Internet datagrams, the Internet Protocol defines the semantics of communication, and uses the term best-effort to describe the service it offers. In essence, the standard specifies that although IP makes a best-effort to
+deliver each datagram, IP does not guarantee that it will handle all problems
+
+  Because IP is designed to operate over all types of network hardware,
+including hardware that experiences problems, IP datagrams may be
+lost, duplicated, delayed, delivered out of order, or delivered with corrupted data
+
+- __`IP Encapsulation`__ -- How can a datagram be transmitted across a physical network that does not understand the datagram format? The answer lies in a technique known as encapsulation.
+When an IP datagram is encapsulated in a frame, the entire datagram is placed in the
+payload area of a frame.
+
+  A datagram is encapsulated in a frame for transmission across a
+physical network. The destination address in the frame is the MAC
+address of the next hop to which the datagram is being sent; the address is obtained by translating the IP address of the next hop to an
+equivalent MAC address.
+
+- __`Transmission Across An Internet`__ -- Encapsulation applies to one transmission at a time. After the sender selects a next
+hop, the sender encapsulates the datagram in a frame and transmits the result across the
+physical network. When the frame reaches the next hop, the receiving software removes the IP datagram and discards the frame. If the datagram must be forwarded
+across another network, a new frame is created.
+
+  The point is When a datagram arrives in a network frame, the receiver extracts the
+datagram from the frame payload area and discards the frame
+header.
+
+- __`MTU And Datagram Fragmentation`__ -- Each hardware technology specifies the maximum amount of data that a frame can
+carry. The limit is known as a Maximum Transmission Unit (MTU). There is no exception to the MTU limit — network hardware is not designed to accept or transfer
+frames that carry more data than the MTU allows.
+
+  Each network has an MTU that specifies the maximum amount of data
+a frame can carry. When a router receives a datagram that is larger
+than the MTU of the network over which it is to be sent, the router
+divides the datagram into smaller pieces called fragments. Each fragment uses the IP datagram format, but carries only part of the original payload.
+
+- __`Reassembly Of A Datagram From Fragments`__ -- The process of recreating a copy of the original datagram from fragments is called
+reassembly. Because each fragment begins with a copy of the original datagram
+header†, all fragments have the same destination address as the original datagram from
+which they were derived. Interestingly, IP specifies that the ultimate destination should reassemble fragments. 
+
+  By postponing reassembly until the ultimate destination, IP is free to pass some
+fragments from a datagram along differents routes than other fragments. That is, the Internet can change routes at any time 
+
+- __`Collecting The Fragments Of A Datagram`__ --
+
+- __`The Consequence Of Fragment Loss`__ --
+
+- __`Fragmenting A Fragment`__ --
+
 <br>
 <br>
 
