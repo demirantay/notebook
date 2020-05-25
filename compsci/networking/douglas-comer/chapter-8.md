@@ -397,11 +397,20 @@ which they were derived. Interestingly, IP specifies that the ultimate destinati
   By postponing reassembly until the ultimate destination, IP is free to pass some
 fragments from a datagram along differents routes than other fragments. That is, the Internet can change routes at any time 
 
-- __`Collecting The Fragments Of A Datagram`__ --
+- __`Collecting The Fragments Of A Datagram`__ -- Recall that IP does not guarantee delivery. Thus, individual fragments, which are
+forwarded exactly like other datagrams, can be lost or arrive out of order. More important, if a given source sends multiple datagrams to the same destination, fragments from
+multiple datagrams can arrive in arbitrary order.
 
-- __`The Consequence Of Fragment Loss`__ --
+- __`The Consequence Of Fragment Loss`__ -- A datagram
+cannot be reassembled until all fragments arrive. Thus, a problem arises when one or
+more fragments from a datagram arrive, and other fragments are delayed or lost.
+Although the datagram cannot be reassembled, the receiver must save the fragments that
+have arrived in case missing fragments are only delayed.
 
-- __`Fragmenting A Fragment`__ --
+- __`Fragmenting A Fragment`__ -- After performing fragmentation, a router forwards each fragment on to its destination. What happens if a fragment eventually reaches a network that has a smaller
+MTU? The fragmentation scheme has been planned carefully to make it possible to
+fragment a fragment. A router along the path divides the fragment into smaller fragments. If networks are arranged in a sequence of decreasing MTUs, each router along
+the path must further fragment each fragment.
 
 <br>
 <br>
