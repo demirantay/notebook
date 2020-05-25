@@ -166,7 +166,25 @@ the most significant syntax differences:
   
 # Building REST APIs With Django REST Framework
 
+- Today’s internet is much more than HTML-powered websites. Developers need to support AJAX
+and native mobile apps. Having tools that support easy creation of JSON, YAML, XML, and other
+formats is important. By design, a Representational State Transfer (REST) Application Programming Interface (API) exposes application data to other concerns.
+
+  The defacto package for building these REST APIs with Django is Django REST Framework
+(DRF).
+
 ### Fundamentals of Basic REST API Design
+
+- The Hypertext Transfer Protocol (HTTP) is a protocol for distributing content that provides a set of
+methods to declare actions. By convention, REST APIs rely on these methods, so use the appropriate
+HTTP method for each type of action: `POST`, `GET`, `PUT`, `PATCH`, `DELETE`, ... etc.
+
+- Here are some common HTTP status codes that should be considered when implementing a REST
+API. DRF’s generic views and viewsets return these values as appropriate for the method called
+  - `200/**` -- OK
+  - `300/**` -- Redirect
+  - `400/**` -- Client Error
+  - `500/**` -- Server Error
 
 ### Illustrating Design Concepts With a Simple API
 
