@@ -236,7 +236,117 @@ steps to follow:
 
 ### Rate-Limiting Your API
 
+- Rate limiting is when an API restricts how many requests can be made by a user of the API within
+a period of time. This is done for a number of reasons
+
+  > It’s possible to use nginx or apache for rate limiting. The upside is faster performance. The
+downside is that it removes this functionality from the Python code.
+
+- Also Rate Limit Can Be a Business Plan We know that everyone will want to use this API, and come up with several tiers of access
+that we tie into pricing:
+  - Developer tier is free, but only allows 10 API requests per hour.
+  - Two Scoops is $79/month, allows 50 requests per minute.
+  - Corporate is $5000/month, allows for 200 requests per minute.
+
 ### Advertising Your REST API
+
+- Let’s assume we’ve built our REST API and want outside coders and companies to use it. How do
+we go about doing that?
+
+- `Documentation` -- The most important thing to do is to provide comprehensive documentation. The easier to read
+and understand the better. (Use slacks documentation as a inspiration it is fucking documented VERY WELL)
+
+- `Provide Client SDKs` -- Something that may help spread use of your API is to provide a software development kits (SDK)
+for various programming languages. The more programming languages covered the better. For us,
+we’ve found the must-have languages include Python, JavaScript, Ruby, PHP, Go, and Java
+
+<Br>
+<Br>
+<Br>
+  
+# Tradeoffs of Replacing Core Components
+
+- There’s a lot of hype around swapping out core parts of Django’s stack for other pieces. Should you
+do it?
+
+  Short Answer: Don’t do it. Even the CEO of Instagram (Kevin Systrom) said Forbes.com that it’s
+completely unnecessary (bit.ly/2pZxOBO).
+
+###  Ignore the Hype and Do Your Own Research
+
+- It’s often said that non-relational databases are faster and scale better than relational databases.
+Whether or not this is true, don’t blindly swallow the marketing hype of the companies behind
+any particular alternative database solution.
+
+  Instead, do as we do: search for benchmarks, read case studies describing when things went right or
+wrong, and form opinions as independently as possible
+
+  Also, experiment with unfamiliar NoSQL databases on small hobby side projects before you make
+major changes to your main project infrastructure. Your main codebase is not a playground.
+
+<Br>
+<Br>
+<Br>
+  
+# Working With the Django Admin
+
+### It’s Not for End Users
+
+### Admin Customization vs. New Views
+
+### Viewing String Representations of Objects
+
+### Adding Callables to ModelAdmin Classes
+
+### Be Aware of the Complications of Multiuser Environments
+
+### Django’s Admin Documentation Generator
+
+### Using Custom Skins With the Django Admin
+
+### Secure the Django Admin
+
+### Securing the Admin Docs
+
+<Br>
+<Br>
+<Br>
+  
+# Dealing With the User Model
+
+### Use Django’s Tools for Finding the User Model
+
+### Custom User Fields for Django 1.11 Projects
+
+<Br>
+<Br>
+<Br>
+  
+# Django’s Secret Sauce: Third-Party Packages 
+
+### Examples of Third-Party Packages
+
+### Know About the Python Package Index
+
+### Know About DjangoPackages.org
+
+### Know Your Resources
+
+### Tools for Installing and Managing Packages
+
+### Package Requirements
+
+### Wiring Up Django Packages: The Basics
+
+### Troubleshooting Third-Party Packages
+
+### Releasing Your Own Django Packages
+
+### What Makes a Good Django Package?
+
+###  Creating Your Own Packages the Easy Way
+
+### Maintaining Your Open Source Package
 
 ### Additional Reading
 
@@ -244,23 +354,274 @@ steps to follow:
 <Br>
 <Br>
   
-# Consuming REST APIs
+# Testing Stinks and Is a Waste of Money!
 
-### Learn How to Debug the Client
+### Testing Saves Money, Jobs, and Lives
 
-### Consider Using JavaScript-Powered Static Asset Preprocessors
+### How to Structure Tests
 
-### Real-Time Woes a.k.a. Latency
+### How to Write Unit Tests
 
-### Avoid the Anti-Patterns
+### What About Integration Tests?
 
-### AJAX and the CSRF Token
+### Continuous Integration 
 
-### Improving JavaScript Skills
+### Who Cares? We Don’t Have Time for Tests!
 
-### Follow JavaScript Coding Standards
+### The Game of Test Coverage
+
+### Setting Up the Test Coverage Game
+
+### Playing the Game of Test Coverage
+
+### Alternatives to unittest
 
 <Br>
-<Br> 
 <Br>
+<Br>
+  
+# Documentation: Be Obsessed 
+
+### Use reStructuredText for Python Docs
+
+### Use Sphinx to Generate Documentation From reStructuredText
+
+### What Docs Should Django Projects Contain?
+
+### Additional Documentation Resources
+
+### The Markdown Alternative
+
+### Wikis and Other Documentation Methods
+
+<br>
+<br>
+<br>
+
+# Finding and Reducing Bottlenecks 
+
+### Should You Even Care?
+
+### Speed Up Query-Heavy Pages
+
+### Get the Most Out of Your Database 
+
+### Cache Queries With Memcached or Redis
+
+### Identify Specific Places to Cache
+
+### Consider Third-Party Caching Packages
+
+### Compression and Minification of HTML, CSS, and JavaScript
+
+### Use Upstream Caching or a Content Delivery Network
+
+### Other Resources
+
+<br>
+<br>
+<Br>
+  
+# Asynchronous Task Queues
+
+### Do We Need a Task Queue?
+
+### Choosing Task Queue Software
+
+### Best Practices for Task Queues
+
+### Resources for Task Queues
+
+<br>
+<br>
+<Br>
+  
+# Security Best Practices
+
+### Reference Security Sections in Other Chapters
+
+### Harden Your Servers
+
+### Know Django’s Security Features
+
+### Turn Off DEBUG Mode in Production
+
+### Keep Your Secret Keys Secret
+
+### HTTPS Everywhere
+
+### Use Allowed Hosts Validation
+
+###  Always Use CSRF Protection With HTTP Forms That Modify Data
+
+### Prevent Against Cross-Site Scripting (XSS) Attacks
+
+### Defend Against Python Code Injection Attacks
+
+### Validate All Incoming Data With Django Forms
+
+### Disable the Autocomplete on Payment Fields
+
+### Handle User-Uploaded Files Carefully
+
+### Don’t Use ModelForms.Meta.exclude
+
+### Don’t Use ModelForms.Meta.fields = ”__all__”
+
+### Beware of SQL Injection Attacks
+
+### Never Store Credit Card Data
+
+### Monitor Your Sites
+
+### Keep Your Dependencies Up-to-Date
+
+### Prevent Clickjacking
+
+### Guard Against XML Bombing With defusedxml
+
+### Explore Two-Factor Authentication
+
+### Embrace SecurityMiddleware
+
+### Force the Use of Strong Passwords
+
+### Give Your Site a Security Checkup
+
+### Put Up a Vulnerability Reporting Page
+
+### Never Display Sequential Primary Keys
+
+### Reference Our Security Settings Appendix
+
+### Review the List of Security Packages
+
+### Keep Up-to-Date on General Security Practices
+
+<br>
+<br>
+<Br>
+  
+# Logging: What’s It For, Anyway?
+
+### Application Logs vs. Other Logs
+
+### Why Bother With Logging?
+
+### When to Use Each Log Level
+
+### Log Tracebacks When Catching Exceptions
+
+### One Logger Per Module That Uses Logging 
+
+### Log Locally to Rotating Files
+
+### Other Logging Tips
+
+### Necessary Reading Material
+
+### Useful Third-Party Tools
+
+<br>
+<br>
+<Br>
+  
+# Signals: Use Cases and Avoidance Techniques
+
+### When to Use and Avoid Signals
+
+### Signal Avoidance Techniques
+
+<br>
+<br>
+<Br>
+  
+# What About Those Random Utilities? 
+
+### Create a Core App for Your Utilities
+
+### Optimize Apps With Utility Modules
+
+### Django’s Own Swiss Army Knife
+
+### Exceptions
+
+### Serializers and Deserializers
+
+<br>
+<br>
+<Br>
+   
+# Deployment: Platforms as a Service
+
+### Evaluating a PaaS
+
+### Best Practices for Deploying to PaaS
+
+<br>
+<br>
+<Br>
+  
+# Deploying Django Projects
+
+### Single-Server for Small Projects
+
+### Multi-Server for Medium to Large Projects 
+
+### WSGI Application Servers
+
+### Performance and Tuning: uWSGI and Gunicorn
+
+### Stability and Ease of Setup: Gunicorn and Apache
+
+### Common Apache Gotchas
+
+### Automated, Repeatable Deployments
+
+### Which Automation Tool Should Be Used?
+
+### Current Infrastructure Automation Tools
+
+### Other Resources
+
+<br>
+<br>
+<Br>
+  
+# Continuous Integration
+
+### Principles of Continuous Integration
+
+### Tools for Continuously Integrating Your Project
+
+### Continuous Integration as a Service
+
+### Additional Resources
+
+<br>
+<br>
+<Br>
+  
+# The Art of Debugging
+
+### Debugging in Development
+
+### Debugging Production Systems
+
+###  Feature Flags
+
+<br>
+<br>
+<Br>
+  
+# Where and How to Ask Django Questions
+
+### What to Do When You’re Stuck
+
+### How to Ask Great Django Questions in IRC
+
+### Feed Your Brain
+
+### Insider Tip: Be Active in the Community
+
   
