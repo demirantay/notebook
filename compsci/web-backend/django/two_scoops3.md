@@ -172,27 +172,67 @@ formats is important. By design, a Representational State Transfer (REST) Applic
 
   The defacto package for building these REST APIs with Django is Django REST Framework
 (DRF).
-
-### Fundamentals of Basic REST API Design
-
-- The Hypertext Transfer Protocol (HTTP) is a protocol for distributing content that provides a set of
-methods to declare actions. By convention, REST APIs rely on these methods, so use the appropriate
-HTTP method for each type of action: `POST`, `GET`, `PUT`, `PATCH`, `DELETE`, ... etc.
-
-- Here are some common HTTP status codes that should be considered when implementing a REST
-API. DRF’s generic views and viewsets return these values as appropriate for the method called
-  - `200/**` -- OK
-  - `300/**` -- Redirect
-  - `400/**` -- Client Error
-  - `500/**` -- Server Error
-
-### Illustrating Design Concepts With a Simple API
+  
+- `WARNING` -- Sequential keys, such as what Django provides as a default as model primary keys, can be
+a security concern if used publicly. We cover this in-depth at Section 26.27: Never Display
+Sequential Primary Keys.
+In our example, we’re going to use the model’s UUID rather than the model’s primary key to
+look up our records. We always try to avoid using sequential numbers for lookups. 
 
 ### REST API Architecture
 
-### When DRF Gets in the Way
+- Building simple, quick APIs is easy with Django REST Framework, but extending and maintaining
+it to match your project’s needs takes a bit more thought. This is usually where people get hung up
+on API design. Here are some tips for improving your design:
+
+- `Use Consistent API Module Naming` -- Just like anything else, how things are named needs to be consistent across a project. Our preferences
+for naming module related to API design is as follows:
+  ```
+  django_app/
+  ├── api/
+  │   ├── __init__.py
+  │   ├── authentication.py
+  │   ├── parsers.py
+  │   ├── permissions.py
+  │   ├── renderers.py
+  │   ├── serializers.py
+  │   ├── validators.py
+  │   ├── views.py
+  │   ├── viewsets.py
+  ```
+  -  We like to place all our API components into a package within an app called api/. That’s allows
+us to isolate our API components in a consistent location. If we were to put it in the root of
+our app, then we would end up with a huge list of API-specific modules in the general area of
+the app
+  - We always place routers in urls.py.
+  
+- `Try to Keep Business Logic Out of API Views` -- Regardless of which architectural approach you take, it’s a good idea to try to keep as much logic as
+possible out of API views. If this sounds familiar, it should. We covered this in Section 8.5: Try to
+Keep Business Logic Out of Views. Remember, at the end of the day, API views are just another
+type of view
+
+- `Grouping API urls` -- If you have REST API views in multiple Django apps, how do you build a project-wide API that
+looks like this?
+  ```
+  api/flavors/ # GET, POST
+  api/flavors/:uuid/ # GET, PUT, DELETE
+  api/users/ # GET, POST
+  api/users/:uuid/ # GET, PUT, DELETE
+  ```
+  Our current approach is to lean on URL configuration. When building a project-wide API we write
+the REST views in the api/views.py or api/viewsets.py modules, wire them into a URLConf called
+something like core/api_urls.py or core/apiv1_urls.py, and include that from the project root’s urls.py
+module
+
+- When we implement a new version of the API, we provide customers/users with a deprecation warning along with ample time so they can perform necessary upgrades and not break their own applications. From personal experience, the ability to send a deprecation warning to end users is an excellent
+reason to request email addresses from users of even free and open source API services.
 
 ### Shutting Down an External API
+
+- When it’s time to shut down an older version of an external API in favor of a new one, here are useful
+steps to follow:
+  - Step #1: Notify Users of Pending Shut Down
+  - Step #2: Replace API With 410 Error View
 
 ### Rate-Limiting Your API
 
@@ -224,350 +264,3 @@ API. DRF’s generic views and viewsets return these values as appropriate for t
 <Br> 
 <Br>
   
-# Tradeoffs of Replacing Core Components
-
-### The Temptation to Build FrankenDjango
-
-###  Non-Relational Databases vs. Relational Databases
-
-### What About Replacing the Django Template Language?
-
-<Br>
-<Br>
-<Br>
-  
-# Working With the Django Admin
-
-### It’s Not for End Users
-
-### Admin Customization vs. New Views
-
-### Viewing String Representations of Objects
-
-### Adding Callables to ModelAdmin Classes
-
-### Be Aware of the Complications of Multiuser Environments
-
-### Django’s Admin Documentation Generator
-
-### Using Custom Skins With the Django Admin
-
-### Secure the Django Admin
-
-### Securing the Admin Docs
-
-<Br>
-<Br>
-<Br>
-  
-# Dealing With the User Model
-
-### Use Django’s Tools for Finding the User Model
-
-### Custom User Fields for Django 1.11 Projects
-
-<Br>
-<Br>
-<Br>
-  
-# Django’s Secret Sauce: Third-Party Packages 
-
-### Examples of Third-Party Packages
-
-### Know About the Python Package Index
-
-### Know About DjangoPackages.org
-
-### Know Your Resources
-
-### Tools for Installing and Managing Packages
-
-### Package Requirements
-
-### Wiring Up Django Packages: The Basics
-
-### Troubleshooting Third-Party Packages
-
-### Releasing Your Own Django Packages
-
-### What Makes a Good Django Package?
-
-###  Creating Your Own Packages the Easy Way
-
-### Maintaining Your Open Source Package
-
-### Additional Reading
-
-<Br>
-<Br>
-<Br>
-  
-# Testing Stinks and Is a Waste of Money!
-
-### Testing Saves Money, Jobs, and Lives
-
-### How to Structure Tests
-
-### How to Write Unit Tests
-
-### What About Integration Tests?
-
-### Continuous Integration 
-
-### Who Cares? We Don’t Have Time for Tests!
-
-### The Game of Test Coverage
-
-### Setting Up the Test Coverage Game
-
-### Playing the Game of Test Coverage
-
-### Alternatives to unittest
-
-<Br>
-<Br>
-<Br>
-  
-# Documentation: Be Obsessed 
-
-### Use reStructuredText for Python Docs
-
-### Use Sphinx to Generate Documentation From reStructuredText
-
-### What Docs Should Django Projects Contain?
-
-### Additional Documentation Resources
-
-### The Markdown Alternative
-
-### Wikis and Other Documentation Methods
-
-<br>
-<br>
-<br>
-
-# Finding and Reducing Bottlenecks 
-
-### Should You Even Care?
-
-### Speed Up Query-Heavy Pages
-
-### Get the Most Out of Your Database 
-
-### Cache Queries With Memcached or Redis
-
-### Identify Specific Places to Cache
-
-### Consider Third-Party Caching Packages
-
-### Compression and Minification of HTML, CSS, and JavaScript
-
-### Use Upstream Caching or a Content Delivery Network
-
-### Other Resources
-
-<br>
-<br>
-<Br>
-  
-# Asynchronous Task Queues
-
-### Do We Need a Task Queue?
-
-### Choosing Task Queue Software
-
-### Best Practices for Task Queues
-
-### Resources for Task Queues
-
-<br>
-<br>
-<Br>
-  
-# Security Best Practices
-
-### Reference Security Sections in Other Chapters
-
-### Harden Your Servers
-
-### Know Django’s Security Features
-
-### Turn Off DEBUG Mode in Production
-
-### Keep Your Secret Keys Secret
-
-### HTTPS Everywhere
-
-### Use Allowed Hosts Validation
-
-###  Always Use CSRF Protection With HTTP Forms That Modify Data
-
-### Prevent Against Cross-Site Scripting (XSS) Attacks
-
-### Defend Against Python Code Injection Attacks
-
-### Validate All Incoming Data With Django Forms
-
-### Disable the Autocomplete on Payment Fields
-
-### Handle User-Uploaded Files Carefully
-
-### Don’t Use ModelForms.Meta.exclude
-
-### Don’t Use ModelForms.Meta.fields = ”__all__”
-
-### Beware of SQL Injection Attacks
-
-### Never Store Credit Card Data
-
-### Monitor Your Sites
-
-### Keep Your Dependencies Up-to-Date
-
-### Prevent Clickjacking
-
-### Guard Against XML Bombing With defusedxml
-
-### Explore Two-Factor Authentication
-
-### Embrace SecurityMiddleware
-
-### Force the Use of Strong Passwords
-
-### Give Your Site a Security Checkup
-
-### Put Up a Vulnerability Reporting Page
-
-### Never Display Sequential Primary Keys
-
-### Reference Our Security Settings Appendix
-
-### Review the List of Security Packages
-
-### Keep Up-to-Date on General Security Practices
-
-<br>
-<br>
-<Br>
-  
-# Logging: What’s It For, Anyway?
-
-### Application Logs vs. Other Logs
-
-### Why Bother With Logging?
-
-### When to Use Each Log Level
-
-### Log Tracebacks When Catching Exceptions
-
-### One Logger Per Module That Uses Logging 
-
-### Log Locally to Rotating Files
-
-### Other Logging Tips
-
-### Necessary Reading Material
-
-### Useful Third-Party Tools
-
-<br>
-<br>
-<Br>
-  
-# Signals: Use Cases and Avoidance Techniques
-
-### When to Use and Avoid Signals
-
-### Signal Avoidance Techniques
-
-<br>
-<br>
-<Br>
-  
-# What About Those Random Utilities? 
-
-### Create a Core App for Your Utilities
-
-### Optimize Apps With Utility Modules
-
-### Django’s Own Swiss Army Knife
-
-### Exceptions
-
-### Serializers and Deserializers
-
-<br>
-<br>
-<Br>
-   
-# Deployment: Platforms as a Service
-
-### Evaluating a PaaS
-
-### Best Practices for Deploying to PaaS
-
-<br>
-<br>
-<Br>
-  
-# Deploying Django Projects
-
-### Single-Server for Small Projects
-
-### Multi-Server for Medium to Large Projects 
-
-### WSGI Application Servers
-
-### Performance and Tuning: uWSGI and Gunicorn
-
-### Stability and Ease of Setup: Gunicorn and Apache
-
-### Common Apache Gotchas
-
-### Automated, Repeatable Deployments
-
-### Which Automation Tool Should Be Used?
-
-### Current Infrastructure Automation Tools
-
-### Other Resources
-
-<br>
-<br>
-<Br>
-  
-# Continuous Integration
-
-### Principles of Continuous Integration
-
-### Tools for Continuously Integrating Your Project
-
-### Continuous Integration as a Service
-
-### Additional Resources
-
-<br>
-<br>
-<Br>
-  
-# The Art of Debugging
-
-### Debugging in Development
-
-### Debugging Production Systems
-
-###  Feature Flags
-
-<br>
-<br>
-<Br>
-  
-# Where and How to Ask Django Questions
-
-### What to Do When You’re Stuck
-
-### How to Ask Great Django Questions in IRC
-
-### Feed Your Brain
-
-### Insider Tip: Be Active in the Community
