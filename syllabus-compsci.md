@@ -130,7 +130,6 @@ Try to specilize in a field such as these, just chose one or two. However, remem
    - [ ] Book: TCP/IP Illustrated. Vol 1 [here](http://www.r-5.org/files/books/computers/internals/net/Richard_Stevens-TCP-IP_Illustrated-EN.pdf)
    - [ ] Book: Computer Networking: A Top-Down Approach (kurose - ross) -- do the exersices
    - [ ] Project : [Wireshark](http://www-net.cs.umass.edu/wireshark-labs/)
-   - [ ] Project: Do the ben eaters How to create a internet [tutorial from here[(https://eater.net/inet)
    - [ ] Project : Build differnt types of servers, web, ftp ... etc.
    - [ ] Project: Try to build your own internet. Understand how to connect to the WWW.
    - [ ] Optional: Do more books and projects if you want to focus on this subject.
