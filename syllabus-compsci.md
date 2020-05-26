@@ -82,7 +82,7 @@ Try to specilize in a field such as these, just chose one or two. However, remem
  - [ ] Book: Computer Science j. glenn brookshear
  - [X] Read: The [TutorialsOnPoint](https://www.tutorialspoint.com/computer_programming/computer_programming_environment.htm) for a overview. Note this to README of the folder
  - [X] Course : [Helsinki MOOC's](http://mooc.fi/courses/2013/programming-part-1/material.html) for the desired language.
- - [ ] Book : SICP (Structured Interpretion of Computer Programs)-*(shelved it for later it is hard)*
+ - [X] Book : SICP (Structured Interpretion of Computer Programs)-*(shelved it for later it is hard)*
  - [X] Book : [modern c book](https://www.scribd.com/doc/39933932/C-Programming-a-Modern-Approach-2nd-Edition-K-N-King)(Did not finish left at pg.292 )
  
 ### Computer Architecture
@@ -127,6 +127,7 @@ Try to specilize in a field such as these, just chose one or two. However, remem
    - [x] Read: The [This tutorial](https://www.studytonight.com/computer-networks/)
    - [ ] Book: Computer Networks and Internets (Douglas E. Comer)
    - [ ] Book: Computer Networks (Tanenbaum)
+   - [ ] Book: TCP/IP Illustrated. Vol 1 [here](http://www.r-5.org/files/books/computers/internals/net/Richard_Stevens-TCP-IP_Illustrated-EN.pdf)
    - [ ] Book: Computer Networking: A Top-Down Approach (kurose - ross) -- do the exersices
    - [ ] Project : [Wireshark](http://www-net.cs.umass.edu/wireshark-labs/)
    - [ ] Project: Do the ben eaters How to create a internet [tutorial from here[(https://eater.net/inet)
