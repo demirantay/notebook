@@ -165,6 +165,7 @@ Try to specilize in a field such as these, just chose one or two. However, remem
    
 ### Computer Graphics
 
+- [ ] Read: First finish this [tutorial](https://www.tutorialspoint.com/computer_graphics/index.htm)
 - [ ] Book: Computer Graphics: Principles and Practice
 - [ ] Book: Real-Time Rendering -- Latest Edition (4)
 - [ ] Read: Get practical knowledge in [this tutorial](https://learnopengl.com/)
