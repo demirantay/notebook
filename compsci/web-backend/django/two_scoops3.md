@@ -290,23 +290,59 @@ major changes to your main project infrastructure. Your main codebase is not a p
   
 # Working With the Django Admin
 
-### It’s Not for End Users
+- When people ask, “What are the benefits of Django over other web frameworks?” the admin is what
+usually comes to mind. It gives you so much power over your web application
+automatically, with little work required.
 
 ### Admin Customization vs. New Views
 
+- It’s usually not worth it to heavily customize the Django admin. Sometimes, creating a simple view
+or form from scratch results in the same desired functionality with a lot less work. We’ve always had
+better results with creating custom management dashboards for client projects than we have with
+modifying the admin to fit the need of the client.
+
+  So basic motto is __use django admin untill you really need a custom admin where you will build it from scratch__
+
 ### Viewing String Representations of Objects
 
-### Adding Callables to ModelAdmin Classes
-
-### Be Aware of the Complications of Multiuser Environments
-
-### Django’s Admin Documentation Generator
+- If you want to change the admin list display in a way that isn’t quite a string representation of the
+object, then use `list_display`.
+  ```python
+  # admin.py 
+  from django.contrib import admin
+  from .models import IceCreamBar
+    
+  @admin.register(IceCreamBar)
+  class IceCreamBarModelAdmin(admin.ModelAdmin):
+      list_display = ('name', 'shell', 'filling')
+  ```
+  This will list more than just the `__str__` returned from the model. It will return name, shell, filling columns 
 
 ### Using Custom Skins With the Django Admin
 
+- You can have custom designs that are already mature and easy to import into your own application:
+  - django-grappelli (most stable one)
+  - django-suit
+  - django-admin-bootstrapped 
+
 ### Secure the Django Admin
 
-### Securing the Admin Docs
+- Since the Django admin gives your site admins special powers that ordinary users don’t have, it’s good
+practice to make it extra secure.
+
+- `Change the Default Admin URL` -- By default, the admin URL is yoursite.com/admin/. Change it to something that’s long and difficult
+to guess.
+
+- If you’re particularly concerned about people trying to break into your Django site, `django-admin-honeypot` is a package that puts a fake Django admin login screen at admin/ and logs information
+about anyone who attempts to log in.
+
+- This is already implied in Section 26.6: HTTPS Everywhere, but we want to especially emphasize
+here that your admin needs to be TLS-secured. If your site allows straight HTTP access, you will
+need to run the admin on a properly-secured domain, adding to the complexity of your deployment Without TLS, if you log into your Django admin on an open WiFi network, it’s trivial for someone
+to sniff your admin username/password.
+
+- Configure your web server to only allow access to the Django admin to certain IP addresses. Look
+up the instructions for your particular web server.
 
 <Br>
 <Br>
@@ -314,314 +350,48 @@ major changes to your main project infrastructure. Your main codebase is not a p
   
 # Dealing With the User Model
 
-### Use Django’s Tools for Finding the User Model
+- Django comes with a built-in support for user records. It’s a useful feature, doubly so once you learn
+how to extend and expand on the basic functionality
+
+- In Django 1.11, the official preferred way to attach ForeignKey, OneToOneField, or ManyToManyField to User is as follows:
+  ```python
+  from django.conf import settings
+  from django.db import models
+  
+  class IceCreamStore(models.Model):
+      owner = models.OneToOneField(settings.AUTH_USER_MODEL)
+      title = models.CharField(max_length=255)
+  ```
 
 ### Custom User Fields for Django 1.11 Projects
 
-<Br>
-<Br>
-<Br>
+- In Django 1.11, as long as we incorporate the required methods and attributes, we can create our
+own user model with its own fields. But if you dont want that hassel you can always create normal user models with a hashing, and salting library for its passowrd protection and than you are good to go.
+
+  There are many ways to improve the user model with its own fields but the most readable way to do it with django user model is the following `relational option`:
+  ```python
+  from django.conf import settings
+  from django.db import models
   
-# Django’s Secret Sauce: Third-Party Packages 
-
-### Examples of Third-Party Packages
-
-### Know About the Python Package Index
-
-### Know About DjangoPackages.org
-
-### Know Your Resources
-
-### Tools for Installing and Managing Packages
-
-### Package Requirements
-
-### Wiring Up Django Packages: The Basics
-
-### Troubleshooting Third-Party Packages
-
-### Releasing Your Own Django Packages
-
-### What Makes a Good Django Package?
-
-###  Creating Your Own Packages the Easy Way
-
-### Maintaining Your Open Source Package
-
-### Additional Reading
+  rom flavors.models import Flavor
+  class EaterProfile(models.Model):
+      # Default user profile
+      # If you do this you need to either have a post_save signal or
+      # redirect to a profile_edit view on initial login.
+      user = models.OneToOneField(settings.AUTH_USER_MODEL)
+      favorite_ice_cream = models.ForeignKey(Flavor, null=True, blank=True)
+      
+  class ScooperProfile(models.Model):
+      user = models.OneToOneField(settings.AUTH_USER_MODEL)
+      scoops_scooped = models.IntegerField(default=0)
+      
+  class InventorProfile(models.Model):
+      user = models.OneToOneField(settings.AUTH_USER_MODEL)
+      flavors_invented = models.ManyToManyField(Flavor, null=True, blank=True)
+  ```
+  But as I said creating your own User models are better. It is like django admin use it untill it no longer satisfies your program. And build a new one from scratch at that point.
 
 <Br>
 <Br>
 <Br>
-  
-# Testing Stinks and Is a Waste of Money!
-
-### Testing Saves Money, Jobs, and Lives
-
-### How to Structure Tests
-
-### How to Write Unit Tests
-
-### What About Integration Tests?
-
-### Continuous Integration 
-
-### Who Cares? We Don’t Have Time for Tests!
-
-### The Game of Test Coverage
-
-### Setting Up the Test Coverage Game
-
-### Playing the Game of Test Coverage
-
-### Alternatives to unittest
-
-<Br>
-<Br>
-<Br>
-  
-# Documentation: Be Obsessed 
-
-### Use reStructuredText for Python Docs
-
-### Use Sphinx to Generate Documentation From reStructuredText
-
-### What Docs Should Django Projects Contain?
-
-### Additional Documentation Resources
-
-### The Markdown Alternative
-
-### Wikis and Other Documentation Methods
-
-<br>
-<br>
-<br>
-
-# Finding and Reducing Bottlenecks 
-
-### Should You Even Care?
-
-### Speed Up Query-Heavy Pages
-
-### Get the Most Out of Your Database 
-
-### Cache Queries With Memcached or Redis
-
-### Identify Specific Places to Cache
-
-### Consider Third-Party Caching Packages
-
-### Compression and Minification of HTML, CSS, and JavaScript
-
-### Use Upstream Caching or a Content Delivery Network
-
-### Other Resources
-
-<br>
-<br>
-<Br>
-  
-# Asynchronous Task Queues
-
-### Do We Need a Task Queue?
-
-### Choosing Task Queue Software
-
-### Best Practices for Task Queues
-
-### Resources for Task Queues
-
-<br>
-<br>
-<Br>
-  
-# Security Best Practices
-
-### Reference Security Sections in Other Chapters
-
-### Harden Your Servers
-
-### Know Django’s Security Features
-
-### Turn Off DEBUG Mode in Production
-
-### Keep Your Secret Keys Secret
-
-### HTTPS Everywhere
-
-### Use Allowed Hosts Validation
-
-###  Always Use CSRF Protection With HTTP Forms That Modify Data
-
-### Prevent Against Cross-Site Scripting (XSS) Attacks
-
-### Defend Against Python Code Injection Attacks
-
-### Validate All Incoming Data With Django Forms
-
-### Disable the Autocomplete on Payment Fields
-
-### Handle User-Uploaded Files Carefully
-
-### Don’t Use ModelForms.Meta.exclude
-
-### Don’t Use ModelForms.Meta.fields = ”__all__”
-
-### Beware of SQL Injection Attacks
-
-### Never Store Credit Card Data
-
-### Monitor Your Sites
-
-### Keep Your Dependencies Up-to-Date
-
-### Prevent Clickjacking
-
-### Guard Against XML Bombing With defusedxml
-
-### Explore Two-Factor Authentication
-
-### Embrace SecurityMiddleware
-
-### Force the Use of Strong Passwords
-
-### Give Your Site a Security Checkup
-
-### Put Up a Vulnerability Reporting Page
-
-### Never Display Sequential Primary Keys
-
-### Reference Our Security Settings Appendix
-
-### Review the List of Security Packages
-
-### Keep Up-to-Date on General Security Practices
-
-<br>
-<br>
-<Br>
-  
-# Logging: What’s It For, Anyway?
-
-### Application Logs vs. Other Logs
-
-### Why Bother With Logging?
-
-### When to Use Each Log Level
-
-### Log Tracebacks When Catching Exceptions
-
-### One Logger Per Module That Uses Logging 
-
-### Log Locally to Rotating Files
-
-### Other Logging Tips
-
-### Necessary Reading Material
-
-### Useful Third-Party Tools
-
-<br>
-<br>
-<Br>
-  
-# Signals: Use Cases and Avoidance Techniques
-
-### When to Use and Avoid Signals
-
-### Signal Avoidance Techniques
-
-<br>
-<br>
-<Br>
-  
-# What About Those Random Utilities? 
-
-### Create a Core App for Your Utilities
-
-### Optimize Apps With Utility Modules
-
-### Django’s Own Swiss Army Knife
-
-### Exceptions
-
-### Serializers and Deserializers
-
-<br>
-<br>
-<Br>
-   
-# Deployment: Platforms as a Service
-
-### Evaluating a PaaS
-
-### Best Practices for Deploying to PaaS
-
-<br>
-<br>
-<Br>
-  
-# Deploying Django Projects
-
-### Single-Server for Small Projects
-
-### Multi-Server for Medium to Large Projects 
-
-### WSGI Application Servers
-
-### Performance and Tuning: uWSGI and Gunicorn
-
-### Stability and Ease of Setup: Gunicorn and Apache
-
-### Common Apache Gotchas
-
-### Automated, Repeatable Deployments
-
-### Which Automation Tool Should Be Used?
-
-### Current Infrastructure Automation Tools
-
-### Other Resources
-
-<br>
-<br>
-<Br>
-  
-# Continuous Integration
-
-### Principles of Continuous Integration
-
-### Tools for Continuously Integrating Your Project
-
-### Continuous Integration as a Service
-
-### Additional Resources
-
-<br>
-<br>
-<Br>
-  
-# The Art of Debugging
-
-### Debugging in Development
-
-### Debugging Production Systems
-
-###  Feature Flags
-
-<br>
-<br>
-<Br>
-  
-# Where and How to Ask Django Questions
-
-### What to Do When You’re Stuck
-
-### How to Ask Great Django Questions in IRC
-
-### Feed Your Brain
-
-### Insider Tip: Be Active in the Community
-
   
