@@ -235,17 +235,22 @@ network MTU, IP will fragment the resulting datagram, which reduces
 efficiency. Because UDP is designed to not fragment and send it in blocks if it is possible. As a consequence, many programmers who use UDP choose a message size that
 produces datagrams that fit in a standard MTU.
 
-- __`UDP Communication Semantics`__ --
+- __`UDP Communication Semantics`__ -- UDP’s best-effort delivery semantics have important consequences for applications. An
+application must either be immune to the problems or the programmer must take additional steps to detect and correct problems. As an example of an application that can
+tolerate packet errors, consider an audio transmission. If the sender places a small
+amount of audio in each message, the loss of a single packet produces a small gap in
+the playback, which will be heard as a pop or click. Although it is not desirable, the
+noise is merely annoying. At the opposite extreme, consider an on-line shopping application. Such applications are not written to use UDP because packet errors can have serious consequences (e.g., duplication of a message that carries a catalog order can
+result in two orders, with double charges being made to the buyer’s credit card). So every packet delivery error is not as same as he other. 
 
-- __`Modes Of Interaction And Broadcast Delivery`__ --
+- __`Modes Of Interaction And Broadcast Delivery`__ -- UDP allows four styles of interaction:
+  - 1-to-1
+  - 1-to-many
+  - Many-to-1
+  - Many-to-many
 
-- __`Endpoint Identification With Protocol Port Numbers`__ --
-
-- __`UDP Datagram Format`__ --
-
-- __`The UDP Checksum And The Pseudo Header`__ --
-
-- __`UDP Encapsulation`__ --
+- __`Endpoint Identification With Protocol Port Numbers`__ -- Exactly how should UDP identify an application program as an endpoint? It might
+seem that UDP could use the same mechanism that the operating system uses. Unfortunately, because UDP must span heterogeneous computers, no common mechanism exists
 
 <br>
 <br>
@@ -256,6 +261,66 @@ produces datagrams that fit in a standard MTU.
 <br>
 
 # Chapter 26: TCP: Reliable Transport Service
+
+- __`Introduction`__ -- This chapter considers transport
+protocols in general, and examines TCP, the major transport protocol used in the Internet. The chapter explains how the TCP protocol provides reliable delivery.
+
+  TCP achieves a seemingly impossible task: it uses the unreliable datagram service
+offered by IP when sending across the Internet, but provides a reliable data delivery service to application programs. TCP must compensate for loss, delay, duplication, and
+out-of-order delivery, and it must do so without overloading the underlying networks
+and routers
+
+- __`The Transmission Control Protocol`__ -- In the Internet, the Transmission Control Protocol (TCP) is a
+transport-layer protocol that provides reliability. In the TCP/IP suite, the Transmission Control Protocol (TCP) provides reliable
+transport service. TCP is remarkable because it solves a difficult problem well —
+although other protocols have been created, no general-purpose transport protocol has
+proved to work better. Consequently, most Internet applications are built to use TCP.
+
+- __`The Service TCP Provides To Applications`__ --  TCP provides a reliable, connection-oriented, full-duplex stream
+transport service that allows two application programs to form a connection, send data in either direction, and then terminate the connection. Each TCP connection is started reliably and terminated gracefully.
+
+- __`End-To-End Service And Virtual Connections`__ -- Like UDP, TCP is classified as an end-to-end protocol because it provides communication between an application on one computer to an application on another computer. It is connection oriented because applications must request that TCP form a connection before they can transfer data, and must close the connection when transfer is
+complete
+
+  The connections provided by TCP are called virtual connections because they are
+achieved in software. I
+
+- __`Techniques That Transport Protocols Use`__ -- In particular, transport protocols use a variety of tools to handle some of the most complicated communication
+problems. 
+
+  __Sequencing To Handle Duplicates And Out-Of-Order Delivery__ -- To handle duplicate packets and out-of-order deliveries, transport protocols use
+sequencing. The sending side attaches a sequence number to each packet. Sequencing also solves the problem of duplication — a receiver checks for duplicates when it examines the sequence number of an arriving packet.
+  
+  __Retransmission To Handle Lost Packets__ -- To handle packet loss, transport protocols use positive acknowledgement with retransmission. Whenever a frame arrives intact, the receiving protocol software sends a
+small acknowledgement (ACK) message that reports successful reception The action of sending a second copy is known as retransmitting,
+and the copy is commonly called a retransmission
+  
+  __Techniques To Avoid Replay__ -- Extraordinarily long delays can lead to replay errors in which a delayed packet affects later communication. To prevent replay, protocols mark each session with a unique ID (e.g., the time the
+session was established), and require the unique ID to be present in each packet. The
+protocol software discards any arriving packet that contains an incorrect ID. To avoid
+replay, an ID must not be reused until a reasonable time has passed (e.g., hours).
+  
+  __Flow Control To Prevent Data Overrun__ -- Several techniques are available to prevent a fast computer from sending so much
+data that it overruns a slow receiver. We use the term flow control to refer to techniques that handle the problem. The simplest form of flow control is a stop-and-go system in which a sender waits after transmitting each packet When the receiver is ready
+for another packet, the receiver sends a control message, usually a form of acknowledgement.
+
+- __`Techniques To Avoid Congestion`__ -- 
+
+- __`The Art Of Protocol Design`__ -- 
+
+- __`Techniques Used In TCP To Handle Packet Loss`__ -- 
+
+- __`Adaptive Retransmission`__ -- 
+
+- __`Comparison Of Retransmission Times`__ -- 
+
+- __`Buffers, Flow Control, And Windows`__ -- 
+
+- __`TCP’s Three-Way Handshake`__ -- 
+
+- __`TCP Congestion Control`__ -- 
+
+- __`TCP Segment Format`__ -- 
 
 <br>
 <br>
