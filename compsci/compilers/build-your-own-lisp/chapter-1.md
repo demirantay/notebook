@@ -34,15 +34,23 @@ Table of Contents:
 
 ### About
 
-### Who this is for
+- In this book you'll learn the C programming language and at the same time learn how to build your very own programming language, a minimal Lisp, in under 1000 lines of code! We'll be using a library to do some of the initial work, so I'm cheating a bit on the line count, but the rest of the code will be completely original, and you really will create a powerful little Lisp by the end.
 
 ### Why learn C
 
+- C is one of the most popular and influential programming languages in the world. It is the language of choice for development on Linux, and has been used extensively in the creation of OS X and to some extent Microsoft Windows. It is used on micro-computers too. Your fridge and car probably run on it. In modern software development, the use of C may be escapable, but its legacy is not. Anyone wanting to make a career out of software development would be smart to learn C.
+
+  The ideology of freedom is reflected in the nature of C itself. There is little C hides from you, including its warts and flaws. There is little C stops you from doing, including breaking your programs in horrible ways. When programming in C you do not stand on a path, but a plane of decision, and C dares you to decide what to do.
+
 ### How to learn C
+
+- There is no way around the fact that C is a difficult language. It has many concepts that are unfamiliar, and it makes no attempts to help a new user. In this book I am not going to cover in detail things like the syntax of the language, or how to write loops and conditional statements.
+
+  I will, on the other hand, show you how to build a real world program in C. This approach is always more difficult for the reader, but hopefully will teach you many implicit things a traditional approach cannot. I can't guarantee that this book will make you a confident user of C. What I can promise, is that those 1000 lines of code are going to be packed with content - and you will learn something worthwhile.
 
 ### Why build a Lisp
 
-### Your own Lisp
+- The type of Lisp we'll be building is one I've invented for the purposes of this book. I've designed it for minimalism, simplicity and clarity, and I've become quite fond of it along the way. I hope you come to like it too. Conceptually, syntactically, and in implementation, this Lisp has a number of differences to other major brands of Lisp. If you are looking to learn about the semantics and behaviours of conventional Lisps, and how to program them, this book may not be for you. This book is more about building a language with C rather than showing you lisp.
 
 <br>
 <br>
@@ -52,41 +60,52 @@ Table of Contents:
 <Br>
 <br>
 
-# Chapter 2 • Installation
-
-### Setup
-
-### Text Editor
-
-### Compiler
-
-### Hello World
-
-### Compilation
-
-### Errors
-
-### Documentation
-
-<br>
-<br>
-
----
-
-<br>
-<br>
-
 # Chapter 3 • Basics
 
 ### Overview
 
+- In this chapter I've prepared a quick overview of the basic features of C. There are very few features in C, and the syntax is relatively simple. But this doesn't mean it is easy. All the depth hides below the surface. Because of this we're going to cover the features and syntax fairly quickly now, and see them in greater depth as we continue.
+
 ### Programs
+
+- A program in C consists of only function definitions and structure definitions. Therefore a source file is simply a list of functions and types. These functions can call each other or themselves, and can use any data types that have been declared or are built into the language
+
+- As we saw in the previous chapter, the execution of a C program always starts in the function called `main`. From here it calls more and more functions, to perform all the actions it requires.
 
 ### Variables
 
+- I am going to skip the logic behind variables since I already know them. These are how you can write varaibles in C:
+  ```c
+  int age = 23;
+  char initial = "h";
+  long age_of_universe = 13798000000;
+  float decimel_number = 00.568f;
+  double speed_of_swallow = 0.01072896;
+  ```
+
 ### Function Declarations
 
+- I am going to skip the logic vehind functions since I already know them. These are how you can write functions in C:
+  ```c
+  int add_together(int x, int y) {
+    int result = x + y;
+    return result;
+  }
+  ```
+  You need to declare the headers of funcitons before the main func:
+  ```c
+  // included libraries
+  
+  int add_together(int x, int y);
+  
+  int main() { ... }
+  
+  int add_together(int x, int y) { ... }
+  ```
+
 ### Structure Declarations
+
+- Structures are used to declare new types. Structures are several variables bundled together into a single package.
 
 ### Pointers
 
