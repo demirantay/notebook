@@ -107,31 +107,84 @@ needed to rewrite addresses
 
 # Chapter 24: The Future IP (IPv6)
 
-- __`Introduction`__ --
+- __`Introduction`__ -- This chapter concentrates on the future of the Internet Protocol. It begins by assessing the strengths and limitations of the current version of IP, and then considers a
+new version of IP that the IETF has developed
 
-- __`The Success Of IP`__ --
+- __`The Success Of IP`__ -- The success of the current version of IP is incredible — the protocol
+has accommodated changes in hardware technologies, heterogeneous
+networks, and extremely large scale.
 
-- __`The Motivation For Change`__ --
+- __`The Motivation For Change`__ -- If IP works so well, why change? When IP was defined, only a few computer networks existed. The designers decided to use 32 bits for an IP address because doing so
+allowed the Internet to include over a million networks. However, the global Internet is
+growing exponentially, with the size doubling in less than a year. At the current growth
+rate, each of the possible network prefixes will eventually be assigned, and no further
+growth will be possible. Thus, the primary motivation for defining a new version of IP
+arose from the address space limitation — larger addresses are necessary to accommodate continued growth of the Internet.
 
-- __`The Hourglass Model And Difficulty Of Change`__ --
+- __`The Hourglass Model And Difficulty Of Change`__ -- Because IP is central to all Internet communication, changing IP requires a change to the entire Internet.
 
-- __`A Name And A Version Number`__ --
+- __`A Name And A Version Number`__ -- When a specific protocol was defined, the designers needed to distinguish the protocol from all other proposals. They decided to use an official version number in the
+header of the final standardized protocol. The version number that was selected was a
+surprise. Because the current IP version number is 4, the networking community expected the next official version to be 5. However, version 5 had been assigned to an
+experimental protocol known as ST. Consequently, the new version of IP received 6 as
+its official version number, and the protocol became known as IPv6. To distinguish it
+from IPv6, the current version of IP became known as IPv4.
 
-- __`IPv6 Features`__ --
+- __`IPv6 Features`__ -- IPv6 retains many of the design features that have made IPv4 so successful. Like
+IPv4, IPv6 is connectionless — each datagram contains a destination address, and each
+datagram is routed independently. Like IPv4, the header in a datagram contains a maximum number of hops the datagram can take before being discarded.
 
-- __`IPv6 Datagram Format`__ --
+  Despite retaining the basic concepts from the current version, IPv6 changes all the
+details. For example, IPv6 uses larger addresses and an entirely new datagram header
+format. Furthermore, IPv6 divides header information into a series of fixed-length
+headers.
 
-- __`IPv6 Base Header Format`__ --
+  The new features in IPv6 can be grouped into five broad categories:
+  - Address Size. Instead of 32 bits, each IPv6 address contains 128
+bits.
+  - Header Format. The IPv6 datagram header is completely different
+than the IPv4 header
+  - Extension Headers. Unlike IPv4, which uses a single header format for all datagrams, IPv6 encodes information into separate
+headers. 
+  - Support For Real-Time Traffic. IPv6 includes a mechanism that allows a sender and receiver to establish a high-quality path through
+the underlying network
+  - Extensible Protocol. Unlike IPv4, IPv6 does not specify all possible protocol features.
 
-- __`Implicit And Explicit Header Size`__ --
+- __`Fragmentation, Reassembly, And Path MTU`__ -- Although IPv6 fragmentation resembles IPv4 fragmentation, the details differ.
+Like IPv4, a prefix of the original datagram is copied into each fragment, and the payload length is modified to be the length of the fragment. Unlike IPv4, however, IPv6
+does not include fields for fragmentation information in the base header. Instead, IPv6
+places the fragment information in a separate fragment extension header; the presence of
+the header identifies the datagram as a fragment.
 
-- __`Fragmentation, Reassembly, And Path MTU`__ --
+  In IPv6, fragmentation is performed by the sending host, and not by
+routers. If fragmentation is required, the sending host receives an
+ICMP error message, and reduces the fragment size until fragments
+can be sent to the destination.
 
-- __`The Purpose Of Multiple Headers`__ --
+- __`The Purpose Of Multiple Headers`__ -- Why does IPv6 use separate extension headers? There are two reasons: `Economy`, `Extensebility`
 
-- __`IPv6 Addressing`__ --
+  Economy is easiest to understand: partitioning the datagram functionality into
+separate headers is economical because it saves space.
 
-- __`IPv6 Colon Hexadecimal Notation`__ --
+- __`IPv6 Addressing`__ -- Like IPv4, IPv6 assigns a unique address for each connection between a computer
+and a physical network. Thus, if a computer (e.g., a router) connects to three physical
+networks, the computer is assigned three IPv6 addresses. Also like IPv4, IPv6 separates
+each such address into a prefix that identifies the network and a suffix that identifies a
+particular computer on the network.
+
+- __`IPv6 Colon Hexadecimal Notation`__ -- Because an IPv6 address occupies 128 bits, writing such numbers can be unwieldy.
+For example, consider a 128-bit number written in the dotted decimal notation that IPv4
+uses:
+  ```
+  105.220.136.100.255.255.255.255.0.0.18.128.140.10.255.255
+  ```
+  To help reduce the number of characters used to write an address, the designers of IPv6
+chose a more compact syntactic form known as colon hexadecimal notation, usually abbreviated colon hex, in which each group of 16 bits is written in hexadecimal with a
+colon separating groups. For example, when the above number is written in colon hex,
+it becomes:
+  ```
+  69DC:8864:FFFF:FFFF:0:1280:8C0A:FFFF
+  ```
 
 <br>
 <br>
@@ -142,6 +195,57 @@ needed to rewrite addresses
 <br>
 
 # Chapter 25: UDP: Datagram Transport Service
+
+- __`Introduction`__ -- This chapter considers UDP, one
+of the two major transport-layer protocols used in the Internet and the only connectionless transport service. The chapter discusses the UDP packet format and the ways UDP
+can be used.
+
+- __`Transport Protocols And End-To-End Communication`__ -- As previous chapters show, the Internet Protocol provides a packet delivery service
+that spans the Internet (i.e., a datagram can pass from the sending host, across one or
+more physical networks, to the receiving host). Despite its ability to pass traffic across
+the Internet, IP lacks an essential feature: IP cannot distinguish among multiple application programs running on a given host. If a user runs an email application and a web
+browser at the same time or runs multiple copies of a given application, they must be
+able to communicate independently
+
+- __`The User Datagram Protocol`__ -- As we will see, the TCP/IP suite contains two transport protocols, the User Datagram Protocol (UDP) and the Transmission Control Protocol (TCP), that differ
+dramatically in the service they offer to applications. UDP is less complex and easiest
+to understand. The simplicity and ease of understanding come with a cost — UDP does
+not provide the type of service a typical application expects.
+
+  The most important characteristic of UDP, its best-effort semantics, arises because
+UDP uses IP for transmission. In fact, UDP is sometimes characterized as a thin protocol layer that provides applications with the ability to send and receive IP datagrams.
+We can summarize:
+
+  UDP provides an end-to-end service that allows an application program to send and receive individual messages, each of which travels
+in a separate datagram. An application can choose to restrict communication to one other application program or communicate with
+multiple applications.
+
+- __`The Connectionless Paradigm`__ -- UDP uses a connectionless communication paradigm, which means that an application using UDP does not need to preestablish communication before sending data, nor
+does the application need to inform the network when finished
+
+  UDP is connectionless, which means that an application can send
+data at any time and UDP does not transmit any packets other than
+the packets that carry user data
+
+- __`Message-Oriented Interface`__ -- UDP offers application programs a message-oriented interface. Each time an application requests that UDP send a block of data, UDP places the data in a single message for transmission. UDP does not divide a message into multiple packets, and does
+not combine messages for delivery — each message that an application sends is transported across the Internet and delivered to the receiver.
+
+  Although a programmer’s intuition suggests that using larger messages will increase efficiency, if a UDP message is larger than the
+network MTU, IP will fragment the resulting datagram, which reduces
+efficiency. Because UDP is designed to not fragment and send it in blocks if it is possible. As a consequence, many programmers who use UDP choose a message size that
+produces datagrams that fit in a standard MTU.
+
+- __`UDP Communication Semantics`__ --
+
+- __`Modes Of Interaction And Broadcast Delivery`__ --
+
+- __`Endpoint Identification With Protocol Port Numbers`__ --
+
+- __`UDP Datagram Format`__ --
+
+- __`The UDP Checksum And The Pseudo Header`__ --
+
+- __`UDP Encapsulation`__ --
 
 <br>
 <br>
