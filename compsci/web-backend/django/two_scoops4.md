@@ -147,19 +147,31 @@ tests and place an empty `__init__.py` within. Then we create respective modular
 behavior of multiple views, models, forms, or even multiple methods within a class. Instead, a single
 test should assert the behavior of a single view, model, form, method or function. And The trick is to be absolutely minimalistic when constructing the environment (the env in `setUp()`) for a particular test
 
-### What About Integration Tests?
+- `Things That Should Be Tested` -- list down below:
+  - `views` -- Viewing of data, changing of data, and custom class-based view methods
+  - `Models`: Creating/updating/deleting of models, model methods, model manager methods.
+  - `Forms`: Form methods, clean() methods, and custom fields.
+  - `Validators`: Really dig in and write multiple test methods against each custom validator you write.
+Pretend you are a malignant intruder attempting to damage the data in the site
+  - `Signals`: Since they act at a distance, signals can cause grief especially if you lack tests on them
+  - `Filters`: Since filters are essentially just functions accepting one or two arguments, writing tests for
+them should be easy.
+  - `Template Tags`: Since template tags can do anything and can even accept template context, writing
+tests often becomes much more challenging
+  - `Miscellany`: Context processors, middleware, email, and anything else not covered in this list
+  - `Failure`: What happens when any of the above fail? Testing for system error is as important as testing
+for system success
 
-### Continuous Integration 
+  The only things that shouldn’t be tested are parts of your project that are already covered by tests in
+core Django and third-party packages. For example, a model’s fields don’t have to be tested if you’re
+using Django’s standard fields as-is
 
-### Who Cares? We Don’t Have Time for Tests!
+- Generate and use mock data. You can keep a library of functions to b used inisde the setUp() to automate generating data to the tests
 
-### The Game of Test Coverage
-
-### Setting Up the Test Coverage Game
-
-### Playing the Game of Test Coverage
-
-### Alternatives to unittest
+- Just as it is a good idea to document the purpose of a class, method, or function with docstrings, it
+is also a good idea to document the purpose the test analogs of these items. If undocumented code
+makes a project somewhat harder to maintain, undocumented test code can make a project impossible
+to test. To remedy this, a little bit of docstring can go a long way
 
 <Br>
 <Br>
@@ -167,246 +179,10 @@ test should assert the behavior of a single view, model, form, method or functio
   
 # Documentation: Be Obsessed 
 
-### Use reStructuredText for Python Docs
-
-### Use Sphinx to Generate Documentation From reStructuredText
-
-### What Docs Should Django Projects Contain?
-
-### Additional Documentation Resources
-
-### The Markdown Alternative
-
-### Wikis and Other Documentation Methods
+- I am skipping this part because it gives info about specific documentation libraries such as sphinx .. etc. which is not in the scope of this book. But the main concept is clear: __DOCUMENTATION IS KEY FOR GOOD SOFTWARE__
 
 <br>
 <br>
 <br>
 
-# Finding and Reducing Bottlenecks 
 
-### Should You Even Care?
-
-### Speed Up Query-Heavy Pages
-
-### Get the Most Out of Your Database 
-
-### Cache Queries With Memcached or Redis
-
-### Identify Specific Places to Cache
-
-### Consider Third-Party Caching Packages
-
-### Compression and Minification of HTML, CSS, and JavaScript
-
-### Use Upstream Caching or a Content Delivery Network
-
-### Other Resources
-
-<br>
-<br>
-<Br>
-  
-# Asynchronous Task Queues
-
-### Do We Need a Task Queue?
-
-### Choosing Task Queue Software
-
-### Best Practices for Task Queues
-
-### Resources for Task Queues
-
-<br>
-<br>
-<Br>
-  
-# Security Best Practices
-
-### Reference Security Sections in Other Chapters
-
-### Harden Your Servers
-
-### Know Django’s Security Features
-
-### Turn Off DEBUG Mode in Production
-
-### Keep Your Secret Keys Secret
-
-### HTTPS Everywhere
-
-### Use Allowed Hosts Validation
-
-###  Always Use CSRF Protection With HTTP Forms That Modify Data
-
-### Prevent Against Cross-Site Scripting (XSS) Attacks
-
-### Defend Against Python Code Injection Attacks
-
-### Validate All Incoming Data With Django Forms
-
-### Disable the Autocomplete on Payment Fields
-
-### Handle User-Uploaded Files Carefully
-
-### Don’t Use ModelForms.Meta.exclude
-
-### Don’t Use ModelForms.Meta.fields = ”__all__”
-
-### Beware of SQL Injection Attacks
-
-### Never Store Credit Card Data
-
-### Monitor Your Sites
-
-### Keep Your Dependencies Up-to-Date
-
-### Prevent Clickjacking
-
-### Guard Against XML Bombing With defusedxml
-
-### Explore Two-Factor Authentication
-
-### Embrace SecurityMiddleware
-
-### Force the Use of Strong Passwords
-
-### Give Your Site a Security Checkup
-
-### Put Up a Vulnerability Reporting Page
-
-### Never Display Sequential Primary Keys
-
-### Reference Our Security Settings Appendix
-
-### Review the List of Security Packages
-
-### Keep Up-to-Date on General Security Practices
-
-<br>
-<br>
-<Br>
-  
-# Logging: What’s It For, Anyway?
-
-### Application Logs vs. Other Logs
-
-### Why Bother With Logging?
-
-### When to Use Each Log Level
-
-### Log Tracebacks When Catching Exceptions
-
-### One Logger Per Module That Uses Logging 
-
-### Log Locally to Rotating Files
-
-### Other Logging Tips
-
-### Necessary Reading Material
-
-### Useful Third-Party Tools
-
-<br>
-<br>
-<Br>
-  
-# Signals: Use Cases and Avoidance Techniques
-
-### When to Use and Avoid Signals
-
-### Signal Avoidance Techniques
-
-<br>
-<br>
-<Br>
-  
-# What About Those Random Utilities? 
-
-### Create a Core App for Your Utilities
-
-### Optimize Apps With Utility Modules
-
-### Django’s Own Swiss Army Knife
-
-### Exceptions
-
-### Serializers and Deserializers
-
-<br>
-<br>
-<Br>
-   
-# Deployment: Platforms as a Service
-
-### Evaluating a PaaS
-
-### Best Practices for Deploying to PaaS
-
-<br>
-<br>
-<Br>
-  
-# Deploying Django Projects
-
-### Single-Server for Small Projects
-
-### Multi-Server for Medium to Large Projects 
-
-### WSGI Application Servers
-
-### Performance and Tuning: uWSGI and Gunicorn
-
-### Stability and Ease of Setup: Gunicorn and Apache
-
-### Common Apache Gotchas
-
-### Automated, Repeatable Deployments
-
-### Which Automation Tool Should Be Used?
-
-### Current Infrastructure Automation Tools
-
-### Other Resources
-
-<br>
-<br>
-<Br>
-  
-# Continuous Integration
-
-### Principles of Continuous Integration
-
-### Tools for Continuously Integrating Your Project
-
-### Continuous Integration as a Service
-
-### Additional Resources
-
-<br>
-<br>
-<Br>
-  
-# The Art of Debugging
-
-### Debugging in Development
-
-### Debugging Production Systems
-
-###  Feature Flags
-
-<br>
-<br>
-<Br>
-  
-# Where and How to Ask Django Questions
-
-### What to Do When You’re Stuck
-
-### How to Ask Great Django Questions in IRC
-
-### Feed Your Brain
-
-### Insider Tip: Be Active in the Community
-
-  
