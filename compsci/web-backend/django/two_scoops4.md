@@ -185,4 +185,253 @@ to test. To remedy this, a little bit of docstring can go a long way
 <br>
 <br>
 
+# Finding and Reducing Bottlenecks 
+
+- This chapter covers a few basic strategies for identifying bottlenecks and speeding up your Django
+projects
+
+### Should You Even Care?
+
+- Remember, premature optimization is bad. If your site is small- or medium-sized and the pages are
+loading fine, then it’s okay to skip this  On the other hand, if your site’s user base is growing steadily or you’re about to land a strategic
+partnership with a popular brand, then read on.
+
+### Speed Up Query-Heavy Pages
+
+- You can use django-debug-toolbar to help you determine where most of your queries are coming
+from. You’ll find bottlenecks such as:
+  - Duplicate queries in a page.
+  - ORM calls that resolve to many more queries than you expected
+  - Slow queries.
+  
+- `Reduce the Number of Queries` -- Once you know which pages contain an undesirable number of queries, figure out ways to reduce
+that number
+
+### Get the Most Out of Your Database 
+
+- You can go a bit deeper beyond optimizing database access. Optimize the database itself! Much of
+this is database-specific and already covered in other books, so we won’t go into too much detail here.
+
+### Compression and Minification of HTML, CSS, and JavaScript
+
+- When a browser renders a web page, it usually has to load HTML, CSS, JavaScript, and image files.
+Each of these files consumes the user’s bandwidth, slowing down page loads. One way to reduce
+bandwidth consumption is via compression and minification. Django even provides tools for you:
+GZipMiddleware and the {% spaceless %} template tag. Through the at-large Python community,
+we can even use WSGI middleware that performs the same task
+
+   A better approach is to use Apache
+and Nginx web servers configured to compress the outgoing content. If you are maintaining your
+own web servers, this is absolutely the way to go.
+
+### Other Resources
+
+<br>
+<br>
+<Br>
+  
+# Asynchronous Task Queues
+
+### Do We Need a Task Queue?
+
+### Choosing Task Queue Software
+
+### Best Practices for Task Queues
+
+### Resources for Task Queues
+
+<br>
+<br>
+<Br>
+  
+# Security Best Practices
+
+### Reference Security Sections in Other Chapters
+
+### Harden Your Servers
+
+### Know Django’s Security Features
+
+### Turn Off DEBUG Mode in Production
+
+### Keep Your Secret Keys Secret
+
+### HTTPS Everywhere
+
+### Use Allowed Hosts Validation
+
+###  Always Use CSRF Protection With HTTP Forms That Modify Data
+
+### Prevent Against Cross-Site Scripting (XSS) Attacks
+
+### Defend Against Python Code Injection Attacks
+
+### Validate All Incoming Data With Django Forms
+
+### Disable the Autocomplete on Payment Fields
+
+### Handle User-Uploaded Files Carefully
+
+### Don’t Use ModelForms.Meta.exclude
+
+### Don’t Use ModelForms.Meta.fields = ”__all__”
+
+### Beware of SQL Injection Attacks
+
+### Never Store Credit Card Data
+
+### Monitor Your Sites
+
+### Keep Your Dependencies Up-to-Date
+
+### Prevent Clickjacking
+
+### Guard Against XML Bombing With defusedxml
+
+### Explore Two-Factor Authentication
+
+### Embrace SecurityMiddleware
+
+### Force the Use of Strong Passwords
+
+### Give Your Site a Security Checkup
+
+### Put Up a Vulnerability Reporting Page
+
+### Never Display Sequential Primary Keys
+
+### Reference Our Security Settings Appendix
+
+### Review the List of Security Packages
+
+### Keep Up-to-Date on General Security Practices
+
+<br>
+<br>
+<Br>
+  
+# Logging: What’s It For, Anyway?
+
+### Application Logs vs. Other Logs
+
+### Why Bother With Logging?
+
+### When to Use Each Log Level
+
+### Log Tracebacks When Catching Exceptions
+
+### One Logger Per Module That Uses Logging 
+
+### Log Locally to Rotating Files
+
+### Other Logging Tips
+
+### Necessary Reading Material
+
+### Useful Third-Party Tools
+
+<br>
+<br>
+<Br>
+  
+# Signals: Use Cases and Avoidance Techniques
+
+### When to Use and Avoid Signals
+
+### Signal Avoidance Techniques
+
+<br>
+<br>
+<Br>
+  
+# What About Those Random Utilities? 
+
+### Create a Core App for Your Utilities
+
+### Optimize Apps With Utility Modules
+
+### Django’s Own Swiss Army Knife
+
+### Exceptions
+
+### Serializers and Deserializers
+
+<br>
+<br>
+<Br>
+   
+# Deployment: Platforms as a Service
+
+### Evaluating a PaaS
+
+### Best Practices for Deploying to PaaS
+
+<br>
+<br>
+<Br>
+  
+# Deploying Django Projects
+
+### Single-Server for Small Projects
+
+### Multi-Server for Medium to Large Projects 
+
+### WSGI Application Servers
+
+### Performance and Tuning: uWSGI and Gunicorn
+
+### Stability and Ease of Setup: Gunicorn and Apache
+
+### Common Apache Gotchas
+
+### Automated, Repeatable Deployments
+
+### Which Automation Tool Should Be Used?
+
+### Current Infrastructure Automation Tools
+
+### Other Resources
+
+<br>
+<br>
+<Br>
+  
+# Continuous Integration
+
+### Principles of Continuous Integration
+
+### Tools for Continuously Integrating Your Project
+
+### Continuous Integration as a Service
+
+### Additional Resources
+
+<br>
+<br>
+<Br>
+  
+# The Art of Debugging
+
+### Debugging in Development
+
+### Debugging Production Systems
+
+###  Feature Flags
+
+<br>
+<br>
+<Br>
+  
+# Where and How to Ask Django Questions
+
+### What to Do When You’re Stuck
+
+### How to Ask Great Django Questions in IRC
+
+### Feed Your Brain
+
+### Insider Tip: Be Active in the Community
+
+  
+
 
