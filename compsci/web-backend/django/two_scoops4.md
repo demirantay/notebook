@@ -318,57 +318,211 @@ there are certain things that you’ll need to configure.
 
 ### Turn Off DEBUG Mode in Production
 
+- Your production site should not be running in DEBUG mode. Attackers can find out more than
+they need to know about your production setup from a helpful DEBUG mode stack trace page.
+
 ### Keep Your Secret Keys Secret
+
+- If your `SECRET_KEY` setting is not secret, this means you risk everything from remote code
+execution to password hacking. Your API keys and other secrets should be carefully guarded as well.
+These keys should not even be kept in version control.
 
 ### HTTPS Everywhere
 
+- It is always better to deploy a site behind HTTPS. Not having HTTPS means that malicious network
+users can sniff authentication credentials between your site and end users. In fact, all data sent between
+your site and end users is up for grabs.
+  
+  Your entire site should be behind HTTPS. Your site’s static resources should also be served via
+HTTPS, otherwise visitors will get warnings about “insecure resources” which should rightly scare
+them away from your site If visitors try to access your site via HTTP, they should be redirected to HTTPS. This can be done
+either through configuration of your web server or with Django middleware 
+
+  You should obtain an SSL certificate from a reputable source rather than creating a self-signed certificate To set it up, follow the instructions for your particular web server or platform-as-a-service.
+Our preferred service is the very reputable (and free) letsencrypt.org. This service makes it so
+easy to create SSL certificates there is no reason to use self-signed certificates
+
+- `Use secure cookies` -- Your site should inform the target browser to never send cookies unless via HTTPS. You’ll need to
+set the following in your settings:
+  ```python
+  SESSION_COOKIE_SECURE = True
+  CSRF_COOKIE_SECURE = True
+  ```
+
 ### Use Allowed Hosts Validation
+
+- In production, you must set `ALLOWED_HOSTS` in your settings to a list of allowed host/domain
+names in order to avoid raising `SuspiciousOperation` exceptions. This is a security measure to
+prevent the use of fake HTTP host headers to submit requests.
 
 ###  Always Use CSRF Protection With HTTP Forms That Modify Data
 
+- Django comes with easy-to-use cross-site request forgery protection (CSRF) built in, and by default
+it is activated across the site via the use of middleware.
+
 ### Prevent Against Cross-Site Scripting (XSS) Attacks
+
+- XSS attacks usually occur when users enter malignant JavaScript that is then rendered into a template
+directly. This isn’t the only method, but it is the most common. Fortunately for us, Django by default escapes <, >, ’, ”, and &, which is all that is needed for proper HTML escaping. But also use the `|safe` filter consuioucsley because Django gives developers the ability to mark content strings as safe, meaning that Django’s own
+safeguards are taken away
+
+- `Don’t Allow Users to Set Individual HTML Tag Attributes` -- If you allow users to set individual attributes of HTML tags, that gives them a venue for injecting
+malignant JavaScript.
+
+- `Use JSON Encoding for Data Consumed by JavaScrip` -- Rely on JSON encoding rather than finding ways to dump Python structures directly to templates.
+It’s not just easier to integrate into client-side JavaScript, it’s safer.
+
+- `Add Content Security Policy Headers` -- Also known as CSP, Content Security Policy provides a standard method to declare approved origins
+of content that browsers should be allowed to load on a website. Covered types are JavaScript, CSS,
+HTML frames, web workers, fonts, images, embeddable objects such as Java applets, ActiveX, audio
+and video files, and other HTML5 features.
 
 ### Defend Against Python Code Injection Attacks
 
+- No matter how secure Python and Django might be, we always need to be aware that certain
+practices are incredibly dangerous.
+
+- Beware of the `eval()` , `exec()` , and `execfile()` built-ins. If your project allows arbitrary strings or
+files to be passed into any of these functions, you are leaving your system open to attack.
+
+- `Be Careful With Cookie-Based Sessions` -- Typically most Django sites use either database- or cache-based sessions. These function by storing
+a hashed random value in a cookie which is used as a key to the real session value, which is stored
+in the database or cache. The advantage of this is that only the key to the session data is sent to the
+client, making it very challenging for malignant coders to penetrate Django’s session mechanism. However, Django sites can also be built using cookie-based sessions, which place the session data
+entirely on the client’s machine. While this means slightly less storage needs for the server, it comes
+with security issues that justify caution. 
+
+  In general, we try to avoid cookie-based sessions
+
 ### Validate All Incoming Data With Django Forms
+
+- Django forms should be used to validate all data being brought into your project, including from
+non-web sources. Doing so protects the integrity of our data and is part of securing your application
 
 ### Disable the Autocomplete on Payment Fields
 
-### Handle User-Uploaded Files Carefully
+- The only way to completely safely serve user-provided content is from a completely separate domain.
+For better or worse, there are an infinite number of ways to bypass file type validators. This is why
+security experts recommend the use of content delivery networks (CDNs): they serve as a place to
+store potentially dangerous files
+
+- `When a CDN Is Not an Option` -- When this occurs, uploaded files must be saved to a directory that does not allow them to be executed.
+In addition, at the very least make sure the HTTP server is configured to serve images with image
+content type headers, and that uploads are restricted to a whitelisted subset of file extensions.
+
+  Take extra care with your web server’s configuration here, because a malicious user can try to attack
+your site by uploading an executable file like a CGI or PHP script and then accessing the URL.
 
 ### Don’t Use ModelForms.Meta.exclude
 
-### Don’t Use ModelForms.Meta.fields = ”__all__”
+- When using ModelForms, always use Meta.fields. Never use Meta.exclude. The use of
+Meta.exclude is considered a grave security risk, specifically a Mass Assignment Vulnerability.
+We can’t stress this strongly enough. Don’t do it One common reason we want to avoid the Meta.exclude attribute is that its behavior implicitly
+allows all model fields to be changed except for those that we specify
+
+### Don’t Use `ModelForms.Meta.fields = ”__all__”`
+
+- This includes every model field in your model form. It’s a shortcut, and a dangerous one. and even with
+custom validation code, exposes projects to form-based Mass Assignment Vulnerabilities. We advocate avoiding this technique as much as possible
 
 ### Beware of SQL Injection Attacks
 
+- The Django ORM generates properly-escaped SQL which will protect your site from users attempting to execute malignant, arbitrary SQL code. Django allows you to bypass its ORM and access the database more directly through raw SQL. When
+using this feature, be especially careful to escape your SQL code properly
+
 ### Never Store Credit Card Data
+
+- Unless you have a strong understanding of the PCI-DSS security standards
+(pcisecuritystandards.org) and adequate time/resources/funds to validate your PCI
+compliance, storing credit card data is too much of a liability and should be avoided.
+
+  Instead, we recommend using third-party services like Stripe, Braintree, Adyen, PayPal, and others
+that handle storing this information for you, and allow you to reference the data via special tokens.
+Most of these services have great tutorials, are very Python and Django friendly, and are well worth
+the time and effort to incorporate into your project.
 
 ### Monitor Your Sites
 
+- Check your web servers’ access and error logs regularly. Install monitoring tools and check on them
+frequently. Keep an eye out for suspicious activity.
+
 ### Keep Your Dependencies Up-to-Date
+
+- You should always update your projects to work with the latest stable release of Django and thirdparty dependencies. This is particularly important when a release includes security fixes. For that, we
+recommend pyup.io, which automatically checks requirements files against the latest versions that
+PyPI provides
 
 ### Prevent Clickjacking
 
+- Clickjacking is when a malicious site tricks users to click on a concealed element of another site that
+they have loaded in a hidden frame or iframe. An example is a site with a false social media ‘login’
+button that is really a purchase button on another site.
+
+  Django has instructions and components to prevent this from happening:
+➤ docs.djangoproject.com/en/1.11/ref/clickjacking/
+
 ### Guard Against XML Bombing With defusedxml
+
+- Fortunately for us, Christian Heimes created defusedxml, a Python library designed to patch
+Python’s core XML libraries and some of the third-party libraries (including lxml).
+For more information, please read:
+➤ pypi.python.org/pypi/defusedxml
 
 ### Explore Two-Factor Authentication
 
+- Two-factor authentication (2FA) requires users to authenticate by combining two separate means
+of identification.
+
+  For modern web applications, what that usually means is you enter your password as well as a value
+provided to you on your mobile device. A value that is either sent to your personal phone number or
+is reset every thirty seconds.
+
+  The advantage of 2FA is that it adds another component, one that changes frequently, to the authentication process, great for any site involving personal identity, finance, or medical requirements.
+
 ### Embrace SecurityMiddleware
+
+- We’ve mentioned Django’s built-in django.middleware.security.SecurityMiddleware
+several times already in this chapter. We owe it to ourselves and our users to embrace and use this
+feature of Django.
 
 ### Force the Use of Strong Passwords
 
+- A strong password is one that more than just a list of characters. It is long and preferably complex,
+including punctuation, digits, and both character cases. Let’s pledge to protect our users by enforcing
+the use of such passwords
+
+  Our opinion is that at this point in time, length is more important than complexity. An 8 character
+length password mixing cases, numbers, and special characters is easier by several orders of magnitude
+to break than a 50-character sentence of just lower cased letters.
+
 ### Give Your Site a Security Checkup
+
+- There are a number of services that provide automated checkups for sites. They aren’t security audits,
+but they are great, free ways to make certain that your production deployment doesn’t have any gaping
+security holes.
+
+  Erik Romijn, on the Django security team, has created Pony Checkup (ponycheckup.com), an
+automated security checkup tool for Django websites. There are several security practices that can
+easily be probed from the outside, and this is what his site checks for.
+
+  Mozilla also provides a similar, but non-Django specific service called Observatory (observatory.
+mozilla.org).
 
 ### Put Up a Vulnerability Reporting Page
 
-### Never Display Sequential Primary Keys
+- It’s a good idea to publish information on your site about how users can report security vulnerabilities
+to you.
 
-### Reference Our Security Settings Appendix
+  GitHub’s “Responsible Disclosure of Security Vulnerabilities” page is a good example of this and
+rewards reporters of issues by publishing their names:
+help.github.com/articles/responsible-disclosure-of-security-vulnerabilities/
 
-### Review the List of Security Packages
+### Keep a Reference Sheet
 
-### Keep Up-to-Date on General Security Practices
+- Keeping track of everything that relates to security and Django is challenging. This chapter alone is
+nigh 30 pages long and at the beginning we make it very clear this is not an absolute reference.
+
+  So create your own documentation, architecture, and a checkup list for securing a feature, protocols for certain things ... etc. how to act on a emergency ... etc.
 
 <br>
 <br>
