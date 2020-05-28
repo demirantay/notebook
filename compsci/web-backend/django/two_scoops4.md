@@ -224,21 +224,70 @@ we can even use WSGI middleware that performs the same task
 and Nginx web servers configured to compress the outgoing content. If you are maintaining your
 own web servers, this is absolutely the way to go.
 
-### Other Resources
-
 <br>
 <br>
 <Br>
   
 # Asynchronous Task Queues
 
+- An asynchronous task queue is one where tasks are executed at a different time from when they
+are created, and possibly not in the same order they were created.
+
+- Before we get into best practices, let’s go over some definitions:
+
+  `Broker` : The storage for the tasks themselves. This can be implemented using any sort of persistence
+tool, although in Django the most common ones in use are RabbitMQ and Redis. In the
+human-powered example, the storage is an online issue tracker
+
+  `Producer` : The code that adds tasks to the queue to be executed later. This is application code, the
+stuff that makes up a Django project.
+
+  `Worker` : The code that takes tasks from the broker and performs them. Usually there is more than
+one worker. Most commonly each worker runs as a daemon under supervision
+
+  `Serverless` : Usually provided by services such as AWS Lambda, this is, to paraphrase Martin Fowler,
+“where some amount of server-side logic is written by us but unlike traditional architectures
+is run in stateless compute containers that are event-triggered, ephemeral (only last for one
+invocation), and fully managed by a 3rd party.” Serverless takes over the role of Broker and
+Worker
+
 ### Do We Need a Task Queue?
+
+- It depends.They add complexity but can improve user experience. Arguably it comes down to whether
+a particular piece of code causes a bottleneck and can be delayed for later when more free CPU cycles
+are available.
+
+  Here is a useful rule of thumb for determining if a task queue should be used:
+  - Results take time to process: Task queue should probably be used.
+  - Users can and should see results immediately: Task queue should not be used.
+  
+  Please keep in mind there are site-traffic driven exceptions to all of these use cases:
+  - Sites with small-to-medium amounts of traffic may never need a task queue for any of these
+actions.
+  - Sites with larger amounts of traffic may discover that nearly every user action requires use of a
+task queue.
 
 ### Choosing Task Queue Software
 
-### Best Practices for Task Queues
+- `Celery` -- A Django and Python standard,
+many different storage types,
+flexible, full-featured, great for
+high volume.  But Challenging setup, steep
+learning curve for anything
+but the basic stuf
 
-### Resources for Task Queues
+- `DjangoChannels` -- Defacto Django standard,
+flexible, easy-to-use, adds
+websocket support to Django. But No retry mechanism,
+Redis-only
+
+- `AWS Lambda` -- Flexible, scalable, easy setup ButAPI call can be slow,
+requires external logging
+services, adds complexity,
+requires creating REST
+API for notification
+
+- I skipped most of this chapter because i don't know much about task queues because I haven't used them or needed them yet.
 
 <br>
 <br>
@@ -246,11 +295,26 @@ own web servers, this is absolutely the way to go.
   
 # Security Best Practices
 
-### Reference Security Sections in Other Chapters
+- This chapter contains a list of things helpful for securing your Django application. This list is by no
+means complete. Consider it a starting point.
 
-### Harden Your Servers
+- `Harden Your Servers` -- This is beyond the scope of django, yous should read your respective server applications and OS they it on top of, like nginx on ubuntu and how to secure them ... etc.
 
 ### Know Django’s Security Features
+
+- Django 1.11’s security features include:
+  - Cross-site scripting (XSS) protection.
+  - Cross-site request forgery (CSRF) protection.
+  - SQL injection protection
+  - Clickjacking protection.
+  - Support for TLS/HTTPS/HSTS, including secure cookies.
+  - Secure password storage, using the PBKDF2 algorithm with a SHA256 hash by default.
+  - Automatic HTML escaping
+  - An expat parser hardened against XML bomb attacks.
+  - Hardened JSON, YAML, and XML serialization/deserialization tools.
+  
+  Most of Django’s security features “just work” out of the box without additional configuration, but
+there are certain things that you’ll need to configure.
 
 ### Turn Off DEBUG Mode in Production
 
