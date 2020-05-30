@@ -355,10 +355,9 @@ Try to specilize in a field such as these, just chose one or two. However, remem
 
 ### Packet #3
 
-- [ ] Level 3: Create a fake simulation of social media with bots. You will build a REST API and use it for the bots.
 - [ ] Level 4: While feynmaning, build a small version of every tech learned above. 
   > Remember first version of unix was under 4000 LoC. And this guy created [aws server](https://github.com/jubos/fake-s3) system in just 2k LoC. Build everythings logic in a small way. Check your stars `ustack` for inspiration.
-- [ ] Level 4: Create a very detailed Instagram clone with flask or django (already started just continue)
+- [ ] Level 4: Create a very detailed Instagram clone with flask or django (use bots to generate data)
 - [ ] Level 5: Youtube clone too (it is good problem to solve how to impelemtn billions data of videos & graphics .
 - [ ] Level 6: Clone a basic search engine like google or duckduckgo, it is a good problem to solve.
 - [ ] Level 7: Clone a mini core duolingo before building your own lingo app
