@@ -198,25 +198,135 @@ Files, but there are many more.
   
 # Deploying Django Projects
 
+- Deployment of Django projects is an in-depth topic that could fill an entire book on its own. Here,
+we touch upon deployment at a high level.
+
 ### Single-Server for Small Projects
 
+- Single-server is the quickest way to get a small Django project up onto a server. It’s also the cheapest
+Django deployment option. The obvious drawback is that your server will go down if your website URL gets featured on Hacker
+News or any popular blog.
+
+- However, we highly recommend that you try setting up a single-server Django deployment in these
+situations: 
+  - If you’ve never done it before. It’s an extremely important learning experience. Doing it will
+give you a deeper understanding of how Python web applications work
+  - If your Django project is more of a toy project or experiment. Websites with paying customers
+can’t afford to risk downtime
+
+- Here’s an example of how we could deploy a single-server Django project easily with the following
+components:
+  - An old computer or cheap cloud server
+  - Ubuntu Server OS
+  - PostgreSQL
+  - Virtualenv
+  - Gunicorn
+  
+  Typicaly, we start out by installing the latest LTS version of Ubuntu Server onto a cloud server. Cloud
+server providers often have readymade disk images that are installable with a click, making this trivial Then we do all the server setup basics like updating packages and creating a user account for the
+project.
+
+  At this point, it’s Django time. We clone the Django project repo into our user’s home directory and
+create a virtualenv with the project’s Python package dependencies, including Gunicorn. We create
+a PostgreSQL database for the Django project and run python manage.py migrate. Then we run the Django project in Gunicorn. 
+
+  At this point, we see the Django site running when we go to the server’s IP address in a web browser.
+Then we can configure the server hostname and point a domain name at that IP address.
+
+  You’ll also outgrow the single-server setup pretty quickly. At that point, you may get fancier with
+your setup, e.g. adding nginx, Redis, and/or memcached, or setting up Gunicorn behind an nginx
+proxy. Eventually, you’ll want to either sign up for a PaaS or move to a multi-server setup.
+  
 ### Multi-Server for Medium to Large Projects 
 
+- Companies and growing startups who opt not to use a PaaS typically use a multi-server setup. This is what you need at the most basic level:
+  - Database server. Typically PostgreSQL in our projects when we have the choice, though
+Eventbrite uses MySQL
+  - WSGI application server. Typically uWSGI or Gunicorn with Nginx, or Apache with
+mod_wsgi.
+
+  Additionally, we may also want one or more of the following:
+  - Static file server. If we want to do it ourselves, Nginx or Apache are fast at serving static files.
+However, CDNs such as Amazon CloudFront are relatively inexpensive at the basic level.
+  - Caching and/or asynchronous message queue server. This server might run Redis, Memcached or Varnish.
+  - Miscellaneous server. If our site performs any CPU-intensive tasks, or if tasks involve waiting
+for an external service (e.g. the Twitter API) it can be convenient to offload them onto a server
+separate from your WSGI app server.
+
+  Finally, we also need to be able to manage processes on each server.
+  - Supervisord `or` init scripts
+  
+- `TIP: Horizontal vs. Vertical Scaling` -- The above is an example of horizontal scaling, where more servers are added to handle load.
+Before scaling horizontally, it’s good to scale vertically by upgrading your servers’ hardware
+and maxing out the RAM on each server. Vertical scaling is relatively easy, since it’s just a
+matter of throwing money at the problem
+  
 ### WSGI Application Servers
 
-### Performance and Tuning: uWSGI and Gunicorn
+- Always deploy your Django projects with WSGI. The most commonly-used WSGI deployment setups are:
+  - uWSGI with Nginx.
+  - Gunicorn behind a Nginx proxy
+  - Apache with mod_wsgi.
+  
+  There’s a lot of debate over which option is faster. Don’t trust benchmarks blindly, as many of them
+are based on serving out tiny “Hello World” pages, which of course will have different performance
+from real web applications.
 
-### Stability and Ease of Setup: Gunicorn and Apache
+  if a site is busy enough it’s worth investing time in learning one of these options very well. The disadvantage of setting up our own web servers is the added overhead of extra sysadmin work.
 
 ### Common Apache Gotchas
 
+- `WARNING: Do Not Use mod_python` -- The official Django documentation explicitly warns against using mod_python. Django’s
+mod_python support was deprecated in Django 1.3. In Django 1.5, the mod_python request
+handler was removed from Django.
+
+  Unfortunately, there are still many online resources that talk about configuring Django with
+mod_python, causing many people confusion. Do not use mod_python. If using Apache, use
+mod_wsgi instead.
+
+- `Apache and Environment Variables` -- Outside of Elastic Beanstalk, Apache doesn’t work with environment. You’ll need to do something like load a local configuration
+file for secret values into your settings module written in .ini, .cfg, .json, or .xml formats.
+
 ### Automated, Repeatable Deployments
+
+- When we configure our servers, we really shouldn’t be SSHing into our servers and typing in configuration commands from memory. It’s too easy to forget what we’ve done. If servers configured
+this way go down and need to be recreated in an emergency, it’s almost impossible to set them up
+identically to what we had before Relying on you or your system administrator’s memory of how he or
+she set up everything a year ago is dangerous.
+
+  Instead, our server setup should be automated and documented in a way that makes it trivial to
+recreate everything from scratch. In the reader’s case, you or your sysadmin should be able to set up
+everything without having to log into a single server manually.
 
 ### Which Automation Tool Should Be Used?
 
+- Because Python web application deployment is such a huge problem and pain point, the space has
+been flooded with tools attempting to solve it. We’re hearing lots of big promises from every tool,
+but at this point no particular tool has gone mainstream as The Easiest Way to Deploy, Self-Hosted.
+
+- In the past few years we’ve seen an vibrant ecosystem of companies dedicated to the issue of automating deployments. There is a lot of money to be made The result is that there are many good tools being built, but there is also a lot of corporate fluff to
+sift through.
+
 ### Current Infrastructure Automation Tools
 
-### Other Resources
+- Among Django users, Docker, Kubernetes, Ansible, and SaltStack are the most popular tools for
+automating deployments. as of 2020. All of these automation tools tend to be complex to set up and use, with a steep learning curve. That’s
+because they’re designed to manage not just one server, but thousands or more.
+
+- Here is what these tools can perform at large scale:
+  - `Remote execution`:
+    - Installing packages via apt-get or other system package management tools on remote servers
+    - Running commands on remote servers
+    - Starting services, and restarting them under certain conditions
+    - When a command is executed remotely, logging and returning the response from the server
+  - `Configuration management`:
+    - Creating or updating conf files for services.
+    - Populating configuration values differently for different servers, based on variables like each server’s particular IP address
+  - `Orchestration and targeting:` 
+    - Controlling which servers a job is sent to, and when it should be sent
+    - Managing various components at a high level, creating pipelines to handle different workflows
+    - Pushing jobs to servers from a master server, in push mode.
+    - Asking the master server what needs to occur, in pull mode
 
 <br>
 <br>
