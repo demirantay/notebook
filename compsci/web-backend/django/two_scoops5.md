@@ -332,41 +332,5 @@ because they’re designed to manage not just one server, but thousands or more.
 <br>
 <Br>
   
-# Continuous Integration
 
-### Principles of Continuous Integration
-
-### Tools for Continuously Integrating Your Project
-
-### Continuous Integration as a Service
-
-### Additional Resources
-
-<br>
-<br>
-<Br>
-  
-# The Art of Debugging
-
-### Debugging in Development
-
-### Debugging Production Systems
-
-###  Feature Flags
-
-<br>
-<br>
-<Br>
-  
-# Where and How to Ask Django Questions
-
-### What to Do When You’re Stuck
-
-### How to Ask Great Django Questions in IRC
-
-### Feed Your Brain
-
-### Insider Tip: Be Active in the Community
-
-  
 
