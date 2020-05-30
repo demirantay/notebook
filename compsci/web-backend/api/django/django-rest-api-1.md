@@ -1,15 +1,10 @@
 # Django REST Framework
 
-To do (notes) - 
-
-- [ ] https://www.django-rest-framework.org/tutorial/1-serialization/
-- [ ] https://www.django-rest-framework.org/tutorial/2-requests-and-responses/
-- [ ] https://www.django-rest-framework.org/tutorial/3-class-based-views/
-- [ ] https://www.django-rest-framework.org/tutorial/4-authentication-and-permissions/
-- [ ] https://www.django-rest-framework.org/tutorial/5-relationships-and-hyperlinked-apis/
-- [ ] https://www.django-rest-framework.org/tutorial/6-viewsets-and-routers/
+- Notes taken fully from: https://www.django-rest-framework.org/tutorial/1-serialization/ goes up to the last tutorial
 
 # Tutorial 1: Serialization
+
+- This tutorial will cover creating a simple pastebin code highlighting Web API. Along the way it will introduce the various components that make up REST framework, and give you a comprehensive understanding of how everything fits together.
 
 ### Introduction
 
@@ -18,3 +13,13 @@ To do (notes) -
 ### Getting started
 
 ### Creating a model to work with
+
+### Creating a Serializer class
+
+### Working with Serializers
+
+### Using ModelSerializers
+
+### Writing regular Django views using our Serializer
+
+### Testing our first attempt at a Web API
