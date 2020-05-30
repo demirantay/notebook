@@ -304,63 +304,54 @@ replay, an ID must not be reused until a reasonable time has passed (e.g., hours
 data that it overruns a slow receiver. We use the term flow control to refer to techniques that handle the problem. The simplest form of flow control is a stop-and-go system in which a sender waits after transmitting each packet When the receiver is ready
 for another packet, the receiver sends a control message, usually a form of acknowledgement.
 
-- __`Techniques To Avoid Congestion`__ -- 
+- __`Techniques To Avoid Congestion`__ -- Modern network hardware works well; most delay and loss results
+from congestion, not hardware failure. Arrange for intermediate systems (i.e., routers) to inform a sender
+when congestion occur Use increased delay or packet loss as an estimate of congestion
 
-- __`The Art Of Protocol Design`__ -- 
+- __`The Art Of Protocol Design`__ -- Although the techniques needed to solve specific problems are well-known, protocol design is nontrivial for two reasons. First, to make communication efficient, details
+must be chosen carefully — small design errors can result in incorrect operation, unnecessary packets, or delays
 
-- __`Techniques Used In TCP To Handle Packet Loss`__ -- 
+  Computer system reboot poses another serious challenge to transport protocol
+design. Imagine a situation where two application programs establish a connection, begin sending data, and then the computer receiving data reboots. Although protocol
+software on the rebooted computer has no knowledge of a connection, protocol software
+on the sending computer considers the connection valid. If a protocol is not designed
+carefully, a duplicate packet can cause a computer to incorrectly create a connection and
+begin receiving data in midstream
 
-- __`Adaptive Retransmission`__ -- 
+- __`Techniques Used In TCP To Handle Packet Loss`__ -- The delay required for data to reach a destination and an acknowledgement to return depends on traffic in the Internet as well as the
+distance to the destination. Because TCP allows multiple application
+programs to communicate with multiple destinations concurrently and
+traffic conditions affect delay, TCP must handle a variety of delays
+that can change rapidly.
 
-- __`Comparison Of Retransmission Times`__ -- 
+- __`Adaptive Retransmission`__ -- Before TCP was invented, transport protocols used a fixed value for retransmission
+delay — the protocol designer or network manager chose a value that was large enough
+for the expected delay. Designers working on TCP realized that a fixed timeout would
+not operate well for the Internet. Thus, they chose to make TCP’s retransmission adaptive. That is, TCP monitors current delay on each connection, and adapts (i.e., changes)
+the retransmission timer to accommodate changing conditions
 
-- __`Buffers, Flow Control, And Windows`__ -- 
+- __`Buffers, Flow Control, And Windows`__ -- When a connection is established, each end of the connection allocates a buffer to hold
+incoming data and sends the size of the buffer to the other end. As data arrives, the receiving TCP sends acknowledgements, which specify the remaining buffer size. TCP
+uses the term window to refer to the amount of buffer space available at any time; a notification that specifies the size of the window is known as a window advertisement. A
+receiver sends a window advertisement with each acknowledgement.
 
-- __`TCP’s Three-Way Handshake`__ -- 
+- __`TCP’s Three-Way Handshake`__ -- To guarantee that connections are established or terminated reliably, TCP uses a
+3-way handshake in which three messages are exchanged. During the 3-way handshake
+to start a connection, each side sends a control message that specifies an initial buffer
+size (for flow control) and a sequence number. Scientists have proved that TCP’s 3-
+way exchange is necessary and sufficient to ensure unambiguous agreement despite
+packet loss, duplication, delay, and replay events Furthermore, the handshake insures
+that TCP will not open or close a connection until both ends have agreed.
 
-- __`TCP Congestion Control`__ -- 
+- __`TCP Congestion Control`__ -- Conceptually, a transport protocol should reduce the rate of transmission when congestion occurs. Because it uses a variable-size window,
+TCP can achieve a reduction in data rate by temporarily reducing the
+window size. In the extreme case where loss occurs, TCP temporarily
+reduces the window to one-half of its current value.
 
-- __`TCP Segment Format`__ -- 
-
-<br>
-<br>
-
----
-
-<br>
-<br>
-
-# Chapter 27: Internet Routing and Routing Protocols
-
-<br>
-<br>
-
----
-
-<br>
-<br>
-
-# Chapter 28: Network Performance (QoS and DiffServ)
-
-<br>
-<br>
-
----
-
-<br>
-<br>
-
-# Chapter 29: Multimedia and IP Telephony (VoIP)
-
-<br>
-<br>
-
----
-
-<br>
-<br>
-
-# Chapter 30: Network Security
+- __`TCP Segment Format`__ -- TCP uses a single format for all messages, including messages that carry data,
+those that carry acknowledgements, and messages that are part of the 3-way handshake
+used to create or terminate a connection (SYN and FIN). TCP uses the term segment to
+refer to a message. 
 
 <br>
 <br>
@@ -370,22 +361,3 @@ for another packet, the receiver sends a control message, usually a form of ackn
 <br>
 <br>
 
-# Chapter 31: Network Management (SNMP)
-
-<br>
-<br>
-
----
-
-<br>
-<br>
-
-# Chapter 32: Trends in Networking Technologies and Uses
-
-<br>
-<br>
-
----
-
-<br>
-<br>
