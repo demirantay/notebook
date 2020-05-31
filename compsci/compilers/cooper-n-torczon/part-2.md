@@ -178,17 +178,11 @@ fas and form fas for more complex res.
 case of an nfa. Thus, an nfa is at least as powerful as a dfa. Any nfa
 can be simulated by a dfa—
 
-- `Regular Expression to NFA:Thompson’s Construction` -- left it at this header pg 70
-
-- `NFA to DFA: The Subset Construction` --
-
-- `From Q to D` --
-
-- `Example` --
-
-- `Fixed-Point Computations` -- 
-
-- `Computing ∈-closure Offline` --
+- `Regular Expression to NFA:Thompson’s Construction` -- The first step in moving from an re to an implemented scanner must derive
+an nfa from the re. Thompson’s construction accomplishes this goal in a
+straightforward way. It has a template for building the nfa that corresponds
+to a single-letter re, and a transformation on nfas that models the effect of
+each basic re operator: concatenation, alternation, and closure.
 
 - `DFA to Minimal DFA: Hopcroft’s Algorithm` --
 
