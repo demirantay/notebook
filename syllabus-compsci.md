@@ -156,9 +156,8 @@ Try to specilize in a field such as these, just chose one or two. However, remem
    - [x] Read: The [TutorialsOnPoint](https://www.tutorialspoint.com/compiler_design/index.htm) for a overview. Note this to README of the folder
    - [x] Read: [compiler basics](http://www.cs.man.ac.uk/~pjj/farrell/compmain.html)
    - [ ] Book: Cooper and Torczon. Engineering a compiler.
-   - [ ] Project: Before starting [read this tutorial](https://github.com/DoctorWkt/acwj)
    - [ ] Book: Appel. Modern Compiler implementation in C/Java/ML.
-   - [ ] Project : Create a basic compiler for your own language-to-assembly.
+   - [ ] Project : Create a basic compiler for your own language-to-assembly. [use this project as reference](https://github.com/DoctorWkt/acwj)
    - [ ] Project : Build a interpreter and a interpereted language like python.
    - [ ] Optional: Do more books and projects if you want to focus on this subject.
    
