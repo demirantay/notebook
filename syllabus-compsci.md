@@ -157,14 +157,15 @@ Try to specilize in a field such as these, just chose one or two. However, remem
    - [x] Read: [compiler basics](http://www.cs.man.ac.uk/~pjj/farrell/compmain.html)
    - [ ] Book: Cooper and Torczon. Engineering a compiler.
    - [ ] Book: Appel. Modern Compiler implementation in Java.
+   - [ ] Project: Basic C compiler written in python
+   - [ ] Project: Basic Python interpreter written in python
    - [ ] Book: Appel. Modern Compiler implementation in C.
-   - [ ] Project : Create a basic compiler for your own language-to-assembly. [use this project as reference](https://github.com/DoctorWkt/acwj)
-   - [ ] Project : Build a interpreter and a interpereted language like python.
+   - [ ] Project: Complex C compiler written in C.
+   - [ ] Project: Complex Python interpreter written in C.
    - [ ] Optional: Do more books and projects if you want to focus on this subject.
    
 ### Computer Graphics
 
-- [ ] Read: First finish this [tutorial](https://www.tutorialspoint.com/computer_graphics/index.htm)
 - [ ] Book: Computer Graphics: Principles and Practice
 - [ ] Book: Real-Time Rendering -- Latest Edition (4)
 - [ ] Read: Get practical knowledge in [this tutorial](https://learnopengl.com/)
