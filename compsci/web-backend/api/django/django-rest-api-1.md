@@ -6,9 +6,16 @@
 
 - This tutorial will cover creating a simple pastebin code highlighting Web API. Along the way it will introduce the various components that make up REST framework, and give you a comprehensive understanding of how everything fits together.
 
-### Introduction
-
 ### Setting up a new environment
+
+- Before we do anything else lets set up the enviornment:
+  ```
+  python3 -m venv env
+  source env/bin/activate
+  
+  pip install django
+  pip install djangorestframework
+  ```
 
 ### Getting started
 
