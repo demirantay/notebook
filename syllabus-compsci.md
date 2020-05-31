@@ -312,9 +312,9 @@ Try to specilize in a field such as these, just chose one or two. However, remem
 - [x] More on databases: ORM's, ACID, Transactions, N+1 Problem, Indexing, Data Normalization
 - [x] Testing: (Unit testing, Functional testing, Integration testing)
 - [x] Caching: (Server Side (redis), Client Side, CDN)
-- [ ] Learn abot API's
-- [ ] API: REST (Roy Fleedings Paper)
-- [ ] API: Auth -- (OAuth, Basic Authentication, Token Authentication, JWT, OpenID)
+- [x] Learn abot API's
+- [x] API: REST (Roy Fleedings Paper)
+- [x] API: Auth -- (OAuth, Basic Authentication, Token Authentication, JWT, OpenID)
 - [x] Web Security: HTTPS, CORS, SSL/TLS, OWASP Security Risks, Content Security Policy
 - [x] Web security: Hashign Algorithms (scrypt, bcrypt, SHA Family ... etc.
 - [x] Design and Development Principles (SOLID, KISS, YAGNI, DRY)
