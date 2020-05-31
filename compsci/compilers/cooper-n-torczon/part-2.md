@@ -184,15 +184,51 @@ straightforward way. It has a template for building the nfa that corresponds
 to a single-letter re, and a transformation on nfas that models the effect of
 each basic re operator: concatenation, alternation, and closure.
 
-- `DFA to Minimal DFA: Hopcroft’s Algorithm` --
+- `DFA to Minimal DFA: Hopcroft’s Algorithm` -- As a final refinement to the re→dfa conversion, we can add an algorithm
+to minimize the number of states in the dfa. The dfa that emerges from
+the subset construction can have a large set of states. While this does not
+increase the time needed to scan a string, it does increase the size of the
+recognizer in memory
 
-- `Examples` --
+- `Section Review` -- Given a regular expression, we can derive a minimal DFA to recognize
+the language specified by the RE using the following steps: (1) apply
+Thompson’s construction to build an NFA for the RE; (2) use the subset
+construction to derive a DFA that simulates the behavior of the RE; and
+(3) use Hopcroft’s algorithm to identify equivalent states in the DFA and
+construct a minimal DFA. This trio of constructions produces an efficient
+recognizer for any language that can be specified with an RE.
 
-- `Using a DFA as a Recognizer` --
+  Both the subset construction and the DFA minimization algorithm are
+fixed-point computations. They are characterized by repeated application of a monotone function to some set; the properties of the domain
+play an important role in reasoning about the termination and complexity of these algorithms. We will see more fixed-point computations in
+later chapters
 
 ## Implementing Scanners
 
-- `Table-Driven Scanners` --
+- For most languages, the
+compiler writer can produce an acceptably fast scanner directly from a set
+of regular expressions. The compiler writer creates an re for each syntactic
+category and gives the res as input to a scanner generator. The generator
+constructs an nfa for each re, joins them with E-transitions, creates a corresponding dfa, and minimizes the dfa. At that point, the scanner generator
+must convert the dfa into executable code
+
+  This section discusses three implementation strategies for converting a dfa
+into executable code: a table-driven scanner, a direct-coded scanner, and a
+hand-coded scanner
+
+  All of these scanners operate in the same manner, by
+simulating the dfa. They repeatedly read the next character in the input and
+simulate the dfa transition caused by that character. This process stops when
+the dfa recognizes a word
+
+  These three implementation strategies, table driven, direct coded, and hand
+coded, differ in the details of their runtime costs. However, they all have
+the same asymptotic complexity—constant cost per character, plus the cost
+of roll back
+
+- `Table-Driven Scanners` -- The table-driven approach uses a skeleton scanner for control and a set
+of generated tables that encode language-specific knowledge. the compiler writer provides a set of lexical patterns, specified as regular expressions. The scanner generator then produces tables that drive
+the skeleton scanner
 
 - `Direct-Coded Scanners` --
 
