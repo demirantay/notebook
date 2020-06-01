@@ -167,23 +167,80 @@ operate faster than 1 Gbps.
 interested in the rate at which data can be transferred. Users typically assess the effective data rate that an application achieves by measuring the amount of data transferred
 per unit time; the term goodput is sometimes used to describe the measure.
 
-- __`Understanding Throughput And Delay`__ --
+- __`Understanding Throughput And Delay`__ -- In fact, throughput is a measure of capacity, not speed. To understand the relationship, imagine a network to be a road between two locations and packets traveling across
+the network to be cars traveling down the road. The throughput determines how many
+cars can enter the road each second, and the propagation delay determines how long it
+takes a single car to travel the road from one town to another.
 
-- __`Jitter`__ --
+  The analogy to a road helps explain the aphorism: adding more lanes to a road will
+increase the number of cars that can enter the road per unit of time, but will not decrease the total time required to traverse the road. Networks follow the same pattern:
+adding more parallel transmission paths will increase the throughput of the network, but
+the propagation delay, which depends on the distance spanned, will not decrease.
 
-- __`The Relationship Between Delay And Throughput`__ --
+- __`Jitter`__ -- A third measure of networks is becoming important as networks are used for the
+transmission of real-time voice and video. The measure, which is known as a network’s
+jitter, assesses the variance in delay. Two networks can have the same average delay,
+but different values of jitter.
 
-- __`Measuring Delay, Throughput, And Jitter`__ --
+  Transmission of voice or video over the Internet takes the second approach:
+although the underlying network may have substantial jitter, voice and video applications rely on real-time protocols to compensate for jitter
 
-- __`Passive Measurement, Small Packets, And NetFlow`__ --
+- __`The Relationship Between Delay And Throughput`__ -- In theory, the delay and throughput of a network are independent. In practice,
+however, they can be related. To understand why, think of the road analogy discussed
+above. If cars enter the road at even time intervals, cars traveling along the road at uniform speed are spaced at uniform intervals. If a car slows down for any reason (e.g., at
+an intersection), others behind it will slow down as well, causing temporary traffic
+congestion. Cars that enter the road when congestion is occurring will experience
+longer delays than cars traveling on an uncongested road
 
-- __`Quality Of Service (QoS)`__ --
+  Throughput and delay are not completely independent. As traffic in a
+computer network increases, delays increase; a network that operates
+at close to 100% of its throughput capacity experiences severe delay
 
-- __`Fine-Grain And Coarse-Grain QoS`__ --
+- __`Measuring Delay, Throughput, And Jitter`__ -- The techniques used to measure throughput and jitter are relatively straightforward.
+To assess throughput, a sender transfers a large volume of data. A receiver records the
+time from the start of data arriving until all data has arrived, and calculates the
+throughput as the amount of data sent per unit of time. The technique for measuring
+jitter is known as a packet train: a sender emits a series of packets with a small, fixed
+delay between packets. Typically, packets in the train are sent back-to-back. A receiver records the time at which each packet arrives, and uses the sequence of times to
+compute the differences in delay.
 
-- __`Implementation Of QoS`__ --
+  The second point explains why an accurate measure of network performance can
+be difficult to obtain: conditions change rapidly. For example, consider a shared network. If only one host is sending data, the host will enjoy low delay, high throughput,
+and low jitter. As other hosts begin to use the network, utilization increases, which will
+increase delay and jitter and decrease throughput. Furthermore, because conditions
+change rapidly, delays can vary widely in as little as a second
 
-- __`Internet QoS Technologies`__ --
+  Unlike voice telephone traffic, data traffic is bursty. Data traffic is
+said to be self-similar because aggregates of data traffic exhibit the
+same pattern of burstiness
+
+- __`Quality Of Service (QoS)`__ -- The counterpart of network measurement is network provisioning: designing a network to provide a specific level of service. The remainder of the chapter considers
+mechanisms that can be used to implement service guarantees. Broadly, the topic is
+known as Quality of Service (QoS).
+
+- __`Fine-Grain And Coarse-Grain QoS`__ -- How can a provider specify QoS guarantees, and what technologies does a provider
+use to enforce QoS?
+  - Fine-Grain -- A provider allows a customer to state specific QoS
+requirements for a given instance of communication
+  - Coarse-Grain --  A provider specifies a few broad classes of service
+that are each suitable for one type of traffic
+
+  Both fine-grain and coarse-grain QoS have been studied; fine-grain efforts have
+generally been abandoned. ATM defined categories of service, and the acronyms are
+still used: Constant, Variable, Available, and Unspecified Bit Rate (CBR, VBR, ABR,
+and UBR).
+
+- __`Internet QoS Technologies`__ -- The IETF has designed a series of technologies and protocols related to QoS.
+Three significant efforts are:
+  - RSVP and COPS
+  - DiffServ
+  - MPLS
+  
+  The IETF defined RSVP and COPS as part of the IntServ effort; when emphasis
+shifted away from fine-grain QoS, the IETF defined DiffServ. The IETF also defined
+MPLS as a traffic engineering technology. QoS parameters can be associated with each
+MPLS tunnel, meaning that once a datagram has been classified, its MPLS association
+defines its QoS parameters.
 
 <br>
 <br>
@@ -194,6 +251,102 @@ per unit time; the term goodput is sometimes used to describe the measure.
 <br>
 
 # Chapter 29: Multimedia and IP Telephony (VoIP)
+
+- __`Introduction`__ -- This chapter continues the discussion by examining the transfer of multimedia over
+the Internet. The chapter examines how multimedia can be sent over a best-effort communication mechanism, describes a general-purpose protocol for real-time traffic, and
+considers the transmission of voice telephone calls in detail.
+
+- __`Real-Time Data Transmission And Best Effort Delivery`__ -- We use the term multimedia to refer to data that contains audio or video, and may
+include text. The phrase real-time multimedia refers to multimedia data that must be
+reproduced at exactly the same rate that it was captured (e.g., a television news program
+that includes audio and video of an actual event).
+
+  Instead of requiring the underlying networks to handle real-time transmission, the
+Internet uses additional protocol support. Interestingly, the most significant problem to
+be handled is jitter, not packet loss
+
+  The important point is: Unlike conventional transport protocols, a protocol that transfers
+real-time data only handles the problem of jitter, and does not retransmit lost packets. If they did the video and voice would not match because of the jitter one ofthe would fall behind.
+
+- __`Delayed Playback And Jitter Buffers`__ -- To overcome jitter and achieve smooth playback of real-time data, two chief techniques are employed:
+  - Timestamps. A sender provides a timestamp for each piece of data.
+A receiver uses the timestamps to handle out-of-order packets and
+to display the data in the correct time sequence.
+  - Jitter Buffer. To accommodate jitter (i.e., small variances in delay), a receiver buffers data and delays playback
+
+- __`Real-time Transport Protocol (RTP)`__ -- In the Internet protocol suite, the Real-time Transport Protocol (RTP) provides the
+mechanism used to transmit real-time data across the Internet. The term Transport is a
+misnomer because RTP sits above the transport layer. Thus, despite the name, one
+should think of RTP as a transfer protocol.
+
+  RTP does not ensure timely delivery of data, and it does not include a jitter buffer
+or playback mechanism. Instead, it provides three items in each packet that permit a receiver to implement a jitter buffer:
+  - A sequence number that allows a receiver to place incoming packets in the correct order and to detect missing packet
+  - A timestamp that allows a receiver to play the data in the packet at
+the correct time in the multimedia stream
+  - A series of source identifiers that allow a receiver to know the
+source(s) of the data
+
+- __`RTP Encapsulation`__ -- RTP uses UDP for message transport. Thus, each RTP message is encapsulated in
+a UDP datagram for transmission over the Internet. Because RTP uses UDP encapsulation, the resulting messages can be sent via
+broadcast or multicast. Multicast is especially useful for delivery of entertainment programming that appeals to a large audience.
+
+- __`IP Telephony`__ -- The term IP telephony† or Voice over IP (VoIP) is used to describe one of the
+most widespread multimedia applications. Telephone companies around the world are
+replacing traditional telephone switches with IP routers. The motivation is economic:
+routers cost much less than traditional telephone switches. Enterprises have also begun
+to use IP telehones for economic reasons: sending both data and voice in IP datagrams
+lowers cost because the underlying network infrastructure is shared — a single set of
+equipment, wiring, and network connections suffices for all communication, including
+telephone calls.
+
+  The basic idea behind IP telephony is straightforward: continuously sample audio,
+convert each sample to digital form, send the resulting digitized stream across an IP network in packets, and convert the stream back to analog for playback.
+
+- __`Signaling And VoIP Signaling Standards`__ -- Two groups have created standards for IP telephony: the International Telecommunications Union (ITU), which controls telephone standards, and the Internet Engineering Task Force (IETF), which controls TCP/IP standards. Fortunately, both groups agree on the basics for the encoding and transmission of
+audio:
+  - Audio is encoded using Pulse Code Modulation (PCM)
+  - RTP is used to transfer the digitized audio
+  
+  The main complexity of IP telephony (and the reason that multiple standards have
+been proposed) lies in call setup and call management. In telephone terminology, the
+process of establishing and terminating a call is known as signaling, and includes mapping a phone number to a location, finding a route to the called party, and handling other details such as call forwarding. The mechanism used in the traditional telephone system to handle call management is known as Signaling System 7 (SS7).
+
+- __`Components Of An IP Telephone System`__ -- 
+  - IP telephone -- Operates like a conventional telephone, but
+uses IP to send digitized voice
+  - Media Gateway Controller -- Provides control and coordination between IP telephones for services such as call setupcall termination, and call forwarding
+  - Media Gateway -- Provides a connection between two networks that use different encodings, and translates as a call passes between them
+  - Signaling Gateway -- Connects to two networks that use different signaling mechanisms, and translates call management requests and responses
+  
+  An IP telephone connects to a network, uses IP for all communication, and offers a
+traditional telephone interface that allows a user to place or receive telephone calls. An
+IP phone can be a stand-alone hardware unit (i.e., a conventional telephone), or can consist of a computer with a microphone, speaker, and IP telephony software. The connection between an IP telephone and the rest of the world can consist of a wired or wireless
+network (e.g., Ethernet or 802.11b).
+
+  A Media Gateway Controller, which is also known as a Gatekeeper or Softswitch,
+provides overall control and coordination between a pair of IP telephones, allowing a
+caller to locate a callee or access services such as call forwarding.
+
+  A Media Gateway provides translation of audio as a call passes across the boundary between an IP network and the PSTN or the boundary between two IP networks
+that use different encodings. For example, a media gateway on the boundary between
+the PSTN and the Internet moves digitized audio between the TDM encoding used on a
+conventional voice circuit and the packet encoding used on the Internet.
+
+  A Signaling Gateway also spans the boundary between a pair of disparate networks, and provides translation of signaling operations, allowing either side to initiate a
+call (e.g., to allow an IP telephone on the Internet to place a call to a phone on the
+PSTN). A media gateway controller coordinates the operation of the media and signaling gateways.
+
+- __`Telephone Number Mapping And Routing`__ --  How should IP telephone users be named and located? The PSTN follows ITU
+standard E.164 for telephone numbers, and SIP uses IP addresses. The problem of locating users is complicated because multiple types of networks may be involved The IETF has proposed two
+protocols that correspond to the mappings needed for the two subproblems:
+  - ENUM — converts a telephone number to a URI
+  - TRIP — finds a user in an integrated network
+  
+  Two additional IETF protocols provide support functions. ENUM uses the
+Domain Name System to map an E.164 telephone number into a Uniform Resource
+Identifier (usually a SIP URI). TRIP provides routing among IP telephone administrative domains; a SIP location server can use TRIP to inform other location servers about
+gateways that form network egress points.
 
 <br>
 <br>
