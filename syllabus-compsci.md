@@ -6,69 +6,6 @@ Resources:
 - For books: [this one](http://freecomputerbooks.com/) or [this one](https://b-ok.cc/)
 - For tutorials: [this one](https://github.com/danistefanovic/build-your-own-x#build-your-own-web-server)
 
-### Specialization
-
-Try to specilize in a field such as these, just chose one or two. However, remember that in tech field the experience does not come from the years you have coded rather it comes from to the exposure of different problem solutions (There are hundreds of different roles, but they can probably be divided up into these categories):
-  
-- __Infrastructure:__
-  - Sysadmin (managing, setting up, and keeping systems running)
-  - Dev-ops (creating & using tools that devs use to manage systems)
-  - Network Engineer (setting up, designing, and optimizing network infrastructures, TCP/IP, and other layers of the network stack)
-  - Data Center Ops (they keep "the cloud" running)
-  - Cable & Router Technicians (/r/cableporn)
-  - Database Administrators (generally wizards)
-  - Technical Support & Documentation (the incredibly tough bastards that actually deal with ghasp users)
-- __Backend:__  
-  - Full stack engineers (a little bit of everything)
-  - Backend Application Development (rails, django, node, etc.)
-  - Project Management (not always a technical technical role)
-  - Engineering Management (usually former developers get promoted to this job)
-  - Software Architects (planning out features before they are coded)
-  - API Design (designing the interfaces between systems)
-  - Security & Pentesting
-  - Distributed System Architects (dealing with consistency, availability, partition tolerance, timing, of large, globally-separated systems)
-  - Database Administrators (managing, maintaining, sharding, and migrating data stores, different from infrastructure-focused DBAs in that they are also writing backend code which interacts with the stores)
-- __Frontend:__
-  - Full Stack (a little bit of everything, but focused primarily on the pieces that support a frontend)
-  - UX/UI Front end designers (photoshop, indesign, sketch, html & css, etc. only)
-  - General front end web development (html, css, and js)
-  - Single-page app development (mostly with JS frameworks, e.g. angular or react)
-  - Quality Assurance & Testing (writing tests, doing human tests, making sure things work)
-- __Native:__
-  - iOS, Android, Windows Mobile, etc.
-  - Consumer-facing Windows Desktop, OS X Desktop, Linux app development
-  - Enterprise software development (large, made-to-order applications for businesses)
-  - IT administration & admin software design (often very system-specific, hence the Native category)
-  - Software Architecture (similar to backend architecture, designing features before they are coded)
-- __Science and Theory:__
-  - Scientific Research (loads of Matlab, R, and ipython and more)
-  - "Pure Compsci/Pure Math" Research (with haskell, lisp, lots more)
-  - Scientific Software Development (e.g. protein folding software)
-  - Data science (matlab, r, ipython, scikit-learn, etc.)
-  - Machine Learning (e.g. for pagerank, reverse image search, beer recommendation, used all over the place now)
-  - Compiler & Language Design (not many jobs but very useful to learn, maybe mozilla foundation & rust?, and Guido certainly gets paid by Dropbox :)
-  - OS Design (not just microsoft, windows, & linux, also qualcomm and lots of other telecoms hire tens of thousands of engineers to write embedded and mobile OSs)
-  - Compression (you can work for Hooli)
-- __Marketing:__
-  - Growth hacking/web scraping (selenium, beatifulsoup, phantomjs, scikit-learn, pattern, etc.)
-  - Analytics (GA, mixpanel, optimizely etc. closely tied with marketing and SEO)
-  - SEO & SEM (techniques to fuck with/obey search engines and convert $$ to visitors)
-  - General Marketing Development (salesforce, analytics, content-design, and SEO)
-- __Hardware and Graphics:__
-  - Embedded Software (code that runs very close to the metal, e.g. the assembly code running your elevator)
-  - Chip Design & Architecture (wizards)
-  - Game development (very, very different from other kinds of programmers, questionably human)
-  - Graphics software development (similar to gaming dev, in my experience, graphics people don't frequently switch to app dev or vice versa
-  - 3D printing and machining coding
-  - CGI & Animation (e.g. disney. pixar devs gave a talk about the wonders of cgi development at Pycon2015)
-
-<br>
-<Br>
-<br>
-
----
----
-
 <br>
 <br>
 <br>
@@ -85,9 +22,36 @@ Try to specilize in a field such as these, just chose one or two. However, remem
  - [X] Book : SICP (Structured Interpretion of Computer Programs)-*(shelved it for later it is hard)*
  - [X] Book : [modern c book](https://www.scribd.com/doc/39933932/C-Programming-a-Modern-Approach-2nd-Edition-K-N-King)(Did not finish left at pg.292 )
  
+### Algorithms and Data Structures
+ 
+  - [X] Read: The [This tutorial](https://www.studytonight.com/data-structures/time-complexity-of-algorithms)
+  - [X] Book: Grokking Algorithms: An illustrated guide for programmers and other curious people
+  - [x] Book: [PSAD using Python](https://runestone.academy/runestone/books/published/pythonds/index.html)
+  - [ ] Book: [The Algorithm Design Manual](https://www.amazon.com/Algorithm-Design-Manual-Steven-Skiena/dp/1848000693/?pldnSite=1) There are [vidoes](http://www3.cs.stonybrook.edu/~algorith/video-lectures/) avilable too.
+  - [ ] Project: Impelement Algorithms and Data Structures in any language. [Do all of these here](https://github.com/trekhleb/javascript-algorithms) (You alread y started implementing them in a repo)  
+  - [ ] Book: CSLR introduction to Algorithms
+  - [ ] Project: Do algorithm Visualizations
+  - [ ] Optional: Do more books and projects if you want to focus on this subject.
+  
+### Computer Graphics
+
+- [ ] Book: Computer Graphics: Principles and Practice
+- [ ] Book: Real-Time Rendering -- Latest Edition (4)
+- [ ] Read: Get practical knowledge in [this tutorial](https://learnopengl.com/)
+- [ ] Project: Render your dream house (make it realistic)
+- [ ] Optional: Do more books and projects if you want to focus on graphics.
+
+### Artifical Intelligence
+
+- [ ] Book: Hands-On Machine Learning with Scikit-Learn and TensorFlow
+- [ ] Book:  AI: A Modern Approach by Stuart Russell and Peter Norvig.
+- [ ] Book: Deep Learning by Ian Goodfellow and Yoshua Bengio.
+- [ ] Project: Do something cool and big with artifical intelligence like a smart bot
+- [ ] Optional: Do more books and projects if you want to focus on AI/ML
+ 
 ### Computer Architecture
 
-> Remember this is more of a computer engineering topic and not software one. If you really want to learn this learn physics first because engineers applies physics and software engineers applies CS.
+> If you want to really focus on this learn physics first.
   
   - [x] Read: Read [this tutorial](https://www.studytonight.com/computer-architecture/)
   - [ ] Book : [Hidden Language of Computers: CODE](ftp://ftp.borg.moe/yarr/Gentoomen%20Library/Programming/Misc/Charles%20Petzold%20-%20Code%20-%20The%20Hidden%20Language%20of%20Computer%20Hardware%20and%20Software.pdf)
@@ -99,16 +63,19 @@ Try to specilize in a field such as these, just chose one or two. However, remem
   - [ ] Book: Computer Systems : A Programmers Perspective by Bryant and O’Hallaron
   - [ ] Book: Computer Architecture: A Quantitative Approach
   
-### Algorithms and Data Structures
- 
-  - [X] Read: The [This tutorial](https://www.studytonight.com/data-structures/time-complexity-of-algorithms)
-  - [X] Book: Grokking Algorithms: An illustrated guide for programmers and other curious people
-  - [ ] Book: [PSAD using Python](https://runestone.academy/runestone/books/published/pythonds/index.html)
-  - [ ] Book: [The Algorithm Design Manual](https://www.amazon.com/Algorithm-Design-Manual-Steven-Skiena/dp/1848000693/?pldnSite=1) There are [vidoes](http://www3.cs.stonybrook.edu/~algorith/video-lectures/) avilable too.
-  - [ ] Project: Impelement Algorithms and Data Structures in any language. [Do all of these here](https://github.com/trekhleb/javascript-algorithms) (You alread y started implementing them in a repo)  
-  - [ ] Book: CSLR introduction to Algorithms
-  - [ ] Project: Do algorithm Visualizations
-  - [ ] Optional: Do more books and projects if you want to focus on this subject.
+ ### Languages and Compilers
+
+   - [x] Read: The [TutorialsOnPoint](https://www.tutorialspoint.com/compiler_design/index.htm) for a overview. Note this to README of the folder
+   - [x] Read: [compiler basics](http://www.cs.man.ac.uk/~pjj/farrell/compmain.html)
+   - [ ] Read: [crafting interpreters](http://craftinginterpreters.com/) -- (you dont have to note this since it is mostly code)
+   - [ ] Book: Cooper and Torczon. Engineering a compiler.
+   - [ ] Book: Appel. Modern Compiler implementation in Java.
+   - [ ] Project: Basic C compiler written in python
+   - [ ] Project: Basic Python interpreter written in python
+   - [ ] Book: Appel. Modern Compiler implementation in C.
+   - [ ] Project: Complex C compiler written in C.
+   - [ ] Project: Complex Python interpreter written in C.
+   - [ ] Optional: Do more books and projects if you want to focus on this subject.
  
 ### Operating Systems
 
@@ -119,19 +86,6 @@ Try to specilize in a field such as these, just chose one or two. However, remem
    - [ ] Guide: Follow [osdev.wiki](https://wiki.osdev.org/Main_Page)
    - [ ] Tutorial: [little OS tutorial](https://littleosbook.github.io/)
    - [ ] Project : Code a small Operating System
-   - [ ] Optional: Do more books and projects if you want to focus on this subject.
-   
-### Computer Networking
-
-   - [x] Course: Do [khan academy: networking](https://www.khanacademy.org/computing/ap-computer-science-principles/the-internet) for a refresher before diving in
-   - [x] Read: The [This tutorial](https://www.studytonight.com/computer-networks/)
-   - [ ] Book: Computer Networks and Internets (Douglas E. Comer)
-   - [ ] Book: Computer Networks (Tanenbaum)
-   - [ ] Book: TCP/IP Illustrated. Vol 1 [here](http://www.r-5.org/files/books/computers/internals/net/Richard_Stevens-TCP-IP_Illustrated-EN.pdf)
-   - [ ] Book: Computer Networking: A Top-Down Approach (kurose - ross) -- do the exersices
-   - [ ] Project : [Wireshark](http://www-net.cs.umass.edu/wireshark-labs/)
-   - [ ] Project : Build differnt types of servers, web, ftp ... etc.
-   - [ ] Project: Try to build your own internet. Understand how to connect to the WWW.
    - [ ] Optional: Do more books and projects if you want to focus on this subject.
    
  ### Databases
@@ -150,35 +104,19 @@ Try to specilize in a field such as these, just chose one or two. However, remem
    - [ ] Project: NoSQL Database
    - [ ] Project: Graph Database
    - [ ] Optional: Do more books and projects if you want to focus on this subject.
-
-### Languages and Compilers
-
-   - [x] Read: The [TutorialsOnPoint](https://www.tutorialspoint.com/compiler_design/index.htm) for a overview. Note this to README of the folder
-   - [x] Read: [compiler basics](http://www.cs.man.ac.uk/~pjj/farrell/compmain.html)
-   - [ ] Book: Cooper and Torczon. Engineering a compiler.
-   - [ ] Book: Appel. Modern Compiler implementation in Java.
-   - [ ] Project: Basic C compiler written in python
-   - [ ] Project: Basic Python interpreter written in python
-   - [ ] Book: Appel. Modern Compiler implementation in C.
-   - [ ] Project: Complex C compiler written in C.
-   - [ ] Project: Complex Python interpreter written in C.
-   - [ ] Optional: Do more books and projects if you want to focus on this subject.
    
-### Computer Graphics
+### Computer Networking
 
-- [ ] Book: Computer Graphics: Principles and Practice
-- [ ] Book: Real-Time Rendering -- Latest Edition (4)
-- [ ] Read: Get practical knowledge in [this tutorial](https://learnopengl.com/)
-- [ ] Project: Render your dream house (make it realistic)
-- [ ] Optional: Do more books and projects if you want to focus on graphics.
-
-### Artifical Intelligence
-
-- [ ] Book: Hands-On Machine Learning with Scikit-Learn and TensorFlow
-- [ ] Book:  AI: A Modern Approach by Stuart Russell and Peter Norvig.
-- [ ] Book: Deep Learning by Ian Goodfellow and Yoshua Bengio.
-- [ ] Project: Do something cool and big with artifical intelligence like a smart bot
-- [ ] Optional: Do more books and projects if you want to focus on AI/ML
+   - [x] Course: Do [khan academy: networking](https://www.khanacademy.org/computing/ap-computer-science-principles/the-internet) for a refresher before diving in
+   - [x] Read: The [This tutorial](https://www.studytonight.com/computer-networks/)
+   - [x] Book: Computer Networks and Internets (Douglas E. Comer)
+   - [ ] Book: Computer Networks (Tanenbaum)
+   - [ ] Book: TCP/IP Illustrated. Vol 1 [here](http://www.r-5.org/files/books/computers/internals/net/Richard_Stevens-TCP-IP_Illustrated-EN.pdf)
+   - [ ] Book: Computer Networking: A Top-Down Approach (kurose - ross) -- do the exersices
+   - [ ] Project : [Wireshark](http://www-net.cs.umass.edu/wireshark-labs/)
+   - [ ] Project : Build differnt types of servers, web, ftp ... etc.
+   - [ ] Project: Try to build your own internet. Understand how to connect to the WWW.
+   - [ ] Optional: Do more books and projects if you want to focus on this subject.
    
 ## Final: Feynman Notes
 
@@ -211,10 +149,6 @@ Try to specilize in a field such as these, just chose one or two. However, remem
 
 - [ ] Git - Version Control
 - [ ] GitHub for public repos, GitLab for private
-
-### Packet #2 
-
-- [ ] Feynman: Git and Githubs Usage
 
 ### Packet #3
 
@@ -447,3 +381,60 @@ Try to specilize in a field such as these, just chose one or two. However, remem
 
 <br>
 <Br>
+  
+  
+### Specialization
+
+Try to specilize in a field such as these, just chose one or two. However, remember that in tech field the experience does not come from the years you have coded rather it comes from to the exposure of different problem solutions (There are hundreds of different roles, but they can probably be divided up into these categories):
+  
+- __Infrastructure:__
+  - Sysadmin (managing, setting up, and keeping systems running)
+  - Dev-ops (creating & using tools that devs use to manage systems)
+  - Network Engineer (setting up, designing, and optimizing network infrastructures, TCP/IP, and other layers of the network stack)
+  - Data Center Ops (they keep "the cloud" running)
+  - Cable & Router Technicians (/r/cableporn)
+  - Database Administrators (generally wizards)
+  - Technical Support & Documentation (the incredibly tough bastards that actually deal with ghasp users)
+- __Backend:__  
+  - Full stack engineers (a little bit of everything)
+  - Backend Application Development (rails, django, node, etc.)
+  - Project Management (not always a technical technical role)
+  - Engineering Management (usually former developers get promoted to this job)
+  - Software Architects (planning out features before they are coded)
+  - API Design (designing the interfaces between systems)
+  - Security & Pentesting
+  - Distributed System Architects (dealing with consistency, availability, partition tolerance, timing, of large, globally-separated systems)
+  - Database Administrators (managing, maintaining, sharding, and migrating data stores, different from infrastructure-focused DBAs in that they are also writing backend code which interacts with the stores)
+- __Frontend:__
+  - Full Stack (a little bit of everything, but focused primarily on the pieces that support a frontend)
+  - UX/UI Front end designers (photoshop, indesign, sketch, html & css, etc. only)
+  - General front end web development (html, css, and js)
+  - Single-page app development (mostly with JS frameworks, e.g. angular or react)
+  - Quality Assurance & Testing (writing tests, doing human tests, making sure things work)
+- __Native:__
+  - iOS, Android, Windows Mobile, etc.
+  - Consumer-facing Windows Desktop, OS X Desktop, Linux app development
+  - Enterprise software development (large, made-to-order applications for businesses)
+  - IT administration & admin software design (often very system-specific, hence the Native category)
+  - Software Architecture (similar to backend architecture, designing features before they are coded)
+- __Science and Theory:__
+  - Scientific Research (loads of Matlab, R, and ipython and more)
+  - "Pure Compsci/Pure Math" Research (with haskell, lisp, lots more)
+  - Scientific Software Development (e.g. protein folding software)
+  - Data science (matlab, r, ipython, scikit-learn, etc.)
+  - Machine Learning (e.g. for pagerank, reverse image search, beer recommendation, used all over the place now)
+  - Compiler & Language Design (not many jobs but very useful to learn, maybe mozilla foundation & rust?, and Guido certainly gets paid by Dropbox :)
+  - OS Design (not just microsoft, windows, & linux, also qualcomm and lots of other telecoms hire tens of thousands of engineers to write embedded and mobile OSs)
+  - Compression (you can work for Hooli)
+- __Marketing:__
+  - Growth hacking/web scraping (selenium, beatifulsoup, phantomjs, scikit-learn, pattern, etc.)
+  - Analytics (GA, mixpanel, optimizely etc. closely tied with marketing and SEO)
+  - SEO & SEM (techniques to fuck with/obey search engines and convert $$ to visitors)
+  - General Marketing Development (salesforce, analytics, content-design, and SEO)
+- __Hardware and Graphics:__
+  - Embedded Software (code that runs very close to the metal, e.g. the assembly code running your elevator)
+  - Chip Design & Architecture (wizards)
+  - Game development (very, very different from other kinds of programmers, questionably human)
+  - Graphics software development (similar to gaming dev, in my experience, graphics people don't frequently switch to app dev or vice versa
+  - 3D printing and machining coding
+  - CGI & Animation (e.g. disney. pixar devs gave a talk about the wonders of cgi development at Pycon2015)
