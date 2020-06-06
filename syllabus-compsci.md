@@ -7,8 +7,6 @@ Resources:
 - For tutorials: [this one](https://github.com/danistefanovic/build-your-own-x#build-your-own-web-server)
 
 <br>
-<br>
-<br>
 
 # Theory
 
@@ -265,18 +263,12 @@ Resources:
 
 ### Packet #2 
 
-- [ ] Project: Finish Compilers at the top.
 - [ ] Feynman: Specific Programming Language (e.g. Python)
 - [ ] Feynman: Standarts & Best Practices
 - [ ] Feynman: Backend Testing
 - [ ] Feynman: Package Managaer
-- [ ] Feynman: HTML
-- [ ] Feynman: CSS
-- [ ] Feynman: JavaScript (not node, just vanilla)
-- [ ] Project: Finish Databases at the top.
 - [ ] Feynman: Relational Databases
 - [ ] Feynman: NoSQL
-- [ ] Project: Networking at the top.
 - [ ] Feynman: Web Framework
 - [ ] Feynman: Caching
 - [ ] Feynman: API's
@@ -292,7 +284,7 @@ Resources:
 
 - [ ] Level 4: While feynmaning, build a small version of every tech learned above. 
   > Remember first version of unix was under 4000 LoC. And this guy created [aws server](https://github.com/jubos/fake-s3) system in just 2k LoC. Build everythings logic in a small way. Check your stars `ustack` for inspiration.
-- [ ] Level 4: Create a very detailed Instagram clone with flask or django (use bots to generate data)
+- [ ] Level 4: Create a very detailed Instagram clone it is a good problem to solve.
 - [ ] Level 5: Youtube clone too (it is good problem to solve how to impelemtn billions data of videos & graphics .
 - [ ] Level 6: Clone a basic search engine like google or duckduckgo, it is a good problem to solve.
 - [ ] Level 7: Clone a mini core duolingo before building your own lingo app
@@ -342,14 +334,11 @@ Resources:
 
 > I need to change the order from the easiest to hardest since understanding and building all of docker is easier than building a operating systems kernel shell .. etc.
 
-- [ ] Project: Finish the Compilers at the top.
 - [ ] Feynman: System Progrmaming Languages (python, c/c++, go)
-- [ ] Project: Finish the Operating Systems at the top.
 - [ ] Feynman: Unix/Linux Envioronment
 - [ ] Feynman: Terminal Shell
 - [ ] Feynman: Bash Scripting
 - [ ] Feynman: CLI Tools - (text maniupation, process mointoring, network, sys performance)
-- [ ] Project: Finish the Networking at the top.
 - [ ] Feynman: Web Servers
 - [ ] Feynman: CGIs
 - [ ] Feynman: Caching Servers
