@@ -235,6 +235,14 @@ loop that models the dfa’s behavior, a roll back loop in case the dfa overshoo
 results. The scanning loop repeats the two basic actions of a scanner: read
 a character and simulate the dfa’s action.
 
+  The skeleton scanner uses the variable state to hold the current state of
+the simulated dfa. It updates state using a two-step, table-lookup process.
+First, it classifies char into one of a small set of categories using the CharCat table. The scanner for r[0. . . 9]+ has three categories: Register, Digit, or
+Other. Next, it uses the current state and the character category as indices
+into the transition table
+
+  __Avoiding Excess Roll Back__ -- 
+
 - `Direct-Coded Scanners` --
 
 - `Hand-Coded Scanners` --
