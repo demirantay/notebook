@@ -66,8 +66,8 @@ Resources:
    - [x] Read: The [TutorialsOnPoint](https://www.tutorialspoint.com/compiler_design/index.htm) for a overview. Note this to README of the folder
    - [x] Read: [compiler basics](http://www.cs.man.ac.uk/~pjj/farrell/compmain.html)
    - [ ] Read: [crafting interpreters](http://craftinginterpreters.com/) -- (you dont have to note this since it is mostly code)
-   - [ ] Book: Cooper and Torczon. Engineering a compiler.
-   - [ ] Book: Appel. Modern Compiler implementation in Java.
+   - [ ] Book: Cooper and Torczon. Engineering a compiler. (page [88](http://www.r-5.org/files/books/computers/compilers/writing/Keith_Cooper_Linda_Torczon-Engineering_a_Compiler-EN.pdf))
+   - [ ] Book: Appel. Modern Compiler implementation in Java. (page [19](file:///Users/demir/Desktop/Modern%20Compiler%20Implementation%20in%20Java,%202Ed%20by%20Andrew%20W.%20Appel%20(z-lib.org).pdf))
    - [ ] Project: Basic C compiler written in python
    - [ ] Project: Basic Python interpreter written in python
    - [ ] Book: Appel. Modern Compiler implementation in C.
