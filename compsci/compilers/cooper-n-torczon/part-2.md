@@ -230,6 +230,11 @@ of roll back
 of generated tables that encode language-specific knowledge. the compiler writer provides a set of lexical patterns, specified as regular expressions. The scanner generator then produces tables that drive
 the skeleton scanner
 
+  The skeleton scanner divides into four sections: initializations, a scanning
+loop that models the dfa’s behavior, a roll back loop in case the dfa overshoots the end of the token, and a final section that interprets and reports the
+results. The scanning loop repeats the two basic actions of a scanner: read
+a character and simulate the dfa’s action.
+
 - `Direct-Coded Scanners` --
 
 - `Hand-Coded Scanners` --
