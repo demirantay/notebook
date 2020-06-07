@@ -338,47 +338,5 @@ index information to select the correct table entry
 <br>
 <br>
 
-# Chapter 32: Trends in Networking Technologies and Uses
 
-- __`Introduction`__ -- This chapter summarizes some of the trends in networking technologies, applications, and services. The chapter considers recent developments as well as longer-term
-research.
-
-- __`The Need For Scalable Internet Services`__ --
-
-- __`Content Caching (Akamai)`__ --
-
-- __`Web Load Balancers`__ --
-
-- __`Server Virtualization`__ --
-
-- __`Peer-To-Peer Communication`__ --
-
-- __`Distributed Data Centers And Replication`__ --
-
-- __`Universal Representation (XML)`__ --
-
-- __`Social Networking`__ --
-
-- __`Mobility And Wireless Networking`__ --
-
-- __`Digital Video`__ --
-
-- __`Multicast Delivery`__ --
-
-- __`Higher-Speed Access And Switching`__ --
-
-- __`Optical Switching`__ --
-
-- __`Use Of Networking In Business`__ --
-
-- __`Sensors At Large And In The Home`__ --
-
-- __`Ad Hoc Networks`__ --
-
-- __`Multi-Core CPUs And Network Processors`__ --
-
-- __`IPv6`__ --
-
-<br>
-<br>
 
