@@ -230,27 +230,105 @@ wireless LAN standard† used to keep transmissions confidential
 
 # Chapter 31: Network Management (SNMP)
 
-- __`Introduction`__ --
+- __`Introduction`__ --  This chapter expands our study of network applications by considering network
+management. The chapter introduces a conceptual model used in industry, and uses the
+model to explain the scope of management activities
 
-- __`Managing An Intranet`__ --
+- __`Managing An Intranet`__ -- A network manager, sometimes called a network administrator, is a person responsible for planning, installing, operating, monitoring, and controlling the hardware and
+software systems that constitute a computer network or intranet
 
-- __`FCAPS: The Industry Standard Model`__ --
+  Although network hardware and protocol software contain mechanisms to automatically route around failures or retransmit lost packets, network managers need to detect and correct underlying problems.
 
-- __`Example Network Elements`__ --
+- __`FCAPS: The Industry Standard Model`__ -- abbrevations:
+  - F -- Fault detection and correction
+  - C -- Configuration and operation
+  - A -- Accounting and billing
+  - P -- Performance assessment and optimization
+  - S -- Security assurance and protection
+  
+  Fault Detection And Correction. Fault detection accounts for a major part of the
+operational aspect of network management. A manager monitors network equipment to
+detect problems, and takes appropriate steps to correct the problem.
 
-- __`Network Management Tools`__ --
+  Configuration And Operation , configuration is complex for three reasons. First,
+a network contains many devices and services, and the configurations must be consistent across all devices. Second, as new equipment and services are added or policies
+change, a network manager must consider all configurations to insure the entire network
+implements the changes correctly
 
-- __` Network Management Applications`__ --
+  Accounting And Billing. In many corporate intranets, accounting and billing is
+trivial. The corporation charges the cost of running a network to a central account,
+much like the cost of electrical power or telephone service. In ISP networks, however,
+accounting and billing can consume more of a manager’s time than any other aspect of
+management.
 
-- __`Simple Network Management Protocol`__ --
+  Performance Assessment And Optimization. A manager performs two types of performance assessment: diagnostic assessment to detect problems and inefficiencies and
+trend assessment that allows a manager to anticipate the need for increased capacity.
 
-- __`SNMP’s Fetch-Store Paradigm`__ --
+  Security Assurance And Protection. Because it crosses layers of the protocol stack
+and spans multiple devices, security is among the most difficult aspects of network management. In particular, security follows the weakest-link analogy: the entire security of a site can be compromised if the configuration is incorrect on one device
 
-- __`The SNMP MIB And Object Names`__ --
+- __`Example Network Elements`__ -- Network management systems use the generic term network element to refer to any
+network device, system, or mechanism that can be managed. Although many network
+elements consist of a physical device, the definition encompasses services such as DNS. for example:
+  - Layer 2 Switch
+  - DHCP Server
+  - Head-End DSL Modem
+  - Firewall
+  - Web Server
+  - IP router
+  - ... etc.
+  
+  Because it only permits a manager to configure, monitor, or control
+one network element at a time, an element management system is labor intensive and prone to errors.
 
-- __`The Variety Of MIB Variables`__ --
+- __`Network Management Tools`__ -- Network management tools can be classified into twelve categories that characterize their general purpose:
+  - Physical Layer Testing
+  - Reachability And Connectivity
+  - Packet Analysis
+  - Network Discovery
+  - Device Interrogation
+  - Event Monitoring
+  - Performance Monitoring
+  - Flow Analysis
+  - Routing And Traffic Engineering
+  - Configuration
+  - Security Enforcement
+  - Network Planning
 
-- __` MIB Variables That Correspond To Arrays`__ --
+- __`Network Management Applications`__ -- When a manager needs to interact with a specific
+hardware device, the manager runs an application program that acts as a client, and an
+application program on the network device acts as a server. The client and server use
+conventional transport protocols such as UDP or TCP to interact. Furthermore, instead
+of building a separate network, most managers send management traffic over the production network.
+
+  To avoid confusion between application programs that users invoke and applications that are reserved for network managers, network management systems avoid the
+terms client and server. Instead, the client application that runs on the manager’s computer is called a manager, and a server that runs on a network device is called an
+agent†.
+
+- __`Simple Network Management Protocol`__ -- The standard protocol used for network management is known as the Simple Network Management Protocol (SNMP); the current standard is version 3, written SNMPv3.
+The SNMP protocol defines exactly how a manager communicates with an agent.
+
+- __`SNMP’s Fetch-Store Paradigm`__ -- SNMP uses the fetch-store paradigm for interaction between a
+manager and an agent. A manager fetches values to determine the
+device status; operations that control the device are defined as the
+side-effects of storing into objects.
+
+- __`The SNMP MIB And Object Names`__ -- Each object to which SNMP has access must be defined and given a unique name.
+Furthermore, both the manager and agent programs must agree on the names and the
+meanings of fetch and store operations. Collectively, the set of all objects SNMP can
+access is known as a Management Information Base (MIB).
+
+- __`The Variety Of MIB Variables`__ -- Because SNMP does not specify a set of MIB variables, the design is flexible.
+New MIB variables can be defined and standardized as needed, without changing the
+basic protocol
+
+- __` MIB Variables That Correspond To Arrays`__ -- In addition to simple variables such as integers that correspond to counters, a MIB
+can include variables that correspond to tables or arrays Although ASN.1 does not provide a mechanism for indexing, MIB
+variables can correspond to tables or arrays. To emulate a table or
+an array with an ASN.1 variable, the index for an entry is encoded by
+appending it to the variable name; when agent software encounters a
+name that corresponds to a table, the software extracts and uses the
+index information to select the correct table entry
 
 <br>
 <br>
@@ -262,10 +340,45 @@ wireless LAN standard† used to keep transmissions confidential
 
 # Chapter 32: Trends in Networking Technologies and Uses
 
+- __`Introduction`__ -- This chapter summarizes some of the trends in networking technologies, applications, and services. The chapter considers recent developments as well as longer-term
+research.
+
+- __`The Need For Scalable Internet Services`__ --
+
+- __`Content Caching (Akamai)`__ --
+
+- __`Web Load Balancers`__ --
+
+- __`Server Virtualization`__ --
+
+- __`Peer-To-Peer Communication`__ --
+
+- __`Distributed Data Centers And Replication`__ --
+
+- __`Universal Representation (XML)`__ --
+
+- __`Social Networking`__ --
+
+- __`Mobility And Wireless Networking`__ --
+
+- __`Digital Video`__ --
+
+- __`Multicast Delivery`__ --
+
+- __`Higher-Speed Access And Switching`__ --
+
+- __`Optical Switching`__ --
+
+- __`Use Of Networking In Business`__ --
+
+- __`Sensors At Large And In The Home`__ --
+
+- __`Ad Hoc Networks`__ --
+
+- __`Multi-Core CPUs And Network Processors`__ --
+
+- __`IPv6`__ --
+
 <br>
 <br>
 
----
-
-<br>
-<br>
