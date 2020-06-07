@@ -267,6 +267,7 @@ Resources:
 - [ ] Feynman: Standarts & Best Practices
 - [ ] Feynman: Backend Testing
 - [ ] Feynman: Package Managaer
+- [ ] Optional: Finish Database Theory above
 - [ ] Feynman: Relational Databases
 - [ ] Feynman: NoSQL
 - [ ] Feynman: Web Framework
@@ -335,10 +336,12 @@ Resources:
 > I need to change the order from the easiest to hardest since understanding and building all of docker is easier than building a operating systems kernel shell .. etc.
 
 - [ ] Feynman: System Progrmaming Languages (python, c/c++, go)
+- [ ] Project: Finish Operating Systems above
 - [ ] Feynman: Unix/Linux Envioronment
 - [ ] Feynman: Terminal Shell
 - [ ] Feynman: Bash Scripting
 - [ ] Feynman: CLI Tools - (text maniupation, process mointoring, network, sys performance)
+- [ ] Project: Finish Networking theory above
 - [ ] Feynman: Web Servers
 - [ ] Feynman: CGIs
 - [ ] Feynman: Caching Servers
