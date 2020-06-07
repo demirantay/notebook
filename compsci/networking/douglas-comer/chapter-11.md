@@ -182,13 +182,43 @@ packets instead of files. That is, instead of merely examining the headers in pa
 that pass into the site, a DPI mechanism also examines the data in the packet payload. Because they examine packet payloads which are much larger than
 packet headers and not organized into fixed fields, Deep Packet Inspection mechanisms are limited to lower-speed networks
 
-- __`Virtual Private Networks (VPNs)`__ --
+- __`Virtual Private Networks (VPNs)`__ -- One of the most important and widely-used security technologies uses encryption
+to provide secure access to an organization’s intranet from remote sites. Known as a
+Virtual Private Network (VPN), the technology was originally designed to provide a
+low-cost interconnection among multiple geographic sites of an organization.
 
-- __`The Use of VPN Technology For Telecommuting`__ --
+- __`The Use of VPN Technology For Telecommuting`__ -- Although originally designed to interconnect sites, VPN technology has become
+extremely popular among employees who telecommute (i.e., work from a remote location). There are two forms of VPN: `standalone device`, `VPN software`
 
-- __`Packet Encryption Vs. Tunneling`__ --
+- __`Packet Encryption Vs. Tunneling`__ -- The above discussion of VPNs raises an interesting question: how should data be
+encrypted for transmission across the Internet? There are three main options:
+  - Payload Encryption
+  - IP-in-IP Tunneling
+  - IP-in-TCP Tunneling 
 
-- __`Security Technologies`__ --
+- __`Security Technologies`__ -- A variety of security technologies have been invented for use in the Internet.
+Highlights include:
+  - PGP (Pretty Good Privacy). A cryptographic system that applications can use to encrypt data before transmission. PGP was
+developed at MIT, and is especially popular among computer
+scientists.
+  - SSH (Secure Shell). An application-layer protocol for remote login
+that guarantees confidentiality by encrypting data before transmission across the Internet.
+  - SSL (Secure Socket Layer). A technology originally designed by
+Netscape Communications that uses encryption to provide authenti- cation and confidentiality. SSL software fits between an application and the socket API, and encrypts data before transmitting over
+the Internet
+  - TLS (Transport Layer Security). Designed by the IETF in the late
+1990s as a successor to SSL, TLS builds on version 3 of SSL.
+Both SSL and TLS are available for use with HTTPS
+  - HTTPS (HTTP Security). Not really a separate technology, HTTPS
+combines HTTP with either SSL or TLS and a certificate mechanism to provide users with authenticated, confidential communication over the Web. HTTPS uses TCP port 443 instead of port 80.
+  - IPsec (IP security). A security standard used with IP datagrams.
+IPsec uses cryptographic techniques, and allows the sender to
+choose authentication
+  - RADIUS (Remote Authentication Dial-In User Service). A protocol
+used to provide centralized authentication, authorization, and accounting. RADIUS is popular with ISPs that have dialup users and
+with VPN systems
+  - WEP (Wired Equivalent Privacy). Originally part of the Wi-Fi
+wireless LAN standard† used to keep transmissions confidential
 
 <br>
 <br>
@@ -199,6 +229,28 @@ packet headers and not organized into fixed fields, Deep Packet Inspection mecha
 <br>
 
 # Chapter 31: Network Management (SNMP)
+
+- __`Introduction`__ --
+
+- __`Managing An Intranet`__ --
+
+- __`FCAPS: The Industry Standard Model`__ --
+
+- __`Example Network Elements`__ --
+
+- __`Network Management Tools`__ --
+
+- __` Network Management Applications`__ --
+
+- __`Simple Network Management Protocol`__ --
+
+- __`SNMP’s Fetch-Store Paradigm`__ --
+
+- __`The SNMP MIB And Object Names`__ --
+
+- __`The Variety Of MIB Variables`__ --
+
+- __` MIB Variables That Correspond To Arrays`__ --
 
 <br>
 <br>
