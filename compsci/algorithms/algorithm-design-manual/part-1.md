@@ -55,11 +55,37 @@ regardless of whether a better algorithm exists. The issue of finding the best p
 answer or achieving maximum efficiency usually arises in industry only after serious
 performance or legal troubles. So a good enough algorithm is enough if it gets the job done.
 
-### Robot Tour Optimization
-
 ### Selecting the Right Jobs
 
+- Reasonable-looking algorithms can easily be incorrect. Algorithm correctness is a property that must be carefully demonstrated. For example you may be thinking that you are using the right algorithm for the job however the `n` input of the alforithm may quickly turn into a 20! permutation problem which is compulationaly impossible to solve. The take home lesson is be careful while playing with heuristic, travelling salesman typed algorithms. 
+
 ### Reasoning about Correctness
+
+- We need tools to distinguish correct algorithms from incorrect
+ones, the primary one of which is called a proof.
+
+  A proper mathematical proof consists of several parts. First, there is a clear,
+precise statement of what you are trying to prove. Second, there is a set of assumptions of things which are taken to be true and hence used as part of the proof.
+Third, there is a chain of reasoning which takes you from these assumptions to the
+statement you are trying to prove. Finally, there is a little square ( ) or QED at the
+bottom to denote that you have finished, representing the Latin phrase for “thus
+it is demonstrated.”
+
+- `Expressing Algorithms` -- Reasoning about an algorithm is impossible without a careful description of the
+sequence of steps to be performed. The three most common forms of algorithmic
+notation are (1) English, (2) pseudocode, or (3) a real programming language. Programmers generally go for psudeo-code which is the most useful between all three.
+
+  The heart of any algorithm is an idea. If your idea is
+not clearly revealed when you express an algorithm, then you are using too
+low-level a notation to describe it. Try to avoid hard to read languages like C, C++ ... etc.
+
+- `Problems and Properties` --
+
+- `Demonstrating Incorrectness` --
+
+- ` Induction and Recursion` --
+
+- `Summations` --
 
 ### Modeling the Problem
 
