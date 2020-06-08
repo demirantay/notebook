@@ -30,22 +30,6 @@ Resources:
   - [ ] Book: CSLR introduction to Algorithms
   - [ ] Project: Do algorithm Visualizations
   - [ ] Optional: Do more books and projects if you want to focus on this subject.
-  
-### Computer Graphics
-
-- [ ] Book: Computer Graphics: Principles and Practice
-- [ ] Book: Real-Time Rendering -- Latest Edition (4)
-- [ ] Read: Get practical knowledge in [this tutorial](https://learnopengl.com/)
-- [ ] Project: Render your dream house (make it realistic)
-- [ ] Optional: Do more books and projects if you want to focus on graphics.
-
-### Artifical Intelligence
-
-- [ ] Book: Hands-On Machine Learning with Scikit-Learn and TensorFlow
-- [ ] Book:  AI: A Modern Approach by Stuart Russell and Peter Norvig.
-- [ ] Book: Deep Learning by Ian Goodfellow and Yoshua Bengio.
-- [ ] Project: Do something cool and big with artifical intelligence like a smart bot
-- [ ] Optional: Do more books and projects if you want to focus on AI/ML
  
 ### Computer Architecture
 
@@ -116,6 +100,22 @@ Resources:
    - [ ] Project : Build differnt types of servers, web, ftp ... etc.
    - [ ] Project: Try to build your own internet. Understand how to connect to the WWW.
    - [ ] Optional: Do more books and projects if you want to focus on this subject.
+   
+### Computer Graphics
+
+- [ ] Book: Computer Graphics: Principles and Practice
+- [ ] Book: Real-Time Rendering -- Latest Edition (4)
+- [ ] Read: Get practical knowledge in [this tutorial](https://learnopengl.com/)
+- [ ] Project: Render your dream house (make it realistic)
+- [ ] Optional: Do more books and projects if you want to focus on graphics.
+
+### Artifical Intelligence
+
+- [ ] Book: Hands-On Machine Learning with Scikit-Learn and TensorFlow
+- [ ] Book:  AI: A Modern Approach by Stuart Russell and Peter Norvig.
+- [ ] Book: Deep Learning by Ian Goodfellow and Yoshua Bengio.
+- [ ] Project: Do something cool and big with artifical intelligence like a smart bot
+- [ ] Optional: Do more books and projects if you want to focus on AI/ML
    
 ## Final: Feynman Notes
 
