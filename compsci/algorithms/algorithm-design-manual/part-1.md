@@ -43,6 +43,18 @@ Table of Contents:
 
 # 1 Introduction to Algorithm Design
 
+- What is an algorithm? An algorithm is a procedure to accomplish a specific task.
+An algorithm is the idea behind any reasonable computer program.
+To be interesting, an algorithm must solve a general, well-specified problem
+
+- There are three desirable properties for a good algorithm. We seek algorithms
+that are correct and efficient, while being easy to implement. These goals may not
+be simultaneously achievable. In industrial settings, any program that seems to
+give good enough answers without slowing the application down is often acceptable,
+regardless of whether a better algorithm exists. The issue of finding the best possible
+answer or achieving maximum efficiency usually arises in industry only after serious
+performance or legal troubles. So a good enough algorithm is enough if it gets the job done.
+
 ### Robot Tour Optimization
 
 ### Selecting the Right Jobs
