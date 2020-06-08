@@ -84,6 +84,7 @@ Resources:
    - [ ] Guide: Follow [osdev.wiki](https://wiki.osdev.org/Main_Page)
    - [ ] Tutorial: [little OS tutorial](https://littleosbook.github.io/)
    - [ ] Project : Code a small Operating System
+   - [ ] Book: Add Linux books ...
    - [ ] Optional: Do more books and projects if you want to focus on this subject.
    
  ### Databases
