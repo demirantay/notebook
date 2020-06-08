@@ -1,4 +1,27 @@
-# Introduction to Algorithm Design
+# The Algorithm Design Manual - Skienna 2nd
+
+Table of Contents:
+- []()
+- []()
+- []()
+- []()
+- []()
+- []()
+- []()
+- []()
+- []()
+- []()
+- []()
+- []()
+- []()
+- []()
+- []()
+- []()
+- []()
+- []()
+- []()
+- []()
+- []()
 
 <br>
 <br>
