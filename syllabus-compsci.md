@@ -14,7 +14,7 @@ Resources:
 
 ### Programming
 
- - [ ] Book: Computer Science j. glenn brookshear
+ - [X] Book: Computer Science j. glenn brookshear (I got bored, the book is actually good, so I shelved it.)
  - [X] Read: The [TutorialsOnPoint](https://www.tutorialspoint.com/computer_programming/computer_programming_environment.htm) for a overview. Note this to README of the folder
  - [X] Course : [Helsinki MOOC's](http://mooc.fi/courses/2013/programming-part-1/material.html) for the desired language.
  - [X] Book : SICP (Structured Interpretion of Computer Programs)-*(shelved it for later it is hard)*
