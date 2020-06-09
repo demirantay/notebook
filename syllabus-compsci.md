@@ -2,6 +2,11 @@
 
 Monthly reference for theory at the moment:
  - (jun/jul/aug) --> Algorithms and Data Structures
+ - (sep/oct/nov) --> Languages and Compilers
+ - (dec/jan/feb) --> Computer Architecture
+ - (mar/apr/may) --> Graphics
+ - (jun/jul/aug) --> Artifical Intelligence
+ - OS, Networking, DB will be learnt all time since they are important for my work.
 
 >  Think of this as Duolingo tree, you can reset them all and re-do them with more advanced notes. You are never done.
 
