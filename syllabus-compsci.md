@@ -268,9 +268,10 @@ Resources:
 - [ ] Feynman: Standarts & Best Practices
 - [ ] Feynman: Backend Testing
 - [ ] Feynman: Package Managaer
-- [ ] Optional: Finish Database Theory above
+- [ ] Project: Finish Database Theory above
 - [ ] Feynman: Relational Databases
 - [ ] Feynman: NoSQL
+- [ ] Project: Finish Networking at the top.
 - [ ] Feynman: Web Framework
 - [ ] Feynman: Caching
 - [ ] Feynman: API's
