@@ -1,5 +1,8 @@
 # Compsci Syllabus 
 
+Monthly reference for theory at the moment:
+ - (jun/jul/aug) --> Algorithms and Data Structures
+
 >  Think of this as Duolingo tree, you can reset them all and re-do them with more advanced notes. You are never done.
 
 Resources:
@@ -26,8 +29,9 @@ Resources:
   - [X] Book: Grokking Algorithms: An illustrated guide for programmers and other curious people
   - [x] Book: [PSAD using Python](https://runestone.academy/runestone/books/published/pythonds/index.html)
   - [ ] Book: [The Algorithm Design Manual](https://www.amazon.com/Algorithm-Design-Manual-Steven-Skiena/dp/1848000693/?pldnSite=1) There are [vidoes](http://www3.cs.stonybrook.edu/~algorith/video-lectures/) avilable too.
-  - [ ] Project: Impelement Algorithms and Data Structures in any language. [Do all of these here](https://github.com/trekhleb/javascript-algorithms) (You alread y started implementing them in a repo)  
-  - [ ] Book: CSLR introduction to Algorithms
+  - [ ] Project: Impelement Algorithms and Data Structures in any language. [Do all of these here](https://github.com/trekhleb/javascript-algorithms) 
+  - [ ] Book: Introduction to Algorithms [here](http://cs.furman.edu/~chealy/cs361/kleinbergbook.pdf) there may be a newer version
+  - [ ] Book: [Algorithm Design](http://www.cs.sjtu.edu.cn/~jiangli/teaching/CS222/files/materials/Algorithm%20Design.pdf) by KnT there may be a new version
   - [ ] Project: Do algorithm Visualizations
   - [ ] Optional: Do more books and projects if you want to focus on this subject.
  
