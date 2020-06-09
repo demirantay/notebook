@@ -144,11 +144,84 @@ just have to see how you can break them down
   
 # 2 Algorithm Analysis
 
+- Algorithms are the most important and durable part of computer science because
+they can be studied in a language- and machine-independent way. This means that
+we need techniques that enable us to compare the efficiency of algorithms without
+implementing them. Our two most important tools are (1) the RAM model of
+computation and (2) the asymptotic analysis of worst-case complexity
+
+  Assessing algorithmic performance makes use of the “big Oh” notation that,
+proves essential to compare algorithms and design more efficient ones. The most math intensive part of algorithms are the big Oh notation but to be fair once you understand it it becomes really easy and the basics of it is that watch out for the `n` in the parameters and not too much on the constant parameters.
+
 ### The RAM Model of Computation
+
+- Machine-independent algorithm design depends upon a hypothetical computer
+called the Random Access Machine or RAM.  Under this model of computation,
+we are confronted with a computer where:
+  - Each simple operation (+, *, –, =, if, call) takes exactly one time st
+  - Loops and subroutines are not considered simple operations. Instead, they
+are the composition of many single-step operations.
+  - Each memory access takes exactly one time step
+  
+  Under the RAM model, we measure run time by counting up the number of
+steps an algorithm takes on a given problem instance. If we assume that our RAM
+executes a given number of steps per second, this operation count converts naturally
+to the actual running time. Even though computers vary greatly in terms of real horse power of processing. It does not fucking matter. We only care about algorithms in a vacumed imaginary computer. We just compare the algorithms on a same abstract computer model called RAM.
+
+  Take-Home Lesson: Algorithms can be understood and studied in a languageand machine-independent manner.
+  
+- `Best, Worst, and Average-Case Complexity` -- To understand the notions of the best, worst, and average-case complexity,
+think about running an algorithm over all possible instances of data that can be fed to it. The best case will need the least amount of steps for the algorithm to run and the worst case will need the most amount of steps. Average is just average in the middle. The most important one is worst because getting a best case senarios is very unlikely and preparing for the worst is always more rewarding in any case in life not just in programming.
 
 ### The Big Oh Notation
 
+- The best, worst, and average-case time complexities for any given algorithm are
+numerical functions over the size of possible problem instances
+
+  Take-Home Lesson: The Big Oh notation and worst-case analysis are tools
+that greatly simplify our ability to compare the efficiency of algorithms.
+
 ### Growth Rates and Dominance Relations
+
+- With the Big Oh notation, we cavalierly discard the multiplicative constants. Thus,
+the functions f(n)=0.001n2 and g(n) = 1000n2 are treated identically, even
+though g(n) is a million times larger than f(n) for all values of n. If the input gets large enough constants doesnt mean shit.
+
+- The following conclusions can be drawn from different big Oh notations:
+  - All such algorithms take roughly the same time for n = 10.
+  - Any algorithm with n! running time becomes useless for n ≥ 20
+  - Algorithms whose running time is 2n have a greater operating range, but
+become impractical for n > 40.
+  - Quadratic-time algorithms whose running time is n2 remain usable up to
+about n = 10, 000, but quickly deteriorate with larger inputs. They are likely
+to be hopeless for n > 1,000,000.
+  - Linear-time and n lg n algorithms remain practical on inputs of one billion
+items.
+  - An O(lg n) algorithm hardly breaks a sweat for any imaginable value of n.
+  
+  The bottom line is that even ignoring constant factors, we get an excellent idea
+of whether a given algorithm is appropriate for a problem of a given size. An algorithm whose running time is f(n) = n3 seconds will beat one whose running time is
+g(n) = 1,000,000 · n2 seconds only when n < 1,000,000. Such enormous differences
+in constant factors between algorithms occur far less frequently in practice than
+large problems do
+
+- `Dominance Relations` --  We say that a faster-growing function dominates a slower-growing one, just as
+a faster-growing country eventually comes to dominate the laggard. The good news is that only a few function classes tend to occur in the course
+of basic algorithm analysis. These suffice to cover almost all the algorithms we will
+discuss in this text, and are listed in order of increasing dominance:
+  - Constant functions, f(n) = 1
+  - Logarithmic functions, f(n) = log n
+  - Linear functions, f(n) = n
+  - Superlinear functions, f(n) = n lg n
+  - Quadratic functions, f(n) = n2
+  - Cubic functions, f(n) = n3
+  - Exponential functions, f(n) = cn
+  - Factorial functions, f(n) = n!
+  
+  Dominance doesnt mean a good thing in this case it mostly means the bad apple will make the good apple not show up.
+  ```
+  n! ≫ 2n ≫ n3 ≫ n2 ≫ n log n ≫ n ≫ log n ≫ 1
+  ```
 
 ### Working with the Big Oh
 
@@ -172,470 +245,6 @@ just have to see how you can break them down
 <bR>
 <Br>
   
-# 3 Data Structures
-
-### Contiguous vs. Linked Data Structures
-
-### Stacks and Queues
-
-### Dictionaries
-
-### Binary Search Trees
-
-### Priority Queues .
-
-### War Story: Stripping Triangulations
-
-### Hashing and Strings
-
-### Specialized Data Structures
-
-### War Story: String ’em Up
-
-### Exercises
-
-<br>
-<br>
-
----
-
-<bR>
-<Br>
-  
-# 4 Sorting and Searching
-
-### Applications of Sorting
-
-### Pragmatics of Sorting
-
-### Heapsort: Fast Sorting via Data Structures 
-
-### War Story: Give me a Ticket on an Airplane
-
-### Mergesort: Sorting by Divide-and-Conquer
-
-### Quicksort: Sorting by Randomization
-
-### Distribution Sort: Sorting via Bucketing
-
-### War Story: Skiena for the Defense
-
-### Binary Search and Related Algorithms 
-
-### Divide-and-Conquer
-
-### Exercises
-
-<br>
-<br>
-
----
-
-<bR>
-<Br>
-  
-# 5 Graph Traversal
-
-### Flavors of Graphs
-
-### Data Structures for Graphs
-
-### War Story: I was a Victim of Moore’s Law 
-
-### War Story: Getting the Graph
-
-### Traversing a Graph
-
-### Breadth-First Search
-
-### Applications of Breadth-First Search
-
-### Depth-First Search
-
-### Applications of Depth-First Search
-
-### Depth-First Search on Directed Graphs
-
-### Exercises
-
-<br>
-<br>
-
----
-
-<bR>
-<Br>
-  
-# 6 Weighted Graph Algorithms
-
-### Minimum Spanning Trees
-
-### War Story: Nothing but Nets
-
-### Shortest Paths 
-
-### War Story: Dialing for Documents
-
-### Network Flows and Bipartite Matching
-
-### Design Graphs, Not Algorithms
-
-### Exercises
-
-<br>
-<br>
-
----
-
-<bR>
-<Br>
-  
-# 7 Combinatorial Search and Heuristic Methods
-
-### Backtracking
-
-### Search Pruning
-
-### Sudoku
-
-### War Story: Covering Chessboards
-
-### Heuristic Search Methods
-
-### War Story: Only it is Not a Radio
-
-### War Story: Annealing Arrays
-
-### Other Heuristic Search Methods
-
-### Parallel Algorithms
-
-### War Story: Going Nowhere Fast
-
-### Exercises
-
-<br>
-<br>
-
----
-
-<bR>
-<Br>
-  
-# 8 Dynamic Programming
-
-### Caching vs. Computation
-
-### Approximate String Matching
-
-### Longest Increasing Sequence
-
-### War Story: Evolution of the Lobster
-
-### The Partition Problem
-
-### Parsing Context-Free Grammars
-
-### Limitations of Dynamic Programming: TSP
-
-### War Story: What’s Past is Prolog
-
-### War Story: Text Compression for Bar Codes
-
-### Exercises
-
-<br>
-<br>
-
----
-
-<bR>
-<Br>
-  
-# 9 Intractable Problems and Approximation Algorithms
- 
-### Problems and Reductions
-
-### Reductions for Algorithms
-
-### Elementary Hardness Reductions
-
-### Satisfiability .
-
-### Creative Reductions
-
-### The Art of Proving Hardness
-
-### War Story: Hard Against the Clock 
-
-### War Story: And Then I Failed
-
-### P vs. NP
-
-### Dealing with NP-complete Problems
-
-### Exersices
-
-<br>
-<br>
-
----
-
-<bR>
-<Br>
-  
-# 10 How to Design Algorithms
-
-<br>
-<br>
-
----
-
-<bR>
-<Br>
-  
-# 11 A Catalog of Algorithmic Problems
-
-<br>
-<br>
-
----
-
-<bR>
-<Br>
-  
-# 12 Data Structures
-
-### Dictionaries
-
-### Priority Queues
-
-### Suffix Trees and Arrays 
-
-### Graph Data Structures
-
-### Set Data Structures
-
-### Kd-Trees
-
-<br>
-<br>
-
----
-
-<bR>
-<Br>
-  
-# 13 Numerical Problems
-
-### Solving Linear Equations
-
-### Bandwidth Reduction
-
-### Matrix Multiplication 
-
-### Determinants and Permanents
-
-### Constrained and Unconstrained Optimization
-
-### Linear Programming
-
-### Random Number Generation
-
-### Factoring and Primality Testing .
-
-### Arbitrary-Precision Arithmetic
-
-### Knapsack Problem
-
-### Discrete Fourier Transform
-
-<br>
-<br>
-
----
-
-<bR>
-<Br>
-  
-# 14 Combinatorial Problems
-
-### Sorting 
-
-### Searching
-
-### Median and Selection
-
-### Generating Permutations .
-
-### Generating Subsets
-
-### Generating Partitions
-
-### Generating Graphs
-
-### Calendrical Calculations
-
-### Job Scheduling
-
-### Satisfiability
-
-<br>
-<br>
-
----
-
-<bR>
-<Br>
-  
-# 15 Graph Problems: Polynomial-Time
-
-### Connected Components
-
-### Topological Sorting
-
-### Minimum Spanning Tree
-
-### Shortest Path
-
-### Transitive Closure and Reduction
-
-### Matching
-
-### Eulerian Cycle/Chinese Postman
-
-### Edge and Vertex Connectivity
-
-### Network Flow
-
-### Drawing Graphs Nicely
-
-### Drawing Trees
-
-### Planarity Detection and Embedding
-
-<br>
-<br>
-
----
-
-<bR>
-<Br>
-  
-# 16 Graph Problems: Hard Problems
-
-### Clique
-
-### Independent Set
-
-### Vertex Cover
-
-### Traveling Salesman Problem
-
-### Hamiltonian Cycle
-
-### Graph Partition
-
-### Vertex Coloring
-
-### Edge Coloring
-
-### Graph Isomorphism
-
-### Steiner Tree
-
-### Feedback Edge/Vertex Set
-
-<br>
-<br>
-
----
-
-<bR>
-<Br>
-  
-# 17 Computational Geometry
-
-### Robust Geometric Primitives
-
-### Convex Hull
-
-### Triangulation
-
-### Voronoi Diagrams
-
-### Nearest Neighbor Search
-
-### Range Search
-
-### Point Location
-
-### Intersection Detection
-
-### Bin Packing
-
-### Medial-Axis Transform
-
-### Polygon Partitioning
-
-### Simplifying Polygons
-
-### Shape Similarity 
-
-### Motion Planning
-
-### Maintaining Line Arrangements
-
-### Minkowski Sum
-
-<br>
-<br>
-
----
-
-<bR>
-<Br>
-  
-# 18 Set and String Problems
-
-### Set Cover
-
-### Set Packing
-
-### String Matching
-
-### Approximate String Matching
-
-### Text Compression
-
-### Cryptography
-
-### Finite State Machine Minimization
-
-### Longest Common Substring/Subsequence
-
-### Shortest Common Superstring
-
-<br>
-<br>
-
----
-
-<bR>
-<Br>
-  
-# 19 Algorithmic Resources
-
-### Software Systems
-
-### Data Sources
-
-### Online Bibliographic Resources
-
-### Professional Consulting Services
-
-
-<Br>
 
 
 
