@@ -275,28 +275,6 @@ provided the easiest way to multiply big numbers by hand Logarithms are still us
 Recall that loga(xy) = loga(x) + loga(y); i.e. , the log of a product is the sum of
 the logs.
 
-- `Fast Exponentiation` --
-
-- `Logarithms and Summations` --
-
-- `Logarithms and Criminal Justice` --
-
-### Properties of Logarithms
-
-- a
-
-### War Story: Mystery of the Pyramids
-
-### Advanced Analysis (*)
-
-- 
-
-- `Esoteric Functions` --
-
-- `Limits and Dominance Relations` --
-
-### Exercises
-
 <br>
 <br>
 
