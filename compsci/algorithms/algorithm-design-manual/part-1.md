@@ -225,15 +225,75 @@ discuss in this text, and are listed in order of increasing dominance:
 
 ### Working with the Big Oh
 
-### Reasoning About Efficiency
+- You learned how to do simplifications of algebraic expressions back in high school.
+Working with the Big Oh requires dusting off these tools.
+
+- `Adding Functions` -- The sum of two functions is governed by the dominant one, namely:
+  
+  n3 + n2 + n +1= O(n3)
+  
+  Everything is small potatoes besides the dominant term.
+  
+- `Multiplying Functions` -- Multiplication is like repeated addition. Consider multiplication by any constant
+c > 0, be it 1.02 or 1,000,000. Multiplying a function by a constant can not affect
+its asymptotic behavior, because we can multiply the bounding constants in the
+Big Oh analysis:
+  - O(c · f(n)) → O(f(n))
+  - Ω(c · f(n)) → Ω(f(n))
+  
+  But if you are not using any constants that as said above it is like repeteated addition:
+  - O(f(n)) ∗ O(g(n)) → O(f(n) ∗ g(n))
+  - Ω(f(n)) ∗ Ω(g(n)) → Ω(f(n) ∗ g(n))
 
 ### Logarithms and Their Applications
 
+- `Logarithms and Binary Search` -- Binary search is a good example of an O(log n) algorithm. To locate a particular
+person p in a telephone book containing n names, you start by comparing p against
+the middle, or (n/2)nd name, say Monroe, Marilyn. Regardless of whether p belongs
+before this middle name (Dean, James) or after it (Presley, Elvis), after only one
+comparison you can discard one half of all the names in the book. The number of
+steps the algorithm takes equals the number of times we can halve n until only one
+name is left. By definition, this is exactly log2 n. Thus, twenty comparisons suffice
+to find any name in the million-name Manhattan phone book! Binary search is one of the most powerful ideas in algorithm design.
+
+- `Logarithms and Trees` -- A binary tree of height 1 can have up to 2 leaf nodes, while a tree of height two
+can have up to four leaves. What is the height h of a rooted binary tree with n leaf
+nodes? Note that the number of leaves doubles every time we increase the height
+by one. To account for n leaves, n = 2h which implies that h = log2 n.
+What if we generalize to trees that have d children, where d = 2 for the case
+of binary trees? A tree of height 1 can have up to d leaf nodes, while one of height
+two can have up to d2 leaves. The number of possible leaves multiplies by d every
+time we increase the height by one, so to account for n leaves, n = dh which implies
+that h = logd n
+
+  The punch line is that very short trees can have very many leaves, which is
+the main reason why binary trees prove fundamental to the design of fast data
+structures.
+
+- `Logarithms and Multiplication` -- Logarithms were particularly important in the days before pocket calculators. They
+provided the easiest way to multiply big numbers by hand Logarithms are still useful for multiplication, particularly for exponentiation.
+Recall that loga(xy) = loga(x) + loga(y); i.e. , the log of a product is the sum of
+the logs.
+
+- `Fast Exponentiation` --
+
+- `Logarithms and Summations` --
+
+- `Logarithms and Criminal Justice` --
+
 ### Properties of Logarithms
+
+- a
 
 ### War Story: Mystery of the Pyramids
 
 ### Advanced Analysis (*)
+
+- 
+
+- `Esoteric Functions` --
+
+- `Limits and Dominance Relations` --
 
 ### Exercises
 
