@@ -31,7 +31,7 @@ Resources:
 ### Algorithms and Data Structures
  
   - [X] Read: The [This tutorial](https://www.studytonight.com/data-structures/time-complexity-of-algorithms)
-  - [X] Book: Grokking Algorithms: An illustrated guide for programmers and other curious people
+  - [ ] Book: Grokking Algorithms: An illustrated guide for programmers and other curious people
   - [x] Book: [PSAD using Python](https://runestone.academy/runestone/books/published/pythonds/index.html)
   - [ ] Book: [The Algorithm Design Manual](https://www.amazon.com/Algorithm-Design-Manual-Steven-Skiena/dp/1848000693/?pldnSite=1) There are [vidoes](http://www3.cs.stonybrook.edu/~algorith/video-lectures/) avilable too.
   - [ ] Project: Impelement Algorithms and Data Structures in any language. [Do all of these here](https://github.com/trekhleb/javascript-algorithms) 
