@@ -108,7 +108,33 @@ processes to communicate
 
 ### File system
 
+- The xv6 file system provides data files, which are uninterpreted byte arrays, and
+directories, which contain named references to data files and other directories. The directories form a tree, starting at a special directory called the root.
+
+  Paths that don’t begin with / are evaluated
+relative to the calling process’s current directory, which can be changed with the
+chdir system call.
+
+  Shell commands for file system operations are implemented as user-level programs such as mkdir, ln, rm, etc. This design allows anyone to extend the shell with new user commands by just adding a new user-level program
+
 ### Real world
+
+- Unix’s combination of the ‘‘standard’’ file descriptors, pipes, and convenient shell
+syntax for operations on them was a major advance in writing general-purpose
+reusable programs. The idea sparked a whole culture of ‘‘software tools’’ that was responsible for much of Unix’s power and popularity, and the shell was the first so-called
+‘‘scripting language.’’ The Unix system call interface persists today in systems like BSD,
+Linux, and Mac OS X.
+
+  The Unix system call interface has been standardized through the Portable Operating System Interface (POSIX) standard. Xv6 is not POSIX compliant. It misses system calls (including basic ones such as lseek), it implements systems calls only partially, etc. 
+  
+  Modern kernels, however, provide many more system calls, and many more kinds of
+kernel services, than xv6. For example, they support networking, Window systems, user-level threads, drivers for many devices, and so on
+
+  The file system abstraction has been a powerful idea, most recently applied to
+network resources in the form of the World Wide Web. Even so, there are other models for operating system interfaces. Multics, a predecessor of Unix, abstracted file storage in a way that made it look like memory, producing a very different flavor of interface. 
+
+  This book examines how xv6 implements its Unix-like interface, but the ideas and
+concepts apply to more than just Unix. Any operating system must multiplex processes onto the underlying hardware, isolate processes from each other, and provide mechanisms for controlled inter-process communication.
 
 <br>
 <Br>
@@ -120,7 +146,35 @@ processes to communicate
 
 # 1 Operating System Organisation
 
+- A key requirement for an operating system is to support several activities at once.
+For example, using the system call interface described in chapter 0 a process can start
+new processes with fork. The operating system must time-share the resources of the
+computer among these processes. Thus an
+operating system must fulfil three requirements: multiplexing, isolation, and
+interaction.
+
+  This chapter provides an overview of how operating systems are organized to
+achieve these 3 requirements. It turns out there are many ways to do so, but this text
+focuses on mainstream designs centered around a monolithic kernel, which is used
+by many Unix operating systems
+
+  Xv6 runs on Intel 80386 or later (‘‘x86’’) processors on a PC platform, and much
+of its low-level functionality (for example, its process implementation) is x86-specific.
+
 ### Abstracting physical resources
+
+- The first question one might ask when encountering an operating system is why
+have it at all? That is, one could implement the system calls in Figure 0-2 as a library,
+with which applications link
+
+  The downside of this library approach is that, if there is more than one applica tion running, the applications must be well-behaved. For example, each application
+must periodically give up the processor so that other applications can run. Such a cooperative time-sharing scheme may be OK if all applications trust each other and have
+no bugs. 
+
+  As you can see, the system call interface in Figure 0-2 is carefully designed to
+provide both programmer convenience and the possibility of strong isolation. The
+Unix interface is not the only way to abstract resources, but it has proven to be a very
+good one.
 
 ### User mode, kernel mode, and system calls
 
