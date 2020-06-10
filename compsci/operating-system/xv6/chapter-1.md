@@ -178,21 +178,86 @@ good one.
 
 ### User mode, kernel mode, and system calls
 
+- Strong isolation requires a hard boundary between applications and the operating
+system. If the application makes a mistake, we don’t want the operating system to fail.
+Instead, the operating system should be able to clean up the failed application and
+continue running other applications Applications shouldn’t be able to modify (or even
+read) the operating system’s data structures or instructions, should be able to access
+other process’s memory, etc.
+
+  Processors provide hardware support for strong isolation. For example, the x86
+processor, like many other processors, has two modes in which the processor can execute instructions: kernel mode and user mode. In kernel mode the processor is allowed to execute privileged instructions. For example, reading and writing the
+disk (or any other I/O device) involves privileged instructions. 
+
+  If an application in
+user mode attempts to execute a privileged instruction, then the processor doesn’t exe cute the instruction, but switches to kernel mode so that the software in kernel mode
+can clean up the application, because it did something it shouldn’t be doing. The software running in kernel space (or in kernel
+mode) is called the kernel.
+
+  An application that wants to read or write a file on disk must transition to the
+kernel to do so, because the application itself can not execute I/O instructions.  Processors provide a special instruction that switches the processor from user mode to kernel
+mode and enters the kernel at an entry point specified by the kernel.
+
 ### Kernel organization
+
+- A key design question is what part of the operating system should run in kernel
+mode. One possibility is that the entire operating system resides in the kernel, so that
+the implementations of all system calls run in kernel mode. This organization is called
+a monolithic kernel.
+
+  In this organization the entire operating system runs with full hardware privilege.
+This organization is convenient because the OS designer doesn’t have to decide which
+part of the operating system doesn’t need full hardware privilege A downside of the monolithic organization is that the interfaces between different
+parts of the operating system are often complex
+
+  If the kernel fails, the computer stops working, and thus all applications fail too. The computer must reboot to start again
+  
+- To reduce the risk of mistakes in the kernel, OS designers can minimize the
+amount of operating system code that runs in kernel mode, and execute the bulk of
+the operating system in user mode. This kernel organization is called a microkernel.
+
+  In a microkernel, the kernel interface consists of a few low-level functions for
+starting applications, sending messages, accessing device hardware, etc. This organization allows the kernel to be relatively simple, as most of the operating system resides
+in user-level servers
 
 ### Process overview
 
-### Code: the first address space
+- The unit of isolation in xv6 (as in other Unix operating systems) is a process.
+The process abstraction prevents one process from wrecking or spying on another process’ memory, CPU, file descriptors, etc. It also prevents a process from wrecking the
+kernel itself, so that a process can’t subvert the kernel’s isolation mechanisms.
 
-### Code: creating the first process
+  The kernel must implement the process abstraction with care because a buggy or malicious
+application may trick the kernel or hardware in doing something bad
 
-### Code: Running the first process
+  A process provides a program with what appears to be a private memory system, or address space, which other processes cannot read or write. A process also provides the program with what appears to be its
+own CPU to execute the program’s instructions
+
+  When the process enters the kernel (for a system call or interrupt), the kernel code executes on the
+process’s kernel stack; while a process is in the kernel, its user stack still contains saved
+data, but isn’t actively used. A process’s thread alternates between actively using its
+user stack and its kernel stack. The kernel stack is separate (and protected from user
+code) so that the kernel can execute even if a process has wrecked its user stack
+
+  When a process makes a system call, the processor switches to the kernel stack,
+raises the hardware privilege level, and starts executing the kernel instructions that implement the system call. When the system call completes, the kernel returns to user
+space: the hardware lowers its privilege level, switches back to the user stack, and re sumes executing user instructions just after the system call instruction.
 
 ### The first system call: exec
 
+- Now that we have seen how the kernel provides strong isolation for processes, let’s
+look at how a user-level process re-enters the kernel to ask for services that it cannot
+perform itself.
+
+  The first action of initcode.S is to invoke the exec system call. As we saw in
+Chapter 0, exec replaces the memory and registers of the current process with a new
+program, but it leaves the file descriptors, process id, and parent process unchanged.
+
 ### Real world
 
-### Exercises
+- Most operating systems have adopted the process concept, and most processes
+look similar to xv6’s. A real operating system would find free proc structures with an
+explicit free list in constant time instead of the linear-time search in allocproc; xv6
+uses the linear scan (the first of many) for simplicity
 
 <br>
 <Br>
