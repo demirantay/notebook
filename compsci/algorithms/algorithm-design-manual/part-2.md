@@ -1,8 +1,86 @@
 # 3 Data Structures
 
+- Changing a data structure in a slow program can work the same way an organ
+transplant does in a sick patient. Important classes of abstract data types such as
+containers, dictionaries, and priority queues, have many different but functionally
+equivalent data structures that implement them. Changing the data structure does
+not change the correctness of the program, since we presumably replace a correct
+implementation with a different correct implementation. However, the new implementation of the data type realizes different tradeoffs in the time to execute various
+operations, so the total performance can improve dramatically
+
+  But it is better to be born with a good heart than have to wait for a replacement. The maximum benefit from good data structures results from designing your
+program around them in the first place
+
+  In data structures, as with most subjects, it is more important to really understand the basic material than have exposure to more advanced concepts We
+will focus on each of the three fundamental abstract data types (containers, dictionaries, and priority queues) and see how they can be implemented with arrays
+and lists.
+
 ### Contiguous vs. Linked Data Structures
 
+- Data structures can be neatly classified as either contiguous or linked, depending
+upon whether they are based on arrays or pointers:
+  - Contiguously-allocated structures are composed of single slabs of memory, and
+include arrays, matrices, heaps, and hash tables.
+  - Linked data structures are composed of distinct chunks of memory bound
+together by pointers, and include lists, trees, and graph adjacency lists
+
+- `Arrays` -- The array is the fundamental contiguously-allocated data structure. Arrays are
+structures of fixed-size data records such that each element can be efficiently located
+by its index or (equivalently) address. Advantages of contiguously-allocated arrays include:
+  - Constant-time access given the index – Because the index of each element
+maps directly to a particular memory address
+  - Space efficiency – Arrays consist purely of data, so no space is wasted with
+links or other formatting information.
+  - Memory locality – A common programming idiom involves iterating through
+all the elements of a data structure. Arrays are good for this because they
+exhibit excellent memory locality
+
+  Actually, we can efficiently enlarge arrays as we need them, through the miracle
+of dynamic arrays. Suppose we start with an array of size 1, and double its size from
+m to 2m each time we run out of space. This doubling process involves allocating a
+new contiguous array of size 2m, copying the contents of the old array to the lower
+half of the new one, and returning the space used by the old array to the storage
+allocation system.
+
+  The primary thing lost using dynamic arrays is the guarantee that each array
+access takes constant time in the worst case. Now all the queries will be fast, except
+for those relatively few queries triggering array doubling. What we get instead is a
+promise that the nth array access will be completed quickly enough that the total
+effort expended so far will still be O(n). 
+
+- `Pointers and Linked Structures` -- Pointers are the connections that hold the pieces of linked structures together.
+Pointers represent the address of a location in memory. A variable storing a pointer
+to a given data item can provide more freedom than storing a copy of the item
+itself
+
+  We use pointers for linked data structures especially __Lists__. They have the same mentalty as arrays but instead of having a fixed size and a doubling algorithm inside it. They have unlimited space from the beginining. How this is done ? it is easy there are two variables inside the value of a list node, one has the value such as 19, "foo", ... etc. and the next variabble holds the __next__ memory location (pointer) to next list node.
+
+- `Comparison` -- The relative advantages of linked lists over static arrays include:
+  - Overflow on linked structures can never occur unless the memory is actually
+full.
+  - Insertions and deletions are simpler than for contiguous (array) lists
+  - With large records, moving pointers is easier and faster than moving the
+items themselves.
+  
+  while the relative advantages of arrays include:
+  - Linked structures require extra space for storing pointer fields
+  - Linked lists do not allow efficient random access to items.
+  - Arrays allow better memory locality and cache performance than random
+pointer jumping.
+
 ### Stacks and Queues
+
+- We use the term container to denote a data structure that permits storage and
+retrieval of data items independent of content. By contrast, dictionaries are abstract
+data types that retrieve based on key values or content, Containers are distinguished by the particular retrieval order they support:
+  - Stacks – Support retrieval by last-in, first-out (LIFO) order. Stacks are simple
+to implement and very efficient. For this reason, stacks are probably the
+right container to use when retrieval order doesn’t matter at all
+  - Queues – Support retrieval in first in, first out (FIFO) order. This is surely
+the fairest way to control waiting times for services. You want the container
+holding jobs to be processed in FIFO order to minimize the maximum time
+spent waiting Queues are somewhat trickier to implement than stacks and thus are most
+appropriate for applications (like certain simulations) where the order is important.
 
 ### Dictionaries
 
