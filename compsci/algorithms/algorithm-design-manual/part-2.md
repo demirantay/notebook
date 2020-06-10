@@ -82,13 +82,79 @@ holding jobs to be processed in FIFO order to minimize the maximum time
 spent waiting Queues are somewhat trickier to implement than stacks and thus are most
 appropriate for applications (like certain simulations) where the order is important.
 
+  Stacks and queues can be effectively implemented using either arrays or linked
+lists. 
+
 ### Dictionaries
+
+- The dictionary data type permits access to data items by content. You stick an
+item into a dictionary so you can find it when you need it. The primary operations of dictionary support are:
+  - Search(D,k) – Given a search key k, return a pointer to the element in dictionary D whose key value is k, if one exists.
+  - Insert(D,x) – Given a data item x, add it to the set in the dictionary D.
+  - Delete(D,x) – Given a pointer to a given data item x in the dictionary D,
+remove it from D.
+
+  A basic dictioanry example in python:
+  ```python
+  dictname = {
+    "key": value,
+    "key2": value2,
+  }
+  ```
 
 ### Binary Search Trees
 
-### Priority Queues .
+- We have seen data structures that allow fast search or flexible update, but not fast
+search and flexible update. Unsorted, doubly-linked lists supported insertion and
+deletion in O(1) time but search took linear time in the worse case. Sorted arrays
+support binary search and logarithmic query times, but at the cost of linear-time
+update.
 
-### War Story: Stripping Triangulations
+  Binary search requires that we have fast access to two elements—specifically
+the median elements above and below the given node. To combine these ideas, we
+need a “linked list” with two pointers per node. This is the basic idea behind binary
+search trees
+
+- `Implementing Binary Search Trees` -- Binary tree nodes have left and right pointer fields, an (optional) parent pointer,
+and a data field. so a parent node and a left and right child nodes. This gives the data structure a tree like look. 
+  ```
+       o
+      / \
+     o   o
+  ```
+
+- `How Good Are Binary Search Trees?` -- When implemented using binary search trees, all three dictionary operations take
+O(h) time, where h is the height of the tree. The smallest height we can hope for
+occurs when the tree is perfectly balanced, where h = ⌈log n⌉. This is very good,
+but the tree must be perfectly balanced.
+
+- `Balanced Search Trees` -- Random search trees are usually good. But if we get unlucky with our order of
+insertion, we can end up with a linear-height tree in the worst case. This worst
+case is outside of our direct control, since we must build the tree in response to the
+requests given by our potentially nasty user
+
+  What would be better is an insertion/deletion procedure which adjusts the tree a
+little after each insertion, keeping it close enough to be balanced so the maximum
+height is logarithmic.
+
+  Take-Home Lesson: Picking the wrong data structure for the job can be
+disastrous in terms of performance. Identifying the very best data structure
+is usually not as critical, because there can be several choices that perform
+similarly
+
+### Priority Queues 
+
+- Many algorithms process items in a specific order. For example, suppose you must
+schedule jobs according to their importance relative to other jobs. Scheduling the jobs requires sorting them by importance, and then evaluating them in this sorted
+order.
+
+  Priority queues are data structures that provide more flexibility than simple
+sorting, because they allow new elements to enter a system at arbitrary intervals.
+It is much more cost-effective to insert a new job into a priority queue than to
+re-sort everything on each such arrival.
+
+
+  Take-Home Lesson: Building algorithms around data structures such as dictionaries and priority queues leads to both clean structure and good performance.
 
 ### Hashing and Strings
 
