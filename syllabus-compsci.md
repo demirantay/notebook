@@ -31,47 +31,7 @@ Resources:
   - [ ] Book: [Algorithm Design](http://www.cs.sjtu.edu.cn/~jiangli/teaching/CS222/files/materials/Algorithm%20Design.pdf) by KnT there may be a new version
   - [ ] Project: Do algorithm Visualizations
   - [ ] Optional: Do more books and projects if you want to focus on this subject.
- 
-### Computer Architecture
-
-> If you want to really focus on this learn physics first.
   
-  - [x] Read: Read [this tutorial](https://www.studytonight.com/computer-architecture/)
-  - [ ] Book : [Hidden Language of Computers: CODE](ftp://ftp.borg.moe/yarr/Gentoomen%20Library/Programming/Misc/Charles%20Petzold%20-%20Code%20-%20The%20Hidden%20Language%20of%20Computer%20Hardware%20and%20Software.pdf)
-  - [ ] Book: The Elements of Computing Systems (left at https://www.youtube.com/watch?v=OZlvyGaRmQQ&list=PLrDd_kMiAuNmSb-CKWQqq9oBFN_KNMTaI&index=12 and at the end of chapter 01 projects.)
-  - [ ] Book: Structured Computer Organization - Andrew S.
-  - [ ] Book: Digital Design and Computer Architecture 2nd Edition (hard - shelved it - may return to it or delete it)
-  - [ ] Book: Essentials of Computer Architecture by Comer
-  - [ ] Book : Computer Organization and Design (start over)
-  - [ ] Book: Computer Systems : A Programmers Perspective by Bryant and O’Hallaron
-  - [ ] Book: Computer Architecture: A Quantitative Approach
-  
- ### Languages and Compilers
-
-   - [x] Read: The [TutorialsOnPoint](https://www.tutorialspoint.com/compiler_design/index.htm) for a overview. Note this to README of the folder
-   - [x] Read: [compiler basics](http://www.cs.man.ac.uk/~pjj/farrell/compmain.html)
-   - [ ] Read: [crafting interpreters](http://craftinginterpreters.com/) -- (you dont have to note this since it is mostly code)
-   - [ ] Book: Cooper and Torczon. Engineering a compiler. (page [88](http://www.r-5.org/files/books/computers/compilers/writing/Keith_Cooper_Linda_Torczon-Engineering_a_Compiler-EN.pdf))
-   - [ ] Book: Appel. Modern Compiler implementation in Java. (page [19](file:///Users/demir/Desktop/Modern%20Compiler%20Implementation%20in%20Java,%202Ed%20by%20Andrew%20W.%20Appel%20(z-lib.org).pdf))
-   - [ ] Project: Basic C compiler written in python
-   - [ ] Project: Basic Python interpreter written in python
-   - [ ] Book: Appel. Modern Compiler implementation in C.
-   - [ ] Project: Complex C compiler written in C.
-   - [ ] Project: Complex Python interpreter written in C.
-   - [ ] Optional: Do more books and projects if you want to focus on this subject.
- 
-### Operating Systems
-
-   - [ ] Book: The xv6 book](https://pdos.csail.mit.edu/6.828/2017/xv6/book-rev10.pdf)
-   - [ ] Read: The [This tutorial](https://www.studytonight.com/operating-system/)
-   - [ ] Book: [Operating Systems: Three Easy Pieces](http://pages.cs.wisc.edu/~remzi/OSTEP/)
-   - [ ] Book : Modern Operating Systems Book by Andrew S. Tanenbaum
-   - [ ] Guide: Follow [osdev.wiki](https://wiki.osdev.org/Main_Page)
-   - [ ] Tutorial: [little OS tutorial](https://littleosbook.github.io/)
-   - [ ] Project : Code a small Operating System
-   - [ ] Book: Add Linux books ...
-   - [ ] Optional: Do more books and projects if you want to focus on this subject.
-   
  ### Databases
 
   > Research books like you did for computer architecture. Through reddit, forums ... etc. Then start.
@@ -89,7 +49,7 @@ Resources:
    - [ ] Project: Graph Database
    - [ ] Optional: Do more books and projects if you want to focus on this subject.
    
-### Computer Networking
+ ### Computer Networking
 
    - [x] Course: Do [khan academy: networking](https://www.khanacademy.org/computing/ap-computer-science-principles/the-internet) for a refresher before diving in
    - [x] Read: The [This tutorial](https://www.studytonight.com/computer-networks/)
@@ -102,6 +62,47 @@ Resources:
    - [ ] Project: Try to build your own internet. Understand how to connect to the WWW.
    - [ ] Optional: Do more books and projects if you want to focus on this subject.
    
+  
+### Operating Systems
+
+   - [ ] Book: The xv6 book](https://pdos.csail.mit.edu/6.828/2017/xv6/book-rev10.pdf)
+   - [ ] Read: The [This tutorial](https://www.studytonight.com/operating-system/)
+   - [ ] Book: [Operating Systems: Three Easy Pieces](http://pages.cs.wisc.edu/~remzi/OSTEP/)
+   - [ ] Book : Modern Operating Systems Book by Andrew S. Tanenbaum
+   - [ ] Guide: Follow [osdev.wiki](https://wiki.osdev.org/Main_Page)
+   - [ ] Tutorial: [little OS tutorial](https://littleosbook.github.io/)
+   - [ ] Project : Code a small Operating System
+   - [ ] Book: Add Linux books ...
+   - [ ] Optional: Do more books and projects if you want to focus on this subject.
+  
+ ### Languages and Compilers
+
+   - [x] Read: The [TutorialsOnPoint](https://www.tutorialspoint.com/compiler_design/index.htm) for a overview. Note this to README of the folder
+   - [x] Read: [compiler basics](http://www.cs.man.ac.uk/~pjj/farrell/compmain.html)
+   - [ ] Read: [crafting interpreters](http://craftinginterpreters.com/) -- (you dont have to note this since it is mostly code)
+   - [ ] Book: Cooper and Torczon. Engineering a compiler. (page [88](http://www.r-5.org/files/books/computers/compilers/writing/Keith_Cooper_Linda_Torczon-Engineering_a_Compiler-EN.pdf))
+   - [ ] Book: Appel. Modern Compiler implementation in Java. (page [19](file:///Users/demir/Desktop/Modern%20Compiler%20Implementation%20in%20Java,%202Ed%20by%20Andrew%20W.%20Appel%20(z-lib.org).pdf))
+   - [ ] Project: Basic C compiler written in python
+   - [ ] Project: Basic Python interpreter written in python
+   - [ ] Book: Appel. Modern Compiler implementation in C.
+   - [ ] Project: Complex C compiler written in C.
+   - [ ] Project: Complex Python interpreter written in C.
+   - [ ] Optional: Do more books and projects if you want to focus on this subject.
+ 
+### Computer Architecture
+
+> If you want to really focus on this learn physics first.
+  
+  - [x] Read: Read [this tutorial](https://www.studytonight.com/computer-architecture/)
+  - [ ] Book : [Hidden Language of Computers: CODE](ftp://ftp.borg.moe/yarr/Gentoomen%20Library/Programming/Misc/Charles%20Petzold%20-%20Code%20-%20The%20Hidden%20Language%20of%20Computer%20Hardware%20and%20Software.pdf)
+  - [ ] Book: The Elements of Computing Systems (left at https://www.youtube.com/watch?v=OZlvyGaRmQQ&list=PLrDd_kMiAuNmSb-CKWQqq9oBFN_KNMTaI&index=12 and at the end of chapter 01 projects.)
+  - [ ] Book: Structured Computer Organization - Andrew S.
+  - [ ] Book: Digital Design and Computer Architecture 2nd Edition (hard - shelved it - may return to it or delete it)
+  - [ ] Book: Essentials of Computer Architecture by Comer
+  - [ ] Book : Computer Organization and Design (start over)
+  - [ ] Book: Computer Systems : A Programmers Perspective by Bryant and O’Hallaron
+  - [ ] Book: Computer Architecture: A Quantitative Approach
+ 
 ### Computer Graphics
 
 - [ ] Book: Computer Graphics: Principles and Practice
