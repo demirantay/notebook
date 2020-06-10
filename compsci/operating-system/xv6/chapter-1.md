@@ -269,81 +269,50 @@ uses the linear scan (the first of many) for simplicity
 
 # 2 Page Tables
 
+- Page tables are the mechanism through which the operating system controls what
+memory addresses mean. They allow xv6 to multiplex the address spaces of different
+processes onto a single physical memory, and to protect the memories of different processes xv6
+uses page tables primarily to multiplex address spaces and to protect memor
+
 ### Paging hardware
+
+- As a reminder, x86 instructions (both user and kernel) manipulate virtual addresses.
+The machine’s RAM, or physical memory, is indexed with physical addresses. The x86
+page table hardware connects these two kinds of addresses, by mapping each virtual
+address to a physical address.
+
+  An x86 page table is logically an array of 2^20 (1,048,576) page table entries
+(PTEs). Each PTE contains a 20-bit physical page number (PPN) and some flags
+
+  A few notes about terms. Physical memory refers to storage cells in DRAM. A
+byte of physical memory has an address, called a physical address. Instructions use
+only virtual addresses, which the paging hardware translates to physical addresses, and
+then sends to the DRAM hardware to read or write storage. At this level of discussion
+there is no such thing as virtual memory, only virtual addresses
 
 ### Process address space
 
-### Code: creating an address space
+- Each process has a separate page table, and xv6 tells the page table hardware to
+switch page tables when xv6 switches between processe Having every process’s page table contain mappings for both user memory and
+the entire kernel is convenient when switching from user code to kernel code during
+system calls and interrupts: such switches do not require page table switches. For the
+most part the kernel does not have its own page table; it is almost always borrowing
+some process’s page table
 
 ### Physical memory allocation
 
-### Code: Physical memory allocator
+- The kernel must allocate and free physical memory at run-time for page tables,
+process user memory, kernel stacks, and pipe buffers
 
-### User part of an address space
-
-### Code: sbrk
-
-### Code: exec
-
-### Real world
-
-<br>
-<Br>
-
----
-
-<Br>
-<br>
-
-# 3 Traps, Interrupts, Drivers
-
-### Systems calls, exceptions, and interrupts
-
-### X86 protection
-
-### Code: The first system call
-
-### Code: Assembly trap handlers
-
-### Code: C trap handler
-
-### Code: System calls
-
-### Code: Interrupts
-
-### Drivers
-
-### Code: Disk driver
+  xv6 uses the physical memory between the end of the kernel and PHYSTOP for
+run-time allocation. It allocates and frees whole 4096-byte pages at a time. It keeps
+track of which pages are free by threading a linked list through the pages themselves.
+Allocation consists of removing a page from the linked list; freeing consists of adding the freed page to the list
 
 ### Real world
 
-<br>
-<Br>
-
----
-
-<Br>
-<br>
-
-# 4 Locking
-
-### Race conditions
-
-### Code: Locks
-
-### Code: Using locks
-
-### Deadlock and lock ordering
-
-### Interrupt handlers
-
-### Instruction and memory ordering
-
-### Sleep locks
-
-### Limitations of locks
-
-### Real world
+- Like most operating systems, xv6 uses the paging hardware for memory protection and mapping. Most operating systems use x86’s 64-bit paging hardware Memory allocation was a hot topic a long time ago, the basic problems being efficient use of limited memory and preparing for unknown future requests; see Knuth.
+Today people care more about speed than space-efficiency. We need fast computers, networks, sites, ... speed is the name of the game.
 
 <br>
 <Br>
@@ -353,106 +322,3 @@ uses the linear scan (the first of many) for simplicity
 <Br>
 <br>
 
-# 5 Scheduling
-
-### Multiplexing
-
-### Code: Context switching
-
-### Code: Scheduling
-
-### Code: mycpu and myproc
-
-### Sleep and wakeup
-
-### Code: Sleep and wakeup
-
-### Code: Pipes
-
-### Code: Wait, exit, and kill
-
-### Real world
-
-<br>
-<Br>
-
----
-
-<Br>
-<br>
-
-# 6 File System
-
-### Overview
-
-### Buffer cache layer 
-
-### Code: Buffer cache
-
-### Logging layer
-
-### Log design
-
-### Code: logging
-
-### Code: Block allocator
-
-### Inode layer
-
-### Code: Inodes
-
-### Code: Inode content
-
-### Code: directory layer
-
-### Code: Path names
-
-### File descriptor layer
-
-### Code: System calls
-
-### Real world
-
-<br>
-<Br>
-
----
-
-<Br>
-<br>
-
-# 7 Summary
-
-<br>
-<Br>
-
----
-
-<Br>
-<br>
-
-# A PC Hardware
-
-### Processor and memory
-
-### I/O
-
-### 
-
-<br>
-<Br>
-
----
-
-<Br>
-<br>
-
-# A The Boot Loader
-
-### Code: Assembly bootstrap
-
-### Code: C bootstrap
-
-### Real world
-
-<br>
