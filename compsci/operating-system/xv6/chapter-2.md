@@ -59,23 +59,47 @@ may switch from interrupts to polling since it knows that more packets must be p
 
 # 4 Locking
 
-### Race conditions
+- Xv6 runs on multiprocessors: computers with multiple CPUs executing independently. These multiple CPUs share physical RAM, and xv6 exploits the sharing to
+maintain data structures that all CPUs read and write. This sharing raises the possibility of one CPU reading a data structure while another CPU is mid-way through updating it, or even multiple CPUs updating the same data simultaneously; without careful design such parallel access is likely to yield incorrect results or a broken data structure.
 
-### Code: Locks
-
-### Code: Using locks
+  Any code that accesses shared data concurrently must have a strategy for maintaining correctness despite concurrency. The concurrency may arise from accesses by
+multiple cores, or by multiple threads, or by interrupt code. xv6 uses a handful of simple concurrency control strategies; much more sophistication is possible. This chapter
+focuses on one of the strategies used extensively in xv6 and many other systems: the
+lock.
+A lock provides mutual exclusion, ensuring that only one CPU at a time can hold
+the lock. 
 
 ### Deadlock and lock ordering
 
+- If a code path through the kernel must hold several locks at the same time, it is important that all code paths acquire the locks in the same order. If they don’t, there is a
+risk of deadlock. Let’s say two code paths in xv6 need locks A and B, but code path 1
+acquires locks in the order A then B, and the other path acquires them in the order B
+then A. This situation can result in a deadlock if two threads execute the code paths
+concurrently
+
 ### Interrupt handlers
 
-### Instruction and memory ordering
+- Xv6 uses spin-locks in many situations to protect data that is used by both interrupt
+handlers and threads. For example, a timer interrupt might (3414) increment ticks at
+about the same time that a kernel thread reads ticks in sys_sleep (3823). The lock
+tickslock serializes the two accesses
 
-### Sleep locks
-
-### Limitations of locks
+  Interrupts can cause concurrency even on a single processor: if interrupts are enabled, kernel code can be stopped at any moment to run an interrupt handler instead.
 
 ### Real world
+
+- Concurrency primitives and parallel programming are active areas of research, because
+programming with locks is still challenging. It is best to use locks as the base for
+higher-level constructs like synchronized queues, although xv6 does not do this. If you
+program with locks, it is wise to use a tool that attempts to identify race conditions,
+because it is easy to miss an invariant that requires a lock.
+
+  To avoid the expenses associated with locks, many operating systems use lock-free
+data structures and algorithms. For example, it is possible to implement a linked list
+like the one in the beginning of the chapter that requires no locks during list searches,
+and one atomic instruction to insert an item in a list. Lock-free programming is more
+complicated, however, than programming locks; for example, one must worry about instruction and memory reordering. Programming with locks is already hard, so xv6
+avoids the additional complexity of lock-free programming.
 
 <br>
 <Br>
@@ -87,23 +111,28 @@ may switch from interrupts to polling since it knows that more packets must be p
 
 # 5 Scheduling
 
+- Any operating system is likely to run with more processes than the computer has
+processors, and so a plan is needed to time-share the processors among the processes.
+Ideally the sharing would be transparent to user processes. A common approach is to
+provide each process with the illusion that it has its own virtual processor by multiplexing the processes onto the hardware processors. This chapter explains how xv6
+achieves this multiplexing.
+
 ### Multiplexing
 
-### Code: Context switching
-
-### Code: Scheduling
-
-### Code: mycpu and myproc
-
-### Sleep and wakeup
-
-### Code: Sleep and wakeup
-
-### Code: Pipes
-
-### Code: Wait, exit, and kill
+- Xv6 multiplexes by switching each processor from one process to another in two
+situations. First, xv6’s sleep and wakeup mechanism switches when a process waits for
+device or pipe I/O to complete, or waits for a child to exit, or waits in the sleep system call. Second, xv6 periodically forces a switch when a process is executing user instructions. This multiplexing creates the illusion that each process has its own CPU,
+just as xv6 uses the memory allocator and hardware page tables to create the illusion
+that each process has its own memory.
 
 ### Real world
+
+- The xv6 scheduler implements a simple scheduling policy, which runs each process in turn. This policy is called round robin. Real operating systems implement
+more sophisticated policies that, for example, allow processes to have priorities. The
+idea is that a runnable high-priority process will be preferred by the scheduler over a
+runnable low-priority thread. These policies can become complex quickly because
+there are often competing goals: for example, the operating might also want to guarantee fairness and high-throughput. In addition, complex policies may lead to unintended interactions such as priority inversion and convoys. Priority inversion can
+happen when a low-priority and high-priority process share a lock, which when acquired by the low-priority process can cause the high-priority process to not run
 
 <br>
 <Br>
