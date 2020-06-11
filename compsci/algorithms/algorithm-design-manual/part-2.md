@@ -158,6 +158,12 @@ re-sort everything on each such arrival.
 
 ### Hashing and Strings
 
+- Hash tables are a very practical way to maintain a dictionary. They exploit the fact
+that looking an item up in an array takes constant time once you have its index. A
+hash function is a mathematical function that maps keys to integers. We will use
+the value of our hash function as an index into an array, and store our item at that
+position.
+
 ### Specialized Data Structures
 
 ### War Story: String ’em Up
