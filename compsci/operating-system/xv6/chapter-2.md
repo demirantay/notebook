@@ -144,76 +144,69 @@ happen when a low-priority and high-priority process share a lock, which when ac
 
 # 6 File System
 
+- The purpose of a file system is to organize and store data. File systems typically
+support sharing of data among users and applications, as well as persistence so that
+data is still available after a reboot.
+
+   The file system needs on-disk data structures to represent the tree of named directories and files, to record the identities of the blocks that hold each file’s content, and to record which areas of the disk are free.
+   
+   The file system must support crash recovery. That is, if a crash (e.g., power
+failure) occurs, the file system must still work correctly after a restart. The risk is
+that a crash might interrupt a sequence of updates and leave inconsistent on-disk
+data structures (e.g., a block that is both used in a file and marked free).
+
+   Different processes may operate on the file system at the same time, so the file
+system code must coordinate to maintain invariants.
+
+  Accessing a disk is orders of magnitude slower than accessing memory, so the file
+system must maintain an in-memory cache of popular blocks.
+
 ### Overview
+
+- The xv6 file system implementation is organized in seven layers, shown in Figure
+6-1. The disk layer reads and writes blocks on an IDE hard drive. The buffer cache
+layer caches disk blocks and synchronizes access to them, making sure that only one
+kernel process at a time can modify the data stored in any particular block. The logging layer allows higher layers to wrap updates to several blocks in a transaction,
+and ensures that the blocks are updated atomically in the face of crashes (i.e., all of
+them are updated or none). The inode layer provides individual files, each represented
+as an inode with a unique i-number and some blocks holding the file’s data. The directory layer implements each directory as a special kind of inode whose content is a
+sequence of directory entries, each of which contains a file’s name and i-number. The
+pathname layer provides hierarchical path names like /usr/rtm/xv6/fs.c, and resolves them with recursive lookup. The file descriptor layer abstracts many Unix resources (e.g., pipes, devices, files, etc.) using the file system interface, simplifying the
+lives of application programmers.
+
+- Layers of a filesystem:
+  - File descriptor
+  - Pathname
+  - Directory
+  - Inode
+  - Logging
+  - Buffer Cache
+  - Disk
 
 ### Buffer cache layer 
 
-### Code: Buffer cache
+- The buffer cache has two jobs: (1) synchronize access to disk blocks to ensure
+that only one copy of a block is in memory and that only one kernel thread at a time
+uses that copy; (2) cache popular blocks so that they don’t need to be re-read from the
+slow disk
 
 ### Logging layer
 
-### Log design
-
-### Code: logging
-
-### Code: Block allocator
-
-### Inode layer
-
-### Code: Inodes
-
-### Code: Inode content
-
-### Code: directory layer
-
-### Code: Path names
+- One of the most interesting problems in file system design is crash recovery. The
+problem arises because many file system operations involve multiple writes to the disk,
+and a crash after a subset of the writes may leave the on-disk file system in an inconsistent state. The latter is relatively benign, but an inode that refers to a freed block is likely to
+cause serious problems after a reboot. After reboot, the kernel might allocate that
+block to another file, and now we have two different files pointing unintentionally to
+the same block.  Xv6 solves the problem of crashes during file system operations with a simple
+form of logging. 
 
 ### File descriptor layer
 
-### Code: System calls
-
-### Real world
-
-<br>
-<Br>
-
----
-
-<Br>
-<br>
-
-# 7 Summary
+- A cool aspect of the Unix interface is that most resources in Unix are represented
+as files, including devices such as the console, pipes, and of course, real files. The file
+descriptor layer is the layer that achieves this uniformity.
 
 <br>
 <Br>
 
----
 
-<Br>
-<br>
-
-# A PC Hardware
-
-### Processor and memory
-
-### I/O
-
-### 
-
-<br>
-<Br>
-
----
-
-<Br>
-<br>
-
-# A The Boot Loader
-
-### Code: Assembly bootstrap
-
-### Code: C bootstrap
-
-### Real world
-
-<br>
