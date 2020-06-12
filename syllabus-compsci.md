@@ -33,8 +33,7 @@ Resources:
   - [ ] Optional: Do more books and projects if you want to focus on this subject.
   
  ### Databases
-
-  > Research books like you did for computer architecture. Through reddit, forums ... etc. Then start.
+ 
    - [ ] Read: The [TutorialsOnPoint](https://www.tutorialspoint.com/dbms/index.htm) for a overview. Note this to README of the folder
    - [ ] Book: Fundamentals of Database Systems Book by Ramez Elmasri
    - [ ] Book: Database System Concepts Textbook by Avi Silberschatz,
@@ -65,7 +64,7 @@ Resources:
   
 ### Operating Systems
 
-   - [ ] Book: The xv6 book](https://pdos.csail.mit.edu/6.828/2017/xv6/book-rev10.pdf)
+   - [x] Book: [The xv6 book](https://pdos.csail.mit.edu/6.828/2017/xv6/book-rev10.pdf)
    - [ ] Read: The [This tutorial](https://www.studytonight.com/operating-system/)
    - [ ] Book: [Operating Systems: Three Easy Pieces](http://pages.cs.wisc.edu/~remzi/OSTEP/)
    - [ ] Book : Modern Operating Systems Book by Andrew S. Tanenbaum
