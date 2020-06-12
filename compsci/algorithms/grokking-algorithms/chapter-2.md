@@ -109,4 +109,222 @@ O(n log n). Much faster! Quicksort is a tricky case. In the worst case, quicksor
   
   As you can see, binary search is still way faster. hat constant didn’t make a diference at all. But sometimes the constant can make a diference. Quicksort versus merge sort is one example. Quicksort has a smaller constant than merge sort. So if they’re both O(n log n) time, quicksort is faster. And quicksort is faster in practice because it hits the average case way more oten than the worst case.
   
-- `average case vs. worst case` -- 
+- `average case vs. worst case` -- The performance of quicksort heavily depends on the pivot you choose.
+Suppose you always choose the first element as the pivot.  In the worst case, the stack size is
+O(n). In the best case, the stack size is O(log n).  Quicksort
+is one of the fastest sorting algorithms out there, and it’s a very good
+example of D&C.
+
+- `recap` --
+  - • D&C works by breaking a problem down into smaller and smaller
+pieces. If you’re using D&C on a list, the base case is probably an
+empty array or an array with one element.
+  - If you’re implementing quicksort, choose a random element as the
+pivot. The average runtime of quicksort is O(n log n)!
+  - The constant in Big O notation can matter sometimes. That’s why
+quicksort is faster than merge sort.
+  - The constant almost never matters for simple search versus binary
+search, because O(log n) is so much faster than O(n) when your list
+gets big
+
+<Br>
+<br>
+  
+---
+
+<br>
+<br>
+
+# Hash Tables
+
+### Hash Functions
+
+### Use Cases
+
+- `Using Hash tables for lookups` --
+
+- `Preventing duplicate entries` --
+
+- `Using hash tables as a cache` --
+
+### Collisons
+
+### Performance
+
+- `Recap` --
+
+<br>
+<Br>
+  
+---
+
+<br>
+<Br>
+  
+# Breadth-first Search
+
+### Introuction to graphs
+
+### What is a graph?
+
+### Breadth first search
+
+- `finding the shortest path` --
+
+- `queues` --
+
+### Implementing the graph
+
+### Implementing the algorithm
+
+- `running time` --
+
+- `Recap` 
+
+<Br>
+<br>
+  
+---
+
+<br>
+<Br>
+  
+# Dijktra's Algorithm
+
+### Working with Dijkstra's algorithm
+
+### Terminology
+
+### Trading for a piano
+
+### Negative-weight edges
+
+### Implementation
+
+### Recap
+
+<br>
+<br>
+
+---
+
+<Br>
+<br>
+  
+# Greedy Algorithms
+
+### The classroom scheduling problem
+
+### The knapsack problem
+
+### The set-covering problem
+
+- `approximation algorithms` --
+
+### NP-complete problems
+
+### Travelling salesperson, step by step
+
+- `how do you tell if a problem is NP-complete` 
+
+- `recap` --
+
+<br>
+<br>
+
+---
+
+<Br>
+<Br>
+  
+# Dynamic Programming
+
+### THe knapscak problem
+
+- `the simple solution` --
+
+- `dynamic programming` --
+
+### Knapsack problem FAQ
+
+- `what happens if you add an item` --
+
+- `what happens if you change the order of the rows` --
+
+- `can you fill in the frid colum wise instead of row-wise` --
+
+- `what happens if you add a smaller item` -- 
+
+- `can you steal fractions of an item?` --
+
+- `optimizing your travel itinerary` --
+
+- `Handling items that depend on each other` --
+
+- `is it possible that the solution will require more than two sub-knapsacks` --
+
+- `Is it possible that the best solution doesnt fill the knapscak completly` --
+
+### Longest common substring
+
+<br>
+<br>
+
+---
+
+<br>
+<Br>
+  
+# K-nearest neighbors
+
+### Classifying orange vs grapefruit
+
+### Building a recommendations system
+
+- `feature extraction` --
+
+- `regression` --
+
+- `picking good features` --
+
+### Introduction to machine learning
+
+- `ocr` --
+
+- `building a spam filter` --
+
+- `predicting the stock market` --
+
+- `Recap` --
+
+<br>
+<br>
+
+---
+
+<Br>
+<br>
+  
+# Where to go next
+
+### Trees
+
+### Inverted indexes
+
+### The fourier transforms
+
+### Parallel algorithms
+
+### MapReduce
+
+### Bloom filters and HyperLogLog
+
+### The SHA Algorithms
+
+### Locality-sensetive hashing
+
+### Diffie-Hellman key exchange
+
+### Linear Programming 
+
+### Epilogue
