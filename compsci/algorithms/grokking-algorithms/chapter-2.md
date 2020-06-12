@@ -329,3 +329,105 @@ a web server).
 <br>
 <Br>
   
+# Breadth-first Search
+
+- You learn how to model a network using a new,
+abstract data structure: graphs. You learn breadth-first search, an algorithm you
+can run on graphs to answer questions like,
+“What’s the shortest path to go to X?”
+
+  This chapter introduces graphs. First, I’ll talk about what graphs
+are (they don’t involve an X or Y axis). Then I’ll show you your first
+graph algorithm. It’s called breadth-first search (BFS).
+
+### What is a graph?
+
+- A graph models a set of connections. For
+example, suppose you and your friends are
+playing poker, and you want to model who owes
+whom money. Here’s how you could say, “Alex
+owes Rama money.” Alex owes Rama money, Tom owes Adit money, and so on. Each graph
+is made up of nodes and edges. 
+
+  That’s all there is to it! Graphs are made up of nodes and edges. A node
+can be directly connected to many other nodes. Those nodes are called
+its neighbor Graphs are a way to model how different things are connected to one
+another. Now let’s see breadth-first search in action.
+
+### Breadth first search
+
+- We looked at a search algorithm in chapter 1: binary search. Breadthfirst search is a different kind of search algorithm: one that runs on
+graphs. It can help answer two types of questions:
+  - Question type 1: Is there a path from node A to node B?
+  - Question type 2: What is the shortest path from node A to node B?
+  
+- Suppose you’re the proud owner of a mango farm. You’re looking for a
+mango seller who can sell your mangoes. Are you connected to a mango
+seller on Facebook? Well, you can search through your friends
+
+  This search is pretty straightforward.
+First, make a list of friends to search. Now, go to each person in the list and check whether that person sells
+mangoes Suppose none of your friends are mango sellers. Now you have to
+search through your friends’ friends. Each time you search for someone from the list, add all of their friends
+to the list.
+
+  This way, you not only search your friends, but you search their friends,
+too. Remember, the goal is to find one mango seller in your network.
+So if Alice isn’t a mango seller, you add her friends to the list, too. That
+means you’ll eventually search her friends—and then their friends, and
+so on. With this algorithm, you’ll search your entire network until you
+come across a mango seller. This algorithm is breadth-first search.
+
+- `finding the shortest path` -- You’d prefer a first-degree connection to a second-degree connection,
+and a second-degree connection to a third-degree connection, and so
+on. So you shouldn’t search any second-degree connections before you
+make sure you don’t have a first-degree connection who is a mango
+seller. Well, breadth-first search already does this! The way breadth-first
+search works, the search radiates out from the starting point. So you’ll
+check first-degree connections before second-degree connections. So
+you need to search people in the order that they’re added. There’s a data
+structure for this: it’s called a queue.
+
+- `queues` -- A queue works exactly like it does in
+real life. Suppose you and your friend
+are queueing up at the bus stop. If you’re
+before him in the queue, you get on the
+bus first. A queue works the same way. 
+
+  You can’t
+access random elements in the queue.
+Instead, there are two only operations,
+enqueue and dequeue.
+
+  People who are added to the list first will be dequeued and searched
+first.
+The queue is called a FIFO data structure: First In, First Out. In
+contrast, a stack is a LIFO data structure: Last In, First Out.
+
+- `Recap` --
+  - Breadth-first search tells you if there’s a path from A to B.
+  - If there’s a path, breadth-first search will find the shortest path
+  - If you have a problem like “find the shortest X,” try modeling your
+problem as a graph, and use breadth-first search to solve
+  - A directed graph has arrows, and the relationship follows the
+direction of the arrow (rama -> adit means “rama owes adit money”).
+  - Undirected graphs don’t have arrows, and the relationship goes both
+ways (ross - rachel means “ross dated rachel and rachel dated ross”).
+  - Queues are FIFO (First In, First Out).
+  - Stacks are LIFO (Last In, First Out).
+  - You need to check people in the order they were added to the search
+list, so the search list needs to be a queue. Otherwise, you won’t get
+the shortest path.
+  - Once you check someone, make sure you don’t check them again.
+Otherwise, you might end up in an infinite loop.
+  
+
+<Br>
+<br>
+  
+---
+
+<br>
+<Br>
+  
+  
