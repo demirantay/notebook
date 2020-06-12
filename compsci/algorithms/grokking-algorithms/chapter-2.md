@@ -137,194 +137,195 @@ gets big
 
 # Hash Tables
 
+- You learn about hash tables, one of the most
+useful basic data structures. Hash tables have many
+uses; this chapter covers the common use cases.
+
+- Suppose you work at a grocery store. When a customer
+buys produce, you have to look up the price in a book. If
+the book is unalphabetized, it can take you a long time to
+look through every single line for apple. You’d be doing
+simple search from chapter 1, where you have to look at
+every line. Do you remember how long that would take?
+O(n) time. If the book is alphabetized, you could run
+binary search to find the price of an apple. That would
+only take O(log n) time. As a reminder, there’s a big difference between O(n) and O(log n) time!
+
+  You already know that binary search is darn fast. But as a cashier,
+looking things up in a book is a pain, even if the book is sorted. You can
+feel the customer steaming up as you search for items in the book. What
+you really need is a buddy who has all the names and prices memorized.
+Then you don’t need to look up anything: you ask her, and she tells you
+the answer instantly
+
+  Your buddy Maggie can give you the price in O(1) time for any item, no
+matter how big the book is. She’s even faster than binary search.
+
+  What a wonderful person! How do you get a “Maggie”? You could implement this book as
+an array.
+  ```
+  [("eggs", 12), ("milk", 54), ("bread", 2)]
+  ```
+  Each item in the array is really two items: one is the name of a kind of
+produce, and the other is the price. If you sort this array by name, you
+can run binary search on it to find the price of an item. So you can find
+items in O(log n) time. But you want to find items in O(1) time. That is,
+you want to make a “Maggie.” That’s where hash functions come in.
+
 ### Hash Functions
 
+- A hash function is a function where you put in a string1
+ and you get
+back a number. (mostly you enter the key as string and get the index of the key in the array as an int). Your hash function:
+  -  It needs to be consistent. For example, suppose you put in “apple” and
+get back “4”. Every time you put in “apple”, you should get “4” back.
+Without this, your hash table won’t work.
+  - • It should map different words to different numbers. For example, a
+hash function is no good if it always returns “1” for any word you put
+in. In the best case, every different word should map to a different
+number.
+
+- The hash function tells you exactly where the price is stored, so you
+don’t have to search at all! This works because
+  - • The hash function consistently maps a name to the same index. Every
+time you put in “avocado”, you’ll get the same number back. So you
+can use it the first time to find where to store the price of an avocado,
+and then you can use it to find where you stored that price
+  - The hash function maps different strings to different indexes.
+“Avocado” maps to index 4. “Milk” maps to index 0. Everything maps
+to a different slot in the array where you can store its price.
+
+- You just built a “Maggie”! Put a hash function and an array together,
+and you get a data structure called a hash table. A hash table is the first
+data structure you’ll learn that has some extra logic behind it. Arrays
+and lists map straight to memory, but hash tables are smarter. They use
+a hash function to intelligently figure out where to store elements.
+  
+  Hash tables are probably the most useful complex data structure
+you’ll learn. They’re also known as hash maps, maps, dictionaries, and
+associative arrays. And hash tables are fast!
+
+  A hash table has keys and values. In the book hash, the names of
+produce are the keys, and their prices are the values. A hash table maps
+keys to values
+  
 ### Use Cases
 
-- `Using Hash tables for lookups` --
+- Hash tables are used everywhere. This section will show you a few
+use cases.
 
-- `Preventing duplicate entries` --
+- `Using Hash tables for lookups` -- Your phone has a handy phonebook built in.
+Each name has a phone number associated with it. Suppose you want to build a phone book like this. You’re mapping
+people’s names to phone numbers.
 
-- `Using hash tables as a cache` --
+  Hash tables are used for lookups on a much larger scale. For example,
+suppose you go to a website like http://adit.io. Your computer has to
+translate adit.io to an IP address. For any website you go to, the address has to be translated to an IP
+address Wow, mapping a web address to an IP address? Sounds like a perfect
+use case for hash tables! This process is called DNS resolution.
+
+- `Preventing duplicate entries` -- Suppose you’re running a voting booth. Naturally, every person can
+vote just once. How do you make sure they haven’t voted before? When
+someone comes in to vote, you ask for their full name. Then you check
+it against the list of people who have voted.
+
+- `Using hash tables as a cache` -- One final use case: caching. If you work on a website, you
+may have heard of caching before as a good thing to do.
+Here’s the idea
+
+  Suppose you have a niece who keeps asking you about planets. “How far
+is Mars from Earth?” “How far is the Moon?” “How far is Jupiter?” Each
+time, you have to do a Google search and give her an answer. It takes 
+
+  a couple of minutes. Now, suppose she always asked, “How far is the
+Moon?” Pretty soon, you’d memorize that the Moon is 238,900 miles
+away. You wouldn’t have to look it up on Google … you’d just remember
+and answer. This is how caching works: websites remember the data
+instead of recalculating it.
+
+  If you’re logged in to Facebook, all the content you see is tailored just
+for you. Each time you go to facebook.com, its servers have to think
+about what content you’re interested in. But if you’re not logged in to
+Facebook, you see the login page. Everyone sees the same login page.
+Facebook is asked the same thing over and over: “Give me the home
+page when I’m logged out.” So it stops making the server do work to
+figure out what the home page looks like. Instead, it memorizes what
+the home page looks like and sends it to you. This is called caching
+
+  Caching is a common way to make things faster. All big websites use
+caching. And that data is cached in a hash! Facebook isn’t just caching the home page. It’s also caching the About
+page, the Contact page, the Terms and Conditions page, and a lot more.  When you visit a page on Facebook, it first checks whether the page is
+stored in the hash.
 
 ### Collisons
 
+- Like I said earlier, most languages have hash tables. You don’t need to
+know how to write your own. So, I won’t talk about the internals of hash
+tables too much. But you still care about performance! To understand
+the performance of hash tables, you first need to understand what
+collisions are. 
+
+  First, I’ve been telling you a white lie. I told you that a hash function
+always maps different keys to different slots in the array.
+
+  In reality, it’s almost impossible to write a hash function that does this. Let’s take a simple example. Suppose your array contains 26 slots. And your hash function is really simple: it assigns a spot in the array
+alphabetically. Then you want to put the price of bananas in the hash. You get assigned
+the second slot Everything is going so well! But now you want to put the price of
+avocados in your hash. You get assigned the first slot again.
+
+  Oh no! Apples have that slot already! What to do? This is called a
+collision: two keys have been assigned the same slot. This is a problem.
+If you store the price of avocados at that slot, you’ll overwrite the price
+of apples. Then the next time someone asks for the price of apples,
+they will get the price of avocados instead! Collisions are bad, and you
+need to work around them. There are many different ways to deal with
+collisions. The simplest one is this: if multiple keys map to the same
+slot, start a linked list at that slot
+
+  In this example, both “apple” and “avocado” map to the same slot.
+So you start a linked list at that slot. If you need to know the price of
+bananas, it’s still quick. If you need to know the price of apples, it’s a
+little slower. You have to search through this linked list to find “apple”. If
+the linked list is small, no big deal—you have to search through three or
+four elements. But doing that ina  big linked list is a extremly bad idea, so you need a good hash function Hash functions are important. A good hash function will give you very
+few collisions. So how do you pick a good hash function? That’s coming
+up in the next 
+
+- > Before you start this next section, know that this isn’t required reading. I’m
+going to talk about how to implement a hash table, but you’ll never have
+to do that yourself. Whatever programming language you use will have an
+implementation of hash tables built in. You can use the built-in hash table
+and assume it will have good performance. The next section gives you a
+peek under the hood.
+
 ### Performance
 
-- `Recap` --
-
-<br>
-<Br>
-  
----
-
-<br>
-<Br>
-  
-# Breadth-first Search
-
-### Introuction to graphs
-
-### What is a graph?
-
-### Breadth first search
-
-- `finding the shortest path` --
-
-- `queues` --
-
-### Implementing the graph
-
-### Implementing the algorithm
-
-- `running time` --
-
-- `Recap` 
-
-<Br>
-<br>
-  
----
-
-<br>
-<Br>
-  
-# Dijktra's Algorithm
-
-### Working with Dijkstra's algorithm
-
-### Terminology
-
-### Trading for a piano
-
-### Negative-weight edges
-
-### Implementation
-
-### Recap
-
-<br>
-<br>
-
----
-
-<Br>
-<br>
-  
-# Greedy Algorithms
-
-### The classroom scheduling problem
-
-### The knapsack problem
-
-### The set-covering problem
-
-- `approximation algorithms` --
-
-### NP-complete problems
-
-### Travelling salesperson, step by step
-
-- `how do you tell if a problem is NP-complete` 
-
-- `recap` --
-
-<br>
-<br>
-
----
-
-<Br>
-<Br>
-  
-# Dynamic Programming
-
-### THe knapscak problem
-
-- `the simple solution` --
-
-- `dynamic programming` --
-
-### Knapsack problem FAQ
-
-- `what happens if you add an item` --
-
-- `what happens if you change the order of the rows` --
-
-- `can you fill in the frid colum wise instead of row-wise` --
-
-- `what happens if you add a smaller item` -- 
-
-- `can you steal fractions of an item?` --
-
-- `optimizing your travel itinerary` --
-
-- `Handling items that depend on each other` --
-
-- `is it possible that the solution will require more than two sub-knapsacks` --
-
-- `Is it possible that the best solution doesnt fill the knapscak completly` --
-
-### Longest common substring
-
-<br>
-<br>
-
----
-
-<br>
-<Br>
-  
-# K-nearest neighbors
-
-### Classifying orange vs grapefruit
-
-### Building a recommendations system
-
-- `feature extraction` --
-
-- `regression` --
-
-- `picking good features` --
-
-### Introduction to machine learning
-
-- `ocr` --
-
-- `building a spam filter` --
-
-- `predicting the stock market` --
+- `a good hash function` -- A good hash function distributes values in the array evenly. A bad hash function groups values together and produces a lot of
+collisions. What is a good hash function? That’s something you’ll never have to
+worry about—old men (and women) with big beards sit in dark rooms
+and worry about that. If you’re really curious, look up the SHA function
+(there’s a short description of it in the last chapter). You could use that
+as your hash function.  (__this was a very bad explanation of a good hash function but it is a hard problem and out of this books scope so it is understandable__)
 
 - `Recap` --
+  - You can make a hash table by combining a hash function
+with an array
+  - Collisions are bad. You need a hash function that
+minimizes collisions.
+  - Hash tables have really fast search, insert, and delete.
+  - Hash tables are good for modeling relationships from one
+item to another item.
+  - Once your load factor is greater than .07, it’s time to resize
+your hash table
+  - Hash tables are used for caching data (for example, with
+a web server).
+  - Hash tables are great for catching duplicates
 
 <br>
-<br>
-
+<Br>
+  
 ---
 
-<Br>
 <br>
+<Br>
   
-# Where to go next
-
-### Trees
-
-### Inverted indexes
-
-### The fourier transforms
-
-### Parallel algorithms
-
-### MapReduce
-
-### Bloom filters and HyperLogLog
-
-### The SHA Algorithms
-
-### Locality-sensetive hashing
-
-### Diffie-Hellman key exchange
-
-### Linear Programming 
-
-### Epilogue
