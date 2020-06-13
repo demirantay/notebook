@@ -68,21 +68,117 @@ a weighted graph.
   
 # Greedy Algorithms
 
+- You learn how to tackle the impossible:
+problems that have no fast algorithmic solution
+(NP-complete problems). You learn how to identify such problems when you
+see them, so you don’t waste time trying to find a
+fast algorithm for them.
+
+  You learn about approximation algorithms, which
+you can use to find an approximate solution to an
+NP-complete problem quickly. You learn about the greedy strategy, a very simple
+problem-solving strategy.
+
 ### The classroom scheduling problem
+
+- Suppose you have a classroom and want to hold as many classes
+here as possible. You get a list of classes You can’t hold all of these classes in there, because some of them
+overlap. You want to hold as many classes as possible in this classroom. How
+do you pick what set of classes to hold, so that you get the biggest set of
+classes possible
+
+  Sounds like a hard problem, right? Actually, the algorithm is so easy, it
+might surprise you. Here’s how it works:
+  - 1. Pick the class that ends the soonest. This is the first class you’ll hold
+in this classroom.
+  - 2. Now, you have to pick a class that starts after the first class.
+Again, pick the class that ends the soonest. This is the second
+class you’ll hold.
+  
+  A lot of people tell me that this algorithm seems easy. It’s too obvious,
+so it must be wrong. But that’s the beauty of greedy algorithms: they’re
+easy! A greedy algorithm is simple: at each step, pick the optimal move.
+In this case, each time you pick a class, you pick the class that ends the
+soonest t. In technical terms: at each step you pick the locally optimal
+solution, and in the end you’re left with the globally optimal solution
 
 ### The knapsack problem
 
-### The set-covering problem
+- Suppose you’re a greedy thief. You’re in a store with a
+knapsack, and there are all these items you can steal.
+But you can only take what you can fit in your knapsack.
+The knapsack can hold 35 pounds. You’re trying to maximize the value of the items you put
+in your knapsack. What algorithm do you use? Again, the greedy strategy is pretty simple:
+  - 1 - Pick the most expensive thing that will fit in your
+knapsack
+  - 2 - Pick the next most expensive thing that will fit in
+your knapsack. And so on.
 
-- `approximation algorithms` --
+  Clearly, the greedy strategy doesn’t give you the optimal solution here.
+But it gets you pretty close. In the next chapter, I’ll explain how to
+calculate the correct solution. But if you’re a thief in a shopping center,
+you don’t care about perfect. “Pretty good” is good enough. 
+
+  Here’s the takeaway from this second example: sometimes, perfect is the
+enemy of good. Sometimes all you need is an algorithm that solves the
+problem pretty well.
 
 ### NP-complete problems
 
-### Travelling salesperson, step by step
+- `Travelling salesperson, step by step` -- You may be wondering, “In the traveling salesperson problem, is there
+a specific city you need to start from?” For example, let’s say I’m the
+traveling salesperson. I live in San Francisco, and I need to go to four
+other cities. San Francisco would be my start city
 
-- `how do you tell if a problem is NP-complete` 
+  But sometimes the start city isn’t set. Suppose you’re FedEx, trying
+to deliver a package to the Bay Area. The package is being flown in
+from Chicago to one of 50 FedEx locations in the Bay Area. Then
+that package will go on a truck that will travel to different locations
+delivering packages. Which location should it get flown to? Here the
+start location is unknown. It’s up to you to compute the optimal path
+and start location for the traveling salesperson
+
+  The traveling-salesperson problem and the set-covering problem both
+have something in common: you calculate every possible solution and
+pick the smallest/shortest one. Both of these problems are NP-complete
+
+  Here’s the short explanation of NP-completeness: some problems are
+famously hard to solve. The traveling salesperson and the set-covering
+problem are two examples. A lot of smart people think that it’s not
+possible to write an algorithm that will solve these problems quickly so they use greedy algorithms to make approximations.
+
+- `how do you tell if a problem is NP-complete` -- it’s hard to tell if a problem you’re working on is
+NP-complete. Usually there’s a very small difference between a problem
+that’s easy to solve and an NP-complete problem. For example, in the
+previous chapters, I talked a lot about shortest paths. You know how to
+calculate the shortest way to get from point A to point B.
+
+  But if you want to find the shortest path that connects several points,
+that’s the traveling-salesperson problem, which is NP-complete. The
+short answer: there’s no easy way to tell if the problem you’re working
+on is NP-complete. Here are some giveaways:
+  - Your algorithm runs quickly with a handful of items but really slows
+down with more items
+  - All combinations of X” usually point to an NP-complete problem
+  - Do you have to calculate “every possible version” of X because you
+can’t break it down into smaller sub-problems? Might be
+NP-complete.
+  - If your problem involves a sequence (such as a sequence of cities, like
+traveling salesperson), and it’s hard to solve, it might be NP-complete
+  - If your problem involves a set (like a set of radio stations) and it’s hard
+to solve, it might be NP-complete
+  - Can you restate your problem as the set-covering problem or the
+traveling-salesperson problem? Then your problem is definitely
+NP-complete
 
 - `recap` --
+  - Greedy algorithms optimize locally, hoping to end up with a global
+optimum. 
+  - NP-complete problems have no known fast solution. 
+  - If you have an NP-complete problem, your best bet is to use an
+approximation algorithm. 
+  - Greedy algorithms are easy to write and fast to run, so they make
+good approximation algorithms
 
 <br>
 <br>
