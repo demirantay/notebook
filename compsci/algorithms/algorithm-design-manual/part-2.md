@@ -164,11 +164,40 @@ hash function is a mathematical function that maps keys to integers. We will use
 the value of our hash function as an index into an array, and store our item at that
 position.
 
+- `Collision Resolution` -- No matter how good our hash function is, we had better be prepared for collisions,
+because two distinct keys will occasionally hash to the same value. Chaining is the
+easiest approach to collision resolution
+
+  Pragmatically, a hash table is often the best data structure to maintain a dictionary. The applications of hashing go far beyond dictionaries
+
+- `Duplicate Detection Via Hashing` -- The key idea of hashing is to represent a large object (be it a key, a string, or a
+substring) using a single number. The goal is a representation of the large object
+by an entity that can be manipulated in constant time, such that it is relatively
+unlikely that two different large objects map to the same value.
+
+  Hashing has a variety of clever applications beyond just speeding up search. I
+once heard Udi Manber—then Chief Scientist at Yahoo—talk about the algorithms
+employed at his company. The three most important algorithms at Yahoo, he said,
+were hashing, hashing, and hashing.
+
+- Optimizing hash table performance is surprisingly complicated for such a conceptually simple data structure. The importance of short runs in open addressing
+has to more sophisticated schemes than sequential probing for optimal hash table
+performance. 
+
 ### Specialized Data Structures
 
-### War Story: String ’em Up
+- The basic data structures described thus far all represent an unstructured set of
+items so as to facilitate retrieval operations. These data structures are well known
+to most programmers. Not as well known are data structures for representing more structured or specialized kinds of objects, such as points in space, strings, and
+graphs
 
-### Exercises
+  The design principles of these data structures are the same as for basic objects.
+There exists a set of basic operations we need to perform repeatedly. We seek a data
+structure that supports these operations very efficiently Here are some examples:
+  - String data structures
+  - Geometric data structures
+  - Graph data structures
+  - Set data structures
 
 <br>
 <br>
@@ -180,23 +209,72 @@ position.
   
 # 4 Sorting and Searching
 
-### Applications of Sorting
+- Typical computer science students study the basic sorting algorithms at least three
+times before they graduate: first in introductory programming, then in data structures, and finally in their algorithms course. Why is sorting worth so much attention? There are several reasons:
+  - Sorting is the basic building block that many other algorithms are built
+around. By understanding sorting, we obtain an amazing amount of power
+to solve other problems.
+  
+  - Most of the interesting ideas used in the design of algorithms appear in the
+context of sorting, such as divide-and-conquer, data structures, and randomized algorithms.
+  
+  - Computers have historically spent more time sorting than doing anything
+else. A quarter of all mainframe cycles were spent sorting data [Knu98]. Sorting remains the most ubiquitous combinatorial algorithm problem in practice
+  
+  - Sorting is the most thoroughly studied problem in computer science. Literally dozens of different algorithms are known, most of which possess some
+particular advantage over all other algorithms in certain situations.
+
+- Many important problems can be reduced to sorting, so we can use our clever
+O(n log n) algorithms to do work that might otherwise seem to require a quadratic
+algorithm. An important algorithm design technique is to use sorting as a basic
+building block, because many other problems become easy once a set of items is
+sorted.
+
+- It is a rare application where the running time of sorting proves to be the bottleneck, especially a bottleneck that could have
+otherwise been removed using more clever algorithmics. Never be afraid to spend
+time sorting, provided you use an efficient sorting routine
+
+  Take-Home Lesson: Sorting lies at the heart of many algorithms. Sorting the
+data is one of the first things any algorithm designer should try in the quest
+for efficiency.
 
 ### Pragmatics of Sorting
 
-### Heapsort: Fast Sorting via Data Structures 
+- We have seen many algorithmic applications of sorting, and we will see several
+efficient sorting algorithms. One issue stands between them: in what order do we
+want our items sorted?
+The answers to this basic question are application-specific. Consider the following considerations:
+  - Increasing or decreasing order?
+  - Sorting just the key or an entire record?
+  - What should we do with equal keys?
+  - What about non-numerical data? (sorting strings etc) - Alphabetizing is the sorting of text strings
 
-### War Story: Give me a Ticket on an Airplane
+### Sorting Algorithms 
 
-### Mergesort: Sorting by Divide-and-Conquer
+- `Heap Sort: Fast Sorting via Data Structures ` -- Heapsort is a great sorting algorithm. It is simple to program; indeed, the
+complete implementation has been presented above. It runs in worst-case O(n log n)
+time, which is the best that can be expected from any sorting algorithm. It is an inplace sort, meaning it uses no extra memory over the array containing the elements
+to be sorted. Although other algorithms prove slightly faster in practice, you won’t
+go wrong using heapsort for sorting data that sits in the computer’s main memory. Priority queues are very useful data structures for this algorithm
 
-### Quicksort: Sorting by Randomization
+- `Mergesort: Sorting by Divide-and-Conquer` -- Recursive algorithms reduce large problems into smaller ones. A recursive approach
+to sorting involves partitioning the elements into two groups, sorting each of the
+smaller problems recursively, and then interleaving the two sorted lists to totally
+order the elements. This algorithm is called mergesort,  Mergesort is a great algorithm for sorting linked lists, because it does not rely on
+random access to elements as does heapsort or quicksort. Its primary disadvantage
+is the need for an auxilliary buffer when sorting arrays. It is easy to merge two
+sorted linked lists without using any extra space, by just rearranging the pointers. Mergesort is a classic divide-and-conquer algorithm.
 
-### Distribution Sort: Sorting via Bucketing
+- `Quicksort: Sorting by Randomization` -- If you can implement quicksort extremly perfect What we can say is that experiments show that where a properly implemented
+quicksort is implemented well, it is typically 2-3 times faster than mergesort or
+heapsort. The primary reason is that the operations in the innermost loop are
+simpler
+
+- `Distribution Sort: Sorting via Bucketing` --
 
 ### War Story: Skiena for the Defense
 
-### Binary Search and Related Algorithms 
+- `Binary Search and Related Algorithms` -- 
 
 ### Divide-and-Conquer
 
