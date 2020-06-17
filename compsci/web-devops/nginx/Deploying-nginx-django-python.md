@@ -46,8 +46,9 @@ and watch this: https://www.youtube.com/watch?v=eEZYDDaDeCs&t=1790
   cd ~/desktop
   mkdir test_project
   cd test_project
+  
   # now create the virtual env
-  virtualenv venv
+  virtualenv -p python3 venv
   ```
   
 ### pip installing django and gunicorn
