@@ -259,15 +259,55 @@ the k-nearest neighbors algorithm You learn about feature extraction. You learn 
 like the value of a stock tomorrow, or how much
 a user will enjoy a movie.
 
-### Classifying orange vs grapefruit
-
 ### Building a recommendations system
 
-- `feature extraction` --
+- Suppose you’re Netflix, and you want to build a movie
+recommendations system for your users You can plot every user on a graph (x, y) These users are plotted by similarity, so users with similar taste are
+plotted closer together
 
-- `regression` --
+  Once you have this graph, building a recommendations system is easy.
+If Justin likes a movie, recommend it to Priyanka because they are close in their own bubble But there’s still a big piece missing. You graphed the users by similarity.
+How do you figure out how similar two users are? 
 
-- `picking good features` --
+  Suppose you’re comparing Netflix users, instead. You need some
+way to graph the users. So, you need to convert each user to a set of
+coordinates Once you can graph users, you can measure the distance between them. 
+
+  Here’s how you can convert users into a set of numbers. When users
+sign up for Netflix, have them rate some categories of movies based on
+how much they like those categories. For each user, you now have a set
+of ratings! and update those cordiantes based on his ratings ont he new movies he/her watches
+
+  The distance formula is flexible: you could have a set of a million
+numbers and still use the same old distance formula to find the
+distance. Maybe you’re wondering, “What does distance mean when
+you have five numbers?” The distance tells you how similar those sets of
+numbers are (a graph distance formula is teached in algebra 1 you can search it on google)
+
+- `regression` -- Suppose you’re trying to guess a rating for Pitch Perfect. Well, how did
+Justin, JC, Joey, Lance, and Chris rate it? (5, 4, 4, 5, 3)
+
+  You could take the average of their ratings and get 4.2 stars.
+That’s called regression. These are the two basic things you’ll do
+with KNN—classification and regression:
+  - Classification = categorization into a group
+  - Regression = predicting a response (like a number)
+  
+- `cosine similarity` -- So far, you’ve been using the distance formula to compare the distance
+between two users. Is this the best formula to use? A common one used
+in practice is cosine similarity. Suppose two users are similar, but one of
+them is more conservative in their ratings. They both loved Manmohan
+Desai’s Amar Akbar Anthony. Paul rated it 5 stars, but Rowan rated it 4
+stars. If you keep using the distance formula, these two users might not be
+each other’s neighbors, even though they have similar tas
+
+  So far, you’ve been using the distance formula to compare the distance
+between two users. Is this the best formula to use? A common one used
+in practice is cosine similarity. Suppose two users are similar, but one of
+them is more conservative in their ratings. They both loved Manmohan
+Desai’s Amar Akbar Anthony. Paul rated it 5 stars, but Rowan rated it 4
+stars. If you keep using the distance formula, these two users might not be
+each other’s neighbors, even though they have similar tas
 
 ### Introduction to machine learning
 
