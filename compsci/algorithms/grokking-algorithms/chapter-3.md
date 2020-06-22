@@ -190,33 +190,59 @@ good approximation algorithms
   
 # Dynamic Programming
 
+- You learn dynamic programming, a
+technique to solve a hard problem by
+breaking it up into subproblems and
+solving those subproblems first.
+
 ### THe knapscak problem
 
-- `the simple solution` --
+- Let’s revisit the knapsack problem from chapter 8.
+You’re a thief with a knapsack that can carry 4 lb
+of goods. You have three items that you can put into the knapsack. What items should you steal so that you steal the maximum money’s
+worth of goods? 
 
-- `dynamic programming` --
+- `the simple solution` --  In chapter 8,
+you saw how to calculate an approximate solution. That solution will be
+close to the optimal solution, but it may not be the optimal solution.(greedy) So how do you calculate the optimal solution?
 
-### Knapsack problem FAQ
-
-- `what happens if you add an item` --
-
-- `what happens if you change the order of the rows` --
-
-- `can you fill in the frid colum wise instead of row-wise` --
-
-- `what happens if you add a smaller item` -- 
-
-- `can you steal fractions of an item?` --
-
-- `optimizing your travel itinerary` --
-
-- `Handling items that depend on each other` --
-
-- `is it possible that the solution will require more than two sub-knapsacks` --
-
-- `Is it possible that the best solution doesnt fill the knapscak completly` --
+- `dynamic programming` --  Dynamic programming starts by
+solving subproblems and builds up to solving the big problem. For the knapsack problem, you’ll start by solving the problem for
+smaller knapsacks (or “sub-knapsacks”) and then work up to solving
+the original problem Dynamic programming is a hard concept, so don’t worry if you don’t get it
+right away
 
 ### Longest common substring
+
+- You’ve seen one dynamic programming problem so far. What are
+the takeaways?
+  
+  Dynamic programming is useful when you’re trying to optimize
+something given a constraint. In the knapsack problem, you had to
+maximize the value of the goods you stole, constrained by the size of
+the knapsack. 
+  
+  You can use dynamic programming when the problem can be broken
+into discrete subproblems, and they don’t depend on each other. It can be hard to come up with a dynamic-programming solution. That’s
+what we’ll focus on in this section. Some general tips follow: 
+  - Every dynamic-programming solution involves a grid.
+  - The values in the cells are usually what you’re trying to optimize.
+For the knapsack problem, the values were the value of the goods
+  - Each cell is a subproblem, so think about how you can divide
+your problem into subproblems. That will help you figure out what
+the axes are.
+
+- `Recap` --
+  - Dynamic programming is useful when you’re trying to optimize
+something given a constraint. 
+  - You can use dynamic programming when the problem can be
+broken into discrete subproblems.
+  - Every dynamic-programming solution involves a grid
+  - The values in the cells are usually what you’re trying to optimize
+  - Each cell is a subproblem, so think about how you can divide your
+problem into subproblems.
+  - There’s no single formula for calculating a dynamic-programming
+solution.
 
 <br>
 <br>
@@ -227,6 +253,11 @@ good approximation algorithms
 <Br>
   
 # K-nearest neighbors
+
+- You learn to build a classification system using
+the k-nearest neighbors algorithm You learn about feature extraction. You learn about regression: predicting a number,
+like the value of a stock tomorrow, or how much
+a user will enjoy a movie.
 
 ### Classifying orange vs grapefruit
 
