@@ -71,8 +71,16 @@ Resources:
    - [ ] Guide: Follow [osdev.wiki](https://wiki.osdev.org/Main_Page)
    - [ ] Tutorial: [little OS tutorial](https://littleosbook.github.io/)
    - [ ] Project : Code a small Operating System
-   - [ ] Book: Add Linux books ...
-   - [ ] Optional: Do more books and projects if you want to focus on this subject.
+   - [ ] Book: Linux For Beginners by Jason Cannon
+   - [ ] Book: The Linux Command Line : A Complete Introduction by William Shotts
+   - [ ] Book: Linux Pocket Guide : Essential Commands by Daniel J. Barrett
+   - [ ] Book: Linux Network Administration Guide by Tony Bautts
+   - [ ] Book: How Linux Works, 2nd Edition by Brian Ward
+   - [ ] Book: Linux Bible by Christopher Negus
+   - [ ] Book: Mastering Linux Security and Hardening by Donald A. Tevault
+   - [ ] Book: Mastering Linux Network Administration by Jay LaCroix
+   - [ ] Book: Pro Linux High Availability Clustering by Sander van Vugt
+   - [ ] Book: Mastering Linux Shell Scripting by Mokhtar Ebrahim
   
  ### Languages and Compilers
 
