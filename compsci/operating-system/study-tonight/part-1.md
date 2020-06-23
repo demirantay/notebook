@@ -34,21 +34,33 @@
 <br>
 <br>
 
-# Evolution of Operating System
-
-- https://www.studytonight.com/operating-system/evolution-of-os   
-
-left it at here
-
-<br>
-<br>
-
----
-
-<br>
-<br>
-
 # Types of Operating System
+
+- Following are some of the most widely used types of Operating system:
+  - Simple Batch System
+  - Multiprogramming Batch System
+  - Multiprocessor System
+  - Desktop System
+  - Distributed Operating System
+  - Clustered System
+  - Realtime Operating System
+  - Handheld System
+  
+- `Simple Batch Systems` -- In this type of system, there is no direct interaction between user and the computer. The user has to submit a job (written on cards or tape) to a computer operator. Then a special program, the monitor, manages the execution of each program in the batch. The monitor is always in the main memory and available for execution.
+
+- `Multiprogramming Batch System` -- In this the operating system picks up and begins to execute one of the jobs from memory If several jobs are ready to run at the same time, then the system chooses which one to run through the process of CPU Scheduling. In Multiprogramming system, CPU will never be idle and keeps on processing.
+
+- `Multiprocessor System` -- A Multiprocessor system consists of several processors that share a common physical memory. Multiprocessor system provides higher computing power and speed. In multiprocessor system all processors operate under single operating system
+
+- `Desktop System` -- Earlier, CPUs and PCs lacked the features needed to protect an operating system from user programs. PC operating systems therefore were neither multiuser nor multitasking. However, the goals of these operating systems have changed with time; instead of maximizing CPU and peripheral utilization, the systems opt for maximizing user convenience and responsiveness. These systems are called Desktop Systems and include PCs running Microsoft Windows and the Apple Macintosh
+
+- `Distributed Operating System` --
+
+- `Clustered System` --
+
+- `Realtime Operating System` --
+
+- `Handheld System` --
 
 <br>
 <br>
