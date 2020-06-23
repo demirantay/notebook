@@ -311,13 +311,47 @@ each other’s neighbors, even though they have similar tas
 
 ### Introduction to machine learning
 
-- `ocr` --
+- KNN is a really useful algorithm, and it’s your introduction to
+the magical world of machine learning! Machine learning is all
+about making your computer more intelligent. You already saw
+one example of machine learning: building a recommendations
+system. Let’s look at some other examples
 
-- `building a spam filter` --
+- `ocr` -- OCR stands for optical character recognition. It means you can take a
+photo of a page of text, and your computer will automatically read the
+text for you. Google uses OCR to digitize books
 
-- `predicting the stock market` --
+  It’s the same KNN problem but isntead of classifying nodes wih their genre you use measre lines and curves. Generally speaking,
+OCR algorithms measure lines, points, and curves
+
+  Feature extraction is a lot more complicated in OCR than the
+fruit example. But it’s important to understand that even complex
+technologies build on simple ideas, like KNN. You could use the same
+ideas for speech recognition or face recognition
+
+- `building a spam filter` -- Spam filters use another simple algorithm called the Naive Bayes
+classifier. First, you train your Naive Bayes classifier on some data. Suppose you get an email with the subject “collect your million dollars
+now!” Is it spam? You can break this sentence into words. Then, for
+each word, see what the probability is for that word to show up in a
+spam email. For example, in this very simple model, the word million
+only appears in spam emails. Naive Bayes figures out the probability
+that something is likely to be spam. It has applications similar to KNN.
+
+- `predicting the stock market` -- Here’s something that’s hard to do with machine learning: really
+predicting whether the stock market will go up or down. How do
+you pick good features in a stock market? Suppose you say that if the
+stock went up yesterday, it will go up today. Is that a good feature? Or
+suppose you say that the stock will always go down in May. this is one of the algorithms that are close on the hard scale.
 
 - `Recap` --
+  - KNN is used for classification and regression and involves looking
+at the k-nearest neighbors.
+  - Classification = categorization into a group
+  - Regression = predicting a response (like a number)
+  - Feature extraction means converting an item (like a fruit or a user)
+into a list of numbers that can be compared.
+  - Picking good features is an important part of a successful KNN
+algorithm
 
 <br>
 <br>
@@ -329,24 +363,199 @@ each other’s neighbors, even though they have similar tas
   
 # Where to go next
 
+- You get a brief overview of 10 algorithms
+that weren’t covered in this book, and why
+they’re useful. You get pointers on what to read next,
+depending on what your interests are.
+
 ### Trees
+
+- Let’s go back to the binary search example.
+When a user logs in to Facebook, Facebook
+has to look through a big array to see if the
+username exists. We said the fastest way to
+search through this array is to run binary
+search. But there’s a problem: every time a new
+user signs up, you insert their username into
+the array. Then you have to re-sort the array,
+because binary search only works with sorted
+arrays. Wouldn’t it be nice if you could insert the username into the right slot in the array right away, so you don’t
+have to sort the array afterward? That’s the idea behind the binary search
+tree data structure
+
+  If you’re interested in databases or more-advanced data structures,
+check these out trees, heaps ... etc.
 
 ### Inverted indexes
 
+- Here’s a very simplified version of how a search engine works. Suppose
+you have three web pages with this simple content. Let’s build a hash table from this content. The keys of the hash table are the words, and the values tell
+you what pages each word appears on. Now suppose a user
+searches for hi. Let’s see what pages hi shows up on. Aha: It appears on pages A and B. Let’s show the user those pages as
+the result. 
+
+   This is a useful data
+structure: a hash that maps words to places where they appear. This
+data structure is called an inverted index, and it’s commonly used to
+build search engines.
+
 ### The fourier transforms
+
+- The Fourier transform is one of those rare algorithms: brilliant,
+elegant, and with a million use cases. The best analogy for the Fourier
+transform comes from Better Explained (a great website that explains
+math simply): given a smoothie, the Fourier transform will tell you the
+ingredients in the smoothie.1
+ Or, to put it another way, given a song, the
+transform can separate it into individual frequencies.
+
+   Fourier
+transform is great for processing signals. You can also use it to compress
+music. First you break an audio file down into its ingredient notes. The
+Fourier transform tells you exactly how much each note contributes
+to the overall song. So you can just get rid of the notes that aren’t
+important. That’s how the MP3 format works!
+
+  Music isn’t the only type of digital signal. The JPG format is another
+compressed format, and it works the same way. People use the Fourier
+transform to try to predict upcoming earthquakes and analyze DNA.  You can use it to build an app like Shazam, which guesses what song is
+playing. 
 
 ### Parallel algorithms
 
+- The next three topics are about scalability and working with a lot of
+data. Back in the day, computers kept getting faster and faster. If you
+wanted to make your algorithm faster, you could wait a few months,
+and the computers themselves would become faster. But we’re near the
+end of that perio  To make your algorithms faster, you need to change them to run
+in parallel across all the cores at once!
+
+  Parallel algorithms are hard to design. And it’s also hard to make sure
+they work correctly and to figure out what type of speed boost you’ll
+see. One thing is for sure—the time gains aren’t linear. So if you have
+two cores in your laptop instead of one, that almost never means your
+algorithm will magically run twice as fast.
+
+  There are a couple of reasons
+for this:
+  - Overhead of managing the parallelism
+  - Load balancing
+  
+  If you’re interested in the theoretical side of performance and scalability,
+parallel algorithms might be for you! 
+
 ### MapReduce
+
+- There’s a special type of parallel algorithm that is becoming increasingly
+popular: the distributed algorithm. It’s fine to run a parallel algorithm
+on your laptop if you need two to four cores, but what if you need
+hundreds of cores? Then you can write your algorithm to run across
+multiple machines. The MapReduce algorithm is a popular distributed
+algorithm.
+
+  Suppose you have a table with billions or trillions of rows, and you
+want to run a complicated SQL query on it. You can’t run it on MySQL,
+because it struggles after a few billion rows. Use MapReduce
+
+  Distributed algorithms are great when you have a lot of work to do
+and want to speed up the time required to do it
+
+  MapReduce uses these two simple concepts to run queries about data
+across multiple machines. When you have a large dataset (billions
+of rows), MapReduce can give you an answer in minutes where a
+traditional database might take hours. 
 
 ### Bloom filters and HyperLogLog
 
+- Or suppose you’re Google, and you’re crawling web pages. You only
+want to crawl a web page if you haven’t crawled it already. So you need
+to figure out whether this page has been crawled before. these examples have the same problem. You have a very large set.
+
+  Now you have a new item, and you want to see whether it belongs in
+that set. You could do this quickly with a hash. For example, suppose
+Google has a big hash in which the keys are all the pages it has crawled. You want to see whether you’ve already crawled adit.io. Look it up in
+the hash.
+
+  adit.io is a key in the hash, so you’ve already crawled it. The average
+lookup time for hash tables is O(1). adit.io is in the hash, so you’ve
+already crawled it. You found that out in constant time. Pretty good!
+
+  Except that this hash needs to be huge. Google indexes trillions of web
+pages. If this hash has all the URLs that Google has indexed, it will take
+up a lot of space. Reddit and bit.ly have the same space problem. When
+you have so much data, you need to get creative!
+
+- `Bloomfilters` -- Bloom filters offer a solution. Bloom filters are probabilistic data
+structures. They give you an answer that could be wrong but is probably
+correct. Instead of a hash, you can ask your bloom filter if you’ve
+crawled this URL before. A hash table would give you an accurate
+answer. A bloom filter will give you an answer that’s probably correct
+
+  Bloom filters are great because they take up very little space. A hash
+table would have to store every URL crawled by Google, but a bloom
+filter doesn’t have to do that. They’re great when you don’t need an exact
+answer, as in all of these examples
+
+- `hyperloglog` -- Along the same lines is another algorithm called HyperLogLog.
+Suppose Google wants to count the number of unique searches
+performed by its users. Or suppose Amazon wants to count the number
+of unique items that users looked at today. Answering these questions
+takes a lot of space! With Google, you’d have to keep a log of all the
+unique searches g. Even
+for a single day, this log would be massive! 
+
+  HyperLogLog approximates the number of unique elements in a set.
+Just like bloom filters, it won’t give you an exact answer, but it comes
+very close and uses only a fraction of the memory a task like this would
+otherwise take.
+
 ### The SHA Algorithms
 
-### Locality-sensetive hashing
+- Other than hash table usage hash function is used in secure hash algorithm (SHA) function. The terminology can be a little confusing here. SHA is a hash function.
+It generates a hash, which is just a short string. The hash function for
+hash tables went from string to array index, whereas SHA goes from
+string to string. 
+
+  SHA is also useful when you want to compare strings without revealing
+what the original string was. For example, suppose Gmail gets hacked,
+and the attacker steals all the passwords! Is your password out in the
+open? No, it isn’t. Google doesn’t store the original password, only the
+SHA hash of the password! The gold standard for password-hashing functions is currently
+bcrypt (though nothing is foolproof). 
 
 ### Diffie-Hellman key exchange
 
+- Diffie-Hellman has two keys: a public key and a private key. The public
+key is exactly that: public. You can post it on your website, email it
+to friends, or do anything you want with it. You don’t have to hide it.
+When someone wants to send you a message, they encrypt it using
+the public key. An encrypted message can only be decrypted using the
+private key. As long as you’re the only person with the private key, only
+you will be able to decrypt this message
+
+  The Diffie-Hellman algorithm is still used in practice, along with its
+successor, RSA. If you’re interested in cryptography, Diffie-Hellman is a
+good place to start: it’s elegant and not too hard to follow
+
 ### Linear Programming 
 
-### Epilogue
+- Linear programming is used to maximize something given some
+constraints. For example, suppose your company makes two products,
+shirts and totes. Shirts need 1 meter of fabric and 5 buttons. Totes need
+2 meters of fabric and 2 buttons. You have 11 meters of fabric and 20
+buttons. You make $2 per shirt and $3 per tote. How many shirts and
+totes should you make to maximize your profit?  Here you’re trying to maximize profit, and you’re constrained by the
+amount of materials you have.
+
+  Another example: you’re a politician, and you want to maximize the
+number of votes you get. Your research has shown that it takes an
+average of an hour of work (marketing, research, and so on) for each
+vote from a San Franciscan or 1.5 hours/vote from a Chicagoan. You
+need at least 500 San Franciscans and at least 300 Chicagoans. 
+
+  50 days. It also costs you $2/San Franciscan versus $1/Chicagoan. Your
+total budget is $1,500. What’s the maximum number of total votes you
+can get (San Francisco + Chicago)? Here you’re trying to maximize votes, and you’re constrained by time
+and money. 
+
+<br>
