@@ -270,15 +270,51 @@ quicksort is implemented well, it is typically 2-3 times faster than mergesort o
 heapsort. The primary reason is that the operations in the innermost loop are
 simpler
 
-- `Distribution Sort: Sorting via Bucketing` --
+- `Take-Home Lesson`: Sorting can be used to illustrate most algorithm design
+paradigms. Data structure techniques, divide-and-conquer, randomization, and
+incremental construction all lead to efficient sorting algorithms
 
-### War Story: Skiena for the Defense
+### Binary Search and Related Algorithms
 
-- `Binary Search and Related Algorithms` -- 
+- Binary search is a fast algorithm for searching in a sorted array of keys S. To search
+for key q, we compare q to the middle key S[n/2]. If q appears before S[n/2], it
+must reside in the top half of S; if not, it must reside in the bottom half of S. By
+repeating this process recursively on the correct half, we locate the key in a total
+of ⌈lg n⌉ comparisons—a big win over the n/2 comparisons expect using sequential
+search
+
+- `Take-Home Lesson`: Binary search and its variants are the quintessential
+divide-and-conquer algorithms.
 
 ### Divide-and-Conquer
 
-### Exercises
+- One of the most powerful techniques for solving problems is to break them down
+into smaller, more easily solved pieces. Smaller problems are less overwhelming, and
+they permit us to focus on details that are lost when we are studying the entire
+problem. A recursive algorithm starts to become apparent when we can break
+the problem into smaller instances of the same type of problem.
+
+  Two important algorithm design paradigms are based on breaking problems
+down into smaller problems. In Chapter 8, we will see dynamic programming,
+which typically removes one element from the problem, solves the smaller problem,
+and then uses the solution to this smaller problem to add back the element in the
+proper way. Divide-and-conquer instead splits the problem in (say) halves, solves
+each half, then stitches the pieces back together to form a full solution.
+
+  Divide-and-conquer is a design technique with many important algorithms to
+its credit, including mergesort, the fast Fourier transform, and Strassen’s matrix
+multiplication algorithm. Beyond binary search and its many variants, however, I
+find it to be a difficult design technique to apply in practice.
+
+- `Chapter Notes` -- The most interesting sorting algorithms that have not been discussed in this section
+include shellsort, which is a substantially more efficient version of insertion sort,
+and radix sort, an efficient algorithm for sorting strings. You can learn more about
+these and every other sorting algorithm by browsing through Knuth [Knu98], with
+hundreds of pages of interesting material on sorting. This includes external sorting,
+the subject of this chapter’s legal war story
+
+  Several other algorithms texts provide more substantive coverage of divideand-conquer algorithms, including [CLRS01, KT06, Man89]. See [CLRS01] for an
+excellent overview of the master theorem.
 
 <br>
 <br>
@@ -288,405 +324,3 @@ simpler
 <bR>
 <Br>
   
-# 5 Graph Traversal
-
-### Flavors of Graphs
-
-### Data Structures for Graphs
-
-### War Story: I was a Victim of Moore’s Law 
-
-### War Story: Getting the Graph
-
-### Traversing a Graph
-
-### Breadth-First Search
-
-### Applications of Breadth-First Search
-
-### Depth-First Search
-
-### Applications of Depth-First Search
-
-### Depth-First Search on Directed Graphs
-
-### Exercises
-
-<br>
-<br>
-
----
-
-<bR>
-<Br>
-  
-# 6 Weighted Graph Algorithms
-
-### Minimum Spanning Trees
-
-### War Story: Nothing but Nets
-
-### Shortest Paths 
-
-### War Story: Dialing for Documents
-
-### Network Flows and Bipartite Matching
-
-### Design Graphs, Not Algorithms
-
-### Exercises
-
-<br>
-<br>
-
----
-
-<bR>
-<Br>
-  
-# 7 Combinatorial Search and Heuristic Methods
-
-### Backtracking
-
-### Search Pruning
-
-### Sudoku
-
-### War Story: Covering Chessboards
-
-### Heuristic Search Methods
-
-### War Story: Only it is Not a Radio
-
-### War Story: Annealing Arrays
-
-### Other Heuristic Search Methods
-
-### Parallel Algorithms
-
-### War Story: Going Nowhere Fast
-
-### Exercises
-
-<br>
-<br>
-
----
-
-<bR>
-<Br>
-  
-# 8 Dynamic Programming
-
-### Caching vs. Computation
-
-### Approximate String Matching
-
-### Longest Increasing Sequence
-
-### War Story: Evolution of the Lobster
-
-### The Partition Problem
-
-### Parsing Context-Free Grammars
-
-### Limitations of Dynamic Programming: TSP
-
-### War Story: What’s Past is Prolog
-
-### War Story: Text Compression for Bar Codes
-
-### Exercises
-
-<br>
-<br>
-
----
-
-<bR>
-<Br>
-  
-# 9 Intractable Problems and Approximation Algorithms
- 
-### Problems and Reductions
-
-### Reductions for Algorithms
-
-### Elementary Hardness Reductions
-
-### Satisfiability .
-
-### Creative Reductions
-
-### The Art of Proving Hardness
-
-### War Story: Hard Against the Clock 
-
-### War Story: And Then I Failed
-
-### P vs. NP
-
-### Dealing with NP-complete Problems
-
-### Exersices
-
-<br>
-<br>
-
----
-
-<bR>
-<Br>
-  
-# 10 How to Design Algorithms
-
-<br>
-<br>
-
----
-
-<bR>
-<Br>
-  
-# 11 A Catalog of Algorithmic Problems
-
-<br>
-<br>
-
----
-
-<bR>
-<Br>
-  
-# 12 Data Structures
-
-### Dictionaries
-
-### Priority Queues
-
-### Suffix Trees and Arrays 
-
-### Graph Data Structures
-
-### Set Data Structures
-
-### Kd-Trees
-
-<br>
-<br>
-
----
-
-<bR>
-<Br>
-  
-# 13 Numerical Problems
-
-### Solving Linear Equations
-
-### Bandwidth Reduction
-
-### Matrix Multiplication 
-
-### Determinants and Permanents
-
-### Constrained and Unconstrained Optimization
-
-### Linear Programming
-
-### Random Number Generation
-
-### Factoring and Primality Testing .
-
-### Arbitrary-Precision Arithmetic
-
-### Knapsack Problem
-
-### Discrete Fourier Transform
-
-<br>
-<br>
-
----
-
-<bR>
-<Br>
-  
-# 14 Combinatorial Problems
-
-### Sorting 
-
-### Searching
-
-### Median and Selection
-
-### Generating Permutations .
-
-### Generating Subsets
-
-### Generating Partitions
-
-### Generating Graphs
-
-### Calendrical Calculations
-
-### Job Scheduling
-
-### Satisfiability
-
-<br>
-<br>
-
----
-
-<bR>
-<Br>
-  
-# 15 Graph Problems: Polynomial-Time
-
-### Connected Components
-
-### Topological Sorting
-
-### Minimum Spanning Tree
-
-### Shortest Path
-
-### Transitive Closure and Reduction
-
-### Matching
-
-### Eulerian Cycle/Chinese Postman
-
-### Edge and Vertex Connectivity
-
-### Network Flow
-
-### Drawing Graphs Nicely
-
-### Drawing Trees
-
-### Planarity Detection and Embedding
-
-<br>
-<br>
-
----
-
-<bR>
-<Br>
-  
-# 16 Graph Problems: Hard Problems
-
-### Clique
-
-### Independent Set
-
-### Vertex Cover
-
-### Traveling Salesman Problem
-
-### Hamiltonian Cycle
-
-### Graph Partition
-
-### Vertex Coloring
-
-### Edge Coloring
-
-### Graph Isomorphism
-
-### Steiner Tree
-
-### Feedback Edge/Vertex Set
-
-<br>
-<br>
-
----
-
-<bR>
-<Br>
-  
-# 17 Computational Geometry
-
-### Robust Geometric Primitives
-
-### Convex Hull
-
-### Triangulation
-
-### Voronoi Diagrams
-
-### Nearest Neighbor Search
-
-### Range Search
-
-### Point Location
-
-### Intersection Detection
-
-### Bin Packing
-
-### Medial-Axis Transform
-
-### Polygon Partitioning
-
-### Simplifying Polygons
-
-### Shape Similarity 
-
-### Motion Planning
-
-### Maintaining Line Arrangements
-
-### Minkowski Sum
-
-<br>
-<br>
-
----
-
-<bR>
-<Br>
-  
-# 18 Set and String Problems
-
-### Set Cover
-
-### Set Packing
-
-### String Matching
-
-### Approximate String Matching
-
-### Text Compression
-
-### Cryptography
-
-### Finite State Machine Minimization
-
-### Longest Common Substring/Subsequence
-
-### Shortest Common Superstring
-
-<br>
-<br>
-
----
-
-<bR>
-<Br>
-  
-# 19 Algorithmic Resources
-
-### Software Systems
-
-### Data Sources
-
-### Online Bibliographic Resources
-
-### Professional Consulting Services
-
-
-<Br>
