@@ -54,13 +54,17 @@
 
 - `Desktop System` -- Earlier, CPUs and PCs lacked the features needed to protect an operating system from user programs. PC operating systems therefore were neither multiuser nor multitasking. However, the goals of these operating systems have changed with time; instead of maximizing CPU and peripheral utilization, the systems opt for maximizing user convenience and responsiveness. These systems are called Desktop Systems and include PCs running Microsoft Windows and the Apple Macintosh
 
-- `Distributed Operating System` --
+- `Distributed Operating System` -- The motivation behind developing distributed operating systems is the availability of powerful and inexpensive microprocessors and advances in communication technology These advancements in technology have made it possible to design and develop distributed systems comprising of many computers that are inter connected by communication networks. The main benefit of distributed systems is its low price/performance ratio.
 
-- `Clustered System` --
+   Following are the two types of distributed operating systems used:
+   - Client-Server Systems
+   - Peer-to-Peer Systems
 
-- `Realtime Operating System` --
+- `Clustered System` -- Like parallel systems, clustered systems gather together multiple CPUs to accomplish computational work. Clustered systems differ from parallel systems, however, in that they are composed of two or more individual systems coupled together. A layer of cluster software runs on the cluster nodes. Each node can monitor one or more of the others. If the monitored machine fails, the monitoring machine can take ownership of its storage, and restart the application(s) that were running on the failed machine. The failed machine can remain down, but the users and clients of the application would only see a brief interruption of service.
 
-- `Handheld System` --
+- `Realtime Operating System` -- A layer of cluster software runs on the cluster nodes. Each node can monitor one or more of the others. If the monitored machine fails, the monitoring machine can take ownership of its storage, and restart the application(s) that were running on the failed machine. The failed machine can remain down, but the users and clients of the application would only see a brief interruption of service.
+
+- `Handheld System` -- Handheld systems include Personal Digital Assistants(PDAs), such as Palm-Pilots or Cellular Telephones with connectivity to a network such as the Internet. They are usually of limited size due to which most handheld devices have a small amount of memory, include slow processors, and feature small display screens.
 
 <br>
 <br>
@@ -72,6 +76,30 @@
 
 # Operating System Processes
 
+- A process is a program in execution. Process is not as same as program code but a lot more than it. A process is an 'active' entity as opposed to program which is considered to be a 'passive' entity. Attributes held by process include hardware state, memory, CPU etc.
+
+   Process memory is divided into four sections for efficient working :
+   - 1 - The Text section is made up of the compiled program code, read in from non-volatile storage when the program is launched.
+   - 2 - The Data section is made up the global and static variables, allocated and initialized prior to executing the main
+   - 3 - The Heap is used for the dynamic memory allocation, and is managed via calls to new, delete, malloc, free, etc
+   - 4 - The Stack is used for local variables. Space on the stack is reserved for local variables when they are declared.
+   
+ - `Different Process States` -- Processes in the operating system can be in any of the following states:
+   - NEW- The process is being created.
+   - READY- The process is waiting to be assigned to a processor.
+   - RUNNING- Instructions are being executed.
+   - WAITING- The process is waiting for some event to occur(such as an I/O completion or reception of a signal).
+   - TERMINATED- The process has finished execution.
+   
+ - `Process Control Block` -- There is a Process Control Block for each process, enclosing all the information about the process. It is a data structure, which contains the following:
+   - Process State: It can be running, waiting etc.
+   - Process ID and the parent process ID.
+   - CPU registers and Program Counter. Program Counter holds the address of the next instruction to be executed for that process.
+   - CPU Scheduling information: Such as priority information and pointers to scheduling queues.
+   - Memory Management information: For example, page tables or segment tables.
+   - Accounting information: The User and kernel CPU time consumed, account numbers, limits, etc.
+   - I/O Status information: Devices allocated, open file tables, etc.
+   
 <br>
 <br>
 
@@ -81,6 +109,21 @@
 <br>
 
 # Process Scheduling
+
+- The act of determining which process is in the ready state, and should be moved to the running state is known as Process Scheduling. The prime aim of the process scheduling system is to keep the CPU busy all the time and to deliver minimum response time for all programs
+
+- `What are Scheduling Queues?` -- 
+  - All processes, upon entering into the system, are stored in the Job Queue.
+  - Processes in the Ready state are placed in the Ready Queue.
+  
+- `Types of Schedulers` -- There are three types of schedulers available:
+  - 1 - Long Term Scheduler
+  - 2 - Short Term Scheduler
+  - 3 - Medium Term Schedule
+  
+- `What is Context Switch?` -- Switching the CPU to another process requires saving the state of the old process and loading the saved state for the new process. This task is known as a Context Switch.
+
+- `Process Creation` -- Through appropriate system calls, such as fork or spawn, processes may create other processes. The process which creates other process, is termed the parent of the other process, while the created sub-process is termed its child. Each process is given an integer identifier, termed as process identifier, or PID. The parent PID (PPID) is also stored for each process.
 
 <br>
 <br>
@@ -92,6 +135,30 @@
 
 # CPU Scheduling
 
+- `What is CPU Scheduling?` -- CPU scheduling is a process which allows one process to use the CPU while the execution of another process is on hold(in waiting state) due to unavailability of any resource like I/O etc, thereby making full use of CPU. The aim of CPU scheduling is to make the system efficient, fast and fair.
+
+- `Types of CPU Scheduling` -- CPU scheduling decisions may take place under the following four circumstances:
+  - When a process switches from the running state to the waiting state(for I/O request or invocation of wait for the termination of one of the child processes).
+  - When a process switches from the running state to the ready state (for example, when an interrupt occurs).
+  - When a process switches from the waiting state to the ready state(for example, completion of I/O).
+  - When a process terminates.
+  
+- There are many different criterias to check when considering the "best" scheduling algorithm, they are:
+  - `CPU Utilization` -- To make out the best use of CPU and not to waste any CPU cycle, CPU would be working most of the time(Ideally 100% of the time). 
+  - `Throughput` -- It is the total number of processes completed per unit time or rather say total amount of work done in a unit of time
+  - `Turnaround Time` -- It is the amount of time taken to execute a particular process
+  - `Waiting Time` -- The sum of the periods spent waiting in the ready queue amount of time a process has been waiting in the ready queue to acquire get control on the CPU.
+  - `Load Average` -- It is the average number of processes residing in the ready queue waiting for their turn to get into the CPU
+  - `Response Time` -- Amount of time it takes from when a request was submitted until the first response is produced.
+  
+ - `Scheduling Algorithms`: To decide which process to execute first and which process to execute last to achieve maximum CPU utilisation, computer scientists have defined some algorithms, they are:
+  - 1 - First Come First Serve(FCFS) Scheduling 
+  - 2 - Shortest-Job-First(SJF) Scheduling
+  - 3 - Priority Scheduling
+  - 4 - Round Robin(RR) Scheduling
+  - 5 - Multilevel Queue Scheduling
+  - 6 - Multilevel Feedback Queue Scheduling
+
 <br>
 <br>
 
@@ -101,6 +168,24 @@
 <br>
 
 # Introduction to Threads
+
+- `What are threads` -- Thread is an execution unit which consists of its own program counter, a stack, and a set of registers. Threads are also known as Lightweight processes. Threads are popular way to improve application through parallelism. The CPU switches rapidly back and forth among the threads giving illusion that the threads are running in parallel
+
+- `Types of Threads` -- There are two types of threads:
+  - User Threads
+  - Kernel Threads
+  
+  User threads, are above the kernel and without kernel support. These are the threads that application programmers use in their programs.
+  
+  Kernel threads are supported within the kernel of the OS itself. All modern OSs support kernel level threads, allowing the kernel to perform multiple simultaneous tasks and/or to service multiple kernel system calls simultaneously.
+  
+- `Multithreading Models` -- The user threads must be mapped to kernel threads, by one of the following strategies:
+  - Many to One Model -- In the many to one model, many user-level threads are all mapped onto a single kernel thread.
+  - One to One Model -- The one to one model creates a separate kernel thread to handle each and every user thread.
+  - Many to Many Model -- The many to many model multiplexes any number of user threads onto an equal or smaller number of kernel threads
+  
+- `What are Thread Libraries?` -- Thread libraries provide programmers with API for creation and management of threads. Thread libraries may be implemented either in user space or in kernel space. The user space involves API functions implemented solely within the user space, with no kernel support. The kernel space involves system calls, and requires a kernel with thread library support.
+  
 
 <br>
 <br>
