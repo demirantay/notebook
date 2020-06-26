@@ -143,10 +143,28 @@ efficient graph algorithms.
 
 ### Depth-First Search
 
-### Applications of Depth-First Search
+- There are two primary graph traversal algorithms: breadth-first search (BFS) and
+depth-first search (DFS). For certain problems, it makes absolutely no difference
+which you use, but in others the distinction is crucial.
 
-### Depth-First Search on Directed Graphs
+  There are two primary graph traversal algorithms: breadth-first search (BFS) and
+depth-first search (DFS). For certain problems, it makes absolutely no difference
+which you use, but in others the distinction is crucial.
 
+  - Queue – By storing the vertices in a first-in, first-out (FIFO) queue, we
+explore the oldest unexplored vertices first. Thus our explorations radiate
+out slowly from the starting vertex, defining a breadth-first search.
+
+  - Stack – By storing the vertices in a last-in, first-out (LIFO) stack, we explore
+the vertices by lurching along a path, visiting a new neighbor if one is available, and backing up only when we are surrounded by previously discovered
+vertices. Thus, our explorations quickly wander away from our starting point,
+defining a depth-first search.
+
+  A depth-first search can be thought of as a breadth-first search with a stack instead
+of a queue.
+
+- Take-Home Lesson: DFS organizes vertices by entry/exit times, and edges
+into tree and back edges. This organization is what gives DFS its real power
 
 <br>
 <br>
@@ -157,6 +175,8 @@ efficient graph algorithms.
 <Br>
 
 # 6 Weighted Graph Algorithms
+
+> I left the book at here 203 on pdf on the local disk
 
 ### Minimum Spanning Trees
 
