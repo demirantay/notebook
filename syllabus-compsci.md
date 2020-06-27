@@ -65,7 +65,7 @@ Resources:
 ### Operating Systems
 
    - [x] Book: [The xv6 book](https://pdos.csail.mit.edu/6.828/2017/xv6/book-rev10.pdf)
-   - [ ] Read: The [This tutorial](https://www.studytonight.com/operating-system/)
+   - [x] Read: The [This tutorial](https://www.studytonight.com/operating-system/)
    - [ ] Book: [Operating Systems: Three Easy Pieces](http://pages.cs.wisc.edu/~remzi/OSTEP/)
    - [ ] Book : Modern Operating Systems Book by Andrew S. Tanenbaum
    - [ ] Guide: Follow [osdev.wiki](https://wiki.osdev.org/Main_Page)
