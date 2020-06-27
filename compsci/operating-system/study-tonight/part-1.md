@@ -211,25 +211,23 @@
 
 # Classical Synchronization Problems
 
-<br>
-<br>
+- Below are some of the classical problem depicting flaws of process synchronaization in systems where cooperating processes are present. We will discuss the following three problems:
+   - 1 - Bounded Buffer (Producer-Consumer) Problem
+   - 2 - Dining Philosophers Problem
+   - 3 - The Readers Writers Problem
 
----
+- `Bounded Buffer (Producer-Consumer) Problem` -- This problem is generalised in terms of the Producer Consumer problem, where a finite buffer pool is used to exchange messages between producer and consumer processes.
+Because the buffer pool has a maximum size, this problem is often called the Bounded buffer problem.
 
-<br>
-<br>
+   Solution to this problem is, creating two counting semaphores "full" and "empty" to keep track of the current number of full and empty buffers respectively.
 
-# Deadlocks
+- `Dining Philosophers Problem` -- The dining philosopher's problem involves the allocation of limited resources to a group of processes in a deadlock-free and starvation-free manner.
 
-<br>
-<br>
+   There are five philosophers sitting around a table, in which there are five chopsticks/forks kept beside them and a bowl of rice in the centre, When a philosopher wants to eat, he uses two chopsticks - one from their left and one from their right. When a philosopher wants to think, he keeps down both chopsticks at their original place.
 
----
+- `The Readers Writers Problem` -- In this problem there are some processes(called readers) that only read the shared data, and never change it, and there are other processes(called writers) who may change the data in addition to reading, or instead of reading it.
 
-<br>
-<br>
-
-# Memory Management
+- `deadlocks` -- Deadlocks are a set of blocked processes each holding a resource and waiting to acquire a resource held by another process.
 
 <br>
 <br>
@@ -238,85 +236,3 @@
 
 <br>
 <br>
-
-# Virtual Memory
-
-<br>
-<br>
-
----
-
-<br>
-<br>
-
-# File System
-
-<br>
-<br>
-
----
-
-<br>
-<br>
-
-# Banker's Algorithm
-
-<br>
-<br>
-
----
-
-<br>
-<br>
-
-# Bounded Buffer Problem
-
-<br>
-<br>
-
----
-
-<br>
-<br>
-
-# Comparision of Scheduling Algorithms
-
-<br>
-<br>
-
----
-
-<br>
-<br>
-
-# Dining Philosophers Problem
-
-<br>
-<br>
-
----
-
-<br>
-<br>
-
-# Readers Writer Problem
-
-<br>
-<br>
-
----
-
-<br>
-<br>
-
-# Secondary Storage
-
-<br>
-<br>
-
----
-
-<br>
-<br>
-
-# System Calls
