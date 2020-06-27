@@ -1,14 +1,3 @@
-# 1 - A Dialogue on the Book
-
-
-<br>
-<br>
-
----
-
-<br>
-<br>
-
 # 2 - Introduction to Operating Systems
 
 - `Virtualizing The CPU` --
