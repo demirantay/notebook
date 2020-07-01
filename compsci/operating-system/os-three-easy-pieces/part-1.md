@@ -146,20 +146,36 @@ persistence via devices and file systems
 <br>
 <br>
 
-# 3 - A Dialogue on Virtualization
-
-
-<br>
-<br>
-
----
-
-<br>
-<br>
-
 # 4 -  The Abstraction: The Process
 
-- __`The Abstraction: A Process`__ --
+- In this chapter, we discuss one of the most fundamental abstractions that
+the OS provides to users: the process. The definition of a process, informally, is quite simple: it is a running program.  The program
+itself is a lifeless thing: it just sits there on the disk, a bunch of instructions
+(and maybe some static data), waiting to spring into action. It is the operating system that takes these bytes and gets them running, transforming
+the program into something useful.
+
+  The OS creates this illusion by virtualizing the CPU. By running one
+process, then stopping it and running another, and so forth, the OS can
+promote the illusion that many virtual CPUs exist when in fact there is
+only one physical CPU (or a few). This basic technique, known as time
+sharing of the CPU, allows users to run as many concurrent processes as
+they would like; the potential cost is performance, as each will run more
+slowly if the CPU(s) must be shared.
+
+  To implement virtualization of the CPU, and to implement it well, the
+OS will need both some low-level machinery and some high-level intelligence. We call the low-level machinery __mechanisms__. On top of these mechanisms resides some of the intelligence in the
+OS, in the form of __policies__. Policies are algorithms for making some
+kind of decision within the OS. For example, given a number of possible programs to run on a CPU, which program should the OS run? A
+scheduling policy in the OS will make this decision
+
+- __`The Abstraction: A Process`__ -- The abstraction provided by the OS of a running program is something
+we will call a process. As we said above, a process is simply a running
+program To understand what constitutes a process, we thus have to understand
+its __machine state__: what a program can read or update when it is running
+
+  One obvious component of machine state that comprises a process is
+its memory. Instructions lie in memory; the data that the running program reads and writes sits in memory as well. Thus the memory that the
+process can address (called its address space)
 
 - __`Process API`__ --
 
