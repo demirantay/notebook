@@ -235,39 +235,84 @@ mechanisms needed to implement processes, and the higher-level policies required
 
 # 5 - Interlude: Process API
 
-- __`The fork() System Call`__ --
+> Interludes will cover more practical aspects of systems, including a particular focus on operating system APIs and how to use them. If you don’t
+like practical things, you could skip these interludes. But you should like
+practical things, because, well, they are generally useful in real life; companies, for example, don’t usually hire you for your non-practical skills.
 
-- __`The wait() System Call`__ --
+- In this interlude, we discuss process creation in UNIX systems. UNIX
+presents one of the most intriguing ways to create a new process with
+a pair of system calls: `fork()` and `exec()`.
 
-- __`Finally, The exec() System Call`__ --
+- __`The fork() System Call`__ -- The fork() system call is used to create a new process [C63]. However, be forewarned: it is certainly the strangest routine you will ever
+call1
 
-- __`Why? Motivating The API`__ --
+- __`The wait() System Call`__ -- So far, we haven’t done much: just created a child that prints out a
+message and exits. Sometimes, as it turns out, it is quite useful for a
+parent to wait for a child process to finish what it has been doing. This
+task is accomplished with the `wait()` system call (or its more complete
+sibling `waitpid()`)
 
-- __`Process Control And Users`__ --
+- __`Finally, The exec() System Call`__ -- A final and important piece of the process creation API is the exec()
+system call3
+. This system call is useful when you want to run a program
+that is different from the calling program
 
-- __`Useful Tools`__ --
+  There are lots of ways to design APIs for process creation; however, the combination
+of fork() and exec() are simple and immensely powerful. Here, the
+UNIX designers simply got it right.
 
-- __`Summary`__ --
+- __`Why? Motivating The API`__ -- Of course, one big question you might have: why would we build
+such an odd interface to what should be the simple act of creating a new
+process? Well, as it turns out, the separation of fork() and exec() is
+essential in building a UNIX shell, because it lets the shell run code after
+the call to fork() but before the call to exec(); this code can alter the
+environment of the about-to-be-run program, and thus enables a variety
+of interesting features to be readily built. 
 
-<br>
-<br>
+  The shell is just a user program4
+. It shows you a prompt and then
+waits for you to type something into it. calls fork() to create a new child process to run the command,
+calls some variant of exec() to run the command, and then waits for the
+command to complete by calling wait(). The separation of fork() and exec() allows the shell to do a whole
+bunch of useful things rather easily.
 
----
+- __`Process Control And Users`__ -- Beyond fork(), exec(), and wait(), there are a lot of other interfaces for interacting with processes in UNIX systems. For example, the
+kill() system call is used to send signals to a process
 
-<br>
-<br>
+  This naturally raises the question: who can send a signal to a process,
+and who cannot? Generally, the systems we use can have multiple people
+using them at the same time; if one of these people can arbitrarily send
+signals such as SIGINT (to interrupt a process, likely terminating it), the
+usability and security of the system will be compromised. As a result,
+modern systems include a strong conception of the notion of a user. The
+user, after entering a password to establish credentials, logs in to gain
+access to system resources
 
-# 6 - Mechanism: Limited Direct Execution
+> Many times in this book, when referring to a particular system call or
+library call, we’ll tell you to read the manual pages, or man pages for
+short. Man pages are the original form of documentation that exist on
+UNIX systems; realize that they were created before the thing called the
+web existed. Spending some time reading man pages is a key step in the growth of
+a systems programmer; there are tons of useful tidbits hidden in those
+pages. Some particularly useful pages to read are the man pages for
+whichever shell you are using (e.g., tcsh, or bash),
 
-- `Basic Technique: Limited Direct Execution` --
+- __`Useful Tools`__ -- There are many command-line tools that are useful as well. For example, using the `ps` command allows you to see which processes are running; read the man pages for some useful flags to pass to ps.  The tool `top`
+is also quite helpful, as it displays the processes of the system and how
+much CPU and other resources they are eating up. Humorously, many
+times when you run it, top claims it is the top resource hog; perhaps it is
+a bit of an egomaniac.
 
-- `Problem #1: Restricted Operations` --
-
-- `Problem #2: Switching Between Processes` --
-
-- `Worried About Concurrency?` --
-
-- `Summary` --
+- __`The superuser`__ -- A system generally needs a user who can administer the system, and is
+not limited in the way most users are. Such a user should be able to kill
+an arbitrary process (e.g., if it is abusing the system in some way), even
+though that process was not started by this user. Such a user should also
+be able to run powerful commands such as shutdown (which, unsurprisingly, shuts down the system). In UNIX-based systems, these special abilities are given to the superuser (sometimes called root). While most users
+can’t kill other users processes, the superuser can. Being root is much like
+being Spider-Man: with great power comes great responsibility [QI15].
+Thus, to increase security (and avoid costly mistakes), it’s usually better
+to be a regular user; if you do need to be root, tread carefully, as all of the
+destructive powers of the computing world are now at your fingertips.
 
 <br>
 <br>
