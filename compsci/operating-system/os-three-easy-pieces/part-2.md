@@ -1,14 +1,14 @@
 # 6 - Mechanism: Limited Direct Execution
 
-- `Basic Technique: Limited Direct Execution` --
+- __`Basic Technique: Limited Direct Execution`__ --
 
-- `Problem #1: Restricted Operations` --
+- __`Problem #1: Restricted Operations`__ --
 
-- `Problem #2: Switching Between Processes` --
+- __`Problem #2: Switching Between Processes`__ --
 
-- `Worried About Concurrency?` --
+- __`Worried About Concurrency?`__ --
 
-- `Summary` --
+- __`Summary`__ --
 
 <br>
 <br>
