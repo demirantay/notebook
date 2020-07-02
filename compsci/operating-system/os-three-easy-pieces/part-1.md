@@ -177,15 +177,53 @@ its __machine state__: what a program can read or update when it is running
 its memory. Instructions lie in memory; the data that the running program reads and writes sits in memory as well. Thus the memory that the
 process can address (called its address space)
 
-- __`Process API`__ --
+- __`Process API`__ -- here we first give some idea of what must be included in any
+interface of an operating system:
+  - __Create__ -- : An operating system must include some method to create new processes. When you type a command into the shell, or
+double-click on an application icon, the OS is invoked to create a
+new process to run the program you have indicated.
+  
+  - __Destroy__: As there is an interface for process creation, systems also
+provide an interface to destroy processes forcefully
+  
+  - __Wait__: Sometimes it is useful to wait for a process to stop running;
+  
+  - __Miscellaneous Control__: Other than killing or waiting for a process,
+there are sometimes other controls that are possible.
+  
+  - __Status__: There are usually interfaces to get some status information
+about a process
 
-- __`Process Creation: A Little More Detail`__ --
+- __`Process Creation: A Little More Detail`__ -- The first thing that the OS must do to run a program is to load its code
+and any static data (e.g., initialized variables) into memory, into the address space of the process. In early (or simple) operating systems, the loading process is done eagerly, i.e., all at once before running the program; modern OSes perform
+the process lazily, i.e., by loading pieces of code or data only as they are
+needed during program execution.
 
-- __`Process States`__ --
+  Once the code and static data are loaded into memory, there are a few
+other things the OS needs to do before running the process. Some memory must be allocated for the program’s run-time stack (or just stack).  The OS will also likely initialize the stack with arguments; specifically, it will fill in the parameters to
+the main() function, i.e., argc and the argv array
 
-- __`Data Structures`__ -- 
+  By loading the code and static data into memory, by creating and initializing a stack, and by doing other work as related to I/O setup, the OS
+has now (finally) set the stage for program execution
 
-- __`Summary`__ --
+- __`Process States`__ -- In a simplified view, a process can be in one of three states:
+  - 1 - Running: In the running state, a process is running on a processor.
+This means it is executing instructions.
+  - 2 - Ready: In the ready state, a process is ready to run but for some
+reason the OS has chosen not to run it at this given moment.
+  - 3 - Blocked: In the blocked state, a process has performed some kind
+of operation that makes it not ready to run until some other event
+takes place. A common example: when a process initiates an I/O
+request to a disk, it becomes blocked and thus some other process
+can use the processor.
+
+- __`Data Structures`__ -- The OS is a program, and like any program, it has some key data structures that track various relevant pieces of information. To track the state
+of each process, for example, the OS likely will keep some kind of process list for all processes that are ready and some additional information to track which process is currently running.
+
+- __`Summary`__ -- We have introduced the most basic abstraction of the OS: the process.
+It is quite simply viewed as a running program. With this conceptual
+view in mind, we will now move on to the nitty-gritty: the low-level
+mechanisms needed to implement processes, and the higher-level policies required to schedule them in an intelligent way. By combining mechanisms and policies, we will build up our understanding of how an operating system virtualizes the CPU.
 
 <br>
 <br>
@@ -197,19 +235,19 @@ process can address (called its address space)
 
 # 5 - Interlude: Process API
 
-- `The fork() System Call` --
+- __`The fork() System Call`__ --
 
-- `The wait() System Call` --
+- __`The wait() System Call`__ --
 
-- `Finally, The exec() System Call` --
+- __`Finally, The exec() System Call`__ --
 
-- `Why? Motivating The API` --
+- __`Why? Motivating The API`__ --
 
-- `Process Control And Users` --
+- __`Process Control And Users`__ --
 
-- `Useful Tools` --
+- __`Useful Tools`__ --
 
-- `Summary` --
+- __`Summary`__ --
 
 <br>
 <br>
