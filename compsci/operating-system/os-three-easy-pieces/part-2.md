@@ -217,9 +217,36 @@ multi-level feedback queue
 
 # 8 -  Scheduling: The Multi-Level Feedback Queue
 
-- __`MLFQ: Basic Rules`__ --
+- In this chapter, we’ll tackle the problem of developing one of the most
+well-known approaches to scheduling, known as the Multi-level Feedback Queue (MLFQ).
 
-- __`Attempt #1: How To Change Priority`__ --
+  The fundamental problem MLFQ tries to address is two-fold. First, it
+would like to optimize turnaround time, which, as we saw in the previous
+note, is done by running shorter jobs first; unfortunately, the OS doesn’t
+generally know how long a job will run for, exactly the knowledge that
+algorithms like SJF (or STCF) require. Second, MLFQ would like to make
+a system feel responsive to interactive users (i.e., users sitting and staring
+at the screen, waiting for a process to finish), and thus minimize response
+time; unfortunately, algorithms like Round Robin reduce response time
+but are terrible for turnaround time
+
+- __`MLFQ: Basic Rules`__ -- To build such a scheduler, in this chapter we will describe the basic
+algorithms behind a multi-level feedback queue; although the specifics of
+many implemented MLFQs differ
+
+  MLFQ uses priorities to decide which job
+should run at a given time: a job with higher priority (i.e., a job on a
+higher queue) is chosen to run. Of course, more than one job may be on a given queue, and thus have
+the same priority. In this case, we will just use round-robin scheduling
+among those jobs.
+
+- __`Attempt #1: How To Change Priority`__ -- We now must decide how MLFQ is going to change the priority level
+of a job (and thus which queue it is on) over the lifetime of a job:
+  - Rule 3: When a job enters the system, it is placed at the highest
+priority (the topmost queue).
+  - Rule 4a: If a job uses up an entire time slice while running, its priority is reduced (i.e., it moves down one queue).
+  - Rule 4b: If a job gives up the CPU before the time slice is up, it stays
+at the same priority level.
 
 - __`Attempt #2: The Priority Boost`__ --
 
