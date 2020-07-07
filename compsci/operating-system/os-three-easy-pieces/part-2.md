@@ -248,13 +248,34 @@ priority (the topmost queue).
   - Rule 4b: If a job gives up the CPU before the time slice is up, it stays
 at the same priority level.
 
-- __`Attempt #2: The Priority Boost`__ --
+- __`Attempt #2: The Priority Boost`__ -- Let’s try to change the rules and see if we can avoid the problem of
+starvation. What could we do in order to guarantee that CPU-bound jobs
+will make some progress (even if it is not much?).
+The simple idea here is to periodically boost the priority of all the jobs
+in system. There are many ways to achieve this, but let’s just do something simple: throw them all in the topmost queue; hence, a new rule: Rule 5: After some time period S, move all the jobs in the system
+to the topmost queue.
 
-- __`Attempt #3: Better Accounting`__ --
+- __`Attempt #3: Better Accounting`__ -- s to perform better accounting of CPU time at each
+level of the MLFQ. Instead of forgetting how much of a time slice a process used at a given level, the scheduler should keep track; once a process
+has used its allotment, it is demoted to the next priority queue. Whether
+it uses the time slice in one long burst or many small ones does not matter.
+We thus rewrite Rules 4a and 4b to the following single rule:
+  - Rule 4: Once a job uses up its time allotment at a given level (regardless of how many times it has given up the CPU), its priority is
+reduced (i.e., it moves down one queue).
 
-- __`Tuning MLFQ And Other Issues`__ --
+- __`Tuning MLFQ And Other Issues`__ -- A few other issues arise with MLFQ scheduling. One big question is
+how to parameterize such a scheduler. For example, how many queues
+should there be? How big should the time slice be per queue? How often
+should priority be boosted in order to avoid starvation and account for
+changes in behavior? There are no easy answers to these questions, and
+thus only some experience with workloads and subsequent tuning of the
+scheduler will lead to a satisfactory balance.
 
-- __`MLFQ: Summary`__ -- 
+- __`MLFQ: Summary`__ -- We have described a scheduling approach known as the Multi-Level
+Feedback Queue (MLFQ). Hopefully you can now see why it is called
+that: it has multiple levels of queues, and uses feedback to determine the
+priority of a given job. History is its guide: pay attention to how jobs
+behave over time and treat them accordingly
 
 <br>
 <br>
@@ -266,21 +287,21 @@ at the same priority level.
 
 # 9 - Scheduling: Proportional Share
 
-- `Basic Concept: Tickets Represent Your Share` --
+- __`Basic Concept: Tickets Represent Your Share`__ --
 
-- `Ticket Mechanisms` --
+- __`Ticket Mechanisms`__ --
 
-- `Implementation` --
+- __`Implementation`__ --
 
-- `An Example` --
+- __`An Example`__ --
 
-- `How To Assign Tickets?` --
+- __`How To Assign Tickets?`__ --
 
-- `Why Not Deterministic?` --
+- __`Why Not Deterministic?`__ --
 
-- `The Linux Completely Fair Scheduler (CFS)` --
+- __`The Linux Completely Fair Scheduler (CFS)`__ --
 
-- `Summary` --
+- __`Summary`__ --
 
 <br>
 <br>
