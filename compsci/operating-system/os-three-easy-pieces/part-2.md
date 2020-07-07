@@ -287,6 +287,17 @@ behave over time and treat them accordingly
 
 # 9 - Scheduling: Proportional Share
 
+- In this chapter, we’ll examine a different type of scheduler known as a
+proportional-share scheduler, also sometimes referred to as a fair-share
+scheduler. Proportional-share is based around a simple concept: instead
+of optimizing for turnaround or response time, a scheduler might instead
+try to guarantee that each job obtain a certain percentage of CPU time
+
+  The basic idea
+is quite simple: every so often, hold a lottery to determine which process
+should get to run next; processes that should run more often should be
+given more chances to win the lottery. 
+
 - __`Basic Concept: Tickets Represent Your Share`__ --
 
 - __`Ticket Mechanisms`__ --
