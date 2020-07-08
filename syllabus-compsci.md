@@ -125,6 +125,19 @@ Resources:
 - [ ] Book: Deep Learning by Ian Goodfellow and Yoshua Bengio.
 - [ ] Project: Do something cool and big with artifical intelligence like a smart bot
 - [ ] Optional: Do more books and projects if you want to focus on AI/ML
+
+### Security
+
+- [ ] Course: OWASP Guides
+- [ ] Book: The Web Application Hacker's Handbook 2
+- [ ] Book: The Tangled Web
+- [ ] Book: The Hacker Playbook 2: Practical Guide to Penetration Testing
+- [ ] Book: Rtfm: Red Team Field Manual
+- [ ] Book: Penetration Testing: A Hands-on Introduction to Hacking
+- [ ] Book: Hacking: The Art of Exploitation
+- [ ] Book: The Database Hacker's Handbook: Defending Database Servers
+- [ ] Book: A Bug Hunter's Diary
+- [ ] Book: Underground: Tales of Hacking, Madness, and Obsession on the Electronic Frontier
    
 ## Final: Feynman Notes
 
@@ -277,6 +290,7 @@ Resources:
 - [ ] Feynman: Standarts & Best Practices
 - [ ] Feynman: Backend Testing
 - [ ] Feynman: Package Managaer
+- [ ] Project: Finish Algorithms Theory above
 - [ ] Project: Finish Database Theory above
 - [ ] Feynman: Relational Databases
 - [ ] Feynman: NoSQL
