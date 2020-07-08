@@ -298,21 +298,61 @@ is quite simple: every so often, hold a lottery to determine which process
 should get to run next; processes that should run more often should be
 given more chances to win the lottery. 
 
-- __`Basic Concept: Tickets Represent Your Share`__ --
+- __`Basic Concept: Tickets Represent Your Share`__ -- Underlying lottery scheduling is one very basic concept: tickets, which
+are used to represent the share of a resource that a process (or user or
+whatever) should receive. The percent of tickets that a process has represents its share of the system resource in question.
 
-- __`Ticket Mechanisms`__ --
+  Let’s look at an example. Imagine two processes, A and B, and further
+that A has 75 tickets while B has only 25. Thus, what we would like is for
+A to receive 75% of the CPU and B the remaining 25%.
 
-- __`Implementation`__ --
+- __`Ticket Mechanisms`__ -- One of the most powerful (and basic) mechanisms in the design of lottery
+(and stride) scheduling is that of the ticket. The ticket is used to represent
+a process’s share of the CPU in these examples, but can be applied much
+more broadly
 
-- __`An Example`__ --
+  Lottery scheduling also provides a number of mechanisms to manipulate tickets in different and sometimes useful ways. One way is with
+the concept of ticket currency. Currency allows a user with a set of tickets to allocate tickets among their own jobs in whatever currency they
+would like; the system then automatically converts said currency into the
+correct global value
 
-- __`How To Assign Tickets?`__ --
+  For example, assume users A and B have each been given 100 tickets.
+User A is running two jobs, A1 and A2, and gives them each 500 tickets
+(out of 1000 total) in A’s currency. User B is running only 1 job and gives
+it 10 tickets (out of 10 total). The system converts A1’s and A2’s allocation
+from 500 each in A’s currency to 50 each in the global currency; similarly,
+B1’s 10 tickets is converted to 100 tickets
 
-- __`Why Not Deterministic?`__ --
+  Another useful mechanism is ticket transfer. With transfers, a process
+can temporarily hand off its tickets to another process. This ability is
+especially useful in a client/server setting, where a client process sends
+a message to a server asking it to do some work on the client’s behalf.
 
-- __`The Linux Completely Fair Scheduler (CFS)`__ --
+- __`Implementation`__ -- Probably the most amazing thing about lottery scheduling is the simplicity of its implementation. All you need is a good random number
+generator to pick the winning ticket, a data structure to track the processes of the system (e.g., a list), and the total number of tickets.
 
-- __`Summary`__ --
+- __`How To Assign Tickets?`__ -- One problem we have not addressed with lottery scheduling is: how
+to assign tickets to jobs? This problem is a tough one, because of course
+how the system behaves is strongly dependent on how tickets are allocated.
+
+- __`Why Not Deterministic?`__ -- You might also be wondering: why use randomness at all? As we saw
+above, while randomness gets us a simple (and approximately correct)
+scheduler, it occasionally will not deliver the exact right proportions, especially over short time scales. For this reason, Waldspurger invented
+stride scheduling, a deterministic fair-share scheduler
+
+- __`The Linux Completely Fair Scheduler (CFS)`__ -- Despite these earlier works in fair-share scheduling, the current Linux
+approach achieves similar goals in an alternate manner. The scheduler,
+entitled the Completely Fair Scheduler (or CFS) [J09], implements fairshare scheduling, but does so in a highly efficient and scalable manner.
+
+  To achieve its efficiency goals, CFS aims to spend very little time making scheduling decisions, through both its inherent design and its clever
+use of data structures well-suited to the task
+
+- __`Summary`__ -- We have introduced the concept of proportional-share scheduling and
+briefly discussed three approaches: lottery scheduling, stride scheduling,
+and the Completely Fair Scheduler (CFS) of Linux. Lottery uses randomness in a clever way to achieve proportional share; stride does so deterministically. CFS, the only “real” scheduler discussed in this chapter, is a
+bit like weighted round-robin with dynamic time slices, but built to scale
+and perform well under load; to our knowledge, it is the most widely
+used fair-share scheduler in existence today.
 
 <br>
 <br>
