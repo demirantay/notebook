@@ -149,21 +149,134 @@ when performing the tasks and techniques we describe.
 
 # Chapter 1 Web Application (In)security 
 
+- There is no doubt that web application security is a current and newsworthy
+subject. For all concerned, the stakes are high: for businesses that derive increasing revenue from Internet commerce, for users who trust web applications with
+sensitive information, and for criminals who can make big money by stealing
+payment details or compromising bank accounts.  Reputation plays a critical role.
+Few people want to do business with an insecure website.
+
 ### The Evolution of Web Applications 
 
-- `Common Web Application Functions ` -- 
+- In the early days of the Internet, the World Wide Web consisted only of web
+sites. These were essentially information repositories containing static documents. Web browsers were invented as a means of retrieving and displaying
+those documents. The fl ow of interesting information
+was one-way, from server to browser. Any security threats arising from hosting a website were related largely to vulnerabilities in web server software. . If an attacker compromised a web server, he usually
+would not gain access to any sensitive information, because the information
+held on the server was already open to public view
 
-- `Benefi ts of Web Applications ` --
+  Today, the World Wide Web is almost unrecognizable from its earlier form.
+The majority of sites on the web are in fact application. They support registration and login, fi nancial transactions, search, and the authoring of content by users.  Security,
+therefore, is a big issue. No one wants to use a web application if he believes
+his information will be disclosed to unauthorized parties Fifteen years ago, if you wanted
+to make a funds transfer, you visited your bank, and the teller performed the
+transfer for you; today, you can visit a web application and perform the transfer
+yourself. An attacker who compromises a web application may be able to steal
+personal information,
+
+- `Common Web Application Functions ` -- Here are some web application functions
+that have risen to prominence in recent years:
+  - Shopping (Amazon)
+  - Social networking (Facebook)
+  - Banking (Citibank)
+  - Web search (Google)
+  - Auctions (eBay)
+  - Gambling (Betfair)
+  - Web logs (Blogger)
+  - Web mail (Gamil)
+  - Interactive information (Wikipedia)
+  
+  Most mobile applications employ either a browser or a customized client that uses
+HTTP-based APIs to communicate with the server. Application functions and
+data typically are shared between the various interfaces that the application
+exposes to different user platforms.
+
+  The time is fast approaching when the only client software that most computer users will need is a web browser. A diverse range of functions will have
+been implemented using a shared set of protocols and technologies, and in so
+doing will have inherited a distinctive range of common security vulnerabilities.
+  
+- `Benefi ts of Web Applications ` -- 
+  - Every web user already has a browser installed on his computer and
+mobile device. Web applications deploy their user interface dynamically
+to the browser, avoiding the need to distribute and manage separate
+client software, as was the case with pre-web applications
+  - The core technologies and languages used to develop web applications are
+relatively simple. A wide range of platforms and development tools are
+available to facilitate the development of powerful applications by relative
+beginners
 
 ### Web Application Security
 
-- `“This Site Is Secure”` --
+- As with any new class of technology, web applications have brought with them
+a new range of security vulnerabilities. The most serious attacks against web applications are those that expose
+sensitive data or gain unrestricted access to the back-end systems on which
+the application is running
 
-- `The Core Security Problem: Users Can Submit` --
+  For many organizations, however, any attack that causes
+system downtime is a critical event.
 
-- `Key Problem Factors` --
+- `“This Site Is Secure”` -- In fact, the majority of web applications are insecure, despite the widespread
+usage of SSL technology and the adoption of regular PCI scanning. The authors
+of this book have tested hundreds of web applications in recent years. Figure 1-3
+shows what percentage of applications tested during 2007 and 2011 were found
+to be affected by some common categories of vulnerability:
+  - Broken authentication (62%) — This category of vulnerability encompasses various defects within the application’s login mechanism, which
+may enable an attacker to guess weak passwords, launch a brute-force attack, or bypass the login.
+  - Broken access controls (71%) — This involves cases where the application
+fails to properly protect access to its data and functionality, potentially
+enabling an attacker to view other users’ sensitive data held on the server
+or carry out privileged actions.
+  - SQL injection (32%) — This vulnerability enables an attacker to submit
+crafted input to interfere with the application’s interaction with back-end
+databases. An attacker may be able to retrieve arbitrary data from the
+application, interfere with its logic, or execute commands on the database
+server itself.
+  - Cross-site scripting (94%) — This vulnerability enables an attacker to
+target other users of the application, potentially gaining access to their
+dat
+  - Information leakage (78%) — This involves cases where an application
+divulges sensitive information that is of use to an attacker in developing
+an assault against the application
+  - Cross-site request forgery (92%) — This fl aw means that application
+users can be induced to perform unintended actions on the application
+within their user context and privilege level.
+  
+- `The Core Security Problem: Users Can Submit` -- As with most distributed applications, web applications face a fundamental
+problem they must address to be secure. Because the client is outside of the
+application’s control, users can submit arbitrary input to the server-side application. The application must assume that all input is potentially malicious
 
-- `The New Security Perimeter ` --
+  The majority of attacks against web applications involve sending input to the
+server that is crafted to cause some event that was not expected or desired by
+the application’s designer.
+
+  Needless to say, SSL does nothing to stop an attacker from submitting crafted
+input to the server. If the application uses SSL, this simply means that other users
+on the network cannot view or modify the attacker’s data in transit
+
+- `The New Security Perimeter ` -- Before the rise of web applications, organizations’ efforts to secure themselves
+against external attack were largely focused on the network perimeter. Defending
+this perimeter entailed hardening and patching the services it needed to expose
+and fi rewalling access to others.
+
+  If a vulnerability exists within a web application, an attacker on the public
+Internet may be able to compromise the organization’s core back-end systems
+solely by submitting crafted data from his web browser. This data sails past all
+the organization’s network defenses, in the same way as does ordinary, benign
+traffi c to the web application. If a vulnerability exists within a web application, an attacker on the public
+Internet may be able to compromise the organization’s core back-end systems
+solely by submitting crafted data from his web browser. This data sails past all
+the organization’s network defenses, in the same way as does ordinary, benign
+traffi c to the web application.
+
+> For example, suppose that an attacker wants to “hack in” to a bank’s systems
+and steal money from users’ accounts. In the past, before the bank deployed
+a web application, the attacker might have needed to fi nd a vulnerability
+in a publicly reachable service, exploit this to gain a toehold on the bank’s
+DMZ, penetrate the fi rewall restricting access to its internal systems, map the
+network to fi nd the mainframe computer, decipher the arcane protocol used
+to access it, and guess some credentials to log in. However, if the bank now
+deploys a vulnerable web application, the attacker may be able to achieve the
+same outcome simply by modifying an account number in a hidden fi eld of an
+HTML form
 
 - `The Future of Web Application Security` --
 
