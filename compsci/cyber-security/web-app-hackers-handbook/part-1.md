@@ -392,21 +392,149 @@ application but which an attacker can of course view and modify
 
 - `Approaches to Input Handling ` --
 
-- `Boundary Validation` --
+  “Reject Known Bad” -- This approach typically employs a blacklist containing a set of literal strings or
+patterns that are known to be used in attacks. The validation mechanism blocks
+any data that matches the blacklist and allows everything else. In general, this is regarded as the least effective approach to validating user
+input but still a defense mechanism.
 
-- `Multistep Validation and Canonicalization` --
+  “Accept Known Good” -- This approach employs a whitelist containing a set of literal strings or patterns,
+or a set of criteria, that is known to match only benign input. The validation
+mechanism allows data that matches the whitelist and blocks everything else. In cases where this approach is feasible, it is regarded as the most effective
+way to handle potentially malicious input. But this is hard to implement because some applications have so many input variables such as socaial media, blogs ... etc. It is hard to follow.
+
+  Sanitization  -- This approach recognizes the need to sometimes accept data that cannot be
+guaranteed as safe. Instead of rejecting this input, the application sanitizes it
+in various ways to prevent it from having any adverse effects. Potentially malicious characters may be removed from the data, leaving only what is known to
+be safe Approaches based on data sanitization are often highly effective, and in many
+situations they can be relied on as a general solution
+
+  Safe Data Handling -- Many web application vulnerabilities arise because user-supplied data is processed in unsafe ways  In some situations, safe programming methods are available
+that avoid common problems. For example, SQL injection attacks can be prevented through the correct use of parameterized queries for database access 
+
+  Semantic Checks -- For example, an attacker might seek to gain access to
+another user’s bank account by changing an account number transmitted in a
+hidden form fi eld. No amount of syntactic validation will distinguish between
+the user’s data and the attacker’s. To prevent unauthorized access, the application needs to validate that the account number submitted belongs to the user
+who has submitted it.
+
+- `Boundary Validation` -- A more effective model uses the concept of boundary validation. Here, each
+individual component or functional unit of the server-side application treats
+its inputs as coming from a potentially malicious source. Data validation is
+performed at each of these trust boundaries, in addition to the external frontier
+between the client and server
+  
+  lets see a basic defense senario for a login feature to paint a picture of what we learned:
+  - 1 -  The application receives the user’s login details. The form handler validates that each item of input contains only permitted characters, is within
+a specifi c length limit, and does not contain any known attack signatures
+  - 2 - The application performs a SQL query to verify the user’s credentials.
+To prevent SQL injection attacks, any characters within the user input
+that may be used to attack the database are escaped before the query is
+constructed.
+  - 3 - If the login succeeds, the application passes certain data from the user’s
+profi le to a api serviceto retrieve further info about her account. Use API/JOSN defensive mechanisms here.
+  - 4 - The application displays the user’s account information back to the user’s
+browser. To prevent cross-site scripting attacks, the application HTMLencodes any user-supplied data that is embedded into the returned page.
+
+- `Multistep Validation and Canonicalization` -- A common problem encountered by input-handling mechanisms arises when
+user-supplied input is manipulated across several steps as part of the validation logic. If this process is not handled carefully, an attacker may be able to
+construct crafted input that succeeds in smuggling malicious data through the
+validation mechanism.
+
+  A related problem arises in relation to data canonicalization. When input
+is sent from the user’s browser, it may be encoded in various ways. These
+encoding schemes exist so that unusual characters and binary data may be
+transmitted safely over HTTP (see Chapter 3 for more details). Canonicalization
+is the process of converting or decoding data into a common character set. 
+
+  Avoiding problems with multistep validation and canonicalization can sometimes be diffi cult, and there is no single solution to the problem. One approach is
+to perform sanitization steps recursively, continuing until no further modifi cations
+have been made on an item of input.
 
 ### Handling Attackers 
 
-- `Handling Errors` --
+- Anyone designing an application for which security is remotely important must
+assume that it will be directly targeted by dedicated and skilled attackers. Measures implemented to handle attackers
+typically include the following tasks:
+  - Handling errors
+  - Maintaining audit logs
+  - Alerting administrators
+  - Reacting to attacks
 
-- `Maintaining Audit Logs ` --
+- `Handling Errors` -- However careful an application’s developers are when validating user input, it
+is virtually inevitable that some unanticipated errors will occur. Therefore, they are taken into account before
+the application is deployed in a production context. A key defense mechanism is for the application to handle unexpected errors
+gracefully, and either recover from them or present a suitable error message
+to the user. In a production context, the application should never return any
+system-generated messages or other debug information in its responses. Most web development languages provide good error-handling support
+through try-catch blocks and checked exceptions
 
-- `Alerting Administrators` --
+- `Maintaining Audit Logs ` -- Audit logs are valuable primarily when investigating intrusion attempts against
+an application. Following such an incident, effective audit logs should enable
+the application’s owners to understand exactly what has taken place, which
+vulnerabilities (if any) were exploited, whether the attacker gained unauthorized
+access to data or performed any unauthorized actions, and, as far as possible,
+provide evidence of the intruder’s identity
 
-- `Reacting to Attacks` --
+  In any application for which security is important, key events should be logged
+as a matter of course. At a minimum, these typically include the following:
+  - All events relating to the authentication functionality, such as successful
+and failed login, and change of password
+  - Key transactions, such as credit card payments and funds transfers
+  - Access attempts that are blocked by the access control mechanisms
+  - Any requests containing known attack strings that indicate overtly malicious intentions
+  
+  In many security-critical applications, such as those used by online banks,
+every client request is logged in full, providing a complete forensic record that
+can be used to investigate any incidents.
+
+  Effective audit logs typically record the time of each event, the IP address
+from which the request was received, and the user’s account (if authenticated).
+Such logs need to be strongly protected against unauthorized read or write
+access.
+
+  In terms of attack surface, poorly protected audit logs can provide a gold mine
+of information to an attacker, disclosing a host of sensitive information such as
+session tokens and request parameters. This information may enable the attacker
+to immediately compromise the entire application
+
+- `Alerting Administrators` -- Audit logs enable an application’s owners to retrospectively investigate intrusion
+attempts and, if possible, take legal action against the perpetrator. However, in
+many situations it is desirable to take much more immediate action, in real time,
+in response to attempted attacks. For example, administrators may block the IP
+address
+
+  A well-designed alerting mechanism can
+use a combination of factors to diagnose that a determined attack is under way
+and can aggregate related events into a single alert where possible
+
+  Web application fi rewalls usually are good at identifying the
+most obvious attacks, where an attacker submits standard attack strings in
+each request parameter
+
+- `Reacting to Attacks` -- In addition to alerting administrators, many security-critical applications contain built-in mechanisms to react defensively to users who are identifi ed as
+potentially malicious
+
+   At some point, an
+attacker working systematically is likely to discover these defects.
+For this reason, some applications take automatic reactive measures to frustrate the activities of an attacker who is working in this way. For example, they
+might respond increasingly slowly to the attacker’s requests or terminate the
+attacker’s session, requiring him to log in or perform other steps before continuing the attack. Although these measures will not defeat the most patient
+and determined attacker, they will deter many more casual attackers and will
+buy additional time for administrators
 
 ### Managing the Application
+
+- Any useful application needs to be managed and administered. This facility
+often forms a key part of the application’s security mechanisms, providing a
+way for administrators to manage user accounts and roles, access monitoring
+and audit functions, perform diagnostic tasks, and confi gure aspects of the
+application’s functionality.
+
+  In many applications, administrative functions are implemented within
+the application itself, accessible through the same web interface as its core
+nonsecurity functionality. Where this is the case, the
+administrative mechanism represents a critical part of the application’s attack
+surface. ALWAYS SECURE YOUR ADMIN PANEL AS MUCH AS POSSIBLE.
 
 <br>
 <br>
