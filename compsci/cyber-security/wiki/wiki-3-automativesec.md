@@ -1,2 +1,0 @@
-# Wiki Summary: Automative Security
-
