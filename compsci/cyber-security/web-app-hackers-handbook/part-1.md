@@ -278,9 +278,19 @@ deploys a vulnerable web application, the attacker may be able to achieve the
 same outcome simply by modifying an account number in a hidden fi eld of an
 HTML form
 
-- `The Future of Web Application Security` --
+- `The Future of Web Application Security` -- That said, the details of the web application security landscape are not static.
+Even though old and well-understood vulnerabilities such as SQL injection
+continue to appear, their prevalence is gradually diminishing. Furthermore,
+the instances that remain are becoming more diffi cult to fi nd and exploit. New
+research in these areas is generally focused on developing advanced techniques
+for attacking more subtle manifestations of vulnerabilities that a few years ago
+could be easily detected and exploited using only a browser.
 
-### Summary 
+  Despite all the changes that have occurred within web applications, some
+categories of “classic” vulnerabilities show no sign of diminishing. They continue
+to arise in pretty much the same form as they did in the earliest days of the
+web. These include defects in business logic, failures to properly apply access
+controls, and other design issues
 
 <br>
 <br>
@@ -291,6 +301,26 @@ HTML form
 <br>
 
 # Chapter 2 Core Defense Mechanisms 
+
+- The fundamental security problem with web applications — that all user input
+is untrusted — gives rise to a number of security mechanisms that applications use to defend themselves against attack. Virtually all applications employ
+mechanisms that are conceptually similar
+
+  The defense mechanisms employed by web applications comprise the following
+core elements:
+  - Handling user access to the application’s data and functionality to prevent
+users from gaining unauthorized access
+  - Handling user input to the application’s functions to prevent malformed
+input from causing undesirable behavior
+  - Handling attackers to ensure that the application behaves appropriately
+when being directly targeted, taking suitable defensive and offensive
+measures to frustrate the attacker
+  - Managing the application itself by enabling administrators to monitor its
+activities and confi gure its functionality
+
+  Because of their central role in addressing the core security problem, these
+mechanisms also make up the vast majority of a typical application’s attack
+surface. If knowing your enemy is the fi rst rule of warfare
 
 ### Handling User Access
 
@@ -322,8 +352,6 @@ HTML form
 
 ### Managing the Application
 
-### Summary
-
 <br>
 <br>
 
@@ -332,94 +360,3 @@ HTML form
 <br>
 <br>
 
-# Chapter 3 Web Application Technologies
-
-### The HTTP Protocol 
-
-- `HTTP Requests ` --
-
-- `HTTP Responses` --
-
-- `HTTP Methods` --
-
-- `URLs` --
-
-- `REST` --
-
-- `HTTP Headers` --
-
-- `Cookies` --
-
-- `Status Codes` --
-
-- `HTTPS` --
-
-- `HTTP Proxies` --
-
-- `HTTP Authentication` --
-
-### Web Functionality 
-
-- `Server-Side Functionality ` --
-
-- `Client-Side Functionality ` --
-
-- `State and Sessions ` --
-
-### Encoding Schemes 
-
-- `URL Encoding` --
-
-- `Unicode Encoding` --
-
-- `HTML Encoding ` --
-
-- `Base64 Encoding ` --
-
-- `Hex Encoding ` --
-
-- `Remoting and Serialization` --
-
-### Next Steps 
-
-<br>
-<br>
-
----
-
-<br>
-<br>
-
-# Chapter 4 Mapping the Application 
-
-### Enumerating Content and Functionality 
-
-- `Web Spidering` --
-
-- `User-Directed Spidering ` --
-
-- `Discovering Hidden Content ` --
-
-- `Application Pages Versus ` --
-
-- `Discovering Hidden Parameters` --
-
-### Analyzing the Application
-
-- `Identifying Entry Points for User Input ` --
-
-- `Identifying Server-Side Technologies ` --
-
-- `Identifying Server-Side Functionality ` --
-
-- `Mapping the Attack Surface ` --
-
-### Summary
-
-<br>
-<br>
-
----
-
-<br>
-<br>
