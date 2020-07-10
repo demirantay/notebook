@@ -324,15 +324,71 @@ surface. If knowing your enemy is the fi rst rule of warfare
 
 ### Handling User Access
 
-- `Authentication` --
+- A central security requirement that virtually any application needs to meet is
+controlling users’ access to its data and functionality. A typical situation has
+several different categories of user, such as anonymous users, ordinary authenticated users, and administrative users Furthermore, in many situations different
+users are permitted to access a different set of data
 
-- `Session Management` --
+  Most web applications handle access using a trio of interrelated security
+mechanisms:
+  - authentication
+  - session management
+  - access control
+ 
+- `Authentication` -- The authentication mechanism is logically the most basic dependency in an
+application’s handling of user access. Authenticating a user involves establishing 
+that the user is in fact who he claims to be. Without this facility, the application
+would need to treat all users as anonymous. In security-critical applications such as those used by online banks, this basic
+model is usually supplemented by additional credentials and a multistage login
+process.
 
-- `Access Control` --
+  Common problems
+may enable an attacker to identify other users’ usernames, guess their passwords, or bypass the login function by exploiting defects in its logic. When
+you are attacking a web application, you should invest a signifi cant amount of
+attention to the various authentication-related functions it contains
+
+- `Session Management` -- The next logical task in the process of handling user access is to manage the
+authenticated user’s session. To enforce effective access control, the application needs a way to
+identify and process the series of requests that originate from each unique user.
+Virtually all web applications meet this requirement by creating a session for
+each user and issuing the user a token that identifi es the session.
+
+  HTTP cookies are the
+standard method for transmitting session tokens, although many applications
+use hidden form fi elds or the URL query string for this purpose If a user does
+not make a request for a certain amount of time, the session is ideally expired
+
+  In terms of attack surface, the session management mechanism is highly
+dependent on the security of its tokens. The majority of attacks against it seek to
+compromise the tokens issued to other users. If this is possible, an attacker can
+masquerade as the victim user and use the application just as if he had actually
+authenticated as that user
+
+- `Access Control` -- The fi nal logical step in the process of handling user access is to make and enforce
+correct decisions about whether each individual request should be permitted or
+denied. If the mechanisms just described are functioning correctly, the application knows the identity of the user from whom each request is received. On this
+basis, it needs to decide whether that user is authorized to perform the action,
+or access the data, that he is requesting,
+
+  The access control mechanism usually needs to implement some fi ne-grained
+logic, with different considerations being relevant to different areas of the
+application and different types of functionality
+
+   Developers often make
+fl awed assumptions about how users will interact with the application and
+frequently make oversights by omitting access control checks from some application functions
 
 ### Handling User Input
 
-- `Varieties of Input ` --
+- Input-based vulnerabilities can arise anywhere within an application’s functionality, and in relation to practically every type of technology in common use.
+“Input validation” is often cited as the necessary defense against these attacks. 
+
+- `Varieties of Input ` -- In addition to the various kinds of input that users enter using the browser
+interface, a typical application receives numerous items of data that began their
+life on the server and that are sent to the client so that the client can transmit
+them back to the server on subsequent requests. This includes items such as
+cookies and hidden form fi elds, which are not seen by ordinary users of the
+application but which an attacker can of course view and modify
 
 - `Approaches to Input Handling ` --
 
@@ -355,8 +411,4 @@ surface. If knowing your enemy is the fi rst rule of warfare
 <br>
 <br>
 
----
-
-<br>
-<br>
 
