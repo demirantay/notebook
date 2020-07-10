@@ -119,13 +119,11 @@ applications is a specialized kind of proxy server that sits between your browse
 and the target website and allows you to intercept and modify all requests and
 responses, even those using HTTPS
 
-- `HTTP Authentication` --
-
 ### Web Functionality 
 
-- `Server-Side Functionality ` --
-
-- `Client-Side Functionality ` --
+- In addition to the core communications protocol used to send messages between
+client and server, web applications employ numerous technologies to deliver
+their functionality
 
 - `State and Sessions ` --
 
