@@ -125,23 +125,55 @@ responses, even those using HTTPS
 client and server, web applications employ numerous technologies to deliver
 their functionality
 
-- `State and Sessions ` --
+- `State and Sessions ` -- The technologies described so far enable the server and client components of
+a web application to exchange and process data in numerous ways. To implement most kinds of useful functionality, however, applications need to track the
+state of each user’s interaction with the application across multiple requests
 
 ### Encoding Schemes 
 
-- `URL Encoding` --
+- Web applications employ several different encoding schemes for their data. Both
+the HTTP protocol and the HTML language are historically text-based, and different encoding schemes have been devised to ensure that these mechanisms
+can safely handle unusual characters and binary data  When you are attacking
+a web application, you will frequently need to encode data using a relevant scheme to ensure that it is handled in the way you intend
 
-- `Unicode Encoding` --
+- `URL Encoding` -- URLs are permitted to contain only the printable characters in the US-ASCII
+character set. The URL-encoding scheme is used to encode any problematic characters
+within the extended ASCII character set so that they can be safely transported
+over HTTP.
 
-- `HTML Encoding ` --
+- `Unicode Encoding` -- UTF-8 is a variable-length encoding standard that employs one or more bytes
+to express each character. For transmission over HTTP, the UTF-8-encoded form
+of a multibyte character simply uses each byte expressed in hexadecimal and
+preceded by the % prefi x. For the purpose of attacking web applications, Unicode encoding is primarily
+of interest because it can sometimes be used to defeat input validation mechanisms
 
-- `Base64 Encoding ` --
+- `HTML Encoding ` -- HTML encoding is used to represent problematic characters so that they can be
+safely incorporated into an HTML document.  When you are attacking a web application, your main interest in HTML
+encoding is likely to be when probing for cross-site scripting vulnerabilities. If
+an application returns user input unmodifi ed within its responses, it is probably vulnerable, whereas if dangerous characters are HTML-encoded, it may
+be safe
 
-- `Hex Encoding ` --
+- `Base64 Encoding ` -- Base64 encoding allows any binary data to be safely represented using only
+printable ASCII characters. It is commonly used to encode e-mail attachments
+for safe transmission over SMTP. It is also used to encode user credentials in
+basic HTTP authentication
 
-- `Remoting and Serialization` --
+- `Hex Encoding ` -- Many applications use straightforward hexadecimal encoding when transmitting binary data, using ASCII characters to represent the hexadecimal block.  hex-encoded data is usually easy to spot. You should always
+attempt to decode any such data that the server sends to the client to understand
+its function
 
 ### Next Steps 
+
+- So far, we have described the current state of web application (in)security, examined the core mechanisms by which web applications can defend themselves,
+and taken a brief look at the key technologies employed in today’s applications.
+With this groundwork in place, we are now in a position to start looking at the
+actual practicalities of attacking web applications
+
+   In any attack, your fi rst task is to map the target application’s content and
+functionality to establish how it functions, how it attempts to defend itself, and
+what technologies it uses  The next chapter examines this mapping process
+in detail and shows how you can use it to obtain a deep understanding of an
+application’s attack surface
 
 <br>
 <br>
@@ -153,13 +185,82 @@ their functionality
 
 # Chapter 4 Mapping the Application 
 
+- The fi rst step in the process of attacking an application is gathering and examining some key information about it to gain a better understanding of what you
+are up against The mapping exercise begins by enumerating the application’s content and
+functionality in order to understand what the application does and how it
+behaves.
+
+   This will enable you to identify the key attack surface that the application
+exposes and hence the most interesting areas where you should target subsequent probing to fi nd exploitable vulnerabilities
+
 ### Enumerating Content and Functionality 
 
-- `Web Spidering` --
+- In a typical application, the majority of the content and functionality can be
+identifi ed via manual browsing. The basic approach is to walk through the
+application starting from the main initial page, following every link, and navigating through all multistage functions (such as user registration or password
+resetting)
 
-- `User-Directed Spidering ` --
+- `Web Spidering` -- Various tools can perform automated spidering of websites. These tools work
+by requesting a web page, parsing it for links to other content, requesting these
+links, and continuing recursively until no new content is discovered.
 
-- `Discovering Hidden Content ` --
+   Numerous free tools are available that do a decent job of enumerating application content and functionality, including Burp Suite, WebScarab, Zed Attack
+Proxy, and CAT
+
+   > Many web servers contain a fi le named robots.txt in the web root that
+contains a list of URLs that the site does not want web spiders to visit or search
+engines to index. Sometimes, this fi le contains references to sensitive functionality, which you are certainly interested in spidering. Some spidering tools
+designed for attacking web applications check for the robots.txt fi le and use
+all URLs within it as seeds in the spidering process. In this case, the robots.txt
+fi le may be counterproductive to the security of the web application.
+
+   Although it can often be effective, this kind of fully automated approach to
+content enumeration has some signifi cant limitations:
+   - Unusual navigation mechanisms (such as menus dynamically created
+and handled using complicated JavaScript code) often are not handled
+properly by these tools, so they may miss whole areas of an application.
+   - Multistage functionality often implements fi ne-grained input validation
+checks, which do not accept the values that may be submitted by an automated tool. For example, a user registration form may contain fi elds for
+name, e-mail address, telephone number, and zip code. An automated Multistage functionality often implements fi ne-grained input validation
+checks, which do not accept the values that may be submitted by an automated tool. For example, a user registration form may contain fi elds for
+name, e-mail address, telephone number, and zip code. An automated
+
+- `User-Directed Spidering ` -- This is a more sophisticated and controlled technique that is usually preferable to automated spidering. Here, the user walks through the application in
+the normal way using a standard browser, attempting to navigate through all
+the application’s functionality. As he does so, the resulting traffi c is passed
+through a tool combining an intercepting proxy and spider, which monitors
+all requests and responses. The tool builds a map of the application, incorporating all the URLs visited by the browser. It also parses all the application’s
+responses in the same way as a normal application-aware spider and updates
+the site map with the content and functionality it discovers. The spiders
+within Burp Suite and WebScarab can be used in this way Where the application uses unusual or complex mechanisms for navigation,
+the user can follow these using a browser in the normal way. Any functions
+and content accessed by the user are processed by the proxy/spider tool. This gets a better picture.
+
+- `Hack Steps` -- 
+   - 1 - Configure your browser to use either Burp or WebScarab as a local proxy
+   - 2 - Browse the entire application normally, attempting to visit every link/URL
+you discover, submitting every form, and proceeding through all multistep functions to completion. Try browsing with JavaScript enabled and
+disabled, and with cookies enabled and disabled. Many applications can
+handle various browser configurations, and you may reach different content and code paths within the application
+   - 3 - Review the site map generated by the proxy/spider tool, and identify
+any application content or functions that you did not browse manually.
+Establish how the spider enumerated each item
+   - 4 - Optionally, tell the tool to actively spider the site using all of the already
+enumerated content as a starting point. To do this, first identify any URLs
+that are dangerous or likely to break the application session, and configure the spider to exclude these from its scope. Run the spider and review
+the results for any additional content it discovers
+
+- `Discovering Hidden Content ` -- It is common for applications to contain content and functionality that is not
+directly linked to or reachable from the main visible content. A common example
+is functionality that has been implemented for testing or debugging purposes
+and has never been removed. Another example arises when the application presents different functionality
+to different categories of users (for example, anonymous users, authenticated
+regular users, and administrators). Users at one privilege level who perform
+exhaustive spidering of the application may miss functionality that is visible to
+users at other levels
+
+  Effective discovery of hidden content requires a combination of automated and
+manual techniques and often relies on a degree of luck.
 
 - `Application Pages Versus ` --
 
