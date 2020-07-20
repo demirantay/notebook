@@ -54,17 +54,35 @@
   - “Hidden” client-side functionality that is not visible in your user interface but that you might be able to unlock by modifying the component
   - References to server-side functionality that you have not previously identi- fied via your application mapping
 
-- `Attaching a Debugger ` --
+- `Attaching a Debugger ` -- Decompilation is the most complete method of understanding and compromis- ing a browser extension. However, in large and complex components containing tens of thousands of lines of code, it is nearly always much quicker to observe the component during execution, correlating methods and classes with key actions within the interface. This approach also avoids difficulties that may arise with interpreting and recompiling obfuscated bytecode
 
-- `Native Client Components` --
+  Because the debugger is working at the bytecode level, it can be easily used to control and understand the flow of execution. Although efficient debuggers are not fully matured for all the browser exten- sion technologies, debugging is well supported for Java applets and ... etc.
+
+- `Native Client Components` -- Some applications need to perform actions within the user’s computer that cannot be conducted from inside a browser-based VM sandbox. In terms of client-side security controls, here are some examples of this functionality:
+  - Verifying that a user has an up-to-date virus scanner
+  - Verifying that proxy settings and other corporate configuration are in force
+  - Integrating with a smartcard reader
+  
+  Typically, these kinds of actions require the use of native code components, which integrate local application functionality with web application functional- ity. Native client components are often delivered via ActiveX controls. These are custom browser extensions that run outside the browser sandbox. Native client components may be significantly harder to decipher than other browser extensions, because there is no equivalent to intermediate bytecode. However, the principles of bypassing client-side controls still apply, even if this requires a different toolset.
 
 ### Handling Client-Side Data Securely 
 
-- `Transmitting Data Via the Client` --
+- As you have seen, the core security problem with web applications arises because client-side components and user input are outside the server’s direct control. The client, and all the data received from it, is inherently untrustworthy
 
-- `Validating Client-Generated Data ` --
+- `Transmitting Data Via the Client` -- Many applications leave themselves exposed because they transmit critical data such as product prices and discount rates via the client in an unsafe manner.
+If possible, applications should avoid transmitting this kind of data via the client. In virtually any conceivable scenario, it is possible to hold such data on the server and reference it directly from server-side logic when needed. Unless you are absolutely neccessary do not send a hidden input value because you won't have any control over it.
 
-- `Logging and Alerting ` --
+  If developers decide they have no alternative but to transmit critical data via the client, the data should be signed and/or encrypted to prevent user tamper- ing. But this has downsides or "warnings" too: Some ways of using signed or encrypted data may be vulnerable to replay attacks. If users know and/or control the plaintext value of encrypted strings that are sent to them, they may be able to mount various cryptographic attacks to discover the encryption key the server is using. 
+
+- `Validating Client-Generated Data ` -- Data generated on the client and transmitted to the server cannot in principle be validated securely on the client: Lightweight client-side controls such as HTML form fields and JavaScript can be circumvented easily and provide no assurance about the input that the server receives. Controls implemented in browser extension components are sometimes more difficult to circumvent, but this may merely slow down an attacker for a short period.
+
+  The only secure way to validate client-generated data is on the server side of the application. Every item of data received from the client should be regarded as tainted and potentially malicious. You can add controls to the client side but do not revail too much too. Make it basic to help with the server load and not ive out any details to the attackers.
+
+- `Logging and Alerting ` -- When an application employs mechanisms such as length limits and JavaScript- based validation to enhance performance and usability, these should be inte- grated with server-side intrusion detection defenses. The server-side logic that performs validation of client-submitted data should be aware of the validation that has already occurred on the client side. If data that would have been blocked by client-side validation is received, the application may infer that a user is actively circumventing this validation and therefore is likely to be malicious. Anomalies should be logged and, if appropriate, application administrators should be alerted in real time so that they can monitor any attempted attack and take suitable action as required
+
+### Summary
+
+- Virtually all client/server applications must accept the fact that the client com- ponent, and all processing that occurs on it, cannot be trusted to behave as expected. As you have seen, the transparent communications methods gener- ally employed by web applications mean that an attacker equipped with simple tools and minimal skill can easily circumvent most controls implemented on the client
 
 <br>
 <br>
