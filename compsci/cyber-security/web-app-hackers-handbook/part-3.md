@@ -38,13 +38,21 @@
 
 ### Capturing User Data: Browser Extensions 
 
-- `Common Browser Extension Technologies` --
+- Besides HTML forms, the other main method for capturing, validating, and submitting user data is to use a client-side component that runs in a browser extension.  When first employed in web applications, browser extensions were often used to perform simple and often cosmetic tasks. Now, companies are increasingly using browser extensions to create fully functional client-side components.
 
-- `Approaches to Browser Extensions ` --
+  In some cases, such as online trading applications, speed is so critical that much of the key application logic takes place on the client side. The application design may deliberately sacrifice security in favor of speed, perhaps in the mistaken belief that traders are trusted users, or that the browser exten- sion includes its own defenses. Recalling the core security problem discussed in Chapter 2, and the earlier sections of this chapter, we know that the concept of a client-side component defending its business logic is impossible.
+  
+    Browser extensions can capture data in various ways — via input forms and in some cases by interacting with the client operating system’s filesystem or registry. They can perform arbitrarily complex validation and manipula- tion of captured data before submission to the server
 
-- `Intercepting Traffi c from Browser Extensions` --
+- `Intercepting Traffic from Browser Extensions` -- If your browser is already configured to use an intercepting proxy, and the application loads a client component using a browser extension, you may see requests from this component passing through your proxy. In the context of bypassing client-side input validation that is implemented in a browser extension, if the component submits the validated data to the server transparently, this data can be modified using an intercepting proxy in the same way as already described for HTML form data. For example, a browser exten- sion supporting an authentication mechanism might capture user credentials, perform some validation on these, and submit the values to the server as plain- text parameters within the request
 
-- `Decompiling Browser Extensions ` --
+- `Decompiling Browser Extensions ` -- By far the most thorough method of attacking a browser extension component is to decompile the object, perform a full review of the source code, and if nec- essary modify the code to change the object’s behavior, and recompile it
+
+  Having obtained the source code for the component, or something resembling it, you can take various approaches to attacking it. The first step generally is to review the source code to understand how the component works and what functionality it contains or references
+  - Input validation or other security-relevant logic and events that occur on the client side
+  - Obfuscation or encryption routines being used to wrap user-supplied data before it is sent to the server
+  - “Hidden” client-side functionality that is not visible in your user interface but that you might be able to unlock by modifying the component
+  - References to server-side functionality that you have not previously identi- fied via your application mapping
 
 - `Attaching a Debugger ` --
 
