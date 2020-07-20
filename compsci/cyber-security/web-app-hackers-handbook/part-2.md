@@ -287,24 +287,68 @@ application’s visible content using your browser, you can select one or more
 branches of Burp’s site map and initiate a content discovery session on those
 branches with hidden links, ... etc..
 
-- `Application Pages Versus Functional Parts` --
+- `Discovering Hidden Parameters` -- A variation on the situation where an application uses request parameters to specify which function should be performed arises where other parameters are used to control the application’s logic in significant ways. For example, an application may behave differently if the parameter debug=true is added to the query string of any URL. It might turn off certain input validation checks, allow the user to bypass certain access controls, or display verbose debug informa- tion in its response
 
-- `Discovering Hidden Parameters` --
+   Depending on the time available, target a number of different pages or functions for hidden parameter discovery. Choose functions where it is most likely that developers have implemented debug logic, such as login, search, and file uploading and downloading.
 
 ### Analyzing the Application
 
+- Enumerating as much of the application’s content as possible is only one ele- ment of the mapping process. Equally important is the task of analyzing the application’s functionality, behavior, and technologies employed to identify the key attack surfaces it exposes and to begin formulating an approach to probing the application for exploitable vulnerabilities.
+
+   The core security mechanisms and how they function — in particular, management of session state, access controls, and authentication mecha- nisms and supporting logic (user registration, password change, and account recovery
+
 - `Identifying Entry Points for User Input ` --
+   - URL File Paths -- The parts of the URL that precede the query string are often overlooked as entry points, since they are assumed to be simply the names of directories and files on the server file system. However, in applications that use REST-style URLs, the parts of the URL that precede the query string can in fact function as data parameters and are just as important as entry points for user input as the query string itself.
+   - HTTP Headers -- Many applications perform custom logging functions and may log the contents of HTTP headers such as Referer and User-Agent. These headers should always be considered as possible entry points for input-based attacks.
+   -  and much more ... etc.
 
-- `Identifying Server-Side Technologies ` --
+- `Identifying Server-Side Technologies ` -- Normally it is possible to fingerprint the technologies employed on the server via various clues and indicators. for example Many web servers disclose fine-grained version information, both about the web server software itself and about other components that have been installed
+   - File Extensions -- File extensions used within URLs often disclose the platform or programming language used to implement the relevant functionality. For example: aspx — Microsoft ASP.NET, php — The PHP languag ... etc.
+   - Directory Names -- It is common to encounter subdirectory names that indicate the presence of an associated technology. For example: servlet — Java servlets, pls — Oracle Application Server PL/SQL gateway
+   - Session Tokens -- JSESSIONID — The Java Platform, PHPSESSID — PHP
 
-- `Identifying Server-Side Functionality ` --
+- `Identifying Server-Side Functionality ` -- It is often possible to infer a great deal about server-side functionality and struc- ture, or at least make an educated guess, by observing clues that the application discloses to the client.
 
-- `Mapping the Attack Surface ` --
+   Consider the following URL, which is used to access a search function:
+   ```txt
+   https://wahh-app.com/calendar.jsp?name=new%20applicants&isExpired=
+   0&startDate=22%2F09%2F2010&endDate=22%2F03%2F2011&OrderBy=name
+   ```
+   As you have seen, the .jsp file extension indicates that Java Server Pages are in use. You may guess that a search function will retrieve its information from either an indexing system or a database. The presence of the OrderBy parameter suggests that a back-end database is being used and that the value you submit maybeusedastheORDER BYclauseofaSQLquery.Thisparametermaywell be vulnerable to SQL injection ... etc.
+   
+   - Isolating Unique Application Behavior -- Sometimes the situation is the opposite of that just described. In many well- secured or mature applications, a consistent framework is employed that pre- vents numerous types of attacks, such as cross-site scripting, SQL injection, and unauthorized access. In these cases, the most fruitful areas for hunting vulnerabilities generally are the portions of the application that have been added retrospectively, or “bolted on,” and hence are not handled by the application’s general security framework.
 
+- `Mapping the Attack Surface ` -- The final stage of the mapping process is to identify the various attack surfaces exposed by the application and the potential vulnerabilities that are commonly associated with each one:
+   - 1 - Client-side validation — Checks may not be replicated on the server
+   - 2 - Database interaction — SQL injection
+   - 3 - File uploading and downloading — Path traversal vulnerabilities, stored cross-site scripting
+   - 4 - Display of user-supplied data — Cross-site scripting
+   - 5 - Dynamic redirects — Redirection and header injection attacks
+   - 6 - Social networking features — username enumeration, stored cross-site scripting
+   - 7 - Login — Username enumeration, weak passwords, ability to use brute force
+   - 8 - Multistage login — Logic flaws
+   - 9 - Session state — Predictable tokens, insecure handling of tokens
+   - 10 - Access controls — Horizontal and vertical privilege escalation
+   - 11 - User impersonation functions — Privilege escalation
+   - 12 - Use of cleartext communications — Session hijacking, capture of creden- tials and other sensitive data
+   - 13 - Off-site links — Leakage of query string parameters in the Referer header
+   - 14 - Interfaces to external systems — Shortcuts in the handling of sessions and/or access controls
+   - 15 - Error messages — Information leakage
+   - 16 - E-mail interaction — E-mail and/or command injection
+   - 17 - Native code components or interaction — Buffer overflows
+   - 18 - Use of third-party application components — Known vulnerabilities
+   - 19 - Identifiable web server software — Common configuration weaknesses, known software bug
+   
 ### Summary
 
-<br>
-<br>
+- Mapping the application is a key prerequisite to attacking it. It may be tempting to dive in and start probing for bugs, but taking time to gain a sound under- standing of the application’s functionality, technologies, and attack surface will pay dividends down the line.
+
+   As with almost all of web application hacking, the most effective approach is to use manual techniques supplemented where appropriate by controlled automation. No fully automated tool can carry out a thorough mapping of the application in a safe way. The core methodology we have outlined involves the following:
+  - 1 - Manual browsing and user-directed spidering to enumerate the applica- tion’s visible content and functionality
+  - 2 - Use of brute force combined with human inference and intuition to dis- cover as much hidden content as possible
+  - 3 - An intelligent analysis of the application to identify its key functionality, behavior, security mechanisms, and technologies
+  - 4 - An assessment of the application’s attack surface, highlighting the most promising functions and behavior for more focused probing into exploit- able vulnerabilities
+
 
 
 
