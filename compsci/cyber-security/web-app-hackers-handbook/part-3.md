@@ -116,45 +116,88 @@ If possible, applications should avoid transmitting this kind of data via the cl
 
 - `“Remember Me” Functionality` -- Applications often implement “remember me” functions as a convenience to users.  These functions are often insecure by design and leave the user exposed to attack both locally and by users on other computers. Even if the information stored for reidentifying users is suitably protected (encrypted) to prevent other users from determining or guessing it, the information may still be vulnerable to capture through a bug such as cross-site scripting
 
-- `User Impersonation Functionality` --
+- `User Impersonation Functionality` -- Some applications implement the facility for a privileged user of the application to impersonate other users in order to access data and carry out actions within their user context. For example, some banking applications allow helpdesk opera- tors to verbally authenticate a telephone user and then switch their application session into that user’s context to assist him or her. It is a extremly tricky design to do: It may be implemented as a “hidden” function, which is not subject to proper access controls. If an application allows administrative users to be impersonated, any weak- ness in the impersonation logic may result in a vertical privilege escalation vulnerability. This also leaves a "backdoor" for the attacked to find and attack all of the users from a single point of entry. Again do not implement it unless you have to.
 
-- `Incomplete Validation of Credentials` -- 
+- `Incomplete Validation of Credentials` -- Well-designed authentication mechanisms enforce various requirements on passwords, such as a minimum length or the presence of both uppercase and lowercase characters. Correspondingly, some poorly designed authentication mechanisms not only do not enforce these good practices but also do not take into account users’ own attempts to comply with them
 
-- `Nonunique Usernames` --
+- `Nonunique Usernames` -- Some applications that support self-registration allow users to specify their own username and do not enforce a requirement that usernames be unique. Although this is rare, the authors have encountered more than one application with this behavior. Don't fucking do this (unless you have to). 
 
-- `Predictable Usernames` -- 
+- `Predictable Usernames` -- Some applications automatically generate account usernames according to a predictable sequence (cust5331, cust5332, and so on). When an application behaves like this, an attacker who can discern the sequence can quickly arrive at a potentially exhaustive list of all valid usernames
 
-- `Predictable Initial Passwords` -- 
+- `Predictable Initial Passwords` -- In some applications, users are created all at once or in sizeable batches and are automatically assigned initial passwords, which are then distributed to them through some means. The means of generating passwords may enable an attacker to predict the passwords of other application users.
 
-- `Insecure Distribution of Credentials` -- 
+- `Insecure Distribution of Credentials` -- Many applications employ a process in which credentials for newly created accounts are distributed to users out-of-band of their normal interaction with the applica- tion (for example, via post, e-mail, or SMS text message). Sometimes, this is done for reasons motivated by security concerns, such as to provide assurance that the postal or e-mail address supplied by the user actually belongs to that person
  
 ### Implementation Flaws in Authentication
 
-- `Fail-Open Login Mechanisms` --
+- `Defects in Multistage Login Mechanisms` -- It is often assumed that multistage login mechanisms are less prone to secu- rity bypasses than standard username/password authentication. This belief is mistaken. Performing several authentication checks may add considerable security to the mechanism. But counterbalancing this, the process is more prone to flaws in implementation. In several cases where a combination of flaws is present, it can even result in a solution that is less secure than a nor- mal login based on username and password.
 
-- `Defects in Multistage Login Mechanisms` --
-
-- `Insecure Storage of Credentials` -- 
+- `Insecure Storage of Credentials` -- If an application stores login credentials insecurely, the security of the login mechanism is undermined, even though there may be no inherent flaw in the authentication process itself. This may involve passwords being stored in cleartext. But if passwords are being hashed using a standard algo- rithm such as MD5 or SHA-1, this still allows an attacker to simply look up observed hashes against a precomputed database of hash values.
  
 ### Securing Authentication 
 
+- Implementing a secure authentication solution involves attempting to simultane- ously meet several key security objectives, and in many cases trade off against other objectives such as functionality, usability, and total cost.
+
 - `Use Strong Credentials` -- 
+  - 1 - Suitable minimum password quality requirements should be enforced. These may include rules regarding minimum length; the appearance of alphabetic, numeric, and typographic characters; the appearance of both uppercase and lowercase characters; the avoidance of dictionary words, names, and other common passwords; preventing a password from being set to the username;
+  - 2 - Usernames should be unique. (this is an overkill for the most apps)
+  - 3 - Any system-generated usernames and passwords should be created with sufficient entropy that they cannot feasibly be sequenced or pre- dicted.
+  - 4 - Users should be permitted to set sufficiently strong passwords. For example, long passwords and a wide range of characters should be allowed.
 
 - `Handle Credentials Secretively` --
+  - 1 - All client-server communications should be protected using a well- established cryptographic technology, such as SSL
+  - 2 - If it is considered preferable to use HTTP for the unauthenticated areas of the application, ensure that the login form itself is loaded using HTTPS
+  - 3 - Only POST requests should be used to transmit credentials to the server. Credentials should never be placed in URL parameters or cookies, Credentials should never be transmitted back to the client, even in parameters to a redirect.
+  - 4 - All server-side application components should store credentials in a man- ner that does not allow their original values to be easily recovered. use a strong hash function
+  - 5 - Client-side “remember me” functionality should in general remember only nonsecret items such as usernames
+  - 6 - Particular attention should be paid to eliminating cross-site scripting vulnerabilities within the application that may be used to steal stored credentials
+  - 7 - A password change facility should be implemented and users should be required to change their password periodically.
 
 - `Validate Credentials Properly` -- 
+  - 1 - Passwords should be validated in full 
+  - 2 - The application should be aggressive in defending itself against unex- pected events occurring during login processing.
+  - 3 - All authentication logic should be closely code-reviewed, both as pseudo- code and as actual application source code, to identify logic errors
+  - 4 - If functionality to support user impersonation is implemented, this should be strictly controlled to ensure that it cannot be misused to gain unau- thorized access.
+  - 5 - Multistage logins should be strictly controlled to prevent an attacker from interfering with the transitions and relationships between the stages:
 
 - `Prevent Information Leakage` --
+  - 1 - An attacker should have no means of determining which piece of the various items submitted has caused a problem. Have a basic "invalid username or password" error messages.
+  - 2 - If the application enforces some kind of account lockout to prevent brute- force attacks
+  - 3 - be careful not to let this lead to any information leakage. For example, if an application discloses that a specific account has been suspended for X minutes due to Y failed logins, this behavior can easily be used to enumerate valid usernames. In addition, disclosing the precise metrics of the lockout policy enables an attacker to optimize any attempt to continue guessing passwords in spite of the policy  the application should respond to any series of failed login attempts from the same browser with a generic message advising that accounts are suspended if multiple failures occur and that the user should try again later.
 
 - `Prevent Brute-Force Attacks` --
+  - 1 - Some security-critical applications (such as online banks) simply disable an account after a small number of failed logins (such as three). They also require that the account owner take various out-of-band steps to reactivate the account, such as telephoning customer support and answering a series of security questions A more balanced policy, suitable for most security-aware applications, is to sus- pend accounts for a short period (such as 30 minutes) following a small number of failed login attempts (such as three)
+  - 2 - If a policy of temporary account suspension is implemented, care should be taken to ensure its effectiveness: To prevent information leakage leading to username enumeration, the application should never indicate that any specific account has been suspended. The policy’s metrics should not be disclosed to users. Simply telling legitimate users to “try again later” does not seriously diminish their quality of service. Dont give the attacker any info! If an account is suspended, login attempts should be rejected without even checking the credentials.
+  - 3 - The effectiveness of this kind of attack will, of course, be massively reduced if other areas of the authentication mechanism are designed securely. If usernames cannot be enumerated or reliably predicted, an attacker will be slowed down by the need to perform a brute-force exercise in guessing usernames. And if strong requirements are in place for password quality, it is far less likely that the attacker will choose a password for testing that even a single user of the application has chosen.
+  - 4 - In addition to these controls, an application can specifically protect itself against this kind of attack through the use of CAPTCHA (Completely Automated Public Turing test to tell Computers and Humans Apart)
 
 - `Prevent Misuse of the Password Change Function` --
+  - 1 - A password change function should always be implemented, to allow periodic password expiration
+  - 2 - As a key security mechanism, this needs to be well defended against misuse.
+  - 3 - The function should be accessible only from within an authenticated session.
+  - 4 - There should be no facility to provide a username, either explicitly or via a hidden form field or cookie.
+  - 5 - As a defense-in-depth measure, the function should be protected from unauthorized access gained via some other security defect in the applica- tion
+  - 6 - The new password should be entered twice to prevent mistakes. The appli- cation should compare the “new password” and “confirm new password” fields as its first step 
+  - 7 -  single generic error message should be used to notify users of any error in existing credentials, and the function should be temporarily suspended following a small number of failed attempts to change the password.
+  - 8 - Users should be notified out-of-band (such as via e-mail) that their pass- word has been changed, but the message should not contain either their old or new credentials.
 
 - `Prevent Misuse of the Account Recovery Function` -- 
+  - 1 - In the most security-critical applications, such as online banking, account recovery in the event of a forgotten password is handled out-of-band. A user must make a telephone call and answer a series of security questions The majority of applications do not want or need this level of security, so an automated recovery function may be appropriate.
+  - 2 - Features such as password “hints” should never be used, because they mainly help an attacker
+  - 3 - The best automated solution for enabling users to regain control of accounts is to e-mail the user a unique, time-limited, unguessable, single-use recov- ery URL. To prevent an attacker from denying service to users by continually requesting password reactivation e-mails, the user’s existing credentials should remain valid until they are changed.
+  - 4 - To further protect against unauthorized access, applications may present users with a secondary challenge that they must complete before gain- ing access to the password reset function. Be sure that the design of this challenge does not introduce new vulnerabilitie
 
 - `Log, Monitor, and Notify` -- 
+  - 1 - The application should log all authentication-related events, including login, logout, password change, password reset, account suspension, and account recovery. Where applicable, both failed and successful attempts should be logged. The logs should contain all relevant details (such as username and IP address) but no security secrets (such as passwords). Logs should be strongly protected from unauthorized access, because they are a critical source of information leakage.
+  - 2 - Anomalies in authentication events should be processed by the appli- cation’s real-time alerting and intrusion prevention functionality. For example, application administrators should be made aware of patterns indicating brute-force attacks
+  - 3 - Users should be notified out-of-band of any critical security events.
+  - 4 - Users should be notified in-band of frequently occurring security events on her attack.
 
 ### Summary
+
+- Authentication functions are perhaps the most prominent target in a typical application’s attack surface. By definition, they can be reached by unprivileged, anonymous users. If broken, they grant access to protected functionality and sensitive data. They lie at the core of the security mechanisms that an application employs to defend itself and are the front line of defense against unauthorized access.
+
+  The most important lesson when attacking authentication functionality is to look everywhere. In addition to the main login form, there may be functions to register new accounts, change passwords, remember passwords, recover forgotten passwords, and impersonate other users. Each of these presents a rich target of potential defects, and problems that have been consciously eliminated within one function often reemerge within others
 
 <br>
 <br>
