@@ -94,15 +94,65 @@ If possible, applications should avoid transmitting this kind of data via the cl
 
 # Chapter 6 Attacking Authentication 
 
-### Authentication Technologies 
+- On the face of it, authentication is conceptually among the simplest of all the security mechanisms employed within web applications. In the typical case, a user supplies her username and password, and the application must verify that these items are correct. If so, it lets the user in. If not, it does not.
 
-- `Mechanisms` --
-
+  Authentication also lies at the heart of an application’s protection against malicious attack. It is the front line of defense against unauthorized access. If an attacker can defeat those defenses, he will often gain full control of the applica- tion’s functionality and unrestricted access to the data held within it. Without robust authentication to rely on, none of the other core security mechanisms (such as session management and access control) can be effective.
+  
 ### Design Flaws in Authentication 
+
+- Authentication functionality is subject to more design weaknesses than any other security mechanism commonly employed in web applications. Even in the apparently simple, standard model where an application authenticates users based on their username and password, shortcomings in the design of this model can leave the application highly vulnerable to unauthorized access.
+
+- `Bad Passwords` -- Many web applications employ no or minimal controls over the quality of users’ passwords (short, blank, dictionary words)
+
+- `Brute-Forcible Login` -- Login functionality presents an open invitation for an attacker to try to guess usernames and passwords and therefore gain unauthorized access to the appli- cation. If the application allows an attacker to make repeated login attempts with different passwords until he guesses the correct one, it is highly vulnerable even to an amateur attacke. Given today’s bandwidth and processing capabilities, it is possible to make thousands of login attempts per minute from a standard PC and DSL connection
+
+- `Verbose Failure Messages` -- When a login attempt fails, you can of course infer that at least one piece of information was incorrect. However, if the application tells you which piece of information was invalid, you can exploit this behavior to considerably diminish the effectiveness of the login mechanism. Do not give out details.
+
+- `Vulnerable Transmission of Credentials` -- If an application uses an unencrypted HTTP connection to transmit login cre- dentials, an eavesdropper who is suitably positioned on the network can, of course, intercept them. Even if login occurs over HTTPS, credentials may still be disclosed to unau- thorized parties if the application handles them in an unsafe manner
+
+- `Password Change Functionality` -- Most apps dont have as much security in this form as they do in login but they should. Check whether the “new password” and “confirm new password” fields have the same value only after validating the existing password, thereby allowing an attack to succeed in discovering the existing password noninvasively.
+
+- `Forgotten Password Functionality` -- Like password change functionality, mechanisms for recovering from a forgot- ten password situation often introduce problems. In addition to this range of defects, design weaknesses in forgotten pass- word functions frequently make this the weakest link at which to attack the application’s overall authentication logic. Do not use basic secruity questions like the city you grew up in, your mothers maiden name, they can be brute forced easily or dictionary attacked. And never send them over the app itself use email for transportation of the new password.
+
+- `“Remember Me” Functionality` -- Applications often implement “remember me” functions as a convenience to users.  These functions are often insecure by design and leave the user exposed to attack both locally and by users on other computers. Even if the information stored for reidentifying users is suitably protected (encrypted) to prevent other users from determining or guessing it, the information may still be vulnerable to capture through a bug such as cross-site scripting
+
+- `User Impersonation Functionality` --
+
+- `Incomplete Validation of Credentials` -- 
+
+- `Nonunique Usernames` --
+
+- `Predictable Usernames` -- 
+
+- `Predictable Initial Passwords` -- 
+
+- `Insecure Distribution of Credentials` -- 
  
 ### Implementation Flaws in Authentication
+
+- `Fail-Open Login Mechanisms` --
+
+- `Defects in Multistage Login Mechanisms` --
+
+- `Insecure Storage of Credentials` -- 
  
 ### Securing Authentication 
+
+- `Use Strong Credentials` -- 
+
+- `Handle Credentials Secretively` --
+
+- `Validate Credentials Properly` -- 
+
+- `Prevent Information Leakage` --
+
+- `Prevent Brute-Force Attacks` --
+
+- `Prevent Misuse of the Password Change Function` --
+
+- `Prevent Misuse of the Account Recovery Function` -- 
+
+- `Log, Monitor, and Notify` -- 
 
 ### Summary
 
