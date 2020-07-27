@@ -2,13 +2,22 @@
 
 - Nearly all applications rely on a data store to manage data that is processed within the application. In many cases this data drives the core application logic, holding user accounts, permissions, application configuration settings, and more. Data stores have evolved to become significantly more than passive containers for data. Most hold data in a structured format, accessed using a predefined query format or language, and contain internal logic to help manage that data.
 
-	as
-	asdasd
-	asd
+	If an attacker can interfere with the application’s interaction with the data store, to make it retrieve or modify different data, he can usually bypass any controls over data access that are imposed at the application layer. By far the most common data stores are SQL databases, XML- based repositories, and LDAP directories. Practical examples seen elsewhere are also covered.
 
 ### Injecting into Interpreted Contexts
 
-- `Bypassing a Login` --
+- Because of how interpreted languages are executed, a family of vulnerabilities known as code injection arises. In any useful application, user-supplied data is received, manipulated, and acted on. Therefore, the code that the interpreter processes is a mix of the instructions written by the programmer and the data supplied by the user. In some situations, an attacker can supply crafted input that breaks out of the data context, usually by supplying some syntax that has a special significance within the grammar of the interpreted language being used.
+
+- `Bypassing a Login` -- The web application functions as a discretionary access control to the data store, constructing queries to retrieve, add, or modify data in the data store based on the user’s account and type. A successful injection attack that modifies a query (and not merely the data within the query) can bypass the application’s discretionary access controls and gain unauthorized access.
+
+	For example, if an attacker knows that the username of the application administrator is admin, he can log in as that user by supplying any password and the following username: (`'admin'--`
+	````sql	
+	SELECT * FROM users WHERE username = ‘admin’--’ AND password = ‘foo’
+	```
+	Note that the comment sequence (--) causes the remainder of the query to
+be ignored, and so the password check is bypassed.
+
+	> Injection into interpreted languages is a broad topic, encompassing many different kinds of vulnerabilities and potentially affecting every component of a web application’s supporting infrastructure.
 
 ### Injecting into SQL 
 
