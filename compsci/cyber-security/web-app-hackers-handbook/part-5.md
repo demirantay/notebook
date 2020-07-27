@@ -11,17 +11,20 @@
 - `Bypassing a Login` -- The web application functions as a discretionary access control to the data store, constructing queries to retrieve, add, or modify data in the data store based on the user’s account and type. A successful injection attack that modifies a query (and not merely the data within the query) can bypass the application’s discretionary access controls and gain unauthorized access.
 
 	For example, if an attacker knows that the username of the application administrator is admin, he can log in as that user by supplying any password and the following username: (`'admin'--`
-	````sql	
-	SELECT * FROM users WHERE username = ‘admin’--’ AND password = ‘foo’
-	```
-	Note that the comment sequence (--) causes the remainder of the query to
-be ignored, and so the password check is bypassed.
+		````sql	
+		SELECT * FROM users WHERE username = ‘admin’--’ AND password = ‘foo’
+		```
+		Note that the comment sequence (--) causes the remainder of the query to
+	be ignored, and so the password check is bypassed.
 
-	> Injection into interpreted languages is a broad topic, encompassing many different kinds of vulnerabilities and potentially affecting every component of a web application’s supporting infrastructure.
+		> Injection into interpreted languages is a broad topic, encompassing many different kinds of vulnerabilities and potentially affecting every component of a web application’s supporting infrastructure.
 
 ### Injecting into SQL 
 
-- `Exploiting a Basic Vulnerability ` --
+- SQL is an interpreted language, and web applications commonly construct SQL statements that incorporate user-supplied data. If this is done in an unsafe way, the application may be vulnerable to SQL injection. This flaw is one of the most notorious vulnerabilities to have afflicted web applications. In the most serious cases, SQL injection can enable an anonymous attacker to read and modify all data stored within the database, and even take full control of the server on which the database is running. As awareness of web application security has evolved, SQL injection vulner- abilities have become gradually less widespread and more difficult to detect and exploit.
+
+	In many situations, you will find it extremely useful to have access to
+a local installation of the same database that is being used by the applica- tion you are targeting. You will often find that you need to tweak a piece of syntax, or consult a built-in table or function, to achieve your objectives. The responses you receive from the target application will often be incomplete or cryptic, requiring some detective work to understand. All of this is much easier if you can cross-reference with a fully transparent working version of the database in question.
 
 - `Injecting into Different Statement Types ` --
 
