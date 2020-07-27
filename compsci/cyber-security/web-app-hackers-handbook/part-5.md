@@ -52,41 +52,46 @@ a local installation of the same database that is being used by the applica- tio
 
 - `Second-Order SQL Injection ` -- A particularly interesting type of filter bypass arises in connection with second- order SQL injection. Many applications handle data safely when it is first inserted into the database. Once data is stored in the database, it may later be processed in unsafe ways, either by the application itself or by other back-end processes. You can attack that too.
 
-- `Advanced Exploitation ` -- 
+- `Beyond SQL Injection: Escalating the Database Attack ` -- A successful exploit of a SQL injection vulnerability often results in total com- promise of all application data. Most applications employ a single account for all database access and rely on application-layer controls to enforce segregation of access between different users. Gaining unrestricted use of the application’s database account results in access to all its data.
 
-- `Beyond SQL Injection: Escalating the ` --
+	Attacking databases is a huge topic that is beyond the scope of this book. This section points you toward a few key ways in which vulnerabilities and function- ality within the main database types can be leveraged to escalate your attack.
 
-- `Using SQL Exploitation Tools`  --
+- `Using SQL Exploitation Tools`  -- Many of the techniques we have described for exploiting SQL injection vulner- abilities involve performing large numbers of requests to extract small amounts of data at a time. Fortunately, numerous tools are available that automate much of this process and that are aware of the database-specific syntax required to deliver successful attacks.
 
-- `SQL Syntax and Error Reference` --
+	Most of the currently available tools use the following approach to exploit SQL injection vulnerabilities
+	- Brute-force all parameters in the target request to locate SQL injection points
+	- Determine the location of the vulnerable field within the back-end SQL query by appending various characters such as closing brackets, comment characters, and SQL keywords.
+	- Attempt to perform a UNION attack by brute-forcing the number of required columns 
+	- Inject custom queries to retrieve arbitrary data 
+	- If results cannot be retrieved using UNION, inject Boolean conditions (AND 1=1,AND 1=2,andsoon)intothequerytodeterminewhetherconditional responses can be used to retrieve data.
+	- If results cannot be retrieved by injecting conditional expressions, try using conditional time delays to retrieve data.
+	
+	These tools are primarily exploitation tools, best suited to extracting data from the database by exploiting an injection point that you have already identified and understood. They are not a magic bullet for finding and exploit- ing SQL injection flaws. In practice, it is often necessary to provide some additional SQL syntax before and/or after the data injected by the tool for the tool’s hard-coded attacks to work.
+ 
+- `SQL Syntax and Error Reference` -- We have described numerous techniques that enable you to probe for and exploit SQL injection vulnerabilities in web applications. In many cases, there are minor differences between the syntax that you need to employ against different back-end database platforms. Furthermore, every database produces different error messages whose meaning you need to understand both when probing for flaws and when attempting to craft an effective exploit
 
-- `Preventing SQL Injection ` --
+- `Preventing SQL Injection ` -- Despite all its different manifestations, and the complexities that can arise in its exploitation, SQL injection is in general one of the easier vulnerabilities to prevent.
 
-### Injecting into NoSQL
+	__Partially Effective Measures__ -- Because of the prominence of the single quotation mark in the standard expla- nations of SQL injection flaws, a common approach to preventing attacks is to escape any single quotation marks within user input by doubling them
+	
+	Another countermeasure that is often cited is the use of stored procedures for all database access. There is no doubt that custom stored procedures can provide security and performance benefits. However, they are not guaranteed to prevent SQL injection vulnerabilities.
 
-- `Injecting into MongoDB ` --
+	__Parameterized Queries__ -- Most databases and application development platforms provide APIs for handling untrusted input in a secure way, which prevents SQL injection vulnerabilities from arising. If parameterized queries are to be an effective solution against SQL injection,
+you need to keep in mind several important provisos:
+	- They should be used for every database query. 
+	- Every item of data inserted into the query should be properly parameterized.
+	- Parameter placeholders cannot be used to specify the table and column names used in the query
 
-### Injecting into XPath 
-
-- `Subverting Application Logic ` --
-
-- `Informed XPath Injection ` --
-
-- `Blind XPath Injection` --
-
-- `Finding XPath Injection Flaws ` --
-
-- `Preventing XPath Injection ` --
-
-### Injecting into LDAP
-
-- `Exploiting LDAP Injection` --
-
-- `Finding LDAP Injection Flaws` --
-
-- `Preventing LDAP Injection ` --
+	__Defense in Depth__ -- As always, a robust approach to security should employ defense-in-depth measures to provide additional protection in the event that frontline defenses fail for any reason.
+	- The application should use the lowest possible level of privileges when accessing the database. It usually only needs to read and write its own data. If this approach is enforced throughout the application, any residual SQL injection flaws that may exist are likely to have their impact significantly reduced.
+	- Many enterprise databases include a huge amount of default functional- ity that can be leveraged by an attacker who gains the ability to execute arbitrary SQL statements. Wherever possible, unnecessary functions should be removed or disabled
+	- All vendor-issued security patches should be evaluated, tested, and applied in a timely way to fix known vulnerabilities within the database software itself
 
 ### Summary
+
+- We have examined a range of vulnerabilities that allow you to inject into web application data stores. These vulnerabilities may allow you to read or modify sensitive application data, perform other unauthorized actions, or subvert appli- cation logic to achieve an objective.
+
+	As serious as these attacks are, they are only part of a wider range of attacks that involve injecting into interpreted contexts. Other attacks in this category may allow you to execute commands on the server’s operating system, retrieve arbitrary files, and interfere with other back-end components. The next chapter examines these attacks and others. It looks at how vulnerabilities within a web application can lead to compromise of key parts of the wider infrastructure that supports the application
 
 <br>
 <br>
