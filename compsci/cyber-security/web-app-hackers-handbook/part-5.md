@@ -1,5 +1,11 @@
 # Chapter 9 Attacking Data Stores
 
+- Nearly all applications rely on a data store to manage data that is processed within the application. In many cases this data drives the core application logic, holding user accounts, permissions, application configuration settings, and more. Data stores have evolved to become significantly more than passive containers for data. Most hold data in a structured format, accessed using a predefined query format or language, and contain internal logic to help manage that data.
+
+	as
+	asdasd
+	asd
+
 ### Injecting into Interpreted Contexts
 
 - `Bypassing a Login` --
