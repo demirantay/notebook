@@ -26,23 +26,33 @@
 	In many situations, you will find it extremely useful to have access to
 a local installation of the same database that is being used by the applica- tion you are targeting. You will often find that you need to tweak a piece of syntax, or consult a built-in table or function, to achieve your objectives. The responses you receive from the target application will often be incomplete or cryptic, requiring some detective work to understand. All of this is much easier if you can cross-reference with a fully transparent working version of the database in question.
 
-- `Injecting into Different Statement Types ` --
+- `Injecting into Different Statement Types ` -- The most com- mon types of SQL statements and their uses are described here.
+	- SELECT statements are used to retrieve information from the database. 
+	- INSERT statements are used to create a new row of data within a table.
+	- UPDATE statements are used to modify one or more existing rows of data within a table
+	- DELETE statements are used to delete one or more rows of data within a table
 
-- `Finding SQL Injection Bugs ` --
+- `Finding SQL Injection Bugs ` -- In the most obvious cases, a SQL injection flaw may be discovered and conclu- sively verified by supplying a single item of unexpected input to the application. In other cases, bugs may be extremely subtle and may be difficult to distinguish from other categories of vulnerability or from benign anomalies that do not present a security threat. Nevertheless, you can carry out various steps in an ordered way to reliably verify the majority of SQL injection flaws.
 
-- `Fingerprinting the Database ` --
+	When user-supplied string data is incorporated into a SQL query, it is encap- sulated within single quotation marks. To exploit any SQL injection flaw, you need to break out of these quotation marks.
+	
+	If user-supplied data is being inserted into the structure of the SQL query itself, rather than an item of data within the query, exploiting SQL injection simply involves directly supplying valid SQL syntax. No “escaping” is required to break out of any data context.
 
-- `The UNION Operator ` --
+- `Fingerprinting the Database ` -- Most of the techniques described so far are effective against all the common database platforms, and any divergences have been accommodated through minor adjustments to syntax. However, as we begin to look at more advanced exploitation techniques, the differences between platforms become more signifi- cant, and you will increasingly need to know which type of back-end database you are dealing with. Fingerprinting is called when you use different syntax of each different database platform to decide which one is used within the site that you are attacking. 
 
-- `Extracting Useful Data ` --
+- `The UNION Operator ` -- The UNION operator is used in SQL to combine the results of two or more SELECT statements into a single result set. When a web application contains a SQL injec- tion vulnerability that occurs in a SELECT statement, you can often employ the UNION operator to perform a second, entirely separate query, and combine its results with those of the first.
 
-- `Extracting Data with UNION` --
+	When the results of two queries are combined using the UNION operator, the two result sets must have the same structure. In other words, they must contain the same number of columns, which have the same or compatible data types, appearing in the same order To inject a second query that will return interesting results, the attacker needs to know the name of the database table that he wants to target, and the names of its relevant columns.
 
-- `Bypassing Filters ` --
+- `Extracting Useful Data ` -- To extract useful data from the database, normally you need to know the names of the tables and columns containing the data you want to access. The main enterprise DBMSs contain a rich amount of database metadata that you can query to discover the names of every table and column within the database.
 
-- `Second-Order SQL Injection ` --
+- `Bypassing Filters ` -- In some situations, an application that is vulnerable to SQL injection may imple- ment various input filters that prevent you from exploiting the flaw without restrictions. For example, the application may remove or sanitize certain characters or may block common SQL keywords. Filters of this kind are often vulnerable to bypasses, so you should try numerous tricks in this situation.
 
-- `Advanced Exploitation ` --
+	Some input validation routines employ a simple blacklist and either block or remove any supplied data that appears on this list. In this instance, you should try the standard attacks, looking for common defects in validation and canoni- calization mechanisms, as described in Chapter 2. For example, if the SELECT keyword is being blocked or removed, you can try the following bypasses: SeLecT %00SELECT ... etc.
+
+- `Second-Order SQL Injection ` -- A particularly interesting type of filter bypass arises in connection with second- order SQL injection. Many applications handle data safely when it is first inserted into the database. Once data is stored in the database, it may later be processed in unsafe ways, either by the application itself or by other back-end processes. You can attack that too.
+
+- `Advanced Exploitation ` -- 
 
 - `Beyond SQL Injection: Escalating the ` --
 
