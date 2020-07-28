@@ -77,32 +77,54 @@ nonetheless.
 
 ### XSS Attacks in Action 
 
-- `Payloads for XSS Attacks ` --
+- `Payloads for XSS Attacks ` -- So far, we have focused on the classic XSS attack payload. It involves capturing a victim’s session token, hijacking her session, and thereby making use of the application “as” the victim, performing arbitrary actions and potentially taking ownership of that user’s account. In fact, numerous other attack payloads may be delivered via any type of XSS vulnerability.
+  - Virtual Defacement
+  - Injecting Trojan Functionality
+  - Inducing User Actions
 
-- `Delivery Mechanisms for XSS Attacks ` --
+- `Delivery Mechanisms for XSS Attacks ` -- Having identified an XSS vulnerability and formulated a suitable payload to exploit it, an attacker needs to find some means of delivering the attack to other users of the application. 
 
-### Finding and Exploiting XSS Vulnerabilities
+  __Delivering Reflected and DOM-Based XSS Attacks__ -- In addition to the obvious phishing vector of bulk e-mailing a crafted URL to random users, an attacker may attempt to deliver a reflected or DOM-based XSS attack via the following mechanisms:
+  - In a targeted attack, a forged e-mail may be sent to a single target user or a small number of users.
+  - A URL can be fed to a target user in an instant message.
+  - Content and code on third-party websites can be used to generate requests that trigger XSS flaws
+  - In a variation on the third-party website attack, some attackers have been known to pay for banner advertisements that link to a URL containing an XSS payload for a vulnerable application
+  
+  __Chaining XSS and Other Attacks__ -- XSS flaws can sometimes be chained with other vulnerabilities to devastating effect.
 
-- `Finding and Exploiting Refl ected XSS Vulnerabilities` --
-
-- `Finding and Exploiting Stored XSS Vulnerabilities` --
-
-- `Finding and Exploiting DOM-Based XSS Vulnerabilities ` --
+- Finding and Exploiting XSS Vulnerabilities (skipped this part cause im bored out of my mind, plus i am not going to learn about exploiting xss in just a fucking chapter.)
 
 ### Preventing XSS Attacks 
 
-- `Preventing Reflected and Stored XSS ` --
+- Despite the various manifestations of XSS, and the different possibilities for exploitation, preventing the vulnerability itself is in fact conceptually straightfor- ward. What makes it problematic in practice is the difficulty of identifying every instance in which user-controllable data is handled in a potentially dangerous way. Any given page of an application may process and display dozens of items of user data. In addition to the core functionality, vulnerabilities may arise in error messages and other locations. It is hardly surprising, therefore, that XSS flaws are so hugely prevalent, even in the most security-critical application. 
 
-- `Preventing DOM-Based XSS` --
+- `Preventing Reflected and Stored XSS ` -- The root cause of both reflected and stored XSS is that user-controllable data is copied into application responses without adequate validation and sanitization. Because the data is being inserted into the raw source code of an HTML page, malicious data can interfere with that page, modifying not only its content but also its structure — breaking out of quoted strings, opening and closing tags, injecting scripts, and so on.
+
+  Having identified all the operations that are potentially at risk of XSS and that need to be suitably defended, you should follow a threefold approach to prevent any actual vulnerabilities from arising: validate input, validate output, eliminate dangeorus insertion points.
+
+  __Validate Input__ -- At the point where the application receives user-supplied data that may be cop- ied into one of its responses at any future point, the application should perform context-dependent validation of this data, in as strict a manner as possible. Different validation rules should be applied as restrictively as possible to names, e-mail addresses, account numbers, and so on,
+  
+  __Validate Output__ -- At the point where the application copies into its responses any item of data that originated from some user or third party, this data should be HTML-encoded to sanitize potentially malicious characters. HTML encoding involves replacing literal characters with their corresponding HTML entities. This ensures that browsers will handle potentially malicious characters in a safe way, treating them as part of the content of the HTML document and not part of its structure.
+  
+  __Eliminate Dangerous Insertion Points__ -- There are some locations within the application page where it is just too inher- ently dangerous to insert user-supplied input, and developers should look for an alternative means of implementing the desired functionality. A further pitfall to avoid is situations where an attacker can manipulate the character set of the application’s response, either by injecting into a relevant directive or because the application uses a request parameter to specify the preferred character set. In this situation, input and output filters that are well designed in other respects may fail because the attacker’s input is encoded in an unusual form that the filters do not recognize as potentially malicious. Wherever possible, the application should explicitly specify an encoding type in its response headers, disallow any means of modifying this
+  
+  __Allowing Limited HTML__ -- Some applications need to let users submit data in HTML format that will be inserted into application responses. For example, a blogging application may. allow users to write comments using HTML, to apply formatting to their com- ments, embed links or images, and so on. In this situation, applying the preceding measures across the board will break the application. Users’ HTML markup will itself be HTML-encoded in responses and therefore will be displayed on-screen as actual markup, rather than as the formatted content that is required.
+  
+  For an application to support this functionality securely, it needs to be robust in allowing only a limited subset of HTML, which does not provide any means of introducing script code. This must involve a whitelist approach in which only specific tags and attributes are permitted. Doing this successfully is a nontrivial task because, as you have seen, there are numerous ways to use seemingly harmless tags to execute code.
+
+- `Preventing DOM-Based XSS` -- The defenses described so far obviously do not apply directly to DOM-based XSS, because the vulnerability does not involve user-controlled data being copied into server responses. Wherever possible, applications should avoid using client-side scripts to process DOM data and insert it into the page. Because the data being processed is outside of the server’s direct control, and in some cases even outside of its visibility, this behavior is inherently risky.
+
+  If it is considered unavoidable to use client-side scripts in this way, DOM-based XSS flaws can be prevented through two types of defenses,
+  
+  __validate input__ -- In many situations, applications can perform rigorous validation on the data being processed. Indeed, this is one area where client-side validation can be more effec- tive than server-side validation
+  
+  __validate output__ -- As with reflected XSS flaws, applications can perform HTML encoding of user- controllable DOM data before it is inserted into the document. This enables all kinds of potentially dangerous characters and expressions to be displayed within the page in a safe way
 
 ### Summary
 
-<br>
-<br>
-
----
+- This chapter has examined the various ways in which XSS vulnerabilities can arise and ways in which common filter-based defenses can be circumvented. Because XSS vulnerabilities are so prevalent, it is often straightforward to find several bugs within an application that are easy to exploit. XSS becomes more interesting, from a research perspective at least, when various defenses are in place that force you to devise some highly crafted input, or leverage some little- known feature of HTML, JavaScript, or VBScript, to deliver a working exploit.
 
 <br>
-<br>
+
 
 
