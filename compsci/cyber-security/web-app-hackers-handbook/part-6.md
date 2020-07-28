@@ -48,17 +48,34 @@ In addition to these basic tests, the most important challenge when probing for 
 
 # Chapter 12 Attacking Users: Cross-Site Scripting 
 
+- All the attacks we have considered so far involve directly targeting the server- side application. Many of these attacks do, of course, impinge upon other users, such as a SQL injection attack that steals other users’ data. But the attacker’s essential methodology was to interact with the server in unexpected ways to perform unauthorized actions and access unauthorized data.
+
+  The attacks described in this chapter and the next are in a different category, because the attacker’s primary target is the application’s other users. All the relevant vulnerabilities still exist within the application itself. However, the attacker leverages some aspect of the application’s behavior to carry out malicious actions against another end user. 
+  
+  A key focus of research in the past decade has been client-side vulnerabilities, with defects such as session fixation and cross-site request forgery first being discussed many years after most categories of server-side bugs were widely known. Media focus on web security is predominantly concerned with client- side attacks, with such terms as spyware, phishing, and Trojans being common currency to many journalists who have never heard of SQL injection or path traversal.
+  
+  Attacks against other application users come in many forms and manifest a variety of subtleties and nuances that are frequently overlooked. They are also less well understood in general than the primary server-side attacks, with dif- ferent flaws being conflated or neglected even by some seasoned penetration testers. This chapter focuses on cross-site scripting (XSS). This category of vulner- ability is the Godfather of attacks against other users. It is by some measure the most prevalent web application vulnerability found in the wild.
+
 ### Varieties of XSS 
 
-- `Refl ected XSS Vulnerabilities ` --
+- XSS vulnerabilities come in various forms and may be divided into three vari- eties: reflected, stored, and DOM-based. Although these have several features in common, they also have important differences in how they can be identified and exploited
 
-- `Stored XSS Vulnerabilities ` --
+- `Reflected XSS Vulnerabilities ` -- This type of simple XSS bug accounts for approximately 75% of the XSS vulnerabilities that exist in real-world web applications. It is called reflected XSS because exploiting the vulnerability involves crafting a request containing embedded JavaScript that is reflected to any user who makes the request. The attack payload is delivered and executed via a single request and response. For this reason, it is also sometimes called first-order XSS.
 
-- `DOM-Based XSS Vulnerabilities ` --
+- `Stored XSS Vulnerabilities ` -- A different category of XSS vulnerability is often called stored cross-site scripting. This version arises when data submitted by one user is stored in the application (typically in a back-end database) and then is displayed to other users without being filtered or sanitized appropriately.
+
+  Stored XSS vulnerabilities are common in applications that support interac- tion between end users, or where administrative staff access user records and data within the same application Attacks against stored XSS vulnerabilities typically involve at least two requests to the application. In the first, the attacker posts some crafted data containing malicious code that the application stores. In the second, a victim views a page containing the attacker’s data, and the malicious code is executed when the script is executed in the victim’s browser. For this reason, the vulnerability is also sometimes called second-order cross-site scripting
+  
+  First, in the case of reflected XSS, to exploit a vulnerability, the attacker must induce victims to visit his crafted URL. In the case of stored XSS, this require- ment is avoided. Having deployed his attack within the application, the attacker simply needs to wait for victims to browse to the page or function that has been compromised. Usually this is a regular page of the application that normal users will access of their own accord.
+  
+  These differences between reflected and stored XSS mean that stored XSS flaws are often critical to an application’s security. In most cases, an attacker can submit some crafted data to the application and then wait for victims to be hit. If one of those victims is an administrator, the attacker will have compromised the entire application.
+
+- `DOM-Based XSS Vulnerabilities ` -- Both reflected and stored XSS vulnerabilities involve a specific pattern of behavior, in which the application takes user-controllable data and displays this back to users in an unsafe way. A third category of XSS vulnerabilities does not share this characteristic. In DOM XSS. The server’s response does not contain the attacker’s script in any form. When the user’s browser processes this response, the script is executed
+nonetheless.
+
+  DOM-based XSS vulnerabilities are more similar to reflected XSS bugs than to stored XSS bugs. Their exploitation typically involves an attacker’s inducing a user to access a crafted URL containing malicious code. The server’s response to that specific request causes the malicious code to be executed. However, in terms of the exploitation details, there are important differences between reflected and DOM-based XSS
 
 ### XSS Attacks in Action 
-
-- `Real-World XSS Attacks ` --
 
 - `Payloads for XSS Attacks ` --
 
@@ -74,7 +91,7 @@ In addition to these basic tests, the most important challenge when probing for 
 
 ### Preventing XSS Attacks 
 
-- `Preventing Refl ected and Stored XSS ` --
+- `Preventing Reflected and Stored XSS ` --
 
 - `Preventing DOM-Based XSS` --
 
