@@ -102,62 +102,68 @@ you need to keep in mind several important provisos:
 <br>
 
 # Chapter 10 Attacking Back-End Components 
+
+- Web applications are increasingly complex offerings. They frequently function as the Internet-facing interface to a variety of business-critical resources on the back end, including networked resources such as web services, back-end web servers, mail servers, and local resources such as filesystems and interfaces to the operating system. Frequently, the application server also acts as a discretionary access control layer for these back-end components. Any successful attack that could perform arbitrary interaction with a back-end component could potentially violate the entire access control model applied by the web application, allowing unauthorized access to sensitive data and functionality.
  
 ### Injecting OS Commands
 
-- `Example 1: Injecting Via Perl ` --
+- Most web server platforms have evolved to the point where built-in APIs exist to perform practically any required interaction with the server’s operating system. Properly used, these APIs can enable developers to access the filesys- tem, interface with other processes, and carry out network communications in a safe manner.  Nevertheless, there are many situations in which developers elect to use the more heavyweight technique of issuing operating system com- mands directly to the server However, if the application passes user-supplied input to operating system commands, it may be vulnerable to command injection, enabling an attacker to submit crafted input that modifies the commands that the developers intended to perform.
 
-- `Example 2: Injecting Via ASP` --
+- `Injecting Through Dynamic Execution ` -- Many web scripting languages support the dynamic execution of code that is generated at runtime. This feature enables developers to create applications that dynamically modify their own code in response to various data and conditions. If user input is incorporated into code that is dynamically executed, an attacker may be able to supply crafted input that breaks out of the intended data context and specifies commands that are executed on the server in the same way as if they had been written by the original developer. The first target of an attacker at this point typically is to inject an API that runs OS commands.
 
-- `Injecting Through Dynamic Execution ` --
+- `Finding OS Command Injection Flaws ` -- In your application mapping exercises (see Chapter 4), you should have identi- fied any instances where the web application appears to be interacting with the underlying operating system by calling external processes or accessing the filesystem. You should probe all these functions, looking for command injection flaws.
 
-- `Finding OS Command Injection Flaws ` --
+- `Finding Dynamic Execution Vulnerabilities ` -- Dynamic execution vulnerabilities most commonly arise in languages such as PHP and Perl. But in principle, any type of application platform may pass user-supplied input to a script-based interpreter, sometimes on a different back-end server.
 
-- `Finding Dynamic Execution Vulnerabilities ` --
+- `Preventing OS Command Injection ` -- In general, the best way to prevent OS command injection flaws from arising is to avoid calling out directly to operating system commands. Virtually any conceivable task that a web application may need to carry out can be achieved using built-in APIs that cannot be manipulated to perform commands other than the one intended.
 
-- `Preventing OS Command Injection ` --
+	If it is considered unavoidable to embed user-supplied data into command strings that are passed to an operating system command interpreter, the appli- cation should enforce rigorous defenses to prevent a vulnerability from arising. If possible, a whitelist should be used to restrict user input to a specific set of expected values. Alternatively, the input should be restricted to a very narrow character set, such as alphanumeric characters only.
 
-- `Preventing Script Injection Vulnerabilities ` --
+- `Preventing Script Injection Vulnerabilities ` -- In general, the best way to avoid script injection vulnerabilities is to not pass user-supplied input, or data derived from it, into any dynamic execution or include functions. If this is considered unavoidable for some reason, the rel- evant input should be strictly validated to prevent any attack from occurring. If possible, use a whitelist of known good values that the application expects, and reject any input that does not appear on this list.
 
 ### Manipulating File Paths 
 
-- `Path Traversal Vulnerabilities ` --
+- Many types of functionality commonly found in web applications involve pro- cessing user-supplied input as a file or directory name. Typically, the input is passed to an API that accepts a file path, such as in the retrieval of a file from the local filesystem. The application processes the result of the API call within its response to the user’s request. If the user-supplied input is improperly validated, this behavior can lead to various security vulnerabilities.
 
-- `File Inclusion Vulnerabilities ` --
+- `Path Traversal Vulnerabilities ` -- Path traversal vulnerabilities arise when the application uses user-controllable data to access files and directories on the application server or another back- end filesystem in an unsafe way. By submitting crafted input, an attacker may be able to cause arbitrary content to be read from, or written to, anywhere on the filesystem being accessed.
 
-### Injecting into XML Interpreters
+	__Finding and Exploiting Path Traversal Vulnerabilities__ --  Known as path traversal vulnerabilities, such defects may enable the attacker to read sensitive data including passwords and appli- cation logs, or to overwrite security-critical items such as configuration files and software binaries.
+	
+	__Locating Targets for Attack__ --  During your initial mapping of the application, you should already have identified any obvious areas of attack surface in relation to path traversal vulnerabilities. Any functionality whose explicit purpose is uploading or downloading files should be thoroughly tested. This functionality is often found in work flow applications where users can share documents, in blogging and auction appli- cations where users can upload images, and in informational applications where users can retrieve documents such as ebooks, technical manuals, and company reports.
+	
+	Having identified the various potential targets for path traversal testing, you need to test every instance individually to determine whether user-controllable data is being passed to relevant filesystem operations in an unsafe manner. For each user-supplied parameter being tested, determine whether traversal sequences are being blocked by the application or whether they work as expected.
+	
+	If you find any instances where submitting traversal sequences without step- ping above the starting directory does not affect the application’s behavior, the next test is to attempt to traverse out of the starting directory and access files from elsewhere on the server filesystem. 
+	
+	__Circumventing Obstacles to Traversal Attacks__ -- If your initial attempts to perform a traversal attack (as just described) are unsuccessful, this does not mean that the application is not vulnerable. Many application developers are aware of path traversal vulnerabilities and implement various kinds of input validation checks in an attempt to prevent them. However, those defenses are often flawed and can be bypassed by a skilled attacker. For example an applicaiton might block text such as `.` (dot) however you can easily put its ascii encoding `%2e` isntead of putting it and this bypasses the text filters ... etc. 
+	
+	__Exploiting Traversal Vulnerabilities__  -- Having identified a path traversal vulnerability that provides read or write access to arbitrary files on the server’s filesystem, what kind of attacks can you carry out by exploiting these? In most cases, you will find that you have the same level of read/write access to the filesystem as the web server process does.
+	
+	__Preventing Path Traversal Vulnerabilities__ -- By far the most effective means of eliminating path traversal vulnerabilities is to avoid passing user-submitted data to any filesystem API. In many cases, includ- ing the original example GetFile.ashx?filename=keira.jpg, it is unnecessary for an application to do this. Most files that are not subject to any access control can simply be placed within the web root and accessed via a direct URL. If this is not possible, the application can maintain a hard-coded list of image files that may be served by the page.
+	
+	Here are some examples of defenses that may be used; ideally, as many of these as possible should be implemented together:
+	- After performing all relevant decoding and canonicalization of the user- submitted filename, the application should check whether it contains either of the path traversal sequences (using backslashes or forward slashes) or any null bytes
+	- The application should use a hard-coded list of permissible file types and reject any request for a different type
+	- After performing all its filtering on the user-supplied filename, the appli- cation should use suitable filesystem APIs to verify that nothing is amiss
 
-- `Injecting XML External Entities` --
-
-- `Injecting into SOAP Services ` --
-
-- `Finding and Exploiting SOAP Injection ` --
-
-- `Preventing SOAP Injection` --
-
-### Injecting into Back-end HTTP Requests 
-
-- `Server-side HTTP Redirection ` --
-
-- `HTTP Parameter Injection` --
+- `File Inclusion Vulnerabilities ` -- Many scripting languages support the use of include files. This facility enables developers to place reusable code components into separate files and to include these within function-specific code files as and when they are needed
+	 
+	__Finding File Inclusion Vulnerabilities__ -- File inclusion vulnerabilities may arise in relation to any item of user-supplied data. They are particularly common in request parameters that specify a lan- guage or location. They also often arise when the name of a server-side file is passed explicitly as a parameter.
 
 ### Injecting into Mail Services 
 
-- `E-mail Header Manipulation ` --
+- Many applications contain a facility for users to submit messages via the appli- cation, such as to report a problem to support personnel or provide feedback about the website. This facility is usually implemented by interfacing with a mail (or SMTP) server. Typically, user-supplied input is inserted into the SMTP conversation that the application server conducts with the mail server. If an attacker can submit suitable crafted input that is not filtered or sanitized, he may be able to inject arbitrary STMP commands into this conversation.
 
-- `SMTP Command Injection` --
+	SMTP injection vulnerabilities are often exploited by spammers who scan the Internet for vulnerable mail forms and use these to generate large volumes of nuisance e-mail.
 
-- `Finding SMTP Injection Flaws ` --
-
-- `Preventing SMTP Injection` --
+- `Preventing SMTP Injection` -- SMTP injection vulnerabilities usually can be prevented by implementing rig- orous validation of any user-supplied data that is passed to an e-mail function or used in an SMTP conversation. Each item should be validated as strictly as possible given the purpose for which it is being used:
+	- E-mail addresses should be checked against a suitable regular expression
+	- The message subject should not contain any newline characters, and it may be limited to a suitable length.
+	- If the contents of a message are being used directly in an SMTP conversa- tion, lines containing just a single dot should be disallowed.
 
 ### Summary
 
-<br>
-<br>
+- Many real-world vulnerabilities can be discovered within the first few seconds of interacting with an application. For example, you could enter some unexpected syntax into a search box. In other cases, these vulnerabilities may be highly subtle, manifesting themselves in scarcely detectable differences in the application’s behavior, or reachable only through a multistage process of submitting and manipulating crafted input.
 
----
 
-<br>
-<br>
 
