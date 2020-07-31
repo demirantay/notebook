@@ -81,31 +81,17 @@ task, as small code changes can lead to large behavioral differences.
 <br>
 <br>
 
-# 11 - Summary Dialogue on CPU Virtualization
-
-<br>
-<br>
-
----
-
-<br>
-<br>
-
-# 12 - A Dialogue on Memory Virtualization
-
-<br>
-<br>
-
----
-
-<br>
-<br>
-
 # 13 - The Abstraction: Address Spaces
 
-- `Early Systems` --
+- `Early Systems` -- From the perspective of memory, early machines didn’t provide much
+of an abstraction to users. The OS was a set of routines (a library, really) that sat in memory (starting at physical address 0 in this example), and there would be one running program (a process) that currently sat in physical memory (starting
+at physical address 64k in this example) and used the rest of memory
 
-- `Multiprogramming and Time Sharing` --
+- `Multiprogramming and Time Sharing` -- After a time, because machines were expensive, people began to share
+machines more effectively. Thus the era of multiprogramming was born. Soon enough, however, people began demanding more of machines,
+and the era of time sharing was born. As time sharing became more popular, you can probably guess that
+new demands were placed on the operating system. In particular, allowing multiple programs to reside concurrently in memory makes protection an important issue; you don’t want a process to be able to read, or
+worse, write some other process’s memory.
 
 - `The Address Space` --
 
