@@ -34,7 +34,7 @@ Resources:
   
  ### Databases
  
-   - [ ] Read: The [TutorialsOnPoint](https://www.tutorialspoint.com/dbms/index.htm) for a overview. Note this to README of the folder
+   - [x] Read: The [TutorialsOnPoint](https://www.tutorialspoint.com/dbms/index.htm) for a overview. Note this to README of the folder
    - [ ] Book: Fundamentals of Database Systems Book by Ramez Elmasri
    - [ ] Book: Database System Concepts Textbook by Avi Silberschatz,
    - [ ] Book: Designing Data-Intensive Applications: The Big Ideas Behind Reliable, Scalable, and Maintainable Systems
