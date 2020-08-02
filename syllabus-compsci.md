@@ -25,8 +25,7 @@ Resources:
   - [X] Read: The [This tutorial](https://www.studytonight.com/data-structures/time-complexity-of-algorithms)
   - [x] Book: Grokking Algorithms: An illustrated guide for programmers and other curious people
   - [x] Book: [PSAD using Python](https://runestone.academy/runestone/books/published/pythonds/index.html)
-  - [ ] Book: [The Algorithm Design Manual](https://www.amazon.com/Algorithm-Design-Manual-Steven-Skiena/dp/1848000693/?pldnSite=1) There are [vidoes](http://www3.cs.stonybrook.edu/~algorith/video-lectures/) avilable too.
-  - [ ] Book: [Algorithm Design](http://www.cs.sjtu.edu.cn/~jiangli/teaching/CS222/files/materials/Algorithm%20Design.pdf) by KnT there may be a new version
+  - [x] Book: [The Algorithm Design Manual](https://www.amazon.com/Algorithm-Design-Manual-Steven-Skiena/dp/1848000693/?pldnSite=1) There are [vidoes](http://www3.cs.stonybrook.edu/~algorith/video-lectures/) avilable too. -- (left it at 203)
   - [ ] Project: Impelement Algorithms and Data Structures in any language. [Do all of these here](https://github.com/trekhleb/javascript-algorithms) 
   - [ ] Project: Do algorithm Visualizations
   - [ ] Optional: Do more books and projects if you want to focus on this subject.
