@@ -176,9 +176,11 @@ into tree and back edges. This organization is what gives DFS its real power
 
 # 6 Weighted Graph Algorithms
 
-> I left the book at here 203 on pdf on the local disk
+- The data structures and traversal algorithms of Chapter 5 provide the basic build- ing blocks for any computation on graphs. However, all the algorithms presented there dealt with unweighted graphs—i.e. , graphs where each edge has identical value or weight.
 
 ### Minimum Spanning Trees
+
+- Minimum spanning trees are the answer whenever we need to connect a set of points (representing cities, homes, junctions, or other locations) by the smallest amount of roadway, wire, or pipe. Any tree is the smallest possible connected graph in terms of number of edges, while the minimum spanning tree is the smallest connected graph in terms of edge weight.
 
 ### War Story: Nothing but Nets
 
