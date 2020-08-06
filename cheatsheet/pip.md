@@ -8,6 +8,8 @@
 ### Virtual env
 
 - `virtualenv <name>` -- creates a virtual enviroenment with <name>
+- `virtualenv -p python2 <name>` -- creates a virtualenv with python version 2 
+- `virtualenv -p python3 <name>` -- creates a virtualenv with python version 3
 - `source venv/bin/activate` - activates the virtual envioronment 
 - `deactivate` - deactivates the virtual enviroenment
 
