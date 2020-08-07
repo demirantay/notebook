@@ -1,4 +1,4 @@
-Building a company isn't just about the product. It's about the users, team, investors, media, & partners. Making strategic decisions about what you prioritize can be the difference between a company that grows fast or one that stalls.
+Building a company isn't just about the product. It's about the users, team, investors, media, & partners. Making strategic decisions about what you prioritize can be the difference between a company that grows fast or one that stalls. At different stages of your company focus on something else for example at the start focus on team, users, inverstors ... and change it after the company changes.
 
 # Stripe Founder - Y combinator
 
