@@ -1,3 +1,5 @@
+Building a company isn't just about the product. It's about the users, team, investors, media, & partners. Making strategic decisions about what you prioritize can be the difference between a company that grows fast or one that stalls.
+
 # Stripe Founder - Y combinator
 
 ### Startup Phases
