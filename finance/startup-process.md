@@ -1,5 +1,14 @@
 Building a company isn't just about the product. It's about the users, team, investors, media, & partners. Making strategic decisions about what you prioritize can be the difference between a company that grows fast or one that stalls. At different stages of your company focus on something else for example at the start focus on team, users, inverstors ... and change it after the company changes.
 
+startup phases -- company priority:
+1. Idea -- users, team, investors
+2. Prototype -- users, team, investors
+3. Launch -- users, team, media, inverstors
+4. Traction -- users, team, media, investors
+5. Monitisation -- users, media, partners
+6. Growth -- users, team, media, partners, investors
+
+
 # Stripe Founder - Y combinator
 
 ### Startup Phases
