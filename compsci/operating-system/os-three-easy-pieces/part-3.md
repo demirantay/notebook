@@ -93,11 +93,43 @@ and the era of time sharing was born. As time sharing became more popular, you c
 new demands were placed on the operating system. In particular, allowing multiple programs to reside concurrently in memory makes protection an important issue; you don’t want a process to be able to read, or
 worse, write some other process’s memory.
 
-- `The Address Space` --
+- `The Address Space` --  we have to keep those pesky users in mind, and doing so
+requires the OS to create an easy to use abstraction of physical memory.
+We call this abstraction the address space, and it is the running program’s
+view of memory in the system. Understanding this fundamental OS abstraction of memory is key to understanding how memory is virtualized. The address space of a process contains all of the memory state of the
+running program.
+
+  The program, while it is running, uses a stack to keep track
+of where it is in the function call chain as well as to allocate local variables
+and pass parameters and return values to and from routines. Finally, the
+heap is used for dynamically-allocated, user-managed memory, such as
+that you might receive from a call to malloc() in C or new in an objectoriented language such as C++ or Java. 
+
+  Of course, when we describe the address space, what we are describing is the abstraction that the OS is providing to the running program.
+The program really isn’t in memory at physical addresses 0 through 16KB;
+rather it is loaded at some arbitrary physical address(es) When the OS does this, we say the OS is virtualizing memory
 
 - `Goals` --
+  - One major goal of a virtual memory (VM) system is transparency2. The OS should implement virtual memory in a way that is invisible to
+the running program. Thus, the program shouldn’t be aware of the fact
+that memory is virtualized; rather, the program behaves as if it has its
+own private physical memory. Behind the scenes, the OS (and hardware)
+does all the work to multiplex memory among many different jobs, and
+hence implements the illusion
 
-- `Summary` --
+  - Another goal of VM is efficiency. The OS should strive to make the
+virtualization as efficient as possible, both in terms of time (i.e., not making programs run much more slowly) and space (i.e., not using too much
+memory for structures needed to support virtualization).
+
+  - Finally, a third VM goal is protection. The OS should make sure to
+protect processes from one another as well as the OS itself from pro cesses. When one process performs a load, a store, or an instruction fetch,
+it should not be able to access or affect in any way the memory contents
+of any other process or the OS itself
+
+- `Summary` -- We have seen the introduction of a major OS subsystem: virtual memory. The VM system is responsible for providing the illusion of a large,
+sparse, private address space to programs, which hold all of their instructions and data therein. The OS, with some serious hardware help, will
+take each of these virtual memory references, and turn them into physical addresses, which can be presented to the physical memory in order to
+fetch the desired information
 
 <br>
 <br>
