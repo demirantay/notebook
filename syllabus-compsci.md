@@ -284,7 +284,7 @@ Resources:
 
 ### Packet #2 
 
-- [ ] Feynman: Specific Programming Language (e.g. Python)
+- [x] Feynman: Specific Programming Language (e.g. Python)
 - [ ] Feynman: Standarts & Best Practices
 - [ ] Feynman: Backend Testing
 - [ ] Feynman: Package Managaer
