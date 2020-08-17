@@ -141,7 +141,16 @@ fetch the desired information
 
 # 14 - Interlude: Memory API
 
-- `Types of Memory` --
+- `Types of Memory` -- In running a C program, there are two types of memory that are allocated. The first is called `stack` memory, and allocations and deallocations of it are managed implicitly by the compiler for you, the programmer; for
+this reason it is sometimes called automatic memory
+
+  It is this need for long-lived memory that gets us to the second type
+of memory, called heap memory, where all allocations and deallocations
+are explicitly handled by you, the programmer.
+
+  Because of its explicit nature, and because of its more varied usage,
+heap memory presents more challenges to both users and systems. Thus,
+it is the focus of the remainder of our discussion
 
 - `The malloc() Call` --
 
