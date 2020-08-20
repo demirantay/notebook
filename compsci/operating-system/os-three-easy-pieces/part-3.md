@@ -152,17 +152,53 @@ are explicitly handled by you, the programmer.
 heap memory presents more challenges to both users and systems. Thus,
 it is the focus of the remainder of our discussion
 
-- `The malloc() Call` --
+- `The malloc() Call` -- The malloc() call is quite simple: you pass it a size asking for some
+room on the heap, and it either succeeds and gives you back a pointer to
+the newly-allocated space, or fails and returns NULL. You might also notice that malloc() returns a pointer to type void.
+Doing so is just the way in C to pass back an address and let the programmer decide what to do with it. You will have to learn how malloc works in order to virtualize the memory. 
 
-- `The free() Call` -- 
+- `The free() Call` -- As it turns out, allocating memory is the easy part of the equation;
+knowing when, how, and even if to free memory is the hard part. To free
+heap memory that is no longer in use, programmers simply call free():
+  ```c
+  int *x = malloc(10 * sizeof(int));
+  ...
+  free(x);
+  ```
+  
+- `Common Errors` -- common errors while virtualizing the memory are:
+  - Forgetting to allocate memory
+  - Not allocating enough memory
+  - Forgetting to initialize allocated memory
+  - Forgetting to free memory
+  - Freeing Memory before you are done with it
+  - Freeing Memory repeatedly
+  - Calling free() incorrectly
 
-- `Common Errors` --
+  As you can see, there are lots of ways to abuse memory. Because of frequent errors with memory, a whole ecosphere of tools have developed to
+help find such problems in your code. Check out both purify [HJ92] and
+valgrind [SN05]; both are excellent at helping you locate the source of
+your memory-related problems. Once you become accustomed to using
+these powerful tools, you will wonder how you survived without them.
 
-- `Underlying OS Support` --
+- `Underlying OS Support` -- You might have noticed that we haven’t been talking about system
+calls when discussing malloc() and free(). The reason for this is simple: they are not system calls, but rather library calls. Thus the malloc library manages space within your virtual address space, but itself is built
+on top of some system calls which call into the OS to ask for more memory or release some back to the system.
 
-- `Other Calls` --
+  One such system call is called brk, which is used to change the location of the program’s break: the location of the end of the heap. It takes
+one argument (the address of the new break), and thus either increases or
+decreases the size of the heap based on whether the new break is larger
+or smaller than the current break. An additional call sbrk is passed an
+increment but otherwise serves a similar purpose.
+Note that you should never directly call either brk or sbrk. They
+are used by the memory-allocation library; if you try to use them, you
+will likely make something go (horribly) wrong. Stick to malloc() and
+free() instead.
 
-- `Summary` --
+- `Summary` -- We have introduced some of the APIs dealing with memory allocation.
+As always, we have just covered the basics; more details are available
+elsewhere. Read the C book [KR88] and Stevens [SR05] (Chapter 7) for
+more information
 
 <br>
 <br>
