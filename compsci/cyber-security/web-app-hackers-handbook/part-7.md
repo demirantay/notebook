@@ -1,9 +1,16 @@
 # Chapter 13 Attacking Users: Other Techniques 
 
+- The preceding chapter examined the grandfather of attacks against other appli- cation users—cross-site scripting (XSS). This chapter describes a wide range of other attacks against users. Some of these have important similarities to XSS attacks. In many cases, the attacks are more complex or subtle than XSS attacks and can succeed in situations where plain XSS is not possible.
+
 ### Inducing User Actions 
 
-- `Request Forgery ` --
+- 
+The preceding chapter described how XSS attacks can be used to induce a user to unwittingly perform actions within the application. Where the victim user has administrative privileges, this technique can quickly lead to complete compromise of the application.
 
+- `Request Forgery ` -- This category of attack (also known as session riding) is closely related to ses- sion hijacking attacks, in which an attacker captures a user’s session token and therefore can use the application “as” that user.
+  
+  __On-Site Request Forgery__
+ 
 - `UI Redress` --
 
 ### Capturing Data Cross-Domain
