@@ -22,7 +22,12 @@ One location where numerous dangerous CSRF vulnerabilities have arisen is in the
  
   __Defeating Anti-CSRF Defenses Via XSS__ -- It is often claimed that anti-CSRF defenses can be defeated if the application contains any XSS vulnerabilities. But this is only partly true. The thought behind the claim is correct—that because XSS payloads execute on-site, they can perform two-way interaction with the application and therefore can retrieve tokens from the application’s responses and submit them in subsequent requests.
  
-- `UI Redress` --
+- `UI Redress` -- Fundamentally, anti-CSRF defenses involving tokens within the page aim to ensure that requests made by a user originate from that user’s actions within the application itself and are not induced by some third-party domain. UI redress attacks are designed to allow a third-party site to induce user actions on another domain even if anti-CSRF tokens are being used. These attacks work because, in the relevant sense, the resulting requests actually do originate within the application being targeted. UI redress techniques are also often referred to as “clickjacking,” “strokejacking,” and other buzzwords. 
+In its basic form, a UI redress attack involves the attacker’s web page load- ing the target application within an iframe on the attacker’s page.
+
+  __Framebusting defenses__ -- When UI redress attacks were first widely discussed, many high-profile web applications sought to defend against them using a defensive technique known as framebusting. Framebusting can take various forms, but it essentially involves each relevant page of an application running a script to detect if it is being loaded within an iframe. If so, an attempt is made to “bust” out of the iframe, or some other defensive action is performed, such as redirecting to an error page or refusing to display the application’s own interface. It found that in every instance these could be circumvented in one way or another.
+  
+  __Preventing UI Redress__ -- The current consensus is that although some kinds of framebusting code may hinder UI redress attacks in some situations, this technique should not be relied on as a surefire defense against these attacks. A more robust method for an application to prevent an attacker from fram- ing its pages is to use the X-Frame-Options response header. It was introduced with Internet Explorer 8 and has since been implemented in most other popular browsers. The X-Frame-Options header can take two values. The value deny instructs the browser to prevent the page from being framed, and sameorigin instructs the browser to prevent framing by third-party domains.
 
 ### Capturing Data Cross-Domain
 
