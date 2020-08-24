@@ -31,11 +31,16 @@ In its basic form, a UI redress attack involves the attacker’s web page load- 
 
 ### Capturing Data Cross-Domain
 
-- `Capturing Data by Injecting HTML ` --
+- `Capturing Data by Injecting HTML ` -- Many applications contain functionality that allows an attacker to inject some limited HTML into a response that is received by a different user in a way that falls short of a full XSS vulnerability. For example, a web mail application may display e-mails containing some HTML markup but block any tags and attributes that can be used to execute script code. Or a dynamically generated error mes- sage may filter a range of expressions but still allow some limited use of HTML.
+In these situations, it may be possible to leverage the HTML-injection condi- tion to cause sensitive data within the page to be sent to the attacker’s domain. For example, in a web mail application, the attacker may be able to capture the contents of a private e-mail message
 
-- `Capturing Data by Injecting CSS ` --
+- `JavaScript Hijacking ` -- JavaScript hijacking provides a further method of capturing data cross-domain, turning CSRF into a limited “two-way” attack. As described in Chapter 3, the same-origin policy allows one domain to include script code from another domain, and this code executes in the context of the invoking domain, not the issuing domain
 
-- `JavaScript Hijacking ` --
+  many of today’s applications use JavaScript to transmit sensitive data, in a way that was not foreseen when the same-origin policy was devised. Furthermore, developments in browsers mean that an increasing range of syntax is becoming executable as valid JavaScript, with new opportunities for capturing data cross-domain.
+  
+  __Preventing javascript hijacking__ -- Several preconditions must be in place before a JavaScript hijacking attack can be performed. To prevent such attacks, it is necessary to violate at least one of these preconditions.
+    - As for requests that perform sensitive actions, the application should use standard anti-CSRF defenses to prevent cross-domain requests from returning any responses containing sensitive data.
+    -  Because the application can use XMLHttpRequest to retrieve dynamic script code, it can use POST requests to do so. If the application accepts only POST requests for potentially vulnerable script code, it prevents third-party sites from including them using <script> tags.
  
 ### The Same-Origin Policy Revisited
 
