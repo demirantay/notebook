@@ -41,19 +41,7 @@ In these situations, it may be possible to leverage the HTML-injection condi- ti
   __Preventing javascript hijacking__ -- Several preconditions must be in place before a JavaScript hijacking attack can be performed. To prevent such attacks, it is necessary to violate at least one of these preconditions.
     - As for requests that perform sensitive actions, the application should use standard anti-CSRF defenses to prevent cross-domain requests from returning any responses containing sensitive data.
     -  Because the application can use XMLHttpRequest to retrieve dynamic script code, it can use POST requests to do so. If the application accepts only POST requests for potentially vulnerable script code, it prevents third-party sites from including them using <script> tags.
-
-### Other Client-Side Injection Attacks
-
-- `HTTP Header Injection ` --
-
-- `Cookie Injection ` --
-
-- `Open Redirection Vulnerabilities ` --
-
-- `Client-Side SQL Injection ` --
-
-- `Client-Side HTTP Parameter Pollution` --
-
+  
 ### Local Privacy Attacks 
 
 - `Persistent Cookies` --
