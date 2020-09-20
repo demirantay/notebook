@@ -44,13 +44,27 @@ was unimportant: a quirky mechanism that allowed a handful of students, plus a b
 
 ### A Brief History of the Web
 
-- __`Tales of the Stone Age: 1945 to 1994`__ -- 
+- __`Tales of the Stone Age: 1945 to 1994`__ -- Computer historians frequently cite a hypothetical desk-sized device called the Memex as one of the earliest fossil records, postulated in 1945 by Vannevar Bush.3 Memex was meant to make it possible to create, annotate, and follow cross-document links in microfilm, using a technique that vaguely resembled modern-day bookmarks and hyperlinks.
 
-- __`The First Browser Wars: 1995 to 1999`__ -- 
+  The next tangible milestone, in the 1960s, was the arrival of IBM’s Generalized Markup Language (GML), which allowed for the annotation of documents with machine-readable directives indicating the function of each block of text, effectively saying “this is a header,” “this is a numbered list of items,” and so on
+  
+  By the end of the decade, two researchers, Tim Berners-Lee and Dan Connolly, had begun working on a new approach to the cross-domain refer- ence challenge—one that focused on simplicity. They kicked off the project by drafting HyperText Markup Language (HTML), a bare-bones descendant of SGML, designed specifically for annotating documents with hyperlinks and basic formatting. They followed their work on HTML with the develop- ment of HyperText Transfer Protocol (HTTP) sometime between 1991 and 1993, was Tim Berners- Lee’s World Wide Web (Figure 1-1), a rudimentary browser that parsed HTML and allowed users to render the resulting data on the screen, and then navigate from one page to another with a mouse click.
+  
+  By 1993, HTTP traffic accounted for 0.1 percent of all bandwidth in the National Science Foundation backbone network. The same year also witnessed the arrival of Mosaic, the first reasonably popular and sophisti- cated web browser, developed at the University of Illinois.
 
-- __`The Boring Period: 2000 to 2003`__ -- 
+- __`The First Browser Wars: 1995 to 1999`__ -- By the mid-1990s, it was clear that the Web was here to stay and that users were willing to ditch many older technologies in favor of the new contender.
 
-- __`Web 2.0 and the Second Browser Wars: 2004 and Beyond`__ -- 
+  The resulting arms race among browser vendors was characterized by the remarkably rapid development and deployment of new features in the compet- ing products, a trend that often defied all attempts to standardize or even prop- erly document all the newly added code. Core HTML tweaks ranged from the silly (the ability to make text blink, a Netscape invention that became the butt of jokes and a telltale sign of misguided web design) to notable ones, such as the ability to change typefaces or embed external documents in so-called frames. Vendors released their products with embedded programming languages such as JavaScript and Visual Basic or Flash applets on the user’s machine, and useful but tricky HTTP extensions such as cookies 
+  
+    Other efforts to standardize or improve already implemented mecha- nisms, most notably HTTP and JavaScript, were driven by other auspices such as the European Computer Manufacturers Association (ECMA), the Interna- tional Organization for Standardization (ISO), and the Internet Engineering Task Force (IETF).
+
+- __`The Boring Period: 2000 to 2003`__ -- As the efforts to wrangle the Web floundered, Microsoft’s dominance grew as a result of its operating system–bundling strategy. By the beginning of the new decade, Netscape Navigator was on the way out, and Internet Explorer. held an impressive 80 percent market share—a number roughly comparable to what Netscape had held just five years before. On both sides of the fence, security and interoperability were the two most notable casualties of the fea- ture war, but one could hope now that the fighting was over, developers could put differences aside and work together to fix the mess.
+
+  On the upside, the slowdown in browser development allowed the W3C to catch up and to carefully explore some new concepts for the future of the Web. New initiatives finalized around the year 2000 included HTML 4 (a cleaned-up language that deprecated or banned many of the redundant or politically incorrect features embraced by earlier versions)
+  
+  But soon, something interesting happened: Microsoft gave the world a seemingly unimportant, proprietary API, confusingly named XMLHttpRequest. This trivial mechanism was meant to be of little significance, merely an attempt to scratch an itch in the web-based version of Microsoft Outlook. But XMLHttpRequest turned out to be far more, as it allowed for largely unconstrained asynchronous HTTP communications between client-side JavaScript and the server without the need for time-consuming and disrup- tive page transitions. In doing so, the API contributed to the emergence of what would later be dubbed web 2.0
+
+- __`Web 2.0 and the Second Browser Wars: 2004 and Beyond`__ --  XMLHttpRequest, in conjunction with the popularity of the Internet and the broad availability of web browsers, pushed the Web to some new, exciting frontiers. By about 2002, worms and browser vulnerabili- ties had emerged as a frequently revisited theme in the media. In 2004, a new contender in the browser wars emerged: Mozilla Firefox
  
 ### The Evolution of a Threat
 
