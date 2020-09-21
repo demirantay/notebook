@@ -68,15 +68,17 @@ was unimportant: a quirky mechanism that allowed a handful of students, plus a b
  
 ### The Evolution of a Threat
 
-- __`The User as a Security Flaw`__ -- 
+- Clearly, web browsers, and their associated document formats and communi- cation protocols, evolved in an unusual manner. This evolution may explain the high number of security problems we see, but by itself it hardly proves that these problems are unique or noteworthy
 
-- __`The Cloud, or the Joys of Communal Living`__ -- 
+- __`The User as a Security Flaw`__ -- Perhaps the most striking (and entirely nontechnical) property of web browsers is that most people who use them are overwhelmingly unskilled. Sure, nonproficient users have been an amusing, fringe problem since the dawn of computing. But the popularity of the Web, combined with its remark- ably low barrier to entry, means we are facing a new foe: Most users simply don’t know enough to stay safe. The computing industry as a whole has no robust answers in this area, and very little research is available on how to design comparably complex user interfaces (UIs) in a bulletproof way. After all, we barely get it right for ATMs.
 
-- __`Nonconvergence of Visions`__ -- 
+- __`The Cloud, or the Joys of Communal Living`__ -- In the traditional model followed by virtually all personal computers over the last 15 years or so, there are very clear boundaries between high- level data objects (documents), user-level code (applications), and the oper- ating system kernel that arbitrates all cross-application communications and hardware input/output (I/O) and enforces configurable security rules should an application go rogue. In the browser world, this separation is virtually nonexistent: Documents and code live as parts of the same intermingled blobs of HTML. In the end, the seemingly unlikely scenario of a text file stealing your email is, in fact, a frustratingly common pattern on the Web. Virtually all web applications must heavily compensate for unsolicited, malicious cross-domain access and take cumbersome steps to maintain at least some separation of code and the displayed data.
 
-- __`Cross-Browser Interactions: Synergy in Failure`__ -- 
+- __`Nonconvergence of Visions`__ -- There is no shared, holistic security model to grasp and live by. We are not looking for a grand vision for world peace, mind you, but simply a common set of flexible paradigms that would apply to most, if not all, of the relevant security logic. In the Unix world, for example, the rwx user/group per- mission model is one such strong unifying theme. But in the browser realm? In the browser realm, a mechanism called same-origin policy could be considered a candidate for a core security paradigm, As it turns out, hundreds of small, clever hacks do not necessarily add up to a competent security opus
 
-- __`The Breakdown of the Client-Server Divide`__ -- 
+- __`The Breakdown of the Client-Server Divide`__ -- The Web began as a classical example of a proper client-server architec- ture, but the functional boundaries between client and server responsibilities were quickly eroded. The culprit is JavaScript, a language that offers the HTTP servers a way to delegate application logic to the browser (“client”) side and gives them two very compelling reasons to do so. First, such a shift often results in more responsive user interfaces, as servers do not need to synchro- nously participate in each tiny UI state change imaginable. Second, server- side CPU and memory requirements (and hence service-provisioning costs) can decrease drastically when individual workstations across the globe chip in to help with the bulk of the work
+
+  The unexpected failure of standardized security modeling and testing protocols is yet another problem that earns the Web a very special—and scary—place in the universe of information security.
 
 
 <br>
@@ -88,6 +90,9 @@ was unimportant: a quirky mechanism that allowed a handful of students, plus a b
 <br>
 
 # Chapter 2: It Starts with a URL
+
+- 
+The first part of this book focuses on the principal concepts that govern the operation of web browsers, namely, the protocols, document formats, and pro- gramming languages that make it all tick. Because all the familiar, user-visible security mechanisms employed in modern browsers are profoundly intertwined with these inner workings, the bare internals deserve a fair bit of attention before we wander off deeper into the woods.
 
 ### Uniform Resource Locator Structure
 
