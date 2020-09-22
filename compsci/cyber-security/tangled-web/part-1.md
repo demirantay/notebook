@@ -95,23 +95,27 @@ was unimportant: a quirky mechanism that allowed a handful of students, plus a b
 
 ### Uniform Resource Locator Structure
 
-- __`Scheme Name`__ -- 
+- __`Scheme Name`__ -- The scheme name is a case-insensitive string that ends with a single colon, indicating the protocol to be used to retrieve the resource. The official registry of valid URL schemes is maintained by the Internet Assigned Numbers Authority (IANA). current list of valid scheme names includes several dozen entries such as http:, https:, and ftp: ... etc.
 
-- __`Indicator of a Hierarchical URL`__ -- 
+- __`Indicator of a Hierarchical URL`__ -- In order to comply with the generic syntax rules laid out in RFC 1738, every absolute, hierarchical URL is required to contain the fixed string “//” right before the authority section. If the string is missing, the format and function of the remainder of the URL is undefined for the purpose of that specifica- tion
+  
+  An example of a nonhierarchical URL is the mailto: protocol, used to specify
+email addresses and possibly a subject line `(mailto:user@example.com?subject= Hello+world)`
 
-- __`Credentials to Access the Resource`__ -- 
+- __`Credentials to Access the Resource`__ -- The credentials portion of the URL is optional. This location can specify a username, and perhaps a password, that may be required to retrieve the data from the server. The method through which these credentials are exchanged is not specified as a part of the abstract URL syntax, and it is always protocol specific.
 
-- __`Server Address`__ -- 
+- __`Server Address`__ -- For all fully qualified hierarchical URLs, the server address section must spec- ify a case-insensitive DNS name (such as example.com), a raw IPv4 address (such as 127.0.0.1), or an IPv6 address in square brackets (such as [0:0:0:0:0:0:0:1]), indicating the location of a server hosting the requested resource.
 
-- __`Server Port`__ -- 
+- __`Server Port`__ -- This server port is an optional section that describes a nonstandard network port to connect to on the previously specified server. Virtually all application- level protocols supported by browsers and third-party applications use TCP or UDP as the underlying transport method, and both TCP and UDP rely on 16-bit port numbers to separate traffic between unrelated services running on a single machine. Each scheme is associated with a default port on which servers for that protocol are customarily run (80 for HTTP, 21 for FTP, and so on), but the default can be overridden at the URL level.
 
-- __`Hierarchical File Path`__ -- 
+- __`Hierarchical File Path`__ -- The next portion of the URL, the hierarchical file path, is envisioned as a way to identify a specific resource to be retrieved from the server, such as /documents/2009/my_diary.txt. The specification quite openly builds on top of the Unix directory semantics, mandating the resolution of “/../” and “/./” segments in the path and providing a directory-based method for sorting out relative references in non–fully qualified URLs.
 
-- __`Query String`__ -- 
+- __`Query String`__ -- The query string is an optional section used to pass arbitrary, nonhierarchi- cal parameters to the resource earlier identified by the path. 
 
-- __`Fragment ID`__ -- 
+- __`Fragment ID`__ -- The fragment ID is an opaque value with a role similar to the query string but that provides optional instructions for the client application rather than the server. In practice, fragment identifiers have only a single sanctioned use in
+the browser: that of specifying the name of an anchor HTML element for in-document navigation. The logic is simple. If an anchor name is supplied in the URL and a matching HTML tag can be located, the document will be scrolled to that location for viewing; otherwise, nothing happens. 
 
-- __`Putting It All Together Again`__ --
+- __`Putting It All Together Again`__ -- Each of the aforementioned URL segments is delimited by certain reserved characters: slashes, colons, question marks, and so on. To make the whole approach usable, these delimiting characters should not appear anywhere in the URL for any other purpose.
 
 ### Reserved Characters and Percent Encoding
 
