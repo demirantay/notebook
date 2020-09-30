@@ -1,8 +1,9 @@
 ## PostgreSQL Cheatsheet
 
-### ubuntu server restart
+### ubuntu server stuff
 
 - `sudo service postgresql restart` -- server restarting on ubuntu
+- `sudo -u postgres -i` -- turnign into the postgres CLI than you can use psql commands
 
 ### db backup shortcuts
 
