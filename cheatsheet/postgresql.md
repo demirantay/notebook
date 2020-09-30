@@ -1,5 +1,9 @@
 ## PostgreSQL Cheatsheet
 
+### ubuntu server restart
+
+- `sudo service postgresql restart` -- server restarting on ubuntu
+
 ### db backup shortcuts
 
 - `pg_dump name_of_database > name_of_backup_file` -- to create a backup file
