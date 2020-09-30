@@ -1,5 +1,10 @@
 ## PostgreSQL Cheatsheet
 
+### db backup shortcuts
+
+- `pg_dump name_of_database > name_of_backup_file` -- to create a backup file
+- `psql empty_database < backup_file` -- to fill empty db with backedup data
+
 ### Psql: Posgres Command Line Interface
 
 - `psql` -- opens up the postgresql command line interface
