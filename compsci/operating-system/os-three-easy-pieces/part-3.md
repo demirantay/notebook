@@ -210,6 +210,13 @@ more information
 
 # 15 - Mechanism: Address Translation
 
+- In developing the virtualization of the CPU, we focused on a general
+mechanism known as limited direct execution (or LDE). The idea behind LDE is simple: for the most part, let the program run directly on the
+hardware; however, at certain key points in time (such as when a process
+issues a system call, or a timer interrupt occurs), arrange so that the OS
+gets involved and makes sure the “right” thing happens. Efficiency and control together are two of the
+main goals of any modern operating system.
+
 - `Assumptions` --
 
 - `An Example` --
