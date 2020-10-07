@@ -1,6 +1,8 @@
 
 # Chapter 3: Hypertext Transfer Protocol
 
+- The next essential concept we need to discuss is the Hypertext Transfer Protocol (HTTP): the core trans- fer mechanism of the Web and the preferred method for exchanging URL-referenced documents between servers and clients. Despite having hypertext in its name, HTTP and the actual hypertext content (the HTML language) often exist independent of each other.
+
 ### Basic Syntax of HTTP Traffic
 
 - __`The Consequences of Supporting HTTP/0.9`__ -- 
