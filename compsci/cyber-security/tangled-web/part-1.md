@@ -119,35 +119,25 @@ the browser: that of specifying the name of an anchor HTML element for in-docume
 
 ### Reserved Characters and Percent Encoding
 
-- __`Handling of Non-US-ASCII Text`__ -- 
+- The URL-parsing algorithm outlined in the previous section relies on the assumption that certain reserved, syntax-delimiting characters will not appear literally in the URL in any other capacity (that is, they won’t be a part of the user- name, request path, and so on). These generic, syntax-disrupting delimiters are
+  ```
+  : / ? # [ ] @
+  ```
+  All of the above characters are in principle off-limits, but there are legiti- mate cases where one would want to include them in the URL (for example, to accommodate arbitrary search terms entered by the user and passed to the server in the query string). Therefore, rather than ban them, the standard provides a method to encode all spurious occurrences of these values. The method, simply called percent encoding or URL encoding
 
 ### Common URL Schemes and Their Function
 
-- __`Browser-Supported, Document-Fetching Protocols`__ -- 
+- Let’s leave the bizarre world of URL parsing behind us and go back to the basics. Earlier in this chapter, we implied that certain schemes may have unexpected security consequences and that because of this, any web applica- tion handling user-supplied URLs must be cautious. To explain this point a bit better, it is useful to review all the URL schemes commonly supported in a typical browser environment.
 
-- __`Protocols Claimed by Third-Party Applications and Plug-ins`__ -- 
+- __`Browser-Supported, Document-Fetching Protocols`__ -- These schemes, handled internally by the browser, offer a way to retrieve arbitrary content using a particular transport protocol and then display it using common, browser-level rendering logic. The list of commonly supported schemes in this category is surprisingly short: http, https, ftp, file
 
-- __`Nonencapsulating Pseudo-Protocols`__ -- 
+- __`Protocols Claimed by Third-Party Applications and Plug-ins`__ -- For these schemes, matching URLs are simply dispatched to external, spe- cialized applications that implement functionality such as media playback, document viewing, or IP telephony. Scores of external protocol handlers exist today, and it would take another thick book to cover them all. Some of the most common examples include the acrobat: scheme, predictably routed to Adobe Acrobat Reader; callto: and sip: schemes claimed by all sorts of instant messengers and telephony soft- ware; daap:, itpc:, and itms: schemes used by Apple iTunes; mailto:
 
-- __`Encapsulating Pseudo-Protocols`__ -- 
+- __`Nonencapsulating Pseudo-Protocols`__ -- An array of protocols is reserved to provide convenient access to the browser’s scripting engine and other internal functions, without actually retrieving any remote content and perhaps without establishing an isolated document context to display the result. Many of these pseudo-protocols are highly browser-specific and are either not directly accessible from the Inter- net or are incapable of doing harm
 
-- __`Closing Note on Scheme Detection`__ -- 
+- __`Encapsulating Pseudo-Protocols`__ -- This special class of pseudo-protocols may be used to prefix any other URL in order to force a special decoding or rendering mode for the retrieved resource. Perhaps the best-known example is the view-source: scheme sup- ported by Firefox and Chrome, used to display the pretty-printed source of an HTML page.
 
-### Resolution of Relative URLs
-
-### Security Engineering Cheat Sheet.
-
-- __`When Constructing Brand-New URLs Based on User Input`__ -- 
-
-- __`When Designing URL Input Filters`__ -- 
-
-- __`When Decoding Parameters Received Through URLs`__ -- 
-
-
-<br>
-<br>
-
----
+- __`Closing Note on Scheme Detection`__ -- The sheer number of pseudo-protocols is the primary reason why web appli- cations need to carefully screen user-supplied URLs. The wonky and browser- specific URL-parsing patterns, coupled with the open-ended nature of the list of supported schemes, means that it is unsafe to simply blacklist known bad scheme
 
 <br>
 <br>
